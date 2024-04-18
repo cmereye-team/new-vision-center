@@ -43,12 +43,7 @@ const menuList = ref([
         id: "3",
         title: "近視控制眼鏡",
         path: "/",
-      },
-      {
-        id: "4",
-        title: "近視控制隱形眼鏡",
         threeIsChildVisible: false,
-        path: "/",
         threeLevelList: [
           {
             id: "1",
@@ -61,6 +56,11 @@ const menuList = ref([
             path: "/",
           },
         ],
+      },
+      {
+        id: "4",
+        title: "近視控制隱形眼鏡",
+        path: "/",
       },
       {
         id: "5",
@@ -398,6 +398,37 @@ const showThreeLevel = () => {
     }
     & > a:nth-child(2) {
       margin: 0 15px;
+    }
+  }
+  .threeLevel {
+    position: relative;
+    & > a::after {
+      content: "";
+      position: absolute;
+      background: url("https://static.cmereye.com/imgs/2024/04/6f68e977441f318c.png");
+      width: 16px;
+      height: 8px;
+      top: 18px;
+      right: 0;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .threeLevel:hover {
+    a::after {
+      background: url(https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png);
+      transform: rotate(180deg) translateX(50%);
+      width: 16px;
+      height: 8px;
+      top: 18px;
+      right: -10px;
+    }
+  }
+  .threeLevel-child {
+    & > div:hover:before {
+      background: #00a6ce;
+    }
+    a:hover {
+      color: #00a6ce;
     }
   }
 }
