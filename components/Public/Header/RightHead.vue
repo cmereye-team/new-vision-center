@@ -30,7 +30,7 @@ const menuList = ref([
       },
       {
         title: "聯絡我們",
-        path: "/",
+        path: "/contact-us",
         id: "2",
       },
       {
@@ -39,6 +39,12 @@ const menuList = ref([
         id: "3",
       },
     ],
+  },
+  {
+    id: "6",
+    title: "尊享優惠",
+    child: "svg",
+    path: "/",
   },
   {
     id: "2",
@@ -60,12 +66,7 @@ const menuList = ref([
         id: "3",
         title: "近視控制眼鏡",
         path: "/",
-      },
-      {
-        id: "4",
-        title: "近視控制隱形眼鏡",
         threeIsChildVisible: false,
-        path: "/",
         threeLevelList: [
           {
             id: "1",
@@ -78,6 +79,11 @@ const menuList = ref([
             path: "/",
           },
         ],
+      },
+      {
+        id: "4",
+        title: "近視控制隱形眼鏡",
+        path: "/",
       },
       {
         id: "5",
@@ -155,12 +161,6 @@ const menuList = ref([
       },
     ],
   },
-  {
-    id: "6",
-    title: "聯絡我們",
-    path: "/contact-us",
-    child: "svg",
-  },
 ]);
 
 const isThreeLevel = (item: any) => {
@@ -179,6 +179,7 @@ onMounted(() => {
   if (window.innerWidth >= 768) {
     isPc.value = true;
     menuListThisPc();
+    showThreeLevel();
   }
   window.addEventListener("resize", getScreenWidth);
   window.addEventListener("beforeunload", getScreenWidth);
@@ -216,7 +217,12 @@ const showChildMenu = (index: any) => {
 <template>
   <div class="right-head">
     <div class="menu">
-      <div v-for="(item, index) in menuList" :key="item.id" class="fa-path">
+      <div
+        v-for="(item, index) in menuList"
+        :key="item.id"
+        class="fa-path"
+        :class="`fa-${index + 1}`"
+      >
         <nuxt-link
           @click="showChildMenu(index)"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
@@ -399,8 +405,6 @@ const showChildMenu = (index: any) => {
       display: flex;
       flex-direction: column;
       align-items: center;
-      & > div {
-      }
 
       & > div:last-child {
         border-bottom: none;
@@ -474,7 +478,8 @@ const showChildMenu = (index: any) => {
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
       background: #fff;
-      top: 0;
+      top: -60%;
+      border-radius: 5px;
       & > div {
         & > a {
           padding: 15px 30px;
@@ -510,16 +515,23 @@ const showChildMenu = (index: any) => {
     }
   }
   .menu {
-    & > div:last-child:hover {
-      .sub-menu {
-        display: none;
-      }
-    }
-    & > div:last-child {
+    .fa-2 {
+      cursor: pointer;
       & > a::after {
         content: none;
       }
     }
+    // & > div:last-child:hover {
+    // .sub-menu {
+    // display: none;
+    // }
+    // }
+    // & > div:last-child {
+    //   & > a::after {
+    //     content: none;
+    //   }
+    // }
+
     & > div {
       & > div {
         & > div:last-child {

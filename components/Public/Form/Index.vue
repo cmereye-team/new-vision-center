@@ -210,7 +210,7 @@ const resetForm = (formEl: FormInstance | undefined) => {
     padding: 30px 60px 30px 60px;
     margin-bottom: 94px;
     position: relative;
-    z-index: 99;
+    z-index: 9;
   }
 
   textarea {
