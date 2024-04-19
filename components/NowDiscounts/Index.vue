@@ -352,6 +352,7 @@ const discountsList = ref([
 @media screen and (max-width: 767px) {
   .now-discounts {
     margin-bottom: 50px;
+    position: relative;
   }
   .discounts-title {
     margin-bottom: 40px;

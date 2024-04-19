@@ -24,6 +24,11 @@ const menuList = ref([
     ],
   },
   {
+    id: "7",
+    title: "尊享優惠",
+    path: "/now-discounts",
+  },
+  {
     id: "2",
     title: "兒童視力服務",
     isChildVisible: false,
@@ -524,9 +529,13 @@ const showThreeLevel = () => {
         transition: all 0.3s;
         right: -3.5px;
       }
-
       border-bottom: 1px dashed #4d4d4d;
       padding: 12px 26px 12px 22px;
+    }
+    &>div:nth-child(2){
+      &>.a-link:after{
+        display: none;
+      }
     }
     & > div:last-child {
       & > a::after {

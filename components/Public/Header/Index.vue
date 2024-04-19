@@ -194,7 +194,7 @@ const getSonValue = () => {
     padding: 9px 24px 14px;
   }
   .mobile-menu {
-    z-index: 99;
+    z-index: 999;
     position: fixed;
     top: 0;
     left: 0;

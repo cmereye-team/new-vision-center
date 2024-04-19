@@ -44,7 +44,7 @@ const menuList = ref([
     id: "6",
     title: "尊享優惠",
     child: "svg",
-    path: "/",
+    path: "/now-discounts",
   },
   {
     id: "2",
@@ -212,6 +212,19 @@ const showChildMenu = (index: any) => {
     }
   });
 };
+// 获取路由
+const route = useRoute();
+const router = useRouter();
+const mbToLink = (item:any) => {
+  router.push({
+    path: item.path,
+    query: {
+      ...route.query,
+    },
+  });
+  pathIsTrue()
+  console.log(router,'Proute');
+};
 </script>
 
 <template>
@@ -224,9 +237,8 @@ const showChildMenu = (index: any) => {
         :class="`fa-${index + 1}`"
       >
         <nuxt-link
-          @click="showChildMenu(index)"
+          @click="item.path == '/' ?  showChildMenu(index) : mbToLink(item) "
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
-          :to="item.path == '/' ? '' : item.path"
           >{{ item.title }}</nuxt-link
         >
         <transition name="fade">
@@ -674,10 +686,10 @@ const showChildMenu = (index: any) => {
         right: -3.5px;
       }
     }
-    & > div:last-child {
-      & > a::after {
-        content: none !important;
-      }
+  }
+  .fa-2 {
+    .a-link::after {
+      display: none;
     }
   }
   .three-level {
