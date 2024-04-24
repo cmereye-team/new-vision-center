@@ -6,7 +6,7 @@ useHead(() => ({
 
 <template>
   <PublicBanner>
-    <!-- 插槽 -->
+    <!-- 插槽  测试push自动打包和压缩-->
     <template #title>
       <div class="profile-title"></div>
     </template>
