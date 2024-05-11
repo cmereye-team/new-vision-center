@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { useWindowSize } from '@vueuse/core'
+const { width } = useWindowSize()
 // import { Autoplay, Pagination, Navigation } from "swiper/modules";
 useHead({
     title: 'MIYOSMART'
@@ -260,12 +262,11 @@ const handleIcon = (str:any,idx:any) =>{
                 OK 鏡用家<span> 見證</span>
             </div>
             <section class="section1">
-                <swiper
+                <!-- <swiper
                     class="witnessSwiper"
-                    :slidesPerView="4"
+                    :slidesPerView="width>768?4:1"
                     :space-between="47"
-                    @swiper="setSwiper"
-                >
+                    @swiper="setSwiper">
                     <swiper-slide
                       v-for="(item,index) in witness.section1"
                       :key="index"
@@ -321,7 +322,7 @@ const handleIcon = (str:any,idx:any) =>{
                             </div>
                         </nuxtLink>
                     </swiper-slide>
-                </swiper>
+                </swiper> -->
             </section>
             <section class="section2">
                 <div class="list-in" v-for="(item,index) in witness.section2" :key="index">
@@ -793,7 +794,7 @@ const handleIcon = (str:any,idx:any) =>{
     .section2{
         width: 100%;
         max-width: 1280px;
-        margin-top: 80px;
+        margin-top: 60px;
         display: grid;
         grid-template-columns: repeat(3,1fr);
         gap: 40px;
@@ -873,12 +874,216 @@ const handleIcon = (str:any,idx:any) =>{
 }
 .formBox{
     margin-top: 100px;
+    margin-bottom: 90px;
 }
 @media (min-width: 768px) and (max-width: 1452px) {}
 @media screen and (max-width: 768px) {
     .MIYOSMART{
         &-banner{
             margin-top: 87px;
+            
+        }
+    }
+    .services{
+        padding: 0 30px;
+        box-sizing: border-box;
+        margin: 24px auto 0;
+        &-t{
+            .title{
+                font-size: 24px;
+                line-height: 30px;
+            }
+            .btn{
+                display: none;
+            }
+        }
+        &-b{
+            margin-top: 16px;
+            gap: 8px;
+            .list-in{
+                flex-direction: column;
+                padding: 9px;
+                box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
+                border-radius: 15px;
+                .image{
+                    width: 100%;
+                    margin-right: 0;
+                    img{
+                        border-radius: 10px;
+                    }
+                }
+                .context{
+                    &-t{
+                        display: inline-block;
+                        h3{
+                            font-size: 14px;
+                            line-height: 16px;
+                            display: block;
+                            
+                        }
+                    }
+                    &-b{
+                        &-l{
+                            .context-text{
+                                p{
+                                    font-size: 12px;
+                                    line-height: 24px;
+                                }
+                            }
+                            .context-context{
+                                p{
+                                    font-size: 16px;
+                                    line-height: 24px;
+                                }
+                            }
+                            .context-price{
+                                p{
+                                    font-size: 18px;
+                                    line-height: 24px;
+                                    span{
+                                        font-size: 18px;
+                                        line-height: 24px;
+                                    }
+                                }
+                            }
+                        }
+                        &-r{
+                            width: 19px;
+                            height: 19px;
+                            margin-right: 0;
+                            span{
+                                svg{
+                                    width: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+                &:nth-of-type(2),&:nth-of-type(3){
+                    .context{
+                        &-t{
+                            h3{
+                                display: inline;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .newDiscounts{
+        margin-top: 43px;
+        padding: 0 20px 31px;
+        box-sizing: border-box;
+        &-in{
+            &-t{
+                &>div{
+                    &>span{
+                        font-size: 24px;
+                        line-height: 30px;
+                    }
+                    img{
+                        width: 66px;
+                    }
+                    &:nth-of-type(1){
+                        margin-left: -10px;
+                    }
+                    &:nth-of-type(2){
+                        margin-top: 20px;
+                    }
+                    &:nth-of-type(3){
+                        margin-top: 30px;
+                        margin-left: -5px;
+                    }
+                }
+            }
+            &-b{
+                margin-top: 5px;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+                .list-in{
+                    border-radius: 11px;
+                    padding: 12px;
+                    box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+                    h3{
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 14.01px; /* 100.069% */
+                        letter-spacing: 0.7px;
+                        -webkit-line-clamp: 3;
+                        margin-top: 5px;
+                    }
+                    .context{
+                        margin-top: 6px;
+                        align-items: center;
+                        &-l{
+                            font-size: 12px;
+                            line-height: 14px;
+                            white-space: pre-wrap;
+                            span{
+                                font-size: 16px;
+                            }
+                            
+                        }
+                        &-r{
+                            padding: 8px;
+                            span{
+                                font-size: 8px;
+                            }
+                            svg{
+                                width: 9px;
+                                height: 9px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .witness{
+        padding: 0 25px;
+        box-sizing: border-box;
+        margin: 18px auto 0;
+        &-t{
+            font-size: 24px;
+            line-height: 1.6;
+        }
+        .section2{
+            grid-template-columns: repeat(1,1fr);
+            gap: 20px;
+            .list-in{
+                &-t{
+                    .image{
+                        width: 133px;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    .context{
+                        h3{
+                            font-size: 20px;
+                            line-height: 24px;
+                        }
+                        h4{
+                            font-size: 16px;
+                            line-height: 24px;
+                            letter-spacing: 0.8px;
+                        }
+                        p{
+                            font-size: 14px;
+                            line-height: 20px;
+                            letter-spacing: 0.7px;
+                        }
+                    }
+                }
+                &-b{
+                    p{
+                        font-size: 14px;
+                        line-height: 24px;
+                    }
+                }
+            }
         }
     }
 }

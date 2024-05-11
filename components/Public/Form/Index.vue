@@ -91,8 +91,14 @@ const cities:any = ref([
 const actCities:any = ref([])
 const actCitiesTab = ref('0')
 const changeCities = (str:string) => {
-  let temp = cities.value.filter((item:any) => item.type === str) 
-  actCitiesTab.value = str
+  let temp = []
+  if(actCitiesTab.value === str){
+    actCitiesTab.value = '0'
+    temp = cities.value
+  }else{
+    actCitiesTab.value = str
+    temp = cities.value.filter((item:any) => item.type === str) 
+  }
   if(temp.length){
     actCities.value = temp
   }else{
@@ -195,24 +201,64 @@ onMounted(()=>{
       size="default"
       status-icon
     >
-      <el-form-item label="姓名" prop="name">
-        <el-input v-model="ruleForm.name" clearable placeholder="請輸入姓名" />
+    <div class="formtitle">基本信息</div>
+      <el-form-item prop="name" class="inputItem">
+        <slot name="label">
+          <div class="slotLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="30" viewBox="0 0 31 30" fill="none">
+            <path d="M24.8821 18.8846C23.4085 17.7539 23.1006 15.0925 23.9954 13.4648C24.7158 12.1541 25.0926 10.6911 25.0925 9.2053C25.0905 4.13323 20.7654 0 15.4577 0C10.1521 0 5.89112 4.13323 5.89112 9.14297C5.89112 12.8587 5.16784 18.9709 3.01543 21.9997C1.64131 23.9333 0.755765 26.2021 0.517772 28.658C0.446206 29.3965 1.05461 30 1.79658 30C2.53855 30 3.13157 29.3957 3.2202 28.6591C3.86907 23.2663 8.38221 18.9858 14.018 18.3483C14.0822 18.3483 15.7224 18.2236 17.096 18.3483H17.2283C22.7281 19.0992 27.0562 23.3127 27.6958 28.6297C27.7861 29.3803 28.3903 29.9961 29.1464 29.9961C29.9084 29.9961 30.5306 29.3719 30.4466 28.6146C30.0123 24.7017 27.9383 21.2295 24.8821 18.8846ZM15.4597 16.0304C11.4615 16.0304 8.25119 12.9626 8.25119 9.14297C8.25119 5.32333 11.4615 2.2536 15.4597 2.2536C19.456 2.2536 22.6663 5.32333 22.6663 9.14297C22.6663 12.9626 19.458 16.0304 15.4597 16.0304Z" fill="#00A6CE"/>
+            </svg>
+            <span>姓名</span>
+            <i>*</i>
+          </div>
+        </slot>
+        <el-input v-model="ruleForm.name" clearable maxlength="20" placeholder="請輸入姓名" />
       </el-form-item>
-      <el-form-item label="聯絡電話" prop="tel">
+      <el-form-item prop="tel" class="inputItem">
+        <slot name="label">
+          <div class="slotLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="33" height="31" viewBox="0 0 33 31" fill="none">
+            <path d="M19.9188 28.6677C19.9188 28.6674 19.9186 28.6672 19.9184 28.6671C16.664 27.6695 13.1896 25.5277 9.60929 21.9309C6.13657 18.4419 3.97662 15.1444 2.86926 12.1156C2.14897 10.1468 1.96822 8.59421 2.07411 7.52988C2.07813 7.48552 2.08361 7.4413 2.09055 7.39728L2.10515 7.25941C2.12524 6.51385 2.57256 5.35994 3.05184 4.81987C3.50868 4.24885 4.00264 3.70623 4.53076 3.19527C4.95161 2.78868 5.35695 2.44883 5.72667 2.19943C6.08188 1.95957 6.35526 1.83524 6.52947 1.79097C6.58868 1.77593 6.80896 1.89173 6.8459 1.94038C6.98102 2.11689 7.14899 2.37331 7.34527 2.69823C7.81536 3.49736 8.25836 4.31097 8.67355 5.13776C9.5421 6.85358 10.3748 8.58596 11.1713 10.3339C11.2443 10.4919 11.2114 10.8406 11.1138 10.9811L9.1008 13.8553C9.03721 13.9497 8.9886 14.0527 8.95656 14.1609C8.63521 15.2279 9.4833 16.899 12.1161 19.4799C13.721 21.0518 15.1242 22.0758 16.3311 22.6527C17.1417 23.0409 17.7552 23.1796 18.1596 23.1708C18.3513 23.1629 18.5129 23.1111 18.6526 23.0215L21.6287 21.0896C21.7821 20.9904 22.16 20.9517 22.3362 21.0202L22.7087 21.1634C24.022 21.6715 25.327 22.1993 26.6232 22.7467C26.9245 22.8749 27.2139 22.9996 27.4905 23.1208C28.4217 23.5309 29.1867 23.8936 29.7426 24.1904C30.033 24.3467 30.2594 24.4811 30.4091 24.5873C30.4702 24.6312 30.5131 24.6646 30.5332 24.6839C30.5233 24.673 30.514 24.6617 30.5052 24.65C30.4974 24.6395 30.4965 24.6404 30.5022 24.6523C30.6957 24.9842 29.781 26.2216 28.2957 27.4809C28.008 27.7249 27.7149 27.9629 27.4165 28.1948C27.3184 28.2649 27.2358 28.3532 27.1738 28.4545C27.1118 28.5559 27.0716 28.6682 27.0555 28.7847C27.0395 28.9013 27.048 29.0198 27.0804 29.1332C27.1129 29.2466 27.1687 29.3525 27.2445 29.4447C27.3203 29.537 27.4146 29.6136 27.5218 29.6701C27.629 29.7266 27.747 29.7619 27.8686 29.7737C27.9902 29.7856 28.1131 29.7738 28.2299 29.7391C28.3467 29.7044 28.455 29.6475 28.5486 29.5718C28.8724 29.3206 29.1904 29.0626 29.5026 28.7981C31.7483 26.8925 32.9543 25.2635 32.0934 23.7908L32.1564 23.9225C31.898 23.2376 30.7752 22.6352 28.2491 21.5243C27.9661 21.3987 27.6694 21.2714 27.3618 21.1405C25.9241 20.5302 24.4745 19.9464 23.0136 19.3895C22.2814 19.1049 21.2644 19.2077 20.6071 19.6336L18.0351 21.3032C17.9719 21.3443 18.0182 21.4419 18.09 21.419C18.0956 21.4172 18.1084 21.4161 18.1027 21.4143C18.0927 21.4112 18.0465 21.4037 17.9706 21.3864C17.6843 21.3145 17.4071 21.212 17.1445 21.0808C16.1311 20.5961 14.8896 19.6898 13.4198 18.2496C11.2032 16.0779 10.6244 14.9363 10.7103 14.65C10.6912 14.7094 10.6636 14.7658 10.6281 14.8178L12.6283 11.962C13.0765 11.3209 13.1669 10.3347 12.8428 9.62693L12.6657 9.24142C12.0279 7.85771 11.3699 6.48267 10.692 5.11669C10.5624 4.85763 10.4364 4.6056 10.3122 4.36323C8.98577 1.7665 8.23627 0.52302 7.56437 0.22708C6.75461 -0.232199 5.75589 0.0347622 4.67774 0.761881C4.21033 1.07714 3.72831 1.4811 3.23808 1.95443C2.66387 2.50995 2.12634 3.09947 1.62861 3.71953C0.907412 4.53096 0.310368 6.07301 0.280242 7.21462L0.294848 7.07675C0.282981 7.13822 0.269286 7.23306 0.256506 7.36303C0.125959 8.67588 0.336842 10.484 1.14751 12.6987C2.34342 15.9699 4.64213 19.4799 8.29013 23.1454C12.0769 26.9496 15.8116 29.2512 19.3638 30.341C20.5533 30.7055 21.6698 30.9154 22.7004 30.9979C22.9399 31.0138 23.1762 30.9385 23.3582 30.7881C23.5403 30.6377 23.6535 30.4244 23.6733 30.1943C23.6931 29.9642 23.6179 29.7359 23.464 29.5588C23.3102 29.3816 23.09 29.2699 22.8511 29.2477C21.8542 29.1614 20.8707 28.967 19.9192 28.6683C19.919 28.6682 19.9188 28.668 19.9188 28.6677Z" fill="#00A6CE"/>
+            </svg>
+            <span>聯絡電話</span>
+            <i>*</i>
+          </div>
+        </slot>
         <el-input
           v-model.number="ruleForm.tel"
           clearable
+          maxlength="12"
           placeholder="請輸入聯絡電話"
         />
       </el-form-item>
-      <el-form-item label="電郵地址" prop="email">
+      <el-form-item prop="email" class="inputItem">
+        <slot name="label">
+          <div class="slotLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="25" viewBox="0 0 38 25" fill="none">
+            <path d="M34.5539 0H3.46328C1.74149 0 0.339844 1.38412 0.339844 3.08835V21.9143C0.339844 23.6194 1.74104 25 3.46328 25H34.5539C36.2829 25 37.6773 23.6189 37.6773 21.9143V3.08835C37.6769 1.38412 36.2825 0 34.5539 0ZM33.8057 2.21129L21.4076 13.0678C20.3252 14.0208 19.5244 14.4944 19.0083 14.4944C18.4919 14.4944 17.6906 14.0208 16.6086 13.0678L4.21103 2.21129H33.8057ZM2.66337 21.2276V4.21698L12.3466 12.6041L2.66337 21.2276ZM4.29175 22.7891L14.0108 14.2654L15.6029 15.646C16.5284 16.4446 17.6684 16.8549 19.0088 16.8549C20.356 16.8549 21.4888 16.4446 22.4175 15.646L24.0096 14.2654L33.7295 22.7891H4.29175ZM35.3542 21.2276L25.6715 12.6045L35.3542 4.21742V21.2276Z" fill="#00A6CE"/>
+            </svg>
+            <span>電郵地址</span>
+            <i>*</i>
+          </div>
+        </slot>
         <el-input
           v-model="ruleForm.email"
           clearable
+           maxlength="100"
           placeholder="請輸入電郵地址"
         />
       </el-form-item>
-      <el-form-item label="選擇門診地點" prop="address">
+      <el-form-item prop="address" class="inputItem">
+        <slot name="label">
+          <div class="slotLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="31" height="36" viewBox="0 0 31 36" fill="none">
+            <path d="M15.5968 0.0355212C15.597 0.0309113 15.5962 0.0263186 15.5944 0.0220158C15.5927 0.0177131 15.5901 0.0137883 15.5868 0.0104746C15.5835 0.00716095 15.5795 0.00452612 15.5751 0.00272669C15.5707 0.000927264 15.5659 0 15.5611 0C15.5564 0 15.5516 0.000927264 15.5472 0.00272669C15.5428 0.00452612 15.5388 0.00716095 15.5355 0.0104746C15.5322 0.0137883 15.5296 0.0177131 15.5278 0.0220158C15.5261 0.0263186 15.5253 0.0309113 15.5255 0.0355212C15.526 0.0443089 15.53 0.0525747 15.5366 0.0586216C15.5432 0.0646686 15.552 0.0680379 15.5611 0.0680379C15.5703 0.0680379 15.579 0.0646686 15.5857 0.0586216C15.5923 0.0525747 15.5963 0.0443089 15.5968 0.0355212ZM15.5495 0.952529C7.37835 0.952529 0.726562 7.53873 0.726562 15.6316C0.726562 25.4634 14.2587 34.8961 14.8331 35.2713C15.0423 35.4149 15.2927 35.492 15.5495 35.492C15.8063 35.492 16.0567 35.4149 16.2659 35.2713C16.8404 34.8961 30.3724 25.4634 30.3724 15.6316C30.3724 7.53873 23.7207 0.952529 15.5495 0.952529ZM25.8291 22.0989C21.2884 29.7026 9.80702 29.7058 5.26808 22.101C4.02676 20.0212 3.19705 17.8146 3.19705 15.6316C3.19705 8.84877 8.75558 3.33445 15.5495 3.33445C22.3435 3.33445 27.902 8.84881 27.902 15.6316C27.902 17.8122 27.0715 20.0185 25.8291 22.0989Z" fill="#00A6CE"/>
+            <path d="M15.5486 9.25468C12.86 9.19414 10.4011 10.7091 9.32845 13.0868C8.25576 15.4647 8.78292 18.2319 10.662 20.0868C12.5409 21.9419 15.3978 22.5154 17.8885 21.5375C20.3794 20.5598 22.0084 18.2253 22.0091 15.6323C22.0468 12.1532 19.1571 9.30025 15.5486 9.25468ZM15.5486 19.6252C15.5486 19.6268 15.5473 19.6281 15.5457 19.6282C13.858 19.6879 12.3016 18.7538 11.6115 17.2674C10.9211 15.7801 11.2367 14.0377 12.4086 12.8639C13.5808 11.6901 15.3748 11.3199 16.9425 11.9286C18.5101 12.5374 19.5373 14.0029 19.5384 15.6324C19.5729 17.7932 17.7919 19.5751 15.5516 19.6222C15.55 19.6222 15.5486 19.6236 15.5486 19.6252Z" fill="#00A6CE"/>
+            </svg>
+            <span>選擇門診地點</span>
+            <i>*</i>
+          </div>
+        </slot>
         <el-select
           v-model="ruleForm.address"
           clearable
@@ -226,7 +272,20 @@ onMounted(()=>{
           <el-option label="將軍澳" value="Tseung Kwan O" />
         </el-select>
       </el-form-item>
-      <el-form-item label="從哪裡找到我們網站" prop="FromMe">
+      <el-form-item prop="FromMe" class="inputItem">
+        <slot name="label">
+          <div class="slotLabel">
+            <svg xmlns="http://www.w3.org/2000/svg" width="38" height="38" viewBox="0 0 38 38" fill="none">
+            <path d="M18.974 35.858C28.6709 35.858 36.5319 28.2786 36.5319 18.929C36.5319 9.57937 28.6709 2 18.974 2C9.27697 2 1.41602 9.57937 1.41602 18.929C1.41602 28.2786 9.27697 35.858 18.974 35.858Z" stroke="#00A6CE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2.29297 19.7754L7.58804 21.6319C10.0309 22.4884 11.3721 25.1109 10.6366 27.5928V27.5928C10.3488 28.5641 10.372 29.6011 10.703 30.5585L11.9498 34.165" stroke="#00A6CE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M27.7518 33.3186L27.2969 31.1258C27.0332 29.8545 26.1419 28.8041 24.9305 28.3368V28.3368C23.4565 27.7684 22.4844 26.3515 22.4844 24.7717V24.5206C22.4844 22.7017 23.6587 21.0909 25.3903 20.5343L26.5653 20.1567C27.3476 19.9053 28.1739 19.8206 28.9909 19.9081L35.6528 20.6218" stroke="#00A6CE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M31.2634 7.9248L31.223 8.04159C30.7092 9.5278 29.404 10.5993 27.8462 10.8139L26.1232 11.0512C25.0441 11.1999 24.2402 12.1221 24.2402 13.2113V13.2113C24.2402 14.7424 25.7768 15.7967 27.2053 15.2458L28.1326 14.8881C28.4612 14.7614 28.8104 14.6964 29.1626 14.6964H30.2063C31.4799 14.6964 32.7371 14.9836 33.8843 15.5367L35.6529 16.3893" stroke="#00A6CE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M2.29297 16.3891L5.38047 14.0076C6.23655 13.3473 7.23542 12.8967 8.29702 12.692L8.6209 12.6295C10.192 12.3266 11.5816 11.4197 12.4916 10.1037V10.1037C13.7787 8.24219 13.9321 5.8219 12.8902 3.81283L12.8277 3.69238" stroke="#00A6CE" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            <span>從哪裡找到我們網站？</span>
+            <i>*</i>
+          </div>
+        </slot>
         <el-select
           v-model="ruleForm.FromMe"
           placeholder="請選擇"
@@ -244,7 +303,8 @@ onMounted(()=>{
           <el-option label="其他" value="其他" />
         </el-select>
       </el-form-item>
-      <el-form-item label="請選擇服務">
+      <div class="formtitle">請選擇服務</div>
+      <el-form-item>
         <div class="serviceTab">
           <div class="serviceTab-item" :class="{act: actCitiesTab === '101'}" @click="changeCities('101')">
             <svg xmlns="http://www.w3.org/2000/svg" width="59" height="71" viewBox="0 0 59 71" fill="none">
@@ -265,9 +325,9 @@ onMounted(()=>{
           </div>
           <div class="serviceTab-item" :class="{act: actCitiesTab === '103'}" @click="changeCities('103')">
             <svg xmlns="http://www.w3.org/2000/svg" width="63" height="56" viewBox="0 0 63 56" fill="none">
-              <path d="M31.7796 19.6475C25.1702 19.6475 19.8125 24.8132 19.8125 31.1859C19.8125 37.5586 25.1702 42.7244 31.7796 42.7244C38.3891 42.7244 43.7468 37.5586 43.7468 31.1859C43.7468 24.8132 38.3891 19.6475 31.7796 19.6475ZM31.7796 24.2628C33.684 24.2628 35.5103 24.9922 36.8569 26.2906C38.2034 27.5889 38.9599 29.3498 38.9599 31.1859C38.9599 33.022 38.2034 34.7829 36.8569 36.0813C35.5103 37.3796 33.684 38.109 31.7796 38.109C29.8753 38.109 28.049 37.3796 26.7024 36.0813C25.3558 34.7829 24.5994 33.022 24.5994 31.1859C24.5994 29.3498 25.3558 27.5889 26.7024 26.2906C28.049 24.9922 29.8753 24.2628 31.7796 24.2628Z" fill="#00A6CE"/>
-              <path d="M31.7786 6.95508C23.1204 6.95508 15.2879 10.4651 9.12363 16.2551C4.09743 20.9743 0.664062 26.9224 0.664062 30.7243V31.6474C0.664062 35.4493 4.09863 41.3974 9.12363 46.1166C15.2867 51.9066 23.1204 55.4166 31.7786 55.4166C40.4464 55.4166 48.2741 51.9516 54.4109 46.2228C59.4454 41.522 62.8597 35.5878 62.8932 31.667V30.7243C62.8597 26.7839 59.4454 20.8485 54.4109 16.1478C48.2741 10.4189 40.4452 6.95508 31.7786 6.95508ZM31.7786 11.5705C39.1169 11.5705 45.7885 14.522 51.0816 19.4628C55.2797 23.3847 58.0848 28.2608 58.1063 30.7428V31.6485C58.0848 34.1097 55.2797 38.987 51.0816 42.9066C45.7885 47.8485 39.1169 50.8012 31.7786 50.8012C24.4619 50.8012 17.7854 47.8093 12.4637 42.8097C8.27516 38.8762 5.45092 33.9851 5.45092 31.6485V30.7243C5.45092 28.3866 8.27516 23.4943 12.4637 19.5608C17.7854 14.5612 24.4619 11.5705 31.7786 11.5705Z" fill="#00A6CE"/>
-              <path d="M31.7785 0C32.3821 0.000106818 32.9634 0.220121 33.4059 0.615966C33.8484 1.01181 34.1195 1.55425 34.1648 2.13461L34.1719 2.30769V9.26192C34.1747 9.86075 33.936 10.4372 33.5061 10.8694C33.0763 11.3016 32.489 11.5559 31.8683 11.5783C31.2477 11.6008 30.6423 11.3898 30.18 10.9898C29.7178 10.5899 29.4349 10.0323 29.3911 9.435L29.3851 9.26192V2.30769C29.3851 1.69565 29.6372 1.10868 30.0861 0.675907C30.535 0.243131 31.1437 0 31.7785 0ZM46.4598 5.08096C46.4598 5.08112 46.46 5.08118 46.4601 5.08104C46.7689 4.56382 47.2736 4.18208 47.8682 4.01598C48.4629 3.84982 49.1013 3.91236 49.6492 4.19047C50.1971 4.46859 50.6119 4.94062 50.8065 5.50741C51.001 6.0742 50.9602 6.69163 50.6926 7.23L50.6052 7.38923L46.9983 13.4112C46.6895 13.9286 46.1847 14.3106 45.5899 14.4767C44.9952 14.6429 44.3568 14.5803 43.8089 14.3022C43.261 14.0241 42.8462 13.5521 42.6516 12.9853C42.457 12.4185 42.4979 11.8011 42.7655 11.2627L42.8529 11.1035L46.4595 5.08088C46.4596 5.08074 46.4598 5.0808 46.4598 5.08096ZM13.8272 4.23692C13.8276 4.23692 13.828 4.23682 13.8283 4.23663C14.3499 3.94669 14.9656 3.8569 15.5528 3.98517C16.1401 4.11349 16.6557 4.45059 16.9967 4.92923L17.0972 5.08154L20.7041 11.1035C21.0102 11.6198 21.0978 12.23 20.9485 12.8071C20.7993 13.3841 20.4248 13.8833 19.9031 14.2005C19.3815 14.5178 18.7529 14.6287 18.1485 14.51C17.5441 14.3913 17.0106 14.0522 16.6592 13.5635L16.5587 13.4112L12.9518 7.38923C12.6343 6.85934 12.5481 6.22957 12.7122 5.63842C12.8762 5.04745 13.2769 4.54347 13.8261 4.23722C13.8264 4.23702 13.8268 4.23692 13.8272 4.23692Z" fill="#00A6CE"/>
+              <path d="M31.7796 19.6475C25.1702 19.6475 19.8125 24.8132 19.8125 31.1859C19.8125 37.5586 25.1702 42.7244 31.7796 42.7244C38.3891 42.7244 43.7468 37.5586 43.7468 31.1859C43.7468 24.8132 38.3891 19.6475 31.7796 19.6475ZM31.7796 24.2628C33.684 24.2628 35.5103 24.9922 36.8569 26.2906C38.2034 27.5889 38.9599 29.3498 38.9599 31.1859C38.9599 33.022 38.2034 34.7829 36.8569 36.0813C35.5103 37.3796 33.684 38.109 31.7796 38.109C29.8753 38.109 28.049 37.3796 26.7024 36.0813C25.3558 34.7829 24.5994 33.022 24.5994 31.1859C24.5994 29.3498 25.3558 27.5889 26.7024 26.2906C28.049 24.9922 29.8753 24.2628 31.7796 24.2628Z" :fill="actCitiesTab === '103'? '#fff' : '#00A6CE'"/>
+              <path d="M31.7786 6.95508C23.1204 6.95508 15.2879 10.4651 9.12363 16.2551C4.09743 20.9743 0.664062 26.9224 0.664062 30.7243V31.6474C0.664062 35.4493 4.09863 41.3974 9.12363 46.1166C15.2867 51.9066 23.1204 55.4166 31.7786 55.4166C40.4464 55.4166 48.2741 51.9516 54.4109 46.2228C59.4454 41.522 62.8597 35.5878 62.8932 31.667V30.7243C62.8597 26.7839 59.4454 20.8485 54.4109 16.1478C48.2741 10.4189 40.4452 6.95508 31.7786 6.95508ZM31.7786 11.5705C39.1169 11.5705 45.7885 14.522 51.0816 19.4628C55.2797 23.3847 58.0848 28.2608 58.1063 30.7428V31.6485C58.0848 34.1097 55.2797 38.987 51.0816 42.9066C45.7885 47.8485 39.1169 50.8012 31.7786 50.8012C24.4619 50.8012 17.7854 47.8093 12.4637 42.8097C8.27516 38.8762 5.45092 33.9851 5.45092 31.6485V30.7243C5.45092 28.3866 8.27516 23.4943 12.4637 19.5608C17.7854 14.5612 24.4619 11.5705 31.7786 11.5705Z" :fill="actCitiesTab === '103'? '#fff' : '#00A6CE'"/>
+              <path d="M31.7785 0C32.3821 0.000106818 32.9634 0.220121 33.4059 0.615966C33.8484 1.01181 34.1195 1.55425 34.1648 2.13461L34.1719 2.30769V9.26192C34.1747 9.86075 33.936 10.4372 33.5061 10.8694C33.0763 11.3016 32.489 11.5559 31.8683 11.5783C31.2477 11.6008 30.6423 11.3898 30.18 10.9898C29.7178 10.5899 29.4349 10.0323 29.3911 9.435L29.3851 9.26192V2.30769C29.3851 1.69565 29.6372 1.10868 30.0861 0.675907C30.535 0.243131 31.1437 0 31.7785 0ZM46.4598 5.08096C46.4598 5.08112 46.46 5.08118 46.4601 5.08104C46.7689 4.56382 47.2736 4.18208 47.8682 4.01598C48.4629 3.84982 49.1013 3.91236 49.6492 4.19047C50.1971 4.46859 50.6119 4.94062 50.8065 5.50741C51.001 6.0742 50.9602 6.69163 50.6926 7.23L50.6052 7.38923L46.9983 13.4112C46.6895 13.9286 46.1847 14.3106 45.5899 14.4767C44.9952 14.6429 44.3568 14.5803 43.8089 14.3022C43.261 14.0241 42.8462 13.5521 42.6516 12.9853C42.457 12.4185 42.4979 11.8011 42.7655 11.2627L42.8529 11.1035L46.4595 5.08088C46.4596 5.08074 46.4598 5.0808 46.4598 5.08096ZM13.8272 4.23692C13.8276 4.23692 13.828 4.23682 13.8283 4.23663C14.3499 3.94669 14.9656 3.8569 15.5528 3.98517C16.1401 4.11349 16.6557 4.45059 16.9967 4.92923L17.0972 5.08154L20.7041 11.1035C21.0102 11.6198 21.0978 12.23 20.9485 12.8071C20.7993 13.3841 20.4248 13.8833 19.9031 14.2005C19.3815 14.5178 18.7529 14.6287 18.1485 14.51C17.5441 14.3913 17.0106 14.0522 16.6592 13.5635L16.5587 13.4112L12.9518 7.38923C12.6343 6.85934 12.5481 6.22957 12.7122 5.63842C12.8762 5.04745 13.2769 4.54347 13.8261 4.23722C13.8264 4.23702 13.8268 4.23692 13.8272 4.23692Z" :fill="actCitiesTab === '103'? '#fff' : '#00A6CE'"/>
             </svg>
             <span>其他檢查套餐</span>
           </div>
@@ -283,20 +343,30 @@ onMounted(()=>{
           >
         </el-checkbox-group>
       </el-form-item>
-      <!-- <el-form-item label="t('pages.content.form.sms')" prop="sms"> -->
-      <!-- <textarea  v-model="ruleForm.sms"  placeholder="請輸入詳細內容"></textarea> -->
-      <!-- </el-form-item> -->
-      <div class="form_textarea">
-        <div class="form_textarea_div1">訊息</div>
-        <!-- <textarea v-model="ruleForm.sms" placeholder="請輸入詳細內容"></textarea> -->
+      <div class="formtitle icon">
+        <svg xmlns="http://www.w3.org/2000/svg" width="52" height="32" viewBox="0 0 52 32" fill="none">
+        <path d="M24.1583 18.866C25.1729 19.5512 26.5019 19.5512 27.5164 18.866L39.9243 10.4861C42.3764 8.83002 41.2042 4.99997 38.2453 4.99997H13.4295C10.4706 4.99997 9.29836 8.83002 11.7504 10.4861L24.1583 18.866Z" fill="#00517E"/>
+        <path d="M9.96094 14.666L25.837 25.3327L41.7131 14.666V31.9994H9.96094V14.666Z" fill="#00517E"/>
+        </svg>
+        訊息
       </div>
-      <textarea
-        v-model="ruleForm.sms"
-        rows="5"
-        placeholder="請輸入詳細內容"
-      ></textarea>
-      <el-form-item>
-        <el-button @click="submitForm(ruleFormRef)"> 遞交 </el-button>
+      <el-form-item class="submitFormItem">
+        <el-input
+          v-model="ruleForm.sms"
+           maxlength="500"
+          placeholder="請輸入詳細內容"
+        />
+        <!-- <el-button @click="submitForm(ruleFormRef)"> 提交 </el-button> -->
+        <div class="submitBtn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="34" height="37" viewBox="0 0 34 37" fill="none">
+          <path d="M28.8457 20.0517V8.07817C28.8457 7.81542 28.7375 7.56343 28.5448 7.37763L23.1528 2.17885C22.9601 1.99304 22.6988 1.88867 22.4263 1.88867H2.47283C1.90535 1.88867 1.44531 2.33223 1.44531 2.87938V33.9216C1.44531 34.4688 1.90535 34.9123 2.47283 34.9123H18.5706" stroke="white" stroke-width="2.47677" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21.9961 1.88867V7.50269C21.9961 8.04984 22.4561 8.49339 23.0236 8.49339H28.8462" stroke="white" stroke-width="2.47677" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M21.9961 29.9584H32.2712M32.2712 29.9584L27.1337 25.0049M32.2712 29.9584L27.1337 34.912" stroke="white" stroke-width="2.47677" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          <span @click="submitForm(ruleFormRef)">
+            提交
+          </span>
+        </div>
       </el-form-item>
     </el-form>
   </div>
@@ -307,6 +377,7 @@ onMounted(()=>{
 @media screen and (min-width: 768px) {
   .serviceTab{
     display: flex;
+    width: 100%;
     &-item{
       display: flex;
       align-items: center;
@@ -315,12 +386,6 @@ onMounted(()=>{
       border-radius: 20px;
       background: #fff;
       transition: all .3s;
-      svg{
-        path{
-          fill: #00A6CE;
-          stroke: #00A6CE;
-        }
-      }
       &>span{
         color: #666;
         font-family: "Noto Sans CJK TC";
@@ -332,19 +397,66 @@ onMounted(()=>{
       }
       &.act{
         background: #00A6CE;
-        svg{
-          path{
-            fill: #fff;
-            stroke: #fff;
-          }
-        }
         span{
           color: #fff;
         }
       }
       &:not(:last-child){
         margin-right: 34px;
+        svg{
+          path{
+            fill: #00A6CE;
+            stroke: #00A6CE;
+          }
+        }
+        &.act{
+           svg{
+            path{
+              fill: #fff;
+              stroke: #fff;
+            }
+          }
+        }
       }
+    }
+  }
+  .slotLabel{
+    color: var(--00517-e, #00517E);
+    font-family: "Noto Sans CJK TC";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 61.136px;
+    display: flex;
+    align-items: center;
+    svg{
+      margin-right: 10px;
+    }
+    i{
+      color: #00A4CE;
+      font-family: "Noto Sans CJK TC";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 61.136px;
+      margin-left: 5px;
+    }
+  }
+  .formtitle{
+    color: #00517E;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    width: 100%;
+    margin-bottom: 30px;
+    margin-top: 44px;
+    &.icon{
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      align-items: center;
     }
   }
   .formBox{
@@ -356,6 +468,8 @@ onMounted(()=>{
     border-radius: 20px;
     padding: 30px 36px 88px;
   }
+  
+
   .title {
     color: var(--Brand-Color, #00A6CE);
     font-family: "Noto Sans HK";
@@ -369,18 +483,11 @@ onMounted(()=>{
   }
 
   .Form {
-    // background: #fff;
     width: 100%;
     max-width: 1300px;
     box-sizing: border-box;
     border-radius: 7.642px;
-    // background: rgba(0, 166, 206, 0.05);
-    // box-shadow: 6.114px 6.114px 8px 0px rgba(0, 0, 0, 0.2);
-
     margin: 0 auto;
-    // padding: 30px 60px 30px 60px;
-    // margin-bottom: 94px;
-    margin-top: 44px;
     position: relative;
     z-index: 9;
   }
@@ -443,8 +550,10 @@ onMounted(()=>{
 
   :deep(.el-select__wrapper) {
     min-height: 43px;
-    padding: 2px 24px;
+    padding: 11px 30px;
     border: 1px solid #cccccc;
+    box-sizing: initial;
+    border-radius: 20px;
   }
   .form_textarea_div1 {
     margin-bottom: 8px;
@@ -475,22 +584,6 @@ onMounted(()=>{
     color: #ffffff;
   }
 
-  .iconHeader > div:nth-child(1) {
-    position: relative;
-    width: 94px;
-    height: 54px;
-    background: #00a4ce;
-    box-sizing: border-box;
-
-    & > span {
-      margin-left: 6px;
-    }
-  }
-
-  .iconHeader > div:nth-child(2) {
-    color: #00517e;
-    margin-left: 2px;
-  }
 
   :deep(.el-form) {
     display: flex;
@@ -498,75 +591,107 @@ onMounted(()=>{
     flex-wrap: wrap;
     justify-content: flex-start;
   }
-
-  :deep(.el-form-item) {
-    width: 465px;
+  .inputItem{
+    margin-right: 98px;
+    width: 478px;
   }
 
-  :deep(.el-form > div:nth-child(2n + 1)) {
-    margin-right: 78px;
-  }
-
-  :deep(.el-form > div:nth-child(6)) {
-    width: 100%;
-  }
-
-  :deep(.el-form > div:nth-child(7)) {
-    width: 505px;
-    height: 40px;
-    margin-right: 0;
-  }
-
-  :deep(.el-form > div:last-child) {
-    width: 120px;
-    height: 40px;
-    margin-right: 0;
-    margin-top: 0;
-    margin-left: 30px;
-  }
 
   :deep(.el-select) {
     width: 100%;
   }
 
-  :deep(.el-checkbox) {
-    width: 425px;
-    margin-right: 0;
-  }
-
-  :deep(.el-button) {
-    width: 120px;
-    height: 40px;
-    background: #00a4ce;
-    border-radius: 5px;
+  .submitBtn{
+    color: var(--White, #FFF);
     font-family: "Noto Sans CJK TC";
+    font-size: 25px;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 32px;
-    letter-spacing: 1em;
-    color: #ffffff;
-
-    & > span {
-      margin-left: 18px;
+    line-height: 0px; /* 0% */
+    letter-spacing: 5px;
+    background: linear-gradient(75deg,#00A6CE 30%,#3346ED);
+    display: flex;
+    align-items: center;
+    padding: 15px 35px;
+    border-radius: 20px;
+    margin-left: 35px;
+    position: relative;
+    cursor: pointer;
+    svg{
+      margin-right: 18px;
+      position: relative;
+      z-index: 3;
+    }
+    span{
+      position: relative;
+      z-index: 3;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      z-index: 2;
+      background: linear-gradient(75deg,#00A6CE 30%,#3346ED);
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 20px;
+      opacity: 0;
+      border: 2px solid #fff;
+      transition: all .3s;
+    }
+    &::after{
+      content: '';
+      background: linear-gradient(75deg,#00A6CE 30%,#3346ED);
+      filter: blur(10px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      border-radius: 20px;
+      transition: all .3s;
+    }
+    &:hover{
+      &::before{
+        opacity: 1;
+      }
+      
+      &::after{
+        opacity: .7;
+        transform: scale(1.2);
+      }
+    }
+  }
+  .submitFormItem{
+    width: 100%;
+    .el-form-item__content{
+        display: flex;
+        flex-wrap: nowrap;
+        .el-input{
+          flex: 1;
+        }
     }
   }
 
   :deep(.el-checkbox__label) {
-    color: var(--00517-e, #00517e);
+    color: #666;
     font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
+    font-size: 25px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
-    padding-left: 24px;
+    line-height: 48.909px; 
+    padding: 0 20px;
   }
 
   :deep(.el-checkbox__input.is-checked + .el-checkbox__label) {
     color: #00517e;
   }
   :deep(.el-select__placeholder.is-transparent) {
-    color: #00a6ce;
+    color: rgba(170, 170, 170, 0.20);
     font-family: "Noto Sans CJK TC";
     font-size: 24.454px;
     font-style: normal;
@@ -574,31 +699,39 @@ onMounted(()=>{
     line-height: 48.909px;
   }
   :deep(.el-checkbox__inner) {
-    width: 24px;
-    height: 24px;
+    width: 54px;
+    height: 54px;
     border-color: #ccc;
-    border-radius: 8px;
+    border-radius: 50%;
+    font-size: 50px;
+    box-sizing: border-box;
   }
 
   :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
-    border-color: #00a4ce;
-    background-color: #00a4ce;
+    border: initial;
+    background: initial;
+    &::after{
+      opacity: 1;
+      transform: translateX(-50%);
+      width: 100%;
+    }
   }
 
   :deep(.el-checkbox__inner::after) {
-    box-sizing: content-box;
     content: "";
-    border: 2px solid #fff;
-    border-left: 0;
-    border-top: 0;
-    height: 12px;
-    left: 7px;
+    width: 0;
+    height: 100%;
+    background: url(https://static.cmereye.com/imgs/2024/05/d22d7ed584a56f4d.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
     position: absolute;
-    top: 2px;
-    transform: rotate(45deg) scaleY(0);
-    width: 5px;
-    transition: transform 0.15s ease-in 50ms;
-    transform-origin: center;
+    transform: none;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    border: none;
+    transition: all .3s;
+    transform: translateX(-50%);
   }
 
   :deep(.el-form-item__label) {
@@ -621,16 +754,22 @@ onMounted(()=>{
     color: #00a4ce;
   }
 
-  :deep(.el-checkbox-group > .el-checkbox:nth-child(2n + 1)) {
-    margin: 20px 60px 0 0;
+  :deep(.el-checkbox-group > .el-checkbox) {
+    border: 1px solid #E2EDF2;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    padding: 24px 17px;
+    margin-top: 26px;
+    border-radius: 20px;
+    box-sizing: initial;
   }
 
   :deep(.el-input__wrapper) {
     width: 302px;
     height: 40px;
     border: 1px solid #cccccc;
-    border-radius: 8px;
-    padding: 2px 24px;
+    border-radius: 20px;
+    padding: 13px 30px;
   }
   :deep(.el-select__selected-item) {
     color: #00a6ce;
@@ -667,7 +806,7 @@ onMounted(()=>{
       }
 
       &::-webkit-input-placeholder {
-        color: #00a6ce;
+        color: rgba(170, 170, 170, 0.20);
         font-family: "Noto Sans CJK TC";
         font-size: 24.454px;
         font-style: normal;
@@ -677,38 +816,145 @@ onMounted(()=>{
     }
   }
 }
-</style>
-<style lang="scss" scoped>
-/**********************************************************分割线*******************************************************************************************/
-@media screen and (max-width: 767px) {
-  .title {
-    color: #00a6ce;
-    font-family: "Inter";
-    font-size: 24px;
+@media screen and (max-width: 768px) {
+  .serviceTab{
+    display: flex;
+    width: 100%;
+    margin-bottom: 7px;
+    &-item{
+      display: flex;
+      align-items: flex-start;
+      cursor: pointer;
+      padding: 11px;
+      border-radius: 15px;
+      background: #fff;
+      transition: all .3s;
+      flex-direction: column;
+      width: 100%;
+      &>span{
+        color: #666;
+        font-family: "Noto Sans CJK TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        // margin-left: 14px;
+        letter-spacing: 1.4px;
+        // max-width: 60px;
+      }
+      &>svg{
+        max-width: 32px;
+        max-height: 40px;
+        margin-bottom: 3px;
+      }
+      &.act{
+        background: #00A6CE;
+        span{
+          color: #fff;
+        }
+      }
+      &:not(:last-child){
+        margin-right: 8px;
+        svg{
+          path{
+            fill: #00A6CE;
+            stroke: #00A6CE;
+          }
+        }
+        &.act{
+           svg{
+            path{
+              fill: #fff;
+              stroke: #fff;
+            }
+          }
+        }
+      }
+    }
+  }
+  .slotLabel{
+    color: var(--00517-e, #00517E);
+    font-family: "Noto Sans CJK TC";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    svg{
+      margin-right: 5px;
+      max-width: 20px;
+    }
+    i{
+      color: #00A4CE;
+      font-family: "Noto Sans CJK TC";
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 38px;
+      margin-left: 5px;
+    }
+  }
+  .formtitle{
+    color: #00517E;
+    font-family: Inter;
+    font-size: 18px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    
-  }
-  .Form {
-    margin-top: 27px;
     width: 100%;
-    margin-bottom: 48px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    &.icon{
+      display: flex;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      align-items: center;
+      svg{
+        display: none;
+      }
+    }
+  }
+  .formBox{
+    background: #EAFBFF;
+    box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.1);
+    width: auto;
+    max-width: 1280px;
+    margin: 0 25px;
+    border-radius: 20px;
+    padding: 26px 20px 40px;
     box-sizing: border-box;
-    padding: 19px 20px;
-    background: #ffffff;
+  }
+  
 
-    border-radius: 4.839px;
-    background: rgba(0, 166, 206, 0.05);
-    box-shadow: 3.871px 3.871px 3.871px 0px rgba(0, 0, 0, 0.1);
+  .title {
+    color: var(--Brand-Color, #00A6CE);
+    font-family: "Noto Sans HK";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 1.2; /* 133.333% */
+    letter-spacing: 2.25px;
+    padding-bottom: 26px;
+    border-bottom: 1px solid #ccc;
+  }
+
+  .Form {
+    width: 100%;
+    max-width: 1300px;
+    box-sizing: border-box;
+    border-radius: 7.642px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
   }
 
   textarea {
     border: 2px solid #cccccc;
     border-radius: 8px;
-    width: 100%;
-    max-width: 90%;
-    min-height: 80px;
+    width: 75%;
+    max-width: 905px;
+    min-height: 40px;
     font-family: "Noto Sans CJK TC";
     font-style: normal;
     font-weight: 500;
@@ -719,25 +965,25 @@ onMounted(()=>{
     color: #6ebcd2;
     height: 40px;
     padding: 1px 11px;
-    margin-bottom: 18px;
+    max-height: 250px;
   }
 
   textarea::placeholder {
+    color: #00a6ce;
     font-family: "Noto Sans CJK TC";
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 32px;
-    color: #6ebcd2;
+    line-height: 30px;
   }
 
   textarea::-webkit-input-placeholder {
+    color: #00a6ce;
     font-family: "Noto Sans CJK TC";
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
-    font-size: 16px;
-    line-height: 32px;
-    color: #6ebcd2;
+    line-height: 30px;
   }
 
   textarea:focus {
@@ -745,24 +991,26 @@ onMounted(()=>{
     box-shadow: 0 0 0 1px #6ebcd2 inset !important;
     border: 1px solid #6ebcd2;
   }
+
+  :deep(.selected) {
+    color: #6ebcd2;
+  }
+
+  :deep(.el-select .el-input.is-focus .el-input__wrapper) {
+    box-shadow: 0 0 0 1px #6ebcd2 inset !important;
+  }
+
+  :deep(.el-select .el-input__wrapper.is-focus),
+  :deep(.el-select .el-input.is-focus .el-input__wrapper) {
+    box-shadow: 0 0 0 1px #6ebcd2 inset !important;
+  }
+
   :deep(.el-select__wrapper) {
-    min-height: 44px;
-  }
-  :deep(.el-input__inner) {
-    color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30.967px;
-  }
-  :deep(.el-select__placeholder.is-transparent) {
-    color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
-    font-size: 14px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 30.967px;
+    min-height: 43px;
+    padding: 0px 20px;
+    border: 1px solid #cccccc;
+    box-sizing: initial;
+    border-radius: 8px;
   }
   .form_textarea_div1 {
     margin-bottom: 8px;
@@ -775,12 +1023,15 @@ onMounted(()=>{
   }
 
   .iconHeader {
+    position: relative;
+    z-index: 99;
     margin: 20px 0;
-    font-family: "Noto Sans CJK TC";
+    margin-bottom: 43px;
+    font-family: "Noto Sans";
     font-style: normal;
     font-weight: 700;
-    font-size: 24px;
-    line-height: 36px;
+    font-size: 40px;
+    line-height: 54px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -790,46 +1041,171 @@ onMounted(()=>{
     color: #ffffff;
   }
 
-  .iconHeader > div:nth-child(1) {
+
+  :deep(.el-form) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .inputItem{
+    margin-right: 0px;
+    width: 100%;
+  }
+
+
+  :deep(.el-select) {
+    width: 100%;
+  }
+
+  .submitBtn{
+    color: var(--White, #FFF);
+    font-family: "Noto Sans CJK TC";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 0px; /* 0% */
+    letter-spacing: 5px;
+    background: linear-gradient(75deg,#00A6CE 30%,#3346ED);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 35px;
+    border-radius: 30px;
+    margin-left: 0;
     position: relative;
-    width: 54px;
-    height: 36px;
-    background: #00a4ce;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 26px;
+    svg{
+      margin-right: 15px;
+      position: relative;
+      z-index: 3;
+      max-width: 24px;
+    }
+    span{
+      position: relative;
+      z-index: 3;
+    }
+    &::before{
+      content: '';
+      position: absolute;
+      z-index: 2;
+      background: linear-gradient(75deg,#00A6CE 30%,#3346ED);
+      width: 100%;
+      height: 100%;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 30px;
+      opacity: 0;
+      border: 2px solid #fff;
+      transition: all .3s;
+    }
+    &::after{
+      content: '';
+      background: linear-gradient(75deg,#00A6CE 30%,#3346ED);
+      filter: blur(10px);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      opacity: 0;
+      border-radius: 20px;
+      transition: all .3s;
+    }
+    &:hover{
+      &::before{
+        opacity: 1;
+      }
+      
+      &::after{
+        opacity: .7;
+        transform: scale(1.1);
+      }
+    }
+  }
+  .submitFormItem{
+    width: 100%;
+    flex-direction: column;
+    .el-form-item__content{
+        display: flex;
+        // flex-wrap: nowrap;
+        flex-direction: column;
+        .el-input{
+          // flex: 1;
+          width: 100%;
+          input {
+            &::placeholder {
+              color: #00a6ce;
+            }
+
+            &::-webkit-input-placeholder {
+              color: #00a6ce;
+            }
+          }
+        }
+    }
+  }
+
+  :deep(.el-checkbox__label) {
+    color: #666;
+    font-family: "Noto Sans CJK TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 33px; 
+    padding: 0 20px;
+    width: 100%;
+  }
+
+  :deep(.el-checkbox__input.is-checked + .el-checkbox__label) {
+    color: #00517e;
+  }
+  :deep(.el-select__placeholder.is-transparent) {
+    color: rgba(170, 170, 170, 0.20);
+    font-family: "Noto Sans CJK TC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30px;
+  }
+  :deep(.el-checkbox__inner) {
+    width: 37px;
+    height: 37px;
+    border-color: #ccc;
+    border-radius: 50%;
+    font-size: 50px;
     box-sizing: border-box;
   }
 
-  .iconHeader > div:nth-child(2) {
-    color: #00517e;
-    margin-left: 2px;
+  :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
+    border: initial;
+    background: initial;
+    &::after{
+      opacity: 1;
+      transform: translateX(-50%);
+      width: 100%;
+    }
   }
 
-  :deep(.el-button) {
-    background: #00a4ce;
-    width: 108px;
-    height: 43px;
-
-    font-family: "Noto Sans CJK TC";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 32px;
-    /* identical to box height, or 200% */
-
-    display: flex;
-    align-items: center;
-    letter-spacing: 0.5em;
-
-    /* 白色 */
-
-    color: #ffffff;
-  }
-
-  /* deep 都是修改element默认样式的穿透 el-form-item__label:after ✳的颜色 el-form-item__label 标题的颜色 el-input__inner input输入框输入的字颜色 el-input__wrapper 边框样式 .el-input)   input   &::placeholder    提示文字的样式  */
-  :deep(
-      .el-form-item.is-required:not(.is-no-asterisk).asterisk-right
-        > .el-form-item__label:after
-    ) {
-    color: #00a4ce;
+  :deep(.el-checkbox__inner::after) {
+    content: "";
+    width: 0;
+    height: 100%;
+    background: url(https://static.cmereye.com/imgs/2024/05/d22d7ed584a56f4d.png) no-repeat;
+    background-size: 100% 100%;
+    box-sizing: border-box;
+    position: absolute;
+    transform: none;
+    left: 50%;
+    top: 0;
+    opacity: 0;
+    border: none;
+    transition: all .3s;
+    transform: translateX(-50%);
   }
 
   :deep(.el-form-item__label) {
@@ -839,127 +1215,88 @@ onMounted(()=>{
     font-size: 20px;
     line-height: 40px;
     color: #00517e;
+    flex: none;
+    order: 0;
+    align-self: stretch;
+    flex-grow: 0;
   }
 
-  :deep(.el-input__inner) {
-    color: #00a6ce;
-    font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
-    font-style: normal;
-    font-weight: 500;
-    line-height: 48.909px;
+  :deep(
+      .el-form-item.is-required:not(.is-no-asterisk).asterisk-right
+        > .el-form-item__label:after
+    ) {
+    color: #00a4ce;
+  }
+  :deep(.el-checkbox-group){
+    width: 100%;
+  }
+  :deep(.el-checkbox-group > .el-checkbox) {
+    border: 1px solid #E2EDF2;
+    background: #fff;
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+    padding: 24px 14px;
+    margin-top: 15px;
+    border-radius: 35px;
+    box-sizing: initial;
+    width: 100%;
+    box-sizing: border-box;
   }
 
   :deep(.el-input__wrapper) {
-    width: 302px;
+    width: 100%;
     height: 40px;
     border: 1px solid #cccccc;
     border-radius: 8px;
+    padding: 0px 20px;
   }
-
-  :deep(.el-textarea__inner) {
-    width: 302px;
-    height: 90px;
-    line-height: 2;
-    font-size: 16px;
-    border: 1px solid #cccccc;
-    font-weight: 500;
-    border-radius: 8px;
-    color: #6ebcd2;
-  }
-
-  :deep(.el-checkbox-group) {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /** 选中选项颜色 */
-  :deep(.el-checkbox__input.is-checked + .el-checkbox__label) {
-    color: #00517e;
-  }
-
-  :deep(.el-checkbox__inner) {
-    width: 24px;
-    height: 24px;
-    border-color: #ccc;
-    border-radius: 8px;
-    // 00a4ce
-  }
-
-  :deep(.el-checkbox__input.is-checked .el-checkbox__inner) {
-    border-color: #00a4ce;
-    background-color: #00a4ce;
-  }
-
-  :deep(.el-checkbox__inner::after) {
-    box-sizing: content-box;
-    content: "";
-    border: 2px solid #fff;
-    border-left: 0;
-    border-top: 0;
-    height: 12px;
-    left: 7px;
-    position: absolute;
-    top: 2px;
-    transform: rotate(45deg) scaleY(0);
-    width: 5px;
-    transition: transform 0.15s ease-in 50ms;
-    transform-origin: center;
-  }
-
-  :deep(.el-checkbox__label) {
+  :deep(.el-select__selected-item) {
+    color: #00a6ce;
     font-family: "Noto Sans CJK TC";
+    font-size: 16px;
     font-style: normal;
     font-weight: 500;
+    line-height: 30px;
+  }
+  :deep(.el-input__inner) {
+    color: #00a6ce;
+    font-family: "Noto Sans CJK TC";
     font-size: 16px;
-    line-height: 32px;
-    color: #00517e;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+  }
+
+  :deep(.el-form-item__content) {
+    line-height: 44px;
+    width: 100%;
   }
 
   :deep(.el-input) {
     input {
       &::placeholder {
+        color: #00a6ce;
         font-family: "Noto Sans CJK TC";
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 32px;
-        color: #6ebcd2;
+        line-height: 30px;
       }
 
       &::-webkit-input-placeholder {
+        color: rgba(170, 170, 170, 0.20);
         font-family: "Noto Sans CJK TC";
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
-        font-size: 16px;
-        line-height: 32px;
-        color: #6ebcd2;
+        line-height: 30px;
       }
     }
   }
-
-  :deep(.el-textarea) {
-    textarea {
-      &::placeholder {
-        font-family: "Noto Sans CJK TC";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 32px;
-
-        color: #6ebcd2;
-      }
-
-      &::-webkit-input-placeholder {
-        font-family: "Noto Sans CJK TC";
-        font-style: normal;
-        font-weight: 500;
-        font-size: 16px;
-        line-height: 32px;
-
-        color: #6ebcd2;
-      }
-    }
+  :deep(.el-form-item){
+    width: 100%;
   }
 }
+
 </style>
