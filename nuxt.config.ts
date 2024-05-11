@@ -25,6 +25,7 @@ export default defineNuxtConfig({
   modules: [
     '@element-plus/nuxt',
     '@nuxtjs/i18n',
+    '@vueuse/nuxt',
   ],
   i18n:{
     vuei18n:'./plugins/i18n.ts'

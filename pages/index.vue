@@ -2,6 +2,7 @@
 useHead(() => ({
   title: "首页",
 }));
+
 </script>
 
 <template>
@@ -11,6 +12,7 @@ useHead(() => ({
       <div class="profile-title"></div>
     </template>
   </PublicBanner>
+
   <div class="home">
     <nuxt-link to="/center-profile">公司简介</nuxt-link>
     <nuxt-link to="/latest-news">最新資訊</nuxt-link>

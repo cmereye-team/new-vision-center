@@ -1,10 +1,19 @@
 <script lang="ts" setup>
 const props = defineProps({
+  // 二级页面地址
   link: { type: String, default: "" },
+  // 二级页面名称
   name: { type: String, default: "" },
+  // 当前页面是否為子頁面
   isInsidePage: { type: Boolean, default: false },
+  // 子頁面標題
   insidePageTitle: { type: String, default: "" },
 });
+// 获取当前頁面路由
+const route = useRoute();
+let pageLink = ref("");
+pageLink.value = route.path;
+
 </script>
 
 <template>
@@ -14,7 +23,7 @@ const props = defineProps({
       <span>-</span>
       <nuxt-link :to="props.link" :style="{color: props.isInsidePage ? '#aaa':''}">{{ props.name }}</nuxt-link>
       <span v-if="props.isInsidePage">-</span>
-      <nuxt-link v-if="props.isInsidePage" class="nav-bar-title" to="/">{{
+      <nuxt-link v-if="props.isInsidePage" class="nav-bar-title" :to="pageLink">{{
         props.insidePageTitle
       }}</nuxt-link>
       <!-- <span style="color: #00a6ce;margin: 0;">{{ props.insidePageTitle.length > 20 ?'...':'' }}</span> -->
@@ -54,6 +63,7 @@ const props = defineProps({
         font-weight: 400;
         line-height: 160%; /* 32px */
         letter-spacing: 2px;
+        text-wrap: nowrap;
       }
       .active,
       & > a:last-child {

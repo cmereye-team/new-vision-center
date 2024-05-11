@@ -1,18 +1,13 @@
 <script setup lang="ts">
+import getWindowSize from "@/utils/width";
+
 const isPc = ref(false);
-// 检测获取屏幕宽度
-const getScreenWidth = () => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-};
 
 onMounted(() => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-  window.addEventListener("resize", getScreenWidth);
-  window.addEventListener("beforeunload", getScreenWidth);
+  isPc.value = getWindowSize();
+  window.addEventListener("resize", () => {
+    isPc.value = getWindowSize();
+  });
 });
 </script>
 
