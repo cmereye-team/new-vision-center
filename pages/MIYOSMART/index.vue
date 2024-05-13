@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { useWindowSize } from '@vueuse/core'
 const { width } = useWindowSize()
-// import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
 useHead({
     title: 'MIYOSMART'
 })
@@ -262,10 +262,14 @@ const handleIcon = (str:any,idx:any) =>{
                 OK 鏡用家<span> 見證</span>
             </div>
             <section class="section1">
-                <!-- <swiper
+                <swiper
                     class="witnessSwiper"
-                    :slidesPerView="width>768?4:1"
-                    :space-between="47"
+                    :modules="[Scrollbar]"
+                    :scrollbar="{
+                      hide: false,
+                    }"
+                    :slidesPerView="width>768?4:2.3"
+                    :space-between="width>768?47: 12"
                     @swiper="setSwiper">
                     <swiper-slide
                       v-for="(item,index) in witness.section1"
@@ -322,7 +326,7 @@ const handleIcon = (str:any,idx:any) =>{
                             </div>
                         </nuxtLink>
                     </swiper-slide>
-                </swiper> -->
+                </swiper>
             </section>
             <section class="section2">
                 <div class="list-in" v-for="(item,index) in witness.section2" :key="index">
@@ -711,7 +715,6 @@ const handleIcon = (str:any,idx:any) =>{
                         img{
                             width: 100%;
                             border-radius: 15px;
-                            transition: .3s;
                         }
                     }   
                     .title{
@@ -1045,13 +1048,98 @@ const handleIcon = (str:any,idx:any) =>{
         padding: 0 25px;
         box-sizing: border-box;
         margin: 18px auto 0;
+        overflow: hidden;
         &-t{
             font-size: 24px;
             line-height: 1.6;
         }
+        .section1{
+            width: 100%;
+            max-width: 100%;
+            margin-top: 0;
+            .witnessSwiper{
+                padding: 10px 0;
+                overflow: visible;
+                :deep(.swiper-scrollbar){
+                    height: 3px;
+                    background: rgba(217, 217, 217, 0.50);
+                    border-radius: 2px;
+                    margin-top: 30px;
+                    position: relative;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 50%;
+                        transform: translate(-50%, -50%);
+                        width: 63px;
+                        height: 40px;
+                        background: url(https://static.cmereye.com/imgs/2024/05/2fe41fe5fcf9b000.png) no-repeat;
+                        background-size: 100% 100%;
+                    }
+                    .swiper-scrollbar-drag{
+                        height: 3px;
+                        background: #5BC5DE;
+                        border-radius: 2px;
+                    }
+                }
+                &-slide{
+                    padding: 10px 0;
+                    .content{
+                        padding: 8px;
+                        border-radius: 10px;
+                        height: 210px;
+                        box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+                        .image{
+                            img{
+                                border-radius: 8px;
+                            }
+                        }
+                        .title{
+                            padding: 5px 0;
+                            align-items: flex-end;
+                            h3{
+                                font-size: 14px;
+                                line-height: normal;
+                            }
+                            p{
+                                font-size: 12px;
+                                line-height: normal;
+                            }
+                        }
+                        .context{
+                            padding: 0;
+                            .text{
+                                p{
+                                    font-size: 12px;
+                                    line-height: normal;
+                                }
+                            }
+                            .svgIcon{
+                                width: 15px;
+                                margin-right: 0;
+                                margin-left: 8px;
+                                svg{
+                                    width: 100%;
+                                    height: 15px;
+                                }
+                            }
+                        }
+                        &.hot{
+                            &::after{
+                                width: 24px;
+                                height: 24px;
+                                transform: translate(30%,-15%);
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .section2{
             grid-template-columns: repeat(1,1fr);
             gap: 20px;
+            margin-top: 20px;
             .list-in{
                 &-t{
                     .image{
@@ -1085,6 +1173,10 @@ const handleIcon = (str:any,idx:any) =>{
                 }
             }
         }
+    }
+    .formBox{
+        margin-top: 32px;
+        margin-bottom: 48px;
     }
 }
 </style>

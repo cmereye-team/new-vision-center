@@ -921,7 +921,7 @@ onMounted(()=>{
     width: auto;
     max-width: 1280px;
     margin: 0 25px;
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 26px 20px 40px;
     box-sizing: border-box;
   }
