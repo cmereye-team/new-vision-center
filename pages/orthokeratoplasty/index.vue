@@ -2,6 +2,15 @@
 useHead(() => ({
   title: "角膜矯形術評估 - 希瑪眼科視光中心",
 }));
+import getWindowSize from "@/utils/width";
+const isPc = ref(false);
+
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+});
 const wear = ref(true);
 const excise = ref(false);
 const wearOrExcise = (str: string) => {
@@ -23,6 +32,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
+    mAq:[
+      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
+      `・定期清潔OK鏡盒以防細菌滋生`,
+      `・每周一次用除蛋白清潔液清潔鏡片`,
+      `・盡量避免將鏡片放在太潮濕的地方`,
+    ]
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -32,6 +47,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
+    mAq:[
+      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
+      `・定期清潔OK鏡盒以防細菌滋生`,
+      `・每周一次用除蛋白清潔液清潔鏡片`,
+      `・盡量避免將鏡片放在太潮濕的地方`,
+    ]
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -41,6 +62,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
+    mAq:[
+      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
+      `・定期清潔OK鏡盒以防細菌滋生`,
+      `・每周一次用除蛋白清潔液清潔鏡片`,
+      `・盡量避免將鏡片放在太潮濕的地方`,
+    ]
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -50,6 +77,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
+    mAq:[
+      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
+      `・定期清潔OK鏡盒以防細菌滋生`,
+      `・每周一次用除蛋白清潔液清潔鏡片`,
+      `・盡量避免將鏡片放在太潮濕的地方`,
+    ]
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -59,6 +92,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
+    mAq:[
+      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
+      `・定期清潔OK鏡盒以防細菌滋生`,
+      `・每周一次用除蛋白清潔液清潔鏡片`,
+      `・盡量避免將鏡片放在太潮濕的地方`,
+    ]
   },
 ];
 </script>
@@ -69,14 +108,15 @@ const okQuestionList = [
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
-          <span>角膜矯形術評估</span>
+          <span v-if="isPc">角膜矯形術評估</span>
+          <span v-else>角膜矯形術<br />OK鏡</span>
         </div>
       </template>
     </PublicBanner>
     <PublicNavbar
-      :isInsidePage="true"
+      :isInsidePage="isPc ? true : false"
       :insidePageTitle="'兒童視力服務'"
-      :name="'角膜矯形術評估'"
+      :name="isPc ? '角膜矯形術評估' : '角膜矯形術 OK鏡'"
     />
     <div class="orthokeratoplasty-box">
       <div class="orthokeratoplasty-assess">
@@ -640,7 +680,9 @@ const okQuestionList = [
         <div>
           <p>*一旦停戴，清晰視覺效果將會在數天內消失。</p>
           <p>
-            因此需長期及定時在晚間戴上角膜矯形鏡(OK鏡)，以維持清晰視覺的效果。*
+            因此需長期及定時在晚間戴上角膜矯形鏡<br
+              v-if="!isPc"
+            />(OK鏡)，以維持清晰視覺的效果。*
           </p>
         </div>
         <div>
@@ -668,7 +710,7 @@ const okQuestionList = [
             </div>
           </div>
           <div>
-            <div>控制近視及散光加深速度</div>
+            <div>控制近視及散光<br v-if="!isPc" />加深速度</div>
             <div>
               <span>根據本地大學的研究結果顯示，</span>
               <span>配戴角膜矯形鏡片(OK鏡)的兒童眼軸增長幅度</span>
@@ -855,7 +897,9 @@ const okQuestionList = [
                 />
               </svg>
             </div>
-            <div><span>近視度數<500度</span><span>散光度數<175度</span></div>
+            <div>
+              <span>近視度數&lt;500度</span><span>散光度數&lt;175度</span>
+            </div>
           </div>
           <div>
             <div>
@@ -1101,7 +1145,7 @@ const okQuestionList = [
               />
             </svg>
           </span>
-          <span>我的小朋友適合戴OK鏡嗎</span>
+          <span>我的小朋友適合戴OK鏡嗎?</span>
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -1215,7 +1259,7 @@ const okQuestionList = [
                 ><span>每星期休息1至2晚。</span>
               </div>
             </div>
-            <div>
+            <div class="means-ok-text">
               角膜矯形鏡（OK鏡）的透氧度非常高，經權威機構驗證如美國FDA及日本厚生勞動省驗證，適合在夜間睡覺時配戴。翌日起床後摘除，便能一整天保持清晰視力，替代日間的近視眼鏡或隱形眼鏡。
             </div>
           </div>
@@ -1286,7 +1330,7 @@ const okQuestionList = [
         <div>
           <!-- 配戴7部曲 -->
           <div v-if="wear">
-            <div>
+            <div v-if="isPc">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1305"
@@ -1333,6 +1377,59 @@ const okQuestionList = [
                       mode="normal"
                       in="SourceGraphic"
                       in2="effect1_dropShadow_533_34555"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <div v-else>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="346"
+                height="940"
+                viewBox="0 0 346 940"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_533_30890)">
+                  <path
+                    d="M3 24.8083H162.02L173 3L182.658 24.8083H343L343 937H3V24.8083Z"
+                    fill="#EAFBFF"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_533_30890"
+                    x="0.354086"
+                    y="0.354086"
+                    width="345.292"
+                    height="939.292"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="1.32296" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_533_30890"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_533_30890"
                       result="shape"
                     />
                   </filter>
@@ -1540,9 +1637,13 @@ const okQuestionList = [
                       />
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>取出OK鏡，</span><span>以生理鹽水清洗</span
                     ><span>乾淨</span>
+                  </div>
+                  <div v-else>
+                    <span>取出OK鏡，以生理</span>
+                    <span>鹽水清洗乾淨</span>
                   </div>
                 </div>
                 <div>
@@ -1589,11 +1690,17 @@ const okQuestionList = [
                       />
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>把OK鏡放在食指</span>
                     <span>或手心上，滴數滴</span>
                     <span>生理鹽水或人工淚</span>
                     <span>液，濕潤鏡片凹面</span>
+                  </div>
+                  <div v-else>
+                    <span>把OK鏡放在食指或手</span>
+                    <span>心上，滴數滴生理鹽</span>
+                    <span>水或人工淚液，濕潤</span>
+                    <span>鏡片凹面</span>
                   </div>
                 </div>
                 <div>
@@ -1716,10 +1823,15 @@ const okQuestionList = [
                       />
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>在鏡子前，輕輕</span>
                     <span>拉起上下眼瞼，</span>
                     <span>把OK鏡放在眼睛上</span>
+                  </div>
+                  <div v-else>
+                    <span>在鏡子前，輕輕拉</span>
+                    <span>起上下眼瞼，把</span>
+                    <span>OK鏡放在眼睛上</span>
                   </div>
                 </div>
                 <div>
@@ -1838,12 +1950,19 @@ const okQuestionList = [
                       </g>
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>放到眼睛後，眼睛向下</span>
                     <span>看，鬆開眼瞼，稍微閉</span>
                     <span>上眼睛，再保持正常眨</span>
                     <span>眼，確保鏡片已在角膜</span>
                     <span>中央位置</span>
+                  </div>
+                  <div v-else>
+                    <span>放到眼睛後，眼睛向</span>
+                    <span>下看，鬆開眼瞼，稍</span>
+                    <span>微閉上眼睛，再保持</span>
+                    <span>正常眨眼，確保鏡片</span>
+                    <span>已在角膜中央位置</span>
                   </div>
                 </div>
                 <div>
@@ -1910,10 +2029,15 @@ const okQuestionList = [
                       />
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>再以人工淚液(不 </span>
                     <span>含防腐劑)濕潤雙 </span>
                     <span>眼 </span>
+                  </div>
+                  <div v-else>
+                    <span>再以人工淚液</span>
+                    <span>(不含防腐劑)</span>
+                    <span>濕潤雙眼</span>
                   </div>
                 </div>
                 <div>
@@ -2073,7 +2197,7 @@ const okQuestionList = [
           </div>
           <!-- 摘除方法5部曲 -->
           <div v-if="excise" class="excise-method">
-            <div>
+            <div v-if="isPc">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="1305"
@@ -2120,6 +2244,59 @@ const okQuestionList = [
                       mode="normal"
                       in="SourceGraphic"
                       in2="effect1_dropShadow_533_35076"
+                      result="shape"
+                    />
+                  </filter>
+                </defs>
+              </svg>
+            </div>
+            <div v-else>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="346"
+                height="714"
+                viewBox="0 0 346 714"
+                fill="none"
+              >
+                <g filter="url(#filter0_d_533_31105)">
+                  <path
+                    d="M3.00024 25.4196H162.02L173 3L182.658 25.4196H343L343 711H3L3.00024 25.4196Z"
+                    fill="#EAFFF9"
+                  />
+                </g>
+                <defs>
+                  <filter
+                    id="filter0_d_533_31105"
+                    x="0.354086"
+                    y="0.354086"
+                    width="345.292"
+                    height="713.292"
+                    filterUnits="userSpaceOnUse"
+                    color-interpolation-filters="sRGB"
+                  >
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feColorMatrix
+                      in="SourceAlpha"
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                      result="hardAlpha"
+                    />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="1.32296" />
+                    <feComposite in2="hardAlpha" operator="out" />
+                    <feColorMatrix
+                      type="matrix"
+                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in2="BackgroundImageFix"
+                      result="effect1_dropShadow_533_31105"
+                    />
+                    <feBlend
+                      mode="normal"
+                      in="SourceGraphic"
+                      in2="effect1_dropShadow_533_31105"
                       result="shape"
                     />
                   </filter>
@@ -2496,7 +2673,8 @@ const okQuestionList = [
                       </defs>
                     </svg>
                   </div>
-                  <div><span>眨眼數下直至感</span><span>覺鏡片鬆動</span></div>
+                  <div v-if="isPc"><span>眨眼數下直至感</span><span>覺鏡片鬆動</span></div>
+                  <div v-else><span>眨眼數下直至</span><span>感覺鏡片鬆動</span></div>
                 </div>
                 <div>
                   <div>04</div>
@@ -2636,12 +2814,18 @@ const okQuestionList = [
                       </defs>
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>用ok鏡吸棒放於</span>
                     <span>鏡片正下方，輕</span>
                     <span>輕旋轉吸棒，並</span>
                     <span>維持水平輕輕地</span>
                     <span>拉出</span>
+                  </div>
+                  <div v-else>
+                    <span>用ok鏡吸棒放於鏡</span>
+                    <span>片正下方，輕輕旋</span>
+                    <span>轉吸棒，並維持水</span>
+                    <span>平輕輕地拉出</span>
                   </div>
                 </div>
                 <div>
@@ -2789,11 +2973,16 @@ const okQuestionList = [
                       </defs>
                     </svg>
                   </div>
-                  <div>
+                  <div v-if="isPc">
                     <span>鏡片取出後清潔</span>
                     <span>乾淨 放回鏡盒</span>
                     <span>中，準備下次使</span>
                     <span>用</span>
+                  </div>
+                  <div v-else>
+                    <span>鏡片取出後清潔乾</span>
+                    <span>淨 放回鏡盒中，準</span>
+                    <span>備下次使用</span>
                   </div>
                 </div>
                 <div></div>
@@ -2939,7 +3128,7 @@ const okQuestionList = [
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .orthokeratoplasty{
+  .orthokeratoplasty {
     margin-bottom: 90px;
   }
   .orthokeratoplasty-question {
@@ -3248,7 +3437,7 @@ const okQuestionList = [
       margin-bottom: 13px;
       margin-top: 50px;
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       & > div {
         & > div {
           display: flex;
@@ -4019,6 +4208,1217 @@ const okQuestionList = [
   }
 }
 @media screen and (max-width: 767px) {
+  .orthokeratoplasty {
+    margin-bottom: 40px;
+    width: 100vw;
+    overflow: hidden;
+  }
+  .orthokeratoplasty-question{
+    margin: 30px auto;
+    padding: 0 25px;
+    width: 100%;
+    box-sizing: border-box;
+
+  }
+  .orthokeratoplasty-video{
+    padding: 0 25px;
+    margin-top: 42px;
+    width: 100%;
+    box-sizing: border-box;
+    &>div{
+      width: 100%;
+      &>img{
+        width: 100%;
+      }
+    }
+  }
+  .orthokeratoplasty-means {
+    padding: 0 25px;
+    margin-top: 37px;
+    width: 100vw;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & > div:nth-child(1) {
+      position: relative;
+      background: url("https://static.cmereye.com/imgs/2024/05/009abe3faad51822.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 340px;
+      height: 311px;
+      display: flex;
+      box-sizing: border-box;
+      padding-top: 30px;
+      & > div:nth-child(1) {
+        flex: 5;
+      }
+      & > div:nth-child(2) {
+        flex: 5;
+        padding-left: 40px;
+        & > div:nth-child(1) {
+          margin-bottom: 10px;
+          color: var(--Deep-Blue, #3e5270);
+          font-family: "Noto Sans CJK TC";
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px; /* 111.111% */
+          padding-bottom: 6px;
+          max-width: 84px;
+          position: relative;
+        }
+        & > div:nth-child(1)::after {
+          content: "";
+          width: 95%;
+          display: inline-block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          height: 2px;
+          background: #00517e;
+        }
+        & > div:nth-child(2) {
+          color: var(--Deep-Blue, #3e5270);
+          font-family: "Noto Sans CJK TC";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 22.513px; /* 160.805% */
+          & > div:first-child {
+            margin-bottom: 10px;
+            padding-right: 30px;
+            position: relative;
+          }
+          & > div:last-child {
+            position: relative;
+            margin-bottom: 0;
+            padding-right: 20px;
+          }
+          & > div::before {
+            content: "";
+            position: absolute;
+            left: -12%;
+            top: 12px;
+            transform: translateY(-50%);
+            background: url(https://static.cmereye.com/imgs/2024/05/a19582aa99d56718.png)
+              no-repeat;
+            background-size: 100% 100%;
+            width: 15px;
+            height: 12px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      margin-top: 135px;
+      display: flex;
+      justify-content: center;
+      gap: 0 15px;
+      & > div {
+        box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
+        padding: 7.5px 10px 8px 12px;
+        display: flex;
+        align-items: center;
+        border-radius: 25px;
+        & > span:nth-child(1),
+        & > span:nth-child(3) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 12px;
+          height: 21px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        & > span:nth-child(2) {
+          margin: 0 5px;
+          color: var(--White, #fff);
+          text-align: center;
+          font-family: Inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+      }
+      & > div:nth-child(1) {
+        background: #00a6ce;
+      }
+      & > div:nth-child(2) {
+        background: #59ba68;
+      }
+    }
+    & > div:nth-child(3) {
+      margin-top: 5px;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      & > div {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        & > div:nth-child(2) {
+          width: 100%;
+          box-sizing: border-box;
+          padding-top: 35px;
+          padding-left: 21px;
+          padding-right: 21px;
+          position: absolute;
+          top: 0;
+          left: 0;
+          & > div:nth-child(1) {
+            color: #00a6ce;
+            text-align: justify;
+            font-family: "Noto Sans HK";
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 40.107px; /* 167.112% */
+            letter-spacing: 1.2px;
+            text-align: center;
+          }
+          & > div:nth-child(2) {
+            display: grid;
+            grid-template-columns: auto auto;
+            gap: 0 20px;
+            & > div {
+              margin-top: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              & > div:nth-child(1) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background: url("https://static.cmereye.com/imgs/2024/05/1c86e5c7b33cb679.png")
+                  no-repeat;
+                background-size: 100% 100%;
+                width: 36px;
+                height: 36px;
+                color: var(--Theme-Color, #fc1682);
+                font-family: "Noto Sans HK";
+                font-size: 17.887px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26.831px; /* 150% */
+                letter-spacing: 0.894px;
+                margin-bottom: 10px;
+              }
+              & > div:nth-child(2) {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                min-height: 58.529px;
+                & > svg {
+                  width: 100%;
+                  height: 100%;
+                }
+              }
+              & > div:nth-child(3) {
+                margin-top: 10px;
+                min-height: 90px;
+                display: flex;
+                flex-direction: column;
+                color: #3e5270;
+                text-align: center;
+                font-family: "Noto Sans HK";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px; /* 128.571% */
+                text-transform: uppercase;
+                & > span {
+                  text-wrap: nowrap;
+                }
+              }
+            }
+
+            & > div:nth-child(1) {
+              & > div:nth-child(2) {
+                width: 56.864px;
+                height: 58.529px;
+              }
+              & > div:nth-child(3) {
+                min-height: 50px !important;
+              }
+            }
+            & > div:nth-child(2) {
+              & > div:nth-child(2) {
+                width: 56.056px;
+                height: 49.096px;
+              }
+              & > div:nth-child(3) {
+                min-height: 50px !important;
+              }
+            }
+            & > div:nth-child(3) {
+              & > div:nth-child(2) {
+                width: 39.752px;
+                height: 49.196px;
+              }
+              & > div:nth-child(3) {
+                min-height: 80px !important;
+              }
+            }
+            & > div:nth-child(4) {
+              & > div:nth-child(2) {
+                width: 45.998px;
+                height: 50.76px;
+              }
+              & > div:nth-child(3) {
+                min-height: 80px !important;
+              }
+            }
+            & > div:nth-child(5) {
+              & > div:nth-child(2) {
+                width: 54.727px;
+                height: 42.275px;
+              }
+            }
+            & > div:nth-child(6) {
+              & > div:nth-child(2) {
+                width: 57px;
+                height: 56.984px;
+              }
+            }
+            & > div:nth-child(7) {
+              & > div:nth-child(2) {
+                width: 56.056px;
+                height: 49.096px;
+              }
+            }
+            & > div:nth-child(8) {
+              margin-top: 10px;
+              & > div:nth-child(1) {
+                width: 147px;
+                height: 48px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                & > img {
+                  width: 100%;
+                  height: 100%;
+                }
+                background: transparent;
+              }
+              & > a {
+                margin-top: 24px;
+                display: flex;
+                align-items: center;
+                border: 2px solid #02ed85;
+                background: #00517e;
+                border-radius: 18px;
+                padding: 8px 24px;
+                box-shadow: 0 0 8px 3px #006b7ea9;
+                & > span:nth-child(1) {
+                  width: 21px;
+                  height: 21px;
+                  margin-right: 10px;
+                  & > svg {
+                    width: 100%;
+                    height: 100%;
+                  }
+                }
+                & > span:nth-child(2) {
+                  color: var(--White, #fff);
+                  font-family: Inter;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 465;
+                  line-height: normal;
+                }
+              }
+            }
+          }
+          & > div:nth-child(3) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+  .excise-method {
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        color: #59ba68 !important;
+      }
+      & > div {
+        & > div:nth-child(2),
+        & > div:nth-child(1) {
+          & > div:nth-child(3) {
+            min-height: 50px !important;
+          }
+        }
+      }
+    }
+  }
+  .means-ok-text {
+    position: absolute;
+    bottom: -38%;
+    left: 0;
+    padding: 0 30px;
+    color: #60605f;
+    font-family: "Noto Sans CJK TC";
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 142.857% */
+  }
+  .orthokeratoplasty-step {
+    background: #eafbff;
+    padding: 24px 25px 34px;
+    & > div:nth-child(1) {
+      color: #00a6ce;
+      text-align: justify;
+      font-family: "Noto Sans HK";
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 40.107px; /* 167.112% */
+      letter-spacing: 1.2px;
+    }
+    & > div:nth-child(2) {
+      margin-top: 17px;
+      border-radius: 20px;
+      background: var(--White, #fff);
+      padding: 30px 24px 28px;
+      & > div:nth-child(1),
+      & > div:nth-child(2) {
+        & > div {
+          display: flex;
+          color: #60605f;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20.566px; /* 146.902% */
+          & > div:nth-child(1) {
+            margin-right: 10px;
+            min-width: 50px;
+          }
+          margin-bottom: 40px;
+          position: relative;
+        }
+        & > div::after {
+          content: "";
+          width: 2px;
+          height: 40px;
+          background: #4d4d4d;
+          border-radius: 2px;
+          position: absolute;
+          bottom: -40px;
+          left: 20px;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(2)::after {
+          height: 60px;
+        }
+      }
+      & > div:last-child {
+        & > div:last-child {
+          margin-bottom: 0;
+        }
+        & > div:last-child::after {
+          content: none;
+        }
+      }
+    }
+    & > div:last-child {
+      margin-top: 14px;
+      color: var(--Sales, #db4444);
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+  .orthokeratoplasty-server {
+    margin-top: 55px;
+    padding: 0 25px;
+    margin-bottom: 50px;
+    & > div:nth-child(2) {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px 12px;
+      & > div {
+        & > div:nth-child(1) {
+          width: 105px;
+          height: 105px;
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          color: #60605f;
+          text-align: center;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16px; /* 114.286% */
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+          & > span {
+            text-wrap: nowrap;
+          }
+        }
+      }
+    }
+  }
+  .orthokeratoplasty-explain {
+    padding-left: 25px;
+    & > div:nth-child(1) {
+      display: flex;
+      gap: 0 15px;
+      overflow-x: scroll;
+      & > div {
+        width: 210px;
+        height: 120px;
+        min-width: 210px;
+        padding-bottom: 15px;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    & > div:nth-child(1)::-webkit-scrollbar {
+      width: 0;
+      height: 2.75px;
+      border-radius: 2.75px;
+      background: rgba(217, 217, 217, 0.5);
+    }
+    & > div:nth-child(1)::-webkit-scrollbar-thumb {
+      border-radius: 2.75px;
+      background: #5bc5de;
+    }
+    & > a {
+      position: relative;
+      display: flex;
+      width: fit-content;
+      justify-content: center;
+      align-items: center;
+      padding: 12px 16px 12px;
+      margin: 15px auto 0;
+      left: -15px;
+      & > span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 5;
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 21.042px; /* 150.303% */
+        letter-spacing: 0.7px;
+      }
+      & > span:nth-child(1) {
+        width: 21px;
+        height: 21px;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      & > span:nth-child(2) {
+        margin: 0 10px;
+      }
+    }
+    & > a::before {
+      border-radius: 100px;
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      left: 0;
+      content: "";
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+    }
+    & > a::after {
+      content: "";
+      position: absolute;
+      z-index: 3;
+      width: 86%;
+      text-align: center;
+      height: 30px;
+      display: inline-block;
+      bottom: -10px;
+      left: 50%;
+      background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+      border-radius: 100px;
+      filter: blur(15px); /* 添加模糊效果 */
+      transform: translateX(-50%) scaleY(-1) rotate(180deg);
+    }
+  }
+  .orthokeratoplasty-suitable {
+    margin-top: 55px;
+    padding: 0 25px;
+    margin-bottom: 50px;
+    & > div:nth-child(1) {
+      color: #00a6ce;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 18px;
+    }
+    & > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px 12px;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > div:nth-child(1) {
+          width: 105px;
+          height: 105px;
+          border-radius: 13.899px;
+          background: var(--Skin, #eafbff);
+          box-shadow: 0px 0px 5.652px 0px rgba(0, 0, 0, 0.25);
+        }
+        & > div:nth-child(2) {
+          margin-top: 15px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: #60605f;
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16.957px; /* 121.118% */
+          letter-spacing: 0.7px;
+          & > span {
+            text-wrap: nowrap;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          box-sizing: border-box;
+          padding: 22px 14px 22px 19px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          box-sizing: border-box;
+          padding: 23px 25px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          box-sizing: border-box;
+          padding: 27px 23px 27px 15px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          box-sizing: border-box;
+          padding: 25px 17px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          box-sizing: border-box;
+          padding: 21px 23px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      margin-top: 20px;
+      & > p {
+        display: inline;
+      }
+      color: var(--Sales, #db4444);
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      padding: 0 24px;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+  .orthokeratoplasty-merits {
+    margin-top: 28px;
+    padding: 0 25px;
+    & > div:nth-child(1) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 15.65px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 23.475px; /* 150% */
+          letter-spacing: 0.783px;
+        }
+        & > div:nth-child(2) {
+          padding-left: 30px;
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 31.3px; /* 156.5% */
+          letter-spacing: 1px;
+        }
+      }
+      & > div:nth-child(2) {
+        margin-top: 10px;
+        width: 335px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 10px 18px;
+      & > div {
+        & > div:nth-child(1) {
+          width: 25.12vw;
+          height: 25.12vw;
+          & > img {
+            width: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          color: #60605f;
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16.957px; /* 121.118% */
+          letter-spacing: 0.7px;
+        }
+      }
+    }
+  }
+  .orthokeratoplasty-theory {
+    padding: 0 25px;
+    & > div:nth-child(2) {
+      margin-top: 14px;
+      color: #60605f;
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.007px; /* 164.334% */
+      letter-spacing: -0.07px;
+    }
+    & > div:nth-child(3) {
+      margin-top: 18px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px 10px;
+      & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > div:nth-child(1) {
+          display: flex;
+          align-items: center;
+          & > div:nth-child(1) {
+            width: 10.3vw;
+            height: 10.3vw;
+            border-radius: 50%;
+            border: 1px dashed #59ba68;
+            color: var(--Brand-2, #59ba68);
+            font-family: "Noto Sans HK";
+            font-size: 16.784px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 25.176px; /* 150% */
+            letter-spacing: 0.839px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 5px;
+          }
+          & > div:nth-child(2) {
+            display: flex;
+            flex-direction: column;
+            color: var(--Brand-Color, #00a6ce);
+            font-family: "Noto Sans HK";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 16.784px; /* 119.885% */
+            letter-spacing: 0.7px;
+          }
+        }
+        & > div:nth-child(2) {
+          width: 34.35vw;
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+      & > div:nth-child(odd) {
+        & > div:nth-child(2) {
+          position: relative;
+        }
+      }
+      & > div:nth-child(odd) {
+        & > div:nth-child(2)::after {
+          content: "";
+          position: absolute;
+          right: -60%;
+          top: 50%;
+          transform: translateY(-50%);
+          background: url("https://static.cmereye.com/imgs/2024/05/d16a15ed51fbf41e.png")
+            no-repeat;
+          background-size: 100% 100%;
+          width: 27px;
+          height: 24px;
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(2)::after {
+          right: -25%;
+        }
+      }
+    }
+    & > div:nth-child(4) {
+      margin-top: 18px;
+      color: var(--Sales, #db4444);
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px; /* 142.857% */
+    }
+    & > div:nth-child(5) {
+      margin-top: 30px;
+      border-radius: 30px;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      padding: 24px 22px 18px 24px;
+      & > div:nth-child(1) {
+        color: #60605f;
+        font-family: "Noto Sans CJK TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23.007px; /* 164.334% */
+        letter-spacing: -0.07px;
+      }
+      & > div:nth-child(2) {
+        margin-top: 30px;
+        & > div:nth-child(1) {
+          color: #00a6ce;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 15.034px; /* 107.388% */
+          letter-spacing: 0.7px;
+          margin-bottom: 6px;
+          text-align: center;
+        }
+        & > div:nth-child(2) {
+          width: 270px;
+          margin: 0 auto;
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+    }
+    & > div:nth-child(6) {
+      margin: 0 auto;
+      margin-top: 28px;
+      border-radius: 20px;
+      background: url("https://static.cmereye.com/imgs/2024/05/85fdfbfe6423449b.jpg")
+        no-repeat;
+      background-size: 100% 100%;
+      width: 339px;
+      height: 324px;
+      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      padding-top: 25px;
+      padding-bottom: 5px;
+      & > div {
+        padding-left: 50%;
+      }
+      & > div:nth-child(1) {
+        color: var(--Deep-Blue, #3e5270);
+        font-family: "Noto Sans HK";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 111.111% */
+        letter-spacing: 0.9px;
+        padding-left: calc(50% + 20px);
+        margin-bottom: 12px;
+      }
+      & > div:nth-child(2),
+      & > div:nth-child(3) {
+        padding-left: calc(50% + 20px);
+        margin-bottom: 15px;
+        & > div:nth-child(1) {
+          color: var(--Deep-Blue, #3e5270);
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.4; /* 201.681% */
+          letter-spacing: 0.7px;
+          margin-bottom: 5px;
+          position: relative;
+        }
+        & > div:nth-child(1)::before {
+          content: "";
+          position: absolute;
+          left: -12%;
+          top: 12px;
+          transform: translateY(-50%);
+          background: url("https://static.cmereye.com/imgs/2024/05/a19582aa99d56718.png")
+            no-repeat;
+          background-size: 100% 100%;
+          width: 15px;
+          height: 12px;
+        }
+        & > div:nth-child(2) {
+          padding-right: 15px;
+          color: var(--White, #fff);
+          font-family: "Noto Sans HK";
+          font-size: 8.471px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 11.294px; /* 133.333% */
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      & > div:nth-child(4) {
+        margin-top: 0;
+        display: flex;
+        flex-direction: column;
+        padding-left: calc(50% + 20px);
+        gap: 6px;
+        & > a {
+          display: flex;
+          align-items: center;
+          & > div:nth-child(1) {
+            position: relative;
+            z-index: 6;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: "Noto Sans HK";
+            font-size: 9.767px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 13.566px; /* 138.889% */
+            letter-spacing: 0.488px;
+            margin-right: 5px;
+          }
+          & > div:nth-child(2) {
+            position: relative;
+            z-index: 6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10px;
+            height: 18px;
+            & > svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          padding: 3px;
+          border-radius: 100px;
+          width: 120px;
+          height: 28px;
+          align-items: center;
+          justify-content: center;
+        }
+        & > a:nth-child(1) {
+          position: relative;
+        }
+        & > a:nth-child(1)::before {
+          padding: 3px;
+          border-radius: 100px;
+          position: absolute;
+          z-index: 5;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 120px;
+          height: 28px;
+          background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+        }
+        & > a:nth-child(1)::after {
+          content: "";
+          position: absolute;
+          z-index: 3;
+          width: 86%;
+          text-align: center;
+          height: 30px;
+          display: inline-block;
+          bottom: -10px;
+          left: 50%;
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+          border-radius: 100px;
+          filter: blur(15px); /* 添加模糊效果 */
+          transform: translateX(-50%) scaleY(-1) rotate(180deg);
+        }
+
+        & > a:nth-child(2) {
+          position: relative;
+        }
+        & > a:nth-child(2)::before {
+          padding: 3px;
+          border-radius: 100px;
+          position: absolute;
+          z-index: 5;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 120px;
+          height: 28px;
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
+        & > a:nth-child(2)::after {
+          content: "";
+          position: absolute;
+          z-index: 3;
+          width: 86%;
+          text-align: center;
+          height: 30px;
+          display: inline-block;
+          bottom: -10px;
+          left: 50%;
+          background: linear-gradient(270deg, #de9f40 25.95%, #ed33ae 100%);
+          border-radius: 100px;
+          filter: blur(15px); /* 添加模糊效果 */
+          transform: translateX(-50%) scaleY(-1) rotate(180deg);
+        }
+      }
+    }
+  }
+  .orthokeratoplasty-assess {
+    margin-bottom: 40px;
+    padding: 0 25px;
+    & > div:nth-child(1) {
+      margin: 25px 0;
+      padding: 12px;
+      border-radius: 30px;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      & > div:nth-child(1) {
+        position: relative;
+        & > div:nth-child(1) {
+          background: url(https://static.cmereye.com/imgs/2024/05/b9aae2b64a16d473.png)
+            no-repeat;
+          background-size: 100% 100%;
+          color: var(--White, #fff);
+          font-family: "Noto Sans CJK TC";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 35.346px; /* 147.277% */
+          letter-spacing: 5.5px;
+          position: relative;
+          width: 148.455px;
+          height: 36.525px;
+          padding: 5px 10px 5px 14px;
+        }
+        & > div:nth-child(2) {
+          margin-left: 15px;
+          margin-top: 15px;
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 26.51px; /* 165.686% */
+          letter-spacing: 0.8px;
+        }
+        & > div:nth-child(3) {
+          position: absolute;
+          right: 28px;
+          bottom: 15px;
+          color: #f04e4e;
+          font-family: "Noto Sans HK";
+          font-size: 35.346px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 35.346px;
+          & > span:nth-child(1) {
+            font-size: 26.51px;
+            font-weight: 700;
+            line-height: 35.346px;
+          }
+        }
+        padding-bottom: 15px;
+        border-bottom: 3px solid #00a6ce;
+      }
+      & > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        gap: 10px;
+        padding: 25px 0;
+        & > div {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          & > div:nth-child(1) {
+            width: 50px;
+            height: 40px;
+            min-height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          & > div:nth-child(2) {
+            margin-top: 10px;
+            min-height: 32px;
+            display: flex;
+            flex-direction: column;
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: center;
+            font-family: "Noto Sans HK";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px; /* 114.286% */
+            text-wrap: nowrap;
+          }
+        }
+      }
+    }
+    & > a:nth-child(2) {
+      width: 100%;
+      & > div {
+        display: flex;
+        align-items: center;
+        border-radius: 12px;
+        background: var(
+          --Style,
+          linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%)
+        );
+        width: fit-content;
+        padding: 3px 8px 3px 20px;
+        border: 3px solid #ffffff;
+        & > span:nth-child(1) {
+          color: var(--White, #fff);
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: normal;
+          letter-spacing: 1.4px;
+          margin-right: 10px;
+        }
+        & > span:nth-child(2) {
+          width: 23px;
+          & > img {
+            width: 100%;
+          }
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        position: relative;
+        z-index: 5;
+      }
+    }
+    & > a:nth-child(2) {
+      background: var(
+        --Style,
+        linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%)
+      );
+      display: flex;
+      border-radius: 15px;
+      padding: 4px;
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+  .orthokeratoplasty-title {
+    color: #00a6ce;
+    text-align: justify;
+    font-family: "Noto Sans HK";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 40.107px; /* 167.112% */
+    letter-spacing: 1.2px;
+    padding-bottom: 6px;
+    width: fit-content;
+    margin: 0 auto;
+    position: relative;
+  }
+  .orthokeratoplasty-title::after {
+    content: "";
+    width: 100%;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 3.34px;
+    background: #00a6ce;
+  }
   .profile-title {
     background: url("https://static.cmereye.com/imgs/2024/05/8b53b098e710bc0a.jpg")
       no-repeat;
@@ -4028,16 +5428,15 @@ const okQuestionList = [
     position: relative;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
-      color: var(--Brand-Color, #0192b0);
-      text-align: center;
-      font-family: "Inter";
-      font-size: 28px;
+      top: 70px;
+      left: 26px;
+      color: var(--OkLens-color, #0192b0);
+      font-family: Inter;
+      font-size: 40px;
       font-style: normal;
-      font-weight: 600;
+      font-weight: 700;
       line-height: normal;
-      letter-spacing: 5.6px;
+      text-transform: uppercase;
     }
   }
   .video-information-box {

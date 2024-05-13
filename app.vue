@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import getWindowSize from "@/utils/width";
-
 const isPc = ref(false);
 
 onMounted(() => {
-  isPc.value = getWindowSize();
   window.addEventListener("resize", () => {
-    isPc.value = getWindowSize();
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
   });
 });
 </script>

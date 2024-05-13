@@ -1,14 +1,14 @@
 <script lang="ts" setup>
 import getWindowSize from "@/utils/width";
-
 const isPc = ref(false);
 
 onMounted(() => {
-  isPc.value = getWindowSize();
   window.addEventListener("resize", () => {
-    isPc.value = getWindowSize();
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
   });
 });
+
 const mobileMenu = ref(false);
 const mobileMenuEvent = () => {
   mobileMenu.value = !mobileMenu.value;
@@ -85,7 +85,7 @@ const getSonValue = () => {
     </div>
     <div v-if="mobileMenu" class="mobile-menu">
       <div class="menu-header">
-        <PublicHeaderLeftHead />
+        <PublicHeaderLeftHead ref="mobile-head" />
         <div @click="mobileMenuEvent">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ const getSonValue = () => {
           </svg>
         </div>
       </div>
-      <PublicHeaderRightHead @getValue="getSonValue" />
+      <PublicHeaderRightHead ref="mobile-right-head" @getValue="getSonValue" />
     </div>
   </div>
 </template>
@@ -187,6 +187,8 @@ const getSonValue = () => {
     justify-content: space-between;
     align-items: center;
     padding: 9px 24px 14px;
+    width: 100vw;
+    box-sizing: border-box;
   }
   .mobile-menu {
     z-index: 999;

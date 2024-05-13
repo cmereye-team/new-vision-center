@@ -10,25 +10,33 @@ export default defineNuxtConfig({
   devServer: {
     port: 3015,
   },
-  build: { 
-    transpile: ['vue-i18n'] 
-  }, 
-  vite: { 
-    plugins: [ 
-      VueI18nVitePlugin({ 
-        include: [ 
-          resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json') 
-        ] 
-      }) 
-    ] 
+  build: {
+    transpile: ['vue-i18n']
+  },
+  vite: {
+    plugins: [
+      VueI18nVitePlugin({
+        include: [
+          resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json')
+        ]
+      })
+    ]
   },
   modules: [
     '@element-plus/nuxt',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
   ],
-  i18n:{
-    vuei18n:'./plugins/i18n.ts'
+  i18n: {
+    vuei18n: './plugins/i18n.ts'
+  },
+  head: {
+    meta: [
+      {
+        name: 'viewport',
+        content: 'width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no',
+      },
+    ],
   },
   intlify: {
     localeDir: 'locales',

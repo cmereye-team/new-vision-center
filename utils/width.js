@@ -5,9 +5,9 @@ import { useWindowSize } from "@vueuse/core";
 const { width } = useWindowSize();
 function getWindowSize() {
   if (width.value > 768) {
-    return true
+    return { widthState: true, width: width.value }
   } else {
-    return false
+    return { widthState: false, width: width.value }
   }
 }
 // 导出公共方法

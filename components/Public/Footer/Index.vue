@@ -1,12 +1,11 @@
 <script setup lang="ts">
 import getWindowSize from "@/utils/width";
-
 const isPc = ref(false);
 
 onMounted(() => {
-  isPc.value = getWindowSize();
   window.addEventListener("resize", () => {
-    isPc.value = getWindowSize();
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
   });
 });
 </script>
@@ -54,6 +53,8 @@ onMounted(() => {
 }
 @media screen and (max-width: 767px) {
   footer {
+    width: 100vw;
+    box-sizing: border-box;
     padding: 30px 20px 90px 20px;
     background: rgba(0, 166, 206, 0.1);
   }

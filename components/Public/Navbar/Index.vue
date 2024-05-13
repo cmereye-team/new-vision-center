@@ -87,7 +87,7 @@ pageLink.value = route.path;
 @media screen and (max-width: 767px) {
   .nav-bar {
     padding-top: 16px;
-    padding-left: 29px;
+    padding-left: 25px;
     & > div {
       & > a:nth-child(1) {
         color: var(--Grey-Pale, #aaa);
