@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import getWindowSize from "@/utils/width";
-const isPc = ref(false);
+const isPc = ref(true);
 
 onMounted(() => {
   window.addEventListener("resize", () => {
@@ -13,7 +13,7 @@ onMounted(() => {
   <div>
     <PublicHeader />
     <NuxtPage />
-    <div v-if="isPc" class="fixed-menu">
+    <div v-if="!isPc" class="fixed-menu">
       <PublicFooterFixedFooter />
     </div>
     <PublicFooter />
