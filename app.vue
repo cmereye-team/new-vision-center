@@ -13,7 +13,7 @@ onMounted(() => {
   <div>
     <PublicHeader />
     <NuxtPage />
-    <div v-if="!isPc" class="fixed-menu">
+    <div v-if="isPc" class="fixed-menu">
       <PublicFooterFixedFooter />
     </div>
     <PublicFooter />
