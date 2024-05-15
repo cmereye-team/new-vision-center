@@ -2171,7 +2171,7 @@ glaucomaNumSource.value = 3;
             <p>兒童有近視可及早</p>
             <p>考慮<span>近視控制方案</span>，</p>
             <p>減慢近視加深速度，</p>
-            <p>以防日後患上深近視引致的眼疾</p>
+            <p>以防日後患上深近視?<br v-if="!isPc" />引致的眼疾</p>
           </div>
           <div>
             <a>
@@ -4828,6 +4828,495 @@ glaucomaNumSource.value = 3;
   }
 }
 @media screen and (max-width: 767px) {
+  .myopia-control-intended {
+    margin-top: 23px;
+    margin-bottom: 40px;
+    & > div:nth-child(1) {
+      padding: 0 25px;
+      color: #00a6ce;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 17px;
+    }
+    & > div:nth-child(2) {
+      padding: 0 25px;
+      display: flex;
+      gap: 12px;
+      & > div {
+        & > div:nth-child(1) {
+          width: 105px;
+          height: 105px;
+          box-sizing: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 5px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 24px;
+          box-sizing: border-box;
+          background: #e4faff;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          margin-top: 17px;
+          color: var(--Brand-Color, #00a6ce);
+          text-align: center;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 14.305px; /* 102.176% */
+          text-transform: uppercase;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      box-sizing: border-box;
+      margin: 0 25px;
+      margin-top: 25px;
+      border-radius: 37px;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      position: relative;
+      & > div:nth-child(1) {
+        padding: 20px 22px;
+        width: 100%;
+        box-sizing: border-box;
+        position: relative;
+        padding-bottom: 14px;
+        & > div:nth-child(1) {
+          background: url("https://static.cmereye.com/imgs/2024/05/d1dccfacb52cb3e9.png")
+            no-repeat;
+          background-size: 100% 100%;
+          width: 94px;
+          height: 49px;
+          color: var(--White, #fff);
+          font-family: "Noto Sans HK";
+          font-size: 32.18px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 42.907px; /* 133.333% */
+          letter-spacing: 3.862px;
+          padding-left: 10px;
+        }
+        & > div:nth-child(2) {
+          margin-top: 5px;
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 21.453px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32.18px; /* 150% */
+          letter-spacing: 1.073px;
+        }
+        & > div:nth-child(3) {
+          position: absolute;
+          right: 45px;
+          bottom: 14px;
+          color: #f04e4e;
+          font-family: "Noto Sans HK";
+          font-size: 42.907px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 42.907px;
+          & > span:nth-child(1) {
+            font-size: 32.18px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        padding-top: 24px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 23px 20px;
+        padding: 24px 20px;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          min-width: 86px;
+          & > div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          & > div:nth-child(2) {
+            margin-top: 10px;
+            display: flex;
+            flex-direction: column;
+            color: var(--Grey-Deep, #4d4d4d);
+            text-align: center;
+            font-family: "Noto Sans HK";
+            font-size: 16.566px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px; /* 120.732% */
+            letter-spacing: 0.828px;
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 84px;
+              height: 60px;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 67px;
+              height: 58px;
+            }
+          }
+        }
+        & > div:nth-child(3) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 65px;
+              height: 66px;
+            }
+          }
+        }
+        & > div:nth-child(4) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 65px;
+              height: 65px;
+            }
+          }
+        }
+        & > div:nth-child(5) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 74px;
+              height: 68px;
+            }
+          }
+        }
+        & > div:nth-child(6) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 80px;
+              height: 50px;
+            }
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1)::after {
+        content: "";
+        width: 87%;
+        height: 1.92px;
+        background: #00a6ce;
+        border-radius: 1.92px;
+        display: inline-block;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+  }
+  .myopia-control-fake {
+    margin-top: 23px;
+    border-radius: 14.171px;
+    background: #f5fafd;
+    position: relative;
+    & > div {
+      padding: 0 25px;
+      & > div {
+        padding-top: 32px;
+        & > div:nth-child(1) {
+          color: #60605f;
+          text-align: justify;
+          font-family: "Noto Sans HK";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 23.007px; /* 95.862% */
+          letter-spacing: 1.2px;
+          margin: 0 auto;
+          display: flex;
+          justify-content: center;
+          padding-bottom: 5px;
+          width: fit-content;
+          margin-bottom: 13px;
+          position: relative;
+        }
+        & > div:nth-child(1)::after {
+          content: "";
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 80%;
+          height: 1.92px;
+          background: #00a6ce;
+        }
+        & > div:nth-child(2) {
+          color: #60605f;
+          text-align: justify;
+          font-family: Inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 30px; /* 214.286% */
+        }
+        & > a {
+          position: relative;
+          display: flex;
+          width: fit-content;
+          justify-content: center;
+          align-items: center;
+          padding: 8px 16px 8px;
+          margin: 15px auto 0;
+          left: -15px;
+          & > span {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            z-index: 5;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: "Noto Sans HK";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 21.042px; /* 150.303% */
+            letter-spacing: 0.7px;
+          }
+          & > span:nth-child(1) {
+            width: 21px;
+            height: 21px;
+            & > svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          & > span:nth-child(2) {
+            margin: 0 10px;
+          }
+        }
+        & > a::before {
+          border-radius: 100px;
+          position: absolute;
+          z-index: 5;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+        }
+        & > a::after {
+          content: "";
+          position: absolute;
+          z-index: 3;
+          width: 86%;
+          text-align: center;
+          height: 30px;
+          display: inline-block;
+          bottom: -10px;
+          left: 50%;
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+          border-radius: 100px;
+          filter: blur(15px); /* 添加模糊效果 */
+          transform: translateX(-50%) scaleY(-1) rotate(180deg);
+        }
+      }
+    }
+  }
+  .myopia-control-fake::after {
+    content: "";
+    background: url("https://static.cmereye.com/imgs/2024/05/a002f70b809b91f9.png")
+      no-repeat;
+    // background-size: 100% 100%;
+    width: 100vw;
+    height: 335px;
+    display: flex;
+    margin: 0;
+    justify-content: center;
+  }
+  .myopia-control-content {
+    margin: 0 auto;
+    margin-top: 12px;
+    padding: 0 25px;
+    background: url("https://static.cmereye.com/imgs/2024/05/fe579e99ca6bf8c8.jpg")
+      no-repeat;
+    background-position: center;
+    height: 340px;
+    width: 340px;
+    box-sizing: border-box;
+    display: flex;
+    border-radius: 20px;
+    box-shadow: 0px 2.364px 5.911px 0px rgba(0, 0, 0, 0.25);
+    & > div {
+      flex: 4;
+    }
+    & > div:nth-child(2) {
+      position: relative;
+      padding-top: 42px;
+      padding-left: 60px;
+      flex: 6;
+      & > div:nth-child(1) {
+        color: var(--White, #fff);
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px; /* 200% */
+        letter-spacing: 0.6px;
+        & > p:nth-child(2) {
+          & > span {
+            color: var(--Deep-Blue, #3e5270);
+            font-family: "Noto Sans HK";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            letter-spacing: 0.9px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        padding-top: 42px;
+        margin-top: 0;
+        padding-left: 30px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        & > a {
+          display: flex;
+          align-items: center;
+          & > div:nth-child(1) {
+            position: relative;
+            z-index: 6;
+            color: var(--White, #fff);
+            text-align: center;
+            font-family: "Noto Sans HK";
+            font-size: 9.767px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 13.566px; /* 138.889% */
+            letter-spacing: 0.488px;
+            margin-right: 5px;
+          }
+          & > div:nth-child(2) {
+            position: relative;
+            z-index: 6;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 10px;
+            height: 18px;
+            & > svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          padding: 3px;
+          border-radius: 100px;
+          width: 120px;
+          height: 28px;
+          align-items: center;
+          justify-content: center;
+        }
+        & > a:nth-child(1) {
+          position: relative;
+        }
+        & > a:nth-child(1)::before {
+          padding: 3px 0;
+          border-radius: 100px;
+          position: absolute;
+          z-index: 5;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 120px;
+          height: 28px;
+          background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+        }
+        & > a:nth-child(1)::after {
+          content: "";
+          position: absolute;
+          z-index: 3;
+          width: 86%;
+          text-align: center;
+          height: 30px;
+          display: inline-block;
+          bottom: -10px;
+          left: 50%;
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+          border-radius: 100px;
+          filter: blur(15px); /* 添加模糊效果 */
+          transform: translateX(-50%) scaleY(-1) rotate(180deg);
+        }
+
+        & > a:nth-child(2) {
+          position: relative;
+        }
+        & > a:nth-child(2)::before {
+          padding: 3px 0;
+          border-radius: 100px;
+          position: absolute;
+          z-index: 5;
+          top: 0;
+          left: 0;
+          content: "";
+          width: 120px;
+          height: 28px;
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
+        & > a:nth-child(2)::after {
+          content: "";
+          position: absolute;
+          z-index: 3;
+          width: 86%;
+          text-align: center;
+          height: 30px;
+          display: inline-block;
+          bottom: -10px;
+          left: 50%;
+          background: linear-gradient(270deg, #de9f40 25.95%, #ed33ae 100%);
+          border-radius: 100px;
+          filter: blur(15px); /* 添加模糊效果 */
+          transform: translateX(-50%) scaleY(-1) rotate(180deg);
+        }
+      }
+    }
+    & > div:nth-child(2)::before {
+      content: "";
+      position: absolute;
+      width: 48px;
+      height: 40px;
+      top: 20px;
+      left: 20px;
+      background: url("https://static.cmereye.com/imgs/2024/05/302a2af839ae2218.png")
+        no-repeat;
+      background-size: 100% 100%;
+    }
+    & > div:nth-child(2)::after {
+      content: "";
+      position: absolute;
+      width: 48px;
+      height: 40px;
+      right: 5px;
+      bottom: 5px;
+      background: url("https://static.cmereye.com/imgs/2024/05/5df1cc8ec2f33a7e.png")
+        no-repeat;
+      background-size: 100% 100%;
+    }
+  }
   .myopia-control-scheme {
     margin-top: 65px;
     background: var(--Skin, #eafbff);
@@ -4884,7 +5373,7 @@ glaucomaNumSource.value = 3;
       }
       & > div:nth-child(2) {
         padding: 10px;
-        padding-left: 25px;
+        margin-left: 25px;
         display: flex;
         overflow-x: scroll;
         & > div {
