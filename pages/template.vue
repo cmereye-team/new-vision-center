@@ -15,7 +15,7 @@ useHead(() => ({
       </template>
     </PublicBanner>
     <PublicNavbar :link="'/center-profile'" :name="'XXXXX'" />
-    <div class="video-information-box">
+    <div class="xxxx-box">
       
     </div>
   </div>
@@ -44,10 +44,6 @@ useHead(() => ({
       letter-spacing: 12px;
     }
   }
-  .video-information-box {
-    max-width: 1300px;
-    margin: 48px auto 128px auto;
-  }
 }
 @media screen and (max-width: 767px) {
   .profile-title {
@@ -70,9 +66,6 @@ useHead(() => ({
       line-height: normal;
       letter-spacing: 5.6px;
     }
-  }
-  .video-information-box {
-    padding: 0 24px;
   }
 }
 </style>

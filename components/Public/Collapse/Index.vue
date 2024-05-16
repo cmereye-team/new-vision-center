@@ -100,7 +100,7 @@ const props = defineProps({
     }
     & > span::before {
       position: absolute;
-      left: -137%;
+      left: -435px;
       top: 50%;
       transform: translateY(-50%);
       content: "Q";

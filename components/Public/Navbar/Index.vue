@@ -1,8 +1,8 @@
 <script lang="ts" setup>
 const props = defineProps({
-  // 二级页面地址
+  // 二级页面地址 可以没有 对应于传入的link
   link: { type: String, default: "" },
-  // 二级页面名称
+  // 二级页面名称 可以没有  对应于传入的name
   name: { type: String, default: "" },
   // 当前页面是否為子頁面
   isInsidePage: { type: Boolean, default: false },
@@ -13,7 +13,6 @@ const props = defineProps({
 const route = useRoute();
 let pageLink = ref("");
 pageLink.value = route.path;
-
 </script>
 
 <template>
@@ -21,11 +20,18 @@ pageLink.value = route.path;
     <div>
       <nuxt-link to="/">主頁</nuxt-link>
       <span>-</span>
-      <nuxt-link :to="props.link" :style="{color: props.isInsidePage ? '#aaa':''}">{{ props.name }}</nuxt-link>
+      <nuxt-link
+        :to="props.link"
+        :style="{ color: props.isInsidePage ? '#aaa' : '' }"
+        >{{ props.name }}</nuxt-link
+      >
       <span v-if="props.isInsidePage">-</span>
-      <nuxt-link v-if="props.isInsidePage" class="nav-bar-title" :to="pageLink">{{
-        props.insidePageTitle
-      }}</nuxt-link>
+      <nuxt-link
+        v-if="props.isInsidePage"
+        class="nav-bar-title"
+        :to="pageLink"
+        >{{ props.insidePageTitle }}</nuxt-link
+      >
       <!-- <span style="color: #00a6ce;margin: 0;">{{ props.insidePageTitle.length > 20 ?'...':'' }}</span> -->
     </div>
   </div>
@@ -77,7 +83,7 @@ pageLink.value = route.path;
         letter-spacing: 2px;
       }
     }
-    .nav-bar-title{
+    .nav-bar-title {
       width: calc(1300px - 215px);
       overflow: hidden;
       text-wrap: nowrap;
@@ -85,6 +91,9 @@ pageLink.value = route.path;
   }
 }
 @media screen and (max-width: 767px) {
+  a {
+    color: #00a6ce;
+  }
   .nav-bar {
     padding-top: 16px;
     padding-left: 25px;
