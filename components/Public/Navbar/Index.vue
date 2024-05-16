@@ -98,8 +98,13 @@ pageLink.value = route.path;
     padding-top: 16px;
     padding-left: 25px;
     & > div {
-      & > a:nth-child(1) {
-        color: var(--Grey-Pale, #aaa);
+      & > span {
+        color: #aaa;
+        font-size: 13px;
+        margin: 0 5px;
+      }
+      & > a {
+        color: #aaa;
         font-family: "Noto Sans HK";
         font-size: 13px;
         font-style: normal;
@@ -107,12 +112,7 @@ pageLink.value = route.path;
         line-height: 160%; /* 20.8px */
         letter-spacing: 1.3px;
       }
-      & > span {
-        color: #aaa;
-        font-size: 13px;
-        margin: 0 5px;
-      }
-      & > a:nth-child(3) {
+      & > a:last-child {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
         font-size: 13px;

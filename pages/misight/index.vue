@@ -2,6 +2,15 @@
 useHead(() => ({
   title: "MiSight®1 Day 隱形眼鏡 - 希瑪眼科視光中心",
 }));
+import getWindowSize from "@/utils/width";
+const isPc = ref(false);
+
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+});
 const miSightQuestionList = [
   {
     q: "兒童都可以戴隱形眼鏡嗎？",
@@ -1143,7 +1152,7 @@ const miSightQuestionList = [
       </div>
       <div class="misight-step">
         <div>
-          <div>MiSight®1 day近視控制隱形眼鏡療程</div>
+          <div><span>MiSight®1 day近視控制</span><span>隱形眼鏡療程</span></div>
           <div>
             <div>
               <div>
@@ -1155,7 +1164,9 @@ const miSightQuestionList = [
               </div>
               <div>
                 <div><span>STEP 2</span></div>
-                <div><span>學習戴上，摘下和護理隱形眼鏡的方法</span></div>
+                <div>
+                  <span>學習戴上，摘下和護理隱形眼鏡的方法</span>
+                </div>
               </div>
             </div>
             <div>
@@ -1478,7 +1489,7 @@ const miSightQuestionList = [
           :listQuestion="miSightQuestionList"
         />
       </div>
-      <div>
+      <div class="form">
         <PublicForm />
       </div>
     </div>
@@ -1487,10 +1498,10 @@ const miSightQuestionList = [
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .misight-container{
+  .misight-container {
     margin-bottom: 90px;
   }
-  .misight-question{
+  .misight-question {
     margin: 55px;
     margin-bottom: 65px;
   }
@@ -2071,12 +2082,698 @@ const miSightQuestionList = [
   }
 }
 @media screen and (max-width: 767px) {
-  .misight-container{
+  .misight-container {
+    margin-top: 25px;
     margin-bottom: 40px;
+    & > div {
+      padding: 0 25px;
+    }
   }
-  .misight-question{
-    margin: 32px;
+  .form{
+    padding: 0 !important;
+  }
+  .misight-step {
+    padding: 0 !important;
+    background: #eafbff;
+    & > div {
+      padding: 24px 25px 42px;
+      & > div:nth-child(1) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        color: #00a6ce;
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40.107px; /* 167.112% */
+      }
+      & > div:nth-child(2) {
+        margin-top: 20px;
+        border-radius: 20px;
+        background: var(--White, #fff);
+        padding: 30px 32px 30px 25px;
+        box-sizing: border-box;
+        & > div {
+          & > div {
+            display: flex;
+            color: #60605f;
+            font-family: Inter;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 20.566px;
+            & > div:nth-child(1) {
+              flex: 2.4;
+            }
+            & > div:nth-child(2) {
+              flex: 7.6;
+            }
+          }
+        }
+        & > div {
+          & > div {
+            position: relative;
+          }
+          & > div::after {
+            position: absolute;
+            bottom: 0;
+            left: 28px;
+            width: 1.97px;
+            height: 35px;
+            border-radius: 1.97px;
+            background: #4d4d4d;
+            content: "";
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            margin-bottom: 18px;
+          }
+          & > div:nth-child(1)::after {
+            bottom: -15px;
+          }
+          & > div:nth-child(2)::after {
+            bottom: -32px;
+            height: 48px;
+          }
+          margin-bottom: 35px;
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(1) {
+            margin-bottom: 35px;
+          }
+          & > div:nth-child(1)::after {
+            bottom: -35px;
+          }
+          & > div:nth-child(2)::after {
+            content: none;
+          }
+        }
+      }
+    }
+  }
+  .misight-step-four {
+    padding: 0 !important;
+    margin-top: 40px;
+    & > div:nth-child(1) {
+      max-width: calc(100% - 50px);
+      margin: 0 auto;
+      width: 100%;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0px 2.646px rgba(0, 0, 0, 0.25);
+      box-sizing: border-box;
+      padding: 10px 20px 25px;
+      & > div:nth-child(1) {
+        color: #00a6ce;
+        text-align: justify;
+        font-family: "Noto Sans HK";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 40.107px; /* 167.112% */
+        letter-spacing: 1.2px;
+        text-align: center;
+        margin-bottom: 20px;
+      }
+      & > div:nth-child(2) {
+        display: grid;
+        grid-template-columns: auto auto;
+        gap: 30px 55px;
+        & > div {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          & > div:nth-child(1) {
+            color: var(--Theme-Color, #17aed2);
+            font-family: "Noto Sans HK";
+            font-size: 17.887px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26.831px; /* 150% */
+            letter-spacing: 0.894px;
+            width: 36.967px;
+            height: 36.967px;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          & > div:nth-child(1)::after {
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: url("https://static.cmereye.com/imgs/2024/05/c56e0241ea5f5af2.png")
+              no-repeat;
+            background-size: 100% 100%;
+            content: "";
+            width: 36.967px;
+            height: 36.967px;
+          }
+          & > div:nth-child(2) {
+            width: 108px;
+            height: 78px;
+            & > svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+          & > div:nth-child(3) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            color: #3e5270;
+            font-family: "Noto Sans HK";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 128.571% */
+            text-transform: uppercase;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      color: var(--Grey-Deep, #4d4d4d);
+      text-align: center;
+      font-family: "Noto Sans HK";
+      font-size: 9px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 10px; /* 111.111% */
+      letter-spacing: 0.45px;
+      padding: 0 15px;
+      &>p:nth-child(2),
+      &>p:nth-child(3) {
+        display: inline;
+      }
+    }
+    & > a {
+      margin: 35px auto;
+      width: fit-content;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      z-index: 10;
+      & > span:nth-child(1) {
+        margin-right: 7px;
+        color: var(--White, #fff);
+        font-family: "Noto Sans HK";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 1.4px;
+        position: relative;
+        z-index: 10;
+      }
+      & > span:nth-child(2) {
+        width: 21.892px;
+        height: 21.892px;
+        border-radius: 50%;
+        background: #fff;
+        box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        z-index: 10;
+        & > svg {
+          width: 14.74px;
+          height: 14.79px;
+        }
+      }
+    }
+    & > a::before {
+      content: "";
+      position: absolute;
+      z-index: 7;
+      display: inline-block;
+      width: 109.458px;
+      height: 28.066px;
+      border-radius: 11.226px;
+      border: 3px solid #ffffff;
+      background: var(
+        --Misight,
+        linear-gradient(0deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 100%),
+        linear-gradient(93deg, #efa83e 36.04%, #8533ed 84.48%)
+      );
+    }
+    & > a::after {
+      content: "";
+      position: absolute;
+      z-index: 5;
+      width: 119px;
+      height: 35.925px;
+      display: inline-block;
+      border-radius: 14.033px;
+      border: 2px solid var(--Misight, #efa83e);
+    }
+  }
+  .misight-question {
+    margin-top: 32px;
     margin-bottom: 40px;
+    padding: 0 20px 0 24px !important;
+  }
+  .misight-serve-content {
+    margin-top: 70px;
+    margin-bottom: 20px;
+    & > div:nth-child(2) {
+      margin-top: 25px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 14px 12px;
+      & > div {
+        & > div:nth-child(1) {
+          width: 104.731px;
+          height: 105px;
+          background: #e4faff;
+          border-radius: 15px;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > div:nth-child(2) {
+          color: #60605f;
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 16px; /* 114.286% */
+          text-transform: uppercase;
+          margin-top: 17px;
+          display: flex;
+          flex-direction: column;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 72px;
+            height: 47.226px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 75.475px;
+            height: 48.716px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 73.319px;
+            height: 51.562px;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 58.224px;
+            height: 58.224px;
+          }
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 61.767px;
+            height: 61.767px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      margin-top: 20px;
+      color: var(--Sales, #db4444);
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px; /* 142.857% */
+    }
+  }
+  .misight-crowd-content {
+    margin-top: 40px;
+    & > div:nth-child(1) {
+      color: #00a6ce;
+      font-family: Inter;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 16px;
+    }
+    & > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px 12px;
+      & > div {
+        & > div:nth-child(1) {
+          width: 104.731px;
+          height: 105px;
+          background: #e4faff;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > div:nth-child(2) {
+          margin-top: 17px;
+          display: flex;
+          flex-direction: column;
+          color: #60605f;
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px; /* 128.571% */
+          text-transform: uppercase;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 35.908px;
+            height: 57.951px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 54.859px;
+            height: 58.723px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 67.01px;
+            height: 54.645px;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 48.498px;
+            height: 56.734px;
+          }
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 67.826px;
+            height: 54.863px;
+          }
+        }
+      }
+      & > div:nth-child(6) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 68.185px;
+            height: 52.51px;
+          }
+        }
+      }
+    }
+  }
+  .misight-merit-content {
+    margin-top: 85px;
+    & > div:nth-child(1) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 15.65px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 23.475px; /* 150% */
+          letter-spacing: 0.783px;
+        }
+        & > div:nth-child(2) {
+          padding-left: 30px;
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 31.3px; /* 156.5% */
+          letter-spacing: 1px;
+        }
+        margin-bottom: 10px;
+      }
+      & > div:nth-child(2) {
+        max-width: 388px;
+        margin: 0 auto;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px 12px;
+      & > div {
+        & > div:nth-child(1) {
+          width: 105px;
+          height: 105px;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          border-radius: 15px;
+          background: #e4faff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > div:nth-child(2) {
+          margin-top: 14px;
+          display: flex;
+          flex-direction: column;
+          color: #60605f;
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px; /* 128.571% */
+          text-transform: uppercase;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 51px;
+            height: 66.37px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 49.872px;
+            height: 54.325px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 60.933px;
+            height: 62.925px;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 60.843px;
+            height: 54.89px;
+          }
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 84.782px;
+            height: 57.824px;
+          }
+        }
+      }
+    }
+  }
+  .misight-effect-content {
+    margin-top: 48px;
+    & > div:nth-child(2) {
+      margin-bottom: 28px;
+      & > p {
+        display: inline;
+      }
+      color: #60605f;
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.007px; /* 164.334% */
+      letter-spacing: -0.07px;
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        color: var(--Brand-Color, #00a6ce);
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 22.898px; /* 127.211% */
+        letter-spacing: 0.9px;
+      }
+      & > div:nth-child(2) {
+        margin-top: 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 0 20px;
+        & > div {
+          position: relative;
+          & > div:nth-child(1) {
+            color: #60605f;
+            text-align: center;
+            font-family: "Noto Sans CJK TC";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            letter-spacing: 1.4px;
+          }
+          & > div:nth-child(2) {
+            padding-left: 12px;
+            font-family: "Noto Sans CJK TC";
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            font-size: 43.842px;
+            & > span:nth-child(2) {
+              font-size: 21.747px;
+            }
+          }
+          & > div:nth-child(3) {
+            position: absolute;
+            color: #60605f;
+            text-align: center;
+            font-family: "Noto Sans HK";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 12px; /* 120% */
+            letter-spacing: 0.5px;
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(2) {
+            color: var(--Brand-Color, #00a6ce);
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(2) {
+            color: var(--Brand-2, #59ba68);
+          }
+        }
+        & > div:nth-child(3) {
+          & > div:nth-child(2) {
+            color: var(--Orange-Saturated, #f0882b);
+          }
+        }
+      }
+    }
+  }
+  .misight-theory-content {
+    margin-top: 14px;
+    & > div:nth-child(1) {
+      color: #60605f;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.007px;
+      letter-spacing: -0.07px;
+      text-align: center;
+      span {
+        color: #6c2a7e;
+      }
+    }
+    & > div:nth-child(2) {
+      border-radius: 30px;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      padding: 30px 25px;
+      box-sizing: border-box;
+      margin-top: 20px;
+      & > div:nth-child(1) {
+        & > div {
+          & > div:nth-child(1) {
+            color: var(--Brand-Color, #00a6ce);
+            font-family: "Noto Sans HK";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 19.257px; /* 120.357% */
+          }
+          & > div:last-child {
+            color: #60605f;
+            text-align: justify;
+            font-family: "Noto Sans HK";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 23px; /* 164.286% */
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(2) {
+            margin: 40px 0 16px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > img {
+              width: 180.628px;
+              height: 180.624px;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(2) {
+            margin: 22px 0 31px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            & > img {
+              width: 298.233px;
+              height: 173px;
+            }
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        display: flex;
+        & > div {
+          flex: 1;
+        }
+      }
+    }
   }
   .profile-title {
     background: url("https://static.cmereye.com/imgs/2024/05/4a7dbdd10adfa764.png")
