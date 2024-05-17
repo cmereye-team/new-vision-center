@@ -1,0 +1,321 @@
+<script lang="ts" setup>
+import type { ComponentSize, FormInstance, FormRules } from "element-plus";
+const props = defineProps({
+  detail: {
+    type: Object,
+    default: () => ({}),
+  },
+});
+interface RuleForm {
+  name: string;
+  region: string;
+  count: string;
+  phoneNumber: string;
+  address: string;
+}
+
+const formSize = ref<ComponentSize>("default");
+const ruleFormRef = ref<FormInstance>();
+const ruleForm = reactive<RuleForm>({
+  name: "Hello",
+  region: "",
+  count: "",
+  phoneNumber: "",
+  address: "",
+});
+
+const rules = reactive<FormRules<RuleForm>>({
+  name: [
+    { required: true, message: "Please input Activity name", trigger: "blur" },
+  ],
+  region: [
+    {
+      required: true,
+      message: "Please select Activity zone",
+      trigger: "change",
+    },
+  ],
+  count: [
+    {
+      required: true,
+      message: "Please select Activity count",
+      trigger: "change",
+    },
+  ],
+});
+
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      console.log("submit!");
+    } else {
+      console.log("error submit!", fields);
+    }
+  });
+};
+
+const resetForm = (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formEl.resetFields();
+};
+
+const options = Array.from({ length: 10000 }).map((_, idx) => ({
+  value: `${idx + 1}`,
+  label: `${idx + 1}`,
+}));
+
+const onSubmit = () => {
+  console.log("submit!");
+};
+</script>
+
+<template>
+  <div class="brand-detail">
+    <div class="detail">
+      <div>{{ props.detail.title }}</div>
+      <div>
+        <div>
+          <img
+            src="https://static.cmereye.com/imgs/2024/05/9b29523a2013871a.png"
+            alt="zeiss"
+          />
+        </div>
+        <div>
+          <div>
+            <p>{{ props.detail.explain }}</p>
+            <p>{{ props.detail.brandTitle }}</p>
+          </div>
+          <div class="form">
+            <el-form
+              ref="ruleFormRef"
+              :model="ruleForm"
+              :rules="rules"
+              label-position="top"
+              require-asterisk-position="right"
+            >
+              <el-form-item label="姓名" prop="name">
+                <el-input v-model="ruleForm.name" placeholder="姓名" />
+              </el-form-item>
+              <el-form-item label="電郵地址" prop="name">
+                <el-input v-model="ruleForm.name" placeholder="電郵地址" />
+              </el-form-item>
+              <el-form-item label="請選擇服務" prop="region">
+                <el-select v-model="ruleForm.region" placeholder="請選擇服務">
+                  <el-option label="Zone one" value="shanghai" />
+                  <el-option label="Zone two" value="beijing" />
+                </el-select>
+              </el-form-item>
+              <el-form-item label="聯絡電話" prop="phoneNumber">
+                <el-input
+                  v-model="ruleForm.phoneNumber"
+                  placeholder="請輸入聯絡電話"
+                />
+              </el-form-item>
+              <el-form-item label="選擇門診地點" prop="address">
+                <el-select-v2
+                  v-model="ruleForm.address"
+                  placeholder="請選擇門診地點"
+                  :options="options"
+                />
+              </el-form-item>
+              <el-form-item>
+                <el-button type="primary" @click="onSubmit">確認</el-button>
+              </el-form-item>
+            </el-form>
+          </div>
+          <div>
+            <slot name="terms"></slot>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="scss" scoped>
+@media screen and (min-width: 768px) {
+  .brand-detail {
+    max-width: 1284px;
+    margin: 0 auto;
+  }
+  :deep(.el-form) {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px 42px;
+    align-items: end;
+  }
+  :deep(.el-button),
+  :deep(.el-select__wrapper),
+  :deep(.el-input__wrapper) {
+    max-width: 228px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  :deep(.el-button) {
+    background: #00a6ce;
+    color: #fff;
+  }
+  :deep(.el-button):hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  :deep(.el-form-item__label) {
+    color: var(--00517-e, #00517e);
+    font-family: "Noto Sans CJK TC";
+    font-size: 18.237px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39.818px;
+  }
+  :deep(.el-form-item__label:after) {
+    color: #00517e !important;
+  }
+  :deep(.el-select__caret) {
+    background: url("https://static.cmereye.com/imgs/2024/05/d8fec29fcec9f7be.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 15px;
+    height: 11px;
+    & > svg {
+      display: none;
+    }
+  }
+  .detail {
+    border-radius: 37px;
+    border: 2px solid var(--Grey-Deep, #4d4d4d);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    & > div:nth-child(1) {
+      border-radius: 37px 37px 0px 0px;
+      background: var(--Brand-2, #59ba68);
+      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      color: var(--White, #fff);
+      font-family: "Noto Sans CJK TC";
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 60px; /* 214.286% */
+      padding-left: 37px;
+    }
+    & > div:nth-child(2) {
+      padding: 25px 20px;
+      box-sizing: border-box;
+      display: flex;
+      gap: 0 37px;
+      & > div:nth-child(2) {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        & > div:nth-child(1) {
+          color: var(--Sales, #db4444);
+          font-family: "Noto Sans CJK TC";
+          font-size: 25px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 40px;
+          text-align: center;
+          & > p:nth-child(1) {
+            font-size: 30px;
+            font-weight: 700;
+            line-height: 45px;
+          }
+        }
+        & > div:nth-child(2) {
+          padding-right: 80px;
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: 767px) {
+  .detail {
+    margin: 0 25px;
+    border-radius: 30px;
+    border: 2px solid var(--Grey-Deep, #4d4d4d);
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    & > div:nth-child(1) {
+      border-radius: 30px 30px 0px 0px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+      padding: 10px 40px;
+      color: var(--White, #fff);
+      text-align: center;
+      font-family: "Noto Sans HK";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 22px; /* 137.5% */
+      text-transform: uppercase;
+      background: var(--Brand-2, #59ba68);
+    }
+    & > div:nth-child(2) {
+      padding: 17px 18px 30px 18px;
+      box-sizing: border-box;
+      & > div:nth-child(1) {
+        width: 303px;
+        & > img {
+          width: 100%;
+        }
+        margin-bottom: 13px;
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          color: var(--Sales, #db4444);
+          font-family: "Noto Sans CJK TC";
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 27.666px;
+          text-align: center;
+          & > p:nth-child(1) {
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 31.124px;
+          }
+          &>p:nth-child(2){
+            padding: 0 15px;
+          }
+          margin-bottom: 20px;
+        }
+
+      }
+    }
+  }
+  :deep(.el-button),
+  :deep(.el-select__wrapper),
+  :deep(.el-input__wrapper) {
+    max-width: 295px;
+    box-sizing: border-box;
+    width: 100%;
+  }
+  :deep(.el-button) {
+    background: #00a6ce;
+    color: #fff;
+  }
+  :deep(.el-button):hover {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+  }
+  :deep(.el-form-item__label) {
+    color: var(--00517-e, #00517e);
+    font-family: "Noto Sans CJK TC";
+    font-size: 18.237px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 39.818px;
+  }
+  :deep(.el-form-item__label:after) {
+    color: #00517e !important;
+  }
+  :deep(.el-select__caret) {
+    background: url("https://static.cmereye.com/imgs/2024/05/d8fec29fcec9f7be.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+    width: 15px;
+    height: 11px;
+    & > svg {
+      display: none;
+    }
+  }
+}
+</style>
