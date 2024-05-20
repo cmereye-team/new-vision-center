@@ -8,8 +8,8 @@ const props = defineProps({
 });
 interface RuleForm {
   name: string;
+  email: string;
   region: string;
-  count: string;
   phoneNumber: string;
   address: string;
 }
@@ -17,31 +17,32 @@ interface RuleForm {
 const formSize = ref<ComponentSize>("default");
 const ruleFormRef = ref<FormInstance>();
 const ruleForm = reactive<RuleForm>({
-  name: "Hello",
+  name: "",
+  email: "",
   region: "",
-  count: "",
   phoneNumber: "",
   address: "",
 });
 
 const rules = reactive<FormRules<RuleForm>>({
-  name: [
-    { required: true, message: "Please input Activity name", trigger: "blur" },
+  name: [{ required: true, message: "請輸入姓名", trigger: "blur" }],
+  email: [
+    { required: true, message: "請輸入電子郵件", trigger: "blur" },
+    {
+      type: "email",
+      message: "請輸入正確的電子郵件",
+      trigger: ["blur", "change"],
+    },
   ],
   region: [
     {
       required: true,
-      message: "Please select Activity zone",
+      message: "請選擇服務",
       trigger: "change",
     },
   ],
-  count: [
-    {
-      required: true,
-      message: "Please select Activity count",
-      trigger: "change",
-    },
-  ],
+  phoneNumber: [{ required: true, message: "請輸入電話號碼", trigger: "blur" }],
+  address: [{ required: true, message: "請輸入地址", trigger: "blur" }],
 });
 
 const submitForm = async (formEl: FormInstance | undefined) => {
@@ -60,10 +61,10 @@ const resetForm = (formEl: FormInstance | undefined) => {
   formEl.resetFields();
 };
 
-const options = Array.from({ length: 10000 }).map((_, idx) => ({
-  value: `${idx + 1}`,
-  label: `${idx + 1}`,
-}));
+// const options = Array.from({ length: 10000 }).map((_, idx) => ({
+//   value: `${idx + 1}`,
+//   label: `${idx + 1}`,
+// }));
 
 const onSubmit = () => {
   console.log("submit!");
@@ -95,29 +96,79 @@ const onSubmit = () => {
               require-asterisk-position="right"
             >
               <el-form-item label="姓名" prop="name">
-                <el-input v-model="ruleForm.name" placeholder="姓名" />
+                <el-input
+                  v-model="ruleForm.name"
+                  placeholder="姓名"
+                  clearable
+                />
               </el-form-item>
-              <el-form-item label="電郵地址" prop="name">
-                <el-input v-model="ruleForm.name" placeholder="電郵地址" />
+              <el-form-item label="電郵地址" prop="email">
+                <el-input
+                  v-model="ruleForm.name"
+                  placeholder="電郵地址"
+                  clearable
+                />
               </el-form-item>
               <el-form-item label="請選擇服務" prop="region">
-                <el-select v-model="ruleForm.region" placeholder="請選擇服務">
-                  <el-option label="Zone one" value="shanghai" />
-                  <el-option label="Zone two" value="beijing" />
+                <el-select
+                  v-model="ruleForm.region"
+                  placeholder="請選擇服務"
+                  clearable
+                >
+                  <el-option
+                    label="角膜矯形鏡合適性檢查套餐"
+                    value="角膜矯形鏡合適性檢查套餐"
+                  />
+                  <el-option
+                    label="近視控制檢查套餐"
+                    value="近視控制檢查套餐"
+                  />
+                  <el-option
+                    label="兒童眼睛檢查套餐"
+                    value="兒童眼睛檢查套餐"
+                  />
+                  <el-option
+                    label="成人眼睛檢查套餐"
+                    value="成人眼睛檢查套餐"
+                  />
+                  <el-option
+                    label="親友眼睛檢查計劃"
+                    value="親友眼睛檢查計劃"
+                  />
+                  <el-option
+                    label="隱形眼鏡驗配套餐"
+                    value="隱形眼鏡驗配套餐"
+                  />
+                  <el-option label="青光眼檢查套餐" value="青光眼檢查套餐" />
+                  <el-option label="驗配眼鏡" value="驗配眼鏡" />
+                  <el-option
+                    label="老花隱形眼鏡檢查及試戴套餐"
+                    value="老花隱形眼鏡檢查及試戴套餐"
+                  />
+                  <el-option
+                    label="RGP鏡適配性檢查套餐"
+                    value="RGP鏡適配性檢查套餐"
+                  />
+                  <el-option label="其他" value="其他" />
                 </el-select>
               </el-form-item>
               <el-form-item label="聯絡電話" prop="phoneNumber">
                 <el-input
                   v-model="ruleForm.phoneNumber"
                   placeholder="請輸入聯絡電話"
+                  clearable
                 />
               </el-form-item>
-              <el-form-item label="選擇門診地點" prop="address">
-                <el-select-v2
-                  v-model="ruleForm.address"
-                  placeholder="請選擇門診地點"
-                  :options="options"
-                />
+              <el-form-item label="選擇門診地點" prop="address" >
+                <el-select v-model="ruleForm.address" clearable placeholder="請選擇服務" >
+                  <el-option label="中環" value="中環" />
+                  <el-option label="旺角" value="旺角" />
+                  <el-option label="西環" value="西環" />
+                  <el-option label="北角" value="北角" />
+                  <el-option label="将軍澳" value="将軍澳" />
+                  <el-option label="鑽石山" value="鑽石山" />
+                  <el-option label="銅鑼灣" value="銅鑼灣" />
+                </el-select>
               </el-form-item>
               <el-form-item>
                 <el-button type="primary" @click="onSubmit">確認</el-button>
@@ -135,6 +186,23 @@ const onSubmit = () => {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  :deep(.el-select__placeholder),
+  :deep(.el-input__inner) {
+    color: #00a6ce;
+    font-family: "Noto Sans CJK TC";
+    font-size: 15.927px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.854px; /* 200% */
+  }
+  :deep(.el-input__inner::placeholder) {
+    color: #00a6ce;
+    font-family: "Noto Sans CJK TC";
+    font-size: 15.927px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 31.854px; /* 200% */
+  }
   .brand-detail {
     max-width: 1284px;
     margin: 0 auto;
@@ -229,6 +297,23 @@ const onSubmit = () => {
   }
 }
 @media screen and (max-width: 767px) {
+  :deep(.el-select__placeholder),
+  :deep(.el-input__inner) {
+    color: #00a6ce;
+    font-family: "Noto Sans CJK TC";
+    font-size: 15.417px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30.834px;
+  }
+  :deep(.el-input__inner::placeholder) {
+    color: #00a6ce;
+    font-family: "Noto Sans CJK TC";
+    font-size: 15.417px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 30.834px;
+  }
   .detail {
     margin: 0 25px;
     border-radius: 30px;
@@ -272,12 +357,11 @@ const onSubmit = () => {
             font-weight: 700;
             line-height: 31.124px;
           }
-          &>p:nth-child(2){
+          & > p:nth-child(2) {
             padding: 0 15px;
           }
           margin-bottom: 20px;
         }
-
       }
     }
   }
