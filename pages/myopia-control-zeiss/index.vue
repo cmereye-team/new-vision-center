@@ -1406,7 +1406,11 @@ onMounted(() => {
     }
   }
   .kind-active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     & > div:nth-child(1) {
+      cursor: pointer;
       position: relative;
       width: 330px;
       height: 330px;
@@ -1418,6 +1422,7 @@ onMounted(() => {
 
     & > div:nth-child(2) {
       max-width: 314px;
+      width: 100%;
       margin: 0 auto;
       border-radius: 20px;
       color: #fff;
@@ -1431,7 +1436,11 @@ onMounted(() => {
     }
   }
   .kind-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     & > div:nth-child(1) {
+      cursor: pointer;
       position: relative;
       margin-bottom: 17px;
     }
@@ -1442,11 +1451,13 @@ onMounted(() => {
       width: 330px;
       height: 330px;
       background: #d9d9d980;
+      border-radius: 25px;
       top: 0;
       left: 0;
     }
     & > div:nth-child(2) {
       max-width: 314px;
+      width: 100%;
       margin: 0 auto;
       border: 2px solid #00a6ce;
       border-radius: 20px;
@@ -1597,7 +1608,7 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 767px) {
-  .myopia-control-zeiss{
+  .myopia-control-zeiss {
     margin-bottom: 40px;
   }
   .myopia-control-head {

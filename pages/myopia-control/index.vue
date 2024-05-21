@@ -28,6 +28,16 @@ const glaucomaNum = useTransition(glaucomaNumSource, {
   duration: 1500,
 });
 glaucomaNumSource.value = 3;
+
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+});
 </script>
 
 <template>
@@ -134,7 +144,7 @@ glaucomaNumSource.value = 3;
                 <el-statistic
                   :value="maculopathyNum"
                   decimal-separator="."
-                  precision="1"
+                  :precision="1"
                 /><span>倍</span>
               </div>
               <div>黃斑點病變</div>
@@ -196,7 +206,7 @@ glaucomaNumSource.value = 3;
                 <el-statistic
                   :value="amotioRetinaeNum"
                   decimal-separator="."
-                  precision="1"
+                  :precision="1"
                 /><span>倍</span>
               </div>
               <div>視網膜脫落</div>

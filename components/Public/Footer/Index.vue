@@ -1,13 +1,31 @@
 <script setup lang="ts">
 import getWindowSize from "@/utils/width";
-const isPc = ref(false);
-
+const isPc = ref(true);
+const heightToTop = ref(0);
 onMounted(() => {
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
+  window.addEventListener("scroll", () => {
+    // 获取距离页面顶部的距离
+    heightToTop.value = document.documentElement.scrollTop;
+
+    if (heightToTop.value > 200) {
+      document.querySelector(".to-form")?.classList.add("to-form-show");
+    } else {
+      document.querySelector(".to-form")?.classList.remove("to-form-show");
+    }
+  });
 });
+
+const toForm = () => {
+  // 滚动到指定元素 #public-form
+  document.documentElement.scrollTo({
+    top: document.querySelector("#public-form")?.offsetTop,
+    behavior: "smooth",
+  });
+};
 </script>
 
 <template>
@@ -15,6 +33,30 @@ onMounted(() => {
     <PublicFooterOneFooter />
     <PublicFooterTwoFooter />
     <div v-if="isPc">
+      <div class="to-form to-form-show" @click="toForm()">
+        <svg
+          width="38"
+          height="38"
+          viewBox="0 0 38 38"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M19.9948 24.5673L12 26L13.3325 17.9344L28.6026 2.7848C28.8504 2.53612 29.1451 2.33874 29.4699 2.20405C29.7946 2.06935 30.1429 2 30.4947 2C30.8466 2 31.1949 2.06935 31.5196 2.20405C31.8444 2.33874 32.1391 2.53612 32.3869 2.7848L35.2117 5.59716C35.4615 5.8438 35.6597 6.13725 35.795 6.46056C35.9303 6.78387 36 7.13066 36 7.4809C36 7.83115 35.9303 8.17794 35.795 8.50125C35.6597 8.82456 35.4615 9.11801 35.2117 9.36465L19.9948 24.5673Z"
+            stroke="white"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M32 25.5652V33.3913C32 34.0832 31.7252 34.7467 31.2359 35.2359C30.7467 35.7252 30.0832 36 29.3913 36H4.6087C3.91683 36 3.25329 35.7252 2.76407 35.2359C2.27484 34.7467 2 34.0832 2 33.3913V8.6087C2 7.91683 2.27484 7.25329 2.76407 6.76407C3.25329 6.27484 3.91683 6 4.6087 6H12.4348"
+            stroke="white"
+            stroke-width="3.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </div>
       <el-backtop :bottom="100" :right="182">
         <div>
           <svg
@@ -49,6 +91,29 @@ onMounted(() => {
     padding: 70px 200px;
     background: rgba(0, 166, 206, 0.1);
     border-radius: 50px 50px 0 0;
+  }
+  :deep(.el-backtop) {
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0;
+  }
+  .to-form {
+    width: 66px;
+    height: 66px;
+    background: #00a6ce;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    min-width: 66px;
+    min-height: 66px;
+    cursor: pointer;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+  .to-form-show {
+    position: fixed;
+    bottom: 180px;
+    right: 170px;
   }
 }
 @media screen and (max-width: 767px) {

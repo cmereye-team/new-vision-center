@@ -1897,6 +1897,7 @@ const miSightQuestionList = [
       line-height: 60px; /* 214.286% */
     }
     & > div:nth-child(3) {
+      margin-top: 40px;
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
@@ -1976,6 +1977,7 @@ const miSightQuestionList = [
     max-width: 1284px;
     margin: 0 auto 150px;
     & > div:nth-child(1) {
+      margin-top: 28px;
       color: #60605f;
       font-family: "Noto Sans CJK TC";
       font-size: 28px;
@@ -1989,6 +1991,7 @@ const miSightQuestionList = [
       }
     }
     & > div:nth-child(2) {
+      margin-top: 30px;
       border-radius: 37px;
       background: var(--Skin, #eafbff);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);

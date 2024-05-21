@@ -2,6 +2,15 @@
 useHead(() => ({
   title: "近視控制眼鏡 - 希瑪眼科視光中心",
 }));
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+});
 </script>
 
 <template>

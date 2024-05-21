@@ -188,7 +188,7 @@ onMounted(()=>{
 })
 </script>
 <template>
-<div class="formBox">
+<div class="formBox" id="public-form">
   <div class="title">預約視光服務</div>
   <div class="Form">
     <el-form

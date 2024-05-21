@@ -15,12 +15,12 @@ const swiperBox = (swiper: any) => {
 };
 
 let deBoxSwiperRef = {
-  slideTo: (a) => {},
-  slideToLoop: (a) => {},
+  slideTo: (a:any) => {},
+  slideToLoop: (a:any) => {},
   slidePrev: () => {},
   slideNext: () => {},
 };
-const handleshowdeBox = (_idx) => {
+const handleshowdeBox = (_idx:any) => {
   deBoxSwiperRef.slideTo(_idx);
 };
 const handlesSliNext = () => {

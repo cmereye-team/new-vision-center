@@ -3,7 +3,7 @@ useHead(() => ({
   title: "角膜矯形術評估 - 希瑪眼科視光中心",
 }));
 import getWindowSize from "@/utils/width";
-const isPc = ref(false);
+const isPc = ref(true);
 
 onMounted(() => {
   window.addEventListener("resize", () => {
@@ -32,12 +32,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
-    mAq:[
+    mAq: [
       `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
       `・定期清潔OK鏡盒以防細菌滋生`,
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
-    ]
+    ],
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -47,12 +47,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
-    mAq:[
+    mAq: [
       `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
       `・定期清潔OK鏡盒以防細菌滋生`,
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
-    ]
+    ],
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -62,12 +62,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
-    mAq:[
+    mAq: [
       `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
       `・定期清潔OK鏡盒以防細菌滋生`,
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
-    ]
+    ],
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -77,12 +77,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
-    mAq:[
+    mAq: [
       `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
       `・定期清潔OK鏡盒以防細菌滋生`,
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
-    ]
+    ],
   },
   {
     q: "日常如何護理OK鏡片？",
@@ -92,12 +92,12 @@ const okQuestionList = [
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
     ],
-    mAq:[
+    mAq: [
       `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
       `・定期清潔OK鏡盒以防細菌滋生`,
       `・每周一次用除蛋白清潔液清潔鏡片`,
       `・盡量避免將鏡片放在太潮濕的地方`,
-    ]
+    ],
   },
 ];
 </script>
@@ -114,9 +114,9 @@ const okQuestionList = [
       </template>
     </PublicBanner>
     <PublicNavbar
-      :isInsidePage="isPc ? true : false"
-      :insidePageTitle="'兒童視力服務'"
-      :name="isPc ? '角膜矯形術評估' : '角膜矯形術 OK鏡'"
+      :isInsidePage="true"
+      :insidePageTitle="isPc ? '角膜矯形術評估' : '角膜矯形術 OK鏡'"
+      :name="'兒童視力服務'"
     />
     <div class="orthokeratoplasty-box">
       <div class="orthokeratoplasty-assess">
@@ -2673,8 +2673,12 @@ const okQuestionList = [
                       </defs>
                     </svg>
                   </div>
-                  <div v-if="isPc"><span>眨眼數下直至感</span><span>覺鏡片鬆動</span></div>
-                  <div v-else><span>眨眼數下直至</span><span>感覺鏡片鬆動</span></div>
+                  <div v-if="isPc">
+                    <span>眨眼數下直至感</span><span>覺鏡片鬆動</span>
+                  </div>
+                  <div v-else>
+                    <span>眨眼數下直至</span><span>感覺鏡片鬆動</span>
+                  </div>
                 </div>
                 <div>
                   <div>04</div>
@@ -4213,21 +4217,20 @@ const okQuestionList = [
     width: 100vw;
     overflow: hidden;
   }
-  .orthokeratoplasty-question{
+  .orthokeratoplasty-question {
     margin: 30px auto;
     padding: 0 25px;
     width: 100%;
     box-sizing: border-box;
-
   }
-  .orthokeratoplasty-video{
+  .orthokeratoplasty-video {
     padding: 0 25px;
     margin-top: 42px;
     width: 100%;
     box-sizing: border-box;
-    &>div{
+    & > div {
       width: 100%;
-      &>img{
+      & > img {
         width: 100%;
       }
     }

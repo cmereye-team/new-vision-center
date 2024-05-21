@@ -55,35 +55,35 @@ const menuList = ref([
       {
         id: "1",
         title: "近視防控策略",
-        path: "/",
+        path: "/myopia-control",
       },
       {
         id: "2",
         title: "角膜矯形鏡",
-        path: "/",
+        path: "/orthokeratoplasty",
       },
       {
         id: "3",
         title: "近視控制眼鏡",
-        path: "/",
+        path: "/myopia-control-glasses",
         threeIsChildVisible: false,
         threeLevelList: [
           {
             id: "1",
             title: "Zeiss",
-            path: "/",
+            path: "/myopia-control-zeiss",
           },
           {
             id: "2",
             title: "Hoya",
-            path: "/",
+            path: "/myopia-control-hoya",
           },
         ],
       },
       {
         id: "4",
         title: "近視控制隱形眼鏡",
-        path: "/",
+        path: "/misight",
       },
       {
         id: "5",
@@ -223,7 +223,7 @@ const mbToLink = (item:any) => {
     },
   });
   pathIsTrue()
-  console.log(router,'Proute');
+  // console.log(router,'Proute');
 };
 </script>
 
