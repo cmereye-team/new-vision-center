@@ -29,11 +29,15 @@ const handKind = (index: number) => {
 onMounted(() => {
   handKind(0);
 });
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/05/2411d80b7ca6dfb0.png",
+  mobile: "https://static.cmereye.com/imgs/2024/05/ac3b7c31e12a7393.png",
+};
 </script>
 
 <template>
   <div class="myopia-control-zeiss">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title"></div>
@@ -1479,12 +1483,12 @@ onMounted(() => {
     margin: 60px auto 47px;
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/2411d80b7ca6dfb0.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/2411d80b7ca6dfb0.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -2015,12 +2019,12 @@ onMounted(() => {
     margin: 42px auto 37px;
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/ac3b7c31e12a7393.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/ac3b7c31e12a7393.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;

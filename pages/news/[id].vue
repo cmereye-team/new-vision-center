@@ -5,6 +5,10 @@ const _id = route.params.id as string;
 useHead(() => ({
   title: "最新資訊 - 希瑪眼科視光中心",
 }));
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/04/d1372c5de907c9e3.png",
+  mobile: "https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png",
+};
 
 const fetchData = async () => {
   await fetch(`https://content.cmervision.com/api.php/content/${_id}`)
@@ -39,7 +43,7 @@ const activeName1 = ref("1");
 
 <template>
   <div class="news">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="news-title">
@@ -324,12 +328,12 @@ a {
 }
 @media screen and (min-width: 768px) {
   .news-title {
-    background: url("https://static.cmereye.com/imgs/2024/04/d1372c5de907c9e3.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/04/d1372c5de907c9e3.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -434,12 +438,12 @@ a {
 }
 @media screen and (max-width: 767px) {
   .news-title {
-    background: url("https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;

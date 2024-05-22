@@ -196,13 +196,13 @@ const handleIcon = (str: any, idx: any) => {
 </script>
 
 <template>
-  <div class="MIYOSMART">
-    <div class="MIYOSMART-banner">
+  <div class="miyosmart">
+    <div class="miyosmart-banner">
       <img
         :srcset="`${bannerData.mb} 768w, ${bannerData.pc}`"
         :src="bannerData.pc"
-        alt="MIYOSMART"
-        title="MIYOSMART"
+        alt="miyosmart"
+        title="miyosmart"
       />
     </div>
     <div class="services">
@@ -230,7 +230,7 @@ const handleIcon = (str: any, idx: any) => {
           :to="item.link"
         >
           <div class="image">
-            <img :src="item.img" :alt="item.title" :title="item.title" />
+            <img :src="item.img" :alt="`${item.title}`" :title="`${item.title}`" />
           </div>
           <div class="context">
             <div class="context-t">
@@ -595,7 +595,7 @@ const handleIcon = (str: any, idx: any) => {
 
 
 <style lang="scss" scoped>
-.MIYOSMART {
+.miyosmart {
   &-banner {
     margin-top: 136px;
     img {
@@ -1124,7 +1124,7 @@ const handleIcon = (str: any, idx: any) => {
 @media (min-width: 768px) and (max-width: 1452px) {
 }
 @media screen and (max-width: 768px) {
-  .MIYOSMART {
+  .miyosmart {
     &-banner {
       margin-top: 87px;
     }

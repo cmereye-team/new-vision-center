@@ -14,11 +14,26 @@ onMounted(() => {
   window.addEventListener("resize", getScreenWidth);
   window.addEventListener("beforeunload", getScreenWidth);
 });
+const props = defineProps({
+  banner: {
+    type: Object,
+    default: () => {},
+  },
+});
 </script>
 
 <template>
   <div class="banner-template">
-    <slot name="title"> </slot>
+    <div>
+      <img
+        :src="banner.pc"
+        :srcset="`${banner.mobile} 768w, ${banner.pc}`"
+        alt="MiSight®1 Day 隱形眼鏡"
+      />
+    </div>
+    <div>
+      <slot name="title"> </slot>
+    </div>
   </div>
 </template>
 
@@ -27,6 +42,12 @@ onMounted(() => {
   .banner-template {
     margin-top: 136px;
     position: relative;
+    & > div:nth-child(1) {
+      margin: 0 auto;
+      img {
+        width: 100%;
+      }
+    }
   }
   .banner-template-btn {
     position: absolute;
@@ -34,7 +55,7 @@ onMounted(() => {
     right: 50px;
     display: flex;
     z-index: 9;
-    
+
     & > a {
       display: flex;
       align-items: center;
@@ -68,10 +89,16 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 767px) {
-  .banner-template{
+  .banner-template {
     margin-top: 87px;
+    & > div:nth-child(1) {
+      width: 100vw;
+      & > img {
+        width: 100%;
+      }
+    }
   }
-  .banner-template-btn{
+  .banner-template-btn {
     display: none;
   }
 }

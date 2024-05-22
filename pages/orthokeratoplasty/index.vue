@@ -22,7 +22,10 @@ const wearOrExcise = (str: string) => {
     excise.value = true;
   }
 };
-
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/05/294a743cedceec25.png",
+  mobile: "https://static.cmereye.com/imgs/2024/05/8b53b098e710bc0a.jpg",
+};
 const okQuestionList = [
   {
     q: "日常如何護理OK鏡片？",
@@ -104,7 +107,7 @@ const okQuestionList = [
 
 <template>
   <div class="orthokeratoplasty">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
@@ -4186,12 +4189,6 @@ const okQuestionList = [
     background: #00a6ce;
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/294a743cedceec25.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
     span {
       position: absolute;
       left: 320px;
@@ -5423,12 +5420,6 @@ const okQuestionList = [
     background: #00a6ce;
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/8b53b098e710bc0a.jpg")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
     span {
       position: absolute;
       top: 70px;

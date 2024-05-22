@@ -2,11 +2,15 @@
 useHead(() => ({
   title: "長者醫療券計劃 - 希瑪眼科視光中心",
 }));
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png",
+  mobile: "https://static.cmereye.com/imgs/2024/04/c05702c8c41964c7.png",
+};
 </script>
 
 <template>
   <div class="video-information">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="medical-voucher-title">
@@ -25,12 +29,12 @@ useHead(() => ({
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .medical-voucher-title {
-    background: url("https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -52,12 +56,12 @@ useHead(() => ({
 }
 @media screen and (max-width: 767px) {
   .medical-voucher-title {
-    background: url("https://static.cmereye.com/imgs/2024/04/c05702c8c41964c7.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/04/c05702c8c41964c7.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;

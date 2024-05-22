@@ -11,6 +11,10 @@ onMounted(() => {
     isPc.value = widthState;
   });
 });
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/05/6446d8c5f0f8f72a.png",
+  mobile: "https://static.cmereye.com/imgs/2024/05/5e82a28589934353.png",
+};
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
   brand: "hoya",
@@ -89,7 +93,7 @@ const miSightQuestionList = [
 
 <template>
   <div class="video-information">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title"></div>
@@ -1936,12 +1940,12 @@ const miSightQuestionList = [
     }
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/6446d8c5f0f8f72a.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/6446d8c5f0f8f72a.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -2015,12 +2019,12 @@ const miSightQuestionList = [
     margin-bottom: 40px;
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/5e82a28589934353.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/5e82a28589934353.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;

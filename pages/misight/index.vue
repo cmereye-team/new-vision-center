@@ -3,6 +3,11 @@ useHead(() => ({
   title: "MiSight®1 Day 隱形眼鏡 - 希瑪眼科視光中心",
 }));
 import getWindowSize from "@/utils/width";
+
+const bannerImg = {
+  pc: 'https://static.cmereye.com/imgs/2024/05/a76ecb0090da4bd5.png',
+  mobile: 'https://static.cmereye.com/imgs/2024/05/4a7dbdd10adfa764.png'
+}
 const isPc = ref(false);
 
 onMounted(() => {
@@ -56,7 +61,7 @@ const miSightQuestionList = [
 
 <template>
   <div class="misight-page">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
@@ -2063,12 +2068,12 @@ const miSightQuestionList = [
     }
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/a76ecb0090da4bd5.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/a76ecb0090da4bd5.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -2779,12 +2784,12 @@ const miSightQuestionList = [
     }
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/4a7dbdd10adfa764.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/4a7dbdd10adfa764.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;

@@ -2,11 +2,15 @@
 useHead(() => ({
   title: "收費詳情 - 希瑪眼科視光中心",
 }));
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/04/278854ec5e50055f.png",
+  mobile: "https://static.cmereye.com/imgs/2024/04/55554fa02587d8de.png",
+};
 </script>
 
 <template>
   <div class="fee">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="fee-title">
@@ -25,12 +29,12 @@ useHead(() => ({
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .fee-title {
-    background: url("https://static.cmereye.com/imgs/2024/04/278854ec5e50055f.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/04/278854ec5e50055f.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -52,12 +56,12 @@ useHead(() => ({
 }
 @media screen and (max-width: 767px) {
   .fee-title {
-    background: url("https://static.cmereye.com/imgs/2024/04/55554fa02587d8de.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/04/55554fa02587d8de.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;
@@ -72,7 +76,7 @@ useHead(() => ({
       letter-spacing: 5.6px;
     }
   }
-  .fee-box{
+  .fee-box {
     padding: 0 24px;
   }
 }

@@ -11,11 +11,15 @@ onMounted(() => {
     isPc.value = widthState;
   });
 });
+const bannerImg = {
+  pc: "https://static.cmereye.com/imgs/2024/05/0fd7856ae65aea25.png",
+  mobile: "https://static.cmereye.com/imgs/2024/05/7e2d6e9bac45673f.png",
+};
 </script>
 
 <template>
   <div class="myopia-control-glasses">
-    <PublicBanner>
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title"></div>
@@ -1504,12 +1508,12 @@ onMounted(() => {
     }
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/0fd7856ae65aea25.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 800px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/0fd7856ae65aea25.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
       position: absolute;
       right: 220px;
@@ -2054,12 +2058,12 @@ onMounted(() => {
     }
   }
   .profile-title {
-    background: url("https://static.cmereye.com/imgs/2024/05/7e2d6e9bac45673f.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 100%;
-    min-height: 390px;
-    position: relative;
+    // background: url("https://static.cmereye.com/imgs/2024/05/7e2d6e9bac45673f.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 390px;
+    // position: relative;
     span {
       position: absolute;
       bottom: 30px;
