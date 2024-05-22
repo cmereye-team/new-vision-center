@@ -507,6 +507,7 @@ onMounted(() => {
             v-model="ruleForm.sms"
             maxlength="500"
             placeholder="請輸入詳細內容"
+            class="sms"
           />
           <!-- <el-button @click="submitForm(ruleFormRef)"> 提交 </el-button> -->
           <div class="submitBtn">
@@ -573,38 +574,43 @@ onMounted(() => {
         line-height: 42.055px;
         margin-left: 14px;
       }
+      // &.act {
+      //   background: #00a6ce;
+      //   span {
+      //     color: #fff;
+      //   }
+      // }
+      // &:not(:last-child) {
+
+      margin-right: 34px;
+      svg {
+        path {
+          fill: #00a6ce;
+          stroke: #00a6ce;
+        }
+      }
       &.act {
         background: #00a6ce;
         span {
           color: #fff;
         }
-      }
-      &:not(:last-child) {
-        margin-right: 34px;
         svg {
           path {
-            fill: #00a6ce;
-            stroke: #00a6ce;
+            fill: #fff;
+            stroke: #fff;
           }
         }
-        &.act {
-          svg {
-            path {
-              fill: #fff;
-              stroke: #fff;
-            }
-          }
-        }
+        // }
       }
     }
   }
   .slotLabel {
     color: var(--00517-e, #00517e);
     font-family: "Noto Sans CJK TC";
-    font-size: 28px;
+    font-size: 21px;
     font-style: normal;
     font-weight: 700;
-    line-height: 61.136px;
+    line-height: 45.852px;
     display: flex;
     align-items: center;
     svg {
@@ -613,23 +619,27 @@ onMounted(() => {
     i {
       color: #00a4ce;
       font-family: "Noto Sans CJK TC";
-      font-size: 28px;
+      font-size: 21px;
       font-style: normal;
       font-weight: 700;
-      line-height: 61.136px;
+      line-height: 45.852px;
       margin-left: 5px;
     }
   }
   .formtitle {
     color: #00517e;
     font-family: Inter;
-    font-size: 32px;
+    font-size: 21px;
     font-style: normal;
-    font-weight: 600;
-    line-height: normal;
+    font-weight: 700;
+    line-height: 45.852px;
     width: 100%;
     margin-bottom: 30px;
-    margin-top: 44px;
+    margin-top: 34px;
+    & > svg {
+      width: 38.469px;
+      height: 24px;
+    }
     &.icon {
       display: flex;
       margin-top: 20px;
@@ -645,7 +655,7 @@ onMounted(() => {
     margin: 0 auto;
     border-radius: 20px;
     box-sizing: border-box;
-    padding: 30px 36px 88px;
+    padding: 22px 33px 65px 28px;
   }
 
   .title {
@@ -692,19 +702,19 @@ onMounted(() => {
   textarea::placeholder {
     color: #00a6ce;
     font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
+    line-height: 36.681px;
   }
 
   textarea::-webkit-input-placeholder {
     color: #00a6ce;
     font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
+    line-height: 36.681px;
   }
 
   textarea:focus {
@@ -780,23 +790,25 @@ onMounted(() => {
   .submitBtn {
     color: var(--White, #fff);
     font-family: "Noto Sans CJK TC";
-    font-size: 25px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
     line-height: 0px; /* 0% */
-    letter-spacing: 5px;
+    letter-spacing: 3.75px;
     background: linear-gradient(75deg, #00a6ce 30%, #3346ed);
     display: flex;
     align-items: center;
-    padding: 15px 35px;
-    border-radius: 20px;
-    margin-left: 35px;
+    padding: 8px 25px;
+    border-radius: 15px;
+    margin-left: 25px;
     position: relative;
     cursor: pointer;
     svg {
-      margin-right: 18px;
+      margin-right: 10px;
       position: relative;
       z-index: 3;
+      width: 23.119px;
+      height: 24.768px;
     }
     span {
       position: relative;
@@ -849,6 +861,9 @@ onMounted(() => {
       flex-wrap: nowrap;
       .el-input {
         flex: 1;
+        .el-input__wrapper {
+          width: 100%;
+        }
       }
     }
   }
@@ -856,10 +871,10 @@ onMounted(() => {
   :deep(.el-checkbox__label) {
     color: #666;
     font-family: "Noto Sans CJK TC";
-    font-size: 25px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
+    line-height: 36.681px;
     padding: 0 20px;
   }
 
@@ -869,14 +884,14 @@ onMounted(() => {
   :deep(.el-select__placeholder.is-transparent) {
     color: rgba(170, 170, 170, 0.2);
     font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
+    line-height: 36.681px;
   }
   :deep(.el-checkbox__inner) {
-    width: 54px;
-    height: 54px;
+    width: 42px;
+    height: 42px;
     border-color: #ccc;
     border-radius: 50%;
     font-size: 50px;
@@ -932,13 +947,74 @@ onMounted(() => {
   }
 
   :deep(.el-checkbox-group > .el-checkbox) {
-    border: 1px solid #e2edf2;
-    background: #fff;
-    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-    padding: 24px 17px;
+    padding: 10px 28px 10px 14px;
     margin-top: 26px;
-    border-radius: 20px;
+    border-radius: 15px;
     box-sizing: initial;
+    border: 0.75px solid #e2edf2;
+    background: var(--White, #fff);
+    box-shadow: 0px 0px 3.75px 0px rgba(0, 0, 0, 0.25);
+  }
+  :deep(.el-form) {
+    & > div:last-child {
+      .el-form-item__content {
+        display: flex;
+      }
+      .el-input__wrapper {
+        max-width: 742.082px;
+        width: 742.082px;
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 22.558px;
+            height: 22.5px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 24.114px;
+            height: 23.25px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(4) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 28.003px;
+            height: 18.75px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(5) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 22.234px;
+            height: 26.619px;
+          }
+        }
+      }
+    }
+    & > div:nth-child(6) {
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 26.337px;
+            height: 25.394px;
+          }
+        }
+      }
+    }
   }
   :deep(.el-select__wrapper),
   :deep(.el-input__wrapper) {
@@ -953,18 +1029,18 @@ onMounted(() => {
   :deep(.el-select__selected-item) {
     color: #00a6ce;
     font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
+    line-height: 36.681px;
   }
   :deep(.el-input__inner) {
     color: #00a6ce;
     font-family: "Noto Sans CJK TC";
-    font-size: 24.454px;
+    font-size: 18.75px;
     font-style: normal;
     font-weight: 500;
-    line-height: 48.909px;
+    line-height: 36.681px;
     display: flex;
     align-items: center;
   }
@@ -978,19 +1054,19 @@ onMounted(() => {
       &::placeholder {
         color: #00a6ce;
         font-family: "Noto Sans CJK TC";
-        font-size: 24.454px;
+        font-size: 18.75px;
         font-style: normal;
         font-weight: 500;
-        line-height: 48.909px;
+        line-height: 36.681px;
       }
 
       &::-webkit-input-placeholder {
         color: rgba(170, 170, 170, 0.2);
         font-family: "Noto Sans CJK TC";
-        font-size: 24.454px;
+        font-size: 18.75px;
         font-style: normal;
         font-weight: 500;
-        line-height: 48.909px;
+        line-height: 36.681px;
       }
     }
   }
