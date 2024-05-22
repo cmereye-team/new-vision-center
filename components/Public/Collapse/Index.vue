@@ -15,11 +15,15 @@ const props = defineProps({
       return [];
     },
   },
+  testWidth: {
+    type: Boolean,
+    default: false,
+  },
 });
 </script>
 
 <template>
-  <div class="collapse">
+  <div :class="testWidth ? 'collapse-test' : 'collapse'">
     <div class="title">{{ title }}</div>
     <el-collapse v-model="activeName" accordion>
       <el-collapse-item
@@ -45,6 +49,10 @@ const props = defineProps({
 @media screen and (min-width: 768px) {
   .collapse {
     max-width: 1284px;
+    margin: 0 auto;
+  }
+  .collapse-test {
+    max-width: 960px;
     margin: 0 auto;
   }
   .title {
@@ -88,31 +96,18 @@ const props = defineProps({
     color: var(--Grey-Deep, #4d4d4d);
     text-align: center;
     font-family: "Noto Sans HK";
-    font-size: 30px;
+    font-size: 22.5px;
     font-style: normal;
     font-weight: 700;
-    line-height: 45px; /* 150% */
-    letter-spacing: 1.5px;
+    line-height: 33.75px; /* 150% */
+    letter-spacing: 1.125px;
+    position: relative;
     & > span {
       position: relative;
       left: 50%;
       transform: translateX(-50%);
     }
-    & > span::before {
-      position: absolute;
-      left: -435px;
-      top: 50%;
-      transform: translateY(-50%);
-      content: "Q";
-      color: var(--Brand-Color, #00a6ce);
-      text-align: center;
-      font-family: "Noto Sans HK";
-      font-size: 45px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 60px; /* 133.333% */
-      letter-spacing: 2.25px;
-    }
+
     & > i {
       background: url("https://static.cmereye.com/imgs/2024/05/f7365790c4b6ade8.png")
         no-repeat;
@@ -124,6 +119,22 @@ const props = defineProps({
         display: none;
       }
     }
+  }
+
+  :deep(.el-collapse-item__header::before) {
+    position: absolute;
+    left: 24px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "Q";
+    color: var(--Brand-Color, #00a6ce);
+    text-align: center;
+    font-family: "Noto Sans HK";
+    font-size: 33.75px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 45px; /* 133.333% */
+    letter-spacing: 1.688px;
   }
   :deep(.el-collapse-item__arrow.is-active) {
     background: url("https://static.cmereye.com/imgs/2024/05/50c8a51799598ce1.png")
@@ -137,10 +148,11 @@ const props = defineProps({
     color: var(--White, #fff);
     border-radius: 20px;
     background: var(--Brand-Color, #00a6ce);
-    & > span::before {
-      color: #d3f0fd;
-    }
   }
+  :deep(.el-collapse-item__header.is-active::before) {
+    color: #d3f0fd;
+  }
+  
   :deep(.el-collapse-item__content) {
     padding-left: 45px;
     padding: 25px;
@@ -151,10 +163,10 @@ const props = defineProps({
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 500;
-      line-height: 30px; /* 150% */
+      line-height: 22.5px; /* 150% */
       text-transform: uppercase;
       position: relative;
     }
@@ -166,11 +178,11 @@ const props = defineProps({
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 45px;
+      font-size: 33.75px;
       font-style: normal;
       font-weight: 700;
-      line-height: 60px; /* 133.333% */
-      letter-spacing: 2.25px;
+      line-height: 45px; /* 133.333% */
+      letter-spacing: 1.688px;
     }
   }
 }
