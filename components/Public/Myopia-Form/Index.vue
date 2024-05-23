@@ -95,21 +95,30 @@ const onSubmit = () => {
               label-position="top"
               require-asterisk-position="right"
             >
-              <el-form-item label="姓名" prop="name">
+              <el-form-item
+                label="姓名"
+                prop="name"
+              >
                 <el-input
                   v-model="ruleForm.name"
                   placeholder="姓名"
                   clearable
                 />
               </el-form-item>
-              <el-form-item label="電郵地址" prop="email">
+              <el-form-item
+                label="電郵地址"
+                prop="email"
+              >
                 <el-input
                   v-model="ruleForm.name"
                   placeholder="電郵地址"
                   clearable
                 />
               </el-form-item>
-              <el-form-item label="請選擇服務" prop="region">
+              <el-form-item
+                label="請選擇服務"
+                prop="region"
+              >
                 <el-select
                   v-model="ruleForm.region"
                   placeholder="請選擇服務"
@@ -139,8 +148,14 @@ const onSubmit = () => {
                     label="隱形眼鏡驗配套餐"
                     value="隱形眼鏡驗配套餐"
                   />
-                  <el-option label="青光眼檢查套餐" value="青光眼檢查套餐" />
-                  <el-option label="驗配眼鏡" value="驗配眼鏡" />
+                  <el-option
+                    label="青光眼檢查套餐"
+                    value="青光眼檢查套餐"
+                  />
+                  <el-option
+                    label="驗配眼鏡"
+                    value="驗配眼鏡"
+                  />
                   <el-option
                     label="老花隱形眼鏡檢查及試戴套餐"
                     value="老花隱形眼鏡檢查及試戴套餐"
@@ -149,29 +164,66 @@ const onSubmit = () => {
                     label="RGP鏡適配性檢查套餐"
                     value="RGP鏡適配性檢查套餐"
                   />
-                  <el-option label="其他" value="其他" />
+                  <el-option
+                    label="其他"
+                    value="其他"
+                  />
                 </el-select>
               </el-form-item>
-              <el-form-item label="聯絡電話" prop="phoneNumber">
+              <el-form-item
+                label="聯絡電話"
+                prop="phoneNumber"
+              >
                 <el-input
                   v-model="ruleForm.phoneNumber"
                   placeholder="請輸入聯絡電話"
                   clearable
                 />
               </el-form-item>
-              <el-form-item label="選擇門診地點" prop="address" >
-                <el-select v-model="ruleForm.address" clearable placeholder="請選擇服務" >
-                  <el-option label="中環" value="中環" />
-                  <el-option label="旺角" value="旺角" />
-                  <el-option label="西環" value="西環" />
-                  <el-option label="北角" value="北角" />
-                  <el-option label="将軍澳" value="将軍澳" />
-                  <el-option label="鑽石山" value="鑽石山" />
-                  <el-option label="銅鑼灣" value="銅鑼灣" />
+              <el-form-item
+                label="選擇門診地點"
+                prop="address"
+              >
+                <el-select
+                  v-model="ruleForm.address"
+                  clearable
+                  placeholder="請選擇服務"
+                >
+                  <el-option
+                    label="中環"
+                    value="中環"
+                  />
+                  <el-option
+                    label="旺角"
+                    value="旺角"
+                  />
+                  <el-option
+                    label="西環"
+                    value="西環"
+                  />
+                  <el-option
+                    label="北角"
+                    value="北角"
+                  />
+                  <el-option
+                    label="将軍澳"
+                    value="将軍澳"
+                  />
+                  <el-option
+                    label="鑽石山"
+                    value="鑽石山"
+                  />
+                  <el-option
+                    label="銅鑼灣"
+                    value="銅鑼灣"
+                  />
                 </el-select>
               </el-form-item>
               <el-form-item>
-                <el-button type="primary" @click="onSubmit">確認</el-button>
+                <el-button
+                  type="primary"
+                  @click="onSubmit"
+                >確認</el-button>
               </el-form-item>
             </el-form>
           </div>
@@ -204,21 +256,20 @@ const onSubmit = () => {
     line-height: 31.854px; /* 200% */
   }
   .brand-detail {
-    max-width: 1284px;
+    max-width: 960px;
     margin: 0 auto;
   }
   :deep(.el-form) {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 20px 42px;
     align-items: end;
   }
+  :deep(.el-form-item),
   :deep(.el-button),
   :deep(.el-select__wrapper),
   :deep(.el-input__wrapper) {
-    max-width: 228px;
+    width: 170px;
     box-sizing: border-box;
-    width: 100%;
   }
   :deep(.el-button) {
     background: #00a6ce;
@@ -230,10 +281,10 @@ const onSubmit = () => {
   :deep(.el-form-item__label) {
     color: var(--00517-e, #00517e);
     font-family: "Noto Sans CJK TC";
-    font-size: 18.237px;
+    font-size: 13.677px;
     font-style: normal;
     font-weight: 700;
-    line-height: 39.818px;
+    line-height: 29.864px;
   }
   :deep(.el-form-item__label:after) {
     color: #00517e !important;
@@ -259,17 +310,24 @@ const onSubmit = () => {
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
       color: var(--White, #fff);
       font-family: "Noto Sans CJK TC";
-      font-size: 28px;
+      font-size: 21px;
       font-style: normal;
       font-weight: 500;
-      line-height: 60px; /* 214.286% */
-      padding-left: 37px;
+      line-height: 45px;
+      padding-left: 27px;
     }
     & > div:nth-child(2) {
-      padding: 25px 20px;
+      padding: 18px 13px;
       box-sizing: border-box;
       display: flex;
-      gap: 0 37px;
+      gap: 0 27px;
+      & > div:nth-child(1) {
+        width: 266.25px;
+        min-width: 266.25px;
+        & > img {
+          width: 100%;
+        }
+      }
       & > div:nth-child(2) {
         display: flex;
         flex-direction: column;
@@ -278,16 +336,17 @@ const onSubmit = () => {
         & > div:nth-child(1) {
           color: var(--Sales, #db4444);
           font-family: "Noto Sans CJK TC";
-          font-size: 25px;
+          font-size: 18.75px;
           font-style: normal;
           font-weight: 500;
-          line-height: 40px;
+          line-height: 30px;
           text-align: center;
           & > p:nth-child(1) {
-            font-size: 30px;
+            font-size: 22.5px;
             font-weight: 700;
-            line-height: 45px;
+            line-height: 33.75px;
           }
+          margin-block: 15px;
         }
         & > div:nth-child(2) {
           padding-right: 80px;

@@ -57,7 +57,7 @@ const toForm = () => {
           />
         </svg>
       </div>
-      <el-backtop :bottom="100" :right="182">
+      <el-backtop :bottom="100" :right="382">
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ const toForm = () => {
   .to-form-show {
     position: fixed;
     bottom: 180px;
-    right: 170px;
+    right: 370px;
   }
 }
 @media screen and (max-width: 767px) {

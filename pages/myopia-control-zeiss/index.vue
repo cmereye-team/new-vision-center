@@ -116,9 +116,7 @@ const bannerImg = {
                   alt="MyoVision Pro鏡片"
                 />
               </div>
-              <div
-                :class="[isKindVision ? 'kind-btn-active' : 'kind-btn-item']"
-              >
+              <div :class="[isKindVision ? 'kind-btn-active' : 'kind-btn-item']">
                 MyoVision Pro鏡片
               </div>
             </div>
@@ -295,11 +293,10 @@ const bannerImg = {
         <a class="btn-bg">
           <div>
             <span>哪一款鏡片最適合你的小朋友?</span>
-            <span
-              ><img
+            <span><img
                 src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
                 alt="哪一款鏡片最適合你的小朋友?"
-            /></span>
+              /></span>
           </div>
         </a>
       </div>
@@ -454,7 +451,11 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7378">
-                    <rect width="108.243" height="76" fill="white" />
+                    <rect
+                      width="108.243"
+                      height="76"
+                      fill="white"
+                    />
                   </clipPath>
                 </defs>
               </svg>
@@ -523,7 +524,11 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7385">
-                    <rect width="102.511" height="75.5635" fill="white" />
+                    <rect
+                      width="102.511"
+                      height="75.5635"
+                      fill="white"
+                    />
                   </clipPath>
                 </defs>
               </svg>
@@ -585,7 +590,11 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7395">
-                    <rect width="109.886" height="62" fill="white" />
+                    <rect
+                      width="109.886"
+                      height="62"
+                      fill="white"
+                    />
                   </clipPath>
                 </defs>
               </svg>
@@ -661,7 +670,11 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7405">
-                    <rect width="78" height="90.2809" fill="white" />
+                    <rect
+                      width="78"
+                      height="90.2809"
+                      fill="white"
+                    />
                   </clipPath>
                 </defs>
               </svg>
@@ -900,49 +913,56 @@ const bannerImg = {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .myopia-control-head {
-    max-width: 1284px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 72px auto 0;
     & > div:nth-child(2) {
-      margin-top: 40px;
+      margin-top: 30px;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 28px;
+      font-size: 21px;
       font-style: normal;
       font-weight: 500;
-      line-height: 60px; /* 214.286% */
+      line-height: 45px;
     }
     & > div:nth-child(3) {
-      margin-top: 20px;
-      border-radius: 37px;
+      margin-top: 30px;
+      border-radius: 27.75px;
       background: var(--Skin, #eafbff);
-      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
       display: flex;
       align-items: center;
-      gap: 0 28px;
+      gap: 0 20px;
       box-sizing: border-box;
-      padding: 42px 52px 37px 46px;
+      padding: 32px 40px 30px 34px;
       & > div:nth-child(1) {
         color: #60605f;
         font-family: "Noto Sans CJK TC";
-        font-size: 28px;
+        font-size: 21px;
         font-style: normal;
         font-weight: 500;
-        line-height: 60px; /* 214.286% */
+        line-height: 45px;
+      }
+      & > div:nth-child(2) {
+        width: 360px;
+        min-width: 360px;
+        & > img {
+          width: 100%;
+        }
       }
     }
   }
   .myopia-promise {
-    max-width: 1284px;
-    margin: 75px auto 100px;
+    max-width: 960px;
+    margin: 55px auto 80px;
     & > div:nth-child(2) {
       display: flex;
       justify-content: center;
-      gap: 0 42px;
-      margin-top: 50px;
+      gap: 0 32px;
+      margin-top: 35px;
       & > div {
-        width: 399px;
-        height: 379px;
+        width: 299.25px;
+        height: 284.25px;
         border-radius: 20px;
         background: var(--Skin, #eafbff);
         display: flex;
@@ -953,6 +973,7 @@ const bannerImg = {
           display: flex;
           align-items: center;
           justify-content: center;
+          min-height: 78px;
         }
         & > div:nth-child(2) {
           margin-top: 35px;
@@ -960,10 +981,10 @@ const bannerImg = {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
             font-family: Inter;
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
-            line-height: 30px; /* 100% */
+            line-height: 22.5px; /* 100% */
             text-transform: uppercase;
           }
           & > div:nth-child(2) {
@@ -973,40 +994,64 @@ const bannerImg = {
             color: #60605f;
             text-align: center;
             font-family: Inter;
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 30px; /* 136.364% */
+            line-height: 22.5px; /* 136.364% */
             text-transform: uppercase;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 124.636px;
+            height: 54.264px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 77.171px;
+            height: 77.25px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 75.656px;
+            height: 77.542px;
           }
         }
       }
     }
   }
   .myopia-container-step {
-    margin-top: 80px;
+    margin-top: 70px;
     background: var(--Skin, #eafbff);
     & > div {
-      max-width: 1284px;
+      max-width: 960px;
       margin: 0 auto;
       box-sizing: border-box;
-      padding-top: 45px;
-      padding-bottom: 65px;
+      padding-top: 40px;
+      padding-bottom: 55px;
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 45px;
+        font-size: 33.75px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 133.333% */
-        letter-spacing: 2.25px;
-        margin-bottom: 85px;
+        line-height: 45px; /* 133.333% */
+        letter-spacing: 1.688px;
+        margin-bottom: 65px;
       }
       & > div:nth-child(2) {
         display: flex;
         justify-content: center;
-        gap: 0 55px;
+        gap: 0 42px;
         & > div {
           & > div {
             display: flex;
@@ -1014,10 +1059,10 @@ const bannerImg = {
               margin-right: 20px;
               color: #60605f;
               font-family: Inter;
-              font-size: 22px;
+              font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
-              line-height: 31.287px; /* 142.214% */
+              line-height: 23.465px;
             }
             & > div:nth-child(2) {
               display: flex;
@@ -1025,10 +1070,10 @@ const bannerImg = {
               & > span {
                 color: #60605f;
                 font-family: Inter;
-                font-size: 22px;
+                font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 31.287px; /* 142.214% */
+                line-height: 23.465px;
               }
               & > span:nth-child(1) {
                 color: #59ba68;
@@ -1036,7 +1081,8 @@ const bannerImg = {
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 31.287px;
+                line-height: 23.465px;
+                margin-bottom: 5px;
               }
             }
           }
@@ -1046,32 +1092,38 @@ const bannerImg = {
           }
           & > div:nth-child(1)::after {
             position: absolute;
-            top: 35px;
+            top: 30px;
             left: 35px;
             content: "";
             width: 3px;
             height: 50px;
             background: #4d4d4d;
+            border-radius: 3px;
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(1)::after {
+            height: 60px;
           }
         }
       }
     }
   }
   .myopia-server {
-    max-width: 1284px;
+    max-width: 960px;
     margin: 0 auto;
-    margin-top: 70px;
+    margin-top: 55px;
     & > div:nth-child(2) {
       display: flex;
-      gap: 0 38px;
+      gap: 0 28px;
       justify-content: center;
-      margin-top: 75px;
+      margin-top: 55px;
       & > div {
         display: flex;
         flex-direction: column;
         & > div:nth-child(1) {
-          width: 173.442px;
-          height: 173.442px;
+          width: 130.081px;
+          height: 130.081px;
           border-radius: 24.591px;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
@@ -1080,73 +1132,151 @@ const bannerImg = {
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top: 13px;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 81.182px;
+            height: 57px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 76.883px;
+            height: 56.673px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 82.414px;
+            height: 46.5px;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 58.5px;
+            height: 67.711px;
+          }
         }
       }
     }
   }
   .myopia-crowd {
-    max-width: 1284px;
-    margin: 75px auto 0;
+    max-width: 960px;
+    margin: 55px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: Inter;
-      font-size: 40px;
+      font-size: 30px;
       font-style: normal;
       font-weight: 600;
-      line-height: 30px; /* 75% */
+      line-height: 22.5px; /* 75% */
       text-transform: uppercase;
     }
     & > div:nth-child(2) {
-      margin-top: 50px;
+      margin-top: 35px;
       display: grid;
       grid-template-columns: auto auto auto;
-      grid-gap: 15px 25px;
+      grid-gap: 12px 20px;
       & > div {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
         background: #eafbff;
-        border-radius: 25px;
-        padding-right: 48px;
-        padding-bottom: 50px;
-        padding-left: 50px;
-        padding-top: 65px;
+        border-radius: 20px;
+        padding-right: 30px;
+        padding-bottom: 40px;
+        padding-left: 40px;
+        padding-top: 40px;
         display: flex;
-        gap: 0 20px;
+        gap: 0 15px;
+        justify-content: center;
+        align-items: center;
+
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
         & > div:nth-child(2) {
           display: flex;
           flex-direction: column;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          width: 87.702px;
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          width: 87.702px;
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          width: 42.707px;
+          height: 68.815px;
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          width: 76.5px;
+          height: 55.3px;
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          width: 54.75px;
+          height: 71.25px;
+        }
+      }
+      & > div:nth-child(6) {
+        & > div:nth-child(1) {
+          width: 72.982px;
+          height: 72.982px;
         }
       }
     }
   }
   .myopia-effect {
-    background: url("https://static.cmereye.com/imgs/2024/05/a72f4ded879e1e02.jpg")
+    background: url("https://static.cmereye.com/imgs/2024/05/f5b58cad2961cb33.jpg")
       no-repeat;
     background-size: 100% 100%;
-    height: 493px;
-    max-width: 1284px;
+    height: 370px;
+    max-width: 960px;
     width: 100%;
     margin: 100px auto;
     display: flex;
     box-sizing: border-box;
-    padding-top: 80px;
-    padding-right: 185px;
-    padding-left: 185px;
+    padding-top: 60px;
+    padding-right: 165px;
+    padding-left: 165px;
     padding-bottom: 45px;
     & > div {
       flex: 1;
@@ -1155,25 +1285,25 @@ const bannerImg = {
       & > p:nth-child(1) {
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 40px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 150% */
-        letter-spacing: 2px;
+        line-height: 45px; /* 150% */
+        letter-spacing: 1.5px;
         padding-left: 50px;
       }
       & > div:nth-child(2) {
-        margin-bottom: 40px;
+        margin-bottom: 25px;
         padding-left: 50px;
         display: flex;
         flex-direction: column;
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 30px;
+        font-size: 22.5px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 200% */
-        letter-spacing: 1.5px;
+        line-height: 45px; /* 200% */
+        letter-spacing: 1.125px;
         & > span {
           position: relative;
         }
@@ -1196,13 +1326,13 @@ const bannerImg = {
     }
   }
   .myopia-form-kind {
-    max-width: 1284px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 35px auto 75px;
     & > div:nth-child(2) {
-      margin: 65px auto 105px;
+      margin: 65px auto 85px;
       & > div:nth-child(1) {
         display: flex;
-        gap: 0 54px;
+        gap: 0 40px;
         justify-content: center;
       }
       & > div:nth-child(2) {
@@ -1220,59 +1350,85 @@ const bannerImg = {
     background: url("https://static.cmereye.com/imgs/2024/05/523275638821fa23.png")
       no-repeat;
     background-size: 100% 100%;
-    height: 697px;
+    height: 522px;
     width: 100%;
-    padding-top: calc(40px + 50px);
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-bottom: 50px;
+    padding-top: calc(30px + 37px);
+    padding-left: 32px;
+    padding-right: 30px;
+    padding-bottom: 40px;
     & > div:nth-child(1) {
+      display: flex;
+      gap: 0 10px;
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 2.25px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 1.688px;
         }
         & > div:nth-child(2) {
           margin-top: 15px;
           color: #60605f;
           font-family: "Noto Sans CJK TC";
-          font-size: 28px;
+          font-size: 21px;
           font-style: normal;
           font-weight: 500;
-          line-height: 60px; /* 214.286% */
+          line-height: 45px;
+        }
+      }
+      & > div:nth-child(2) {
+        min-width: 410px;
+        & > img {
+          width: 100%;
         }
       }
     }
     & > div:nth-child(2) {
+      position: relative;
+      top: -15px;
       display: flex;
       gap: 0 70px;
       & > div {
         display: flex;
         & > div:nth-child(2) {
-          margin-left: 29px;
-          max-width: 410px;
+          margin-left: 20px;
+          max-width: 300px;
           & > p:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 45px; /* 150% */
-            letter-spacing: 1.5px;
+            line-height: 33.75px; /* 150% */
+            letter-spacing: 1.125px;
           }
           & > p:nth-child(2) {
             color: #60605f;
             font-family: "Noto Sans HK";
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 40px;
-            letter-spacing: 1.1px;
+            line-height: 30px;
+            letter-spacing: 0.825px;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          min-width: 82.86px;
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          min-width: 107.563px;
+          & > img {
+            width: 100%;
           }
         }
       }
@@ -1416,8 +1572,8 @@ const bannerImg = {
     & > div:nth-child(1) {
       cursor: pointer;
       position: relative;
-      width: 330px;
-      height: 330px;
+      width: 247.5px;
+      height: 247.5px;
       & > img {
         width: 100%;
       }
@@ -1428,14 +1584,16 @@ const bannerImg = {
       max-width: 314px;
       width: 100%;
       margin: 0 auto;
-      border-radius: 20px;
+      border-radius: 15px;
       color: #fff;
       border: 2px solid #00a6ce;
       background: #00a6ce;
       font-family: "Noto Sans HK";
-      font-size: 25px;
+      font-size: 18.75px;
+      font-style: normal;
       font-weight: 700;
-      line-height: 45px;
+      line-height: 33.75px; /* 180% */
+      letter-spacing: 0.938px;
       text-align: center;
     }
   }
@@ -1447,15 +1605,20 @@ const bannerImg = {
       cursor: pointer;
       position: relative;
       margin-bottom: 17px;
+      width: 247.5px;
+      height: 247.5px;
+      & > img {
+        width: 100%;
+      }
     }
 
     & > div:nth-child(1)::after {
       position: absolute;
       content: "";
-      width: 330px;
-      height: 330px;
+      width: 247.5px;
+      height: 247.5px;
       background: #d9d9d980;
-      border-radius: 25px;
+      border-radius: 15px;
       top: 0;
       left: 0;
     }
@@ -1464,12 +1627,14 @@ const bannerImg = {
       width: 100%;
       margin: 0 auto;
       border: 2px solid #00a6ce;
-      border-radius: 20px;
+      border-radius: 15px;
       color: #00a6ce;
       font-family: "Noto Sans HK";
-      font-size: 25px;
+      font-size: 18.75px;
+      font-style: normal;
       font-weight: 700;
-      line-height: 45px;
+      line-height: 33.75px; /* 180% */
+      letter-spacing: 0.938px;
       text-align: center;
     }
   }
@@ -1480,7 +1645,7 @@ const bannerImg = {
     display: none;
   }
   .myopia-control-form {
-    margin: 60px auto 47px;
+    margin: 60px auto 35px;
   }
   .profile-title {
     // background: url("https://static.cmereye.com/imgs/2024/05/2411d80b7ca6dfb0.png")
@@ -1490,7 +1655,7 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
@@ -1505,11 +1670,11 @@ const bannerImg = {
   .terms-content {
     color: var(--Grey-Deep, #4d4d4d);
     font-family: "Noto Sans HK";
-    font-size: 14px;
+    font-size: 10.5px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.7px;
+    line-height: 15px; /* 142.857% */
+    letter-spacing: 0.525px;
   }
   .btn-bg {
     & > div {
@@ -1526,11 +1691,11 @@ const bannerImg = {
       & > span:nth-child(1) {
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 25px;
+        font-size: 18.75px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        letter-spacing: 2.5px;
+        letter-spacing: 1.875px;
         margin-right: 14px;
       }
       & > span:nth-child(2) {
@@ -1579,7 +1744,7 @@ const bannerImg = {
       justify-content: center;
       align-items: center;
     }
-    padding: 20px 24px 20px 30px;
+    padding: 10px 10px 10px 18px;
     border-radius: 100px;
     position: relative;
   }
