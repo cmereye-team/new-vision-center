@@ -36,9 +36,8 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-      position: absolute;
-      right: 220px;
-      bottom: 350px;
+     position: relative;
+      right: -100%;
       color: var(--Brand-Color, #00A6CE);
       text-align: center;
       font-family: "Inter";

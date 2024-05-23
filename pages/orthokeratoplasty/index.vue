@@ -4190,9 +4190,8 @@ const okQuestionList = [
   }
   .profile-title {
     span {
-      position: absolute;
-      left: 320px;
-      bottom: 380px;
+      position: relative;
+      left: -100%;
       color: var(--Brand-Color, #0192b0);
       text-align: center;
       font-family: "Inter";

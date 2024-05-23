@@ -335,9 +335,8 @@ a {
     // min-height: 800px;
     // position: relative;
     span {
-      position: absolute;
-      right: 220px;
-      bottom: 350px;
+     position: relative;
+      right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Inter";

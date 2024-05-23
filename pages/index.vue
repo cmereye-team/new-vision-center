@@ -17,7 +17,7 @@ const modules = [Autoplay, Pagination, Navigation, Scrollbar];
 useHead({
   title: "首页 - 希瑪眼科視光中心",
 });
-const bannerData = {
+const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/13d1975ec227a911.webp",
   mb: "https://static.cmereye.com/imgs/2024/05/7723d746a83f1695.webp",
 };
@@ -197,14 +197,21 @@ const handleIcon = (str: any, idx: any) => {
 
 <template>
   <div class="miyosmart">
-    <div class="miyosmart-banner">
+    <PublicBanner :banner="bannerImg">
+      <!-- 插槽 -->
+      <template #title>
+        <div class="profile-title">
+        </div>
+      </template>
+    </PublicBanner>
+    <!-- <div class="miyosmart-banner">
       <img
         :srcset="`${bannerData.mb} 768w, ${bannerData.pc}`"
         :src="bannerData.pc"
         alt="miyosmart"
         title="miyosmart"
       />
-    </div>
+    </div> -->
     <div class="services">
       <div class="services-t">
         <div class="title">

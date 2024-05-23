@@ -24,10 +24,10 @@ const getSonValue = () => {
 <template>
   <div class="public-header">
     <PublicHeaderLeftHead />
-    <div v-if="isPc">
+    <div v-if="isPc" class="public-header-right">
       <PublicHeaderRightHead />
       <div class="public-header-bottom-menu">
-        <div class="banner-template-btn">
+        <!-- <div class="banner-template-btn">
           <a
             href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
             target="_blank"
@@ -69,7 +69,7 @@ const getSonValue = () => {
             </div>
             <div>電話預約：3892 5089</div>
           </a>
-        </div>
+        </div> -->
       </div>
     </div>
     <div v-else @click="mobileMenuEvent">
@@ -176,6 +176,20 @@ const getSonValue = () => {
     border-radius: 0px 0px 10px 10px;
     background: #00a6ce;
   }
+}
+@media screen and (min-width: 768px) and (max-width: 1620px){
+  .public-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1.67vw 2.08vw 2.08vw;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+}
 }
 @media screen and (max-width: 768px) {
   .public-header {

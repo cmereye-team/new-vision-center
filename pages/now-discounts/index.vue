@@ -36,9 +36,6 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-      position: absolute;
-      right: 220px;
-      bottom: 350px;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Inter";
@@ -47,6 +44,8 @@ const bannerImg = {
       font-weight: 600;
       line-height: normal;
       letter-spacing: 12px;
+      position: relative;
+      right: -180%;
     }
   }
   .video-information-box {

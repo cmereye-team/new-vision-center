@@ -215,14 +215,14 @@ const showChildMenu = (index: any) => {
 // 获取路由
 const route = useRoute();
 const router = useRouter();
-const mbToLink = (item:any) => {
+const mbToLink = (item: any) => {
   router.push({
     path: item.path,
     query: {
       ...route.query,
     },
   });
-  pathIsTrue()
+  pathIsTrue();
   // console.log(router,'Proute');
 };
 </script>
@@ -237,7 +237,7 @@ const mbToLink = (item:any) => {
         :class="`fa-${index + 1}`"
       >
         <nuxt-link
-          @click="item.path == '/' ?  showChildMenu(index) : mbToLink(item) "
+          @click="item.path == '/' ? showChildMenu(index) : mbToLink(item)"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
@@ -346,7 +346,269 @@ const mbToLink = (item:any) => {
   </div>
 </template>
 <style lang="scss" scoped>
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1620px) {
+  a {
+    text-decoration: none;
+  }
+  .menu {
+    display: flex;
+    & > div {
+      position: relative;
+      border-right: 1px solid #4d4d4d;
+      & > a {
+        color: #4d4d4d;
+        text-align: center;
+        font-family: "Inter";
+        font-size: 0.8vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        position: relative;
+      }
+      & > a::after {
+        content: "";
+        position: absolute;
+        background: url("https://static.cmereye.com/imgs/2024/04/6f68e977441f318c.png")
+          no-repeat;
+        background-size: 100% 100%;
+        width: 14px;
+        height: 6px;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+      }
+    }
+    & > div:nth-child(1) {
+      border-left: 1px solid #4d4d4d;
+    }
+    & > div:nth-child(1),
+    & > div:nth-child(2),
+    & > div:nth-child(3),
+    & > div:nth-child(5) {
+      padding: 0.5vw 2.1875vw;
+    }
+    & > div:nth-child(4) {
+      padding: 0.5vw 1.302vw;
+    }
+    & > div:nth-child(6) {
+      padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+    }
+  }
+  .fa-path {
+    position: relative;
+  }
+  .fa-path:hover {
+    & > a {
+      color: #00a6ce;
+    }
+    & > a::after {
+      background: url("https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png");
+      transform: rotate(180deg) translateX(50%);
+      background-size: 100% 100%;
+      z-index: 10;
+    }
+    .sub-menu {
+      box-shadow: #4d4d4d 5px 5px 10px;
+      z-index: 999;
+      border-radius: 5px;
+
+      width: max-content;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      top: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > div:last-child {
+        border-bottom: none;
+      }
+
+      & > a {
+        color: #00a6ce;
+        font-family: "Inter";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: left;
+        text-wrap: nowrap;
+        line-height: 20px; /* 133.333% */
+      }
+    }
+  }
+
+  .son-menu {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    & > a {
+      color: #6f6f6f;
+      font-family: "Inter";
+      font-size: 0.78vw;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      padding: 0.78vw 2.6vw;
+      display: block;
+      & > span {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #00a6ce;
+      }
+    }
+  }
+  // .sub-menu::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 0px solid transparent;
+  //   border-bottom: 14px solid #fff;
+  //   border-left: 14px solid transparent;
+  //   border-right: 14px solid transparent;
+  //   top: -18px;
+  // }
+  .son-menu:hover {
+    & > a {
+      position: relative;
+      color: #00a6ce;
+      & > span::before {
+        content: "";
+        width: 7px;
+        height: 10px;
+        background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+          no-repeat;
+        background-size: 100% 100%;
+        position: absolute;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .three-level {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -46%;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -60%;
+      border-radius: 5px;
+      & > div {
+        & > a {
+          padding: 15px 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Inter";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    .fa-2 {
+      cursor: pointer;
+      & > a::after {
+        content: none;
+      }
+    }
+    // & > div:last-child:hover {
+    // .sub-menu {
+    // display: none;
+    // }
+    // }
+    // & > div:last-child {
+    //   & > a::after {
+    //     content: none;
+    //   }
+    // }
+
+    & > div {
+      & > div {
+        & > div:last-child {
+          & > a {
+            & > span {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .three-level {
+      & > div:last-child {
+        & > a {
+          & > span {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .sub-menu {
+    display: none;
+    position: relative;
+    // background: #fff;
+    background: url("https://static.cmereye.com/imgs/2024/05/bd478e6eda64c637.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  .three-level {
+    display: none;
+  }
+  .right-head {
+    display: flex;
+    align-items: center;
+  }
+  .media {
+    & > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      margin-left: 25px;
+      & > div:nth-child(2) {
+        margin: 0 25px;
+      }
+    }
+    & > div:nth-child(2) {
+      display: none;
+    }
+  }
+  .search {
+    max-width: 190px;
+    margin: 0 10px 0 30px;
+    :deep(.el-input) {
+      width: 100%;
+    }
+  }
+}
+@media screen and (min-width: 1621px) {
   a {
     text-decoration: none;
   }
@@ -413,7 +675,7 @@ const mbToLink = (item:any) => {
       position: absolute;
       right: 50%;
       transform: translateX(50%);
-      top: 66px;
+      top: 50px;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -455,17 +717,17 @@ const mbToLink = (item:any) => {
       }
     }
   }
-  .sub-menu::before {
-    content: "";
-    position: absolute;
-    width: 0;
-    height: 0;
-    border-top: 0px solid transparent;
-    border-bottom: 14px solid #fff;
-    border-left: 14px solid transparent;
-    border-right: 14px solid transparent;
-    top: -14px;
-  }
+  // .sub-menu::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 0px solid transparent;
+  //   border-bottom: 14px solid #fff;
+  //   border-left: 14px solid transparent;
+  //   border-right: 14px solid transparent;
+  //   top: -14px;
+  // }
   .son-menu:hover {
     & > a {
       position: relative;
@@ -568,7 +830,11 @@ const mbToLink = (item:any) => {
   .sub-menu {
     display: none;
     position: relative;
-    background: #fff;
+    // background: #fff;
+    background: url("https://static.cmereye.com/imgs/2024/05/bd478e6eda64c637.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
   }
   .three-level {
     display: none;
