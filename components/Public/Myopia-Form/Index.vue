@@ -242,18 +242,18 @@ const onSubmit = () => {
   :deep(.el-input__inner) {
     color: #00a6ce;
     font-family: "Noto Sans CJK TC";
-    font-size: 15.927px;
+    font-size: 11.945px;
     font-style: normal;
     font-weight: 500;
-    line-height: 31.854px; /* 200% */
+    line-height: 23.891px;
   }
   :deep(.el-input__inner::placeholder) {
     color: #00a6ce;
     font-family: "Noto Sans CJK TC";
-    font-size: 15.927px;
+    font-size: 11.945px;
     font-style: normal;
     font-weight: 500;
-    line-height: 31.854px; /* 200% */
+    line-height: 23.891px;
   }
   .brand-detail {
     max-width: 960px;
@@ -263,6 +263,12 @@ const onSubmit = () => {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: end;
+  }
+  :deep(.el-form-item) {
+    margin-bottom: 12px;
+  }
+  :deep(.el-form-item__labe) {
+    margin-bottom: 6px;
   }
   :deep(.el-form-item),
   :deep(.el-button),
@@ -301,11 +307,11 @@ const onSubmit = () => {
     }
   }
   .detail {
-    border-radius: 37px;
+    border-radius: 27px;
     border: 2px solid var(--Grey-Deep, #4d4d4d);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     & > div:nth-child(1) {
-      border-radius: 37px 37px 0px 0px;
+      border-radius: 27px 27px 0px 0px;
       background: var(--Brand-2, #59ba68);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
       color: var(--White, #fff);

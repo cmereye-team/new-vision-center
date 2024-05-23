@@ -912,6 +912,9 @@ const bannerImg = {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .zeiss-container{
+    margin-bottom: 65px;
+  }
   .myopia-control-head {
     max-width: 960px;
     margin: 72px auto 0;
@@ -1438,22 +1441,23 @@ const bannerImg = {
     background: url("https://static.cmereye.com/imgs/2024/05/6edaf38a082c2a25.png")
       no-repeat;
     background-size: 100% 100%;
-    height: 858px;
+    height: 718px;
     width: 100%;
-    padding-top: calc(40px + 40px);
-    padding-bottom: 45px;
-    padding-right: 28px;
-    padding-left: 50px;
+    padding-top: calc(30px + 37px);
+    padding-bottom: 35px;
+    padding-right: 18px;
+    padding-left: 40px;
     & > div:nth-child(1) {
       display: flex;
+      align-items: center;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 45px;
+        font-size: 33.75px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 133.333% */
-        letter-spacing: 2.25px;
+        line-height: 45px;
+        letter-spacing: 1.688px;
         padding-right: 30px;
         border-right: 3px solid #00a6ce;
       }
@@ -1461,19 +1465,19 @@ const bannerImg = {
         margin-left: 30px;
         color: #60605f;
         font-family: "Noto Sans CJK TC";
-        font-size: 28px;
+        font-size: 22px;
         font-style: normal;
         font-weight: 500;
         line-height: 40px; /* 142.857% */
-        max-width: 630px;
+        max-width: 460px;
       }
     }
     & > div:nth-child(2) {
-      margin-top: 64px;
+      margin-top: 45px;
       & > div:nth-child(1) {
         display: flex;
-        gap: 0 200px;
-        margin-bottom: 35px;
+        gap: 0 100px;
+        margin-bottom: 15px;
         & > div {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
@@ -1483,16 +1487,20 @@ const bannerImg = {
           line-height: 45px; /* 150% */
           letter-spacing: 1.5px;
           & > div:nth-child(2) {
-            min-height: 385px;
+            min-height: 315px;
+            max-width:320px;
             display: flex;
             align-items: center;
+            &>img{
+              width:100%;
+            }
           }
         }
       }
       & > div:nth-child(2) {
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 22px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 500;
         line-height: 40px;
@@ -1507,59 +1515,85 @@ const bannerImg = {
     background: url("https://static.cmereye.com/imgs/2024/05/523275638821fa23.png")
       no-repeat;
     background-size: 100% 100%;
-    height: 697px;
+    height: 522px;
     width: 100%;
-    padding-top: calc(40px + 50px);
-    padding-left: 42px;
-    padding-right: 42px;
-    padding-bottom: 50px;
+    padding-top: calc(30px + 37px);
+    padding-left: 32px;
+    padding-right: 30px;
+    padding-bottom: 40px;
     & > div:nth-child(1) {
+      display: flex;
+      gap: 0 10px;
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 2.25px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 1.688px;
         }
         & > div:nth-child(2) {
           margin-top: 15px;
           color: #60605f;
           font-family: "Noto Sans CJK TC";
-          font-size: 28px;
+          font-size: 21px;
           font-style: normal;
           font-weight: 500;
-          line-height: 60px; /* 214.286% */
+          line-height: 45px;
+        }
+      }
+      & > div:nth-child(2) {
+        min-width: 410px;
+        & > img {
+          width: 100%;
         }
       }
     }
     & > div:nth-child(2) {
+      position: relative;
+      top: -15px;
       display: flex;
       gap: 0 70px;
       & > div {
         display: flex;
         & > div:nth-child(2) {
-          margin-left: 29px;
-          max-width: 410px;
+          margin-left: 20px;
+          max-width: 300px;
           & > p:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 45px; /* 150% */
-            letter-spacing: 1.5px;
+            line-height: 33.75px; /* 150% */
+            letter-spacing: 1.125px;
           }
           & > p:nth-child(2) {
             color: #60605f;
             font-family: "Noto Sans HK";
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 40px;
-            letter-spacing: 1.1px;
+            line-height: 30px;
+            letter-spacing: 0.825px;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          min-width: 82.86px;
+          & > img {
+            width: 100%;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          min-width: 107.563px;
+          & > img {
+            width: 100%;
           }
         }
       }

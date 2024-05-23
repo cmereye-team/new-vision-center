@@ -1331,6 +1331,7 @@ const miSightQuestionList = [
         <PublicCollapse
           :title="'MiYOSMART鏡片常見問題'"
           :listQuestion="miSightQuestionList"
+          :testWidth="true"
         />
         <div class="btn-pdf">
           <div>
@@ -1372,10 +1373,13 @@ const miSightQuestionList = [
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .myopia-control-hoya{
+    margin-bottom: 65px;
+  }
   .hoya-form {
     :deep(.detail) {
       & > div:nth-child(1) {
-        border-radius: 37px 37px 0px 0px;
+        border-radius: 27px 27px 0px 0px;
         background: var(--Orange, #f90);
         box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
       }
@@ -1391,9 +1395,16 @@ const miSightQuestionList = [
     flex-direction: column;
     align-items: center;
     margin-top: 50px;
-    margin-bottom: 105px;
+    margin-bottom: 85px;
+    & > div:nth-child(1) {
+      width: 93.75px;
+      height: 115.5px;
+      & > img {
+        width: 100%;
+      }
+    }
     & > a {
-      margin-top: 30px;
+      margin-top: 22px;
       display: flex;
       align-items: center;
       background: #00517e;
@@ -1401,16 +1412,20 @@ const miSightQuestionList = [
       border: 2px solid #02ed85;
       box-shadow: 0px 0px 6px 4px rgb(64 164 181 / 25%);
       gap: 0 16px;
-      padding: 11px 30px;
+      padding: 8px 24px;
       & > span {
         display: flex;
         justify-content: center;
         align-items: center;
+        & > svg {
+          width: 21.103px;
+          height: 21.103px;
+        }
       }
       & > span:nth-child(2) {
         color: #fff;
         font-family: Inter;
-        font-size: 21.103px;
+        font-size: 15.828px;
         font-style: normal;
         font-weight: 465;
         line-height: normal;
@@ -1418,16 +1433,16 @@ const miSightQuestionList = [
     }
   }
   .myopia-promise {
-    max-width: 1284px;
-    margin: 75px auto 100px;
+    max-width: 960px;
+    margin: 65px auto 55px;
     & > div:nth-child(2) {
       display: flex;
       justify-content: center;
-      gap: 0 42px;
-      margin-top: 50px;
+      gap: 0 32px;
+      margin-top: 35px;
       & > div {
-        width: 399px;
-        height: 379px;
+        width: 299.25px;
+        height: 284.25px;
         border-radius: 20px;
         background: var(--Skin, #eafbff);
         display: flex;
@@ -1438,6 +1453,7 @@ const miSightQuestionList = [
           display: flex;
           align-items: center;
           justify-content: center;
+          min-height: 78px;
         }
         & > div:nth-child(2) {
           margin-top: 35px;
@@ -1445,10 +1461,10 @@ const miSightQuestionList = [
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
             font-family: Inter;
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
-            line-height: 30px; /* 100% */
+            line-height: 22.5px; /* 100% */
             text-transform: uppercase;
           }
           & > div:nth-child(2) {
@@ -1458,35 +1474,59 @@ const miSightQuestionList = [
             color: #60605f;
             text-align: center;
             font-family: Inter;
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 30px; /* 136.364% */
+            line-height: 22.5px; /* 136.364% */
             text-transform: uppercase;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 124.636px;
+            height: 54.264px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 77.171px;
+            height: 77.25px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 75.656px;
+            height: 77.542px;
           }
         }
       }
     }
   }
   .myopia-container-step {
-    margin-top: 80px;
+    margin-top: 40px;
     background: var(--Skin, #eafbff);
     & > div {
-      max-width: 1284px;
+      max-width: 960px;
       margin: 0 auto;
       box-sizing: border-box;
-      padding-top: 45px;
-      padding-bottom: 65px;
+      padding-top: 35px;
+      padding-bottom: 45px;
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 45px;
+        font-size: 33.75px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 133.333% */
-        letter-spacing: 2.25px;
-        margin-bottom: 85px;
+        line-height: 45px; /* 133.333% */
+        letter-spacing: 1.688px;
+        margin-bottom: 65px;
       }
       & > div:nth-child(2) {
         display: flex;
@@ -1499,10 +1539,10 @@ const miSightQuestionList = [
               margin-right: 20px;
               color: #60605f;
               font-family: Inter;
-              font-size: 22px;
+              font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
-              line-height: 31.287px; /* 142.214% */
+              line-height: 23.465px;
             }
             & > div:nth-child(2) {
               display: flex;
@@ -1510,18 +1550,18 @@ const miSightQuestionList = [
               & > span {
                 color: #60605f;
                 font-family: Inter;
-                font-size: 22px;
+                font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 31.287px; /* 142.214% */
+                line-height: 23.465px;
               }
               & > span:nth-child(1) {
                 color: #59ba68;
                 font-family: Inter;
-                font-size: 30px;
+                font-size: 22.5px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 31.287px;
+                line-height: 23.465px;
               }
             }
           }
@@ -1531,7 +1571,7 @@ const miSightQuestionList = [
           }
           & > div:nth-child(1)::after {
             position: absolute;
-            top: 35px;
+            top: 25px;
             left: 35px;
             content: "";
             width: 3px;
@@ -1543,23 +1583,23 @@ const miSightQuestionList = [
     }
   }
   .myopia-server {
-    max-width: 1284px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 42px auto 55px;
     margin-top: 70px;
     & > div:nth-child(2) {
       display: flex;
-      gap: 0 38px;
+      gap: 0 28px;
       justify-content: center;
-      margin-top: 75px;
+      margin-top: 55px;
       & > div {
         display: flex;
         flex-direction: column;
         & > div:nth-child(1) {
-          width: 173.442px;
-          height: 173.442px;
-          border-radius: 24.591px;
+          width: 130.081px;
+          height: 130.081px;
+          border-radius: 18.443px;
           background: var(--Skin, #eafbff);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1571,26 +1611,26 @@ const miSightQuestionList = [
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
         }
       }
     }
   }
   .myopia-control-hoya-upgrade {
-    max-width: 1284px;
-    margin: 50px auto 120px;
-    background: url(https://static.cmereye.com/imgs/2024/05/23f143aa05e28a83.jpg)
+    max-width: 960px;
+    margin: 32px auto 65px;
+    background: url(https://static.cmereye.com/imgs/2024/05/d8b7024a32df53ec.jpg)
       no-repeat;
     background-size: 100% 100%;
     border-radius: 20px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    height: 684px;
+    height: 512px;
     box-sizing: border-box;
-    padding: 30px 33px 48px;
+    padding: 20px 40px 35px;
     display: flex;
     & > div:nth-child(1) {
       flex: 4;
@@ -1600,28 +1640,28 @@ const miSightQuestionList = [
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 45px;
+        font-size: 33.75px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 133.333% */
-        letter-spacing: 2.25px;
-        margin-bottom: 14px;
+        line-height: 45px; /* 133.333% */
+        letter-spacing: 1.688px;
+        margin-bottom: 10px;
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 45px; /* 150% */
-          letter-spacing: 1.5px;
+          line-height: 33.75px; /* 150% */
+          letter-spacing: 1.125px;
         }
         & > div:nth-child(2) {
           display: flex;
-          gap: 0 42px;
+          gap: 0 31px;
           position: relative;
-          margin-top: 14px;
+          margin-top: 11px;
           & > div {
             position: relative;
             & > div:nth-child(1) {
@@ -1629,19 +1669,19 @@ const miSightQuestionList = [
               flex-direction: column;
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 24px;
+              font-size: 18px;
               font-style: normal;
               font-weight: 500;
-              line-height: 45px;
-              letter-spacing: 1.2px;
+              line-height: 33.75px; /* 187.5% */
+              letter-spacing: 0.9px;
               & > span:nth-child(1) {
                 color: var(--Deep-Blue, #3e5270);
                 font-family: "Noto Sans HK";
-                font-size: 24px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 45px; /* 187.5% */
-                letter-spacing: 1.2px;
+                line-height: 33.75px;
+                letter-spacing: 0.9px;
               }
             }
             & > div:nth-child(2) {
@@ -1650,44 +1690,64 @@ const miSightQuestionList = [
               right: 0;
             }
           }
+          & > div:nth-child(1) {
+            & > div:nth-child(2) {
+              & > svg {
+                width: 79.847px;
+                height: 69.751px;
+              }
+            }
+          }
+          & > div:nth-child(2) {
+            & > div:nth-child(2) {
+              & > svg {
+                width: 80.319px;
+                height: 48.946px;
+              }
+            }
+          }
         }
         & > div:nth-child(3) {
-          margin-top: 25px;
+          margin-top: 15px;
           position: relative;
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 45px; /* 150% */
-            letter-spacing: 1.5px;
+            line-height: 33.75px; /* 150% */
+            letter-spacing: 1.125px;
           }
           & > div:nth-child(2) {
             & > div:nth-child(1) {
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 24px;
+              font-size: 18px;
               font-style: normal;
               font-weight: 500;
-              line-height: 45px;
-              letter-spacing: 1.2px;
+              line-height: 33.75px; /* 187.5% */
+              letter-spacing: 0.9px;
               display: flex;
               flex-direction: column;
               & > span:nth-child(1) {
                 color: var(--Deep-Blue, #3e5270);
                 font-family: "Noto Sans HK";
-                font-size: 24px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 45px; /* 187.5% */
-                letter-spacing: 1.2px;
+                line-height: 33.75px;
+                letter-spacing: 0.9px;
               }
             }
             & > div:nth-child(2) {
               position: absolute;
               top: 10px;
               right: 120px;
+              & > svg {
+                width: 81.095px;
+                height: 48.006px;
+              }
             }
           }
         }
@@ -1695,7 +1755,7 @@ const miSightQuestionList = [
     }
   }
   .myopia-control-hoya-target {
-    max-width: 1284px;
+    max-width: 960px;
     margin: 50px auto 50px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
@@ -1705,21 +1765,21 @@ const miSightQuestionList = [
       font-weight: 600;
       line-height: 30px; /* 75% */
       text-transform: uppercase;
-      margin-bottom: 50px;
+      margin-bottom: 35px;
     }
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: auto auto auto;
-      grid-gap: 15px 25px;
+      grid-gap: 12px 20px;
       & > div {
         display: flex;
         align-items: center;
-        gap: 0 25px;
+        gap: 0 20px;
         background: #eafbff;
         border-radius: 15px;
         box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
         box-sizing: border-box;
-        padding: 48px 49px;
+        padding: 35px 25px;
         & > div:nth-child(1) {
           flex: 3;
           display: flex;
@@ -1732,43 +1792,83 @@ const miSightQuestionList = [
           flex-direction: column;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
         }
       }
-      margin-bottom: 42px;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 75px;
+            height: 63.75px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 89.25px;
+            height: 70.5px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 63.757px;
+            height: 68.144px;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 60px;
+            height: 37.5px;
+          }
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 82.126px;
+            height: 63.51px;
+          }
+        }
+      }
+      margin-bottom: 32px;
     }
     & > div:nth-child(3) {
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
-      line-height: 30px; /* 150% */
+      line-height: 22.5px;
     }
   }
   .myopia-control-hoya-effect {
-    max-width: 1284px;
-    margin: 50px auto 85px;
-    background: url(https://static.cmereye.com/imgs/2024/05/c5c6a8727d113239.jpg)
+    max-width: 960px;
+    margin: 38px auto 65px;
+    background: url(https://static.cmereye.com/imgs/2024/05/48c396685a43b48c.jpg)
       no-repeat;
     box-sizing: border-box;
     background-size: 100% 100%;
-    height: 493px;
+    height: 370px;
     padding: 15px 125px;
     & > div {
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 40px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 150% */
-        letter-spacing: 2px;
+        line-height: 45px; /* 150% */
+        letter-spacing: 1.5px;
         padding-bottom: 8.5px;
         position: relative;
         margin-bottom: 18px;
@@ -1788,11 +1888,11 @@ const miSightQuestionList = [
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 200% */
-          letter-spacing: 1.5px;
+          line-height: 45px; /* 200% */
+          letter-spacing: 1.125px;
           position: relative;
           margin-bottom: 5px;
         }
@@ -1801,10 +1901,10 @@ const miSightQuestionList = [
           flex-direction: column;
           color: var(--White, #fff);
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 13.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 24px; /* 133.333% */
+          line-height: 18px; /* 133.333% */
           text-transform: uppercase;
         }
         & > div:nth-child(1)::before {
@@ -1826,11 +1926,11 @@ const miSightQuestionList = [
         flex-direction: column;
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 30px;
+        font-size: 22.5px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 200% */
-        letter-spacing: 1.5px;
+        line-height: 45px; /* 200% */
+        letter-spacing: 1.125px;
         & > span {
           position: relative;
         }
@@ -1850,37 +1950,37 @@ const miSightQuestionList = [
     }
   }
   .myopia-control-hoya-introduce {
-    max-width: 1284px;
-    margin: 50px auto;
+    max-width: 960px;
+    margin: 40px auto;
     background: #eafbff;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
-    border-radius: 25px;
+    border-radius: 20px;
     box-sizing: border-box;
-    padding: 42px 20px 48px 42px;
+    padding: 28px 30px 36px 30px;
     & > div:nth-child(1) {
       display: flex;
       align-items: center;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 45px;
+        font-size: 33.75px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 133.333% */
-        letter-spacing: 2.25px;
-        padding-right: 13px;
+        line-height: 45px; /* 133.333% */
+        letter-spacing: 1.688px;
+        padding-right: 8px;
       }
       & > div:nth-child(2) {
         display: flex;
         flex-direction: column;
         color: #60605f;
         font-family: "Noto Sans CJK TC";
-        font-size: 28px;
+        font-size: 21px;
         font-style: normal;
         font-weight: 500;
-        line-height: 40px; /* 142.857% */
-        padding-left: 30px;
-        border-left: 3px solid #00a6ce;
+        line-height: 30px; /* 142.857% */
+        padding-left: 10px;
+        border-left: 2px solid #00a6ce;
       }
     }
     & > div:nth-child(2) {
@@ -1888,24 +1988,26 @@ const miSightQuestionList = [
       align-items: center;
       gap: 0 70px;
       padding-left: 13px;
+      & > img:nth-child(1) {
+        width: 407.25px;
+        height: 284.25px;
+      }
+      & > img:nth-child(2) {
+        width: 355.127px;
+        height: 355.498px;
+      }
     }
     & > div:nth-child(3) {
       padding-right: 35px;
       color: #60605f;
       font-family: "Noto Sans HK";
-      font-size: 22px;
+      font-size: 16.5px;
       font-style: normal;
       font-weight: 500;
-      line-height: 40px;
-      letter-spacing: 1.1px;
+      line-height: 30px;
+      letter-spacing: 0.825px;
       & > p:nth-child(1) {
-        color: #60605f;
-        font-family: "Noto Sans HK";
-        font-size: 22px;
-        font-style: normal;
         font-weight: 700;
-        line-height: 40px; /* 181.818% */
-        letter-spacing: 1.1px;
       }
       & > p:nth-child(2),
       & > p:nth-child(3) {
@@ -1924,19 +2026,19 @@ const miSightQuestionList = [
     }
   }
   .myopia-control-hoya-head {
-    max-width: 1284px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 75px auto 0;
     & > div:nth-child(2) {
-      margin-top: 40px;
-      margin-bottom: 40px;
+      margin-top: 30px;
+      margin-bottom: 30px;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 28px;
+      font-size: 21px;
       font-style: normal;
       font-weight: 500;
-      line-height: 60px; /* 214.286% */
-      padding: 0 140px;
+      line-height: 45px;
+      padding: 0 100px;
     }
   }
   .profile-title {
@@ -1947,7 +2049,7 @@ const miSightQuestionList = [
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
@@ -1962,11 +2064,11 @@ const miSightQuestionList = [
   .terms-content {
     color: var(--Grey-Deep, #4d4d4d);
     font-family: "Noto Sans HK";
-    font-size: 14px;
+    font-size: 10.5px;
     font-style: normal;
     font-weight: 400;
-    line-height: 20px; /* 142.857% */
-    letter-spacing: 0.7px;
+    line-height: 15px; /* 142.857% */
+    letter-spacing: 0.525px;
   }
   .btn-bg {
     & > div {
@@ -1983,11 +2085,11 @@ const miSightQuestionList = [
       & > span:nth-child(1) {
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 25px;
+        font-size: 18.75px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        letter-spacing: 2.5px;
+        letter-spacing: 1.875px;
         margin-right: 14px;
       }
       & > span:nth-child(2) {
