@@ -3822,8 +3822,8 @@ onMounted(() => {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .myopia-control-scheme {
-    margin-top: 150px;
-    margin-bottom: 65px;
+    margin-top: 110px;
+    margin-bottom: 50px;
     background: var(--Skin, #eafbff);
     & > div {
       max-width: 1284px;
@@ -4445,21 +4445,28 @@ onMounted(() => {
     height: 492px;
   }
   .myopia-control-significance {
-    max-width: 1284px;
+    max-width: 960px;
     margin: 0 auto;
     & > div:nth-child(2) {
-      padding-left: 55px;
+      padding-left: 40px;
       & > div:nth-child(1) {
+        margin-top: 55px;
         color: #4d4d4d;
         font-family: "Noto Sans HK";
-        font-size: 40px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 150% */
-        letter-spacing: 2px;
+        line-height: 45px; /* 150% */
+        letter-spacing: 1.5px;
       }
       & > div:nth-child(2) {
         display: flex;
+        & > div:nth-child(1) {
+          width: 570px;
+          & > img {
+            width: 100%;
+          }
+        }
         & > div:nth-child(2) {
           display: flex;
           margin-left: 32px;
@@ -4470,50 +4477,53 @@ onMounted(() => {
             flex-direction: column;
             color: #4d4d4d;
             font-family: "Noto Sans HK";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 45px; /* 150% */
-            letter-spacing: 1.5px;
+            line-height: 33.75px; /* 150% */
+            letter-spacing: 1.125px;
           }
           & > div:nth-child(2) {
             margin-left: 10px;
             color: var(--Sales, #db4444);
             font-family: "Noto Sans HK";
-            font-size: 100px;
+            font-size: 75px;
             font-style: normal;
             font-weight: 700;
-            line-height: 154.909px; /* 154.909% */
-            letter-spacing: 5px;
+            line-height: 116.182px; /* 154.909% */
+            letter-spacing: 3.75px;
           }
         }
       }
     }
     & > div:nth-child(3) {
-      margin-top: 55px;
-      margin-bottom: 95px;
+      margin-top: 45px;
+      margin-bottom: 70px;
       display: flex;
-      gap: 0 140px;
+      gap: 0 95px;
       justify-content: center;
       & > div {
         & > div:nth-child(1) {
           border-radius: 20px;
           box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.25);
-          max-width: 279px;
-          max-height: 279px;
+          width: 209.25px;
+          height: 209.25px;
+          & > img {
+            width: 100%;
+          }
         }
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top: 12px;
           & > p:nth-child(1) {
             color: var(--Grey-Deep, #4d4d4d);
 
             /* L1- SHead */
             font-family: "Noto Sans HK";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 40px; /* 133.333% */
-            letter-spacing: 1.5px;
+            line-height: 30px; /* 133.333% */
+            letter-spacing: 1.125px;
             text-align: center;
           }
           & > p:nth-child(2) {
@@ -4521,7 +4531,7 @@ onMounted(() => {
             & > span:nth-child(1) {
               color: var(--Grey-Deep, #4d4d4d);
               font-family: Inter;
-              font-size: 22px;
+              font-size: 16.5px;
               font-style: normal;
               font-weight: 300;
               line-height: normal;
@@ -4529,10 +4539,10 @@ onMounted(() => {
             & > span:nth-child(2) {
               color: #db4444;
               font-family: "Noto Sans HK";
-              font-size: 45px;
+              font-size: 33.75px;
               font-style: normal;
               font-weight: 900;
-              line-height: 60px;
+              line-height: 45px;
             }
           }
         }
@@ -4548,11 +4558,11 @@ onMounted(() => {
       }
     }
     & > div:nth-child(4) {
-      background: url("https://static.cmereye.com/imgs/2024/05/36af5c6d4a861889.jpg")
+      background: url("https://static.cmereye.com/imgs/2024/05/c3d376b4a3d688a8.png")
         no-repeat;
       background-size: 100% 100%;
-      min-height: 518px;
-      padding: 20px 32px 40px;
+      min-height: 388px;
+      padding: 80px 32px 30px 27px;
       box-sizing: border-box;
       & > div {
         position: relative;
@@ -4562,70 +4572,53 @@ onMounted(() => {
           flex-direction: column;
           color: #ffa726;
           font-family: "Noto Sans CJK TC";
-          font-size: 60px;
+          font-size: 45px;
           font-style: normal;
           font-weight: 700;
-          line-height: 80px; /* 133.333% */
-          letter-spacing: 3px;
+          line-height: 60px; /* 133.333% */
+          letter-spacing: 2.25px;
         }
         & > div:nth-child(2) {
-          margin-bottom: 30px;
+          margin-bottom: 10px;
           color: #60605f;
           text-align: justify;
           font-family: "Noto Sans HK";
-          font-size: 24px;
+          font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          line-height: 45px; /* 187.5% */
-          letter-spacing: 1.2px;
+          line-height: 33.75px; /* 187.5% */
+          letter-spacing: 0.9px;
         }
-      }
-      & > div::before {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/03567b6a72b75886.png");
-        width: 122px;
-        height: 101px;
-        display: block;
-      }
-      & > div::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/c2b7e72d7ba75b04.png");
-        width: 122px;
-        height: 101px;
-        display: block;
-        position: absolute;
-        left: 42%;
-        bottom: 5%;
       }
     }
     & > div:nth-child(5) {
-      margin-top: 95px;
+      margin-top: 70px;
       & > div:nth-child(2) {
         color: #60605f;
         text-align: center;
         font-family: "Noto Sans CJK TC";
-        font-size: 28px;
+        font-size: 21px;
         font-style: normal;
         font-weight: 500;
-        line-height: 60px; /* 214.286% */
-        padding: 0 190px;
+        line-height: 45px;
+        padding: 0 140px;
       }
     }
     & > div:nth-child(6) {
-      margin-top: 65px;
+      margin-top: 45px;
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 30px;
+        font-size: 22.5px;
         font-style: normal;
         font-weight: 700;
-        line-height: 45px; /* 150% */
-        letter-spacing: 1.5px;
+        line-height: 33.75px; /* 150% */
+        letter-spacing: 1.125px;
       }
       & > div:nth-child(2) {
         display: flex;
-        gap: 0 140px;
+        gap: 0 120px;
         justify-content: center;
         margin-top: 10px;
         & > div {
@@ -4635,30 +4628,30 @@ onMounted(() => {
             align-items: flex-end;
             :deep(.el-statistic__number) {
               font-family: "Noto Sans CJK TC";
-              font-size: 87.281px;
+              font-size: 65.461px;
               font-style: normal;
               font-weight: 700;
               line-height: normal;
             }
             & > span {
               font-family: "Noto Sans CJK TC";
-              font-size: 43.294px;
+              font-size: 32.47px;
               font-style: normal;
               font-weight: 700;
               line-height: normal;
               position: relative;
-              bottom: 18px;
+              bottom: 12px;
             }
           }
           & > div:nth-child(2) {
             color: #60605f;
             font-family: "Noto Sans CJK TC";
             text-align: center;
-            font-size: 24px;
+            font-size: 18px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            letter-spacing: 2.4px;
+            letter-spacing: 1.8px;
           }
           & > div:nth-child(3) {
             position: absolute;
@@ -4669,9 +4662,10 @@ onMounted(() => {
           content: "";
           background: url("https://static.cmereye.com/imgs/2024/05/3723e01d333a24d2.png")
             no-repeat;
+          background-size: 100% 100%;
           display: inline-block;
-          width: 32px;
-          height: 32px;
+          width: 24px;
+          height: 24px;
           top: 60%;
           right: -35px;
           position: absolute;
@@ -4688,6 +4682,10 @@ onMounted(() => {
           & > div:nth-child(3) {
             top: 0;
             right: -45%;
+            & > svg {
+              width: 80.677px;
+              height: 49.627px;
+            }
           }
         }
         & > div:nth-child(2) {
@@ -4702,6 +4700,10 @@ onMounted(() => {
           & > div:nth-child(3) {
             bottom: -45%;
             right: -20%;
+            & > svg {
+              width: 71.25px;
+              height: 64.5px;
+            }
           }
         }
         & > div:nth-child(3) {
@@ -4716,6 +4718,10 @@ onMounted(() => {
           & > div:nth-child(3) {
             right: -100%;
             top: 5%;
+            & > svg {
+              width: 80.677px;
+              height: 49.627px;
+            }
           }
         }
         & > div:nth-child(4) {
@@ -4730,6 +4736,10 @@ onMounted(() => {
           & > div:nth-child(3) {
             right: -120%;
             bottom: -30%;
+            & > svg {
+              width: 76.5px;
+              height: 47.25px;
+            }
           }
         }
       }
@@ -4741,15 +4751,15 @@ onMounted(() => {
 
     /* Headline PC */
     font-family: "Noto Sans HK";
-    font-size: 45px;
+    font-size: 33.75px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px; /* 133.333% */
-    letter-spacing: 2.25px;
+    line-height: 45px; /* 133.333% */
+    letter-spacing: 1.688px;
     position: relative;
     width: fit-content;
-    margin: 0 auto 22px;
-    padding-bottom: 14px;
+    margin: 0 auto 15px;
+    padding-bottom: 10px;
   }
   .myopia-fake-title::after {
     content: "";
@@ -4778,12 +4788,12 @@ onMounted(() => {
       & > span:nth-child(1) {
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 25px;
+        font-size: 18.75px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
-        letter-spacing: 2.5px;
-        margin-right: 14px;
+        letter-spacing: 1.875px;
+        margin-right: 10px;
       }
       & > span:nth-child(2) {
         width: 39px;
@@ -4809,11 +4819,11 @@ onMounted(() => {
   .myopia-control-title {
     color: var(--Brand-Color, #00a6ce);
     font-family: "Noto Sans HK";
-    font-size: 45px;
+    font-size: 33.75px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px; /* 133.333% */
-    letter-spacing: 2.25px;
+    line-height: 45px; /* 133.333% */
+    letter-spacing: 1.688px;
   }
   .profile-title {
     // background: url("https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png")
@@ -4823,7 +4833,7 @@ onMounted(() => {
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;

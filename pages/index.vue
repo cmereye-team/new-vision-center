@@ -200,8 +200,7 @@ const handleIcon = (str: any, idx: any) => {
     <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
-        <div class="profile-title">
-        </div>
+        <div class="profile-title"></div>
       </template>
     </PublicBanner>
     <!-- <div class="miyosmart-banner">
@@ -225,7 +224,9 @@ const handleIcon = (str: any, idx: any) => {
             :key="index"
             :to="item.link"
           >
+            <span><img src="../assets/img/triangle-left.svg" alt="" /></span>
             <span>{{ item.name }}</span>
+            <span><img src="../assets/img/triangle-right.svg" alt="" /></span>
           </nuxtLink>
         </div>
       </div>
@@ -237,7 +238,11 @@ const handleIcon = (str: any, idx: any) => {
           :to="item.link"
         >
           <div class="image">
-            <img :src="item.img" :alt="`${item.title}`" :title="`${item.title}`" />
+            <img
+              :src="item.img"
+              :alt="`${item.title}`"
+              :title="`${item.title}`"
+            />
           </div>
           <div class="context">
             <div class="context-t">
@@ -371,7 +376,7 @@ const handleIcon = (str: any, idx: any) => {
             hide: false,
           }"
           :slidesPerView="realTimeWidth > 768 ? 4 : 2.3"
-          :space-between="realTimeWidth > 768 ? 47 : 12"
+          :spaceBetween="realTimeWidth > 768 ? 35 : 12"
           @swiper="setSwiper"
         >
           <swiper-slide
@@ -613,19 +618,19 @@ const handleIcon = (str: any, idx: any) => {
 }
 .services {
   width: 100%;
-  max-width: 1280px;
-  margin: 36px auto 0;
+  max-width: 960px;
+  margin: 90px auto 0;
   &-t {
     display: flex;
     justify-content: space-between;
     .title {
       color: var(--Brand-Color, #00a6ce);
       font-family: "Noto Sans HK";
-      font-size: 45px;
+      font-size: 33.75px;
       font-style: normal;
       font-weight: 700;
-      line-height: 60px; /* 133.333% */
-      letter-spacing: 2.25px;
+      line-height: 45px; /* 133.333% */
+      letter-spacing: 1.688px;
     }
     .btn {
       display: flex;
@@ -634,16 +639,25 @@ const handleIcon = (str: any, idx: any) => {
         color: var(--White, #fff);
         text-align: center;
         font-family: Inter;
-        font-size: 29.308px;
+        font-size: 21.981px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         border-radius: 30px;
         display: flex;
         align-items: center;
-        padding: 0 40px;
-        margin-left: 10px;
+        padding: 0 10px;
+        margin-left: 7px;
         box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+        & > span:nth-child(1),
+        & > span:nth-child(3) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > span:nth-child(2) {
+          padding: 0 6px 0 3px;
+        }
       }
     }
   }
@@ -651,16 +665,16 @@ const handleIcon = (str: any, idx: any) => {
     margin-top: 52px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 32px;
+    gap: 25px 24px;
     .list-in {
-      padding: 20px 0 20px 20px;
+      padding: 10px 0 20px 15px;
       background: #fff;
       box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
       border-radius: 25px;
       display: flex;
       .image {
-        width: 198px;
-        margin-right: 20px;
+        width: 148px;
+        margin-right: 15px;
         img {
           width: 100%;
           border-radius: 20px;
@@ -675,25 +689,26 @@ const handleIcon = (str: any, idx: any) => {
           h3 {
             color: var(--Grey, #4d4d4d);
             font-family: "Noto Sans HK";
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 30px;
+            line-height: 22.5px; /* 136.364% */
+            letter-spacing: 0.825px;
           }
         }
         &-b {
           display: flex;
           justify-content: space-between;
-          align-items: center;
+          align-items: flex-end;
           &-l {
             .context-text {
               p {
                 color: var(--Brand-2, #59ba68);
                 font-family: "Noto Sans HK";
-                font-size: 18px;
+                font-size: 13.5px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 24px;
+                line-height: 18px; /* 133.333% */
                 text-transform: uppercase;
               }
             }
@@ -701,33 +716,35 @@ const handleIcon = (str: any, idx: any) => {
               p {
                 color: var(--Brand-2, #59ba68);
                 font-family: "Noto Sans HK";
-                font-size: 22px;
+                font-size: 16.5px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 30px;
-                text-transform: uppercase;
+                line-height: 22.5px; /* 136.364% */
+                letter-spacing: 0.825px;
               }
             }
             .context-price {
               p {
                 color: var(--Brand-2, #59ba68);
                 font-family: "Noto Sans HK";
-                font-size: 18px;
+                font-size: 25.5px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 24px;
+                line-height: 30px;
                 text-transform: uppercase;
                 span {
-                  font-size: 34px;
-                  line-height: 40px;
+                  font-size: 13.5px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 18px;
                 }
               }
             }
           }
           &-r {
             margin-right: 20px;
-            width: 38px;
-            height: 38px;
+            width: 28px;
+            height: 28px;
             position: relative;
             & > span {
               position: relative;
@@ -776,10 +793,10 @@ const handleIcon = (str: any, idx: any) => {
 .newDiscounts {
   background: #eafbff;
   padding-bottom: 55px;
-  margin-top: 55px;
+  margin-top: 40px;
   &-in {
     width: 100%;
-    max-width: 1280px;
+    max-width: 960px;
     margin: 0 auto;
     &-t {
       display: flex;
@@ -788,13 +805,19 @@ const handleIcon = (str: any, idx: any) => {
         & > span {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 2.25px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 1.688px;
           &:nth-of-type(2) {
             color: var(--Sales, #db4444);
+          }
+        }
+        &:nth-of-type(1) {
+          width: 89px;
+          & > img {
+            width: 100%;
           }
         }
         &:nth-of-type(2) {
@@ -803,19 +826,23 @@ const handleIcon = (str: any, idx: any) => {
         &:nth-of-type(3) {
           margin-top: 40px;
           margin-left: 20px;
+          width: 46px;
+          & > img {
+            width: 100%;
+          }
         }
       }
     }
     &-b {
       display: grid;
-      margin-top: 40px;
-      gap: 40px;
+      margin-top: 30px;
+      gap: 30px;
       grid-template-columns: repeat(4, 1fr);
       .list-in {
-        max-width: 290px;
-        border-radius: 20px;
+        max-width: 218px;
+        border-radius: 15px;
         background: #fff;
-        padding: 20px;
+        padding: 20px 16px;
         box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
         .image {
           width: 100%;
@@ -826,12 +853,12 @@ const handleIcon = (str: any, idx: any) => {
         h3 {
           color: #60605f;
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 13.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 25px; /* 138.889% */
-          letter-spacing: 0.9px;
-          margin-top: 10px;
+          line-height: 18.75px; /* 138.889% */
+          letter-spacing: 0.675px;
+          margin-top: 8px;
           display: -webkit-box;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
@@ -842,25 +869,21 @@ const handleIcon = (str: any, idx: any) => {
           margin-top: 14px;
           display: flex;
           justify-content: space-between;
+          align-items: flex-end;
           &-l {
             color: var(--Sales, #db4444);
             font-family: "Noto Sans HK";
-            font-size: 11.282px;
+            font-size: 8.462px;
             font-style: normal;
             font-weight: 700;
-            line-height: 28.021px;
+            line-height: 21.016px;
             span {
-              color: var(--Sales, #db4444);
-              font-family: "Noto Sans HK";
-              font-size: 25.219px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 28.021px;
+              font-size: 18.914px;
             }
           }
           &-r {
             display: flex;
-            padding: 7px 10px;
+            padding: 7px;
             position: relative;
             align-items: center;
             svg {
@@ -873,11 +896,11 @@ const handleIcon = (str: any, idx: any) => {
               z-index: 2;
               color: #fff;
               font-family: "Noto Sans HK";
-              font-size: 14.506px;
+              font-size: 10.879px;
               font-style: normal;
               font-weight: 500;
               line-height: 0px; /* 0% */
-              letter-spacing: 1.451px;
+              letter-spacing: 1.088px;
             }
             &::before {
               content: "";
@@ -924,38 +947,39 @@ const handleIcon = (str: any, idx: any) => {
 }
 .witness {
   width: 100%;
-  margin: 44px auto 0;
+  margin: 33px auto 0;
   display: flex;
   flex-direction: column;
   align-items: center;
   &-t {
     width: 100%;
-    max-width: 1280px;
+    max-width: 960px;
     color: var(--Brand-Color, #00a6ce);
     font-family: "Noto Sans HK";
-    font-size: 45px;
+    font-size: 33.75px;
     font-style: normal;
     font-weight: 700;
-    line-height: 60px; /* 133.333% */
-    letter-spacing: 2.25px;
+    line-height: 45px; /* 133.333% */
+    letter-spacing: 1.688px;
     span {
       color: var(--Brand-2, #59ba68);
     }
   }
   .section1 {
-    max-width: 1300px;
+    max-width: 960px;
     margin-top: 20px;
     .witnessSwiper {
       padding: 20px 10px;
       &-slide {
-        padding: 20px 0;
+        padding: 20px 0 0 0;
         .content {
-          padding: 20px;
+          padding: 20px 15px 18px 8px;
           background: #fff;
-          border-radius: 20px;
+          border-radius: 15px;
           box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-          height: 370px;
+          height: 325px;
           display: inline-block;
+          box-sizing: border-box;
           .image {
             width: 100%;
             overflow: hidden;
@@ -972,20 +996,20 @@ const handleIcon = (str: any, idx: any) => {
             h3 {
               color: var(--Deep-Blue, #3e5270);
               font-family: "Noto Sans HK";
-              font-size: 20px;
+              font-size: 15px;
               font-style: normal;
               font-weight: 500;
-              line-height: 25px; /* 125% */
+              line-height: 18.75px; /* 125% */
               text-transform: uppercase;
             }
             p {
               color: var(--Deep-Blue, #3e5270);
               text-align: center;
               font-family: "Noto Sans HK";
-              font-size: 20px;
+              font-size: 15px;
               font-style: normal;
               font-weight: 500;
-              line-height: 25px;
+              line-height: 18.75px; /* 125% */
               text-transform: uppercase;
             }
           }
@@ -997,11 +1021,11 @@ const handleIcon = (str: any, idx: any) => {
               p {
                 color: #8d8d8d;
                 font-family: "Noto Sans HK";
-                font-size: 18px;
+                font-size: 13.5px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 25px;
-                letter-spacing: 0.9px;
+                line-height: 18.75px; /* 138.889% */
+                letter-spacing: 0.675px;
                 display: -webkit-box;
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
@@ -1023,9 +1047,9 @@ const handleIcon = (str: any, idx: any) => {
               position: absolute;
               top: 0;
               right: 0;
-              transform: translate(40%, -15%);
-              width: 50px;
-              height: 50px;
+              transform: translate(35%, 0%);
+              width: 36px;
+              height: 36px;
               border-radius: 50%;
               background: url(https://static.cmereye.com/imgs/2024/05/42273ef87c224cab.png)
                 no-repeat;
@@ -1045,13 +1069,13 @@ const handleIcon = (str: any, idx: any) => {
   }
   .section2 {
     width: 100%;
-    max-width: 1280px;
-    margin-top: 60px;
+    max-width: 960px;
+    margin-top: 65px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
+    gap: 30px;
     .list-in {
-      padding: 0 15px 20px;
+      padding: 0 10px 15px;
       position: relative;
       &-t {
         display: flex;
@@ -1059,8 +1083,10 @@ const handleIcon = (str: any, idx: any) => {
         position: relative;
         z-index: 1;
         .image {
+          width: 120px;
           padding: 0 10px;
           img {
+            width: 100%;
             border-radius: 50%;
           }
         }
@@ -1068,45 +1094,45 @@ const handleIcon = (str: any, idx: any) => {
           h3 {
             color: var(--Grey-Deep, #4d4d4d);
             font-family: "Noto Sans HK";
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 28px; /* 127.273% */
-            letter-spacing: 1.1px;
+            line-height: 21px; /* 127.273% */
+            letter-spacing: 0.825px;
             margin-bottom: 5px;
           }
           h4 {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 20px;
+            font-size: 15px;
             font-style: normal;
             font-weight: 700;
-            line-height: 28px; /* 140% */
-            letter-spacing: 1px;
+            line-height: 21px; /* 140% */
+            letter-spacing: 0.75px;
           }
           p {
             color: var(--Basic-2, #59ba68);
             font-family: "Noto Sans HK";
-            font-size: 18px;
+            font-size: 13.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 25px; /* 138.889% */
-            letter-spacing: 0.9px;
+            line-height: 18.75px; /* 138.889% */
+            letter-spacing: 0.675px;
             margin-bottom: 10px;
           }
         }
       }
       &-b {
-        margin-top: 15px;
+        margin-top: 10px;
         position: relative;
         z-index: 1;
         p {
           color: var(--Grey-Deep, #4d4d4d);
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 13.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 28px; /* 155.556% */
+          line-height: 21px; /* 155.556% */
           text-transform: uppercase;
         }
       }

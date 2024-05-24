@@ -114,6 +114,7 @@ const toForm = () => {
     position: fixed;
     bottom: 180px;
     right: 370px;
+    z-index: 20;
   }
 }
 @media screen and (max-width: 767px) {

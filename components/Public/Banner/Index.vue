@@ -104,6 +104,7 @@ const props = defineProps({
       position: fixed;
       top: 8.183vw;
       right: 0;
+      z-index: 99;
       .banner-template-btn {
         position: absolute;
         top: 0;
@@ -204,6 +205,7 @@ const props = defineProps({
       position: fixed;
       top: 136px;
       right: 0;
+      z-index: 99;
       .banner-template-btn {
         position: absolute;
         top: 0;
