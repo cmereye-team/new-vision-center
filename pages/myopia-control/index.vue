@@ -3826,9 +3826,9 @@ onMounted(() => {
     margin-bottom: 50px;
     background: var(--Skin, #eafbff);
     & > div {
-      max-width: 1284px;
+      max-width: 960px;
       margin: 0 auto;
-      padding-top: 100px;
+      padding-top: 75px;
       padding-bottom: 55px;
       & > div:nth-child(1) {
         position: relative;
@@ -3836,9 +3836,13 @@ onMounted(() => {
         margin: 0 auto;
         & > div:nth-child(1) {
           position: absolute;
-          top: -62px;
-          left: -68px;
+          top: -27px;
+          left: -40px;
           z-index: 2;
+          & > svg {
+            width: 74.149px;
+            height: 52.25px;
+          }
         }
         & > div:nth-child(2) {
           position: relative;
@@ -3846,11 +3850,11 @@ onMounted(() => {
           color: var(--Deep-Blue, #3e5270);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 2.25px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 1.688px;
           & > span {
             color: #59ba68;
             position: relative;
@@ -3868,7 +3872,7 @@ onMounted(() => {
         }
       }
       & > div:nth-child(2) {
-        margin-top: 65px;
+        margin-top: 55px;
         display: flex;
         & > div {
           flex: 1.2;
@@ -3879,7 +3883,7 @@ onMounted(() => {
             align-items: center;
             justify-content: center;
             font-family: Inter !important;
-            font-size: 24px;
+            font-size: 18px;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -3887,36 +3891,42 @@ onMounted(() => {
           & > div:nth-child(1) {
             height: 115px;
             font-weight: 600;
-            font-size: 28px;
+            font-size: 21px;
           }
           & > div:nth-child(2) {
-            height: 115px;
+            height: 85px;
           }
           & > div:nth-child(3) {
-            height: 120px;
+            height: 85px;
           }
           & > div:nth-child(4) {
-            height: 155px;
+            height: 120px;
           }
           & > div:nth-child(5) {
-            height: 125px;
+            height: 95px;
             display: flex;
             flex-direction: row;
             align-items: center;
             gap: 12px;
+            & > span:nth-child(1) {
+              & > svg {
+                width: 56.784px;
+                height: 57.962px;
+              }
+            }
           }
           & > div:nth-child(6) {
-            height: 115px;
+            height: 85px;
           }
           & > div:nth-child(7) {
-            height: 140px;
+            height: 105px;
             & > span:nth-child(2) {
               margin-top: 5px;
               color: var(--White, #fff);
               font-family: Inter;
-              font-size: 40px;
+              font-size: 24px;
               font-style: normal;
-              font-weight: 900;
+              font-weight: 700;
               line-height: normal;
             }
           }
@@ -3937,15 +3947,15 @@ onMounted(() => {
             color: #fff;
             color: var(--White, #fff);
             font-family: Inter;
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
-            font-weight: 400;
+            font-weight: 600;
             line-height: normal;
           }
           & > :last-child {
             & > span {
-              font-size: 30px !important;
-              font-weight: 600 !important;
+              font-size: 22.5px !important;
+              font-weight: 400 !important;
             }
           }
         }
@@ -3957,6 +3967,10 @@ onMounted(() => {
             background: #e1f3f7;
             border-top: 2.26px solid #21aaca;
             border-bottom: 2.26px solid #21aaca;
+            & > svg {
+              width: 86.295px;
+              height: 57.75px;
+            }
           }
           & > :last-child {
             background: #5f85b1;
@@ -3974,6 +3988,10 @@ onMounted(() => {
             background: #cef2d4;
             border-top: 2.26px solid #59ba68;
             border-bottom: 2.26px solid #59ba68;
+            & > svg {
+              width: 95.25px;
+              height: 73.5px;
+            }
           }
           & > :last-child {
             background: #63aa6d;
@@ -3991,6 +4009,10 @@ onMounted(() => {
             background: #f4e1ff;
             border-top: 2.26px solid #85439b;
             border-bottom: 2.26px solid #85439b;
+            & > svg {
+              width: 100.769px;
+              height: 57.108px;
+            }
           }
           & > :last-child {
             color: #fff;
@@ -4008,6 +4030,10 @@ onMounted(() => {
             background: #d2f0ff;
             border-top: 2.26px solid #3993d3;
             border-bottom: 2.26px solid #3993d3;
+            & > svg {
+              width: 41.25px;
+              height: 89.014px;
+            }
           }
           & > :last-child {
             background: #3475a4;
@@ -4025,10 +4051,14 @@ onMounted(() => {
             background: #fbe9db;
             border-top: 2.26px solid #f5984b;
             border-bottom: 2.26px solid #f5984b;
+            & > svg {
+              width: 86.295px;
+              height: 57.75px;
+            }
           }
           & > :last-child {
             background: #fd2020;
-            font-size: 32px;
+            font-size: 24px;
             font-style: normal;
             font-weight: 700;
             color: #fff;
@@ -4039,8 +4069,8 @@ onMounted(() => {
             background: url("https://static.cmereye.com/imgs/2024/05/d17626efddbdd17f.png")
               no-repeat;
             background-size: 100% 100%;
-            width: 178px;
-            height: 42px;
+            width: 133px;
+            height: 32px;
             position: absolute;
             top: 10px;
             left: 50%;
@@ -4052,153 +4082,234 @@ onMounted(() => {
         }
       }
       & > div:nth-child(3) {
-        margin-top: 26px;
+        margin-top: 20px;
         color: #60605f;
         font-family: Inter;
-        font-size: 18px;
+        font-size: 13.5px;
         font-style: normal;
         font-weight: 400;
-        line-height: 30px; /* 166.667% */
+        line-height: 22.5px;
         text-align: right;
       }
     }
   }
   .myopia-control-intended {
-    max-width: 1284px;
-    margin: 0 auto 90px;
+    max-width: 960px;
+    margin: 0 auto 60px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: Inter;
-      font-size: 40px;
+      font-size: 30px;
       font-style: normal;
       font-weight: 600;
-      line-height: 30px; /* 75% */
+      line-height: 22.5px; /* 75% */
       text-transform: uppercase;
     }
     & > div:nth-child(2) {
-      margin: 50px auto 60px;
+      margin: 35px auto 45px;
       display: flex;
-      gap: 0 26px;
+      gap: 0 20px;
       justify-content: center;
       & > div {
         display: flex;
         align-items: center;
         justify-content: center;
-
         background: #eafbff;
-        min-width: 410px;
-        min-height: 189px;
+        min-width: 307.5px;
+        min-height: 141.75px;
         border-radius: 25px;
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         & > div:nth-child(2) {
-          margin-left: 50px;
+          margin-left: 35px;
           display: flex;
           flex-direction: column;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 103.998px;
+            height: 61.044px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 73.5px;
+            height: 72.416px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 84.748px;
+            height: 78.024px;
+          }
         }
       }
     }
     & > div:nth-child(3) {
-      border-radius: 37px;
+      border-radius: 27px;
       background: var(--Skin, #eafbff);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
       box-sizing: border-box;
-      padding: 48px 34px 38px;
+      padding: 32px 30px 28px;
       display: flex;
       & > div:nth-child(1) {
-        flex: 1;
+        flex: 0.8;
         display: flex;
         flex-direction: column;
-        min-width: 219px;
+        min-width: 189px;
         border-right: 5px solid #00a6ce;
         & > div:nth-child(1) {
           background: url("https://static.cmereye.com/imgs/2024/05/48e196b522cb6586.png")
             no-repeat;
           background-size: 100% 100%;
-          width: 131px;
-          height: 68px;
+          width: 98px;
+          height: 51px;
           color: var(--White, #fff);
           font-family: "Noto Sans HK";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 5.4px;
-          padding-left: 14px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 4.05px;
+          padding-left: 12px;
         }
         & > div:nth-child(2) {
           margin-top: 5px;
           margin-bottom: 10px;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 45px; /* 150% */
-          letter-spacing: 1.5px;
+          line-height: 33.75px; /* 150% */
+          letter-spacing: 1.125px;
         }
         & > div:nth-child(3) {
           color: #f04e4e;
           font-family: "Noto Sans HK";
-          font-size: 60px;
+          font-size: 45px;
           font-style: normal;
           font-weight: 700;
           line-height: 60px;
           & > span:nth-child(1) {
-            font-size: 45px;
+            font-size: 33.75px;
           }
         }
       }
       & > div:nth-child(2) {
-        flex: 9;
+        flex: 9.2;
         display: flex;
         align-items: center;
-        gap: 0 55px;
-        margin-left: 60px;
+        gap: 0 35px;
+        margin-left: 45px;
         & > div {
           display: flex;
           flex-direction: column;
           align-items: center;
+          & > div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
           & > div:nth-child(2) {
-            margin-top: 25px;
+            margin-top: 15px;
             display: flex;
             flex-direction: column;
             text-align: center;
             color: var(--Grey-Deep, #4d4d4d);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 30px; /* 136.364% */
-            letter-spacing: 1.1px;
+            line-height: 22.5px; /* 136.364% */
+            letter-spacing: 0.825px;
+          }
+        }
+        & > div:nth-child(1) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 74.333px;
+              height: 52.275px;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 58.425px;
+              height: 51px;
+            }
+          }
+        }
+        & > div:nth-child(3) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 59.07px;
+              height: 60.698px;
+            }
+          }
+        }
+        & > div:nth-child(4) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 52.5px;
+              height: 52.5px;
+            }
+          }
+        }
+        & > div:nth-child(5) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 63.75px;
+              height: 57.888px;
+            }
+          }
+        }
+        & > div:nth-child(6) {
+          & > div:nth-child(1) {
+            & > svg {
+              width: 67.5px;
+              height: 41.518px;
+            }
           }
         }
       }
     }
   }
   .myopia-control-fake-text {
-    max-width: 1284px;
+    max-width: 960px;
     margin: 0 auto;
-    padding-top: 15px;
+    padding-top: 36px;
     & > div:nth-child(1) {
       margin-left: 550px;
       color: #60605f;
       font-family: "Noto Sans HK";
-      font-size: 45px;
+      font-size: 33.75px;
       font-style: normal;
       font-weight: 700;
-      line-height: 60px; /* 133.333% */
-      letter-spacing: 2.25px;
+      line-height: 45px; /* 133.333% */
+      letter-spacing: 1.688px;
       padding-bottom: 16px;
       width: fit-content;
       position: relative;
-      margin-bottom: 25px;
+      margin-bottom: 15px;
     }
     & > div:nth-child(1)::after {
       content: "";
@@ -4212,14 +4323,14 @@ onMounted(() => {
       background: #00a6ce;
     }
     & > div:nth-child(2) {
-      padding-left: 550px;
+      padding-left: 421px;
       color: #60605f;
       text-align: justify;
       font-family: "Noto Sans CJK TC";
-      font-size: 24px;
+      font-size: 18px;
       font-style: normal;
       font-weight: 500;
-      line-height: 50px; /* 208.333% */
+      line-height: 37.5px;
     }
     & > a {
       position: relative;
@@ -4227,8 +4338,8 @@ onMounted(() => {
       width: fit-content;
       justify-content: center;
       align-items: center;
-      padding: 12px 16px;
-      margin: 65px auto 0;
+      padding: 10px 15px;
+      margin: 45px auto 0;
       margin-right: 0;
       & > span {
         display: flex;
@@ -4239,11 +4350,11 @@ onMounted(() => {
         color: var(--White, #fff);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 18px;
+        font-size: 13.5px;
         font-style: normal;
         font-weight: 500;
-        line-height: 25px; /* 138.889% */
-        letter-spacing: 0.9px;
+        line-height: 18.75px; /* 138.889% */
+        letter-spacing: 0.675px;
       }
       & > span:nth-child(2) {
         margin: 0 10px;
@@ -4277,7 +4388,7 @@ onMounted(() => {
     }
   }
   .myopia-control-fake {
-    margin: 70px auto;
+    margin: 55px auto;
     background: #f5fafd;
     & > div {
       background: url("https://static.cmereye.com/imgs/2024/05/3d9c3d95acadcbfe.png")
@@ -4285,22 +4396,21 @@ onMounted(() => {
       background-size: 100% 100%;
       position: relative;
       z-index: 2;
-      padding: 10px 0;
-      max-width: 1920px;
+      max-width: 1450px;
       margin: 0 auto;
       height: 100%;
       box-sizing: border-box;
       border-radius: 30px;
       overflow: hidden;
     }
-    height: 588px;
+    height: 440px;
   }
   .myopia-control-content {
-    max-width: 1284px;
-    background: url("https://static.cmereye.com/imgs/2024/05/af5a8b23f4ac52eb.jpg")
+    max-width: 960px;
+    background: url("https://static.cmereye.com/imgs/2024/05/b02bf96a87535a5f.png")
       no-repeat;
     background-size: 100% 100%;
-    border-radius: 20px;
+    border-radius: 15px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
     display: flex;
     & > div:nth-child(1) {
@@ -4308,25 +4418,25 @@ onMounted(() => {
     }
     & > div:nth-child(2) {
       & > div:nth-child(1) {
-        padding-top: 105px;
-        padding-right: 80px;
+        padding-top: 78px;
+        padding-right: 100px;
         color: var(--White, #fff);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 30px;
+        font-size: 22.5px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 200% */
-        letter-spacing: 1.5px;
+        line-height: 45px; /* 200% */
+        letter-spacing: 1.125px;
         flex: 2.5;
         span {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 40px;
+          font-size: 30px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px;
-          letter-spacing: 2px;
+          line-height: 45px;
+          letter-spacing: 1.5px;
         }
       }
       position: relative;
@@ -4343,11 +4453,11 @@ onMounted(() => {
             color: var(--White, #fff);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 18px;
+            font-size: 13.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 25px; /* 138.889% */
-            letter-spacing: 0.9px;
+            line-height: 18.75px; /* 138.889% */
+            letter-spacing: 0.675px;
             margin-right: 5px;
           }
           & > div:nth-child(2) {
@@ -4356,8 +4466,12 @@ onMounted(() => {
             display: flex;
             justify-content: center;
             align-items: center;
+            & > svg {
+              width: 13.5px;
+              height: 24px;
+            }
           }
-          padding: 20px 24px 20px 30px;
+          padding: 10px 15px;
           border-radius: 100px;
         }
         & > a:nth-child(1) {
@@ -4421,28 +4535,9 @@ onMounted(() => {
         }
       }
     }
-    & > div:nth-child(2)::before {
-      content: "";
-      position: absolute;
-      top: 20px;
-      left: -110px;
-      background: url("https://static.cmereye.com/imgs/2024/05/302a2af839ae2218.png")
-        no-repeat;
-      width: 129px;
-      height: 106px;
-    }
-    & > div:nth-child(2)::after {
-      content: "";
-      position: absolute;
-      right: 10px;
-      bottom: 8px;
-      background: url("https://static.cmereye.com/imgs/2024/05/5df1cc8ec2f33a7e.png")
-        no-repeat;
-      width: 129px;
-      height: 106px;
-    }
+
     margin: 0 auto;
-    height: 492px;
+    height: 370px;
   }
   .myopia-control-significance {
     max-width: 960px;
