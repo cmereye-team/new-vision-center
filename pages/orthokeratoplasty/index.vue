@@ -3126,9 +3126,6 @@ const okQuestionList = [
           :listQuestion="okQuestionList"
         />
       </div>
-      <div>
-        <PublicForm />
-      </div>
     </div>
   </div>
 </template>

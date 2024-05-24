@@ -1496,9 +1496,6 @@ const miSightQuestionList = [
           :testWidth="true"
         />
       </div>
-      <div class="form">
-        <PublicForm />
-      </div>
     </div>
   </div>
 </template>
@@ -2250,9 +2247,6 @@ const miSightQuestionList = [
     & > div {
       padding: 0 25px;
     }
-  }
-  .form {
-    padding: 0 !important;
   }
   .misight-step {
     padding: 0 !important;

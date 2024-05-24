@@ -21,7 +21,6 @@ const bannerImg = {
     <PublicNavbar :link="'/center-profile'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
-      <PublicForm />
     </div>
   </div>
 </template>

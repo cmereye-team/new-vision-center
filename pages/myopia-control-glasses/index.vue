@@ -1148,9 +1148,6 @@ const bannerImg = {
           </div>
         </div>
       </div>
-      <div class="myopia-container-form">
-        <PublicForm />
-      </div>
     </div>
   </div>
 </template>

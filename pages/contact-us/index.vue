@@ -21,7 +21,6 @@ const bannerImg = {
     <div class="contact-us-content">
       <PublicNavbar :link="'/center-profile'" :name="'聯絡我們'" />
       <ContactUsMapList />
-      <PublicForm />
     </div>
   </div>
 </template>

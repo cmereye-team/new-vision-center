@@ -314,10 +314,6 @@ const activeName1 = ref("1");
           <span>更新時間︰</span><span>{{ addTime.split(" ")[0] }}</span>
         </p>
       </div>
-
-      <div class="video-information-box">
-        <PublicForm />
-      </div>
     </div>
   </div>
 </template>
@@ -429,10 +425,6 @@ a {
         color: var(--Brand-Color, #60605f);
       }
     }
-  }
-  .video-information-box {
-    max-width: 1300px;
-    margin: 48px auto 128px auto;
   }
 }
 @media screen and (max-width: 767px) {

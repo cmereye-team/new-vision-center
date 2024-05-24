@@ -21,7 +21,6 @@ const bannerImg = {
     <PublicNavbar :link="'/center-profile'" :name="'最新資訊'" />
     <div class="video-information-box">
       <LatestNews />
-      <PublicForm />
     </div>
   </div>
 </template>

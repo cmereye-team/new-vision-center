@@ -23,7 +23,6 @@ const bannerImg = {
     <CenterProfileContent />
     <div class="profile-content-max-width">
       <CenterProfileMission />
-      <PublicForm />
     </div>
   </div>
 </template>

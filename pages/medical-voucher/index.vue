@@ -20,14 +20,14 @@ const bannerImg = {
     </PublicBanner>
     <PublicNavbar :link="'/medical-voucher'" :name="'長者醫療券計劃'" />
     <MedicalVoucher />
-    <div class="video-information-box">
-      <PublicForm />
-    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .video-information{
+    margin-bottom: 90px;
+  }
   .medical-voucher-title {
     // background: url("https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png")
     //   no-repeat;
@@ -47,10 +47,6 @@ const bannerImg = {
       line-height: normal;
       letter-spacing: 12px;
     }
-  }
-  .video-information-box {
-    max-width: 1300px;
-    margin: 48px auto 128px auto;
   }
 }
 @media screen and (max-width: 767px) {
@@ -74,9 +70,6 @@ const bannerImg = {
       line-height: normal;
       letter-spacing: 5.6px;
     }
-  }
-  .video-information-box{
-    padding: 0 24px;
   }
 }
 </style>

@@ -21,7 +21,6 @@ const bannerImg = {
     <PublicNavbar :link="'/fee'" :name="'收費詳情'" />
     <div class="fee-box">
       <Fee />
-      <PublicForm />
     </div>
   </div>
 </template>

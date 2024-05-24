@@ -3812,9 +3812,6 @@ onMounted(() => {
           </div>
         </div>
       </div>
-      <div>
-        <PublicForm />
-      </div>
     </div>
   </div>
 </template>

@@ -19,7 +19,7 @@ useHead({
 });
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/13d1975ec227a911.webp",
-  mb: "https://static.cmereye.com/imgs/2024/05/7723d746a83f1695.webp",
+  mobile: "https://static.cmereye.com/imgs/2024/05/7723d746a83f1695.webp",
 };
 const services = {
   title: "專業視光服務",
@@ -599,9 +599,6 @@ const handleIcon = (str: any, idx: any) => {
         </div>
       </section>
     </div>
-    <div class="formBox">
-      <PublicForm />
-    </div>
   </div>
 </template>
 
@@ -947,7 +944,7 @@ const handleIcon = (str: any, idx: any) => {
 }
 .witness {
   width: 100%;
-  margin: 33px auto 0;
+  margin: 33px auto 100px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1150,10 +1147,7 @@ const handleIcon = (str: any, idx: any) => {
     }
   }
 }
-.formBox {
-  margin-top: 100px;
-  margin-bottom: 90px;
-}
+
 @media (min-width: 768px) and (max-width: 1452px) {
 }
 @media screen and (max-width: 768px) {
@@ -1321,7 +1315,7 @@ const handleIcon = (str: any, idx: any) => {
   .witness {
     padding: 0 25px;
     box-sizing: border-box;
-    margin: 18px auto 0;
+    margin: 18px auto 32px;
     overflow: hidden;
     &-t {
       font-size: 24px;
@@ -1448,10 +1442,6 @@ const handleIcon = (str: any, idx: any) => {
         }
       }
     }
-  }
-  .formBox {
-    margin-top: 32px;
-    margin-bottom: 48px;
   }
 }
 </style>

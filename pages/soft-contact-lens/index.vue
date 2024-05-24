@@ -1,30 +1,28 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "XXXX - 希瑪眼科視光中心",
+  title: "軟性隱形眼鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: 'https://static.cmereye.com/imgs/2024/04/5ae163616b5be08e.png',
-  mobile: 'https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png'
-}
+  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
+  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+};
 </script>
 
 <template>
-  <div class="video-information">
+  <div class="soft-contact-lens">
     <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
-        <div class="profile-title">
-          <span>XXXXX</span>
-        </div>
+        <div class="profile-title"></div>
       </template>
     </PublicBanner>
     <PublicNavbar
-      :name="'有三级菜单的二级'"
+      :name="'成人視力服務'"
       :isInsidePage="true"
-      :insidePageTitle="'当前页面title'"
+      :insidePageTitle="'軟性隱形眼鏡'"
     />
-    <div class="xxxx-box">
-      
+    <div class="soft-contact">
+
     </div>
   </div>
 </template>
@@ -33,7 +31,7 @@ const bannerImg = {
 @media screen and (min-width: 768px) {
   .profile-title {
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
