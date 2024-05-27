@@ -1,14 +1,17 @@
 <script lang="ts" setup>
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
-const w = ref(0)
+const w = ref(0);
 
 onMounted(() => {
+  let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
     w.value = width;
   });
+  isPc.value = widthState;
+  w.value = width;
 });
 
 const mobileMenu = ref(false);
@@ -177,19 +180,19 @@ const getSonValue = () => {
     background: #00a6ce;
   }
 }
-@media screen and (min-width: 768px) and (max-width: 1620px){
+@media screen and (min-width: 768px) and (max-width: 1620px) {
   .public-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 1.67vw 2.08vw 2.08vw;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: #fff;
-  box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
-}
+    display: flex;
+    justify-content: space-between;
+    padding: 1.67vw 2.08vw 2.08vw;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  }
 }
 @media screen and (max-width: 768px) {
   .public-header {
