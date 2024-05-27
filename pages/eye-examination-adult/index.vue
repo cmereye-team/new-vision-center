@@ -6,6 +6,25 @@ const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/0b680ddef00eb883.png",
   mobile: "https://static.cmereye.com/imgs/2024/05/53a82a8280acde20.png",
 };
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+
+onMounted(() => {
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
+});
+const isYouth = ref(true);
+const showAgeStage = (type: any) => {
+  if (type == "adult") {
+    isYouth.value = false;
+  } else {
+    isYouth.value = true;
+  }
+};
 </script>
 
 <template>
@@ -80,7 +99,7 @@ const bannerImg = {
               </svg>
             </a>
           </div>
-          <div>
+          <div v-if="isPc">
             <div>
               <div>
                 <img
@@ -103,6 +122,44 @@ const bannerImg = {
                 />
               </div>
               <div>
+                <div>
+                  <span>55歲或以上</span><span>定期檢查，及早治療</span>
+                </div>
+                <div>
+                  隨著年齡增長，患上與年齡相關眼疾的機會率也會增加，如白內障、老年黃斑病變等，定期檢查視力有助及早發現病情，並儘早作出預防及治療。
+                </div>
+              </div>
+            </div>
+          </div>
+          <div v-else>
+            <div>
+              <div
+                @click="showAgeStage('youth')"
+                :class="[isYouth == true ? 'show-active' : '']"
+              >
+                <img
+                  src="https://static.cmereye.com/imgs/2024/05/41f7415056968063.png"
+                  alt="18-55歲"
+                />
+              </div>
+              <div
+                @click="showAgeStage('adult')"
+                :class="[isYouth == false ? 'show-active' : '']"
+              >
+                <img
+                  src="https://static.cmereye.com/imgs/2024/05/6e9ee5ac6bc38a28.png"
+                  alt="55歲或以上"
+                />
+              </div>
+            </div>
+            <div>
+              <div v-if="isYouth">
+                <div><span>18-55歲</span><span>預防及保護雙眼</span></div>
+                <div>
+                  眼睛毛病不只是老年人的事，近來亦有年輕化趨勢。都市人無論工作或娛樂也離不開電子產品，令一些眼睛問題越來越年輕化，如老花、白內障、乾眼症等。因此，這時期的眼睛檢查，主要針對有眼部疲勞、疾病遺傳及有其他高危因素的人，包括經常感到眼部不適的上班族、頻繁閱讀或使用電子產品的人、家族中有青光眼、視網膜色素變性、視網膜脫離等疾病史等人士，也建議定期檢查。
+                </div>
+              </div>
+              <div v-else>
                 <div>
                   <span>55歲或以上</span><span>定期檢查，及早治療</span>
                 </div>
@@ -2813,11 +2870,11 @@ const bannerImg = {
           }
           box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
           padding: 8px 20px;
-          background: #00A6CE;
+          background: #00a6ce;
           border-radius: 25px;
         }
-        &>a:nth-child(2){
-          background: #6F5EA0;
+        & > a:nth-child(2) {
+          background: #6f5ea0;
         }
       }
       & > div:nth-child(2) {
@@ -3337,6 +3394,135 @@ const bannerImg = {
         }
       }
     }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        margin-top: 28px;
+        padding: 0 5px;
+        & > p {
+          display: inline;
+        }
+        color: #60605f;
+        font-family: "Noto Sans CJK TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px; /* 142.857% */
+      }
+      & > div:nth-child(2) {
+        color: var(--Brand-Color, #00a6ce);
+        text-align: center;
+        font-family: "Noto Sans CJK TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 20px; /* 142.857% */
+        padding: 0 25px;
+        margin-top: 15px;
+      }
+    }
+  }
+  .adult-box {
+    margin: 25px auto 40px;
+    padding: 0 25px;
+  }
+  .adult-status {
+    & > div:nth-child(1) {
+      margin-bottom: 35px;
+      & > div:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        gap: 0 5px;
+        & > a {
+          display: flex;
+          align-items: center;
+          & > span:nth-child(2) {
+            margin: 0 5px;
+            color: #fff;
+            text-align: center;
+            font-family: Inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            text-wrap: nowrap;
+          }
+          box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
+          padding: 6px 10px;
+          background: #00a6ce;
+          border-radius: 20px;
+        }
+        & > a:nth-child(2) {
+          background: #6f5ea0;
+        }
+      }
+      & > div:nth-child(2) {
+        margin-top: 35px;
+        & > div:nth-child(1) {
+          display: flex;
+          justify-content: center;
+          gap: 0 20px;
+          & > div {
+            border-radius: 8.017px;
+            overflow: hidden;
+            width: 41.025vw;
+            height: 41.025vw;
+            border: 3px solid #fff;
+            & > img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          margin-top: 24px;
+          & > div {
+            & > div:nth-child(1) {
+              display: flex;
+              flex-direction: column;
+              color: var(--Deep-Blue, #3e5270);
+              text-align: center;
+              font-family: "Noto Sans HK";
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 25px; /* 125% */
+              text-transform: uppercase;
+            }
+            & > div:nth-child(2) {
+              margin-top: 10px;
+              color: var(--Grey, #4d4d4d);
+              font-family: "Noto Sans HK";
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 23px; /* 164.286% */
+            }
+          }
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      margin-top: 15px;
+      color: #60605f;
+      text-align: center;
+      font-family: "Noto Sans HK";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23px; /* 164.286% */
+    }
+  }
+  .show-active {
+    border-radius: 8.017px;
+    width: 41.025vw;
+    height: 41.025vw;
+    overflow: hidden;
+    border: 3px solid var(--Brand-Color, #00a6ce) !important;
+    box-shadow: 0px 2.405px 2.405px 0px rgba(0, 0, 0, 0.25);
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .glasses-step {
     margin-top: 40px;
@@ -3354,10 +3540,10 @@ const bannerImg = {
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/29e22fabbebfa112.png")
+        background: url("https://static.cmereye.com/imgs/2024/05/650d57a0951b6af8.png")
           no-repeat;
         background-size: 100% 100%;
-        width: 145px;
+        width: 64px;
         height: 38px;
         display: inline-block;
         position: absolute;
@@ -3368,7 +3554,7 @@ const bannerImg = {
       & > div:nth-child(1)::before {
         content: "成 人";
         position: absolute;
-        left: 5px;
+        left: 3px;
         top: 0;
         z-index: 3;
         color: var(--White, #fff);
@@ -3377,7 +3563,7 @@ const bannerImg = {
         font-style: normal;
         font-weight: 700;
         line-height: 33.529px; /* 133.333% */
-        letter-spacing: 1.815px;
+        letter-spacing: 0.815px;
       }
       & > div:nth-child(2) {
         margin-top: 3px;
@@ -3432,8 +3618,8 @@ const bannerImg = {
     & > div:nth-child(2) {
       margin-top: 25px;
       display: grid;
-      grid-template-columns: auto auto;
-      gap: 25px 35px;
+      grid-template-columns: auto auto auto;
+      gap: 15px 35px;
       & > div {
         display: flex;
         flex-direction: column;
@@ -3445,6 +3631,7 @@ const bannerImg = {
           align-items: center;
         }
         & > div:nth-child(2) {
+          margin-top: 10px;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -3455,7 +3642,6 @@ const bannerImg = {
           font-style: normal;
           font-weight: 400;
           line-height: 16px; /* 114.286% */
-          margin-top: 5px;
         }
       }
       & > div:nth-child(1) {
@@ -3469,32 +3655,32 @@ const bannerImg = {
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 52px;
-            height: 43.632px;
+            width: 43px;
+            height: 37.535px;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 44.958px;
-            height: 39px;
+            width: 41px;
+            height: 42.13px;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 28px;
-            height: 44.8px;
+            width: 38px;
+            height: 38px;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 28px;
-            height: 44.8px;
+            width: 51px;
+            height: 31.369px;
           }
         }
       }
