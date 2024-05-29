@@ -84,7 +84,8 @@ pageLink.value = route.path;
       }
     }
     .nav-bar-title {
-      width: calc(1300px - 215px);
+      max-width: calc(1300px - 215px);
+      width: fit-content;
       overflow: hidden;
       text-wrap: nowrap;
     }
