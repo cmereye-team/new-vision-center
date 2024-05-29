@@ -4158,7 +4158,7 @@ const okQuestionList = [
     & > div:nth-child(6) {
       max-width: 960px;
       margin: 0 auto;
-      height: 370;
+      height: 370px;
       border-radius: 15px;
       overflow: hidden;
       background: url("https://static.cmereye.com/imgs/2024/05/fa0a497345651931.jpg")
