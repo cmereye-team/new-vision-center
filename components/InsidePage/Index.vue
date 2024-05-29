@@ -14,19 +14,19 @@ const props = defineProps({
     padding: 0 100px;
   }
   :deep(table) {
-    max-width: 1100px;
+    max-width: 830px;
     margin: 0 auto;
     td {
       border-radius: 20px;
-      padding: 16px 88px 16px 158px;
+      padding: 16px 15px;
       p {
         span {
           color: #60605f;
           font-family: "Inter";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 300;
-          line-height: 40px; /* 181.818% */
+          line-height: 30px;
           text-transform: uppercase;
         }
       }
@@ -38,10 +38,9 @@ const props = defineProps({
   :deep(P) {
     color: #60605f;
     font-family: "Inter";
-    font-size: 22px;
+    font-size: 16.5px;
     font-style: normal;
     font-weight: 300;
-    line-height: 40px; /* 181.818% */
     text-transform: uppercase;
     margin-bottom: 10px;
   }
@@ -55,7 +54,7 @@ const props = defineProps({
     margin-bottom: 20px;
   }
   :deep(img) {
-    max-width: 1100px;
+    max-width: 830px;
     margin: 0 auto;
   }
   :deep(#table1) {
@@ -97,7 +96,7 @@ const props = defineProps({
   }
 }
 @media screen and (max-width: 767px) {
-  .Index{
+  .Index {
     width: 100%;
     overflow: hidden;
   }
@@ -156,7 +155,7 @@ const props = defineProps({
       }
       & > td:nth-child(3) {
         max-width: 100px;
-        ul{
+        ul {
           margin-left: 20px !important;
         }
         p {
@@ -178,8 +177,8 @@ const props = defineProps({
     td {
       padding: 16px 15px 16px 10px;
     }
-    tr{
-      &>td:nth-child(1){
+    tr {
+      & > td:nth-child(1) {
         width: 60px;
       }
     }
@@ -195,8 +194,8 @@ const props = defineProps({
     td {
       padding: 16px 10px 16px 10px;
     }
-    tr{
-      &>td:nth-child(1){
+    tr {
+      & > td:nth-child(1) {
         width: 60px;
       }
     }

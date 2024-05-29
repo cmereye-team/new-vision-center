@@ -18,7 +18,7 @@ const serverList = ref({
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/04/e57532ca4ebc44a1.png"
+              src="https://static.cmereye.com/imgs/2024/05/0e1161350e2c3b86.png"
               alt="長者醫療券計劃"
             />
           </div>
@@ -30,8 +30,8 @@ const serverList = ref({
               <a
                 href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
               >
-                <span
-                  ><svg
+                <div>
+                  <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="30"
                     height="30"
@@ -62,8 +62,10 @@ const serverList = ref({
                       stroke-width="2.5"
                       stroke-linecap="round"
                       stroke-linejoin="round"
-                    /></svg></span
-                ><span>了解更多</span>
+                    />
+                  </svg>
+                </div>
+                <div>了解更多</div>
               </a>
               <div>
                 <img
@@ -214,22 +216,22 @@ const serverList = ref({
     padding-bottom: 45px;
     padding-top: 24px;
     position: relative;
-    margin-top: 204px;
+    margin-top: 140px;
     min-height: 340px;
   }
   .medical-voucher-title {
     color: var(--Brand-Color, #00a6ce);
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 50px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    max-width: 1300px;
+    max-width: 960px;
     margin: 0 auto;
   }
 
   .medical-voucher-header {
-    max-width: 1300px;
+    max-width: 960px;
     margin: 0 auto;
     & > div {
       display: flex;
@@ -247,39 +249,76 @@ const serverList = ref({
         flex: 6;
         & > div:nth-child(1) {
           color: #60605f;
-
           text-align: justify;
-          font-family: "Inter";
-          font-size: 24px;
+          font-family: Inter;
+          font-size: 18px;
           font-style: normal;
           font-weight: 400;
-          line-height: 50px;
+          line-height: 37.5px;
         }
         & > div:nth-child(2) {
           display: flex;
           justify-content: space-between;
           align-items: flex-end;
           & > a {
-            border-radius: 50px;
-            background: var(--Brand-Color, #00a6ce);
-            padding: 12px 22px;
-            color: #fff;
-            font-family: "Inter";
-            font-size: 30px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            text-transform: uppercase;
             display: flex;
             align-items: center;
-            & > span:nth-child(1) {
-              display: flex;
-              align-items: center;
-              margin-right: 10px;
+            & > div:nth-child(2) {
+              position: relative;
+              z-index: 6;
+              color: var(--White, #fff);
+              text-align: center;
+              font-family: "Noto Sans HK";
+              font-size: 22.5px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+              text-transform: uppercase;
+              text-wrap: nowrap;
             }
+            & > div:nth-child(1) {
+              margin-right: 5px;
+              position: relative;
+              z-index: 6;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              & > svg {
+                width: 20px;
+                height: 20px;
+              }
+            }
+            padding: 10px 18px;
+            border-radius: 20px;
           }
-          & > a:hover {
-            box-shadow: 4px 3px 7px #c5c3c3;
+          & > a:nth-child(1) {
+            position: relative;
+          }
+          & > a:nth-child(1)::before {
+            border-radius: 100px;
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+          }
+          & > a:nth-child(1)::after {
+            content: "";
+            position: absolute;
+            z-index: 3;
+            width: 86%;
+            text-align: center;
+            height: 30px;
+            display: inline-block;
+            bottom: -10px;
+            left: 50%;
+            background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+            border-radius: 20px;
+            filter: blur(15px); /* 添加模糊效果 */
+            transform: translateX(-50%) scaleY(-1) rotate(180deg);
           }
         }
       }
@@ -287,48 +326,55 @@ const serverList = ref({
   }
 
   .medical-voucher-content {
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 65px auto 45px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: "Inter";
-      font-size: 36px;
+      font-size: 27px;
       font-style: normal;
       font-weight: 600;
-      line-height: 30px; /* 83.333% */
+      line-height: 22.5px;
       text-transform: uppercase;
-      margin-bottom: 55px;
+      margin-bottom: 40px;
     }
     & > div:nth-child(2) {
       display: flex;
-      border-radius: 20px;
+      border-radius: 15px;
       background: #f5fafd;
-      padding: 60px 0 60px 85px;
+      padding: 50px 0 40px 65px;
       & > div {
         max-height: 485px;
         & > div {
-          width: 484px;
-          padding: 35px 40px 15px 0;
+          width: 300px;
+          padding: 25px 30px 15px 0;
           border-bottom: 1px solid #ccc;
           display: flex;
+          align-items: center;
           justify-content: space-between;
-
           & > div:nth-child(1) {
             display: flex;
             flex-direction: column;
-
             color: #60605f;
             font-family: "Inter";
-            font-size: 26px;
+            font-size: 19.5px;
             font-style: normal;
             font-weight: 400;
-            line-height: 30px; /* 115.385% */
+            line-height: 22.5px;
             text-transform: uppercase;
+          }
+          & > div:nth-child(2) {
+            width: 28px;
+            height: 28px;
+            & > svg {
+              width: 100%;
+              height: 100%;
+            }
           }
         }
       }
       & > div:nth-child(1) {
-        margin-right: 135px;
+        margin-right: 105px;
         & > :last-child {
           border-bottom: none;
         }
@@ -336,70 +382,84 @@ const serverList = ref({
     }
   }
   .medical-voucher-notice {
-    margin: 0 auto;
-    max-width: 1300px;
+    margin: 45px auto 85px;
+    max-width: 960px;
     margin-top: 60px;
     margin-bottom: 120px;
     & > div:nth-child(1) {
       border-radius: 20px;
-      padding-left: 7px;
       border: 1px solid var(--Brand-Color, #00a6ce);
-      padding: 36px 40px 36px 65px;
+      padding: 27px 48px;
       display: flex;
       align-items: center;
-      margin-bottom: 26px;
+      margin-bottom: 20px;
+      & > div:nth-child(1) {
+        width: 84px;
+        height: 75px;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
       & > div:nth-child(2) {
-        margin-left: 50px;
+        margin-left: 40px;
         color: #60605f;
-
         font-family: "Inter";
-        font-size: 20px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 300;
-        line-height: 40px; /* 200% */
+        line-height: 30px;
         text-transform: uppercase;
       }
     }
     & > div:nth-child(2) {
       display: flex;
       align-items: center;
+      & > div:nth-child(1) {
+        width: 32.19px;
+        height: 42.92px;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
       & > div:nth-child(2) {
-        margin-left: 18px;
+        margin-left: 14px;
         color: var(--Brand-Color, #00a6ce);
         font-family: "Inter";
-        font-size: 20px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 400;
-        line-height: 40px; /* 200% */
+        line-height: 30px;
         text-transform: uppercase;
       }
     }
   }
   .medical-voucher-background {
-    max-width: 1300px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 85px auto 90px;
     & > div:nth-child(1) {
       padding-left: 7px;
       color: var(--Brand-Color, #00a6ce);
       font-family: "Inter";
-      font-size: 36px;
+      font-size: 27px;
       font-style: normal;
       font-weight: 600;
-      line-height: 30px; /* 83.333% */
+      line-height: 22.5px;
       text-transform: uppercase;
-      margin-bottom: 30px;
+      margin-bottom: 22px;
     }
     & > div:nth-child(2) {
-      padding: 30px 55px 30px 50px;
-      border-radius: 20px;
+      padding: 22px 42px 22px 38px;
+      border-radius: 15px;
       background: #f5fafd;
       & > P {
         color: #60605f;
         font-family: "Inter";
-        font-size: 20px;
+        font-size: 15px;
         font-style: normal;
         font-weight: 300;
-        line-height: 40px; /* 200% */
+        line-height: 30px;
         text-transform: uppercase;
       }
     }
@@ -449,7 +509,7 @@ const serverList = ref({
         & > div:nth-child(1) {
           color: #60605f;
           text-align: justify;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -496,7 +556,7 @@ const serverList = ref({
     margin: 30px 0;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -543,7 +603,7 @@ const serverList = ref({
       border-radius: 20px;
       border: 1px solid var(--Brand-Color, #00a6ce);
       color: #60605f;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -576,7 +636,7 @@ const serverList = ref({
         flex: 9;
         margin-left: 8px;
         color: var(--Brand-Color, #00a6ce);
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -590,7 +650,7 @@ const serverList = ref({
     & > div:nth-child(1) {
       margin-bottom: 15px;
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 24px;
       font-style: normal;
       font-weight: 600;

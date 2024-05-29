@@ -344,11 +344,11 @@ a {
     }
   }
   .news-box {
-    max-width: 1300px;
+    max-width: 960px;
     margin: 48px auto 128px auto;
   }
   .news-replenish {
-    max-width: 1100px;
+    max-width: 830px;
     margin: 0 auto;
     & > div {
       & > div:nth-child(1) {
