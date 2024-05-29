@@ -18,8 +18,8 @@ const bannerImg = {
         </div>
       </template>
     </PublicBanner>
+    <PublicNavbar :link="'/center-profile'" :name="'聯絡我們'" />
     <div class="contact-us-content">
-      <PublicNavbar :link="'/center-profile'" :name="'聯絡我們'" />
       <ContactUsMapList />
     </div>
   </div>
@@ -35,7 +35,7 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: #fff;
       text-align: center;
@@ -48,7 +48,7 @@ const bannerImg = {
     }
   }
   .contact-us-content {
-    max-width: 1300px;
+    max-width: 960px;
     margin: 0 auto;
   }
 }

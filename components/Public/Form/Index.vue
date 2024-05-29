@@ -628,7 +628,7 @@ onMounted(() => {
   }
   .formtitle {
     color: #00517e;
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 21px;
     font-style: normal;
     font-weight: 700;
@@ -1152,7 +1152,7 @@ onMounted(() => {
   }
   .formtitle {
     color: #00517e;
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 18px;
     font-style: normal;
     font-weight: 600;

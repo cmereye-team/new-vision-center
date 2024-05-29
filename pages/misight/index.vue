@@ -1692,7 +1692,7 @@ const miSightQuestionList = [
         justify-content: center;
         & > div {
           color: #60605f;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 16.5px;
           font-style: normal;
           font-weight: 600;
@@ -1818,7 +1818,7 @@ const miSightQuestionList = [
     margin: 90px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 40px;
       font-style: normal;
       font-weight: 600;
@@ -2275,7 +2275,7 @@ const miSightQuestionList = [
           & > div {
             display: flex;
             color: #60605f;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
@@ -2582,7 +2582,7 @@ const miSightQuestionList = [
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

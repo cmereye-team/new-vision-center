@@ -287,7 +287,7 @@ const props = defineProps({
   .detail-declare {
     margin-top: 24px;
     color: #60605f;
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 13.5px;
     font-style: normal;
     font-weight: 400;

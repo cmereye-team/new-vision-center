@@ -635,7 +635,7 @@ const handleIcon = (str: any, idx: any) => {
       &-in {
         color: var(--White, #fff);
         text-align: center;
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 21.981px;
         font-style: normal;
         font-weight: 400;

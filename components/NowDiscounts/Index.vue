@@ -13,7 +13,6 @@ const modules = [Autoplay, Pagination, Navigation];
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
 };
-
 let deBoxSwiperRef = {
   slideTo: (a: any) => {},
   slideToLoop: (a: any) => {},

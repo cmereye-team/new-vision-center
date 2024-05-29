@@ -980,7 +980,7 @@ const bannerImg = {
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -993,7 +993,7 @@ const bannerImg = {
             flex-direction: column;
             color: #60605f;
             text-align: center;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1058,7 +1058,7 @@ const bannerImg = {
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #60605f;
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1069,7 +1069,7 @@ const bannerImg = {
               flex-direction: column;
               & > span {
                 color: #60605f;
-                font-family: Inter;
+                 font-family: 'Inter';
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1077,7 +1077,7 @@ const bannerImg = {
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: Inter;
+                 font-family: 'Inter';
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 600;
@@ -1182,7 +1182,7 @@ const bannerImg = {
     margin: 55px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -1881,7 +1881,7 @@ const bannerImg = {
             & > div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -1893,7 +1893,7 @@ const bannerImg = {
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: Inter;
+                 font-family: 'Inter';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -1981,7 +1981,7 @@ const bannerImg = {
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -2042,7 +2042,7 @@ const bannerImg = {
     padding: 0 25px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

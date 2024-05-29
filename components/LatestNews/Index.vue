@@ -64,7 +64,7 @@ const fetchData = async () => {
     .then((response) => response.json())
     .then((res) => {
       // 清空数组
-      newsList.value= new Array();
+      newsList.value = new Array();
       arr.value = res.data;
       arr.value.map((item: any) => {
         newsList.value.push({
@@ -89,7 +89,7 @@ const fetchData = async () => {
 onMounted(() => {
   fetchData();
 });
-const newsListddd= ref([
+const newsListddd = ref([
   {
     id: 1,
     img: "https://static.cmereye.com/imgs/2024/04/e2bac320179f4c43.png",
@@ -244,7 +244,12 @@ const newsListddd= ref([
     </div>
     <div>
       <div v-for="item in newsList" :key="item.id" class="news-item">
-        <div><img :src="`https://content.cmervision.com/${item.img}`" :alt="item.title" /></div>
+        <div>
+          <img
+            :src="`https://content.cmervision.com/${item.img}`"
+            :alt="item.title"
+          />
+        </div>
         <div>
           <div>
             <div :class="item.type == '12' ? 'bgBlue' : 'bgGreen'">
@@ -260,7 +265,7 @@ const newsListddd= ref([
           <div>
             <a
               :href="element.link == '#' ? '#' : element.link"
-              v-for="(element) in item.ext_hashTag"
+              v-for="element in item.ext_hashTag"
               :key="element.id"
             >
               {{ element.title }}
@@ -281,40 +286,44 @@ a {
     margin-bottom: 90px;
   }
   .news-item {
-    margin-bottom: 58px;
+    margin-bottom: 43px;
     display: flex;
+    gap: 0 28px;
 
     & > div:nth-child(1) {
       flex: 2.5;
+      max-width: 225px;
+      & > img {
+        width: 100%;
+      }
     }
     & > div:nth-child(2) {
       flex: 7.5;
       & > div:nth-child(1) {
         display: flex;
         align-items: flex-end;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
         & > div:nth-child(1) {
-          max-width: 160px;
+          max-width: 120px;
           width: 100%;
-          min-height: 45px;
+          min-height: 35px;
           border-radius: 10px;
           display: flex;
           align-items: center;
           justify-content: center;
           color: #fff;
-
           font-family: "Noto Sans HK";
-          font-size: 20px;
+          font-size: 15px;
           font-style: normal;
           font-weight: 500;
-          line-height: 160%; /* 32px */
-          letter-spacing: 2px;
+          line-height: 160%; /* 24px */
+          letter-spacing: 1.5px;
           margin-right: 16px;
         }
         & > div:nth-child(2) {
           color: #00a6ce;
           font-family: "Inter";
-          font-size: 26px;
+          font-size: 19.5px;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
@@ -325,18 +334,18 @@ a {
         display: block;
         color: #60605f;
         font-family: "Inter";
-        font-size: 34px;
+        font-size: 25.5px;
         font-style: normal;
         font-weight: 600;
-        line-height: 60px;
+        line-height: 45px;
       }
       & > div {
         a {
-          margin-right: 20px;
-          padding: 16px 28px;
+          margin-right: 15px;
+          padding: 12px 16px;
           color: #60605f;
           font-family: "Inter";
-          font-size: 24px;
+          font-size: 18px;
           font-style: normal;
           font-weight: 600;
           line-height: normal;

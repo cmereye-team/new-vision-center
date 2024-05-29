@@ -1608,7 +1608,7 @@ const bannerImg = {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -1907,7 +1907,7 @@ const bannerImg = {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 27px;
           font-style: normal;
           font-weight: 600;

@@ -65,20 +65,26 @@ onMounted(() => {
 @media screen and (min-width: 768px) {
   .video-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
-    font-size: 30px;
+     font-family: 'Inter';
+    font-size: 22.5px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
   }
   .video-list {
-    margin: 28px auto 110px;
+    margin: 20px auto 50px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     & > a {
       margin-bottom: 20px;
+      & > div:nth-child(1) {
+        width: 312px;
+        & > img {
+          width: 100%;
+        }
+      }
       & > div:nth-child(2) {
         margin-top: 5px;
         display: flex;
@@ -104,7 +110,7 @@ onMounted(() => {
   }
   .video-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 20px;
     font-style: normal;
     font-weight: 700;

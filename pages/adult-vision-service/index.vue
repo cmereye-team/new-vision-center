@@ -2365,7 +2365,7 @@ const bannerImg = {
     margin: 38px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -2466,7 +2466,7 @@ const bannerImg = {
           margin: 0 10px;
           color: #fff;
           text-align: center;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 21.981px;
           font-style: normal;
           font-weight: 400;
@@ -2806,7 +2806,7 @@ const bannerImg = {
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -2917,7 +2917,7 @@ const bannerImg = {
           margin: 0 5px;
           color: #fff;
           text-align: center;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 18px;
           font-style: normal;
           font-weight: 400;

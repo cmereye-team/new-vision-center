@@ -672,7 +672,7 @@ const miSightQuestionList = [
         border-radius: 25px;
         & > div:nth-child(1) {
           height: 143px;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 22.5px;
           font-style: normal;
           font-weight: 600;
@@ -719,7 +719,7 @@ const miSightQuestionList = [
         & > div:nth-child(2),
         & > div:nth-child(3),
         & > div:nth-child(4) {
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 22.5px;
           font-style: normal;
           font-weight: 400;
@@ -1194,7 +1194,7 @@ const miSightQuestionList = [
         border-radius: 25px;
         & > div:nth-child(1) {
           height: 89px;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 16px;
           font-style: normal;
           font-weight: 600;
@@ -1258,7 +1258,7 @@ const miSightQuestionList = [
         & > div:nth-child(2),
         & > div:nth-child(3),
         & > div:nth-child(4) {
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 16px;
           font-style: normal;
           font-weight: 400;

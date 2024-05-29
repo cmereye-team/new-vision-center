@@ -3920,7 +3920,7 @@ onMounted(() => {
             & > span:nth-child(2) {
               margin-top: 5px;
               color: var(--White, #fff);
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 24px;
               font-style: normal;
               font-weight: 700;
@@ -3943,7 +3943,7 @@ onMounted(() => {
           & > div {
             color: #fff;
             color: var(--White, #fff);
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -4081,7 +4081,7 @@ onMounted(() => {
       & > div:nth-child(3) {
         margin-top: 20px;
         color: #60605f;
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 13.5px;
         font-style: normal;
         font-weight: 400;
@@ -4095,7 +4095,7 @@ onMounted(() => {
     margin: 0 auto 60px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -4622,7 +4622,7 @@ onMounted(() => {
             text-align: center;
             & > span:nth-child(1) {
               color: var(--Grey-Deep, #4d4d4d);
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 16.5px;
               font-style: normal;
               font-weight: 300;
@@ -4948,7 +4948,7 @@ onMounted(() => {
     & > div:nth-child(1) {
       padding: 0 25px;
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -4980,7 +4980,7 @@ onMounted(() => {
           margin-top: 17px;
           color: var(--Brand-Color, #00a6ce);
           text-align: center;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 14px;
           font-style: normal;
           font-weight: 600;
@@ -5177,7 +5177,7 @@ onMounted(() => {
         & > div:nth-child(2) {
           color: #60605f;
           text-align: justify;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -5534,7 +5534,7 @@ onMounted(() => {
             & > span:nth-child(2) {
               margin-top: 5px;
               color: var(--White, #fff);
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 18px;
               font-style: normal;
               font-weight: 900;
@@ -5557,7 +5557,7 @@ onMounted(() => {
           & > div {
             color: #fff;
             color: var(--White, #fff);
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -5784,7 +5784,7 @@ onMounted(() => {
         padding-bottom: 25px;
         padding-left: 25px;
         color: #60605f;
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -5797,7 +5797,7 @@ onMounted(() => {
     & > div:nth-child(1) {
       padding: 0 24px;
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
@@ -5809,7 +5809,7 @@ onMounted(() => {
       & > div:nth-child(1) {
         color: #4d4d4d;
         text-align: justify;
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 18.29px;
         font-style: normal;
         font-weight: 600;
@@ -5835,7 +5835,7 @@ onMounted(() => {
             flex-direction: column;
             color: #4d4d4d;
             text-align: justify;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 18.29px;
             font-style: normal;
             font-weight: 600;
@@ -5874,7 +5874,7 @@ onMounted(() => {
           margin-top: 7px;
           & > p:nth-child(1) {
             color: #757470;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
@@ -5885,7 +5885,7 @@ onMounted(() => {
             text-align: center;
             & > span:nth-child(1) {
               color: #757470;
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 14.301px;
               font-style: normal;
               font-weight: 300;
@@ -5893,7 +5893,7 @@ onMounted(() => {
             }
             & > span:nth-child(2) {
               color: #8cd6ff;
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 24.702px;
               font-style: normal;
               font-weight: 900;

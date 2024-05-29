@@ -3241,7 +3241,7 @@ const okQuestionList = [
           margin: 0 5px;
           color: var(--White, #fff);
           text-align: center;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 21.981px;
           font-style: normal;
           font-weight: 400;
@@ -3389,7 +3389,7 @@ const okQuestionList = [
                 }
                 & > span:nth-child(2) {
                   color: #fff;
-                  font-family: Inter;
+                   font-family: 'Inter';
                   font-size: 15.828px;
                   font-style: normal;
                   font-weight: 465;
@@ -3466,7 +3466,7 @@ const okQuestionList = [
         & > div {
           display: flex;
           color: #60605f;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 16.5px;
           font-style: normal;
           font-weight: 600;
@@ -3679,7 +3679,7 @@ const okQuestionList = [
     margin: 30px auto 40px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -4510,7 +4510,7 @@ const okQuestionList = [
           margin: 0 5px;
           color: var(--White, #fff);
           text-align: center;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -4699,7 +4699,7 @@ const okQuestionList = [
                 }
                 & > span:nth-child(2) {
                   color: var(--White, #fff);
-                  font-family: Inter;
+                   font-family: 'Inter';
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 465;
@@ -4765,7 +4765,7 @@ const okQuestionList = [
         & > div {
           display: flex;
           color: #60605f;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 14px;
           font-style: normal;
           font-weight: 600;
@@ -4834,7 +4834,7 @@ const okQuestionList = [
         & > div:nth-child(2) {
           color: #60605f;
           text-align: center;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -4945,7 +4945,7 @@ const okQuestionList = [
     margin-bottom: 50px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -5598,7 +5598,7 @@ const okQuestionList = [
       top: 70px;
       left: 26px;
       color: var(--OkLens-color, #0192b0);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 40px;
       font-style: normal;
       font-weight: 700;

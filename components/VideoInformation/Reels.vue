@@ -26,12 +26,30 @@ const getScreenWidth = () => {
     isPc.value = true;
   }
 };
+const swiperBox = (swiper: any) => {
+  deBoxSwiperRef = swiper;
+};
+let deBoxSwiperRef = {
+  slideTo: (a: any) => {},
+  slideToLoop: (a: any) => {},
+  slidePrev: () => {},
+  slideNext: () => {},
+};
+const handleshowdeBox = (_idx: any) => {
+  deBoxSwiperRef.slideTo(_idx);
+};
+const handlesSliNext = () => {
+  deBoxSwiperRef.slideNext();
+};
+const handlesSliPrev = () => {
+  deBoxSwiperRef.slidePrev();
+};
 
 onMounted(() => {
   if (window.innerWidth >= 768) {
     isPc.value = true;
   }
-  spaceBetweenNum.value = isPc.value ? 32 : 30;
+  spaceBetweenNum.value = isPc.value ? 12 : 30;
   slidesPerViewNum.value = isPc.value ? 4 : 1;
   window.addEventListener("resize", getScreenWidth);
   window.addEventListener("beforeunload", getScreenWidth);
@@ -48,8 +66,8 @@ const slidesPerViewNum = ref(4);
       <swiper
         :slidesPerView="slidesPerViewNum"
         :spaceBetween="spaceBetweenNum"
-        :navigation="true"
         :modules="modules"
+        @swiper="swiperBox"
       >
         <swiper-slide v-for="item in props.list" :key="item.id">
           <nuxt-link :to="item.videoLink">
@@ -58,23 +76,27 @@ const slidesPerViewNum = ref(4);
         </swiper-slide>
       </swiper>
     </div>
+    <div class="swiper-button-next-prev">
+        <div class="button-prev" @click="handlesSliPrev"></div>
+        <div class="button-next" @click="handlesSliNext"></div>
+      </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .Reels{
+    position: relative;
+  }
   .reels-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    margin-bottom: 50px;
-  }
-  :deep(.swiper) {
-    padding: 0 30px;
+    margin-bottom: 35px;
   }
   :deep(.swiper-slide) {
     width: calc(100% / 4);
@@ -105,6 +127,33 @@ const slidesPerViewNum = ref(4);
   a {
     img {
       width: 100%;
+    }
+  }
+  .swiper-button-next-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-25%);
+    z-index: 99;
+    width: 100%;
+    & > div:nth-child(1) {
+      display: block;
+      position: absolute;
+      left: -3%;
+      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+        no-repeat;
+      background-position: right;
+      width: 20px;
+      height: 40px;
+    }
+    & > div:nth-child(2) {
+      display: inline-block;
+      position: absolute;
+      right: -3%;
+      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+        no-repeat;
+      background-position: right;
+      width: 20px;
+      height: 40px;
     }
   }
 }
@@ -146,6 +195,33 @@ const slidesPerViewNum = ref(4);
 
   :deep(.swiper) {
     padding: 0 30px;
+  }
+  .swiper-button-next-prev {
+    position: absolute;
+    top: 9%;
+    transform: translateY(-25%);
+    z-index: 99;
+    width: 100%;
+    & > div:nth-child(1) {
+      display: block;
+      position: absolute;
+      left: -4%;
+      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+        no-repeat;
+      background-position: right;
+      width: 20px;
+      height: 40px;
+    }
+    & > div:nth-child(2) {
+      display: inline-block;
+      position: absolute;
+      right: -5%;
+      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+        no-repeat;
+      background-position: right;
+      width: 20px;
+      height: 40px;
+    }
   }
 }
 </style>

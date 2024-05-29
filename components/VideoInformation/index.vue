@@ -441,15 +441,15 @@ const chooseNumber = ref(2);
   }
   .information-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
-    font-size: 50px;
+     font-family: 'Inter';
+    font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
   }
   .information-list {
     max-width: 880px;
-    margin: 70px auto 45px;
+    margin: 55px auto 35px;
     display: flex;
     align-items: center;
     border-radius: 10px;
@@ -461,7 +461,7 @@ const chooseNumber = ref(2);
       min-width: 220px;
       color: var(--Brand-Color, #00a6ce);
       font-family: "Inter";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -474,7 +474,7 @@ const chooseNumber = ref(2);
       background: var(--Brand-Color, #00a6ce);
       color: var(--Brand-Color, #fff);
       font-family: "Inter";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
       height: 100%;
@@ -494,7 +494,7 @@ const chooseNumber = ref(2);
   }
   .information-title {
     color: #00a6ce;
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 24px;
     font-style: normal;
     font-weight: 600;

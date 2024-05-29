@@ -1189,7 +1189,7 @@ const bannerImg = {
           & > p:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -1203,7 +1203,7 @@ const bannerImg = {
             align-items: center;
             color: #60605f;
             text-align: center;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1248,7 +1248,7 @@ const bannerImg = {
       padding-top: 24px;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 27px;
         font-style: normal;
         font-weight: 600;
@@ -1260,7 +1260,7 @@ const bannerImg = {
         margin-bottom: 40px;
         & > p:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 19.5px;
           font-style: normal;
           font-weight: 600;
@@ -1306,7 +1306,7 @@ const bannerImg = {
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #60605f;
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1317,7 +1317,7 @@ const bannerImg = {
               flex-direction: column;
               & > span {
                 color: #60605f;
-                font-family: Inter;
+                 font-family: 'Inter';
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1325,7 +1325,7 @@ const bannerImg = {
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: Inter;
+                 font-family: 'Inter';
                 font-size: 22.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1740,7 +1740,7 @@ const bannerImg = {
             margin-bottom: 5px;
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: Inter;
+             font-family: 'Inter';
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -1803,7 +1803,7 @@ const bannerImg = {
       margin-top: 35px;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
@@ -1815,7 +1815,7 @@ const bannerImg = {
         margin-bottom: 28px;
         & > p:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 19px;
           font-style: normal;
           font-weight: 600;
@@ -1864,7 +1864,7 @@ const bannerImg = {
             & > div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
-              font-family: Inter;
+               font-family: 'Inter';
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -1876,7 +1876,7 @@ const bannerImg = {
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: Inter;
+                 font-family: 'Inter';
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;

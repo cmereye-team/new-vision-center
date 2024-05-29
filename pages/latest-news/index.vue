@@ -3,14 +3,14 @@ useHead(() => ({
   title: "最新資訊 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: 'https://static.cmereye.com/imgs/2024/04/5ae163616b5be08e.png',
-  mobile: 'https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png'
-}
+  pc: "https://static.cmereye.com/imgs/2024/04/5ae163616b5be08e.png",
+  mobile: "https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png",
+};
 </script>
 
 <template>
   <div class="video-information">
-    <PublicBanner  :banner="bannerImg">
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
@@ -35,7 +35,7 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
@@ -48,8 +48,8 @@ const bannerImg = {
     }
   }
   .video-information-box {
-    max-width: 1300px;
-    margin: 48px auto 128px auto;
+    max-width: 960px;
+    margin: 48px auto 90px auto;
   }
 }
 @media screen and (max-width: 767px) {
@@ -74,7 +74,7 @@ const bannerImg = {
       letter-spacing: 5.6px;
     }
   }
-  .video-information-box{
+  .video-information-box {
     padding: 0 24px;
   }
 }

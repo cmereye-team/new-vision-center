@@ -219,7 +219,7 @@ const serverList = ref({
   }
   .medical-voucher-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: Inter;
+     font-family: 'Inter';
     font-size: 50px;
     font-style: normal;
     font-weight: 600;
@@ -449,7 +449,7 @@ const serverList = ref({
         & > div:nth-child(1) {
           color: #60605f;
           text-align: justify;
-          font-family: Inter;
+           font-family: 'Inter';
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -496,7 +496,7 @@ const serverList = ref({
     margin: 30px 0;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -543,7 +543,7 @@ const serverList = ref({
       border-radius: 20px;
       border: 1px solid var(--Brand-Color, #00a6ce);
       color: #60605f;
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -576,7 +576,7 @@ const serverList = ref({
         flex: 9;
         margin-left: 8px;
         color: var(--Brand-Color, #00a6ce);
-        font-family: Inter;
+         font-family: 'Inter';
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -590,7 +590,7 @@ const serverList = ref({
     & > div:nth-child(1) {
       margin-bottom: 15px;
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+       font-family: 'Inter';
       font-size: 24px;
       font-style: normal;
       font-weight: 600;

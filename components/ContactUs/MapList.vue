@@ -25,7 +25,8 @@ const portLandList = ref([
     region: "西環",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/ZTANTUau8LLbTSVZ6",
-    whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["西環卑路乍街6-6G號", "新城大樓地下7號舖", "(香港大學站C2出口)"],
     businessHours: [
       "星期一至星期日：",
@@ -40,7 +41,8 @@ const portLandList = ref([
     region: "中環",
     name: "希瑪眼科視光中心",
     googleMap: "https://maps.app.goo.gl/moVYZoZpcDKeraBz6",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["畢打街1-3號中建大廈", "1515室（中環站G出口", "鄰近置地廣場）"],
     businessHours: [
       "星期一至五：09:30 – ",
@@ -56,7 +58,8 @@ const portLandList = ref([
     region: "北角",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/mYM18kHBkvewkvpR9",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["北角英皇道560號健威坊", "U33號鋪"],
     businessHours: [
       "星期一至星期日：",
@@ -73,7 +76,8 @@ const kowLoonList = ref([
     region: "旺角",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/4Bq588uzvEvFPWk78",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: [
       "九龍彌敦道610號",
       "荷李活商業中心9樓918-919室",
@@ -88,7 +92,8 @@ const kowLoonList = ref([
     region: "旺角雅蘭",
     name: "希瑪眼科視光中心",
     googleMap: "https://maps.app.goo.gl/Ya6NFkJQbiB1jFdk7",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["彌敦道625及639號雅蘭", "中心一期1202室", "( 旺角站E1出口 )"],
     businessHours: [
       "星期一至五： ",
@@ -104,7 +109,8 @@ const kowLoonList = ref([
     region: "鑽石山",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/xjng7ohyTBZMx5na6",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["九龍鑽石山荷里活廣場1樓", "120室", "( 鑽石山站C2出口 ）"],
     businessHours: [
       "星期一至星期日：",
@@ -121,11 +127,9 @@ const newTerritoriesList = ref([
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: [
-      "新界將軍澳新都城",
-      "商場第1期地下G63鋪",
-    ],
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    address: ["新界將軍澳新都城", "商場第1期地下G63鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
@@ -135,11 +139,9 @@ const newTerritoriesList = ref([
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心（兒童近視控制中心）",
     googleMap: "",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: [
-      "將軍澳新都城中心1期",
-      "地下54號鋪",
-    ],
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    address: ["將軍澳新都城中心1期", "地下54號鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
@@ -149,11 +151,9 @@ const newTerritoriesList = ref([
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心（兒童近視控制中心）",
     googleMap: "",
-        whatsApps: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: [
-      "將軍澳新都城中心一期",
-      "地下54號鋪",
-    ],
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    address: ["將軍澳新都城中心一期", "地下54號鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
@@ -215,8 +215,8 @@ onMounted(() => {
     align-items: center;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
-      font-size: 50px;
+      font-family: "Inter";
+      font-size: 37.5px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -230,8 +230,8 @@ onMounted(() => {
   .map-list-menu {
     padding: 10px 80px;
     color: #00a6ce;
-    font-family: Inter;
-    font-size: 20px;
+    font-family: "Inter";
+    font-size: 15px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -245,9 +245,9 @@ onMounted(() => {
     background: var(--Brand-Color, #00a6ce);
     color: #fff;
     transition: all 0.3s;
-    font-size: 20px;
+    font-size: 15px;
+    font-style: normal;
     font-weight: 700;
-    line-height: normal;
   }
 }
 @media screen and (max-width: 767px) {
@@ -261,7 +261,7 @@ onMounted(() => {
     justify-content: space-between;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: Inter;
+      font-family: "Inter";
       font-size: 50px;
       font-style: normal;
       font-weight: 600;
