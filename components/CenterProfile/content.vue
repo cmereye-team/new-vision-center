@@ -77,9 +77,9 @@ const modules = [Pagination, Navigation];
     background: #f2fbfd;
   }
   .content-box {
-    max-width: 1300px;
+    max-width: 960px;
     margin: 0 auto;
-    padding: 53px 0 73px 0;
+    padding: 45px 0 55px;
   }
   .content-box-top {
     display: flex;
@@ -91,19 +91,13 @@ const modules = [Pagination, Navigation];
       & > p {
         & > span:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
-          font-family: "Inter";
-          font-size: 22px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 40px; /* 181.818% */
-          text-transform: uppercase;
         }
         color: #60605f;
         font-family: "Inter";
-        font-size: 22px;
+        font-size: 16.5px;
         font-style: normal;
         font-weight: 400;
-        line-height: 40px;
+        line-height: 30px;
         text-transform: uppercase;
       }
       & > p:nth-child(2) {
@@ -113,7 +107,10 @@ const modules = [Pagination, Navigation];
     & > div:nth-child(2) {
       flex: 5;
       display: flex;
-      max-width: 600px;
+      max-width: 443px;
+      & > img {
+        width: 100%;
+      }
     }
   }
   .img-swiper {
@@ -145,6 +142,12 @@ const modules = [Pagination, Navigation];
     margin-top: 45px;
     display: flex;
     justify-content: space-between;
+    gap: 0 30px;
+    & > img {
+      width: 219px;
+      height: 178px;
+      border-radius: 7.5px;
+    }
   }
 }
 @media screen and (max-width: 767px) {

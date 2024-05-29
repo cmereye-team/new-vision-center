@@ -48,7 +48,7 @@ const missionList = [
   .mission-title {
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 50px;
+    font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -58,9 +58,9 @@ const missionList = [
     display: flex;
     justify-content: space-between;
     & > div {
-      width: 296px;
-      height: 360px;
-      border-radius: 10px;
+      width: 222px;
+      height: 270px;
+      border-radius: 7.5px;
       background: #f2fbfd;
       display: flex;
       flex-direction: column;
@@ -68,11 +68,10 @@ const missionList = [
       justify-content: space-evenly;
 
       & > div:nth-child(1) {
-        width: 140px;
-        height: 130px;
         display: flex;
         justify-content: center;
         align-items: center;
+        min-height: 95.156px;
       }
       & > div:nth-child(2) {
         display: flex;
@@ -81,11 +80,47 @@ const missionList = [
           color: var(--Brand-Color, #00a6ce);
           text-align: center;
           font-family: "Inter";
-          font-size: 24px;
+          font-size: 18px;
           font-style: normal;
           font-weight: 600;
-          line-height: 30px; /* 125% */
+          line-height: 22.5px;
           text-transform: uppercase;
+        }
+      }
+    }
+    & > div:nth-child(1) {
+      & > div:nth-child(1) {
+        width: 103.999px;
+        height: 61.044px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(2) {
+      & > div:nth-child(1) {
+        width: 94.082px;
+        height: 92.696px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      & > div:nth-child(1) {
+        width: 103.36px;
+        height: 95.156px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(4) {
+      & > div:nth-child(1) {
+        width: 71.827px;
+        height: 83.672px;
+        & > img {
+          width: 100%;
         }
       }
     }

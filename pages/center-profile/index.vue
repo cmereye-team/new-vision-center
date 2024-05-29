@@ -50,8 +50,8 @@ const bannerImg = {
     }
   }
   .profile-content-max-width {
-    max-width: 1300px;
-    margin: 128px auto;
+    max-width: 960px;
+    margin: 55px auto 95px;
   }
 }
 @media screen and (max-width: 767px) {

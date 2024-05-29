@@ -30,35 +30,38 @@
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .brief-introduction {
-    max-width: 1300px;
-    margin: 0 auto 88px;
+    max-width: 960px;
+    margin: 0 auto 65px;
   }
   .brief-introduction-title {
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 50px;
+    font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
-    margin-bottom: 46px;
+    margin-bottom: 36px;
   }
   .brief-introduction-content {
     display: flex;
     justify-content: space-between;
     & > div {
       flex: 5;
-      max-width: 600px;
+      max-width: 470px;
+      & > img {
+        width: 100%;
+      }
       & > p {
         color: #60605f;
         font-family: "Inter";
-        font-size: 22px;
+        font-size: 16.5px;
         font-style: normal;
         font-weight: 300;
-        line-height: 40px; /* 181.818% */
+        line-height: 30px;
         text-transform: uppercase;
       }
       & > p:nth-child(1) {
-        margin-bottom: 42px;
+        margin-bottom: 22px;
       }
     }
   }
