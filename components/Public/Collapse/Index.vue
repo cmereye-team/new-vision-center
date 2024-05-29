@@ -152,7 +152,7 @@ const props = defineProps({
   :deep(.el-collapse-item__header.is-active::before) {
     color: #d3f0fd;
   }
-  
+
   :deep(.el-collapse-item__content) {
     padding-left: 45px;
     padding: 25px;
@@ -232,26 +232,29 @@ const props = defineProps({
     font-weight: 700;
     line-height: 34.771px; /* 173.855% */
     letter-spacing: 1px;
-    & > span {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-    & > span::before {
-      position: absolute;
-      left: -30px;
-      top: 50%;
-      transform: translateY(-50%);
-      content: "Q";
-      color: var(--Brand-Color, #00a6ce);
-      text-align: center;
-      font-family: "Noto Sans HK";
-      font-size: 28px;
-      font-style: normal;
-      font-weight: 700;
-      line-height: 46.361px; /* 165.577% */
-      letter-spacing: 1.4px;
-    }
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    // & > span {
+    //   position: relative;
+    //   left: 50%;
+    //   transform: translateX(-50%);
+    // }
+    // & > span::before {
+    //   position: absolute;
+    //   left: -30px;
+    //   top: 50%;
+    //   transform: translateY(-50%);
+    //   content: "Q";
+    //   color: var(--Brand-Color, #00a6ce);
+    //   text-align: center;
+    //   font-family: "Noto Sans HK";
+    //   font-size: 28px;
+    //   font-style: normal;
+    //   font-weight: 700;
+    //   line-height: 46.361px; /* 165.577% */
+    //   letter-spacing: 1.4px;
+    // }
     & > i {
       background: url("https://static.cmereye.com/imgs/2024/05/f7365790c4b6ade8.png")
         no-repeat;
@@ -263,6 +266,21 @@ const props = defineProps({
         display: none;
       }
     }
+  }
+  :deep(.el-collapse-item__header::before) {
+    position: absolute;
+    left: -30px;
+    top: 50%;
+    transform: translateY(-50%);
+    content: "Q";
+    color: var(--Brand-Color, #00a6ce);
+    text-align: center;
+    font-family: "Noto Sans HK";
+    font-size: 28px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 46.361px; /* 165.577% */
+    letter-spacing: 1.4px;
   }
   :deep(.el-collapse-item__arrow.is-active) {
     background: url("https://static.cmereye.com/imgs/2024/05/50c8a51799598ce1.png")
@@ -276,9 +294,9 @@ const props = defineProps({
     color: var(--White, #fff);
     border-radius: 20px;
     background: var(--Brand-Color, #00a6ce);
-    & > span::before {
-      color: #d3f0fd;
-    }
+  }
+  :deep(.el-collapse-item__header.is-active::before) {
+    color: #d3f0fd;
   }
   :deep(.el-collapse-item__content) {
     padding-top: 17px;

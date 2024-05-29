@@ -40,10 +40,13 @@ watch(elementX, (n, o) => {
     } else {
       imgLeft.value = `${(a * 100).toFixed(4)}%`;
     }
-    
-    if (55 < Number((a * 100).toFixed(4)) && Number((a * 100).toFixed(4)) < 100) {
+
+    if (
+      55 < Number((a * 100).toFixed(4)) &&
+      Number((a * 100).toFixed(4)) < 100
+    ) {
       isPresbyopiaOrMirror.value = true;
-    } else{
+    } else {
       isPresbyopiaOrMirror.value = false;
     }
   }
@@ -127,18 +130,16 @@ const miSightQuestionList = [
           >
         </div>
       </div>
-      <div class="presbyopia-glasses" v-if="isPresbyopiaOrMirror" >
+      <div class="presbyopia-glasses" v-if="isPresbyopiaOrMirror">
         <PublicPageTitle :title="'漸進鏡片'" />
         <div>
           <span
             >漸進鏡片是光學技術上的一大突破，配戴者能在同一塊鏡片上，看清遠、中、近距離</span
           >
-          <span
-            >的事物，讓老花人士看事物時更靈活，更方便。</span
-          >
+          <span>的事物，讓老花人士看事物時更靈活，更方便。</span>
         </div>
       </div>
-      <div class="presbyopia-glasses" v-else >
+      <div class="presbyopia-glasses" v-else>
         <PublicPageTitle :title="'老花眼鏡'" />
         <div>
           <span
@@ -250,7 +251,7 @@ const miSightQuestionList = [
           ><span>用眼習慣及視光數據等為客人訂製合適的鏡片。</span>
         </div>
         <div>
-          <div @click="checkType(0)" :class="isType == 0 ? 'active-bg' : ''">
+          <div @click="checkType(0)" :class="isType == 0 ? 'active-bg' : 'hide-active'">
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/240c6b42780f48f0.png"
@@ -259,7 +260,7 @@ const miSightQuestionList = [
             </div>
             <div><span>一般漸進鏡片</span></div>
           </div>
-          <div @click="checkType(1)">
+          <div @click="checkType(1)"  :class="isType == 1 ? 'active-bg' : 'hide-active'">
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/53295f03846aa04b.png"
@@ -268,7 +269,7 @@ const miSightQuestionList = [
             </div>
             <div><span>辦公室漸進鏡片</span></div>
           </div>
-          <div @click="checkType(2)">
+          <div @click="checkType(2)"  :class="isType == 2 ? 'active-bg' : 'hide-active'">
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/a9a9d2b01adab5ec.png"
@@ -277,7 +278,7 @@ const miSightQuestionList = [
             </div>
             <div><span>戶外變色漸進鏡片</span></div>
           </div>
-          <div @click="checkType(3)">
+          <div @click="checkType(3)"  :class="isType == 3 ? 'active-bg' : 'hide-active'">
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/5d857fccb22021bb.png"
@@ -296,18 +297,26 @@ const miSightQuestionList = [
         <div v-else-if="isType == 2" class="type-show-style-text">
           <span>戶外變色漸進鏡片</span>
           <p>
-            戶外變色漸進鏡片同時具備<span>漸進及變色功能</span>。這種鏡片較著<span>重遠距離視野</span>，<br />
-            而<span>鏡片兩旁的「模糊區」亦較細，可大幅減少鏡片的扭曲</span>，讓配戴者更舒適自在地細看自然景色，<br />
+            戶外變色漸進鏡片同時具備<span>漸進及變色功能</span>。這種鏡片較著<span>重遠距離視野</span>，<br
+              v-if="isPc"
+            />
+            而<span>鏡片兩旁的「模糊區」亦較細，可大幅減少鏡片的扭曲</span>，讓配戴者更舒適自在地細看自然景色，<br
+              v-if="isPc"
+            />
             非常適合熱愛進行戶外活動的人士。
           </p>
         </div>
         <div v-else-if="isType == 1" class="type-show-style-text">
           <span>辦公室漸進鏡片</span>
           <p>
-            辦公室漸進鏡片<span>適合一些工作或日常生活上</span>，需要長時間使用電腦或處理文書工作的人士。一般漸進鏡<br />
+            辦公室漸進鏡片<span>適合一些工作或日常生活上</span>，需要長時間使用電腦或處理文書工作的人士。一般漸進鏡<br
+              v-if="isPc"
+            />
             片的<span>中近距離視野區域範圍較小</span>
-            ，配戴者在工作時可能需要長期保持仰頭姿勢，<br />
-            才能看清事物，容易令眼睛和頸部疲勞：相反， 辦公室漸進鏡片<br />
+            ，配戴者在工作時可能需要長期保持仰頭姿勢，<br v-if="isPc" />
+            才能看清事物，容易令眼睛和頸部疲勞：相反， 辦公室漸進鏡片<br
+              v-if="isPc"
+            />
             用作<span>看遠景的位置</span>範圍<span>較小，看中、近距離的鏡片範圍則較大</span>，讓配戴者在閱讀時更舒適。
           </p>
         </div>
@@ -316,9 +325,11 @@ const miSightQuestionList = [
           <p>
             每位客人的生活需要和視光數據都不一樣，因此在設計鏡片時，視光師會<span
               >考慮配戴者的生活習慣、雙眼</span
-            ><br />
+            ><br v-if="isPc" />
             <span>的健康狀況、視覺需要、瞳距或鏡框的孤度</span
-            >等等。如客人選擇頂端的個人化漸進鏡片，視光師及配鏡師<br />
+            >等等。如客人選擇頂端的個人化漸進鏡片，視光師及配鏡師<br
+              v-if="isPc"
+            />
             便能為客人度身訂製出最合適的漸進眼鏡，獲得<span>自然和優越的視覺感觀體驗</span>。
           </p>
         </div>
@@ -392,6 +403,28 @@ const miSightQuestionList = [
               <span>需要</span>
             </div>
           </div>
+        </div>
+        <div v-if="!isPc">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="27"
+            viewBox="0 0 27 27"
+            fill="none"
+          >
+            <path
+              d="M11.3059 7.76195C11.1371 7.76195 10.9684 7.82945 10.8334 7.96446C10.5634 8.23446 10.5634 8.65634 10.8334 8.92634L15.8959 13.9889C16.1659 14.2589 16.5878 14.2589 16.8578 13.9889C17.1278 13.7189 17.1278 13.297 16.8578 13.027L11.7952 7.96446C11.6434 7.82945 11.4746 7.76195 11.3059 7.76195Z"
+              fill="#00A6CE"
+            />
+            <path
+              d="M16.3684 12.8245C16.1997 12.8245 16.0309 12.892 15.8959 13.027L10.8334 18.0895C10.5634 18.3595 10.5634 18.7814 10.8334 19.0514C11.1034 19.3214 11.5252 19.3214 11.7952 19.0514L16.8578 13.9888C17.1278 13.7188 17.1278 13.297 16.8578 13.027C16.7059 12.892 16.5372 12.8245 16.3684 12.8245Z"
+              fill="#00A6CE"
+            />
+            <path
+              d="M13.5002 -0.000320435C6.0582 -0.000320435 0 6.05788 0 13.4998C0 20.9418 6.0582 27 13.5002 27C20.9421 27 27.0003 20.9418 27.0003 13.4998C27.0003 6.05788 20.9421 -0.000320435 13.5002 -0.000320435ZM13.5002 25.65C6.80071 25.65 1.35002 20.1993 1.35002 13.4998C1.35002 6.80038 6.80071 1.3497 13.5002 1.3497C20.1996 1.3497 25.6503 6.80038 25.6503 13.4998C25.6503 20.1993 20.1996 25.65 13.5002 25.65Z"
+              fill="#00A6CE"
+            />
+          </svg>
         </div>
       </div>
       <div class="brand">
@@ -939,13 +972,13 @@ const miSightQuestionList = [
       font-weight: 500;
       line-height: 45px; /* 75% */
       z-index: 1;
-      &>div{
+      & > div {
         user-select: none;
       }
     }
   }
-  .presbyopia-glasses{
-    &>div:nth-child(2){
+  .presbyopia-glasses {
+    & > div:nth-child(2) {
       min-height: 135px;
     }
   }
@@ -1027,6 +1060,384 @@ const miSightQuestionList = [
   }
 }
 @media screen and (max-width: 767px) {
+  .presbyopia-box {
+    // padding: 0 23px 0 22px;
+  }
+  .maintain {
+    margin-top: 31px;
+    margin-bottom: 41px;
+    padding: 0 23px;
+    & > div:nth-child(2) {
+      margin-top: 23px;
+      & > div {
+        margin-bottom: 10px;
+        border-radius: 20px;
+        background: var(--Skin, #eafbff);
+        display: flex;
+        box-sizing: border-box;
+        gap: 0 10px;
+        padding: 18px 12px 18px 16px;
+        & > div:nth-child(1) {
+          min-width: 102px;
+          min-height: 102px;
+          width: 102px;
+          height: 102px;
+          & > img {
+            width: 100%;
+            height: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          color: var(--Grey-Deep, #4d4d4d);
+          text-align: justify;
+          font-family: "Noto Sans CJK TC";
+          font-size: 13.6px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px; /* 142.857% */
+          & > span:nth-child(1) {
+            color: var(--Brand-Color, #00a6ce);
+            font-family: "Noto Sans HK";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 19.88px; /* 124.248% */
+            letter-spacing: 0.8px;
+            display: block;
+            padding-right: 85px;
+            margin-bottom: 10px;
+          }
+        }
+      }
+    }
+  }
+  :deep(.question) {
+    padding: 0 23px 0 22px;
+    margin-top: 32px;
+    & > div {
+      & > div:nth-child(2) {
+        & > div {
+          button {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            text-align: left;
+            padding-left: 50px;
+            min-height: 71px;
+          }
+          .el-collapse-item__header::before {
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 46.361px; /* 165.577% */
+            letter-spacing: 1.4px;
+            left: 10px;
+          }
+          .el-collapse-item__header {
+            & > i {
+              min-width: 14px;
+              min-height: 26px;
+            }
+          }
+          .el-collapse-item__arrow.is-active {
+            min-width: 26px;
+            min-height: 14px;
+          }
+          .el-collapse-item__header.is-active::before {
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 46.361px; /* 165.577% */
+            letter-spacing: 1.4px;
+          }
+        }
+      }
+    }
+  }
+  .brand {
+    margin-top: 30px;
+    margin-bottom: 32px;
+    padding: 0 23px 0 22px;
+    & > div:nth-child(2) {
+      margin-top: 28px;
+      margin-bottom: 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 18px;
+      & > div {
+        width: 162px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .contrast {
+    margin-top: 45px;
+    background: var(--Skin, #eafbff);
+    padding-bottom: 40px;
+    padding-top: 20px;
+    position: relative;
+    & > div:nth-child(2) {
+      margin-top: 20px;
+      margin-left: 25px;
+      margin-right: 25px;
+      display: flex;
+      overflow-x: scroll;
+      & > div {
+        flex: 1;
+        width: 122px;
+        min-width: 122px;
+        border-radius: 25px;
+        & > div:nth-child(1) {
+          height: 89px;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > div:nth-child(2) {
+          height: 72px;
+          box-sizing: border-box;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          & > span {
+            display: inline;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 128.571% */
+            letter-spacing: 0.7px;
+          }
+        }
+        & > div:nth-child(3) {
+          height: 94px;
+          & > span {
+            display: inline;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 128.571% */
+            letter-spacing: 0.7px;
+          }
+        }
+        & > div:nth-child(4) {
+          height: 73px;
+          & > span {
+            display: inline;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 128.571% */
+            letter-spacing: 0.7px;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        background: #00517e;
+        color: #fff;
+        & > div {
+          border-bottom: 1.06px solid #fff;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        & > div:nth-child(2),
+        & > div:nth-child(3) {
+          background: #4a83a3;
+        }
+        & > div:nth-child(2),
+        & > div:nth-child(3),
+        & > div:nth-child(4) {
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: normal;
+        }
+        & > div:last-child {
+          border-bottom: none;
+        }
+      }
+      & > div:nth-child(2) {
+        background: #d1f0f3;
+        color: #00a6ce;
+        & > div:nth-child(2) {
+          background: #e1f3f7;
+        }
+        & > div {
+          border-bottom: 1.06px solid #21aaca;
+        }
+        & > div:nth-child(3) {
+          padding: 10px 10px 0 14px;
+          box-sizing: border-box;
+        }
+        & > div:last-child {
+          border-bottom: none;
+          box-sizing: border-box;
+          padding: 20px 10px 0 14px;
+        }
+      }
+      & > div:nth-child(3) {
+        color: #59ba68;
+        background: #e6fce9;
+        & > div:nth-child(2) {
+          background: #cef2d4;
+        }
+        & > div {
+          border-bottom: 1.06px solid #59ba68;
+        }
+        & > div:nth-child(3) {
+          padding: 10px 5px 0 8px;
+          box-sizing: border-box;
+        }
+        & > div:last-child {
+          border-bottom: none;
+          padding: 5px 10px 0 14px;
+        }
+      }
+      & > div:nth-child(4) {
+        color: #6c2a7e;
+        background: #d2b3e2;
+        & > div:nth-child(2) {
+          background: #f4e1ff;
+        }
+        & > div {
+          border-bottom: 1.06px solid #85439b;
+        }
+        & > div:nth-child(3) {
+          padding: 5px 0 0 0;
+          box-sizing: border-box;
+        }
+        & > div:last-child {
+          border-bottom: none;
+          padding: 20px 10px 0 14px;
+        }
+      }
+      & > div:nth-child(5) {
+        color: #0e72af;
+        background: #a6d8f7;
+        & > div:nth-child(2) {
+          background: #d2f0ff;
+        }
+        & > div {
+          border-bottom: 1.06px solid #3993d3;
+        }
+        & > div:nth-child(3) {
+          padding: 12px 5px 0 5px;
+          box-sizing: border-box;
+        }
+        & > div:last-child {
+          border-bottom: none;
+          padding: 20px 10px 0 14px;
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      position: absolute;
+      top: 30px;
+      right: 50px;
+    }
+  }
+  .type {
+    & > div:nth-child(2) {
+      padding: 0 10px 0 10px;
+      & > div {
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      color: var(--Brand-Color, #00a6ce);
+      text-align: center;
+      font-family: "Noto Sans HK";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 18px; /* 150% */
+      text-transform: uppercase;
+      padding: 0 40px;
+      margin-bottom: 20px;
+    }
+    & > div:nth-child(4) {
+      padding: 0 23px 0 22px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 24px 20px;
+      justify-items: center;
+      & > div {
+        position: relative;
+        width: 152px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        & > div:nth-child(1) {
+          width: 152px;
+          & > img {
+            width: 100%;
+          }
+        }
+        & > div:nth-child(2) {
+          position: absolute;
+          bottom: 0;
+          width: 100%;
+          color: var(--Deep-Blue, #3e5270);
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 23px; /* 164.286% */
+          border-radius: 0px 0px 10px 10px;
+          background: var(--Skin, #eafbff);
+        }
+      }
+    }
+    & > div:nth-child(5) {
+      margin-top: 20px;
+      padding: 0 23px 0 22px;
+      & > span {
+        color: var(--Deep-Blue, #3e5270);
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px; /* 187.5% */
+        letter-spacing: 1.2px;
+        width: 100%;
+        display: block;
+      }
+      & > p {
+        & > span {
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans CJK TC";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 22px;
+        }
+        color: var(--Grey, #4d4d4d);
+        text-align: center;
+        font-family: "Noto Sans CJK TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 22px; /* 157.143% */
+      }
+    }
+  }
   .btn-bg {
     & > div {
       display: flex;
@@ -1070,6 +1481,136 @@ const miSightQuestionList = [
     padding: 4px;
     width: fit-content;
     margin: 0 auto;
+  }
+  .theory {
+    margin-top: 50px;
+    background: var(--Skin, #eafbff);
+    box-sizing: border-box;
+    padding: 22px;
+    & > div {
+      & > div:nth-child(2) {
+        margin-top: 20px;
+        color: #60605f;
+        text-align: center;
+        font-family: "Noto Sans CJK TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23.007px; /* 164.334% */
+        letter-spacing: -0.07px;
+      }
+      & > div:nth-child(3) {
+        max-width: 340px;
+        margin: 15px auto 10px;
+        & > img {
+          width: 100%;
+        }
+      }
+      & > div:nth-child(4) {
+        & > span:nth-child(1) {
+          color: var(--Brand-Color, #00a6ce);
+          text-align: center;
+          font-family: "Noto Sans HK";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 23px; /* 164.286% */
+          display: block;
+          padding: 0 45px;
+        }
+        & > span:nth-child(2) {
+          padding: 0 50px;
+        }
+        & > span:nth-child(3) {
+          padding: 0 75px;
+        }
+        & > span:nth-child(4) {
+          padding: 0 0;
+        }
+        color: #60605f;
+        font-family: "Noto Sans HK";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  }
+  .comparison {
+    padding: 0 23px 0 22px;
+    margin-top: 51px;
+    position: relative;
+    & > div:nth-child(1) {
+      margin-bottom: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 0 20px;
+      & > div:nth-child(1) {
+        color: var(--Deep-Blue, #3e5270);
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26.975px; /* 192.68% */
+        letter-spacing: 0.7px;
+      }
+      & > div:nth-child(2) {
+        color: var(--OkLens-color, #0192b0);
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26.975px; /* 192.68% */
+        letter-spacing: 0.7px;
+      }
+    }
+    & > div:nth-child(3) {
+      margin-top: 10px;
+      display: flex;
+      justify-content: center;
+      gap: 0 70px;
+      & > div {
+        color: var(--Grey-Light, #d9d9d9);
+        text-align: center;
+        font-family: "Noto Sans CJK TC";
+        font-size: 21.202px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 15.901px; /* 75% */
+      }
+    }
+  }
+  .active-bg {
+    border: 2px solid #00a6ce;
+    transform: scale(1.05);
+  }
+  .hide-active{
+    transform: scale(1.05);
+  }
+  .presbyopia-glasses,
+  .what-presbyopia {
+    padding: 0 23px 0 22px;
+    margin-top: 21px;
+    & > div:nth-child(2) {
+      margin-top: 28px;
+      color: #60605f;
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 23.007px; /* 164.334% */
+      letter-spacing: -0.07px;
+      min-height: 92px;
+      & > span {
+        display: inline;
+      }
+    }
   }
   .profile-title {
     span {

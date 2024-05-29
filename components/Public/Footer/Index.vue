@@ -3,10 +3,11 @@ import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 const heightToTop = ref(0);
 onMounted(() => {
+  let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
-    let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
+  isPc.value = widthState;
   window.addEventListener("scroll", () => {
     // 获取距离页面顶部的距离
     heightToTop.value = document.documentElement.scrollTop;
