@@ -48,7 +48,7 @@ const bannerImg = {
     }
   }
   .video-information-box {
-    max-width: 1300px;
+    max-width: 960px;
     margin: 48px auto 128px auto;
   }
 }

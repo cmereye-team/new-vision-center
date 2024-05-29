@@ -15,12 +15,12 @@ const swiperBox = (swiper: any) => {
 };
 
 let deBoxSwiperRef = {
-  slideTo: (a:any) => {},
-  slideToLoop: (a:any) => {},
+  slideTo: (a: any) => {},
+  slideToLoop: (a: any) => {},
   slidePrev: () => {},
   slideNext: () => {},
 };
-const handleshowdeBox = (_idx:any) => {
+const handleshowdeBox = (_idx: any) => {
   deBoxSwiperRef.slideTo(_idx);
 };
 const handlesSliNext = () => {
@@ -162,10 +162,10 @@ const discountsList = ref([
     position: relative;
   }
   .discounts-title {
-    margin-bottom: 40px;
+    margin-bottom: 30px;
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 50px;
+    font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -177,37 +177,34 @@ const discountsList = ref([
       margin-bottom: 35px;
       color: #60605f;
       font-family: "Inter";
-      font-size: 30px;
+      font-size: 22.5px;
       font-style: normal;
       font-weight: 900;
-      line-height: 40px; /* 133.333% */
+      line-height: 30px;
       text-transform: uppercase;
     }
     & > div:nth-child(2) {
-      margin-bottom: 72px;
+      margin-bottom: 52px;
       color: var(--Brand-Color, #00a6ce);
       font-family: "Noto Sans HK";
-      font-size: 18px;
+      font-size: 13.5px;
       font-style: normal;
       font-weight: 700;
-      line-height: 50px; /* 277.778% */
+      line-height: 37.5px;
       & > span:nth-child(2) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
-        font-size: 40px;
-        font-style: normal;
-        font-weight: 700;
+        font-size: 30px;
       }
     }
     & > div:nth-child(3) {
-      margin-bottom: 50px;
+      margin-bottom: 30px;
       color: #60605f;
-
       font-family: "Inter";
-      font-size: 18px;
+      font-size: 13.5px;
       font-style: normal;
       font-weight: 500;
-      line-height: 30px; /* 166.667% */
+      line-height: 22.5px;
       text-transform: uppercase;
     }
     & > div:nth-child(4) {
@@ -220,7 +217,7 @@ const discountsList = ref([
 
         color: #fff;
         font-family: "Inter";
-        font-size: 30px;
+        font-size: 22.5px;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
@@ -234,7 +231,7 @@ const discountsList = ref([
   }
   .swiper-button-next-prev {
     position: absolute;
-    top: 31.5%;
+    top: 30%;
     transform: translateY(-25%);
     z-index: 99;
     width: 100%;
@@ -263,33 +260,33 @@ const discountsList = ref([
     margin-top: 60px;
     .swiper-btn-item {
       & > div:nth-child(1) {
-        margin-bottom: 25px;
+        margin-bottom: 18px;
       }
       & > div:nth-child(2) {
         color: #60605f;
         font-family: "Inter";
-        font-size: 18px;
+        font-size: 13.5px;
         font-style: normal;
         font-weight: 500;
-        line-height: 27.816px; /* 154.534% */
+        line-height: 20.862px;
         text-transform: uppercase;
-        margin-bottom: 15px;
+        margin-bottom: 10px;
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 10.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 34.77px;
+          line-height: 26.078px;
           span:nth-child(2) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 31.293px;
+            font-size: 23.47px;
             font-style: normal;
             font-weight: 700;
-            line-height: 34.77px;
+            line-height: 26.078px;
           }
         }
         & > div:nth-child(2) {
@@ -301,7 +298,7 @@ const discountsList = ref([
 
             font-family: "Inter";
             cursor: pointer;
-            font-size: 19.029px;
+            font-size: 14.272px;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
@@ -318,7 +315,7 @@ const discountsList = ref([
       flex: 5;
     }
     & > div:nth-child(2) {
-      margin-left: 135px;
+      margin-left: 105px;
     }
   }
   .img-slide {
@@ -331,9 +328,9 @@ const discountsList = ref([
     display: flex;
     justify-content: space-between;
     & > div {
-      margin-left: 24px;
+      margin-left: 18px;
       & > div:nth-child(1) {
-        max-width: 306px;
+        max-width: 230px;
         & > img {
           width: 100%;
         }
