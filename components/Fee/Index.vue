@@ -238,6 +238,8 @@ onMounted(() => {
     margin-bottom: 80px;
   }
   .table-header {
+    max-width: 960px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -245,7 +247,7 @@ onMounted(() => {
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: "Inter";
-      font-size: 50px;
+      font-size: 37.5px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;

@@ -91,6 +91,8 @@ const props = defineProps({
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .detail-table {
+    max-width: 960px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     margin-bottom: 80px;
@@ -98,27 +100,28 @@ const props = defineProps({
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Inter";
-        font-size: 36px;
+        font-size: 27px;
         font-style: normal;
         font-weight: 600;
-        line-height: 30px; /* 83.333% */
+        line-height: 22.5px;
         text-transform: uppercase;
-        margin-bottom: 13px;
+        margin-bottom: 10px;
       }
       & > div:nth-child(2) {
         color: #60605f;
-
         font-family: "Inter";
-        font-size: 22px;
+        font-size: 16.5px;
         font-style: normal;
         font-weight: 400;
-        line-height: 30px; /* 136.364% */
+        line-height: 22.5px;
         text-transform: uppercase;
-        margin-bottom: 30px;
+        margin-bottom: 21px;
       }
     }
   }
   .detail-content {
+    max-width: 960px;
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
   }
@@ -129,20 +132,21 @@ const props = defineProps({
       flex-direction: column;
       background: yellowgreen;
       border-radius: 30px 30px 0 0;
-      width: calc((100% - 396px) / 3);
+      // width: calc((100% - 396px) / 3);
+      width: 218px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
     & > div:nth-child(1) {
-      width: 396px;
+      width: 296px;
       background: #00517e;
       min-height: 130px;
 
       color: #fff;
 
       font-family: "Inter";
-      font-size: 30px;
+      font-size: 22.5px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -155,11 +159,11 @@ const props = defineProps({
       font-style: normal;
       line-height: normal;
       & > span:nth-child(1) {
-        font-size: 28px;
+        font-size: 21px;
         font-weight: 600;
       }
       & > span:nth-child(2) {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
       }
     }
@@ -170,11 +174,11 @@ const props = defineProps({
       font-style: normal;
       line-height: normal;
       & > span:nth-child(1) {
-        font-size: 28px;
+        font-size: 21px;
         font-weight: 600;
       }
       & > span:nth-child(2) {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
       }
       background: #d1f0f3;
@@ -186,11 +190,11 @@ const props = defineProps({
       font-style: normal;
       line-height: normal;
       & > span:nth-child(1) {
-        font-size: 28px;
+        font-size: 21px;
         font-weight: 600;
       }
       & > span:nth-child(2) {
-        font-size: 24px;
+        font-size: 18px;
         font-weight: 400;
       }
       background: #fbf1e8;
@@ -202,16 +206,17 @@ const props = defineProps({
       border-top: 2px solid #8fb3c6;
 
       & > div {
-        width: calc((100% - 396px) / 3);
+        // width: calc((100% - 296px) / 3);
+        width: 218px;
         text-align: center;
         padding: 45px 0;
         // border-top: 2px solid #8FB3C6;
         & > div {
-          color: #fff;
+          color: #ffffff;
           font-family: "Inter";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
-          font-weight: 600;
+          font-weight: 400;
           line-height: normal;
           display: flex;
           justify-content: center;
@@ -221,7 +226,7 @@ const props = defineProps({
       }
       & > div:nth-child(1) {
         background: #00517e;
-        width: 396px;
+        width: 296px;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -284,6 +289,11 @@ const props = defineProps({
   }
   .detail-declare {
     margin-top: 24px;
+    font-size: 13.5px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22.5px;
+    margin-left: 5px;
   }
 }
 @media screen and (max-width: 767px) {
@@ -334,9 +344,7 @@ const props = defineProps({
       width: 103px;
       background: #00517e;
       min-height: 65px;
-
       color: #fff;
-
       font-family: "Inter";
       font-size: 14px;
       font-style: normal;
@@ -509,7 +517,7 @@ const props = defineProps({
     margin-top: 8px;
 
     color: #60605f;
-    font-family: 'Inter';
+    font-family: "Inter";
     font-size: 14px;
     font-style: normal;
     font-weight: 400;
