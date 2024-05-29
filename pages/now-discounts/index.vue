@@ -49,7 +49,7 @@ const bannerImg = {
   }
   .video-information-box {
     max-width: 960px;
-    margin: 48px auto 128px auto;
+    margin: 48px auto 90px auto;
   }
 }
 @media screen and (max-width: 767px) {
