@@ -1336,24 +1336,24 @@ const okQuestionList = [
             <div v-if="isPc">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1305"
-                height="854"
-                viewBox="0 0 1305 854"
+                width="980"
+                height="641"
+                viewBox="0 0 980 641"
                 fill="none"
               >
-                <g filter="url(#filter0_d_533_34555)">
+                <g filter="url(#filter0_d_1101_13259)">
                   <path
-                    d="M10 56H611L652.5 10L689 56H1295V844H10V56Z"
+                    d="M8.375 42.5H459.125L490.25 8L517.625 42.5H972.125V633.5H8.375V42.5Z"
                     fill="#EAFBFF"
                   />
                 </g>
                 <defs>
                   <filter
-                    id="filter0_d_533_34555"
-                    x="0"
-                    y="0"
-                    width="1305"
-                    height="854"
+                    id="filter0_d_1101_13259"
+                    x="0.875"
+                    y="0.5"
+                    width="978.75"
+                    height="640.5"
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
@@ -1365,7 +1365,7 @@ const okQuestionList = [
                       result="hardAlpha"
                     />
                     <feOffset />
-                    <feGaussianBlur stdDeviation="5" />
+                    <feGaussianBlur stdDeviation="3.75" />
                     <feComposite in2="hardAlpha" operator="out" />
                     <feColorMatrix
                       type="matrix"
@@ -1374,12 +1374,12 @@ const okQuestionList = [
                     <feBlend
                       mode="normal"
                       in2="BackgroundImageFix"
-                      result="effect1_dropShadow_533_34555"
+                      result="effect1_dropShadow_1101_13259"
                     />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
-                      in2="effect1_dropShadow_533_34555"
+                      in2="effect1_dropShadow_1101_13259"
                       result="shape"
                     />
                   </filter>
@@ -2203,24 +2203,24 @@ const okQuestionList = [
             <div v-if="isPc">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="1305"
-                height="854"
-                viewBox="0 0 1305 854"
+                width="980"
+                height="641"
+                viewBox="0 0 980 641"
                 fill="none"
               >
-                <g filter="url(#filter0_d_533_35076)">
+                <g filter="url(#filter0_d_1101_13764)">
                   <path
-                    d="M10 56H611L652.5 10L689 56H1295V844H10V56Z"
+                    d="M8 42.5H458.75L489.875 8L517.25 42.5H971.75V633.5H8V42.5Z"
                     fill="#EAFFF9"
                   />
                 </g>
                 <defs>
                   <filter
-                    id="filter0_d_533_35076"
-                    x="0"
-                    y="0"
-                    width="1305"
-                    height="854"
+                    id="filter0_d_1101_13764"
+                    x="0.5"
+                    y="0.5"
+                    width="978.75"
+                    height="640.5"
                     filterUnits="userSpaceOnUse"
                     color-interpolation-filters="sRGB"
                   >
@@ -2232,7 +2232,7 @@ const okQuestionList = [
                       result="hardAlpha"
                     />
                     <feOffset />
-                    <feGaussianBlur stdDeviation="5" />
+                    <feGaussianBlur stdDeviation="3.75" />
                     <feComposite in2="hardAlpha" operator="out" />
                     <feColorMatrix
                       type="matrix"
@@ -2241,12 +2241,12 @@ const okQuestionList = [
                     <feBlend
                       mode="normal"
                       in2="BackgroundImageFix"
-                      result="effect1_dropShadow_533_35076"
+                      result="effect1_dropShadow_1101_13764"
                     />
                     <feBlend
                       mode="normal"
                       in="SourceGraphic"
-                      in2="effect1_dropShadow_533_35076"
+                      in2="effect1_dropShadow_1101_13764"
                       result="shape"
                     />
                   </filter>
@@ -3124,6 +3124,7 @@ const okQuestionList = [
         <PublicCollapse
           :title="'OK 鏡常見問題'"
           :listQuestion="okQuestionList"
+          :testWidth="true"
         />
       </div>
     </div>
@@ -3144,29 +3145,26 @@ const okQuestionList = [
     & > div {
       display: flex;
       justify-content: center;
+      margin: 0 auto;
+      width: 596px;
+      & > img {
+        width: 100%;
+      }
     }
   }
   .orthokeratoplasty-means {
-    max-width: 1284px;
+    max-width: 960px;
     margin: 80px auto 0;
     & > div:nth-child(1) {
-      background: url(https://static.cmereye.com/imgs/2024/05/0c69bc1eb338420c.jpg)
+      background: url(https://static.cmereye.com/imgs/2024/05/41500a3b6e4b4618.jpg)
         no-repeat;
-      background-size: 100%;
-      height: 492.238px;
+      background-size: 100% 100%;
+      height: 370px;
       box-sizing: border-box;
-      padding: 30px 60px 60px 30px;
+      padding: 18px 40px 45px 30px;
       display: flex;
-      border-radius: 20px;
-      background: linear-gradient(
-          272deg,
-          rgba(80, 197, 228, 0) 33.09%,
-          rgba(80, 197, 228, 0.4) 46.08%,
-          #50c5e4 59.48%
-        ),
-        url(<path-to-image>) lightgray 1377.469px 571.859px / -78.314% -129.226%
-          no-repeat;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      border-radius: 15px;
+      box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
       & > div:nth-child(1) {
         flex: 4.7;
       }
@@ -3175,18 +3173,18 @@ const okQuestionList = [
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans CJK TC";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 200% */
+          line-height: 45px;
           padding-left: 30px;
-          padding-bottom: 10px;
+          padding-bottom: 6px;
           position: relative;
           margin-bottom: 30px;
         }
         & > div:nth-child(1)::after {
           content: "";
-          height: 3px;
+          height: 2.25px;
           display: inline-block;
           width: 35%;
           position: absolute;
@@ -3197,32 +3195,32 @@ const okQuestionList = [
         & > div:nth-child(2) {
           padding-left: 30px;
           & > div {
-            margin-bottom: 40px;
+            margin-bottom: 20px;
           }
           & > div:nth-child(1) {
             color: var(--Deep-Blue, #3e5270);
             font-family: "Noto Sans CJK TC";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 60px; /* 200% */
+            line-height: 35px;
           }
           & > div:nth-child(2) {
             color: var(--Deep-Blue, #3e5270);
             font-family: "Noto Sans CJK TC";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 40px; /* 200% */
+            line-height: 35px;
           }
         }
         & > div:nth-child(3) {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans CJK TC";
-          font-size: 20px;
+          font-size: 15px;
           font-style: normal;
           font-weight: 700;
-          line-height: 30px; /* 150% */
+          line-height: 22.5px;
         }
       }
     }
@@ -3238,16 +3236,25 @@ const okQuestionList = [
         align-items: center;
         box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
         border-radius: 30px;
-        padding: 11px 16px;
+        padding: 8px 10px;
         & > span:nth-child(2) {
           margin: 0 5px;
           color: var(--White, #fff);
           text-align: center;
           font-family: Inter;
-          font-size: 29.308px;
+          font-size: 21.981px;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
+        }
+        & > span:nth-child(1),
+        & > span:nth-child(3) {
+          width: 14px;
+          height: 24px;
+          & > svg {
+            width: 100%;
+            height: 100%;
+          }
         }
       }
       & > div:nth-child(1):hover {
@@ -3270,63 +3277,64 @@ const okQuestionList = [
         display: flex;
         justify-content: center;
         & > div:nth-child(2) {
-          max-width: 1284px;
+          max-width: 960px;
           width: 100%;
           position: absolute;
           box-sizing: border-box;
           top: 0;
           left: 0;
-          padding: 75px 150px 30px;
+          padding: 55px 110px 20px;
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 45px;
+            font-size: 33.75px;
             font-style: normal;
             font-weight: 700;
-            line-height: 60px; /* 133.333% */
-            letter-spacing: 2.25px;
-            margin-bottom: 30px;
+            line-height: 45px; /* 133.333% */
+            letter-spacing: 1.688px;
+            margin-bottom: 23px;
           }
           & > div:nth-child(2) {
             display: grid;
             grid-template-columns: auto auto auto auto;
             width: 100%;
-            gap: 30px 110px;
+            gap: 25px 85px;
             & > div {
               display: flex;
               flex-direction: column;
               align-items: center;
               & > div:nth-child(1) {
-                color: var(--Theme-Color, #fc1682);
+                color: var(--Theme-Color, #17aed2);
                 font-family: "Noto Sans HK";
-                font-size: 30px;
+                font-size: 22.5px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 45px; /* 150% */
-                letter-spacing: 1.5px;
+                line-height: 33.75px; /* 150% */
+                letter-spacing: 1.125px;
                 display: flex;
                 justify-content: flex-start;
                 align-items: center;
                 position: relative;
                 padding-left: 10px;
-                min-height: 62px;
-                margin-bottom: 25px;
-                left: -50px;
+                margin-bottom: 12px;
+                min-height: 46.5px;
+                width: 46.5px;
+                left: -30px;
               }
               & > div:nth-child(1)::before {
                 content: "";
                 position: absolute;
-                width: 62px;
-                height: 62px;
-                background: url("https://static.cmereye.com/imgs/2024/05/2a7468341206e000.png")
+                width: 46.5px;
+                height: 46.5px;
+                background: url("https://static.cmereye.com/imgs/2024/05/2d6a477fed6ee4ea.png")
                   no-repeat;
                 background-size: 100%;
                 left: 0;
               }
               & > div:nth-child(2) {
-                height: 100px;
-                width: 125px;
+                width: 72px;
+                height: 74px;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -3335,15 +3343,15 @@ const okQuestionList = [
               & > div:nth-child(3) {
                 position: relative;
                 left: 0px;
-                margin-top: 15px;
+                margin-top: 10px;
                 display: flex;
                 flex-direction: column;
                 color: var(--Brand-Color, #3e5270);
                 font-family: "Noto Sans HK";
-                font-size: 18px;
+                font-size: 13.5px;
                 font-style: normal;
-                font-weight: 600;
-                line-height: 24px; /* 133.333% */
+                font-weight: 500;
+                line-height: 18px;
                 text-transform: uppercase;
                 & > span {
                   text-wrap: nowrap;
@@ -3358,17 +3366,22 @@ const okQuestionList = [
                 position: unset;
                 padding-left: 0;
                 margin-bottom: 7px;
+                width: 148px;
+                & > img {
+                  width: 100%;
+                }
               }
               & > a:nth-child(3) {
+                margin-top: 20px;
                 cursor: pointer;
                 display: flex;
                 flex-direction: row;
-                padding: 10px 30px;
+                padding: 8px 24px;
                 justify-content: center;
                 align-items: flex-start;
                 background: #00517e;
-                border: 3px solid #02ed85;
-                border-radius: 30px;
+                border: 2px solid #02ed85;
+                border-radius: 28px;
                 & > span:nth-child(1) {
                   display: flex;
                   justify-content: center;
@@ -3377,11 +3390,11 @@ const okQuestionList = [
                 & > span:nth-child(2) {
                   color: #fff;
                   font-family: Inter;
-                  font-size: 21.103px;
+                  font-size: 15.828px;
                   font-style: normal;
                   font-weight: 465;
                   line-height: normal;
-                  margin-left: 15px;
+                  margin-left: 12px;
                 }
               }
             }
@@ -3397,6 +3410,12 @@ const okQuestionList = [
             box-sizing: border-box;
             & > div {
               cursor: pointer;
+              width: 24px;
+              height: 43px;
+              & > svg {
+                width: 100%;
+                height: 100%;
+              }
             }
             & > div:hover {
               transform: scale(1.1);
@@ -3420,26 +3439,27 @@ const okQuestionList = [
   }
   .orthokeratoplasty-step {
     background: var(--Skin, #eafbff);
-    padding-top: 40px;
-    padding-bottom: 20px;
+    padding-top: 28px;
+    padding-bottom: 15px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 45px;
+      font-size: 33.75px;
       font-style: normal;
       font-weight: 700;
-      line-height: 60px; /* 133.333% */
-      letter-spacing: 2.25px;
+      line-height: 45px; /* 133.333% */
+      letter-spacing: 1.688px;
     }
     & > div:nth-child(2) {
       padding: 30px 50px 0;
-      max-width: 1175px;
+      box-sizing: border-box;
+      max-width: 880px;
       margin: 0 auto;
       border-radius: 20px;
       background: var(--White, #fff);
-      margin-bottom: 13px;
-      margin-top: 50px;
+      margin-bottom: 10px;
+      margin-top: 35px;
       display: flex;
       justify-content: space-around;
       & > div {
@@ -3447,10 +3467,10 @@ const okQuestionList = [
           display: flex;
           color: #60605f;
           font-family: Inter;
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 600;
-          line-height: 31.287px; /* 142.214% */
+          line-height: 23.465px;
           & > div:nth-child(1) {
             margin-right: 10px;
           }
@@ -3463,7 +3483,7 @@ const okQuestionList = [
         }
         & > div::after {
           content: "";
-          width: 3px;
+          width: 2.25px;
           height: 55px;
           background: var(--Grey-Deep, #4d4d4d);
           position: absolute;
@@ -3478,8 +3498,8 @@ const okQuestionList = [
       & > div:nth-child(1) {
         & > div:nth-child(2):after {
           content: "";
-          width: 3px;
-          height: 90px;
+          width: 2.25px;
+          height: 80px;
           background: var(--Grey-Deep, #4d4d4d);
           position: absolute;
           bottom: -55px;
@@ -3489,37 +3509,43 @@ const okQuestionList = [
       }
     }
     & > div:nth-child(3) {
-      max-width: 1175px;
+      max-width: 880px;
       margin: 0 auto;
       color: var(--Sales, #db4444);
       font-family: "Noto Sans CJK TC";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
-      line-height: 30px; /* 150% */
+      line-height: 22.5px;
       text-align: right;
     }
   }
   .orthokeratoplasty-server {
-    max-width: 1284px;
-    margin: 0 auto 60px;
+    max-width: 960px;
+    margin: 50px auto 45px;
     & > div:nth-child(2) {
+      margin-top: 55px;
       display: flex;
       justify-content: center;
-      gap: 37px;
+      gap: 28px;
       & > div {
-        margin-top: 75px;
         display: flex;
         flex-direction: column;
+        & > div:nth-child(1) {
+          width: 130px;
+          & > img {
+            width: 100%;
+          }
+        }
         & > div:nth-child(2) {
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
           display: flex;
           flex-direction: column;
         }
@@ -3527,15 +3553,21 @@ const okQuestionList = [
     }
   }
   .orthokeratoplasty-explain {
-    max-width: 1284px;
-    margin: 50px auto 65px;
+    max-width: 960px;
+    margin: 40px auto 50px;
     position: relative;
     & > div:nth-child(1) {
       overflow-y: scroll;
       display: flex;
-      gap: 28px;
-      padding: 10px 0;
+      gap: 21px;
+      padding: 20px 0;
       position: relative;
+      & > div {
+        width: 309px;
+        & > img {
+          width: 309px;
+        }
+      }
     }
     & > div:nth-child(1)::-webkit-scrollbar {
       width: 0;
@@ -3564,11 +3596,27 @@ const okQuestionList = [
         color: var(--White, #fff);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 18px;
+        font-size: 13.5px;
         font-style: normal;
         font-weight: 500;
-        line-height: 25px; /* 138.889% */
-        letter-spacing: 0.9px;
+        line-height: 18.75px; /* 138.889% */
+        letter-spacing: 0.675px;
+      }
+      & > span:nth-child(1) {
+        width: 20px;
+        height: 20px;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+      & > span:nth-child(3) {
+        width: 14px;
+        height: 24px;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
       }
       & > span:nth-child(2) {
         margin: 0 10px;
@@ -3606,8 +3654,8 @@ const okQuestionList = [
     background: url("https://static.cmereye.com/imgs/2024/05/a43618d7d3460517.png")
       no-repeat;
     background-size: 100% 100%;
-    width: 32px;
-    height: 47px;
+    width: 20px;
+    height: 36px;
     position: absolute;
     top: 27%;
     left: -4%;
@@ -3621,66 +3669,111 @@ const okQuestionList = [
     background: url("https://static.cmereye.com/imgs/2024/05/a43618d7d3460517.png")
       no-repeat;
     background-size: 100% 100%;
-    width: 32px;
-    height: 47px;
+    width: 20px;
+    height: 36px;
     transform: rotate(180deg);
     z-index: 5;
   }
   .orthokeratoplasty-suitable {
-    max-width: 1284px;
-    margin: 0 auto;
+    max-width: 960px;
+    margin: 30px auto 40px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: Inter;
-      font-size: 40px;
+      font-size: 30px;
       font-style: normal;
       font-weight: 600;
-      line-height: 30px; /* 75% */
+      line-height: 22.5px; /* 75% */
       text-transform: uppercase;
     }
     & > div:nth-child(2) {
-      margin: 50px auto 35px;
+      margin: 35px auto 25px;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 15px 25px;
+      gap: 10px 20px;
       & > div {
-        width: 413.285px;
-        height: 190.514px;
+        width: 309.964px;
+        height: 142.886px;
         display: flex;
         background: #eafbff;
-        border-radius: 30px;
+        border-radius: 20px;
         align-items: center;
         justify-content: center;
+        & > div:nth-child(2) {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
         & > div:nth-child(2) {
           margin-left: 40px;
           display: flex;
           flex-direction: column;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 85.482px;
+            height: 72.75px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 63.824px;
+            height: 68.144px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 90px;
+            height: 65.998px;
+          }
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 87px;
+            height: 67.705px;
+          }
+        }
+      }
+      & > div:nth-child(5) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 65.998px;
+            height: 71.314px;
+          }
         }
       }
     }
     & > div:nth-child(3) {
-      color: var(--Sales, #db4444);
+      color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
-      line-height: 30px; /* 150% */
+      line-height: 22.5px; /* 150% */
     }
   }
   .orthokeratoplasty-merits {
-    max-width: 1284px;
-    // padding-right: 42px;
-    margin: 65px auto;
+    max-width: 960px;
+    margin: 50px auto 30px;
     display: flex;
     justify-content: space-between;
+    gap: 0 35px;
     & > div {
       flex: 1;
     }
@@ -3690,50 +3783,62 @@ const okQuestionList = [
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 45px; /* 150% */
-          letter-spacing: 1.5px;
+          line-height: 33.75px; /* 150% */
+          letter-spacing: 1.125px;
         }
         & > div:nth-child(2) {
-          margin-left: 55px;
+          margin-left: 45px;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 2.25px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 1.688px;
+        }
+      }
+      & > div:nth-child(2) {
+        max-width: 478px;
+        & > img {
+          width: 100%;
         }
       }
     }
     & > div:nth-child(2) {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: flex-start;
-      gap: 30px 37.5px;
+      padding-top: 21px;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 20px 25px;
       & > div {
-        max-width: 173px;
+        max-width: 130px;
         display: flex;
         flex-direction: column;
         align-items: center;
+        & > div:nth-child(1) {
+          width: 100%;
+          & > img {
+            width: 100%;
+          }
+        }
         & > div:nth-child(2) {
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 136.364% */
-          letter-spacing: 1.1px;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
         }
       }
     }
   }
   .orthokeratoplasty-assess {
-    max-width: 1284px;
-    margin: 0 auto 55px;
+    max-width: 960px;
+    margin: 90px auto 55px;
     & > div:nth-child(1) {
       border-radius: 37px;
       background: var(--Skin, #eafbff);
@@ -3742,30 +3847,30 @@ const okQuestionList = [
       padding: 30px;
       margin-bottom: 60px;
       & > div:nth-child(1) {
-        margin-right: 125px;
+        margin-right: 75px;
         & > div:nth-child(1) {
           color: var(--White, #fff);
           font-family: "Noto Sans CJK TC";
-          font-size: 45px;
+          font-size: 33.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 133.333% */
-          letter-spacing: 7.5px;
-          padding-left: 14px;
+          line-height: 45px; /* 133.333% */
+          letter-spacing: 5.575px;
+          padding-left: 8px;
           background: url("https://static.cmereye.com/imgs/2024/05/3598b34f5d471b6c.png")
             no-repeat;
           background-size: 100% 100%;
-          height: 68px;
-          width: 266px;
+          height: 51px;
+          width: 200px;
         }
         & > div:nth-child(2) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 45px; /* 150% */
-          letter-spacing: 1.5px;
+          line-height: 33.75px; /* 150% */
+          letter-spacing: 1.125px;
           padding-left: 3px;
           margin-bottom: 20px;
           margin-top: 5px;
@@ -3789,15 +3894,11 @@ const okQuestionList = [
           color: #f04e4e;
           font-family: "Noto Sans HK";
           font-style: normal;
-          span:nth-child(1) {
-            font-size: 45px;
-            font-weight: 700;
-            line-height: 60px;
-          }
+          font-weight: 700;
+          line-height: 45px;
+          font-size: 33.75px;
           span:nth-child(2) {
-            font-weight: 700;
-            line-height: 60px;
-            font-size: 60px;
+            font-size: 45px;
           }
         }
       }
@@ -3805,13 +3906,18 @@ const okQuestionList = [
         display: flex;
         flex-wrap: wrap;
         justify-content: flex-start;
-        gap: 30px 52px;
+        gap: 25px 10px;
         & > div {
           display: flex;
           flex-direction: column;
           justify-content: space-between;
           align-items: center;
           min-width: 115px;
+          & > div:nth-child(1) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
           & > div:nth-child(2) {
             display: flex;
             flex-direction: column;
@@ -3819,11 +3925,67 @@ const okQuestionList = [
             color: var(--Grey-Deep, #4d4d4d);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 22px;
+            font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 30px; /* 136.364% */
-            letter-spacing: 1.1px;
+            line-height: 22.5px; /* 136.364% */
+            letter-spacing: 0.825px;
+          }
+        }
+        & > div:nth-child(1) {
+          & > div {
+            & > svg {
+              width: 73.5px;
+              height: 62.873px;
+            }
+          }
+        }
+        & > div:nth-child(2) {
+          & > div {
+            & > svg {
+              width: 75.407px;
+              height: 48.398px;
+            }
+          }
+        }
+        & > div:nth-child(3) {
+          & > div {
+            & > svg {
+              width: 81px;
+              height: 45.75px;
+            }
+          }
+        }
+        & > div:nth-child(4) {
+          & > div {
+            & > svg {
+              width: 38.25px;
+              height: 52.5px;
+            }
+          }
+        }
+        & > div:nth-child(5) {
+          & > div {
+            & > svg {
+              width: 49.026px;
+              height: 49.052px;
+            }
+          }
+        }
+        & > div:nth-child(6) {
+          & > div {
+            & > svg {
+              width: 73.5px;
+              height: 62.873px;
+            }
+          }
+        }
+        & > div:nth-child(7) {
+          & > div {
+            & > svg {
+              width: 79.5px;
+              height: 46.352px;
+            }
           }
         }
       }
@@ -3844,15 +4006,15 @@ const okQuestionList = [
         & > span:nth-child(1) {
           color: var(--White, #fff);
           font-family: "Noto Sans HK";
-          font-size: 25px;
+          font-size: 18.75px;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
-          letter-spacing: 2.5px;
-          margin-right: 14px;
+          letter-spacing: 1.875px;
+          margin-right: 10px;
         }
         & > span:nth-child(2) {
-          width: 39px;
+          width: 21px;
           & > img {
             width: 100%;
           }
@@ -3863,8 +4025,6 @@ const okQuestionList = [
         position: relative;
         z-index: 5;
       }
-    }
-    & > a:nth-child(2) {
       background: var(
         --Style,
         linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%)
@@ -3878,19 +4038,19 @@ const okQuestionList = [
   }
   .orthokeratoplasty-theory {
     & > div:nth-child(2) {
-      margin-top: 40px;
-      margin-bottom: 60px;
+      margin-top: 25px;
+      margin-bottom: 40px;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 28px;
+      font-size: 21px;
       font-style: normal;
       font-weight: 500;
-      line-height: 60px; /* 214.286% */
-      padding: 0 445px;
+      line-height: 45px;
+      padding: 0 615px;
     }
     & > div:nth-child(3) {
-      max-width: 1284px;
+      max-width: 960px;
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
@@ -3898,39 +4058,45 @@ const okQuestionList = [
       & > div {
         & > div:nth-child(1) {
           display: flex;
-
+          gap: 0 20px;
+          justify-content: center;
           & > div:nth-child(1) {
             border: #59ba68 1px dashed;
-            width: 62px;
-            height: 62px;
+            width: 46.5px;
+            height: 46.5px;
             border-radius: 50%;
             color: var(--Brand-2, #59ba68);
             font-family: "Noto Sans HK";
-            font-size: 30px;
+            font-size: 22.5px;
             font-style: normal;
             font-weight: 700;
-            line-height: 45px; /* 150% */
-            letter-spacing: 1.5px;
+            line-height: 33.75px; /* 150% */
+            letter-spacing: 1.125px;
             display: flex;
             justify-content: center;
             align-items: center;
             margin-right: 17px;
           }
           & > div:nth-child(2) {
+            margin-top: 10px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 25px;
+            font-size: 18.75px;
             font-style: normal;
             font-weight: 700;
-            line-height: 30px; /* 120% */
-            letter-spacing: 1.25px;
+            line-height: 22.5px; /* 120% */
+            letter-spacing: 0.938px;
           }
         }
         & > div:nth-child(2) {
-          min-height: 265px;
+          min-height: 243px;
+          max-width: 196px;
+          & > img {
+            width: 100%;
+          }
           display: flex;
           align-items: center;
           justify-content: center;
@@ -3942,78 +4108,84 @@ const okQuestionList = [
       color: var(--Sales, #db4444);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 20px;
+      font-size: 15px;
       font-style: normal;
       font-weight: 700;
-      line-height: 30px; /* 150% */
+      line-height: 22.5px;
     }
     & > div:nth-child(5) {
-      max-width: 1284px;
+      max-width: 960px;
       margin: 0 auto 75px;
-      border-radius: 37px;
+      border-radius: 27px;
       background: var(--Skin, #eafbff);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-      padding-top: 30px;
-      padding-bottom: 16px;
-      padding-left: 47px;
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 35px;
       display: flex;
+      gap: 0 35px;
       justify-content: space-between;
       & > div:nth-child(1) {
-        margin-right: 47px;
         padding-top: 25px;
+        padding-right: 20px;
         color: #60605f;
         font-family: "Noto Sans CJK TC";
-        font-size: 28px;
+        font-size: 21px;
         font-style: normal;
         font-weight: 500;
-        line-height: 60px; /* 214.286% */
-        max-width: 650px;
+        line-height: 45px;
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           color: #00a6ce;
           font-family: "Noto Sans HK";
-          font-size: 25px;
+          font-size: 18.75px;
           font-style: normal;
           font-weight: 700;
-          line-height: 30px; /* 120% */
-          letter-spacing: 1.25px;
+          line-height: 22.5px; /* 120% */
+          letter-spacing: 0.938px;
           text-align: center;
           margin-bottom: 10px;
+        }
+        & > div:nth-child(2) {
+          width: 403px;
+          & > img {
+            width: 100%;
+          }
         }
       }
     }
     & > div:nth-child(6) {
-      max-width: 1284px;
+      max-width: 960px;
       margin: 0 auto;
-      height: 493px;
-      border-radius: 20px;
+      height: 370;
+      border-radius: 15px;
       overflow: hidden;
-      background: url("https://static.cmereye.com/imgs/2024/05/1cff42e5fc4ed93b.jpg")
+      background: url("https://static.cmereye.com/imgs/2024/05/fa0a497345651931.jpg")
         no-repeat;
       background-size: 100% 100%;
-      box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
       display: flex;
       flex-direction: column;
-      padding-right: 130px;
+      padding-right: 100px;
       box-sizing: border-box;
-      padding-top: 26px;
-      padding-bottom: 48px;
+      padding-top: 20px;
+      padding-bottom: 32px;
 
       & > div {
         margin-left: calc(130px + 50%);
         max-width: 505px;
       }
       & > div:nth-child(1) {
-        padding-left: 50px;
+        padding-left: 35px;
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 40px;
+        font-size: 30px;
         font-style: normal;
         font-weight: 700;
-        line-height: 60px; /* 150% */
-        letter-spacing: 2px;
-        padding-bottom: 8px;
+        line-height: 45px; /* 150% */
+        letter-spacing: 1.5px;
+        padding-bottom: 6px;
         position: relative;
       }
       & > div:nth-child(1)::after {
@@ -4027,25 +4199,25 @@ const okQuestionList = [
       }
       & > div:nth-child(2),
       & > div:nth-child(3) {
-        padding-left: 50px;
-        margin-top: 10px;
+        padding-left: 35px;
+        margin-top: 8px;
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 30px;
+          font-size: 22.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 60px; /* 200% */
-          letter-spacing: 1.5px;
+          line-height: 45px; /* 200% */
+          letter-spacing: 1.125px;
           position: relative;
         }
         & > div:nth-child(2) {
           color: var(--White, #fff);
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 13.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 24px; /* 133.333% */
+          line-height: 18px; /* 133.333% */
           text-transform: uppercase;
           display: flex;
           flex-direction: column;
@@ -4061,15 +4233,15 @@ const okQuestionList = [
             no-repeat;
           background-size: 100% 100%;
           background-position: center;
-          width: 31px;
-          height: 23px;
+          width: 18px;
+          height: 12px;
           display: inline-block;
         }
       }
       & > div:nth-child(4) {
         margin-top: 15px;
         display: flex;
-        gap: 25px;
+        gap: 18px;
         & > a {
           display: flex;
           align-items: center;
@@ -4079,12 +4251,13 @@ const okQuestionList = [
             color: var(--White, #fff);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 18px;
+            font-size: 13.5px;
             font-style: normal;
             font-weight: 500;
-            line-height: 25px; /* 138.889% */
-            letter-spacing: 0.9px;
+            line-height: 18.75px; /* 138.889% */
+            letter-spacing: 0.675px;
             margin-right: 5px;
+            text-wrap: nowrap;
           }
           & > div:nth-child(2) {
             position: relative;
@@ -4092,9 +4265,13 @@ const okQuestionList = [
             display: flex;
             justify-content: center;
             align-items: center;
+            & > svg {
+              width: 14px;
+              height: 24px;
+            }
           }
-          padding: 20px 24px 20px 30px;
-          border-radius: 100px;
+          padding: 10px 18px;
+          border-radius: 21.5px;
         }
         & > a:nth-child(1) {
           position: relative;
@@ -4121,7 +4298,7 @@ const okQuestionList = [
           bottom: -10px;
           left: 50%;
           background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
-          border-radius: 100px;
+          border-radius: 21px;
           filter: blur(15px); /* 添加模糊效果 */
           transform: translateX(-50%) scaleY(-1) rotate(180deg);
         }
