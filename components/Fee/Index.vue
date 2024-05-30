@@ -17,28 +17,22 @@
 const synthesisTableData = ref([
   // Header row
   [
-    ["综合眼睛检查"],
-    ["儿童眼睛检查套餐", "(4-12岁)"],
-    ["成人眼睛检查套餐", "(18岁或以上)"],
-    ["亲友眼睛检查计划", "(儿童/成人)"],
-  ],
-  // Row 1
+    ["綜合眼睛檢查"],
+    ["兒童眼睛檢查套餐", "(4-12歲)"],
+    ["成人眼睛檢查套餐", "(18歲或以上)"],
+    ["親友眼睛檢查計畫", "(兒童/成人)"],
+  ], // Row 1
   [
-    ["视力及屈光度数检查", "(近视/远视/散光/老花)"],
+    ["視力及屈光度數檢查", "(近視/遠視/散光/老花)"],
     "child",
     "adult",
     "friends",
-  ],
-  // Row 2
-  ["双眼协调及斜视检查", "child", "adult", "friends"],
-  // Row 3
-  ["色弱/色盲检查", "child", "adult", "friends"],
-  // Row 4
-  ["立体视觉检查", "child", "adult", "friends"],
-  // Row 5
-  ["青光眼筛查 (眼压)", "child", "adult", "friends"],
-  // Fee row
-  ["收费/HKD", "$350", "$350", "$600"],
+  ], // Row 2
+  ["雙眼協調及斜視檢查", "child", "adult", "friends"], // Row 3
+  ["色弱/色盲檢查", "child", "adult", "friends"], // Row 4
+  ["立體視覺檢查", "child", "adult", "friends"], // Row 5
+  ["青光眼篩查 (眼壓)", "child", "adult", "friends"], // Fee row
+  ["收費/HKD", "$350", "$350", "$600"],
 ]);
 
 const myopiaList = ref([
@@ -47,21 +41,15 @@ const myopiaList = ref([
     ["近視控制"],
     ["近視控制檢查套餐", "(6-18歲)"],
     ["角膜矯形鏡合適性檢查套餐", "(6歲或以上)"],
-  ],
-  // Row 1
-  ["視力及屈光度數檢查", "child", "adult"],
-  // Row 2
-  ["雙眼協調及斜視檢查", "child", "adult"],
-  // Row 3
-  ["色弱/色盲檢查", "child", "adult"],
-  // Row 4
-  ["立体视觉检查", "child", "adult"],
-  // Row 5
+  ], // Row 1
+  ["視力及屈光度數檢查", "child", "adult"], // Row 2
+  ["雙眼協調及斜視檢查", "child", "adult"], // Row 3
+  ["色弱/色盲檢查", "child", "adult"], // Row 4
+  ["立體視覺檢查", "child", "adult"], // Row 5
   ["青光眼篩查 (眼壓)", "child", "adult"],
   ["眼軸檢查", "child", "adult"],
-  ["眼角膜地形圖分析", "", "adult"],
-  // Fee row
-  ["收费/HKD", "$350", "$1000"],
+  ["眼角膜地形圖分析", "", "adult"], // Fee row
+  ["收費/HKD", "$350", "$1000"],
 ]);
 
 const contactLensList = ref([
@@ -71,51 +59,35 @@ const contactLensList = ref([
     ["隱形眼鏡驗配檢查"],
     ["老花隱形眼鏡", "檢查及試戴套餐"],
     ["RGP鏡適配性", "檢查套餐"],
-  ],
-  // Row 1
+  ], // Row 1
   [
     ["視力及屈光度數檢查", " (近視/遠視/散光/老花)"],
     ["12歲以下", "child"],
     "adult",
     "friends",
-  ],
-  // Row 2
-  ["檢查眼睛前區健康情況", ["12歲或以上", "child"], "adult", ""],
-  // Row 3
-  ["隱形眼鏡試戴", "child", "adult", ""],
-  // Row 4
-  ["隱形眼鏡護理", "child", "adult", ""],
-  // Row 5
-  ["雙眼協調及斜視檢查", "", "", "friends"],
-  // Row 6
-  ["色弱/色盲檢查", "", "", "friends"],
-  // Row 7
-  ["青光眼篩查(眼壓)", "", "", "friends"],
-  // Row 8
-  ["角膜健康檢查", "", "", "friends"],
-  // Row 9
-  ["眼角膜地形圖分析", "", "", "friends"],
-  // Row 10
-  ["硬式隱形眼鏡(RGP鏡)試戴", "", "", "friends"],
-  // Fee row
-  ["收费/HKD", ["$350", "$500"], "$500", " $500"],
+  ], // Row 2
+  ["檢查眼睛前區健康情況", ["12歲或以上", "child"], "adult", ""], // Row 3
+  ["隱形眼鏡試戴", "child", "adult", ""], // Row 4
+  ["隱形眼鏡護理", "child", "adult", ""], // Row 5
+  ["雙眼協調及斜視檢查", "", "", "friends"], // Row 6
+  ["色弱/色盲檢查", "", "", "friends"], // Row 7
+  ["青光眼篩查(眼壓)", "", "", "friends"], // Row 8
+  ["角膜健康檢查", "", "", "friends"], // Row 9
+  ["眼角膜地形圖分析", "", "", "friends"], // Row 10
+  ["硬式隱形眼鏡(RGP鏡)試戴", "", "", "friends"], // Fee row
+  ["收費/HKD", ["$350", "$500"], "$500", " $500"],
 ]);
 
 const glaucomaList = ref([
   // Header row
-  [["青光眼檢查"], ["青光眼檢查套餐", "(18 歲或以上)"]],
-  // Row 1
-  [["視力及屈光度數檢查", " (近視/遠視/散光/老花)"], "child"],
-  // Row 7
-  ["青光眼篩查(眼壓)", "child"],
-  // Row 2
-  ["眼球結構斷層掃描OCT", "child"],
-  // Row 3
-  ["視野檢查 (+500)", "child"],
-  // Fee row
-  ["收费/HKD", " $1000"],
+  [["青光眼檢查"], ["青光眼檢查套餐", "(18 歲或以上)"]], // Row 1
+  [["視力及屈光度數檢查", " (近視/遠視/散光/老花)"], "child"], // Row 7
+  ["青光眼篩查(眼壓)", "child"], // Row 2
+  ["眼球結構斷層掃描OCT", "child"], // Row 3
+  ["視野檢查 (+500)", "child"], // Fee row
+  ["收費/HKD", " $1000"],
 ]);
-const headerTitle = ref("综合眼睛检查");
+const headerTitle = ref("綜合眼睛檢查");
 const remark = ref("港幣$2000或以上的眼鏡驗配服務已包括1次綜合眼睛檢查");
 const declare = ref("本診所價目清晰，絕無其他額外收費");
 
@@ -183,8 +155,8 @@ onMounted(() => {
           @change="chooseType(chooseNumber)"
           class="select-type"
         >
-          <option :value="0">所有费用</option>
-          <option :value="1">综合眼睛检查</option>
+          <option :value="0">所有費用</option>
+          <option :value="1">綜合眼睛檢查</option>
           <option :value="2">近視控制</option>
           <option :value="3">隱形眼鏡</option>
           <option :value="4">青光眼檢查</option>

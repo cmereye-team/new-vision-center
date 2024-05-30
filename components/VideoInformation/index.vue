@@ -388,9 +388,9 @@ const chooseNumber = ref(2);
         <div @click="chooseType(2)" :class="[orthokeratology ? 'active' : '']">
           角膜矯形鏡（OK鏡）
         </div>
-        <div @click="chooseType(3)" :class="[share ? 'active' : '']">
+        <!-- <div @click="chooseType(3)" :class="[share ? 'active' : '']">
           真實客戶分享
-        </div>
+        </div> -->
         <div @click="chooseType(4)" :class="[classSmall ? 'active' : '']">
           小教室
         </div>
@@ -404,7 +404,7 @@ const chooseNumber = ref(2);
       >
         <option :value="1">所有影片</option>
         <option :value="2">角膜矯形鏡（OK鏡）</option>
-        <option :value="3">真實客戶分享</option>
+        <!-- <option :value="3">真實客戶分享</option> -->
         <option :value="4">小教室</option>
       </select>
     </div>

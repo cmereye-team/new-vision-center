@@ -19,13 +19,13 @@ pageLink.value = route.path;
   <div class="nav-bar">
     <div>
       <nuxt-link to="/">主頁</nuxt-link>
-      <span>-</span>
+      <span class="transverse-line"></span>
       <nuxt-link
         :to="props.link"
         :style="{ color: props.isInsidePage ? '#aaa' : '' }"
         >{{ props.name }}</nuxt-link
       >
-      <span v-if="props.isInsidePage">-</span>
+      <span v-if="props.isInsidePage" class="transverse-line"></span>
       <nuxt-link
         v-if="props.isInsidePage"
         class="nav-bar-title"
@@ -39,6 +39,15 @@ pageLink.value = route.path;
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .transverse-line{
+    width: 21px;
+    height: 1.5px;
+    background: #aaaaaa;
+    margin: 0 11px 0 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .nav-bar {
     max-width: 1300px;
     margin: 62px auto 46px;
@@ -92,6 +101,15 @@ pageLink.value = route.path;
   }
 }
 @media screen and (max-width: 767px) {
+  .transverse-line{
+    width: 10px;
+    height: 0.74px;
+    background: #aaaaaa;
+    margin: 0 3px 0 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   a {
     color: #00a6ce;
   }
@@ -99,6 +117,8 @@ pageLink.value = route.path;
     padding-top: 16px;
     padding-left: 25px;
     & > div {
+      display: flex;
+      align-items: center;
       & > span {
         color: #aaa;
         font-size: 13px;

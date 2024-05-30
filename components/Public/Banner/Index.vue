@@ -87,7 +87,7 @@ const props = defineProps({
   .banner-template {
     position: relative;
     & > div:nth-child(1) {
-      max-width: 1920px;
+      // max-width: 1920px;
       margin: 7.083vw auto 0;
       // margin-top: 136px;
       img {
@@ -188,7 +188,7 @@ const props = defineProps({
   .banner-template {
     position: relative;
     & > div:nth-child(1) {
-      max-width: 1920px;
+      // max-width: 1920px;
       margin: 136px auto 0;
       // margin-top: 136px;
       img {
