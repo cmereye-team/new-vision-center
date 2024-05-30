@@ -1,18 +1,17 @@
 <script lang="ts" setup>
-const isPc = ref(false);
-// 检测获取屏幕宽度
-const getScreenWidth = () => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-};
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+const widthNum = ref();
 
 onMounted(() => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-  window.addEventListener("resize", getScreenWidth);
-  window.addEventListener("beforeunload", getScreenWidth);
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+    widthNum.value = width;
+  });
+  isPc.value = widthState;
+  widthNum.value = width;
 });
 const props = defineProps({
   banner: {
@@ -25,11 +24,8 @@ const props = defineProps({
 <template>
   <div class="banner-template">
     <div>
-      <img
-        :src="banner.pc"
-        :srcset="`${banner.mobile} 768w, ${banner.pc}`"
-        alt="MiSight®1 Day 隱形眼鏡"
-      />
+      <img v-if="isPc" :src="banner.pc" />
+      <img v-else :src="banner.mobile" :alt="banner.alt || ''" />
     </div>
     <div>
       <slot name="title"> </slot>
@@ -83,7 +79,7 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 768px) and (max-width: 1620px){
+@media screen and (min-width: 768px) and (max-width: 1620px) {
   .banner-template {
     position: relative;
     & > div:nth-child(1) {

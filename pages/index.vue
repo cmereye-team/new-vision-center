@@ -1,22 +1,23 @@
 <script lang="ts" setup>
-import { Swiper, SwiperSlide } from "swiper/vue";
-
-import "swiper/scss";
-
-import "swiper/scss/pagination";
-import "swiper/scss/navigation";
-import { useWindowSize } from "@vueuse/core";
-const { width } = useWindowSize();
-const realTimeWidth = ref(0);
-onMounted(() => {
-  realTimeWidth.value = width.value;
-});
-import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
-
-const modules = [Autoplay, Pagination, Navigation, Scrollbar];
 useHead({
   title: "首页 - 希瑪眼科視光中心",
 });
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/navigation";
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+onMounted(() => {
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
+});
+import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
+const modules = [Autoplay, Pagination, Navigation, Scrollbar];
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/13d1975ec227a911.webp",
   mobile: "https://static.cmereye.com/imgs/2024/05/7723d746a83f1695.webp",
@@ -123,6 +124,20 @@ let swiperRef = {
 const setSwiper = (swiper: any) => {
   swiperRef = swiper;
 };
+
+const getLocale = () => {
+  let list: any = JSON.parse(
+    window.localStorage.getItem("participationVideo") || ""
+  );
+  witness.value.section1 = list;
+  if (list == null) {
+    window.localStorage.setItem(
+      "participationVideo",
+      JSON.stringify(witness.value.section1)
+    );
+  }
+};
+
 const witness = ref({
   section1: [
     {
@@ -191,7 +206,15 @@ const witness = ref({
   ],
 });
 const handleIcon = (str: any, idx: any) => {
-  console.log(str, idx);
+  witness.value.section1.forEach((item: any, index: any) => {
+    if (idx == index) {
+      item[str] = !item[str];
+    }
+  });
+  window.localStorage.setItem(
+      "participationVideo",
+      JSON.stringify(witness.value.section1)
+    );
 };
 </script>
 
@@ -375,8 +398,8 @@ const handleIcon = (str: any, idx: any) => {
           :scrollbar="{
             hide: false,
           }"
-          :slidesPerView="realTimeWidth > 768 ? 4 : 2.3"
-          :spaceBetween="realTimeWidth > 768 ? 35 : 12"
+          :slidesPerView="isPc ? 4 : 2.3"
+          :spaceBetween="isPc ? 35 : 12"
           @swiper="setSwiper"
         >
           <swiper-slide
@@ -387,7 +410,7 @@ const handleIcon = (str: any, idx: any) => {
             <nuxtLink
               class="content"
               :class="{ hot: item.isHot }"
-              :to="item.link"
+              :to="item.link == '#' ? '' : ''"
             >
               <div class="image">
                 <img :src="item.img" :alt="item.name" />
@@ -409,7 +432,7 @@ const handleIcon = (str: any, idx: any) => {
                     viewBox="0 0 25 27"
                     fill="none"
                   >
-                    <g filter="url(#filter0_d_696_25419)">
+                    <g filter="url(&#35;filter0_d_696_25419)">
                       <path
                         d="M12.5261 2.6167C13.28 2.61661 14.0051 2.90678 14.5508 3.42701C15.0966 3.94724 15.4211 4.65759 15.4571 5.4107C16.8178 5.9869 17.9787 6.95114 18.7949 8.18305C19.611 9.41497 20.0462 10.86 20.0461 12.3377V16.5637C20.6639 16.6073 21.2405 16.8897 21.6538 17.351C22.0671 17.8124 22.2846 18.4164 22.2603 19.0353C22.236 19.6542 21.9718 20.2394 21.5236 20.6669C21.0754 21.0944 20.4784 21.3306 19.8591 21.3257H5.19308C4.57373 21.3306 3.97676 21.0944 3.52858 20.6669C3.0804 20.2394 2.81618 19.6542 2.79188 19.0353C2.76757 18.4164 2.98509 17.8124 3.39837 17.351C3.81165 16.8897 4.38825 16.6073 5.00608 16.5637V12.3377C5.00601 10.86 5.44119 9.41497 6.25731 8.18305C7.07343 6.95114 8.23433 5.9869 9.59508 5.4107C9.6313 4.65768 9.95589 3.94746 10.5016 3.42729C11.0473 2.90711 11.7722 2.61686 12.5261 2.6167ZM10.7881 6.9217C9.64126 7.29002 8.641 8.01296 7.93147 8.98632C7.22194 9.95968 6.83978 11.1332 6.84008 12.3377V16.7377C6.83982 17.1753 6.66593 17.595 6.35658 17.9045C6.04723 18.214 5.6277 18.3882 5.19008 18.3887C5.04421 18.3887 4.90432 18.4466 4.80117 18.5498C4.69803 18.6529 4.64008 18.7928 4.64008 18.9387C4.64008 19.0846 4.69803 19.2245 4.80117 19.3276C4.90432 19.4308 5.04421 19.4887 5.19008 19.4887H19.8591C20.005 19.4887 20.1448 19.4308 20.248 19.3276C20.3511 19.2245 20.4091 19.0846 20.4091 18.9387C20.4091 18.7928 20.3511 18.6529 20.248 18.5498C20.1448 18.4466 20.005 18.3887 19.8591 18.3887C19.6423 18.3888 19.4276 18.3462 19.2273 18.2633C19.027 18.1803 18.845 18.0587 18.6917 17.9054C18.5385 17.752 18.4169 17.57 18.3341 17.3696C18.2513 17.1692 18.2088 16.9545 18.2091 16.7377V12.3377C18.2092 11.1332 17.827 9.95979 17.1175 8.98646C16.408 8.01313 15.4078 7.29016 14.2611 6.9217L13.6241 6.7217V5.5487C13.6241 5.25696 13.5082 4.97717 13.3019 4.77088C13.0956 4.56459 12.8158 4.4487 12.5241 4.4487C12.2323 4.4487 11.9526 4.56459 11.7463 4.77088C11.54 4.97717 11.4241 5.25696 11.4241 5.5487V6.7167L10.7881 6.9217ZM9.04108 21.3217H10.8751C10.8674 21.5432 10.9043 21.764 10.9838 21.9709C11.0632 22.1779 11.1835 22.3667 11.3375 22.5261C11.4915 22.6855 11.676 22.8123 11.88 22.8989C12.0841 22.9855 12.3034 23.0302 12.5251 23.0302C12.7467 23.0302 12.9661 22.9855 13.1701 22.8989C13.3742 22.8123 13.5587 22.6855 13.7127 22.5261C13.8666 22.3667 13.9869 22.1779 14.0664 21.9709C14.1458 21.764 14.1828 21.5432 14.1751 21.3217H16.0091C16.0091 22.246 15.6419 23.1324 14.9883 23.786C14.3348 24.4395 13.4484 24.8067 12.5241 24.8067C11.5998 24.8067 10.7134 24.4395 10.0598 23.786C9.40625 23.1324 9.03908 22.246 9.03908 21.3217H9.04108Z"
                         :fill="item.isNew ? '#20D0C4' : '#BBBBBB'"
@@ -457,6 +480,7 @@ const handleIcon = (str: any, idx: any) => {
                     </defs>
                   </svg>
                   <svg
+                    @click="handleIcon('isLike', index)"
                     v-if="!item.isLike"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -513,6 +537,7 @@ const handleIcon = (str: any, idx: any) => {
                   </svg>
                   <svg
                     v-else
+                    @click="handleIcon('isLike', index)"
                     width="28"
                     height="27"
                     viewBox="0 0 28 27"
@@ -635,7 +660,7 @@ const handleIcon = (str: any, idx: any) => {
       &-in {
         color: var(--White, #fff);
         text-align: center;
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 21.981px;
         font-style: normal;
         font-weight: 400;
@@ -1357,7 +1382,7 @@ const handleIcon = (str: any, idx: any) => {
           .content {
             padding: 8px;
             border-radius: 10px;
-            height: 210px;
+            height: 230px;
             box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
             .image {
               img {

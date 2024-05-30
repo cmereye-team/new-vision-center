@@ -13,10 +13,15 @@ onMounted(() => {
   }
   window.addEventListener("resize", getScreenWidth);
   window.addEventListener("beforeunload", getScreenWidth);
+  chooseType(1)
 });
+const listVideoAll:any = ref([]);
+const reelsListAll:any = ref([]);
 
-const allVideo = ref(false);
-const orthokeratology = ref(true);
+const chooseNumber = ref(2);
+
+const allVideo = ref(true);
+const orthokeratology = ref(false);
 const share = ref(false);
 const classSmall = ref(false);
 const chooseType = (type: number) => {
@@ -29,13 +34,13 @@ const chooseType = (type: number) => {
       // 将listVideoAll.value 赋值为 listVideo.value、listVideoShare.value 和 listVideoClass.value 的合并结果
       listVideoAll.value = [
         ...listVideoOk.value,
-        ...listVideoShare.value,
+        // ...listVideoShare.value,
         ...listVideoClass.value,
       ];
       reelsListAll.value = [
         ...reelsListOk.value,
-        ...reelsListShare.value,
-        ...reelsListClass.value,
+        // ...reelsListShare.value,
+        // ...reelsListClass.value,
       ];
       break;
     case 2:
@@ -44,12 +49,12 @@ const chooseType = (type: number) => {
       share.value = false;
       classSmall.value = false;
       break;
-    case 3:
-      allVideo.value = false;
-      orthokeratology.value = false;
-      share.value = true;
-      classSmall.value = false;
-      break;
+    // case 3:
+    //   allVideo.value = false;
+    //   orthokeratology.value = false;
+    //   share.value = true;
+    //   classSmall.value = false;
+    //   break;
     case 4:
       allVideo.value = false;
       orthokeratology.value = false;
@@ -69,65 +74,81 @@ const listVideoOk = ref([
       {
         id: 1,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+        text: ["【Vlog】陪Carson一齊","去配OK鏡"],
         img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=M0y-hzPzyjA",
       },
       {
         id: 2,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+        text: ["OrthoK x BMX 極限運動", "想點玩都OK｜希瑪視光"],
+        img: "https://static.cmereye.com/imgs/2024/05/c0b5260ef1a04c21.webp",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=BkYXEbfg2Zk",
       },
       {
         id: 3,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+        text: ["【近視控制】JON仔OK鏡成果", "分享｜角膜矯形鏡｜希瑪視光"],
+        img: "https://static.cmereye.com/imgs/2024/05/61acae6f6109503d.webp",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=qXcrf_ASWE0",
       },
       {
         id: 4,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+        text: ["【近視控制】啟動小廚神JON仔", "OK鏡之旅｜角膜矯形鏡｜遺傳近視"],
+        img: "https://static.cmereye.com/imgs/2024/05/9453cf23c801dbae.webp",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=urR3F7KR31o",
       },
+      {
+        id: 5,
+        type: "orthokeratology",
+        text: ["OK鏡真實個案︰小書迷Kathy", "近視控制效果理想，媽媽好滿意！｜角膜矯形鏡｜希瑪視光"],
+        img: "https://static.cmereye.com/imgs/2024/05/0277a354a74ba630.webp",
+        videoLink:
+          "https://www.youtube.com/watch?v=2UJcMkLfuxE",
+      },
+      {
+        id: 6,
+        type: "orthokeratology",
+        text: ["【OK鏡真實個案】運動小健將", "Kurtis 做運動唔使再戴眼鏡 近視仲冇加深！｜角膜矯形鏡｜希瑪視光 CMER VISION"],
+        img: "https://static.cmereye.com/imgs/2024/05/e59bafa5943e0362.webp",
+        videoLink:
+          "https://www.youtube.com/watch?v=J5tfqyp-lQQ",
+      }
     ],
   },
-  {
-    name: "Carson黃梓賢2",
-    type: "list",
-    isShow: false,
-    videoList: [
-      {
-        id: 1,
-        type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink: "",
-      },
-      {
-        id: 2,
-        type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink: "",
-      },
-      {
-        id: 3,
-        type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink: "",
-      },
-    ],
-  },
+  // {
+  //   name: "Carson黃梓賢2",
+  //   type: "list",
+  //   isShow: false,
+  //   videoList: [
+  //     {
+  //       id: 1,
+  //       type: "orthokeratology",
+  //       text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+  //       img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+  //       videoLink: "",
+  //     },
+  //     {
+  //       id: 2,
+  //       type: "orthokeratology",
+  //       text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+  //       img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+  //       videoLink: "",
+  //     },
+  //     {
+  //       id: 3,
+  //       type: "orthokeratology",
+  //       text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+  //       img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+  //       videoLink: "",
+  //     },
+  //   ],
+  // },
 ]);
 
 const listVideoShare = ref([
@@ -201,96 +222,104 @@ const listVideoClass = ref([
       {
         id: 1,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+        text: ["【希瑪仔小教室】小朋友配眼鏡", "前必看 以為睇得清就冇事？"],
+        img: "https://static.cmereye.com/imgs/2024/05/0b1cd707c8e9a74e.webp",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=Qiby8jAi0e4",
       },
       {
         id: 2,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+        text: ["【希瑪視光】如何選擇", "適合自己的漸進鏡片？"],
+        img: "https://static.cmereye.com/imgs/2024/05/db0f8f750bdda6f2.webp",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=neQcqi69dzg",
       },
       {
         id: 3,
         type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+        text: ["兒童近視控制 | OK鏡係咩嚟", "㗎？| 希瑪視光 | 兒童護眼小教室"],
+        img: "https://static.cmereye.com/imgs/2024/05/433d7c3630c4df1d.webp",
         videoLink:
-          "https://www.youtube.com/embed/M0y-hzPzyjA?si=C--PplEEpW7cnmve",
+          "https://www.youtube.com/watch?v=XrGA8IklfXU",
+      },
+      {
+        id: 4,
+        type: "orthokeratology",
+        text: ["兒童近視控制｜戴眼鏡會造成", "依賴？戴得愈耐，近視會愈深？ | 希瑪視光 | 兒童護眼小教室"],
+        img: "https://static.cmereye.com/imgs/2024/05/e19dfdb077bac7ee.webp",
+        videoLink:
+          "https://www.youtube.com/watch?v=G7AfFPCKldU",
       },
     ],
   },
-  {
-    name: "Carson黃梓賢2",
-    type: "list",
-    isShow: false,
-    videoList: [
-      {
-        id: 1,
-        type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink: "",
-      },
-      {
-        id: 2,
-        type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink: "",
-      },
-      {
-        id: 3,
-        type: "orthokeratology",
-        text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
-        img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink: "",
-      },
-    ],
-  },
+  // {
+  //   name: "Carson黃梓賢2",
+  //   type: "list",
+  //   isShow: false,
+  //   videoList: [
+  //     {
+  //       id: 1,
+  //       type: "orthokeratology",
+  //       text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+  //       img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+  //       videoLink: "",
+  //     },
+  //     {
+  //       id: 2,
+  //       type: "orthokeratology",
+  //       text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+  //       img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+  //       videoLink: "",
+  //     },
+  //     {
+  //       id: 3,
+  //       type: "orthokeratology",
+  //       text: ["角膜矯形鏡(OK鏡)", "Carson黃梓賢"],
+  //       img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
+  //       videoLink: "",
+  //     },
+  //   ],
+  // },
 ]);
 
 const reelsListOk = ref([
   {
     id: 11,
     type: "orthokeratology",
-    img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
-    videoLink: "",
+    img: "https://static.cmereye.com/imgs/2024/05/5689564fc9af685c.webp",
+    videoLink: "https://youtube.com/shorts/4BAhundkZcc",
   },
   {
     id: 12,
     type: "orthokeratology",
-    img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
-    videoLink: "",
+    img: "https://static.cmereye.com/imgs/2024/05/8b2de9f896497bc7.webp",
+    videoLink: "https://youtube.com/shorts/RPo2rPy4WcM",
   },
   {
     id: 13,
     type: "orthokeratology",
-    img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
-    videoLink: "",
+    img: "https://static.cmereye.com/imgs/2024/05/84edcfbd2756c1fc.webp",
+    videoLink: "https://youtube.com/shorts/GDvubivXmeU",
   },
-  {
-    id: 14,
-    type: "orthokeratology",
-    img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
-    videoLink: "",
-  },
-  {
-    id: 15,
-    type: "orthokeratology",
-    img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
-    videoLink: "",
-  },
-  {
-    id: 16,
-    type: "orthokeratology",
-    img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
-    videoLink: "",
-  },
+  // {
+  //   id: 14,
+  //   type: "orthokeratology",
+  //   img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
+  //   videoLink: "",
+  // },
+  // {
+  //   id: 15,
+  //   type: "orthokeratology",
+  //   img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
+  //   videoLink: "",
+  // },
+  // {
+  //   id: 16,
+  //   type: "orthokeratology",
+  //   img: "https://static.cmereye.com/imgs/2024/04/d7c0a8492c94f78f.png",
+  //   videoLink: "",
+  // },
 ]);
 
 const reelsListShare = ref([
@@ -371,10 +400,7 @@ const reelsListClass = ref([
   },
 ]);
 
-const listVideoAll = ref([]);
-const reelsListAll = ref([]);
 
-const chooseNumber = ref(2);
 </script>
 
 <template>
@@ -409,6 +435,7 @@ const chooseNumber = ref(2);
       </select>
     </div>
     <div>
+      <!-- reelsListOk 竖屏视频未分类 使用 reelsListOk 展示 -->
       <div v-if="allVideo">
         <VideoInformationVideoList :list="listVideoAll" />
         <VideoInformationReels :list="reelsListAll" />
@@ -417,13 +444,14 @@ const chooseNumber = ref(2);
         <VideoInformationVideoList :list="listVideoOk" />
         <VideoInformationReels :list="reelsListOk" />
       </div>
-      <div v-if="share">
+      <!-- <div v-if="share">
         <VideoInformationVideoList :list="listVideoShare" />
         <VideoInformationReels :list="reelsListShare" />
-      </div>
+      </div> -->
       <div v-if="classSmall">
         <VideoInformationVideoList :list="listVideoClass" />
-        <VideoInformationReels :list="reelsListClass" />
+        <!-- <VideoInformationReels :list="reelsListClass" /> -->
+        <VideoInformationReels :list="reelsListOk" />
       </div>
     </div>
   </div>

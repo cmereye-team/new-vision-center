@@ -38,9 +38,9 @@ onMounted(() => {
         @click="isPc ? '' : showOrHiedList(index)"
         :class="`item-${index}`"
       >
-        <div class="video-title">
+        <!-- <div class="video-title">
           <div>{{ item.name }}</div>
-        </div>
+        </div> -->
         <div class="video-list" v-if="isPc ? true : item.isShow">
           <a
             v-for="element in item.videoList"
@@ -65,7 +65,7 @@ onMounted(() => {
 @media screen and (min-width: 768px) {
   .video-title {
     color: var(--Brand-Color, #00a6ce);
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 22.5px;
     font-style: normal;
     font-weight: 700;
@@ -74,15 +74,19 @@ onMounted(() => {
   }
   .video-list {
     margin: 20px auto 50px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18.75px;
     & > a {
       margin-bottom: 20px;
       & > div:nth-child(1) {
         width: 312px;
+        height: 194px;
+        border-radius: 15px;
+        overflow: hidden;
         & > img {
           width: 100%;
+          height: 100%;
         }
       }
       & > div:nth-child(2) {
@@ -110,7 +114,7 @@ onMounted(() => {
   }
   .video-title {
     color: var(--Brand-Color, #00a6ce);
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 20px;
     font-style: normal;
     font-weight: 700;

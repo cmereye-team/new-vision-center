@@ -2975,6 +2975,11 @@ const bannerImg = {
     }
   }
   .profile-title {
+    min-height: 390px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 87px;
     span {
       position: absolute;
       bottom: 30px;

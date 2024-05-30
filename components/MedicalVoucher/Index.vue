@@ -521,23 +521,69 @@ const serverList = ref({
           align-items: flex-end;
           margin-top: 5px;
           & > a {
-            border-radius: 50px;
-            background: var(--Brand-Color, #00a6ce);
-            padding: 8px 20px;
-            color: #fff;
-            font-family: "Inter";
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            text-transform: uppercase;
             display: flex;
             align-items: center;
-            & > span:nth-child(1) {
-              display: flex;
-              align-items: center;
-              margin-right: 10px;
+            & > div:nth-child(2) {
+              position: relative;
+              z-index: 6;
+              color: #fff;
+              font-family: Inter;
+              font-size: 22.5px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: normal;
+              text-transform: uppercase;
             }
+            & > div:nth-child(1) {
+              margin-right: 7px;
+              position: relative;
+              z-index: 6;
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              width: 20px;
+              height: 20px;
+              & > svg {
+                width: 100%;
+                height: 100%;
+              }
+            }
+            padding: 3px;
+            border-radius: 100px;
+            width: 150px;
+            height: 48px;
+            align-items: center;
+            justify-content: center;
+          }
+          & > a:nth-child(1) {
+            position: relative;
+          }
+          & > a:nth-child(1)::before {
+            padding: 3px 0;
+            border-radius: 100px;
+            position: absolute;
+            z-index: 5;
+            top: 0;
+            left: 0;
+            content: "";
+            width: 150px;
+            height: 48px;
+            background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+          }
+          & > a:nth-child(1)::after {
+            content: "";
+            position: absolute;
+            z-index: 3;
+            width: 86%;
+            text-align: center;
+            height: 30px;
+            display: inline-block;
+            bottom: -10px;
+            left: 50%;
+            background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+            border-radius: 100px;
+            filter: blur(15px); /* 添加模糊效果 */
+            transform: translateX(-50%) scaleY(-1) rotate(180deg);
           }
           & > a:hover {
             box-shadow: 4px 3px 7px #c5c3c3;

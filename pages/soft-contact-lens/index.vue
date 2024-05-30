@@ -1034,7 +1034,7 @@ onMounted(() => {
     margin: 65px auto;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -1222,7 +1222,7 @@ onMounted(() => {
       padding: 7px 12px;
       color: #fff;
       text-align: center;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 21.981px;
       font-style: normal;
       font-weight: 400;
@@ -1353,7 +1353,7 @@ onMounted(() => {
     margin: 42px auto 30px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -1386,7 +1386,7 @@ onMounted(() => {
           flex-direction: column;
           color: #60605f;
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -1596,7 +1596,7 @@ onMounted(() => {
       padding: 7px 10px;
       color: #fff;
       text-align: center;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 18px;
       font-style: normal;
       font-weight: 400;
@@ -1617,6 +1617,11 @@ onMounted(() => {
     }
   }
   .profile-title {
+    min-height: 390px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 87px;
     span {
       position: absolute;
       bottom: 30px;

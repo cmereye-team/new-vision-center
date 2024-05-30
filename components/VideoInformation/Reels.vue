@@ -76,7 +76,7 @@ const slidesPerViewNum = ref(4);
         </swiper-slide>
       </swiper>
     </div>
-    <div class="swiper-button-next-prev">
+    <div class="swiper-button-next-prev" v-if="props.list.length > 4">
         <div class="button-prev" @click="handlesSliPrev"></div>
         <div class="button-next" @click="handlesSliNext"></div>
       </div>

@@ -5,6 +5,7 @@ useHead(() => ({
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png",
   mobile: "https://static.cmereye.com/imgs/2024/04/c05702c8c41964c7.png",
+  alt:'長者醫療券計劃'
 };
 </script>
 
@@ -25,7 +26,7 @@ const bannerImg = {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .video-information{
+  .video-information {
     margin-bottom: 90px;
   }
   .medical-voucher-title {
@@ -36,9 +37,9 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -100%;
-      color: var(--Brand-Color, #00A6CE);
+      color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Inter";
       font-size: 60px;
@@ -55,13 +56,17 @@ const bannerImg = {
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
-    // min-height: 390px;
+    min-height: 390px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 87px;
     // position: relative;
     span {
       position: absolute;
       bottom: 30px;
       right: 20px;
-      color: var(--Brand-Color, #00A6CE);
+      color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Inter";
       font-size: 28px;

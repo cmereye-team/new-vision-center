@@ -116,7 +116,9 @@ const bannerImg = {
                   alt="MyoVision Pro鏡片"
                 />
               </div>
-              <div :class="[isKindVision ? 'kind-btn-active' : 'kind-btn-item']">
+              <div
+                :class="[isKindVision ? 'kind-btn-active' : 'kind-btn-item']"
+              >
                 MyoVision Pro鏡片
               </div>
             </div>
@@ -293,10 +295,11 @@ const bannerImg = {
         <a class="btn-bg">
           <div>
             <span>哪一款鏡片最適合你的小朋友?</span>
-            <span><img
+            <span
+              ><img
                 src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
                 alt="哪一款鏡片最適合你的小朋友?"
-              /></span>
+            /></span>
           </div>
         </a>
       </div>
@@ -451,11 +454,7 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7378">
-                    <rect
-                      width="108.243"
-                      height="76"
-                      fill="white"
-                    />
+                    <rect width="108.243" height="76" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -524,11 +523,7 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7385">
-                    <rect
-                      width="102.511"
-                      height="75.5635"
-                      fill="white"
-                    />
+                    <rect width="102.511" height="75.5635" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -590,11 +585,7 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7395">
-                    <rect
-                      width="109.886"
-                      height="62"
-                      fill="white"
-                    />
+                    <rect width="109.886" height="62" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -670,11 +661,7 @@ const bannerImg = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1_7405">
-                    <rect
-                      width="78"
-                      height="90.2809"
-                      fill="white"
-                    />
+                    <rect width="78" height="90.2809" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -909,7 +896,7 @@ const bannerImg = {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .zeiss-container{
+  .zeiss-container {
     margin-bottom: 65px;
   }
   .myopia-control-head {
@@ -980,7 +967,7 @@ const bannerImg = {
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -993,7 +980,7 @@ const bannerImg = {
             flex-direction: column;
             color: #60605f;
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1058,7 +1045,7 @@ const bannerImg = {
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #60605f;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1069,7 +1056,7 @@ const bannerImg = {
               flex-direction: column;
               & > span {
                 color: #60605f;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1077,7 +1064,7 @@ const bannerImg = {
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 600;
@@ -1182,7 +1169,7 @@ const bannerImg = {
     margin: 55px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -1485,11 +1472,11 @@ const bannerImg = {
           letter-spacing: 1.5px;
           & > div:nth-child(2) {
             min-height: 315px;
-            max-width:320px;
+            max-width: 320px;
             display: flex;
             align-items: center;
-            &>img{
-              width:100%;
+            & > img {
+              width: 100%;
             }
           }
         }
@@ -1881,7 +1868,7 @@ const bannerImg = {
             & > div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -1893,7 +1880,7 @@ const bannerImg = {
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -1981,7 +1968,7 @@ const bannerImg = {
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -2042,7 +2029,7 @@ const bannerImg = {
     padding: 0 25px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -2220,6 +2207,11 @@ const bannerImg = {
     // width: 100%;
     // min-height: 390px;
     // position: relative;
+    min-height: 390px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 87px;
     span {
       position: absolute;
       bottom: 30px;

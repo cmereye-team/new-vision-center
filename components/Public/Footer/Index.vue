@@ -1,17 +1,18 @@
 <script setup lang="ts">
 import getWindowSize from "@/utils/width";
-const isPc = ref(true);
 const heightToTop = ref(0);
+const isPc = ref(true);
+
 onMounted(() => {
   let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
   isPc.value = widthState;
   window.addEventListener("scroll", () => {
     // 获取距离页面顶部的距离
     heightToTop.value = document.documentElement.scrollTop;
-
     if (heightToTop.value > 200) {
       document.querySelector(".to-form")?.classList.add("to-form-show");
     } else {

@@ -3,7 +3,7 @@
 
 <template>
   <div class="fixed-footer">
-    <nuxt-link>
+    <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -23,7 +23,7 @@
         </svg>
       </div>
       <div><span>WhatsApp: </span><br /><span>6918 0511</span></div>
-    </nuxt-link>
+    </a>
     <nuxt-link>
       <div>
         <svg
@@ -53,7 +53,7 @@
       </div>
       <div>馬上預約</div>
     </nuxt-link>
-    <nuxt-link>
+    <a href="tel:+85038925089" target="_blank">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -69,7 +69,7 @@
         </svg>
       </div>
       <div><span>電話預約 </span><br /><span>3892 5089</span></div>
-    </nuxt-link>
+    </a>
   </div>
 </template>
 

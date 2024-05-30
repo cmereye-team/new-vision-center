@@ -32,6 +32,30 @@ const glaucomaNum = useTransition(glaucomaNumSource, {
 });
 glaucomaNumSource.value = 3;
 
+const proportionNumSource = ref(0);
+const proportionNum = useTransition(proportionNumSource, {
+  duration: 2000,
+});
+proportionNumSource.value = 88;
+
+const maxSixNumSource = ref(0);
+const maxSixNum = useTransition(maxSixNumSource, {
+  duration: 3000,
+});
+maxSixNumSource.value = 18.3;
+
+const maxTwelveNumSource = ref(0);
+const maxTwelveNum = useTransition(maxTwelveNumSource, {
+  duration: 3500,
+});
+maxTwelveNumSource.value = 61.5;
+
+const studentNumSource = ref(0);
+const studentNum = useTransition(studentNumSource, {
+  duration: 3000,
+});
+studentNumSource.value = 95;
+
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 
@@ -68,7 +92,7 @@ onMounted(() => {
             </div>
             <div>
               <div><span>患上近視的</span><span>人口更高達</span></div>
-              <div>88%</div>
+              <div><el-statistic :value="proportionNum" />%</div>
             </div>
           </div>
         </div>
@@ -82,7 +106,16 @@ onMounted(() => {
             </div>
             <div>
               <p>6嵗學童</p>
-              <p><span>近視人數達</span><span>18.3%</span></p>
+              <p>
+                <span>近視人數達</span
+                ><span
+                  ><el-statistic
+                    :value="maxSixNum"
+                    decimal-separator="."
+                    :precision="1"
+                  />%</span
+                >
+              </p>
             </div>
           </div>
           <div>
@@ -94,7 +127,16 @@ onMounted(() => {
             </div>
             <div>
               <p>12嵗學童</p>
-              <p><span>近視人數達</span><span>61.5%</span></p>
+              <p>
+                <span>近視人數達</span
+                ><span
+                  ><el-statistic
+                    :value="maxTwelveNum"
+                    decimal-separator="."
+                    :precision="1"
+                  />%</span
+                >
+              </p>
             </div>
           </div>
           <div>
@@ -106,7 +148,10 @@ onMounted(() => {
             </div>
             <div>
               <p>大學生</p>
-              <p><span>近視人數達</span><span>95%</span></p>
+              <p>
+                <span>近視人數達</span
+                ><span><el-statistic :value="studentNum" />%</span>
+              </p>
             </div>
           </div>
         </div>
@@ -3920,7 +3965,7 @@ onMounted(() => {
             & > span:nth-child(2) {
               margin-top: 5px;
               color: var(--White, #fff);
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 24px;
               font-style: normal;
               font-weight: 700;
@@ -3943,7 +3988,7 @@ onMounted(() => {
           & > div {
             color: #fff;
             color: var(--White, #fff);
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -4081,7 +4126,7 @@ onMounted(() => {
       & > div:nth-child(3) {
         margin-top: 20px;
         color: #60605f;
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 13.5px;
         font-style: normal;
         font-weight: 400;
@@ -4095,7 +4140,7 @@ onMounted(() => {
     margin: 0 auto 60px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -4563,7 +4608,6 @@ onMounted(() => {
           display: flex;
           margin-left: 32px;
           align-items: center;
-
           & > div:nth-child(1) {
             display: flex;
             flex-direction: column;
@@ -4576,7 +4620,21 @@ onMounted(() => {
             letter-spacing: 1.125px;
           }
           & > div:nth-child(2) {
-            margin-left: 10px;
+            display: flex;
+            & > div {
+              margin-left: 10px;
+              :deep(.el-statistic__content) {
+                span {
+                  color: var(--Sales, #db4444);
+                  font-family: "Noto Sans HK";
+                  font-size: 75px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 116.182px; /* 154.909% */
+                  letter-spacing: 3.75px;
+                }
+              }
+            }
             color: var(--Sales, #db4444);
             font-family: "Noto Sans HK";
             font-size: 75px;
@@ -4584,6 +4642,8 @@ onMounted(() => {
             font-weight: 700;
             line-height: 116.182px; /* 154.909% */
             letter-spacing: 3.75px;
+            position: relative;
+            top: 10px;
           }
         }
       }
@@ -4620,15 +4680,34 @@ onMounted(() => {
           }
           & > p:nth-child(2) {
             text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             & > span:nth-child(1) {
               color: var(--Grey-Deep, #4d4d4d);
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 16.5px;
               font-style: normal;
               font-weight: 300;
               line-height: normal;
+              margin-top: 5px;
+              margin-right: 3px;
             }
             & > span:nth-child(2) {
+              display: flex;
+              align-items: center;
+              & > div {
+                :deep(.el-statistic__content) {
+                  span {
+                    color: #db4444;
+                    font-family: "Noto Sans HK";
+                    font-size: 33.75px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 45px;
+                  }
+                }
+              }
               color: #db4444;
               font-family: "Noto Sans HK";
               font-size: 33.75px;
@@ -4644,6 +4723,13 @@ onMounted(() => {
           & > p:nth-child(2) {
             & > span:nth-child(2) {
               color: #f0882b;
+              & > div {
+                :deep(.el-statistic__content) {
+                  span {
+                    color: #f0882b;
+                  }
+                }
+              }
             }
           }
         }
@@ -4773,7 +4859,7 @@ onMounted(() => {
           }
           & > div:nth-child(3) {
             top: 0;
-            right: -45%;
+            right: -70px;
             & > svg {
               width: 80.677px;
               height: 49.627px;
@@ -4790,8 +4876,8 @@ onMounted(() => {
             }
           }
           & > div:nth-child(3) {
-            bottom: -45%;
-            right: -20%;
+            bottom: -50px;
+            right: -50px;
             & > svg {
               width: 71.25px;
               height: 64.5px;
@@ -4948,7 +5034,7 @@ onMounted(() => {
     & > div:nth-child(1) {
       padding: 0 25px;
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -4980,7 +5066,7 @@ onMounted(() => {
           margin-top: 17px;
           color: var(--Brand-Color, #00a6ce);
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 14px;
           font-style: normal;
           font-weight: 600;
@@ -5177,7 +5263,7 @@ onMounted(() => {
         & > div:nth-child(2) {
           color: #60605f;
           text-align: justify;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -5534,7 +5620,7 @@ onMounted(() => {
             & > span:nth-child(2) {
               margin-top: 5px;
               color: var(--White, #fff);
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 18px;
               font-style: normal;
               font-weight: 900;
@@ -5557,7 +5643,7 @@ onMounted(() => {
           & > div {
             color: #fff;
             color: var(--White, #fff);
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16px;
             font-style: normal;
             font-weight: 400;
@@ -5784,7 +5870,7 @@ onMounted(() => {
         padding-bottom: 25px;
         padding-left: 25px;
         color: #60605f;
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 14px;
         font-style: normal;
         font-weight: 400;
@@ -5797,7 +5883,7 @@ onMounted(() => {
     & > div:nth-child(1) {
       padding: 0 24px;
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
@@ -5809,7 +5895,7 @@ onMounted(() => {
       & > div:nth-child(1) {
         color: #4d4d4d;
         text-align: justify;
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 18.29px;
         font-style: normal;
         font-weight: 600;
@@ -5835,7 +5921,7 @@ onMounted(() => {
             flex-direction: column;
             color: #4d4d4d;
             text-align: justify;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 18.29px;
             font-style: normal;
             font-weight: 600;
@@ -5843,6 +5929,21 @@ onMounted(() => {
             letter-spacing: 1.829px;
           }
           & > div:nth-child(2) {
+            display: flex;
+            & > div {
+              // margin-left: 10px;
+              :deep(.el-statistic__content) {
+                span {
+                  color: var(--Sales, #db4444);
+                  font-family: "Noto Sans HK";
+                  font-size: 42.232px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 65.422px; /* 154.909% */
+                  letter-spacing: 2.112px;
+                }
+              }
+            }
             color: var(--Sales, #db4444);
             font-family: "Noto Sans HK";
             font-size: 42.232px;
@@ -5850,6 +5951,9 @@ onMounted(() => {
             font-weight: 700;
             line-height: 65.422px; /* 154.909% */
             letter-spacing: 2.112px;
+            position: relative;
+            top: 5px;
+            left: 5px;
           }
         }
       }
@@ -5874,7 +5978,7 @@ onMounted(() => {
           margin-top: 7px;
           & > p:nth-child(1) {
             color: #757470;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 20px;
             font-style: normal;
             font-weight: 700;
@@ -5885,7 +5989,7 @@ onMounted(() => {
             text-align: center;
             & > span:nth-child(1) {
               color: #757470;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 14.301px;
               font-style: normal;
               font-weight: 300;
@@ -5893,7 +5997,7 @@ onMounted(() => {
             }
             & > span:nth-child(2) {
               color: #8cd6ff;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 24.702px;
               font-style: normal;
               font-weight: 900;
@@ -6157,6 +6261,11 @@ onMounted(() => {
     // width: 100%;
     // min-height: 390px;
     // position: relative;
+    min-height: 390px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    margin-top: 87px;
     span {
       position: absolute;
       bottom: 30px;
