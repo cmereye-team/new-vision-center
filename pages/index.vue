@@ -15,6 +15,7 @@ onMounted(() => {
     isPc.value = widthState;
   });
   isPc.value = widthState;
+  getLocale()
 });
 import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation, Scrollbar];

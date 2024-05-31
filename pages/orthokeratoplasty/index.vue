@@ -6,10 +6,12 @@ import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 
 onMounted(() => {
+  let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
+  isPc.value = widthState;
 });
 const wear = ref(true);
 const excise = ref(false);
@@ -103,6 +105,52 @@ const okQuestionList = [
     ],
   },
 ];
+
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/scss";
+import "swiper/scss/pagination";
+import "swiper/scss/navigation";
+import { Navigation } from "swiper/modules";
+const modules = [Navigation];
+
+const videoList = [
+  {
+    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    title: "視光中心",
+    url: "",
+  },
+  {
+    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    title: "視光中心",
+    url: "",
+  },
+  {
+    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    title: "視光中心",
+    url: "",
+  },
+  {
+    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    title: "視光中心",
+    url: "",
+  },
+];
+const setSwiper = (swiper: any) => {
+  swiperRef = swiper;
+};
+
+let swiperRef = {
+  slideToLoop: (a: any) => {},
+  slidePrev: () => {},
+  slideNext: () => {},
+};
+
+const handlesSliNext = () => {
+  swiperRef.slideNext();
+};
+const handlesSliPrev = () => {
+  swiperRef.slidePrev();
+};
 </script>
 
 <template>
@@ -1086,31 +1134,32 @@ const okQuestionList = [
         </div>
       </div>
       <div class="orthokeratoplasty-explain">
-        <div>
-          <div>
-            <img
-              src="https://static.cmereye.com/imgs/2024/05/046df26e10531539.png"
-              alt="視光中心"
-            />
-          </div>
-          <div>
-            <img
-              src="https://static.cmereye.com/imgs/2024/05/046df26e10531539.png"
-              alt="視光中心"
-            />
-          </div>
-          <div>
-            <img
-              src="https://static.cmereye.com/imgs/2024/05/046df26e10531539.png"
-              alt="視光中心"
-            />
-          </div>
-          <div>
-            <img
-              src="https://static.cmereye.com/imgs/2024/05/046df26e10531539.png"
-              alt="視光中心"
-            />
-          </div>
+        <swiper
+          v-if="isPc"
+          :slidesPerView="3"
+          :spaceBetween="20"
+          :modules="modules"
+          @swiper="setSwiper"
+          class="mySwiper"
+        >
+          <swiper-slide
+            v-for="(item, index) in videoList"
+            :key="index"
+            class="video-list"
+          >
+            <a target="_blank" :href="item.url == '' ? '#' : item.url">
+              <img :src="item.img" :alt="item.title" />
+            </a>
+          </swiper-slide>
+        </swiper>
+        <div v-else>
+          <a
+            v-for="(item, index) in videoList"
+            :href="item.url == '' ? '#' : item.url"
+            :key="index"
+          >
+            <img :src="item.img" :alt="item.title" />
+          </a>
         </div>
         <a>
           <span>
@@ -1164,6 +1213,114 @@ const okQuestionList = [
             </svg>
           </span>
         </a>
+        <div class="orthokeratoplasty-explain-btn" v-if="isPc !== false">
+          <div @click="handlesSliPrev()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="33"
+              viewBox="0 0 25 33"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1101_13247)">
+                <path
+                  d="M21.375 4.13777L21.375 22.499C21.375 25.7349 17.5517 27.4516 15.1334 25.3016L4.97611 16.2715C3.3165 14.7961 3.29541 12.2096 4.93073 10.7073L15.088 1.37618C17.4923 -0.832545 21.375 0.87294 21.375 4.13777Z"
+                  fill="#00A6CE"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_1101_13247"
+                  x="0.717773"
+                  y="0.380371"
+                  width="23.6572"
+                  height="31.876"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="3" />
+                  <feGaussianBlur stdDeviation="1.5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1101_13247"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1101_13247"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+          <div @click="handlesSliNext()">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="25"
+              height="33"
+              viewBox="0 0 25 33"
+              fill="none"
+            >
+              <g filter="url(#filter0_d_1101_13246)">
+                <path
+                  d="M3.875 22.3134V3.95212C3.875 0.716303 7.69827 -1.00041 10.1166 1.14954L20.2739 10.1797C21.9335 11.6551 21.9546 14.2415 20.3193 15.7438L10.162 25.075C7.75767 27.2837 3.875 25.5782 3.875 22.3134Z"
+                  fill="#00A6CE"
+                />
+              </g>
+              <defs>
+                <filter
+                  id="filter0_d_1101_13246"
+                  x="0.875"
+                  y="0.194824"
+                  width="23.6572"
+                  height="31.876"
+                  filterUnits="userSpaceOnUse"
+                  color-interpolation-filters="sRGB"
+                >
+                  <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                  <feColorMatrix
+                    in="SourceAlpha"
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                    result="hardAlpha"
+                  />
+                  <feOffset dy="3" />
+                  <feGaussianBlur stdDeviation="1.5" />
+                  <feComposite in2="hardAlpha" operator="out" />
+                  <feColorMatrix
+                    type="matrix"
+                    values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in2="BackgroundImageFix"
+                    result="effect1_dropShadow_1101_13246"
+                  />
+                  <feBlend
+                    mode="normal"
+                    in="SourceGraphic"
+                    in2="effect1_dropShadow_1101_13246"
+                    result="shape"
+                  />
+                </filter>
+              </defs>
+            </svg>
+          </div>
+        </div>
       </div>
       <div class="orthokeratoplasty-server">
         <div class="orthokeratoplasty-title">服務內容</div>
@@ -2992,7 +3149,44 @@ const okQuestionList = [
                     <span>備下次使用</span>
                   </div>
                 </div>
-                <div></div>
+                <div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/05/1b85d876b4ad43b3.png"
+                      alt=""
+                    />
+                  </div>
+                  <div>
+                    <img
+                      src="https://static.cmereye.com/imgs/2024/05/efc46121ceb56cce.png"
+                      alt=""
+                    />
+                  </div>
+                  <a>
+                    <span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="30"
+                        height="29"
+                        viewBox="0 0 30 29"
+                        fill="none"
+                      >
+                        <circle
+                          cx="15.0475"
+                          cy="14.0719"
+                          r="12.75"
+                          stroke="white"
+                          stroke-width="2.63793"
+                        />
+                        <path
+                          d="M15.9317 7.91602C15.9317 7.42736 15.5355 7.03123 15.0469 7.03123C14.5582 7.03123 14.1621 7.42736 14.1621 7.91602L15.9317 7.91602ZM14.4212 21.7313C14.7668 22.0768 15.327 22.0768 15.6725 21.7313L21.3033 16.1005C21.6488 15.755 21.6488 15.1948 21.3033 14.8493C20.9577 14.5037 20.3975 14.5037 20.052 14.8493L15.0469 19.8544L10.0418 14.8493C9.69622 14.5037 9.136 14.5037 8.79047 14.8493C8.44494 15.1948 8.44494 15.755 8.79047 16.1005L14.4212 21.7313ZM14.1621 7.91602L14.1621 21.1057L15.9317 21.1057L15.9317 7.91602L14.1621 7.91602Z"
+                          fill="white"
+                        />
+                      </svg>
+                    </span>
+                    <span>下載</span>
+                  </a>
+                </div>
               </div>
               <div>
                 <div @click="wearOrExcise('wear')">
@@ -3133,6 +3327,15 @@ const okQuestionList = [
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .video-list {
+    & > a {
+      height: 100%;
+      display: flex;
+      & > img {
+        width: 100%;
+      }
+    }
+  }
   .orthokeratoplasty {
     margin-bottom: 90px;
   }
@@ -3241,7 +3444,7 @@ const okQuestionList = [
           margin: 0 5px;
           color: var(--White, #fff);
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 21.981px;
           font-style: normal;
           font-weight: 400;
@@ -3389,7 +3592,7 @@ const okQuestionList = [
                 }
                 & > span:nth-child(2) {
                   color: #fff;
-                   font-family: 'Inter';
+                  font-family: "Inter";
                   font-size: 15.828px;
                   font-style: normal;
                   font-weight: 465;
@@ -3466,7 +3669,7 @@ const okQuestionList = [
         & > div {
           display: flex;
           color: #60605f;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 16.5px;
           font-style: normal;
           font-weight: 600;
@@ -3586,7 +3789,7 @@ const okQuestionList = [
       justify-content: center;
       align-items: center;
       padding: 12px 16px;
-      margin: 65px auto 0;
+      margin: 35px auto 0;
       & > span {
         display: flex;
         align-items: center;
@@ -3649,37 +3852,22 @@ const okQuestionList = [
       transform: translateX(-50%) scaleY(-1) rotate(180deg);
     }
   }
-  .orthokeratoplasty-explain::before {
-    content: "";
-    background: url("https://static.cmereye.com/imgs/2024/05/a43618d7d3460517.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 36px;
+  .orthokeratoplasty-explain-btn {
     position: absolute;
-    top: 27%;
-    left: -4%;
-    z-index: 5;
-  }
-  .orthokeratoplasty-explain::after {
-    position: absolute;
-    top: 27%;
-    right: -4%;
-    content: "";
-    background: url("https://static.cmereye.com/imgs/2024/05/a43618d7d3460517.png")
-      no-repeat;
-    background-size: 100% 100%;
-    width: 20px;
-    height: 36px;
-    transform: rotate(180deg);
-    z-index: 5;
+    top: 40%;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    gap: 0 980px;
+    left: -35px;
+    transform: translateY(-50%);
   }
   .orthokeratoplasty-suitable {
     max-width: 960px;
     margin: 30px auto 40px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -4510,7 +4698,7 @@ const okQuestionList = [
           margin: 0 5px;
           color: var(--White, #fff);
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
@@ -4665,7 +4853,7 @@ const okQuestionList = [
                 height: 49.096px;
               }
             }
-            & > div:nth-child(8) {
+            & > :last-child {
               margin-top: 10px;
               & > div:nth-child(1) {
                 width: 147px;
@@ -4699,7 +4887,7 @@ const okQuestionList = [
                 }
                 & > span:nth-child(2) {
                   color: var(--White, #fff);
-                   font-family: 'Inter';
+                  font-family: "Inter";
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 465;
@@ -4765,7 +4953,7 @@ const okQuestionList = [
         & > div {
           display: flex;
           color: #60605f;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 14px;
           font-style: normal;
           font-weight: 600;
@@ -4834,7 +5022,7 @@ const okQuestionList = [
         & > div:nth-child(2) {
           color: #60605f;
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 14px;
           font-style: normal;
           font-weight: 500;
@@ -4852,10 +5040,11 @@ const okQuestionList = [
   .orthokeratoplasty-explain {
     padding-left: 25px;
     & > div:nth-child(1) {
+      padding-right: 25px;
       display: flex;
       gap: 0 15px;
       overflow-x: scroll;
-      & > div {
+      & > a {
         width: 210px;
         height: 120px;
         min-width: 210px;
@@ -4945,7 +5134,7 @@ const okQuestionList = [
     margin-bottom: 50px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -5059,6 +5248,7 @@ const okQuestionList = [
       flex-direction: column;
       align-items: center;
       & > div:nth-child(1) {
+        margin: 0 auto 0 0;
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
@@ -5603,7 +5793,7 @@ const okQuestionList = [
       top: 70px;
       left: 26px;
       color: var(--OkLens-color, #0192b0);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 40px;
       font-style: normal;
       font-weight: 700;
