@@ -1506,8 +1506,17 @@ const miSightQuestionList = [
     margin-bottom: 90px;
   }
   .misight-question {
-    margin: 55px;
+    margin: 55px auto;
     margin-bottom: 65px;
+    :deep(.el-collapse) {
+      .el-collapse-item__header{
+        padding: 9px 35px;
+        justify-content: space-evenly;
+      }
+      .el-collapse-item__header::before{
+        left: 10px;
+      }
+    }
   }
   .misight-step-four {
     margin: 0 auto;
