@@ -3341,6 +3341,11 @@ const handlesSliPrev = () => {
   }
   .orthokeratoplasty-question {
     margin-bottom: 60px;
+    :deep(.el-collapse) {
+      .el-collapse-item__arrow{
+        margin: 0 8px 0 auto;
+      }
+    }
   }
   .orthokeratoplasty-video {
     margin-top: 90px;
@@ -4580,6 +4585,18 @@ const handlesSliPrev = () => {
     padding: 0 25px;
     width: 100%;
     box-sizing: border-box;
+    :deep(.el-collapse) {
+      .el-collapse-item__header{
+        padding-left: 50px;
+        justify-content: space-evenly;
+      }
+      .el-collapse-item__header::before{
+        left: 20px;
+      }
+      .el-collapse-item__arrow{
+        margin: 0 8px 0 0;
+      }
+    }
   }
   .orthokeratoplasty-video {
     padding: 0 25px;

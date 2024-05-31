@@ -700,7 +700,7 @@ const bannerImg = {
                   <span>STEP 3</span>
                 </div>
                 <div>
-                  <span>取鏡</span>
+                  <span>取鏡後</span>
                   <span>開始配戴，除了睡覺時間，應大多數時間</span>
                   <span>戴上</span>
                 </div>
@@ -1987,6 +1987,30 @@ const bannerImg = {
             font-weight: 500;
             line-height: 18px; /* 128.571% */
             text-transform: uppercase;
+          }
+        }
+      }
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 65.241px;
+            height: 28.449px;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 44.502px;
+            height: 44.615px;
+          }
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(1) {
+          & > svg {
+            width: 41.892px;
+            height: 43.002px;
           }
         }
       }

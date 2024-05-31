@@ -1692,7 +1692,7 @@ const miSightQuestionList = [
         justify-content: center;
         & > div {
           color: #60605f;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 16.5px;
           font-style: normal;
           font-weight: 600;
@@ -1818,7 +1818,7 @@ const miSightQuestionList = [
     margin: 90px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 40px;
       font-style: normal;
       font-weight: 600;
@@ -2227,7 +2227,7 @@ const miSightQuestionList = [
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
@@ -2275,7 +2275,7 @@ const miSightQuestionList = [
           & > div {
             display: flex;
             color: #60605f;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
@@ -2492,6 +2492,19 @@ const miSightQuestionList = [
     margin-top: 32px;
     margin-bottom: 40px;
     padding: 0 20px 0 24px !important;
+    :deep(.el-collapse) {
+      .el-collapse-item__header{
+        padding: 9px 35px;
+        justify-content: space-evenly;
+      }
+      .el-collapse-item__header::before{
+        left: 10px;
+      }
+      .el-collapse-item__arrow{
+        position: absolute;
+        right: 10px;
+      }
+    }
   }
   .misight-serve-content {
     margin-top: 70px;
@@ -2503,7 +2516,7 @@ const miSightQuestionList = [
       gap: 14px 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
+          width: 105px;
           height: 105px;
           background: #e4faff;
           border-radius: 15px;
@@ -2582,7 +2595,7 @@ const miSightQuestionList = [
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -2595,8 +2608,9 @@ const miSightQuestionList = [
       gap: 22px 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
+          width: 105px;
           height: 105px;
+          border-radius: 10px;
           background: #e4faff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           display: flex;
@@ -2701,6 +2715,7 @@ const miSightQuestionList = [
       }
     }
     & > div:nth-child(2) {
+      margin-top: 23px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 22px 12px;
@@ -2774,6 +2789,7 @@ const miSightQuestionList = [
   .misight-effect-content {
     margin-top: 48px;
     & > div:nth-child(2) {
+      margin-top: 14px;
       margin-bottom: 28px;
       & > p {
         display: inline;
@@ -2880,6 +2896,7 @@ const miSightQuestionList = [
       margin-top: 20px;
       & > div:nth-child(1) {
         & > div {
+          margin-bottom: 10px;
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
@@ -2927,6 +2944,26 @@ const miSightQuestionList = [
         display: flex;
         & > div {
           flex: 1;
+          position: relative;
+          display: flex;
+          color: var(--Dark-Grey, var(--Deep-Blue, #3e5270));
+          font-family: "Noto Sans CJK TC";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 18px; /* 212.475% */
+        }
+        & > div::before {
+          content: "";
+          min-width: 17.588px;
+          width: 17.588px;
+          height: 17.634px;
+          margin-right: 7.5px;
+          background: #6b2a7e;
+          display: block;
+        }
+        & > div:nth-child(2)::before {
+          background: #ddcae3;
         }
       }
     }

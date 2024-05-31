@@ -2830,11 +2830,12 @@ const miSightQuestionList = [
   }
   .myopia-control-hoya-head {
     margin: 34px 25px 30px;
-    :deep(.title) {
+    :deep(.title-test) {
       padding: 0 40px 5px;
       line-height: 1.2;
+      text-align: center;
     }
-    :deep(.title::after) {
+    :deep(.title-test::after) {
       width: 60%;
     }
     & > div:nth-child(2) {
