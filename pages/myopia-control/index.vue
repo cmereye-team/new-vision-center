@@ -4445,7 +4445,7 @@ onMounted(() => {
       border-radius: 30px;
       overflow: hidden;
     }
-    height: 440px;
+    min-height: 440px;
   }
   .myopia-control-content {
     max-width: 960px;
