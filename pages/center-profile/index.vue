@@ -3,17 +3,17 @@ useHead(() => ({
   title: "中心簡介 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: 'https://static.cmereye.com/imgs/2024/04/cb749c5077456981.png',
-  mobile: 'https://static.cmereye.com/imgs/2024/04/89671f7269cf9352.png'
-}
+  pc: "https://static.cmereye.com/imgs/2024/04/cb749c5077456981.png",
+  mobile: "https://static.cmereye.com/imgs/2024/04/89671f7269cf9352.png",
+};
 </script>
 
 <template>
   <div class="profile">
-    <PublicBanner  :banner="bannerImg">
+    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
-        <div class="profile-title ">
+        <div class="profile-title">
           <span>中心簡介</span>
         </div>
       </template>
@@ -37,7 +37,7 @@ const bannerImg = {
     // min-height: 800px;
     // position: relative;
     span {
-     position: relative;
+      position: relative;
       right: -180%;
       color: #fff;
       text-align: center;
@@ -81,7 +81,7 @@ const bannerImg = {
       letter-spacing: 5.6px;
     }
   }
-  .profile-content-max-width{
+  .profile-content-max-width {
     padding: 48px 28px 0 22px;
   }
 }

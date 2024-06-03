@@ -89,6 +89,13 @@ const miSightQuestionList = [
     ],
   },
 ];
+const btnElement = ref({
+  title: "哪一款鏡片最適合你的小朋友?",
+  svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
+  isExternalLink: true,
+  // isExternalLink 外链 true
+  link: "https://www.baidu.com",
+});
 </script>
 
 <template>
@@ -782,7 +789,7 @@ const miSightQuestionList = [
           </div>
         </div>
       </div>
-      <a class="btn-bg">
+      <!-- <a class="btn-bg">
         <div>
           <span>哪一款鏡片最適合你的小朋友?</span>
           <span
@@ -791,7 +798,10 @@ const miSightQuestionList = [
               alt="哪一款鏡片最適合你的小朋友?"
           /></span>
         </div>
-      </a>
+      </a> -->
+      <div class="btn-element">
+        <BtnAnimation :btnElement="btnElement" />
+      </div>
       <div class="myopia-server">
         <PublicPageTitle :title="'服務內容'" />
         <div>
@@ -1370,7 +1380,7 @@ const miSightQuestionList = [
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .myopia-control-hoya{
+  .myopia-control-hoya {
     margin-bottom: 65px;
   }
   .hoya-form {
@@ -1386,6 +1396,10 @@ const miSightQuestionList = [
     & > span::before {
       left: -290px;
     }
+  }
+  .btn-element {
+    display: flex;
+    justify-content: center;
   }
   .btn-pdf {
     display: flex;
@@ -1421,7 +1435,7 @@ const miSightQuestionList = [
       }
       & > span:nth-child(2) {
         color: #fff;
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 15.828px;
         font-style: normal;
         font-weight: 465;
@@ -1457,7 +1471,7 @@ const miSightQuestionList = [
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -1470,7 +1484,7 @@ const miSightQuestionList = [
             flex-direction: column;
             color: #60605f;
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1535,7 +1549,7 @@ const miSightQuestionList = [
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #60605f;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1546,7 +1560,7 @@ const miSightQuestionList = [
               flex-direction: column;
               & > span {
                 color: #60605f;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1554,7 +1568,7 @@ const miSightQuestionList = [
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 22.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1756,7 +1770,7 @@ const miSightQuestionList = [
     margin: 50px auto 50px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 40px;
       font-style: normal;
       font-weight: 600;
@@ -1985,13 +1999,14 @@ const miSightQuestionList = [
       align-items: center;
       gap: 0 70px;
       padding-left: 13px;
+      justify-content: center;
       & > img:nth-child(1) {
-        width: 407.25px;
-        height: 284.25px;
+        width: 350px;
+        // height: 284.25px;
       }
       & > img:nth-child(2) {
-        width: 355.127px;
-        height: 355.498px;
+        width: 300px;
+        // height: 355.498px;
       }
     }
     & > div:nth-child(3) {
@@ -2142,6 +2157,10 @@ const miSightQuestionList = [
       letter-spacing: 5.6px;
     }
   }
+  .btn-element {
+    display: flex;
+    justify-content: center;
+  }
   .myopia-collapse {
     margin: 30px 25px 40px;
     :deep(.el-collapse-item__header) {
@@ -2183,7 +2202,7 @@ const miSightQuestionList = [
           display: flex;
           align-items: center;
           color: #fff;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 15.862px;
           font-style: normal;
           font-weight: 465;
@@ -2221,7 +2240,7 @@ const miSightQuestionList = [
             & > div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -2233,7 +2252,7 @@ const miSightQuestionList = [
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -2321,7 +2340,7 @@ const miSightQuestionList = [
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -2574,7 +2593,7 @@ const miSightQuestionList = [
     padding: 0 25px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

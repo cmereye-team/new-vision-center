@@ -5,17 +5,48 @@ const imgList = [
   "https://static.cmereye.com/imgs/2024/04/dc0b7696b2d87ed0.png",
   "https://static.cmereye.com/imgs/2024/04/a8ff8092442374c1.png",
 ];
-// Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
 import "swiper/css";
-
 import "swiper/scss/navigation";
-
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
 const modules = [Pagination, Navigation];
+
+const swiperBox = (swiper: any) => {
+  deBoxSwiperRef = swiper;
+};
+let deBoxSwiperRef = {
+  slideTo: (a: any) => {},
+  slideToLoop: (a: any) => {},
+  slidePrev: () => {},
+  slideNext: () => {},
+};
+const handleshowdeBox = (_idx: any) => {
+  deBoxSwiperRef.slideTo(_idx);
+};
+const handlesSliNext = () => {
+  deBoxSwiperRef.slideNext();
+};
+const handlesSliPrev = () => {
+  deBoxSwiperRef.slidePrev();
+};
+const discountsList = ref([
+  {
+    id: 1,
+    img: "https://static.cmereye.com/imgs/2024/04/666c1d99c27658bf.png",
+  },
+  {
+    id: 2,
+    img: "https://static.cmereye.com/imgs/2024/04/5a960c3598776b5f.png",
+  },
+  {
+    id: 3,
+    img: "https://static.cmereye.com/imgs/2024/04/dc0b7696b2d87ed0.png",
+  },
+  {
+    id: 4,
+    img: "https://static.cmereye.com/imgs/2024/04/a8ff8092442374c1.png",
+  },
+]);
 </script>
 
 <template>
@@ -34,38 +65,36 @@ const modules = [Pagination, Navigation];
           </p>
         </div>
         <div>
-          <swiper :navigation="true" :modules="modules">
-            <swiper-slide>
+          <swiper :modules="modules" @swiper="swiperBox">
+            <swiper-slide v-for="item in discountsList" :key="item.id">
               <div class="img-swiper">
-                <img
-                  src="https://static.cmereye.com/imgs/2024/04/d40ca431271990e8.png"
-                  alt=""
-                />
+                <img :src="item.img" :alt="item.content || '中心簡介'" />
               </div>
             </swiper-slide>
-            <swiper-slide
-              ><div class="img-swiper">
-                <img
-                  src="https://static.cmereye.com/imgs/2024/04/d40ca431271990e8.png"
-                  alt=""
-                /></div></swiper-slide
-            ><swiper-slide
-              ><div class="img-swiper">
-                <img
-                  src="https://static.cmereye.com/imgs/2024/04/d40ca431271990e8.png"
-                  alt=""
-                /></div
-            ></swiper-slide>
           </swiper>
         </div>
       </div>
-      <div class="content-box-img-list">
+      <!-- <div class="content-box-img-list">
         <img
           v-for="(item, index) in imgList"
           :src="item"
           :key="index"
           alt="中心簡介"
         />
+      </div> -->
+    </div>
+    <div class="swiper-button-next-prev">
+      <div class="button-prev" @click="handlesSliPrev"></div>
+      <div class="button-next" @click="handlesSliNext"></div>
+    </div>
+    <div class="swiper-pagination-btn">
+      <div
+        class="swiper-btn-item"
+        v-for="(item, index) in discountsList"
+        :key="item.id"
+        @click="handleshowdeBox(index)"
+      >
+        <div><img :src="item.img" :alt="item.content" /></div>
       </div>
     </div>
   </div>
@@ -75,6 +104,7 @@ const modules = [Pagination, Navigation];
 @media screen and (min-width: 768px) {
   .content {
     background: #f2fbfd;
+    position: relative;
   }
   .content-box {
     max-width: 960px;
@@ -84,7 +114,7 @@ const modules = [Pagination, Navigation];
   .content-box-top {
     display: flex;
     justify-content: space-between;
-
+    position: relative;
     & > div:nth-child(1) {
       flex: 5;
       max-width: 600px;
@@ -111,6 +141,82 @@ const modules = [Pagination, Navigation];
       & > img {
         width: 100%;
       }
+    }
+  }
+  .swiper-pagination-btn {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 15px 0 25px;
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      cursor: pointer;
+    }
+
+    & > div {
+      margin-left: 18px;
+      & > div:nth-child(1) {
+        max-width: 230px;
+        & > img {
+          width: 100%;
+        }
+      }
+    }
+    & > div:first-child {
+      margin-left: 0;
+    }
+  }
+  .discounts-slide {
+    display: flex;
+    justify-content: space-between;
+    & > div {
+      flex: 5;
+    }
+    & > div:nth-child(2) {
+      margin-left: 105px;
+    }
+  }
+  .img-slide {
+    max-width: 575px;
+    & > img {
+      width: 100%;
+    }
+  }
+
+  .price-btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .swiper-button-next-prev {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0;
+    position: absolute;
+    top: 28%;
+    transform: translateY(-50%);
+    right: 3%;
+    z-index: 99;
+    width: 100%;
+    & > div:nth-child(1) {
+      display: block;
+      position: absolute;
+      left: -4%;
+      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+        no-repeat;
+      background-position: right;
+      width: 20px;
+      height: 40px;
+    }
+    & > div:nth-child(2) {
+      display: inline-block;
+      position: absolute;
+      right: 52%;
+      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+        no-repeat;
+      background-position: right;
+      width: 20px;
+      height: 40px;
     }
   }
   .img-swiper {
@@ -154,6 +260,7 @@ const modules = [Pagination, Navigation];
   .content {
     margin-top: 30px;
     background: #f2fbfd;
+    position: relative;
   }
   .content-box-top {
     & > div:nth-child(1) {
@@ -201,6 +308,47 @@ const modules = [Pagination, Navigation];
     grid-gap: 20px;
     img {
       width: 100%;
+    }
+  }
+  .swiper-button-next-prev {
+    max-width: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    display: flex;
+    gap: 0 90%;
+    box-sizing: border-box;
+    padding: 0 5px;
+    & > div {
+      width: 20px;
+      height: 40px;
+      display: inline-block;
+    }
+    & > div:nth-child(1) {
+      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+        no-repeat;
+    }
+    & > div:nth-child(2) {
+      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+        no-repeat;
+    }
+  }
+  .swiper-pagination-btn {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: center;
+    gap: 21px;
+    & > div {
+      margin-top: 15px;
+      max-width: 155px;
+      & > div:nth-child(1) {
+        & > img {
+          width: 100%;
+        }
+      }
     }
   }
   :deep(.swiper-button-next::after) {

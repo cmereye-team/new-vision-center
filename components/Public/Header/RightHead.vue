@@ -421,6 +421,7 @@ const mbToLink = (item: any) => {
       display: flex;
       flex-direction: column;
       align-items: center;
+      padding-top: 10px;
 
       & > div:last-child {
         border-bottom: none;
@@ -456,6 +457,8 @@ const mbToLink = (item: any) => {
       & > span {
         padding-bottom: 10px;
         border-bottom: 1px solid #00a6ce;
+        min-width: 6.25vw;
+        display: inline-block;
       }
     }
   }
@@ -483,7 +486,7 @@ const mbToLink = (item: any) => {
         background-size: 100% 100%;
         position: absolute;
         left: 20px;
-        top: 50%;
+        top: 40%;
         transform: translateY(-50%);
       }
     }
@@ -572,6 +575,7 @@ const mbToLink = (item: any) => {
     }
   }
   .sub-menu {
+    padding-top: 10px;
     display: none;
     position: relative;
     // background: #fff;
@@ -667,6 +671,7 @@ const mbToLink = (item: any) => {
       transform: rotate(180deg) translateX(50%);
     }
     .sub-menu {
+      padding-top: 10px;
       box-shadow: #4d4d4d 5px 5px 10px;
       z-index: 999;
       border-radius: 5px;
@@ -714,6 +719,8 @@ const mbToLink = (item: any) => {
       & > span {
         padding-bottom: 10px;
         border-bottom: 1px solid #00a6ce;
+        min-width: 120px;
+        display: inline-block;
       }
     }
   }
@@ -828,6 +835,7 @@ const mbToLink = (item: any) => {
     }
   }
   .sub-menu {
+    padding-top: 10px;
     display: none;
     position: relative;
     // background: #fff;
