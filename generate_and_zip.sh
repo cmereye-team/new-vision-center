@@ -17,7 +17,8 @@ if [ $? -eq 0 ]; then
 
     if [ $? -eq 0 ]; then
         echo "Zip archive created: $ZIP_FILE"
-        # 将打包后的dist 复制一份移动到 桌面
+        # 将打包后的dist 复制一份移动到 桌面 并且删除当前dist
+        rm -rf ~/Desktop/dist
         cp -r dist ~/Desktop/dist
     else
         echo "Failed to create zip archive."
