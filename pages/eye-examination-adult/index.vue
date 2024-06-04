@@ -2844,7 +2844,7 @@ const showAgeStage = (type: any) => {
 @media screen and (min-width: 768px) {
   .adult-box {
     max-width: 960px;
-    margin: 0 auto;
+    margin: 0 auto 55px;
   }
   .adult-status {
     & > div:nth-child(1) {
