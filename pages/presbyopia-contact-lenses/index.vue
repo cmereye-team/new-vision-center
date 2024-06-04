@@ -103,7 +103,6 @@ onMounted(() => {
           </p>
           <p>變形點，提供自然視覺體驗。</p>
         </div>
-        {{ isPc }} {{ widthNum }}
         <div>
           <img
             v-if="widthNum > 768"
