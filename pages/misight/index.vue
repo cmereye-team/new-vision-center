@@ -3,7 +3,13 @@ useHead(() => ({
   title: "MiSight®1 Day 隱形眼鏡 - 希瑪眼科視光中心",
 }));
 import getWindowSize from "@/utils/width";
-import { tr } from "element-plus/es/locale/index.mjs";
+const btnElement = ref({
+  title: "立即預約",
+  svgIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none" data-v-inspector="pages/misight/index.vue:1460:13" data-v-3320e5ed=""><path d="M0.939453 26.3485L2.82793 19.3256C1.30492 16.5899 0.821045 13.3975 1.4651 10.3342C2.10915 7.27096 3.83792 4.54236 6.33419 2.64911C8.83046 0.755852 11.9268 -0.175058 15.055 0.0271979C18.1831 0.229454 21.1334 1.55131 23.3642 3.7502C25.5951 5.9491 26.957 8.87753 27.2001 11.9981C27.4431 15.1187 26.5509 18.2222 24.6873 20.739C22.8236 23.2558 20.1135 25.0171 17.0542 25.6998C13.995 26.3825 10.7918 25.9407 8.0324 24.4555L0.939453 26.3485ZM8.3744 21.8274L8.81307 22.0873C10.8117 23.2702 13.1461 23.7597 15.4525 23.4795C17.7589 23.1993 19.9077 22.1652 21.564 20.5384C23.2203 18.9115 24.2911 16.7832 24.6096 14.4852C24.9281 12.1872 24.4763 9.84861 23.3246 7.83378C22.173 5.81894 20.3862 4.24108 18.2427 3.34609C16.0991 2.4511 13.7193 2.28924 11.4741 2.88575C9.22881 3.48226 7.24423 4.80362 5.8296 6.64393C4.41497 8.48423 3.64976 10.7401 3.65321 13.06C3.65133 14.9835 4.18411 16.8699 5.19224 18.509L5.46734 18.9619L4.41158 22.8816L8.3744 21.8274Z" fill="#59BA68" data-v-inspector="pages/misight/index.vue:1467:15" data-v-3320e5ed=""></path><path fill-rule="evenodd" clip-rule="evenodd" d="M19.021 14.8633C18.7639 14.6562 18.4628 14.5104 18.1407 14.4371C17.8186 14.3637 17.484 14.3648 17.1623 14.4401C16.679 14.6406 16.3668 15.3978 16.0545 15.7764C15.9886 15.8672 15.8919 15.9308 15.7824 15.9554C15.6729 15.98 15.5581 15.9639 15.4597 15.91C13.6904 15.2181 12.2074 13.9492 11.2515 12.3095C11.17 12.2072 11.1314 12.0773 11.1439 11.9471C11.1564 11.8169 11.2189 11.6967 11.3184 11.6117C11.6667 11.2674 11.9224 10.841 12.0619 10.3719C12.0929 9.85446 11.9742 9.33906 11.7199 8.88714C11.5234 8.25356 11.1493 7.68941 10.6419 7.26133C10.3801 7.1438 10.09 7.1044 9.80633 7.14787C9.52269 7.19134 9.2577 7.31583 9.04334 7.50632C8.6712 7.82691 8.37582 8.22676 8.17895 8.67644C7.98208 9.12612 7.88873 9.61417 7.90579 10.1046C7.90694 10.3801 7.9419 10.6543 8.00988 10.9213C8.18253 11.5626 8.44803 12.1753 8.79799 12.7401C9.05048 13.1727 9.32596 13.5915 9.62327 13.9947C10.5895 15.3191 11.804 16.4436 13.1995 17.3057C13.8997 17.7438 14.6482 18.1 15.43 18.3673C16.2421 18.7349 17.1388 18.876 18.0248 18.7756C18.5296 18.6993 19.0079 18.5003 19.4175 18.1961C19.8272 17.8919 20.1558 17.4918 20.3742 17.031C20.5026 16.7527 20.5415 16.4415 20.4857 16.1402C20.3519 15.524 19.5266 15.1602 19.021 14.8633Z" fill="#59BA68" data-v-inspector="pages/misight/index.vue:1471:15" data-v-3320e5ed=""></path></svg>`,
+  isExternalLink: true,
+  // isExternalLink 外链 true
+  link: "https://www.baidu.com",
+});
 
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/a76ecb0090da4bd5.png",
@@ -1454,7 +1460,10 @@ const miSightQuestionList = [
             </div>
           </div>
         </div>
-        <a>
+        <div>
+          <BtnAnimation :btnElement="btnElement" />
+        </div>
+        <!-- <a>
           <span>立即預約</span
           ><span>
             <svg
@@ -1476,7 +1485,7 @@ const miSightQuestionList = [
               />
             </svg>
           </span>
-        </a>
+        </a> -->
         <div>
           <p>
             *Compared with a single vision one-day lens over a three-year
@@ -1509,11 +1518,11 @@ const miSightQuestionList = [
     margin: 55px auto;
     margin-bottom: 65px;
     :deep(.el-collapse) {
-      .el-collapse-item__header{
+      .el-collapse-item__header {
         padding: 9px 35px;
         justify-content: space-evenly;
       }
-      .el-collapse-item__header::before{
+      .el-collapse-item__header::before {
         left: 10px;
       }
     }
@@ -1606,6 +1615,25 @@ const miSightQuestionList = [
             content: none;
           }
         }
+      }
+    }
+    & > div:nth-child(2) {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      :deep(.btn) {
+        .slot {
+          & > div {
+            background: linear-gradient(
+              93deg,
+              #efa83e 36.04%,
+              #8533ed 84.48%
+            ) !important;
+          }
+        }
+      }
+      :deep(.btn::after) {
+        animation: btntestafterAnima 3s infinite ease-in-out;
       }
     }
     & > div:nth-child(3) {
@@ -2419,6 +2447,25 @@ const miSightQuestionList = [
         }
       }
     }
+    & > div:nth-child(2) {
+      margin: 20px auto;
+      display: flex;
+      justify-content: center;
+      :deep(.btn) {
+        .slot {
+          & > div {
+            background: linear-gradient(
+              93deg,
+              #efa83e 36.04%,
+              #8533ed 84.48%
+            ) !important;
+          }
+        }
+      }
+      :deep(.btn::after) {
+        animation: btntestafterAnima 3s infinite ease-in-out;
+      }
+    }
     & > div:nth-child(3) {
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
@@ -2502,14 +2549,14 @@ const miSightQuestionList = [
     margin-bottom: 40px;
     padding: 0 20px 0 24px !important;
     :deep(.el-collapse) {
-      .el-collapse-item__header{
+      .el-collapse-item__header {
         padding: 9px 35px;
         justify-content: space-evenly;
       }
-      .el-collapse-item__header::before{
+      .el-collapse-item__header::before {
         left: 10px;
       }
-      .el-collapse-item__arrow{
+      .el-collapse-item__arrow {
         position: absolute;
         right: 10px;
       }
@@ -3002,6 +3049,45 @@ const miSightQuestionList = [
       line-height: normal;
       letter-spacing: 5.6px;
     }
+  }
+}
+@keyframes btntestafterAnima {
+  0% {
+    width: 100%;
+    height: 100%;
+    border-top: 5px solid #bf8732;
+    border-left: 5px solid #bf8732;
+    border-right: 5px solid #6929bb;
+    border-bottom: 5px solid #6929bb;
+  }
+  19% {
+    border-top: 5px solid #bf87328e;
+    border-left: 5px solid #bf87328e;
+    border-right: 5px solid #6929bb8e;
+    border-bottom: 5px solid #6929bb8e;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  24% {
+    border-top: 5px solid #bf873248;
+    border-left: 5px solid #bf873248;
+    border-right: 5px solid #6929bb48;
+    border-bottom: 5px solid #6929bb48;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+  }
+  29% {
+    border-top: 0 solid #bf8700;
+    border-left: 0 solid #bf8700;
+    border-right: 0 solid #692900;
+    border-bottom: 0 solid #692900;
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
+  }
+  100% {
+    border: 0 solid #00a5ce00;
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
   }
 }
 </style>

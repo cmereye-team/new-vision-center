@@ -1415,6 +1415,7 @@ const btnElement = ref({
       }
     }
     & > a {
+      position: relative;
       margin-top: 22px;
       display: flex;
       align-items: center;
@@ -1424,6 +1425,7 @@ const btnElement = ref({
       box-shadow: 0px 0px 6px 4px rgb(64 164 181 / 25%);
       gap: 0 16px;
       padding: 8px 24px;
+      z-index: 5;
       & > span {
         display: flex;
         justify-content: center;
@@ -1441,6 +1443,15 @@ const btnElement = ref({
         font-weight: 465;
         line-height: normal;
       }
+    }
+    & > a::after {
+      content: "";
+      position: absolute;
+      animation: btntestafterAnima 3s infinite ease-in-out;
+      border-radius: 25px;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
     }
   }
   .myopia-promise {
@@ -2209,6 +2220,15 @@ const btnElement = ref({
           line-height: normal;
         }
       }
+      & > a::after {
+        content: "";
+        position: absolute;
+        animation: btntestafterAnima 3s infinite ease-in-out;
+        border-radius: 25px;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
     }
   }
   .myopia-container-step {
@@ -2920,6 +2940,33 @@ const btnElement = ref({
     padding: 4px;
     width: fit-content;
     margin: 0 auto;
+  }
+}
+@keyframes btntestafterAnima {
+  0% {
+    width: 100%;
+    height: 100%;
+    border: 5px solid #02ed85;
+  }
+  19% {
+    border: 5px solid #02ed858e;
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+  }
+  24% {
+    border: 5px solid #02ed8548;
+    width: calc(100% + 14px);
+    height: calc(100% + 14px);
+  }
+  29% {
+    border: 0 solid #02ed85;
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
+  }
+  100% {
+    border: 0 solid #02ed8500;
+    width: calc(100% + 18px);
+    height: calc(100% + 18px);
   }
 }
 </style>
