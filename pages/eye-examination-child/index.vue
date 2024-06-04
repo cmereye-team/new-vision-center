@@ -3,8 +3,8 @@ useHead(() => ({
   title: "眼睛檢查 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/06/229a3265342682c3.png",
+  mobile: "https://static.cmereye.com/imgs/2024/06/028b59dee8dda26b.png",
 };
 </script>
 
@@ -1608,7 +1608,7 @@ const bannerImg = {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -1644,7 +1644,8 @@ const bannerImg = {
       display: flex;
       flex-direction: column;
       border-right: 2.25px #fff solid;
-      & > div {
+      & > div:nth-child(2),
+      & > div:nth-child(3) {
         border-bottom: 2.25px solid #fff;
       }
       & > div:nth-child(1) {
@@ -1669,6 +1670,7 @@ const bannerImg = {
           display: flex;
           justify-content: center;
           align-items: center;
+          margin-top: 2.5px;
         }
       }
       & > div:nth-child(2) {
@@ -1712,6 +1714,9 @@ const bannerImg = {
       & > div:nth-child(2),
       & > div:nth-child(3) {
         background: #ffffffd9;
+        text-indent: -16px;
+        padding-left: 36px;
+        padding-right: 15px;
       }
     }
     & > div:nth-child(1) {
@@ -1731,6 +1736,9 @@ const bannerImg = {
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+      &>div:nth-child(1){
+        border-bottom: 2.25px solid #fff;
       }
     }
 
@@ -1907,7 +1915,7 @@ const bannerImg = {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -2006,8 +2014,8 @@ const bannerImg = {
     & > div:nth-child(2),
     & > div:nth-child(3),
     & > div:nth-child(4) {
-      width: calc((100% - 78px) / 3);
-      max-width: calc((100% - 78px) / 3);
+      width: calc((100% - 65px) / 3);
+      max-width: calc((100% - 65px) / 3);
       border-radius: 15px;
       & > div:nth-child(2),
       & > div:nth-child(3) {
@@ -2015,14 +2023,11 @@ const bannerImg = {
       }
     }
     & > div:nth-child(1) {
-      min-width: calc(100% - (3 * 87px));
-      max-width: calc(100% - (3 * 87px));
+      min-width: calc(100% - (3 * 90px));
+      max-width: calc(100% - (3 * 90px));
       background: #00517e;
       border-radius: 15px;
       & > div {
-        color: #fff;
-        text-align: center;
-        font-family: "Noto Sans HK";
         color: #fff;
         text-align: center;
         font-family: "Noto Sans HK";
@@ -2034,6 +2039,8 @@ const bannerImg = {
         display: flex;
         align-items: center;
         justify-content: center;
+        padding-left: 15px;
+        padding-right: 15px;
       }
     }
 

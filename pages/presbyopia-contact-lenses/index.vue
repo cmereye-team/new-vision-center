@@ -594,7 +594,11 @@ onMounted(() => {
       </div>
       <div class="glasses-step">
         <div>
-          <div></div>
+          <div>
+            <span v-for="(item, index) in '老花隱形眼鏡'" :key="index">{{
+              item
+            }}</span>
+          </div>
           <div><span>檢查及試戴套餐</span></div>
           <div><span>$</span><span>500</span></div>
         </div>
@@ -1364,36 +1368,25 @@ onMounted(() => {
       border-right: 3px solid #00a6ce;
       flex: 3.5;
       & > div:nth-child(1) {
-        position: relative;
-        min-width: 195px;
-        min-height: 51px;
+        display: flex;
+        span {
+          border-radius: 50%;
+          color: var(--White, #fff);
+          font-family: "Noto Sans HK";
+          font-size: 33.75px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 45px; /* 133.333% */
+          background: #00a6ce;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 51px;
+          height: 51px;
+          letter-spacing: 1px;
+        }
       }
-      & > div:nth-child(1)::before {
-        content: "老 花 隱 形 眼 鏡";
-        color: var(--White, #fff);
-        font-family: "Noto Sans HK";
-        font-size: 33.75px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 45px; /* 133.333% */
-        letter-spacing: 1.7px;
-        position: absolute;
-        left: 8px;
-        z-index: 2;
-      }
-      & > div:nth-child(1)::after {
-        content: "";
-        background: url(https://static.cmereye.com/imgs/2024/05/717d8420976f23fc.png)
-          no-repeat;
-        background-size: 100% 100%;
-        width: 286px;
-        height: 51px;
-        display: inline-block;
-        position: absolute;
-        z-index: 1;
-        top: 0;
-        left: 0;
-      }
+
       & > div:nth-child(2) {
         margin-top: 5px;
         & > span:nth-child(1) {
@@ -1798,35 +1791,23 @@ onMounted(() => {
     & > div:nth-child(1) {
       position: relative;
       & > div:nth-child(1) {
-        position: relative;
-        height: 38px;
-      }
-      & > div:nth-child(1)::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/29e22fabbebfa112.png")
-          no-repeat;
-        background-size: 100% 100%;
-        width: 145px;
-        height: 38px;
-        display: inline-block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        z-index: 1;
-      }
-      & > div:nth-child(1)::before {
-        content: "隱 形 眼 鏡";
-        position: absolute;
-        left: 5px;
-        top: 0;
-        z-index: 3;
-        color: var(--White, #fff);
-        font-family: "Noto Sans HK";
-        font-size: 25.147px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: 33.529px; /* 133.333% */
-        letter-spacing: 1.815px;
+        display: flex;
+        span {
+          border-radius: 50%;
+          color: var(--White, #fff);
+          font-family: "Noto Sans HK";
+          font-size: 25.147px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 33.529px; /* 133.333% */
+          letter-spacing: 2.515px;
+          background: #00a6ce;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 38px;
+          height: 38px;
+        }
       }
       & > div:nth-child(2) {
         margin-top: 3px;

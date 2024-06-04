@@ -16,7 +16,11 @@ const bannerImg = {
         <div class="profile-title"></div>
       </template>
     </PublicBanner>
-    <PublicNavbar :name="'成人視力服務'" />
+    <PublicNavbar
+      :name="'成人視力服務'"
+      :isInsidePage="true"
+      :insidePageTitle="'青光眼'"
+    />
     <div class="adult-vision-box">
       <div class="glaucoma">
         <div>
@@ -2278,7 +2282,7 @@ const bannerImg = {
         font-style: normal;
         font-weight: 700;
         line-height: 45px; /* 133.333% */
-        letter-spacing: 1.7px;
+        letter-spacing: 2.7px;
         position: absolute;
         left: 8px;
         z-index: 2;
@@ -2365,7 +2369,7 @@ const bannerImg = {
     margin: 38px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -2466,7 +2470,7 @@ const bannerImg = {
           margin: 0 10px;
           color: #fff;
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 21.981px;
           font-style: normal;
           font-weight: 400;
@@ -2659,7 +2663,7 @@ const bannerImg = {
         background: url("https://static.cmereye.com/imgs/2024/05/ba211b6cd92570ba.png")
           no-repeat;
         background-size: 100% 100%;
-        width: 96px;
+        width: 114px;
         height: 38px;
         display: inline-block;
         position: absolute;
@@ -2670,7 +2674,7 @@ const bannerImg = {
       & > div:nth-child(1)::before {
         content: "青 光 眼";
         position: absolute;
-        left: 2px;
+        left: 6px;
         top: 0;
         z-index: 3;
         color: var(--White, #fff);
@@ -2679,7 +2683,7 @@ const bannerImg = {
         font-style: normal;
         font-weight: 700;
         line-height: 33.529px; /* 133.333% */
-        letter-spacing: 0px;
+        letter-spacing: 2.7px;
       }
       & > div:nth-child(2) {
         margin-top: 3px;
@@ -2806,7 +2810,7 @@ const bannerImg = {
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -2917,7 +2921,7 @@ const bannerImg = {
           margin: 0 5px;
           color: #fff;
           text-align: center;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 18px;
           font-style: normal;
           font-weight: 400;
