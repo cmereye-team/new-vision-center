@@ -1760,7 +1760,6 @@ const onInform = (el: any) => {
             </div>
           </div>
         </div>
-
         <div v-if="isClose">
           <ServeTag @inform="onInform" :detail="defaultDataOne" />
         </div>
