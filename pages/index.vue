@@ -15,7 +15,7 @@ onMounted(() => {
     isPc.value = widthState;
   });
   isPc.value = widthState;
-  getLocale()
+  getLocale();
 });
 import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation, Scrollbar];
@@ -127,15 +127,17 @@ const setSwiper = (swiper: any) => {
 };
 
 const getLocale = () => {
-  let list: any = JSON.parse(
-    window.localStorage.getItem("participationVideo") || ""
-  );
-  witness.value.section1 = list;
-  if (list == null) {
-    window.localStorage.setItem(
-      "participationVideo",
-      JSON.stringify(witness.value.section1)
+  if (window.localStorage.getItem("participationVideo") || "") {
+    let list: any = JSON.parse(
+      window.localStorage.getItem("participationVideo") || ""
     );
+    witness.value.section1 = list;
+    if (list == null) {
+      window.localStorage.setItem(
+        "participationVideo",
+        JSON.stringify(witness.value.section1)
+      );
+    }
   }
 };
 
@@ -213,9 +215,9 @@ const handleIcon = (str: any, idx: any) => {
     }
   });
   window.localStorage.setItem(
-      "participationVideo",
-      JSON.stringify(witness.value.section1)
-    );
+    "participationVideo",
+    JSON.stringify(witness.value.section1)
+  );
 };
 </script>
 
