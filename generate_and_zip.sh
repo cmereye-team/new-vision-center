@@ -14,9 +14,9 @@ if [ $? -eq 0 ]; then
 
     # Create the zip archive
     zip -r "$ZIP_FILE" "$SOURCE_DIR"
-
     if [ $? -eq 0 ]; then
         echo "Zip archive created: $ZIP_FILE"
+        sh ./ssh.sh
     else
         echo "Failed to create zip archive."
     fi

@@ -4,6 +4,9 @@
 FTP_HOST="139.196.220.221"  # 确保这个是实际的FTP服务器地址
 FTP_USER="root"
 FTP_PASS="binbo12300.."
+# 将明文密码转换成 key 公钥
+ssh-keygen -f ~/.ssh/id_rsa -p -P "" -N ""
+cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys
 
 # 本地文件路径
 LOCAL_FILE_PATH="dist.zip"
@@ -17,14 +20,14 @@ SSH_PASS="binbo12300.."
 SSH_HOST="139.196.220.221"
 
 # 使用expect自动化FTP上传
-# ftp_upload() {
-#   ftp -inv $FTP_HOST <<EOF
-# user $FTP_USER $FTP_PASS
-# cd $REMOTE_DIR
-# put $LOCAL_FILE_PATH
-# bye
-# EOF
-# }
+ftp_upload() {
+  ftp -inv $FTP_HOST <<EOF
+user $FTP_USER $FTP_PASS
+cd $REMOTE_DIR
+put $LOCAL_FILE_PATH
+bye
+EOF
+}
 
 # 使用expect自动化SSH执行命令
 ssh_unzip() {
@@ -56,7 +59,3 @@ if [ $? -eq 0 ]; then
 else
   echo "文件上传失败"
 fi
-
-
-# 安装 Plink windows 
-

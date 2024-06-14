@@ -127,17 +127,28 @@ const setSwiper = (swiper: any) => {
 };
 
 const getLocale = () => {
-  if (window.localStorage.getItem("participationVideo") || "") {
-    let list: any = JSON.parse(
-      window.localStorage.getItem("participationVideo") || ""
-    );
-    witness.value.section1 = list;
-    if (list == null) {
-      window.localStorage.setItem(
-        "participationVideo",
-        JSON.stringify(witness.value.section1)
-      );
+  // 获取 localStorage 中的 participationVideo 项
+  const storedItem = window.localStorage.getItem("participationVideo");
+  let list = null;
+
+  // 尝试解析 JSON
+  if (storedItem) {
+    try {
+      list = JSON.parse(storedItem);
+    } catch (error) {
+      console.error("Error parsing JSON from localStorage", error);
     }
+  }
+
+  // 如果解析成功，将其赋值给 witness.value.section1
+  if (list) {
+    witness.value.section1 = list;
+  } else {
+    // 如果解析失败或者没有存储项，初始化 localStorage
+    window.localStorage.setItem(
+      "participationVideo",
+      JSON.stringify(witness.value.section1)
+    );
   }
 };
 

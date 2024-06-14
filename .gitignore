@@ -6,6 +6,8 @@
 .cache
 dist
 dist.zip
+generate_and_zip.sh
+ssh.sh
 
 # Node dependencies
 node_modules
