@@ -7,7 +7,7 @@ isPc.value = widthState;
 const props = defineProps({
   title: {
     type: String,
-    default: "1",
+    default: "",
   },
   listQuestion: {
     type: Array,

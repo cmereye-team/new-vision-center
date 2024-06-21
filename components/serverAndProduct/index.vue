@@ -176,6 +176,17 @@ const props = defineProps({
       gap: 0 36px;
       box-sizing: border-box;
       padding: 28px 22px 30px;
+      & > div:nth-child(1) {
+        width: 119px;
+        height: 119px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+      }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
