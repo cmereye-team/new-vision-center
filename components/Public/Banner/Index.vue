@@ -128,6 +128,11 @@ const props = defineProps({
             width: max-content;
           }
         }
+        & > a:hover {
+          box-shadow: 0 0 7.5px #00000040;
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
         & > a:nth-child(1) {
           padding: 13px 11px 13px 16px;
           border-radius: 0px 0px 10px 10px;
@@ -167,6 +172,11 @@ const props = defineProps({
         font-weight: 700;
         line-height: normal;
       }
+    }
+    & > a:hover {
+      box-shadow: 0 0 7.5px #00000040;
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
     }
     & > a:nth-child(1) {
       padding: 13px 11px 13px 16px;
@@ -229,6 +239,11 @@ const props = defineProps({
             width: max-content;
           }
         }
+        & > a:hover {
+          box-shadow: 0 0 7.5px #00000040;
+          transform: scale(1.1);
+          transition: all 0.3s ease-in-out;
+        }
         & > a:nth-child(1) {
           padding: 13px 11px 13px 16px;
           border-radius: 0px 0px 10px 10px;
@@ -268,6 +283,11 @@ const props = defineProps({
         font-weight: 700;
         line-height: normal;
       }
+    }
+    & > a:hover {
+      box-shadow: 0 0 7.5px #00000040;
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
     }
     & > a:nth-child(1) {
       padding: 13px 11px 13px 16px;

@@ -915,6 +915,7 @@ onMounted(() => {
       gap: 5px 0;
       display: flex;
       flex-direction: column;
+      min-width: 108px;
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           svg {
@@ -933,6 +934,7 @@ onMounted(() => {
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    cursor: pointer;
     & > div:nth-child(1) {
       display: flex;
       justify-content: center;
@@ -956,11 +958,15 @@ onMounted(() => {
       line-height: 18.469px; /* 162.043% */
     }
   }
+  .classify-content:hover {
+    transform: scale(1.1);
+  }
   .classify-active {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-end;
+    cursor: pointer;
     & > div:nth-child(1) {
       transition: all 0.3s ease;
       width: 94.811px;
@@ -999,6 +1005,7 @@ onMounted(() => {
     padding: 34px 20px 34px 32px;
     display: flex;
     gap: 0 14px;
+    max-width: 840px;
     & > div:nth-child(2) {
       & > div:nth-child(1) {
         margin-bottom: 12px;
@@ -1440,6 +1447,7 @@ onMounted(() => {
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
     & > div:nth-child(1) {
       transition: all 0.3s ease;
       width: 94.811px;
