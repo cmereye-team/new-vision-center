@@ -4,17 +4,21 @@ const isPc = ref(true);
 const widthNum = ref();
 
 onMounted(() => {
-  let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
+    widthNum.value = width;
   });
+
+  let { widthState, width } = getWindowSize();
+  widthNum.value = width;
   isPc.value = widthState;
 });
 </script>
 <template>
   <div>
-    <PublicHeader />
+    <PublicHeader v-if="widthNum > 768" key="pc" />
+    <PublicHeaderMobileHead v-if="widthNum < 767" key="mobile" />
     <NuxtPage />
     <div v-if="!isPc" class="fixed-menu">
       <PublicFooterFixedFooter />

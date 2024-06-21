@@ -1,18 +1,16 @@
 <script lang="ts" setup>
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
-const widthNum = ref();
 
 onMounted(() => {
   let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
-    widthNum.value = width;
   });
   isPc.value = widthState;
-  widthNum.value = width;
 });
+
 const props = defineProps({
   banner: {
     type: Object,
@@ -25,7 +23,7 @@ const props = defineProps({
   <div class="banner-template">
     <div>
       <img v-if="isPc" :src="banner.pc" />
-      <img v-else :src="banner.mobile" :alt="banner.alt || ''" />
+      <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''" />
     </div>
     <div>
       <slot name="title"> </slot>
@@ -303,7 +301,7 @@ const props = defineProps({
 }
 @media screen and (max-width: 767px) {
   .banner-template {
-    margin-top: 87px;
+    margin-top: 75px;
     & > div:nth-child(1) {
       width: 100vw;
       & > img {

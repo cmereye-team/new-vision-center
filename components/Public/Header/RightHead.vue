@@ -1,5 +1,7 @@
 <script lang="ts" setup>
 import { Search } from "@element-plus/icons-vue";
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
 
 const input2 = ref("");
 const options = [
@@ -167,22 +169,19 @@ const isThreeLevel = (item: any) => {
   return item?.length > 0 ? true : false;
 };
 
-const isPc = ref(false);
-// 检测获取屏幕宽度
-const getScreenWidth = () => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-};
-
 onMounted(() => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
+  console.log(width, "PonMounted");
+
+  if (isPc) {
     menuListThisPc();
     showThreeLevel();
   }
-  window.addEventListener("resize", getScreenWidth);
-  window.addEventListener("beforeunload", getScreenWidth);
 });
 
 const menuListThisPc = () => {
@@ -224,6 +223,20 @@ const mbToLink = (item: any) => {
   });
   pathIsTrue();
   // console.log(router,'Proute');
+};
+
+const language = ref("hk");
+const getValue = (str: string) => {
+  console.log(str, "item");
+  language.value = str;
+};
+
+const checkLanguage = ref(false);
+const handleMouseenter = () => {
+  checkLanguage.value = true;
+};
+const handleMouseleave = () => {
+  checkLanguage.value = false;
 };
 </script>
 
@@ -329,19 +342,25 @@ const mbToLink = (item: any) => {
       </div>
       <div>條款細則</div>
     </div>
-    <div v-if="!isPc" class="copyright">
-      <p>
-        ©{{ new Date().getFullYear() }} 希瑪眼科視光中心
-        <nuxt-link>版權所有</nuxt-link>
-        <span>|</span>
-        <nuxt-link>私隱政策</nuxt-link>
-      </p>
-    </div>
-    <div class="search" v-if="isPc">
+    <div class="search">
       <el-input v-model="input2" placeholder="" :prefix-icon="Search" />
     </div>
-    <div class="language" v-if="isPc">
-      <div>🌏</div>
+    <div
+      class="language"
+      @mouseenter="handleMouseenter"
+      @mouseleave="handleMouseleave"
+    >
+      <div
+        class="language-svg"
+        :class="checkLanguage ? 'language-svg-spin' : ''"
+      >
+        {{ language.toUpperCase() }}
+      </div>
+      <div :class="checkLanguage ? 'language-list-show' : 'language-list-hide'">
+        <input @click="getValue('hk')" readonly type="text" value="HK" />
+        <input @click="getValue('CN')" readonly type="text" value="CN" />
+        <input @click="getValue('EN')" readonly type="text" value="EN" />
+      </div>
     </div>
   </div>
 </template>
@@ -701,7 +720,6 @@ const mbToLink = (item: any) => {
       }
     }
   }
-
   .son-menu {
     position: relative;
     width: 100%;
@@ -871,177 +889,73 @@ const mbToLink = (item: any) => {
       width: 100%;
     }
   }
-}
-@media screen and (max-width: 767px) {
-  .fade-enter-active,
-  .fade-leave-active {
-    transition: all 0.3s;
-  }
-  .fade-enter, .fade-leave-to /* .fade-leave-active 在 <2.1.8 中被替换为 .fade-leave-to */ {
-    transition: all 0.3s;
-  }
-  a {
-    text-decoration: none;
-  }
-  .menu {
-    padding: 10px 25px;
-    & > div {
-      padding: 16px 23px 16px 14px;
-      border-bottom: 1px dashed #4d4d4d;
-    }
-    .fa-path {
-      & > a {
-        width: 100%;
-        margin-bottom: 5px;
-        display: block;
-        color: #00a6ce;
-
-        font-family: "Inter";
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: normal;
-        letter-spacing: 2px;
-        position: relative;
-      }
-      & > .a-link::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/afcc2515ac219afd.png")
-          no-repeat;
-        width: 7px;
-        height: 14px;
-        position: absolute;
-        right: 0;
-        top: 3.5px;
-      }
-      & > .a-link-1::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
-          no-repeat;
-        width: 14px;
-        height: 7px;
-        transition: all 0.3s;
-        right: -3.5px;
-      }
-      & > .a-link-2::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
-          no-repeat;
-        width: 14px;
-        height: 7px;
-        transition: all 0.3s;
-        right: -3.5px;
-      }
-      & > .a-link-3::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
-          no-repeat;
-        width: 14px;
-        height: 7px;
-        transition: all 0.3s;
-        right: -3.5px;
-      }
-      & > .a-link-4::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
-          no-repeat;
-        width: 14px;
-        height: 7px;
-        right: -3.5px;
-        transition: all 0.3s;
-      }
-      & > .a-link-5::after {
-        content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
-          no-repeat;
-        width: 14px;
-        height: 7px;
-        transition: all 0.3s;
-        right: -3.5px;
-      }
-    }
-  }
-  .fa-2 {
-    .a-link::after {
-      display: none;
-    }
-  }
-  .three-level {
-    & > div {
-      margin-left: 15px;
-      & > a {
-        color: #3e5270;
-        font-family: "ABeeZee";
-        font-size: 16px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 30px;
-        position: relative;
-        & > span::before {
-          content: "";
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          background: #3e5270;
-          position: absolute;
-          left: -10px;
-          top: 10px;
-        }
-      }
-    }
-  }
-  .son-menu {
-    & > a {
-      color: #666;
-
-      font-family: "ABeeZee";
-      font-size: 16px;
-      font-style: normal;
-      font-weight: 400;
-      line-height: 30px;
-    }
-  }
-  .media {
-    display: flex;
-    align-content: center;
-    justify-content: space-between;
-    padding: 17px 25px 17px 40px;
+  .language {
+    position: relative;
     & > div:nth-child(1) {
-      display: flex;
-      & > div {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-      }
-      & > div:nth-child(2) {
-        margin: 0 23px;
-      }
-    }
-    & > div:nth-child(2) {
-      color: var(--Grey, #4d4d4d);
-      font-family: "Noto Sans CJK TC";
-      font-size: 10px;
+      color: #4d4d4d;
+      text-align: center;
+      font-family: Inter;
+      font-size: 17px;
       font-style: normal;
-      font-weight: 400;
-      line-height: 30px;
+      font-weight: 600;
+      line-height: normal;
+      position: relative;
     }
   }
-  .copyright {
-    padding: 10px 25px 10px 40px;
-    color: var(--Grey, #4d4d4d);
-    font-family: "Noto Sans CJK TC";
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 30px;
-    & > p {
-      & > span {
-        margin: 0 10px;
-      }
-      & > a {
-        color: var(--Grey, #4d4d4d);
-      }
+  .language-svg::after {
+    content: "";
+    position: absolute;
+    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 10.5px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(-90deg);
+    filter: grayscale(100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .language-svg-spin::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    content: "";
+    position: absolute;
+    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%) rotate(0deg);
+    filter: grayscale(0);
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    right: -20px;
+  }
+  .language-list-show {
+    position: absolute;
+    right: 0;
+    width: 120px;
+    max-width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px 0;
+    overflow: hidden;
+    background: #fff;
+    input {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      padding: 5px 20px;
     }
+    input:hover {
+      background: #00a5ce6b;
+    }
+  }
+  .language-list-hide {
+    display: none;
+    position: absolute;
   }
 }
 </style>

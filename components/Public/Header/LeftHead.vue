@@ -89,5 +89,16 @@
 @media screen and (min-width: 768px) {
 }
 @media screen and (max-width: 767px) {
+  .LeftHead {
+    & > a {
+      display: flex;
+      width: 117.555px;
+      height: 49px;
+      & > svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 </style>

@@ -18,7 +18,7 @@ const bannerImg = {
     />
     <div class="rgp-contact-lens">
       <div class="type">
-        <a>
+        <nuxt-link to="/rgp-contact-lens ">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="13"
@@ -44,8 +44,8 @@ const bannerImg = {
               fill="white"
             />
           </svg>
-        </a>
-        <a>
+        </nuxt-link>
+        <nuxt-link to="/scleral-lens">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="13"
@@ -71,7 +71,7 @@ const bannerImg = {
               fill="white"
             />
           </svg>
-        </a>
+        </nuxt-link>
       </div>
       <div class="glasses-step">
         <div>

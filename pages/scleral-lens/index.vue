@@ -56,7 +56,7 @@ const miSightQuestionList = [
     <div class="scleral-lens">
       <div class="type">
         <div>
-          <a>
+          <nuxt-link to="/rgp-contact-lens">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -82,8 +82,8 @@ const miSightQuestionList = [
                 fill="white"
               />
             </svg>
-          </a>
-          <a>
+          </nuxt-link>
+          <nuxt-link to="/scleral-lens">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -109,7 +109,7 @@ const miSightQuestionList = [
                 fill="white"
               />
             </svg>
-          </a>
+          </nuxt-link>
         </div>
         <div>
           <div>
