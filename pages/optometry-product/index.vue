@@ -155,22 +155,22 @@ const onInform = (el: any) => {
     />
     <div class="optometry-product">
       <div class="glasses-type">
-        <nuxt-link>
+        <nuxt-link to="/optometry-product">
           <span
-            ><img src="../../assets/img/triangle-left.svg" alt="triangle"
+            ><img src="@/assets/img/triangle-left.svg" alt="triangle"
           /></span>
-          <span>隱形眼鏡</span>
+          <span>視光產品</span>
           <span
-            ><img src="../../assets/img/triangle-right.svg" alt="triangle"
+            ><img src="@/assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
-        <nuxt-link>
+        <nuxt-link to="/optical-service">
           <span
-            ><img src="../../assets/img/triangle-left.svg" alt="triangle"
+            ><img src="@/assets/img/triangle-left.svg" alt="triangle"
           /></span>
-          <span>老花隱形眼鏡</span>
+          <span>視光服務</span>
           <span
-            ><img src="../../assets/img/triangle-right.svg" alt="triangle"
+            ><img src="@/assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
       </div>
