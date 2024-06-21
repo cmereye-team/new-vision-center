@@ -177,8 +177,8 @@ const props = defineProps({
       box-sizing: border-box;
       padding: 28px 22px 30px;
       & > div:nth-child(1) {
-        width: 119px;
-        height: 119px;
+        width: 225px;
+        height: 225px;
         display: flex;
         justify-content: center;
         align-items: center;
