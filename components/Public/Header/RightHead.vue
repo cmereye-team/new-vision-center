@@ -287,7 +287,7 @@ const handleMouseleave = () => {
     </div>
     <div class="media">
       <div>
-        <div>
+        <a target="_blank" href="https://www.facebook.com/cmervision/">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="27"
@@ -300,8 +300,8 @@ const handleMouseleave = () => {
               fill="#00A6CE"
             />
           </svg>
-        </div>
-        <div>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/cmervision/">
           <svg
             width="27"
             height="27"
@@ -322,8 +322,11 @@ const handleMouseleave = () => {
               fill="#00A6CE"
             />
           </svg>
-        </div>
-        <div>
+        </a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/@cmersmileeyecenter6303"
+        >
           <svg
             width="27"
             height="21"
@@ -338,7 +341,7 @@ const handleMouseleave = () => {
               fill="#00A6CE"
             />
           </svg>
-        </div>
+        </a>
       </div>
       <div>條款細則</div>
     </div>
@@ -615,7 +618,7 @@ const handleMouseleave = () => {
       display: flex;
       align-items: center;
       margin-left: 25px;
-      & > div:nth-child(2) {
+      & > a:nth-child(2) {
         margin: 0 25px;
       }
     }
@@ -629,6 +632,75 @@ const handleMouseleave = () => {
     :deep(.el-input) {
       width: 100%;
     }
+  }
+
+  .language {
+    position: relative;
+    & > div:nth-child(1) {
+      color: #4d4d4d;
+      text-align: center;
+      font-family: Inter;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: relative;
+    }
+  }
+  .language-svg::after {
+    content: "";
+    position: absolute;
+    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 10.5px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(-90deg);
+    filter: grayscale(100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .language-svg-spin::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    content: "";
+    position: absolute;
+    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%) rotate(0deg);
+    filter: grayscale(0);
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    right: -20px;
+  }
+  .language-list-show {
+    position: absolute;
+    right: 0;
+    width: 120px;
+    max-width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px 0;
+    overflow: hidden;
+    background: #fff;
+    input {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      padding: 5px 20px;
+    }
+    input:hover {
+      background: #00a5ce6b;
+    }
+  }
+  .language-list-hide {
+    display: none;
+    position: absolute;
   }
 }
 @media screen and (min-width: 1621px) {
@@ -874,7 +946,7 @@ const handleMouseleave = () => {
       display: flex;
       align-items: center;
       margin-left: 25px;
-      & > div:nth-child(2) {
+      & > a:nth-child(2) {
         margin: 0 25px;
       }
     }
