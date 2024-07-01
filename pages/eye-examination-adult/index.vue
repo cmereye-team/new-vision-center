@@ -2862,7 +2862,7 @@ const showAgeStage = (type: any) => {
             margin: 0 10px;
             color: #fff;
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 21.981px;
             font-style: normal;
             font-weight: 400;
@@ -3046,7 +3046,7 @@ const showAgeStage = (type: any) => {
     margin: 38px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -3135,7 +3135,7 @@ const showAgeStage = (type: any) => {
     & > div:nth-child(2) {
       max-width: 702px;
       margin: 0 auto;
-      background: url(https://static.cmereye.com/imgs/2024/05/408bc16bb05e7d91.png)
+      background: url(https://static.cmereye.com/imgs/2024/07/e8689b8a03e0c2cf.png)
         no-repeat;
       background-size: 100% 100%;
       height: 395px;
@@ -3147,6 +3147,7 @@ const showAgeStage = (type: any) => {
       padding-bottom: 70px;
       & > div {
         flex: 1;
+        display: none;
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
@@ -3179,7 +3180,7 @@ const showAgeStage = (type: any) => {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -3330,7 +3331,7 @@ const showAgeStage = (type: any) => {
       text-align: center;
     }
     & > div:nth-child(2) {
-      background: url(https://static.cmereye.com/imgs/2024/05/df791e6b46c22fdb.png)
+      background: url(https://static.cmereye.com/imgs/2024/07/976f70028a7b5e8a.png)
         no-repeat;
       background-size: 100% 100%;
       height: 340px;
@@ -3341,6 +3342,7 @@ const showAgeStage = (type: any) => {
       padding-bottom: 75px;
       & > div {
         flex: 1;
+        display: none;
       }
       & > div:nth-child(1) {
         flex: 4;
@@ -3384,7 +3386,7 @@ const showAgeStage = (type: any) => {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -3439,7 +3441,7 @@ const showAgeStage = (type: any) => {
             margin: 0 5px;
             color: #fff;
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -3690,7 +3692,7 @@ const showAgeStage = (type: any) => {
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-       font-family: 'Inter';
+      font-family: "Inter";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -3703,8 +3705,9 @@ const showAgeStage = (type: any) => {
       gap: 22px 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
+          border-radius: 10px;
           background: #e4faff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           display: flex;
@@ -3728,8 +3731,8 @@ const showAgeStage = (type: any) => {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 35.908px;
-            height: 57.951px;
+            width: 59px;
+            height: 59px;
           }
         }
       }
@@ -3761,8 +3764,8 @@ const showAgeStage = (type: any) => {
       gap: 14px 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
           background: #e4faff;
           border-radius: 15px;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);

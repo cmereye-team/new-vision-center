@@ -98,6 +98,8 @@ const toForm = () => {
     display: flex;
     flex-direction: column;
     gap: 20px 0;
+    z-index: 20;
+    right: 232px  !important;
   }
   .to-form {
     width: 66px;
@@ -115,7 +117,7 @@ const toForm = () => {
   .to-form-show {
     position: fixed;
     bottom: 180px;
-    right: 370px;
+    right: 220px;
     z-index: 20;
   }
 }

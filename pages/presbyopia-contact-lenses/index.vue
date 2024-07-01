@@ -3,8 +3,10 @@ useHead(() => ({
   title: "老花隱形眼鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/d38ae943d9584b98.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/6405e350baed3e21.png",
+  
+  
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -1950,6 +1952,7 @@ onMounted(() => {
       display: grid;
       grid-template-columns: auto auto auto;
       gap: 0 3.07vw;
+      margin-top: 43px;
       & > div {
         & > div:nth-child(1) {
           width: 27.43vw;

@@ -1564,7 +1564,7 @@ const bannerImg = {
       text-align: center;
     }
     & > div:nth-child(2) {
-      background: url(https://static.cmereye.com/imgs/2024/05/408bc16bb05e7d91.png)
+      background: url(https://static.cmereye.com/imgs/2024/07/e8689b8a03e0c2cf.png)
         no-repeat;
       background-size: 100% 100%;
       height: 395px;
@@ -1575,6 +1575,7 @@ const bannerImg = {
       padding-left: 60px;
       padding-bottom: 70px;
       & > div {
+        display: none;
         flex: 1;
       }
       & > div:nth-child(2) {
@@ -1859,9 +1860,10 @@ const bannerImg = {
       line-height: 40.107px; /* 167.112% */
       letter-spacing: 1.2px;
       text-align: center;
+      margin-bottom: 12px;
     }
     & > div:nth-child(2) {
-      background: url(https://static.cmereye.com/imgs/2024/05/df791e6b46c22fdb.png)
+      background: url(https://static.cmereye.com/imgs/2024/07/976f70028a7b5e8a.png)
         no-repeat;
       background-size: 100% 100%;
       height: 340px;
@@ -1871,6 +1873,7 @@ const bannerImg = {
       padding-right: 0;
       padding-bottom: 75px;
       & > div {
+        display: none;
         flex: 1;
       }
       & > div:nth-child(1) {

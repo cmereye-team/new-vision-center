@@ -16,7 +16,7 @@ const props = defineProps({
     <span>{{ title }}</span>
   </div>
   <div class="title-test" v-else>
-    <span>{{ title }}</span>
+    <span v-html="title"></span>
   </div>
 </template>
 

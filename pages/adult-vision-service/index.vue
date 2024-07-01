@@ -3,8 +3,8 @@ useHead(() => ({
   title: "成人視力服務- 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/63a1472e5dded066.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/48f29da7cff637da.png",
 };
 </script>
 
@@ -2557,8 +2557,8 @@ const bannerImg = {
       gap: 14px 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
           background: #e4faff;
           border-radius: 15px;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -2823,13 +2823,14 @@ const bannerImg = {
       gap: 22px 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
           background: #e4faff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
+          border-radius: 10px;
         }
         & > div:nth-child(2) {
           margin-top: 17px;

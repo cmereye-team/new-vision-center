@@ -115,7 +115,7 @@ const btnElement = ref({
     />
     <div class="myopia-control-hoya">
       <div class="myopia-control-hoya-head">
-        <PublicPageTitle :title="'HOYA MiYOSMART 兒童近視控制眼鏡'" />
+        <PublicPageTitle :title="`HOYA MiYOSMART<br class='br-pc' />兒童近視控制眼鏡`" />
         <div>
           HOYA MiYOSMART兒童近視控制鏡片又稱為DIMS近視控制鏡片，由香港理工大學與HOYA共同研發，應用了多區正向光學離焦的技術，有如普通眼鏡般容易使用，能有效減慢近視加深 
         </div>
@@ -2137,10 +2137,30 @@ const btnElement = ref({
     width: fit-content;
     margin: 0 auto;
   }
+  :deep(.br-pc){
+    display: none;
+  }
 }
 @media screen and (max-width: 767px) {
   .myopia-control-hoya {
     margin-bottom: 40px;
+  }
+  .hoya-form {
+    :deep(.detail) {
+      & > div:nth-child(1) {
+        border-radius: 27px 27px 0px 0px;
+        background: var(--Orange, #f90);
+        box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+      }
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          margin: 0 auto 13px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+      }
+    }
   }
   .profile-title {
     // background: url("https://static.cmereye.com/imgs/2024/05/5e82a28589934353.png")
@@ -2223,7 +2243,7 @@ const btnElement = ref({
       & > a::after {
         content: "";
         position: absolute;
-        animation: btntestafterAnima 3s infinite ease-in-out;
+        // animation: btntestafterAnima 3s infinite ease-in-out;
         border-radius: 25px;
         left: 50%;
         top: 50%;

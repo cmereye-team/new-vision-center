@@ -399,10 +399,9 @@ const onSubmit = () => {
       background: var(--Brand-2, #59ba68);
     }
     & > div:nth-child(2) {
-      padding: 17px 18px 30px 18px;
+      padding: 17px 4vw 30px 4vw;
       box-sizing: border-box;
       & > div:nth-child(1) {
-        width: 303px;
         & > img {
           width: 100%;
         }
@@ -433,7 +432,7 @@ const onSubmit = () => {
   :deep(.el-button),
   :deep(.el-select__wrapper),
   :deep(.el-input__wrapper) {
-    max-width: 295px;
+    // max-width: 295px;
     box-sizing: border-box;
     width: 100%;
   }

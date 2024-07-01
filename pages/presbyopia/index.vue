@@ -3,11 +3,11 @@ useHead(() => ({
   title: "老花漸進鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/5d7947a339ef25d4.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/2a416d456643f54e.png",
 };
 const isType = ref(0);
-const checkType = (type: Number) => {
+const checkType = (type: number) => {
   isType.value = type;
 };
 import getWindowSize from "@/utils/width";
@@ -22,9 +22,6 @@ onMounted(() => {
   isPc.value = widthState;
 });
 
-let yuanimg = ref("");
-let webpimg = ref("");
-let imgName = ref("");
 let imgLeft = ref("50%");
 const yuanspan = ref(null);
 const { elementX, elementWidth } = useMouseInElement(yuanspan);
@@ -251,7 +248,10 @@ const miSightQuestionList = [
           ><span>用眼習慣及視光數據等為客人訂製合適的鏡片。</span>
         </div>
         <div>
-          <div @click="checkType(0)" :class="isType == 0 ? 'active-bg' : 'hide-active'">
+          <div
+            @click="checkType(0)"
+            :class="isType == 0 ? 'active-bg' : 'hide-active'"
+          >
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/240c6b42780f48f0.png"
@@ -260,7 +260,10 @@ const miSightQuestionList = [
             </div>
             <div><span>一般漸進鏡片</span></div>
           </div>
-          <div @click="checkType(1)"  :class="isType == 1 ? 'active-bg' : 'hide-active'">
+          <div
+            @click="checkType(1)"
+            :class="isType == 1 ? 'active-bg' : 'hide-active'"
+          >
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/53295f03846aa04b.png"
@@ -269,7 +272,10 @@ const miSightQuestionList = [
             </div>
             <div><span>辦公室漸進鏡片</span></div>
           </div>
-          <div @click="checkType(2)"  :class="isType == 2 ? 'active-bg' : 'hide-active'">
+          <div
+            @click="checkType(2)"
+            :class="isType == 2 ? 'active-bg' : 'hide-active'"
+          >
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/a9a9d2b01adab5ec.png"
@@ -278,7 +284,10 @@ const miSightQuestionList = [
             </div>
             <div><span>戶外變色漸進鏡片</span></div>
           </div>
-          <div @click="checkType(3)"  :class="isType == 3 ? 'active-bg' : 'hide-active'">
+          <div
+            @click="checkType(3)"
+            :class="isType == 3 ? 'active-bg' : 'hide-active'"
+          >
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/5d857fccb22021bb.png"
@@ -468,7 +477,7 @@ const miSightQuestionList = [
       </div>
       <div class="question">
         <PublicCollapse
-          :title="'MiYOSMART鏡片常見問題'"
+          :title="'老花漸進鏡片常見問題'"
           :listQuestion="miSightQuestionList"
           :testWidth="true"
         />
@@ -672,7 +681,7 @@ const miSightQuestionList = [
         border-radius: 25px;
         & > div:nth-child(1) {
           height: 143px;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 22.5px;
           font-style: normal;
           font-weight: 600;
@@ -719,7 +728,7 @@ const miSightQuestionList = [
         & > div:nth-child(2),
         & > div:nth-child(3),
         & > div:nth-child(4) {
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 22.5px;
           font-style: normal;
           font-weight: 400;
@@ -1189,12 +1198,12 @@ const miSightQuestionList = [
       overflow-x: scroll;
       & > div {
         flex: 1;
-        width: 122px;
-        min-width: 122px;
+        width: 132px;
+        min-width: 132px;
         border-radius: 25px;
         & > div:nth-child(1) {
           height: 89px;
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 16px;
           font-style: normal;
           font-weight: 600;
@@ -1258,7 +1267,7 @@ const miSightQuestionList = [
         & > div:nth-child(2),
         & > div:nth-child(3),
         & > div:nth-child(4) {
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -1315,7 +1324,7 @@ const miSightQuestionList = [
           border-bottom: 1.06px solid #85439b;
         }
         & > div:nth-child(3) {
-          padding: 5px 0 0 0;
+          padding: 5px 0 0 5px;
           box-sizing: border-box;
         }
         & > div:last-child {
@@ -1589,7 +1598,7 @@ const miSightQuestionList = [
     border: 2px solid #00a6ce;
     transform: scale(1.05);
   }
-  .hide-active{
+  .hide-active {
     transform: scale(1.05);
   }
   .presbyopia-glasses,
