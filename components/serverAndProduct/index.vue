@@ -14,6 +14,7 @@ const handleResize = () => {
 onMounted(() => {
   handleResize();
   window.addEventListener("resize", handleResize);
+  handleccc(0)
 });
 
 const contextOrder = ref(5);
@@ -72,7 +73,7 @@ const props = defineProps({
       :key="index"
       @click="handleccc(index)"
     >
-      <div>
+      <div :class="[cur === index ? 'active' : '']">
         <img :src="item.img" alt="" />
       </div>
       <div>
@@ -208,6 +209,9 @@ const props = defineProps({
           font-weight: 500;
           line-height: 26px; /* 157.576% */
           letter-spacing: 0.825px;
+          & > span {
+            min-height: 26px;
+          }
         }
       }
       & > div:nth-child(3) {
@@ -226,6 +230,14 @@ const props = defineProps({
         box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
       }
     }
+  }
+  .active {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 100, 255, 0.1) 0%,
+        rgba(0, 100, 255, 0.1) 100%
+      ),
+      var(--Skin, #eafbff) !important;
   }
 }
 @media screen and (max-width: 767px) {
@@ -327,6 +339,14 @@ const props = defineProps({
         box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
       }
     }
+  }
+  .active {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 100, 255, 0.1) 0%,
+        rgba(0, 100, 255, 0.1) 100%
+      ),
+      var(--Skin, #eafbff) !important;
   }
 }
 </style>

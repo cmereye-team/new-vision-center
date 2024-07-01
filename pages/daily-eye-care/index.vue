@@ -7,6 +7,7 @@ const bannerImg = {
   mobile: "https://static.cmereye.com/imgs/2024/05/152dc13cba64e3ad.png",
 };
 import getWindowSize from "@/utils/width";
+import { fa } from "element-plus/es/locale";
 const isPc = ref(false);
 onMounted(() => {
   let { widthState, width } = getWindowSize();
@@ -60,16 +61,14 @@ const listDataDetail = [
     img: "https://static.cmereye.com/imgs/2024/06/2943b418ec659ed6.png",
     title: "常用20-20-20護眼法則",
     description: [
-      "觀看電子產品螢幕20分鐘，建議雙眼休息20秒，或者遠望20呎﹙約50厘米﹚",
-      "外的景觀。",
+      "觀看電子產品螢幕20分鐘，建議雙眼休息20秒，或者遠望20呎﹙約50厘米﹚外的景觀。",
     ],
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/716d87efeff177e8.png",
     title: "與物件保持適當距離",
     description: [
-      "使用智能電話、平板電腦及電腦時，建議分別保持30厘米、40 厘米、50厘米",
-      "的距離。",
+      "使用智能電話、平板電腦及電腦時，建議分別保持30厘米、40 厘米、50厘米的距離。",
     ],
   },
   {
@@ -90,8 +89,7 @@ const listDataDetail = [
     img: "https://static.cmereye.com/imgs/2024/06/d5cd6ca4c0382cb8.png",
     title: "避免在黑暗環境使用電子產品",
     description: [
-      "建議睡覺前限制使用電子產品的時間，關燈後不要看電子產品螢幕，以減少對",
-      "眼睛的傷害及影響睡眠質素。",
+      "建議睡覺前限制使用電子產品的時間，關燈後不要看電子產品螢幕，以減少對眼睛的傷害及影響睡眠質素。",
     ],
   },
   {
@@ -143,7 +141,14 @@ onMounted(() => {
   if (isPc.value) {
     dailyEyeFood.value[6].addOpenImg = true;
   }
-  questionI("近視");
+  questionI(
+    {
+      img: "https://static.cmereye.com/imgs/2024/06/c8a417d2cf51179c.png",
+      title: "近視",
+      id: 1,
+    },
+    1
+  );
 });
 
 const dailyEyeFood = ref([
@@ -212,34 +217,50 @@ const questionIconList = ref([
   {
     img: "https://static.cmereye.com/imgs/2024/06/c8a417d2cf51179c.png",
     title: "近視",
+    activeQuestion: false,
+    id: 1,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/64e581fcf3fb1fbc.png",
     title: "散光",
+    activeQuestion: false,
+    id: 2,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/aa7b90be2f4bed85.png",
     title: "眼乾症",
+    activeQuestion: false,
+    id: 3,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/082b9db2bdaa81c7.png",
     title: "飛蚊症",
+    activeQuestion: false,
+    id: 4,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/ec2a1af074a6a03e.png",
     title: "青光眼",
+    activeQuestion: false,
+    id: 5,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/f9e3ffcd522170d5.png",
     title: "白內障",
+    activeQuestion: false,
+    id: 6,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/bc4992911a72ffa8.png",
     title: "弱視/斜視",
+    activeQuestion: false,
+    id: 7,
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/ad00d87b7cfcafb7.png",
     title: "視光檢查",
+    activeQuestion: false,
+    id: 8,
   },
 ]);
 
@@ -517,8 +538,9 @@ const optometryQuestionList = ref([
 ]);
 
 const questionItem = ref([{}]);
-const questionI = (str: string) => {
-  switch (str) {
+// const activeQuestion = ref(false);
+const questionI = (item: any, i: number) => {
+  switch (item.title) {
     case "近視":
       questionItem.value = myopiaQuestionList.value;
       break;
@@ -546,6 +568,13 @@ const questionI = (str: string) => {
     default:
       break;
   }
+  clickQuestion(i);
+};
+
+const clickQuestion = (id: number) => {
+  questionIconList.value.forEach((element) => {
+    element.activeQuestion = element.id == id + 1 ? true : false;
+  });
 };
 </script>
 
@@ -631,7 +660,8 @@ const questionI = (str: string) => {
           <div
             v-for="(item, index) in questionIconList"
             :key="index"
-            @click="questionI(item.title)"
+            @click="questionI(item, index)"
+            :class="[item.activeQuestion ? 'active-question' : '']"
           >
             <img :src="item.img" :alt="item.title" :title="item.title" />
           </div>
@@ -657,6 +687,10 @@ const questionI = (str: string) => {
           justify-content: flex-start;
           gap: 0 25px;
           min-height: 176px;
+          & > div:nth-child(1) {
+            min-width: 225px;
+            height: auto;
+          }
         }
       }
     }
@@ -866,6 +900,10 @@ const questionI = (str: string) => {
         background: var(--Skin, #eafbff);
         box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
         cursor: pointer;
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
       }
       & > div:hover {
         border-radius: 10px;
@@ -883,6 +921,18 @@ const questionI = (str: string) => {
         padding-left: 40px;
       }
     }
+  }
+  .active-question {
+    position: relative;
+  }
+  .active-question::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 105px;
+    height: 109px;
+    background: rgb(192 209 255 / 35%);
   }
 }
 @media screen and (max-width: 767px) {
@@ -986,6 +1036,18 @@ const questionI = (str: string) => {
       justify-content: space-between;
     }
   }
+  .active-question {
+    position: relative;
+  }
+  .active-question::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 20.1vw;
+    height: 20.1vw;
+    background: rgb(192 209 255 / 35%);
+  }
   .close-img {
     flex: 1;
     width: 42px;
@@ -1030,17 +1092,21 @@ const questionI = (str: string) => {
     }
   }
   .m-img {
-    margin-top: 12px;
     position: relative;
+    max-width: 91vw;
+    margin: 12px auto 0;
     & > div:nth-child(1) {
-      width: 355px;
-      height: 269.309px;
+      width: 91vw;
+      height: 69.23vw;
       overflow: hidden;
       margin: 0 auto;
       border-radius: 27.692px;
       display: flex;
       align-items: center;
       justify-content: center;
+      & > img {
+        width: 100%;
+      }
     }
     & > div:nth-child(2) {
       position: absolute;
@@ -1092,8 +1158,8 @@ const questionI = (str: string) => {
       grid-template-columns: repeat(4, 2fr);
       gap: 13px;
       & > div {
-        width: 78.639px;
-        height: 78.639px;
+        width: 20.1vw;
+        height: 20.1vw;
         border-radius: 7.489px;
         background: var(--Skin, #eafbff);
         box-shadow: 0px 0px 5.617px 0px rgba(0, 0, 0, 0.25);

@@ -19,7 +19,7 @@ onMounted(() => {
 
 const listData = ref([
   {
-    img: "https://static.cmereye.com/imgs/2024/06/58a06bfa5d4a4b52.png",
+    img: "https://static.cmereye.com/imgs/2024/06/c2e52e755f48079a.png",
     title: ["雙眼協調及", "斜視檢查"],
   },
   {
@@ -27,19 +27,19 @@ const listData = ref([
     title: ["色弱/色盲", "檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/0d31da47fb9dc6ef.png",
+    img: "https://static.cmereye.com/imgs/2024/06/8c0818ec1e899da6.png",
     title: ["眼乾及淚水", "測試"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/8c0818ec1e899da6.png",
+    img: "https://static.cmereye.com/imgs/2024/06/0d31da47fb9dc6ef.png",
     title: ["驗配眼鏡"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/c2e52e755f48079a.png",
+    img: "https://static.cmereye.com/imgs/2024/06/58a06bfa5d4a4b52.png",
     title: ["立體視覺", "檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/00a380916ac346dd.png",
+    img: "https://static.cmereye.com/imgs/2024/06/abe1875b3eee24a5.png",
     title: ["角膜健康", "檢查"],
   },
   {
@@ -47,28 +47,28 @@ const listData = ref([
     title: ["青光眼篩查", "(眼壓)"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/b103780437afdab1.png",
+    img: "https://static.cmereye.com/imgs/2024/06/8a95d727e1a25f9f.png",
     title: ["視野檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/8a95d727e1a25f9f.png",
+    img: "https://static.cmereye.com/imgs/2024/06/b103780437afdab1.png",
     title: ["視力及屈光", "度數檢查檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/abe1875b3eee24a5.png",
+    img: "https://static.cmereye.com/imgs/2024/06/00a380916ac346dd.png",
     title: ["眼角膜地", "形圖分析"],
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/fe595b34e6f383ad.png",
-    title: ["角膜健康", "檢查"],
+    title: ["視網膜掃描", "攝影(SLO）"],
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/038ffbe76fe5e8dc.png",
-    title: ["青光眼篩查", "(眼壓)"],
+    title: ["眼軸檢查"],
   },
   {
     img: "https://static.cmereye.com/imgs/2024/06/4daa5583f7e6d55d.png",
-    title: ["視野檢查"],
+    title: ["眼球結構斷", "層掃描(OCT）"],
   },
 ]);
 const listDataDetail = [
@@ -151,7 +151,6 @@ const listDataDetail = [
     img: "https://static.cmereye.com/imgs/2024/06/e12381a19dc443db.png",
     title: "角膜健康檢查",
     description: [
-      "角膜檢查是甚麼 ？ ",
       "眼角膜的厚薄、弧度、形狀等，可以反映眼睛的健康情況。在 ",
       "檢查眼角膜時，視光師會徹底評估應診者的角膜健康狀態，包 ",
       "括:以裂隙鎮檢查角膜有否出現水泡、穿孔、發炎及增生血管 ",
@@ -170,6 +169,7 @@ const listDataDetail = [
       "眼壓通高會令視神經受捐，更可能引致青光眼。早期至中期的",
       "慢性青光眼基本上没有任何病徵，患者可能在病情發展到後期",
       "才發现，大大减低治療成效。",
+      "",
       "建議一般成人需定期檢查眼壓，尤其40歲以上、深度近視、",
       "患糖尿病及家族有青光眼病歷人士，應每年至少檢查一次。",
       "",
@@ -199,7 +199,6 @@ const listDataDetail = [
       "(是否有近視、遺視、散光及老花等屈光不正問題)",
       "",
       "客觀式屈光檢查",
-      "",
       "檢影法常用於客觀式屈光檢查。視光師利用檢影燈，把光照射",
       "到應診者的眼睛，觀察反射出来的光線的移動方向，配合不同",
       "鏡片，判斷出應診者的屈光度數。此檢查方法特別適合表達能",
@@ -232,10 +231,9 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/296021be922a80ba.png",
+    img: "https://static.cmereye.com/imgs/2024/06/3449b9f6a1f351cd.png",
     title: "視網膜掃描攝影（SLO）",
     description: [
-      "視網膜掃描攝影",
       "視網膜掃描攝影SLO(scanning laser ophthalmoscopy)是",
       "一種檢査眼睛的方法，眼底照相可評估視網膜的健康狀況。透",
       "過分析視網膜影像，能夠初步診斷糖尿病視網膜病變丶黃斑部",
@@ -246,11 +244,11 @@ const listDataDetail = [
     img: "https://static.cmereye.com/imgs/2024/06/74a17a31e5b85bd2.png",
     title: "眼軸檢查",
     description: [
-      "眼軸長度",
       "眼軸是指眼球的長度，從接收光線表層的眼角膜，至眼球內感",
       "光的視網膜細胞，這個距離稱為「眼轴」。正常情况下，嬰兒",
       "時期的眼軸大約20毫米，6歲時達到22毫米，成年時即有24毫",
       "米。",
+      "",
       "眼軸檢查是判斷近視加深速度、屈光不正及其他眼疾的重要指",
       "標之一。接受眼軸檢查時，視光師會使用儀器量度眼軸距離。",
       "眼軸過長會加深近視度數，同時導致視網膜薄，可能造成黄斑",
@@ -258,7 +256,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/3449b9f6a1f351cd.png",
+    img: "https://static.cmereye.com/imgs/2024/06/296021be922a80ba.png",
     title: "眼球結構斷層掃描（OCT）",
     description: [
       "眼球3D影像",
@@ -345,6 +343,9 @@ const listDataDetail = [
         align-items: center;
         justify-content: center;
       }
+    }
+    & > a:hover {
+      box-shadow: 0px 6px 8px 3px rgba(7, 7, 7, 0.329);
     }
     & > a:nth-child(2) {
       background: #95df82;

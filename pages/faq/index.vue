@@ -3,7 +3,7 @@ useHead(() => ({
   title: "常見問題 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/06/5a370bba21c34502.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/9474860b3c8b52d9.png",
   mobile: "https://static.cmereye.com/imgs/2024/05/152dc13cba64e3ad.png",
 };
 let imgLeft = ref("50%");
@@ -55,7 +55,11 @@ onMounted(() => {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg" />
+    <PublicBanner :banner="bannerImg">
+      <template #title>
+        <div class="profile-title">常見問題</div>
+      </template>
+    </PublicBanner>
     <PublicNavbar
       :name="'常見眼睛問題'"
       :isInsidePage="true"
@@ -87,7 +91,7 @@ onMounted(() => {
       </div>
       <div class="glaucoma-comparison">
         <div>
-          <div>正常</div>
+          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正常</div>
           <div>視野缺損</div>
         </div>
         <div class="imagetowebp-canvasWebp">
@@ -282,6 +286,19 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .profile-title {
+    position: relative;
+    right: -180%;
+    color: var(--Brand-Color, #fff);
+    text-align: center;
+    font-family: "Inter";
+    font-size: 60px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 12px;
+    bottom: -180px;
+  }
   .faq-box {
     margin: 85px auto 90px;
     max-width: 960px;
@@ -668,6 +685,9 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 767px) {
+  .profile-title {
+    display: none;
+  }
   .faq-box {
     margin: 25px auto 40px;
     padding: 0 25px;
@@ -907,12 +927,13 @@ onMounted(() => {
       & > div:nth-child(2) {
         margin-top: 20px;
         display: flex;
+        justify-content: center;
         & > div {
           display: flex;
           flex-direction: column;
           & > div:nth-child(1) {
-            width: 149.189px;
-            height: 158.438px;
+            width: 38.46vw;
+            height: 40.76vw;
             & > img {
               width: 100%;
               height: 100%;
@@ -1024,6 +1045,7 @@ onMounted(() => {
         justify-content: center;
         align-items: center;
         width: 281px;
+        margin: 0 auto;
         & > img {
           width: 100%;
         }

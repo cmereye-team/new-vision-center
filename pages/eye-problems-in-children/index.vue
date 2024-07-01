@@ -175,7 +175,7 @@ onMounted(() => {
                 >
               </div>
               <div class="bg-text-btn">
-                <a>
+                <a href="https://cmervision.sprite.eu.org/myopia-control-glasses/" target="_blank">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"

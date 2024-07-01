@@ -90,32 +90,75 @@ const multifocalPresbyopia = ref({
 });
 
 const defaultDataOne = ref({});
+
+const productListBoxOne = ref(false);
+const productListBoxTwo = ref(false);
+const productListBoxThree = ref(false);
+const productListBoxFour = ref(false);
+const productListBoxFive = ref(false);
+const productListBoxSix = ref(false);
 const getData = (num: any) => {
   defaultDataOne.value = ref({});
   isClose.value = true;
   if (num == 0) {
     defaultDataOne.value = myopiaControlContactLenses.value;
     productListBox.value.style.gap = "298px 12px";
+    productListBoxOne.value = true;
+    productListBoxTwo.value = false;
+    productListBoxThree.value = false;
+    productListBoxFour.value = false;
+    productListBoxFive.value = false;
+    productListBoxSix.value = false;
   }
   if (num == 1) {
     defaultDataOne.value = orthokeratoscope.value;
     productListBox.value.style.gap = "378px 12px";
+    productListBoxOne.value = false;
+    productListBoxTwo.value = true;
+    productListBoxThree.value = false;
+    productListBoxFour.value = false;
+    productListBoxFive.value = false;
+    productListBoxSix.value = false;
   }
   if (num == 2) {
     defaultDataOne.value = scleralLens.value;
     productListBox.value.style.gap = "248px 12px";
+    productListBoxOne.value = false;
+    productListBoxTwo.value = false;
+    productListBoxThree.value = true;
+    productListBoxFour.value = false;
+    productListBoxFive.value = false;
+    productListBoxSix.value = false;
   }
   if (num == 3) {
     defaultDataOne.value = progressiveEyeglasses.value;
     productListBox.value.style.gap = "278px 12px";
+    productListBoxOne.value = false;
+    productListBoxTwo.value = false;
+    productListBoxThree.value = false;
+    productListBoxFour.value = true;
+    productListBoxFive.value = false;
+    productListBoxSix.value = false;
   }
   if (num == 4) {
     defaultDataOne.value = myopiaControlGlasses.value;
     productListBox.value.style.gap = "268px 12px";
+    productListBoxOne.value = false;
+    productListBoxTwo.value = false;
+    productListBoxThree.value = false;
+    productListBoxFour.value = false;
+    productListBoxFive.value = true;
+    productListBoxSix.value = false;
   }
   if (num == 5) {
     defaultDataOne.value = multifocalPresbyopia.value;
     productListBox.value.style.gap = "248px 12px";
+    productListBoxOne.value = false;
+    productListBoxTwo.value = false;
+    productListBoxThree.value = false;
+    productListBoxFour.value = false;
+    productListBoxFive.value = false;
+    productListBoxSix.value = true;
   }
 };
 onMounted(() => {
@@ -177,7 +220,7 @@ const onInform = (el: any) => {
       <div class="product-list">
         <div class="product-list-box" ref="productListBox">
           <div @click="getData(0)">
-            <div>
+            <div :class="[productListBoxOne ? 'active' : '']">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="67"
@@ -212,7 +255,7 @@ const onInform = (el: any) => {
             </div>
           </div>
           <div @click="getData(1)">
-            <div>
+            <div :class="[productListBoxTwo ? 'active' : '']">
               <svg
                 width="70"
                 height="69"
@@ -285,7 +328,7 @@ const onInform = (el: any) => {
             </div>
           </div>
           <div @click="getData(2)">
-            <div>
+            <div :class="[productListBoxThree ? 'active' : '']">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="84"
@@ -342,7 +385,7 @@ const onInform = (el: any) => {
             </div>
           </div>
           <div @click="getData(3)">
-            <div>
+            <div :class="[productListBoxFour ? 'active' : '']">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="74"
@@ -401,7 +444,7 @@ const onInform = (el: any) => {
             </div>
           </div>
           <div @click="getData(4)">
-            <div>
+            <div :class="[productListBoxFive ? 'active' : '']">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="67"
@@ -1634,7 +1677,7 @@ const onInform = (el: any) => {
             </div>
           </div>
           <div @click="getData(5)">
-            <div>
+            <div :class="[productListBoxSix ? 'active' : '']">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="101"
@@ -1789,6 +1832,7 @@ const onInform = (el: any) => {
           display: flex;
           justify-content: center;
           align-items: center;
+          cursor: pointer;
         }
         & > div:nth-child(2) {
           display: flex;
@@ -1809,6 +1853,9 @@ const onInform = (el: any) => {
     & > div:nth-child(2) {
       margin: 45px auto;
     }
+  }
+  .active{
+    background: linear-gradient(0deg, rgba(0, 100, 255, 0.1) 0%, rgba(0, 100, 255, 0.1) 100%), var(--Skin, #eafbff) !important;
   }
   .glasses-type {
     margin: 90px auto 65px;
@@ -1839,6 +1886,9 @@ const onInform = (el: any) => {
         align-items: center;
         justify-content: center;
       }
+    }
+    & > a:hover {
+      box-shadow: 0px 6px 8px 3px rgba(7, 7, 7, 0.329);
     }
     & > a:nth-child(2) {
       background: #95df82;
@@ -1891,6 +1941,9 @@ const onInform = (el: any) => {
       top: 180px;
       margin: 0 auto;
     }
+  }
+  .active{
+    background: linear-gradient(0deg, rgba(0, 100, 255, 0.1) 0%, rgba(0, 100, 255, 0.1) 100%), var(--Skin, #eafbff) !important;
   }
   .glasses-type {
     margin: 30px auto 20px;
