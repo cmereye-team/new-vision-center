@@ -3,8 +3,8 @@ useHead(() => ({
   title: "鞏膜鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0b680ddef00eb883.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/53a82a8280acde20.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/0f5c46c56604a659.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/6d85a89b37d46b7b.png",
 };
 const miSightQuestionList = [
   {

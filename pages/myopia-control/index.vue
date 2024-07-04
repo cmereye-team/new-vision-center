@@ -71,7 +71,7 @@ const btnElement = ref({
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
   // isExternalLink 外链 true
-  link: "https://www.baidu.com",
+  link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
 });
 </script>
 
@@ -2243,7 +2243,10 @@ const btnElement = ref({
             <p>以防日後患上深近視?<br v-if="!isPc" />引致的眼疾</p>
           </div>
           <div>
-            <a>
+            <a
+              href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+              target="_blank"
+            >
               <div>推薦合適你的方案</div>
               <div>
                 <svg
@@ -2260,7 +2263,10 @@ const btnElement = ref({
                 </svg>
               </div>
             </a>
-            <a>
+            <a
+              href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+              target="_blank"
+            >
               <div>立即預約檢查</div>
               <div>
                 <svg
@@ -2287,7 +2293,10 @@ const btnElement = ref({
             <div>
               小孩發育期間，適度的眼球增長及近視變化是正常現象。最理想的近視加深速度為每年增加不超過50度，如增加100度或以上，就屬過快。先天遺傳或後天用眼習慣不良，也會導致近視加深速度異常，尤其近年本港學習模式轉變，小孩經常以電子產品上課及溫習，減少外出活動，都可能造成小孩近視度數驟增。
             </div>
-            <a>
+            <a
+              href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+              target="_blank"
+            >
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -4439,6 +4448,12 @@ const btnElement = ref({
       filter: blur(15px); /* 添加模糊效果 */
       transform: translateX(-50%) scaleY(-1) rotate(180deg);
     }
+    & > a:hover::before {
+      background: #de9f40;
+    }
+    & > a:hover::after {
+      background: #de9f40;
+    }
   }
   .myopia-control-fake {
     margin: 55px auto;
@@ -4556,7 +4571,12 @@ const btnElement = ref({
           filter: blur(15px); /* 添加模糊效果 */
           transform: translateX(-50%) scaleY(-1) rotate(180deg);
         }
-
+        & > a:nth-child(1):hover::before {
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
+        & > a:nth-child(1):hover::after {
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
         & > a:nth-child(2) {
           position: relative;
         }
@@ -4585,6 +4605,12 @@ const btnElement = ref({
           border-radius: 100px;
           filter: blur(15px); /* 添加模糊效果 */
           transform: translateX(-50%) scaleY(-1) rotate(180deg);
+        }
+        & > a:nth-child(2):hover::before {
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+        }
+        & > a:nth-child(2):hover::after {
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
         }
       }
     }
@@ -5058,9 +5084,9 @@ const btnElement = ref({
       gap: 12px;
       & > div {
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
-          box-sizing: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          width: 26.38vw;
+          height: 26.38vw;
+          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           border-radius: 5px;
           display: flex;
           justify-content: center;
@@ -5078,7 +5104,7 @@ const btnElement = ref({
           color: var(--Brand-Color, #00a6ce);
           text-align: center;
           font-family: "Inter";
-          font-size: 14px;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 600;
           line-height: 14.305px; /* 102.176% */
@@ -5359,12 +5385,13 @@ const btnElement = ref({
   .myopia-control-content {
     margin: 0 auto;
     margin-top: 12px;
-    padding: 0 25px;
-    background: url("https://static.cmereye.com/imgs/2024/05/fe579e99ca6bf8c8.jpg")
+    padding: 0 5px 0 25px;
+    background: url("https://static.cmereye.com/imgs/2024/07/910dccd801d9c5cf.png")
       no-repeat;
     background-position: center;
-    height: 340px;
-    width: 340px;
+    max-width: 87.17vw;
+    min-height: 87.17vw;
+    background-size: 100% 100%;
     box-sizing: border-box;
     display: flex;
     border-radius: 20px;
@@ -5473,6 +5500,12 @@ const btnElement = ref({
           transform: translateX(-50%) scaleY(-1) rotate(180deg);
         }
 
+        & > a:nth-child(1):hover::before {
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
+        & > a:nth-child(1):hover::after {
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
         & > a:nth-child(2) {
           position: relative;
         }
@@ -5503,10 +5536,16 @@ const btnElement = ref({
           filter: blur(15px); /* 添加模糊效果 */
           transform: translateX(-50%) scaleY(-1) rotate(180deg);
         }
+        & > a:nth-child(2):hover::before {
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+        }
+        & > a:nth-child(2):hover::after {
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+        }
       }
     }
     & > div:nth-child(2)::before {
-      content: "";
+      content: none;
       position: absolute;
       width: 48px;
       height: 40px;
@@ -5517,7 +5556,7 @@ const btnElement = ref({
       background-size: 100% 100%;
     }
     & > div:nth-child(2)::after {
-      content: "";
+      content: none;
       position: absolute;
       width: 48px;
       height: 40px;
@@ -5999,7 +6038,9 @@ const btnElement = ref({
             text-align: center;
           }
           & > p:nth-child(2) {
-            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             & > span:nth-child(1) {
               color: #757470;
               font-family: "Inter";
@@ -6009,12 +6050,25 @@ const btnElement = ref({
               line-height: normal;
             }
             & > span:nth-child(2) {
+              display: flex;
+              justify-content: center;
+              align-items: center;
               color: #8cd6ff;
               font-family: "Inter";
               font-size: 24.702px;
               font-style: normal;
               font-weight: 900;
               line-height: normal;
+              :deep(.el-statistic) {
+                span {
+                  color: #8cd6ff;
+                  font-family: "Inter";
+                  font-size: 24.702px;
+                  font-style: normal;
+                  font-weight: 900;
+                  line-height: normal;
+                }
+              }
             }
           }
         }

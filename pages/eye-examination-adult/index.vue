@@ -3,8 +3,8 @@ useHead(() => ({
   title: "眼睛檢查 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0b680ddef00eb883.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/53a82a8280acde20.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/683dce2cd87bd6bf.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/c88934386018c7c0.png",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -44,7 +44,7 @@ const showAgeStage = (type: any) => {
       <div class="adult-status">
         <div>
           <div>
-            <a>
+            <nuxt-link to="/eye-examination-adult">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -70,8 +70,8 @@ const showAgeStage = (type: any) => {
                   fill="white"
                 />
               </svg>
-            </a>
-            <a>
+            </nuxt-link>
+            <nuxt-link to="/adult-vision-service">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -97,7 +97,7 @@ const showAgeStage = (type: any) => {
                   fill="white"
                 />
               </svg>
-            </a>
+            </nuxt-link>
           </div>
           <div v-if="isPc">
             <div>
@@ -2872,6 +2872,9 @@ const showAgeStage = (type: any) => {
           padding: 8px 20px;
           background: #00a6ce;
           border-radius: 25px;
+        }
+        & > a:hover {
+          box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
         }
         & > a:nth-child(2) {
           background: #6f5ea0;

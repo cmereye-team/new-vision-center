@@ -5,8 +5,6 @@ useHead(() => ({
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/07/d38ae943d9584b98.png",
   mobile: "https://static.cmereye.com/imgs/2024/07/6405e350baed3e21.png",
-  
-  
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -50,7 +48,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="glasses-type">
-        <nuxt-link>
+        <nuxt-link to="/soft-contact-lens">
           <span
             ><img src="../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
@@ -59,7 +57,7 @@ onMounted(() => {
             ><img src="../../assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
-        <nuxt-link>
+        <nuxt-link to="/presbyopia-contact-lenses">
           <span
             ><img src="../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
@@ -1616,6 +1614,9 @@ onMounted(() => {
         align-items: center;
         justify-content: center;
       }
+    }
+    & > a:hover {
+      box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
     }
     & > a:nth-child(2) {
       background: #95df82;

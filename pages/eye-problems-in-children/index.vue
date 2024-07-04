@@ -3,8 +3,8 @@ useHead(() => ({
   title: "兒童常見眼睛問題 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/06/5a370bba21c34502.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/152dc13cba64e3ad.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/5e27719e1efbd627.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/b60c12bfd7f927fe.png",
 };
 const numberContent = ref(0);
 const checkClassify = (idx: any) => {
@@ -175,7 +175,7 @@ onMounted(() => {
                 >
               </div>
               <div class="bg-text-btn">
-                <a href="https://cmervision.sprite.eu.org/myopia-control-glasses/" target="_blank">
+                <nuxt-link to="/myopia-control-glasses">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -226,7 +226,7 @@ onMounted(() => {
                       />
                     </svg>
                   </span>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>

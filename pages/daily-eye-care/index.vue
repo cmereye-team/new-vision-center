@@ -3,11 +3,10 @@ useHead(() => ({
   title: "日常護眼 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/06/5a370bba21c34502.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/152dc13cba64e3ad.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/443cc07de748c392.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/e43937e07811b8c8.png",
 };
 import getWindowSize from "@/utils/width";
-import { fa } from "element-plus/es/locale";
 const isPc = ref(false);
 onMounted(() => {
   let { widthState, width } = getWindowSize();

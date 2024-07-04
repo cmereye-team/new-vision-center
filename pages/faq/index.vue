@@ -3,8 +3,8 @@ useHead(() => ({
   title: "常見問題 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/9474860b3c8b52d9.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/152dc13cba64e3ad.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/683dce2cd87bd6bf.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/c88934386018c7c0.png",
 };
 let imgLeft = ref("50%");
 const yuanspan = ref(null);
@@ -55,11 +55,7 @@ onMounted(() => {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <template #title>
-        <div class="profile-title">常見問題</div>
-      </template>
-    </PublicBanner>
+    <PublicBanner :banner="bannerImg" />
     <PublicNavbar
       :name="'常見眼睛問題'"
       :isInsidePage="true"
@@ -225,7 +221,7 @@ onMounted(() => {
             <span>醫生進一步評估及治療</span>
           </div>
           <div class="bg-text-btn">
-            <a>
+            <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

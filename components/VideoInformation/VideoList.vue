@@ -41,7 +41,7 @@ onMounted(() => {
         <!-- <div class="video-title">
           <div>{{ item.name }}</div>
         </div> -->
-        <div class="video-list" v-if="isPc ? true : item.isShow">
+        <div class="video-list">
           <a
             v-for="element in item.videoList"
             :href="element.videoLink"

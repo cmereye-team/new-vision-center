@@ -3,8 +3,8 @@ useHead(() => ({
   title: "硬性隱形眼鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0b680ddef00eb883.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/53a82a8280acde20.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/dac22b19b807d9ed.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/685a9070ccfc7382.png",
 };
 </script>
 

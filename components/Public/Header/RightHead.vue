@@ -103,22 +103,22 @@ const menuList = ref([
       {
         id: "1",
         title: "眼睛檢查",
-        path: "/",
+        path: "/eye-examination-adult",
       },
       {
         id: "2",
         title: "老花漸進鏡片",
-        path: "/",
+        path: "/presbyopia",
       },
       {
         id: "3",
         title: "軟性隱形眼鏡",
-        path: "/",
+        path: "/soft-contact-lens",
       },
       {
         id: "4",
         title: "硬性隱形眼鏡",
-        path: "/",
+        path: "/rgp-contact-lens",
       },
     ],
   },
@@ -131,7 +131,7 @@ const menuList = ref([
       {
         id: "1",
         title: "服務内容",
-        path: "/",
+        path: "/optical-service",
       },
       {
         id: "2",
@@ -159,7 +159,7 @@ const menuList = ref([
       {
         id: "2",
         title: "常見眼睛問題",
-        path: "/",
+        path: "/daily-eye-care",
       },
     ],
   },
@@ -176,8 +176,6 @@ onMounted(() => {
     isPc.value = widthState;
   });
   isPc.value = widthState;
-  console.log(width, "PonMounted");
-
   if (isPc) {
     menuListThisPc();
     showThreeLevel();

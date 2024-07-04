@@ -110,7 +110,7 @@ const btnElement = ref({
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
   // isExternalLink 外链 true
-  link: "https://www.baidu.com",
+  link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
 });
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/scss";
@@ -779,7 +779,10 @@ const handlesSliPrev = () => {
             </div>
           </div>
           <div>
-            <a>
+            <a
+              href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+              target="_blank"
+            >
               <div>推薦合適你的方案</div>
               <div>
                 <svg
@@ -796,7 +799,10 @@ const handlesSliPrev = () => {
                 </svg>
               </div>
             </a>
-            <a>
+            <a
+              href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+              target="_blank"
+            >
               <div>立即預約檢查</div>
               <div>
                 <svg
@@ -1170,7 +1176,7 @@ const handlesSliPrev = () => {
             <img :src="item.img" :alt="item.title" />
           </a>
         </div>
-        <a>
+        <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -3351,7 +3357,7 @@ const handlesSliPrev = () => {
   .orthokeratoplasty-question {
     margin-bottom: 60px;
     :deep(.el-collapse) {
-      .el-collapse-item__arrow{
+      .el-collapse-item__arrow {
         margin: 0 8px 0 auto;
       }
     }
@@ -3865,6 +3871,12 @@ const handlesSliPrev = () => {
       filter: blur(15px); /* 添加模糊效果 */
       transform: translateX(-50%) scaleY(-1) rotate(180deg);
     }
+    & > a:hover::before {
+      background: #ff9701;
+    }
+    & > a:hover::after {
+      background: #ff9701;
+    }
   }
   .orthokeratoplasty-explain-btn {
     position: absolute;
@@ -4192,7 +4204,7 @@ const handlesSliPrev = () => {
         }
       }
     }
-    &>div:nth-child(2){
+    & > div:nth-child(2) {
       display: flex;
       justify-content: center;
     }
@@ -4244,6 +4256,8 @@ const handlesSliPrev = () => {
   }
   .orthokeratoplasty-theory {
     & > div:nth-child(2) {
+      max-width: 960px;
+      margin: 0 auto;
       margin-top: 25px;
       margin-bottom: 40px;
       color: #60605f;
@@ -4253,7 +4267,8 @@ const handlesSliPrev = () => {
       font-style: normal;
       font-weight: 500;
       line-height: 45px;
-      padding: 0 615px;
+      box-sizing: border-box;
+      padding: 0 108px;
     }
     & > div:nth-child(3) {
       max-width: 960px;
@@ -4538,6 +4553,19 @@ const handlesSliPrev = () => {
           filter: blur(15px); /* 添加模糊效果 */
           transform: translateX(-50%) scaleY(-1) rotate(180deg);
         }
+
+        & > a:nth-child(1):hover::before {
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
+        & > a:nth-child(1):hover::after {
+          background: linear-gradient(90deg, #de9f40 25.95%, #ed33ae 100%);
+        }
+        & > a:nth-child(2):hover::before {
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+        }
+        & > a:nth-child(2):hover::after {
+          background: linear-gradient(270deg, #00a6ce 25.95%, #3346ed 100%);
+        }
       }
     }
   }
@@ -4599,14 +4627,14 @@ const handlesSliPrev = () => {
     width: 100%;
     box-sizing: border-box;
     :deep(.el-collapse) {
-      .el-collapse-item__header{
+      .el-collapse-item__header {
         padding-left: 50px;
         justify-content: space-evenly;
       }
-      .el-collapse-item__header::before{
+      .el-collapse-item__header::before {
         left: 20px;
       }
-      .el-collapse-item__arrow{
+      .el-collapse-item__arrow {
         margin: 0 8px 0 0;
       }
     }
@@ -5156,6 +5184,12 @@ const handlesSliPrev = () => {
       border-radius: 100px;
       filter: blur(15px); /* 添加模糊效果 */
       transform: translateX(-50%) scaleY(-1) rotate(180deg);
+    }
+    & > a:hover::before {
+      background: #ff9701;
+    }
+    & > a:hover::after {
+      background: #ff9701;
     }
   }
   .orthokeratoplasty-suitable {
@@ -5740,7 +5774,7 @@ const handlesSliPrev = () => {
         }
       }
     }
-    &>div:nth-child(2){
+    & > div:nth-child(2) {
       display: flex;
       justify-content: center;
     }

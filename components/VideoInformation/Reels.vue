@@ -5,20 +5,13 @@ const props = defineProps({
     default: () => [],
   },
 });
-
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-
 // Import Swiper styles
 import "swiper/scss";
-
 import "swiper/scss/pagination";
-
-// import required modules
 import { Pagination, Navigation } from "swiper/modules";
-
 const modules = [Pagination, Navigation];
-
 const isPc = ref(false);
 // 检测获取屏幕宽度
 const getScreenWidth = () => {

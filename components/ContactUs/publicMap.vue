@@ -1,13 +1,16 @@
 <script lang="ts" setup>
 // compiler macro
 const props = defineProps({
-  list: { type: Array, default: () => [] },
+  list: { 
+    type: Array as PropType<{ id: number | string }[]>,
+    required: true,
+  },
 });
 </script>
 
 <template>
   <div class="publicMap">
-    <div v-for="item in list" :key="item.id" class="publicMap-item">
+    <div v-for="item in props.list" :key="item.id" class="publicMap-item">
       <div>
         <img :src="item.img" :alt="item.region" />
       </div>
@@ -293,9 +296,7 @@ const props = defineProps({
                   />
                 </svg>
               </div>
-              <div>
-                Whatsapp查詢
-              </div>
+              <div>Whatsapp查詢</div>
             </div>
           </a>
         </div>
@@ -554,7 +555,14 @@ const props = defineProps({
         line-height: normal;
         text-transform: uppercase;
         & > div:nth-child(2) {
+          display: flex;
+          align-items: center;
+          gap: 0 6px;
           position: absolute;
+          & > div:nth-child(1) {
+            display: flex;
+            align-items: center;
+          }
         }
       }
     }

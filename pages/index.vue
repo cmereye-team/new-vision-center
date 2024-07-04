@@ -28,12 +28,12 @@ const services = {
   btns: [
     {
       name: "成人檢查",
-      link: "#",
+      link: "/eye-examination-adult",
       color: "#00A6CE",
     },
     {
       name: "兒童檢查",
-      link: "#",
+      link: "/eye-examination-child",
       color: "#95DF82",
     },
   ],
@@ -694,6 +694,9 @@ const handleIcon = (str: any, idx: any) => {
         & > span:nth-child(2) {
           padding: 0 6px 0 3px;
         }
+      }
+      &-in:hover {
+        box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
       }
     }
   }

@@ -29,6 +29,7 @@ const serverList = ref({
             <div>
               <a
                 href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+                target="_blank"
               >
                 <div>
                   <svg
@@ -243,6 +244,7 @@ const serverList = ref({
         & > img {
           position: absolute;
           bottom: 0;
+          border-radius: 25px;
         }
       }
       & > div:nth-child(2) {
@@ -305,6 +307,9 @@ const serverList = ref({
             height: 100%;
             background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
           }
+          & > a:nth-child(1):hover::before {
+            background: #ff9701;
+          }
           & > a:nth-child(1)::after {
             content: "";
             position: absolute;
@@ -319,6 +324,9 @@ const serverList = ref({
             border-radius: 20px;
             filter: blur(15px); /* 添加模糊效果 */
             transform: translateX(-50%) scaleY(-1) rotate(180deg);
+          }
+          & > a:nth-child(1):hover::after {
+            background: #ff9701;
           }
         }
       }

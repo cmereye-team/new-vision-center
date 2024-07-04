@@ -24,7 +24,7 @@ const bannerImg = {
     <div class="adult-vision-box">
       <div class="glaucoma">
         <div>
-          <a>
+          <nuxt-link to="/eye-examination-adult">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -50,8 +50,8 @@ const bannerImg = {
                 fill="white"
               />
             </svg>
-          </a>
-          <a>
+          </nuxt-link>
+          <nuxt-link to="/eye-examination-child">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -77,7 +77,7 @@ const bannerImg = {
                 fill="white"
               />
             </svg>
-          </a>
+          </nuxt-link>
         </div>
         <div>
           <div></div>
@@ -2480,6 +2480,9 @@ const bannerImg = {
         padding: 8px 20px;
         background: #00a6ce;
         border-radius: 25px;
+      }
+      & > a:hover {
+        box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
       }
       & > a:nth-child(2) {
         background: #95df82;

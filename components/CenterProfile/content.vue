@@ -33,18 +33,22 @@ const discountsList = ref([
   {
     id: 1,
     img: "https://static.cmereye.com/imgs/2024/04/666c1d99c27658bf.png",
+    content:'门店',
   },
   {
     id: 2,
     img: "https://static.cmereye.com/imgs/2024/04/5a960c3598776b5f.png",
+    content:'仪器',
   },
   {
     id: 3,
     img: "https://static.cmereye.com/imgs/2024/04/dc0b7696b2d87ed0.png",
+    content:'展示镜架',
   },
   {
     id: 4,
     img: "https://static.cmereye.com/imgs/2024/04/a8ff8092442374c1.png",
+    content:'仪器',
   },
 ]);
 </script>
@@ -195,26 +199,27 @@ const discountsList = ref([
     position: absolute;
     top: 28%;
     transform: translateY(-50%);
-    right: 3%;
+    right: 0;
+    left: 0;
     z-index: 99;
     width: 100%;
     & > div:nth-child(1) {
       display: block;
       position: absolute;
-      left: -4%;
+      right: 430px;
       background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
         no-repeat;
-      background-position: right;
+      // background-position: right;
       width: 20px;
       height: 40px;
     }
     & > div:nth-child(2) {
       display: inline-block;
       position: absolute;
-      right: 52%;
+      right: 0;
       background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
         no-repeat;
-      background-position: right;
+      // background-position: right;
       width: 20px;
       height: 40px;
     }

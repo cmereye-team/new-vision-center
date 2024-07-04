@@ -3,8 +3,8 @@ useHead(() => ({
   title: "軟性隱形眼鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/07/6e3bfe429734a26d.png",
+  mobile: "https://static.cmereye.com/imgs/2024/07/db3138211f42c02b.png",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(false);
@@ -20,7 +20,7 @@ const btnElement = ref({
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
   // isExternalLink 外链 true
-  link: "https://www.baidu.com",
+  link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
 });
 </script>
 
@@ -39,7 +39,7 @@ const btnElement = ref({
     />
     <div class="soft-contact">
       <div class="glasses-type">
-        <nuxt-link>
+        <nuxt-link to="/soft-contact-lens">
           <span
             ><img src="../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
@@ -48,7 +48,7 @@ const btnElement = ref({
             ><img src="../../assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
-        <nuxt-link>
+        <nuxt-link to="/presbyopia-contact-lenses">
           <span
             ><img src="../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
@@ -1247,6 +1247,9 @@ const btnElement = ref({
         align-items: center;
         justify-content: center;
       }
+    }
+    & > a:hover {
+      box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
     }
     & > a:nth-child(2) {
       background: #95df82;
