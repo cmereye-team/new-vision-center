@@ -342,7 +342,13 @@ const discountsList = ref([
   .price-btn {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
+    & > div {
+      flex: 1;
+    }
+    & > div:nth-child(2) {
+      padding-bottom: 10px;
+    }
   }
 }
 @media screen and (max-width: 767px) {
