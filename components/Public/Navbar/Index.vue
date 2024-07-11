@@ -39,7 +39,7 @@ pageLink.value = route.path;
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .transverse-line{
+  .transverse-line {
     width: 21px;
     height: 1.5px;
     background: #aaaaaa;
@@ -101,7 +101,7 @@ pageLink.value = route.path;
   }
 }
 @media screen and (max-width: 767px) {
-  .transverse-line{
+  .transverse-line {
     width: 10px;
     height: 0.74px;
     background: #aaaaaa;
@@ -116,6 +116,9 @@ pageLink.value = route.path;
   .nav-bar {
     padding-top: 16px;
     padding-left: 25px;
+    max-width: calc(100vw - 48px);
+    margin: 0 auto;
+    overflow: hidden;
     & > div {
       display: flex;
       align-items: center;
@@ -123,8 +126,11 @@ pageLink.value = route.path;
         color: #aaa;
         font-size: 13px;
         margin: 0 5px;
+        display: inline-block;
+        min-width: 10px;
       }
       & > a {
+        white-space: nowrap;
         color: #aaa;
         font-family: "Noto Sans HK";
         font-size: 13px;

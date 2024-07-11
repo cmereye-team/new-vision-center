@@ -357,6 +357,7 @@ const activeName1 = ref("1");
           <span>原文鏈接︰</span
           ><a
             :href="linkPage"
+            target="_blank"
             style="border-bottom: 1px solid; cursor: pointer"
             >{{ linkPage.toUpperCase() }}</a
           >
@@ -506,6 +507,7 @@ a {
     }
   }
   .news-box {
+    margin-top: 28px;
     padding: 0 24px;
   }
   .news-replenish {

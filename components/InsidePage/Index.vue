@@ -32,6 +32,10 @@ const props = defineProps({
       }
     }
   }
+  :deep(.head-title) {
+    display: flex;
+    flex-direction: column;
+  }
   :deep(.p1) {
     margin-top: 20px;
   }
@@ -55,6 +59,7 @@ const props = defineProps({
   }
   :deep(img) {
     max-width: 830px;
+    transform: translateX(-30px);
     margin: 0 auto;
   }
   :deep(#table1) {
@@ -103,6 +108,10 @@ const props = defineProps({
   :deep(.p1) {
     margin-top: 20px;
   }
+  :deep(.head-title) {
+    display: flex;
+    flex-direction: column;
+  }
   :deep(P) {
     color: #60605f;
     font-family: "Inter";
@@ -127,7 +136,7 @@ const props = defineProps({
     margin-bottom: 20px;
   }
   :deep(img) {
-    max-width: 1100px;
+    max-width: 100%;
     margin: 0 auto;
   }
   :deep(#table1) {

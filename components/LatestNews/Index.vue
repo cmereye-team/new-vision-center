@@ -1,48 +1,18 @@
 <script lang="ts" setup>
 const chooseNumber = ref();
-const chooseType = (type: number) => {
-  console.log(type);
-  // switch (Number(type)) {
-  // case 0:
-  //   allData.value = true;
-  //   synthesis.value = true;
-  //   myopia.value = true;
-  //   contactLens.value = true;
-  //   glaucoma.value = true;
-  //   break;
-  // case 1:
-  //   allData.value = false;
-  //   synthesis.value = true;
-  //   myopia.value = false;
-  //   contactLens.value = false;
-  //   glaucoma.value = false;
-  //   break;
-  // case 2:
-  //   allData.value = false;
-  //   synthesis.value = false;
-  //   myopia.value = true;
-  //   contactLens.value = false;
-  //   glaucoma.value = false;
-  //   break;
-  // case 3:
-  //   allData.value = false;
-  //   synthesis.value = false;
-  //   myopia.value = false;
-  //   contactLens.value = true;
-  //   glaucoma.value = false;
-  //   break;
-  // case 4:
-  //   allData.value = false;
-  //   synthesis.value = false;
-  //   myopia.value = false;
-  //   contactLens.value = false;
-  //   glaucoma.value = true;
-  //   break;
-  // default:
-  //   break;
-  // }
+const chooseType = (id: number) => {
+  if (id == 0 || id == null) {
+    fetchData();
+  }
+  if (id) {
+    newsList.value = data.value;
+  }
+  newsList.value = newsList.value.filter((item: any) => {
+    if (item.id == id) {
+      return item;
+    }
+  });
 };
-
 let arr = ref([]);
 const newsList: any = ref([
   {
@@ -79,11 +49,27 @@ const fetchData = async () => {
         });
       });
       data.value = newsList.value;
-      console.log(newsList.value);
+      hashTagList(newsList.value);
     })
     .catch((error) => {
       console.error("Error:", error);
     });
+};
+
+interface Options {
+  value: { label: string; value: string }[];
+}
+
+const options = ref<Options>([]);
+const hashTagList = (list: any) => {
+  for (let i = 0; i < list.length; i++) {
+    for (let j = 0; j < list[i].ext_hashTag.length; j++) {
+      options.value.push({
+        label: list[i].ext_hashTag[j].title,
+        value: list[i].id,
+      });
+    }
+  }
 };
 
 onMounted(() => {
@@ -233,13 +219,31 @@ const newsListddd = ref([
     <div class="latest-news-header">
       <div>最新資訊</div>
       <div class="hide-on-mobile">
-        <select
+        <!-- <select
           v-model="chooseNumber"
           @change="chooseType(chooseNumber)"
           class="select-type"
         >
           <option :value="0"></option>
-        </select>
+        </select> -->
+        <client-only>
+          <el-select
+            v-model="chooseNumber"
+            @change="chooseType"
+            filterable
+            clearable
+            placeholder="请选择"
+            style="width: 240px"
+          >
+            <el-option
+              v-for="item in options"
+              :key="item.value"
+              :label="item.label"
+              :value="item.value"
+            >
+            </el-option>
+          </el-select>
+        </client-only>
       </div>
     </div>
     <div>
@@ -281,6 +285,20 @@ const newsListddd = ref([
 a {
   text-decoration: none;
 }
+:deep(.el-select__wrapper) {
+  cursor: pointer;
+  border-radius: 12.422px;
+  border: 1.242px solid var(--Grey-Light, #d9d9d9);
+}
+:deep(.el-select__wrapper::before) {
+  content: "";
+  background: url("https://static.cmereye.com/imgs/2024/07/264b7889aa0e7395.png")
+    no-repeat;
+  background-size: 100%;
+  width: 22px;
+  height: 22px;
+}
+
 @media screen and (min-width: 768px) {
   .latest-news {
     margin-bottom: 90px;
