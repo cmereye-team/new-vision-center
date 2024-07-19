@@ -607,7 +607,7 @@ const btnElement = ref({
         </div>
       </div>
       <div class="myopia-container-brand">
-        <PublicPageTitle :title="'兒童近視控制鏡片品牌一覽1'" />
+        <PublicPageTitle :title="'兒童近視控制鏡片品牌一覽'" />
         <div>
           <nuxt-link to="/myopia-control-hoya">
             <img
