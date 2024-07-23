@@ -92,7 +92,7 @@ const props = defineProps({
     height: 100%;
     z-index: 1;
     border-radius: 35px;
-    animation: btntestafterAnima 2.5s infinite;
+    animation: btntestafterAnima 2s infinite;
     transition: all 0.5s;
   }
 }
@@ -155,7 +155,7 @@ const props = defineProps({
     height: 100%;
     z-index: 1;
     border-radius: 25px;
-    animation: btntestafterAnima 2.5s infinite;
+    animation: btntestafterAnima 2s infinite;
     transition: all 0.5s;
   }
 }

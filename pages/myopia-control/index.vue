@@ -4469,6 +4469,7 @@ const btnElement = ref({
       height: 100%;
       box-sizing: border-box;
       border-radius: 30px;
+      min-height: 440px;
       // overflow: hidden;
     }
     min-height: 440px;
@@ -4542,8 +4543,10 @@ const btnElement = ref({
           padding: 10px 15px;
           border-radius: 100px;
         }
+
         & > a:nth-child(1) {
           position: relative;
+          animation: breathe 2s ease-in-out infinite;
         }
         & > a:nth-child(1)::before {
           border-radius: 100px;
@@ -4579,6 +4582,7 @@ const btnElement = ref({
         }
         & > a:nth-child(2) {
           position: relative;
+          animation: breathe3 2s ease-in-out infinite;
         }
         & > a:nth-child(2)::before {
           border-radius: 100px;
@@ -5107,7 +5111,7 @@ const btnElement = ref({
           font-size: 3.5vw;
           font-style: normal;
           font-weight: 600;
-          line-height: 14.305px; /* 102.176% */
+          line-height: 3.66vw; /* 102.176% */
           text-transform: uppercase;
           display: flex;
           flex-direction: column;
@@ -5170,10 +5174,12 @@ const btnElement = ref({
       }
       & > div:nth-child(2) {
         padding-top: 24px;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 23px 20px;
-        padding: 24px 20px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        // flex-wrap: wrap;
+        gap: 5.89vw 5.12vw;
+        padding: 6.15vw 5.12vw;
+        justify-content: center;
         & > div {
           display: flex;
           flex-direction: column;
@@ -5191,10 +5197,10 @@ const btnElement = ref({
             color: var(--Grey-Deep, #4d4d4d);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 16.566px;
+            font-size: 4.247vw;
             font-style: normal;
             font-weight: 400;
-            line-height: 20px; /* 120.732% */
+            line-height: 5.12vw; /* 120.732% */
             letter-spacing: 0.828px;
           }
         }
@@ -5371,6 +5377,14 @@ const btnElement = ref({
       }
     }
   }
+  .myopia-control-fake-text {
+    & > a:nth-child(1) {
+      animation: breathe 2s infinite ease-in-out;
+    }
+    & > a:nth-child(2) {
+      animation: breathe3 2s infinite ease-in-out;
+    }
+  }
   .myopia-control-fake::after {
     content: "";
     background: url("https://static.cmereye.com/imgs/2024/05/a002f70b809b91f9.png")
@@ -5381,6 +5395,7 @@ const btnElement = ref({
     display: flex;
     margin: 0;
     justify-content: center;
+    background-position: center;
   }
   .myopia-control-content {
     margin: 0 auto;
@@ -5468,6 +5483,7 @@ const btnElement = ref({
           height: 28px;
           align-items: center;
           justify-content: center;
+          animation: breathe 2s ease-in-out infinite;
         }
         & > a:nth-child(1) {
           position: relative;
@@ -5482,7 +5498,7 @@ const btnElement = ref({
           content: "";
           width: 120px;
           height: 28px;
-          background: linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%);
+          background: linear-gradient(90deg, #00aeda 25.95%, #3346ed 100%);
         }
         & > a:nth-child(1)::after {
           content: "";
@@ -6416,6 +6432,28 @@ const btnElement = ref({
     border: 0 solid #00a5ce00;
     width: calc(100% + 18px);
     height: calc(100% + 18px);
+  }
+}
+@keyframes breathe {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00a6ce);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+}
+@keyframes breathe3 {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #de9f40);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
   }
 }
 </style>

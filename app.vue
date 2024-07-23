@@ -23,7 +23,7 @@ onMounted(() => {
     <div v-if="!isPc" class="fixed-menu">
       <PublicFooterFixedFooter />
     </div>
-    <div class="form">
+    <div class="form-public">
       <PublicForm />
     </div>
     <PublicFooter />
@@ -37,7 +37,7 @@ onMounted(() => {
 a {
   text-decoration: none;
 }
-.form {
+.form-public {
   margin-bottom: 65px;
 }
 @media screen and (max-width: 768px) {
@@ -50,7 +50,7 @@ a {
     background: var(--White, #fff);
     box-shadow: 0px 4px 19px 0px rgba(0, 0, 0, 0.25);
   }
-  .form {
+  .form-public {
     margin-bottom: 45px;
   }
 }

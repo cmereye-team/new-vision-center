@@ -13,10 +13,10 @@ onMounted(() => {
   }
   window.addEventListener("resize", getScreenWidth);
   window.addEventListener("beforeunload", getScreenWidth);
-  chooseType(1)
+  chooseType(1);
 });
-const listVideoAll:any = ref([]);
-const reelsListAll:any = ref([]);
+const listVideoAll: any = ref([]);
+const reelsListAll: any = ref([]);
 
 const chooseNumber = ref(2);
 
@@ -74,51 +74,51 @@ const listVideoOk = ref([
       {
         id: 1,
         type: "orthokeratology",
-        text: ["【Vlog】陪Carson一齊","去配OK鏡"],
+        text: ["【Vlog】陪Carson一齊", "去配OK鏡"],
         img: "https://static.cmereye.com/imgs/2024/04/e38c5254def6b99c.png",
-        videoLink:
-          "https://www.youtube.com/watch?v=M0y-hzPzyjA",
+        videoLink: "https://www.youtube.com/watch?v=M0y-hzPzyjA",
       },
       {
         id: 2,
         type: "orthokeratology",
         text: ["OrthoK x BMX 極限運動", "想點玩都OK｜希瑪視光"],
         img: "https://static.cmereye.com/imgs/2024/05/c0b5260ef1a04c21.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=BkYXEbfg2Zk",
+        videoLink: "https://www.youtube.com/watch?v=BkYXEbfg2Zk",
       },
       {
         id: 3,
         type: "orthokeratology",
         text: ["【近視控制】JON仔OK鏡成果", "分享｜角膜矯形鏡｜希瑪視光"],
         img: "https://static.cmereye.com/imgs/2024/05/61acae6f6109503d.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=qXcrf_ASWE0",
+        videoLink: "https://www.youtube.com/watch?v=qXcrf_ASWE0",
       },
       {
         id: 4,
         type: "orthokeratology",
         text: ["【近視控制】啟動小廚神JON仔", "OK鏡之旅｜角膜矯形鏡｜遺傳近視"],
         img: "https://static.cmereye.com/imgs/2024/05/9453cf23c801dbae.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=urR3F7KR31o",
+        videoLink: "https://www.youtube.com/watch?v=urR3F7KR31o",
       },
       {
         id: 5,
         type: "orthokeratology",
-        text: ["OK鏡真實個案︰小書迷Kathy", "近視控制效果理想，媽媽好滿意！｜角膜矯形鏡｜希瑪視光"],
+        text: [
+          "OK鏡真實個案︰小書迷Kathy",
+          "近視控制效果理想，媽媽好滿意！｜角膜矯形鏡｜希瑪視光",
+        ],
         img: "https://static.cmereye.com/imgs/2024/05/0277a354a74ba630.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=2UJcMkLfuxE",
+        videoLink: "https://www.youtube.com/watch?v=2UJcMkLfuxE",
       },
       {
         id: 6,
         type: "orthokeratology",
-        text: ["【OK鏡真實個案】運動小健將", "Kurtis 做運動唔使再戴眼鏡 近視仲冇加深！｜角膜矯形鏡｜希瑪視光 CMER VISION"],
+        text: [
+          "【OK鏡真實個案】運動小健將",
+          "Kurtis 做運動唔使再戴眼鏡 近視仲冇加深！｜角膜矯形鏡｜希瑪視光 CMER VISION",
+        ],
         img: "https://static.cmereye.com/imgs/2024/05/e59bafa5943e0362.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=J5tfqyp-lQQ",
-      }
+        videoLink: "https://www.youtube.com/watch?v=J5tfqyp-lQQ",
+      },
     ],
   },
   // {
@@ -224,32 +224,31 @@ const listVideoClass = ref([
         type: "orthokeratology",
         text: ["【希瑪仔小教室】小朋友配眼鏡", "前必看 以為睇得清就冇事？"],
         img: "https://static.cmereye.com/imgs/2024/05/0b1cd707c8e9a74e.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=Qiby8jAi0e4",
+        videoLink: "https://www.youtube.com/watch?v=Qiby8jAi0e4",
       },
       {
         id: 2,
         type: "orthokeratology",
         text: ["【希瑪視光】如何選擇", "適合自己的漸進鏡片？"],
         img: "https://static.cmereye.com/imgs/2024/05/db0f8f750bdda6f2.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=neQcqi69dzg",
+        videoLink: "https://www.youtube.com/watch?v=neQcqi69dzg",
       },
       {
         id: 3,
         type: "orthokeratology",
         text: ["兒童近視控制 | OK鏡係咩嚟", "㗎？| 希瑪視光 | 兒童護眼小教室"],
         img: "https://static.cmereye.com/imgs/2024/05/433d7c3630c4df1d.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=XrGA8IklfXU",
+        videoLink: "https://www.youtube.com/watch?v=XrGA8IklfXU",
       },
       {
         id: 4,
         type: "orthokeratology",
-        text: ["兒童近視控制｜戴眼鏡會造成", "依賴？戴得愈耐，近視會愈深？ | 希瑪視光 | 兒童護眼小教室"],
+        text: [
+          "兒童近視控制｜戴眼鏡會造成",
+          "依賴？戴得愈耐，近視會愈深？ | 希瑪視光 | 兒童護眼小教室",
+        ],
         img: "https://static.cmereye.com/imgs/2024/05/e19dfdb077bac7ee.webp",
-        videoLink:
-          "https://www.youtube.com/watch?v=G7AfFPCKldU",
+        videoLink: "https://www.youtube.com/watch?v=G7AfFPCKldU",
       },
     ],
   },
@@ -399,8 +398,6 @@ const reelsListClass = ref([
     videoLink: "",
   },
 ]);
-
-
 </script>
 
 <template>
@@ -469,7 +466,7 @@ const reelsListClass = ref([
   }
   .information-title {
     color: var(--Brand-Color, #00a6ce);
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
@@ -497,6 +494,11 @@ const reelsListClass = ref([
       cursor: pointer;
       transition: all 0.3s;
     }
+    & > div:nth-child(2) {
+      border-right: 0.723px solid var(--Brand-Color, #00a6ce);
+      border-left: 0.723px solid var(--Brand-Color, #00a6ce);
+      border-radius: 10px;
+    }
     .active {
       border-radius: 10px;
       background: var(--Brand-Color, #00a6ce);
@@ -522,7 +524,7 @@ const reelsListClass = ref([
   }
   .information-title {
     color: #00a6ce;
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;

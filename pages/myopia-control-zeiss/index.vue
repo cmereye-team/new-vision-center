@@ -914,7 +914,7 @@ const bannerImg = {
     margin: 72px auto 0;
     & > div:nth-child(2) {
       margin-top: 30px;
-      color: #60605f;
+      color: #606060;
       text-align: center;
       font-family: "Noto Sans CJK TC";
       font-size: 21px;
@@ -933,7 +933,7 @@ const bannerImg = {
       box-sizing: border-box;
       padding: 32px 40px 30px 34px;
       & > div:nth-child(1) {
-        color: #60605f;
+        color: #606060;
         font-family: "Noto Sans CJK TC";
         font-size: 21px;
         font-style: normal;
@@ -988,7 +988,7 @@ const bannerImg = {
             margin-top: 14px;
             display: flex;
             flex-direction: column;
-            color: #60605f;
+            color: #606060;
             text-align: center;
             font-family: "Inter";
             font-size: 16.5px;
@@ -1054,7 +1054,7 @@ const bannerImg = {
             display: flex;
             & > div:nth-child(1) {
               margin-right: 20px;
-              color: #60605f;
+              color: #606060;
               font-family: "Inter";
               font-size: 16.5px;
               font-style: normal;
@@ -1065,7 +1065,7 @@ const bannerImg = {
               display: flex;
               flex-direction: column;
               & > span {
-                color: #60605f;
+                color: #606060;
                 font-family: "Inter";
                 font-size: 16.5px;
                 font-style: normal;
@@ -1130,7 +1130,7 @@ const bannerImg = {
         }
         & > div:nth-child(2) {
           margin-top: 13px;
-          color: #60605f;
+          color: #606060;
           text-align: center;
           font-family: "Noto Sans HK";
           font-size: 16.5px;
@@ -1372,7 +1372,7 @@ const bannerImg = {
         }
         & > div:nth-child(2) {
           margin-top: 15px;
-          color: #60605f;
+          color: #606060;
           font-family: "Noto Sans CJK TC";
           font-size: 21px;
           font-style: normal;
@@ -1407,7 +1407,7 @@ const bannerImg = {
             letter-spacing: 1.125px;
           }
           & > p:nth-child(2) {
-            color: #60605f;
+            color: #606060;
             font-family: "Noto Sans HK";
             font-size: 16.5px;
             font-style: normal;
@@ -1461,7 +1461,7 @@ const bannerImg = {
       }
       & > div:nth-child(2) {
         margin-left: 30px;
-        color: #60605f;
+        color: #606060;
         font-family: "Noto Sans CJK TC";
         font-size: 22px;
         font-style: normal;
@@ -1496,7 +1496,7 @@ const bannerImg = {
         }
       }
       & > div:nth-child(2) {
-        color: #60605f;
+        color: #606060;
         font-family: "Noto Sans HK";
         font-size: 18px;
         font-style: normal;
@@ -1534,7 +1534,7 @@ const bannerImg = {
         }
         & > div:nth-child(2) {
           margin-top: 15px;
-          color: #60605f;
+          color: #606060;
           font-family: "Noto Sans CJK TC";
           font-size: 21px;
           font-style: normal;
@@ -1569,7 +1569,7 @@ const bannerImg = {
             letter-spacing: 1.125px;
           }
           & > p:nth-child(2) {
-            color: #60605f;
+            color: #606060;
             font-family: "Noto Sans HK";
             font-size: 16.5px;
             font-style: normal;
@@ -1601,6 +1601,7 @@ const bannerImg = {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: all 0.5s;
     & > div:nth-child(1) {
       cursor: pointer;
       position: relative;
@@ -1814,13 +1815,16 @@ const bannerImg = {
   }
 }
 @media screen and (max-width: 767px) {
+  .zeiss-container {
+    margin-top: 34px;
+  }
   .myopia-control-zeiss {
     margin-bottom: 40px;
   }
   .myopia-control-head {
     padding: 0 25px;
     & > div:nth-child(2) {
-      color: var(--Grey-Deep, #4d4d4d);
+      color: #606060;
       text-align: justify;
       font-family: "Noto Sans HK";
       font-size: 14px;
@@ -1849,7 +1853,7 @@ const bannerImg = {
         }
       }
       & > div:nth-child(1) {
-        color: #60605f;
+        color: #606060;
         text-align: justify;
         font-family: "Noto Sans HK";
         font-size: 14px;
@@ -1887,7 +1891,7 @@ const bannerImg = {
             display: flex;
             & > div:nth-child(1) {
               flex: 1.8;
-              color: #60605f;
+              color: #606060;
               font-family: "Inter";
               font-size: 14px;
               font-style: normal;
@@ -1908,7 +1912,7 @@ const bannerImg = {
                 margin-bottom: 7px;
               }
               & > span:nth-child(2) {
-                color: #60605f;
+                color: #606060;
                 font-family: "Noto Sans HK";
                 font-size: 14px;
                 font-style: normal;
@@ -1999,7 +2003,7 @@ const bannerImg = {
           & > div:nth-child(2) {
             display: flex;
             flex-direction: column;
-            color: #60605f;
+            color: #606060;
             text-align: center;
             font-family: "Noto Sans HK";
             font-size: 14px;
@@ -2057,7 +2061,7 @@ const bannerImg = {
         }
         & > div:nth-child(2) {
           margin-top: 16px;
-          color: #60605f;
+          color: #606060;
           text-align: center;
           font-family: "Noto Sans HK";
           font-size: 14px;
@@ -2100,7 +2104,7 @@ const bannerImg = {
         }
         & > div:nth-child(2) {
           margin-top: 17px;
-          color: #60605f;
+          color: #606060;
           text-align: center;
           font-family: "Noto Sans HK";
           font-size: 12px;
@@ -2298,7 +2302,7 @@ const bannerImg = {
           letter-spacing: 1.2px;
         }
         & > div:nth-child(2) {
-          color: var(--Grey-Deep, #4d4d4d);
+          color: #606060;
           font-family: "Noto Sans HK";
           font-size: 14px;
           font-style: normal;
@@ -2334,7 +2338,7 @@ const bannerImg = {
             letter-spacing: 1.2px;
           }
           & > p:nth-child(2) {
-            color: #60605f;
+            color: #606060;
             font-family: "Noto Sans HK";
             font-size: 14px;
             font-style: normal;
@@ -2393,7 +2397,7 @@ const bannerImg = {
         letter-spacing: 1.2px;
       }
       & > div:nth-child(2) {
-        color: #60605f;
+        color: #606060;
         text-align: justify;
         font-family: "Noto Sans HK";
         font-size: 18px;
@@ -2432,7 +2436,7 @@ const bannerImg = {
         }
       }
       & > div:nth-child(2) {
-        color: #60605f;
+        color: #606060;
         font-family: "Noto Sans HK";
         font-size: 14px;
         font-style: normal;
@@ -2504,7 +2508,7 @@ const bannerImg = {
             letter-spacing: 1.2px;
           }
           & > p:nth-child(2) {
-            color: #60605f;
+            color: #606060;
             font-family: "Noto Sans HK";
             font-size: 14px;
             font-style: normal;
@@ -2555,6 +2559,8 @@ const bannerImg = {
       max-width: 102px;
       margin: 0 auto;
       border-radius: 4px;
+      border: 2px solid #00a6ce;
+      transition: all 0.5s;
       background: var(--Brand-Color, #00a6ce);
       color: var(--White, #fff);
       text-align: center;

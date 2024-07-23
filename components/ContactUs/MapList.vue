@@ -39,7 +39,7 @@ const portLandList = ref([
     id: 2,
     img: "https://static.cmereye.com/imgs/2024/04/bf94f6316d886c48.png",
     region: "中環",
-    name: "希瑪眼科視光中心",
+    name: "希瑪視光中心 - ZEISS VISION EXPERT",
     googleMap: "https://maps.app.goo.gl/moVYZoZpcDKeraBz6",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
@@ -244,6 +244,7 @@ onMounted(() => {
     border-radius: 10px;
     background: var(--Brand-Color, #00a6ce);
     color: #fff;
+    font-family: "Inter";
     transition: all 0.3s;
     font-size: 15px;
     font-style: normal;

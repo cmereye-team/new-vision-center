@@ -780,16 +780,16 @@ const handleIcon = (str: any, idx: any) => {
               p {
                 color: var(--Brand-2, #59ba68);
                 font-family: "Noto Sans HK";
-                font-size: 25.5px;
+                font-size: 13.5px;
                 font-style: normal;
-                font-weight: 500;
-                line-height: 30px;
+                font-weight: 700;
+                line-height: 18px;
                 text-transform: uppercase;
                 span {
-                  font-size: 13.5px;
+                  font-size: 25.5px;
                   font-style: normal;
-                  font-weight: 700;
-                  line-height: 18px;
+                  font-weight: 500;
+                  line-height: 30px;
                 }
               }
             }
@@ -1107,6 +1107,7 @@ const handleIcon = (str: any, idx: any) => {
               background: url(https://static.cmereye.com/imgs/2024/05/42273ef87c224cab.png)
                 no-repeat;
               background-size: 100% 100%;
+              animation: breathe2 2s ease-in-out infinite;
             }
           }
           &:hover {
@@ -1283,6 +1284,7 @@ const handleIcon = (str: any, idx: any) => {
                   width: 5px;
                 }
               }
+              animation: breathe 2s ease-in-out infinite;
             }
           }
         }
@@ -1401,6 +1403,7 @@ const handleIcon = (str: any, idx: any) => {
             background: url(https://static.cmereye.com/imgs/2024/05/2fe41fe5fcf9b000.png)
               no-repeat;
             background-size: 100% 100%;
+            animation: breathe 2s ease-in-out infinite;
           }
           .swiper-scrollbar-drag {
             height: 3px;
@@ -1455,6 +1458,7 @@ const handleIcon = (str: any, idx: any) => {
                 width: 24px;
                 height: 24px;
                 transform: translate(30%, -15%);
+                animation: breathe2 2s ease-in-out infinite;
               }
             }
           }
@@ -1498,6 +1502,28 @@ const handleIcon = (str: any, idx: any) => {
         }
       }
     }
+  }
+}
+@keyframes breathe {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00a6ce);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+}
+@keyframes breathe2 {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 7px #f1395e);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
   }
 }
 </style>

@@ -478,6 +478,17 @@ a {
       }
     }
   }
+  :deep(.header-title) {
+    color: #00a6ce;
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+  :deep(.edui-video-iframe) {
+    margin-top: 10px;
+  }
 }
 @media screen and (max-width: 767px) {
   .news-title {
@@ -544,6 +555,23 @@ a {
   }
   :deep(.is-active) {
     color: #00a6ce;
+  }
+
+  :deep(.header-title) {
+    color: #00a6ce;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+  }
+  :deep(.edui-video-iframe) {
+    margin-top: 10px;
+  }
+
+  :deep(.edui-video-iframe) {
+    width: 100%;
+    height: 192px;
   }
   .content-collapse {
     & > div {

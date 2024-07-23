@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 // compiler macro
 const props = defineProps({
-  list: { 
+  list: {
     type: Array as PropType<{ id: number | string }[]>,
     required: true,
   },
@@ -355,8 +355,8 @@ const props = defineProps({
       & > div:nth-child(2) {
         margin-top: 10px;
         color: #60605f;
-        font-family: "Inter";
-        font-size: 11.94px;
+        font-family: Inter;
+        font-size: 15px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -401,13 +401,24 @@ const props = defineProps({
     & > div:nth-child(3) {
       display: flex;
       & > a:nth-child(1) {
+        transition: all 0.3s ease-in-out;
         border-radius: 50px;
         background: #00a6ce;
         margin-right: 10px;
+        box-shadow: 0 20px 30px -6px rgba(7, 174, 216, 0.8);
       }
       & > a:nth-child(2) {
+        transition: all 0.3s ease-in-out;
         border-radius: 50px;
         background: #59ba68;
+        box-shadow: 0 20px 30px -6px rgba(89, 186, 104, 0.8);
+      }
+      & > a:hover {
+        transform: translateY(3px);
+        box-shadow: none;
+      }
+      & > a:active {
+        opacity: 0.5;
       }
       & > a {
         display: flex;

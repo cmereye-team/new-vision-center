@@ -222,9 +222,11 @@ const discountsList = ref([
         line-height: normal;
         text-transform: uppercase;
         margin-right: 25px;
+        box-shadow: 0 0 15px #00a6ce;
       }
       & > a:hover {
-        box-shadow: 2px 3px 8px 0px #b3b2b2;
+        box-shadow: 0 0 5px #00a6ce, 0 0 15px #00a6ce,
+          0 0 30px #00a6ce, 0 0 100px #00a6ce;
       }
     }
   }

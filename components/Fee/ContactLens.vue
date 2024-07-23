@@ -6,7 +6,7 @@ const props = defineProps({
   declare: { type: String, required: true },
 });
 </script>
-
+<!-- 隱形眼鏡 -->
 <template>
   <div class="detail-table">
     <div>
@@ -276,7 +276,9 @@ const props = defineProps({
 
     & > div:nth-child(2),
     & > div:nth-child(4),
-    & > div:nth-child(6) {
+    & > div:nth-child(6),
+    & > div:nth-child(8),
+    & > div:nth-child(10) {
       & > div:nth-child(1) {
         background: #4a83a3;
         border-top: 2px solid #8fb3c6;

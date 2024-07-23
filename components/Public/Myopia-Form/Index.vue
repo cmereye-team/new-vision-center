@@ -352,7 +352,7 @@ const onSubmit = () => {
             font-weight: 700;
             line-height: 33.75px;
           }
-          margin-block: 15px;
+          margin-block: 5px;
         }
         & > div:nth-child(2) {
           padding-right: 80px;

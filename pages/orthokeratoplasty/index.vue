@@ -1176,7 +1176,10 @@ const handlesSliPrev = () => {
             <img :src="item.img" :alt="item.title" />
           </a>
         </div>
-        <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
+        <a
+          href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+          target="_blank"
+        >
           <span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -3427,6 +3430,7 @@ const handlesSliPrev = () => {
             font-style: normal;
             font-weight: 700;
             line-height: 35px;
+            position: relative;
           }
           & > div:nth-child(2) {
             color: var(--Deep-Blue, #3e5270);
@@ -3435,6 +3439,18 @@ const handlesSliPrev = () => {
             font-style: normal;
             font-weight: 700;
             line-height: 35px;
+            position: relative;
+          }
+          & > div::before {
+            content: "";
+            background: url(https://static.cmereye.com/imgs/2024/05/d35a211758538f81.png)
+              no-repeat;
+            background-size: 100% 100%;
+            width: 25px;
+            height: 16px;
+            position: absolute;
+            top: 10px;
+            left: -30px;
           }
         }
         & > div:nth-child(3) {
@@ -3609,6 +3625,13 @@ const handlesSliPrev = () => {
                   display: flex;
                   justify-content: center;
                   align-items: center;
+                  & > svg {
+                    overflow: hidden;
+                    border-radius: 50%;
+                    & > path {
+                      animation: downloadArrow 1.4s linear infinite;
+                    }
+                  }
                 }
                 & > span:nth-child(2) {
                   color: #fff;
@@ -4496,6 +4519,7 @@ const handlesSliPrev = () => {
         }
         & > a:nth-child(1) {
           position: relative;
+          animation: breathe 2s infinite ease-in-out;
         }
         & > a:nth-child(1)::before {
           border-radius: 100px;
@@ -4526,6 +4550,7 @@ const handlesSliPrev = () => {
 
         & > a:nth-child(2) {
           position: relative;
+          animation: breathe3 2s infinite ease-in-out;
         }
         & > a:nth-child(2)::before {
           border-radius: 100px;
@@ -4941,6 +4966,11 @@ const handlesSliPrev = () => {
                   & > svg {
                     width: 100%;
                     height: 100%;
+                    overflow: hidden;
+                    border-radius: 50%;
+                    & > path {
+                      animation: downloadArrow 1.4s linear infinite;
+                    }
                   }
                 }
                 & > span:nth-child(2) {
@@ -5614,6 +5644,12 @@ const handlesSliPrev = () => {
           justify-content: center;
         }
         & > a:nth-child(1) {
+          animation: breathe 2s infinite ease-in-out;
+        }
+        & > a:nth-child(2) {
+          animation: breathe3 2s infinite ease-in-out;
+        }
+        & > a:nth-child(1) {
           position: relative;
         }
         & > a:nth-child(1)::before {
@@ -5871,6 +5907,49 @@ const handlesSliPrev = () => {
   }
   .video-information-box {
     padding: 0 24px;
+  }
+}
+@keyframes downloadArrow {
+  0% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(18px);
+    opacity: 0.4;
+  }
+}
+
+@keyframes breathe {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #00a6ce);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+}
+@keyframes breathe3 {
+  0% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px #de9f40);
+  }
+  100% {
+    filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
   }
 }
 </style>

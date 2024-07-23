@@ -273,7 +273,7 @@ const serverList = ref({
               font-family: "Noto Sans HK";
               font-size: 22.5px;
               font-style: normal;
-              font-weight: 300;
+              font-weight: 500;
               line-height: normal;
               text-transform: uppercase;
               text-wrap: nowrap;

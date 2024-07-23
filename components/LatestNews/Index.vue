@@ -7,6 +7,7 @@ const chooseType = (id: number) => {
   if (id) {
     newsList.value = data.value;
   }
+  // 数组去重
   newsList.value = newsList.value.filter((item: any) => {
     if (item.id == id) {
       return item;
@@ -15,6 +16,18 @@ const chooseType = (id: number) => {
 };
 let arr = ref([]);
 const newsList: any = ref([
+  {
+    id: null,
+    title: "",
+    type: "",
+    source: "",
+    tags: "",
+    img: "",
+    ext_hashTag: "",
+    ext_addTime: "",
+  },
+]);
+const newsListA: any = ref([
   {
     id: null,
     title: "",
@@ -35,9 +48,10 @@ const fetchData = async () => {
     .then((res) => {
       // 清空数组
       newsList.value = new Array();
+      newsListA.value = new Array();
       arr.value = res.data;
       arr.value.map((item: any) => {
-        newsList.value.push({
+        newsListA.value.push({
           id: item.id,
           title: item.title,
           type: item.scode,
@@ -47,6 +61,10 @@ const fetchData = async () => {
           ext_hashTag: JSON.parse(item.ext_hashTag),
           ext_addTime: item.ext_addTime.split(" ")[0],
         });
+      });
+      // 对数据 通过ext_addTime 日期 降序
+      newsList.value = newsListA.value.sort(function (a: any, b: any) {
+        return b.ext_addTime.localeCompare(a.ext_addTime);
       });
       data.value = newsList.value;
       hashTagList(newsList.value);
@@ -232,7 +250,7 @@ const newsListddd = ref([
             @change="chooseType"
             filterable
             clearable
-            placeholder="请选择"
+            placeholder="請選擇"
             style="width: 240px"
           >
             <el-option
@@ -319,7 +337,7 @@ a {
       flex: 7.5;
       & > div:nth-child(1) {
         display: flex;
-        align-items: flex-end;
+        align-items: center;
         margin-bottom: 10px;
         & > div:nth-child(1) {
           max-width: 120px;
