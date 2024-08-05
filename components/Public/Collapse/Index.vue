@@ -169,6 +169,7 @@ const props = defineProps({
       line-height: 22.5px; /* 150% */
       text-transform: uppercase;
       position: relative;
+      padding-left: 50px;
     }
     & > div::before {
       content: "A";
@@ -191,7 +192,7 @@ const props = defineProps({
     color: #4d4d4d;
     text-align: center;
     font-family: "Noto Sans HK";
-    font-size: 24px;
+    font-size: 6.15vw;
     font-style: normal;
     font-weight: 700;
     line-height: 40.107px;
@@ -223,15 +224,15 @@ const props = defineProps({
     border-radius: 20px;
     background: var(--Skin, #eafbff);
     margin: 4px 0;
-    padding: 9px 12px;
+    padding: 9px 3.07vw;
     color: var(--Grey-Deep, #4d4d4d);
     text-align: center;
     font-family: "Noto Sans HK";
-    font-size: 20px;
+    font-size: 5.128vw;
     font-style: normal;
     font-weight: 700;
     line-height: 34.771px; /* 173.855% */
-    letter-spacing: 1px;
+    letter-spacing: 0.2vw;
     position: relative;
     left: 50%;
     transform: translateX(-50%);
@@ -262,6 +263,8 @@ const props = defineProps({
       width: 14px;
       height: 26px;
       transition: all 0.3s;
+      position: absolute;
+      right: 5px;
       & > svg {
         display: none;
       }

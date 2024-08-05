@@ -1089,7 +1089,7 @@ onMounted(() => {
       & > span {
         color: #666;
         font-family: "Noto Sans CJK TC";
-        font-size: 14px;
+        font-size: 3.58vw;
         font-style: normal;
         font-weight: 500;
         line-height: 16px;
@@ -1098,8 +1098,8 @@ onMounted(() => {
         // max-width: 60px;
       }
       & > svg {
-        max-width: 32px;
-        max-height: 40px;
+        max-width: 8.2vw;
+        max-height: 10.25vw;
         margin-bottom: 3px;
       }
       &.act {
@@ -1177,7 +1177,7 @@ onMounted(() => {
     max-width: 1280px;
     margin: 0 25px;
     border-radius: 5px;
-    padding: 26px 20px 40px;
+    padding: 6.665vw 5.128vw 10.25vw;
     box-sizing: border-box;
   }
 
@@ -1405,11 +1405,11 @@ onMounted(() => {
   :deep(.el-checkbox__label) {
     color: #666;
     font-family: "Noto Sans CJK TC";
-    font-size: 16px;
+    font-size: 4.1vw;
     font-style: normal;
     font-weight: 500;
-    line-height: 33px;
-    padding: 0 20px;
+    line-height: 8.46vw;
+    padding: 0 5.128vw;
     width: 100%;
   }
 
@@ -1425,8 +1425,8 @@ onMounted(() => {
     line-height: 30px;
   }
   :deep(.el-checkbox__inner) {
-    width: 37px;
-    height: 37px;
+    width: 9.48vw;
+    height: 9.48vw;
     border-color: #ccc;
     border-radius: 50%;
     font-size: 50px;
@@ -1487,7 +1487,7 @@ onMounted(() => {
     border: 1px solid #e2edf2;
     background: #fff;
     box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
-    padding: 24px 14px;
+    padding: 6.15vw 3.58vw;
     margin-top: 15px;
     border-radius: 35px;
     box-sizing: initial;

@@ -419,7 +419,9 @@ const btnElement = ref({
     & > div:nth-child(1)::before {
       content: "";
       position: absolute;
-      bottom: -60%;
+      // bottom: -60%;
+      top: 50%;
+      transform: translateY(-50%);
       left: -75px;
       background: url("https://static.cmereye.com/imgs/2024/07/12ebaaf276b467f0.png")
         no-repeat;
@@ -484,7 +486,7 @@ const btnElement = ref({
   }
   .child-myopia-merits {
     margin-top: 28px;
-    padding: 0 25px;
+    padding: 0 6.41vw;
     & > div:nth-child(1) {
       display: flex;
       flex-direction: column;
@@ -494,26 +496,26 @@ const btnElement = ref({
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 15.65px;
+          font-size: 4.012vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 23.475px; /* 150% */
+          line-height: 6.28vw; /* 150% */
           letter-spacing: 0.783px;
         }
         & > div:nth-child(2) {
-          padding-left: 30px;
+          padding-left: 7.682vw;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 20px;
+          font-size: 5.128vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 31.3px; /* 156.5% */
+          line-height: 8.07vw; /* 156.5% */
           letter-spacing: 1px;
         }
       }
       & > div:nth-child(2) {
         margin-top: 10px;
-        width: 335px;
+        width: 85.897vw;
         & > img {
           width: 100%;
         }
@@ -523,7 +525,7 @@ const btnElement = ref({
       margin-top: 25px;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 10px 18px;
+      gap: 2.56vw 4.615vw;
       & > div {
         & > div:nth-child(1) {
           width: 25.12vw;
@@ -538,10 +540,10 @@ const btnElement = ref({
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16.957px; /* 121.118% */
+          line-height: 4.35vw; /* 121.118% */
           letter-spacing: 0.7px;
         }
       }
@@ -575,6 +577,7 @@ const btnElement = ref({
     margin: 40px auto;
     box-sizing: border-box;
     max-width: 87.17vw;
+    background-size: cover;
     display: flex;
     & > div:nth-child(1) {
       flex: 5.5;
@@ -585,25 +588,25 @@ const btnElement = ref({
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 18px;
+        font-size: 4.615vw;
         font-style: normal;
         font-weight: 700;
         line-height: 20px; /* 111.111% */
         letter-spacing: 0.9px;
         width: fit-content;
-        margin-bottom: 41px;
+        margin-bottom: 10.25vw;
       }
       & > div:nth-child(2) {
         display: flex;
         flex-direction: column;
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.07vw;
         font-style: normal;
         font-weight: 700;
         line-height: 20px; /* 142.857% */
         letter-spacing: 0.7px;
-        padding-right: 30px;
+        padding-right: 7.692vw;
         & > span {
           position: relative;
           margin-bottom: 25px;
@@ -712,10 +715,10 @@ const btnElement = ref({
       margin-bottom: 28px;
       display: flex;
       justify-content: center;
-      gap: 0 8.5px;
+      gap: 0 2.17vw;
       & > a {
-        width: 107.602px;
-        height: 72.139px;
+        width: 27.585vw;
+        height: 18.497vw;
         & > img {
           width: 100%;
           height: 100%;

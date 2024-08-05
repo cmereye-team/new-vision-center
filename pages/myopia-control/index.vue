@@ -614,7 +614,7 @@ const btnElement = ref({
             </div>
             <div>
               <div>
-                <span>兒童近視</span>
+                <span>近視</span>
                 <span>控制眼鏡</span>
               </div>
               <div><span>近視+散光</span><span>&lt;1000度</span></div>
@@ -692,7 +692,7 @@ const btnElement = ref({
               <div><span>高達</span><span>60-86%</span></div>
             </div>
             <div>
-              <div><span>Ortho-K</span><span>角膜矯形術</span></div>
+              <div><span>角膜矯形術</span><span>（OK鏡）</span></div>
               <div><span>近視&lt;500</span><span>散光&lt;175</span></div>
               <div>
                 <span>6歲或以上</span>
@@ -2240,7 +2240,7 @@ const btnElement = ref({
             <p>兒童有近視可及早</p>
             <p>考慮<span>近視控制方案</span>，</p>
             <p>減慢近視加深速度，</p>
-            <p>以防日後患上深近視?<br v-if="!isPc" />引致的眼疾</p>
+            <p>以防日後患上深近視<br v-if="!isPc" />引致的眼疾</p>
           </div>
           <div>
             <a

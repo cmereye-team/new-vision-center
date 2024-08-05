@@ -172,7 +172,7 @@ const witness = ref({
       name: "Jonathan",
       identity: "小演員",
       text: "戴住OK鏡感覺幾舒服，戴咗半年近視無再加深！",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=qXcrf_ASWE0",
       img: "https://static.cmereye.com/imgs/2024/05/ab443d83f1e23f4c.png",
       isNew: true,
       isLike: true,
@@ -180,9 +180,9 @@ const witness = ref({
     },
     {
       name: "司徒柏辰",
-      identity: "兒童KOL",
+      identity: "",
       text: "唔使戴眼鏡踩BMX好方便，流汗又好容易抹到。",
-      link: "#",
+      link: "https://youtu.be/BkYXEbfg2Zk?si=q1mqnmaDXFM6S4Zj",
       img: "https://static.cmereye.com/imgs/2024/05/fac277db5a73523b.png",
       isNew: false,
       isLike: false,
@@ -190,9 +190,9 @@ const witness = ref({
     },
     {
       name: "Kathy",
-      identity: "兒童KOL",
+      identity: "",
       text: "戴咗OK鏡９個月後， 近視只係加深咗少少！",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=2UJcMkLfuxE",
       img: "https://static.cmereye.com/imgs/2024/05/2dea526a3dde6751.png",
       isNew: false,
       isLike: false,
@@ -200,9 +200,9 @@ const witness = ref({
     },
     {
       name: "Kurtis",
-      identity: "兒童KOL",
+      identity: "",
       text: "戴完OK鏡第二朝睇嘢好清楚， 打劍擊可以瞄準啲，游水清楚睇到池邊。",
-      link: "#",
+      link: "https://www.youtube.com/watch?v=J5tfqyp-lQQ",
       img: "https://static.cmereye.com/imgs/2024/05/2f4593874540b73c.png",
       isNew: false,
       isLike: false,
@@ -435,10 +435,11 @@ const handleIcon = (str: any, idx: any) => {
             :key="index"
             class="witnessSwiper-slide"
           >
-            <nuxtLink
+            <a
+              target="_blank"
               class="content"
               :class="{ hot: item.isHot }"
-              :to="item.link == '#' ? '' : ''"
+              :href="item.link"
             >
               <div class="image">
                 <img :src="item.img" :alt="item.name" />
@@ -626,7 +627,7 @@ const handleIcon = (str: any, idx: any) => {
                   </svg>
                 </div>
               </div>
-            </nuxtLink>
+            </a>
           </swiper-slide>
         </swiper>
       </section>

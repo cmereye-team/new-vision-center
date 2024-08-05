@@ -223,7 +223,7 @@ const onSubmit = () => {
                 <el-button
                   type="primary"
                   @click="onSubmit"
-                >確認</el-button>
+                >領取優惠</el-button>
               </el-form-item>
             </el-form>
           </div>

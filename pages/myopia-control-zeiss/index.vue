@@ -236,10 +236,9 @@ const bannerImg = {
                 <div>
                   <p>MyoVision Pro鏡片</p>
                   <p>
-                    ・鏡片周邊位置是控制近視的區域，將周邊影像聚焦在
-                    視網膜前，抑制眼球增長。
+                    ・鏡片周邊位置是控制近視的區域，將周邊影像聚焦在視網膜前，從而抑制眼球增長，減緩近視加深。
                   </p>
-                  <p>・中央區域能矯正視力，讓配戴者有清晰的視力。</p>
+                  <p>・中央區域能矯正視力，讓配戴者有清晰的視力。鏡片針對兒童近視眼睛結構和生活模式設計，令配戴者不影響視力同時延緩近視加深，亦可以更快速適應。</p>
                 </div>
               </div>
             </div>
@@ -251,7 +250,7 @@ const bannerImg = {
             >
               <div>
                 <div>
-                  <div>MyoCare鏡片</div>
+                  <div>MyoKids鏡片</div>
                   <div>
                     ZEISS最新一代兒童近視控制鏡片應用同步性競爭性離焦，MyoCare
                     再度提升離焦技術，有助更有效控制兒童近視發展。
@@ -260,7 +259,7 @@ const bannerImg = {
                 <div>
                   <img
                     src="https://static.cmereye.com/imgs/2024/05/e7d60cc1e0476820.png"
-                    alt="MyoCare鏡片"
+                    alt="MyoKids鏡片"
                   />
                 </div>
               </div>
@@ -352,8 +351,9 @@ const bannerImg = {
               />
             </div>
             <div>
-              <span>1.5：近視+散光</span>
-              <span>不超過600度</span>
+              <span>屈光度數1.5：近</span>
+              <span>視+散光不超過</span>
+              <span>600度</span>
             </div>
           </div>
           <div>
@@ -364,9 +364,9 @@ const bannerImg = {
               />
             </div>
             <div>
-              <span>1.6以上：近視</span>
-              <span>+散光不超過950</span>
-              <span>度</span>
+              <span>屈光度數1.6以上：</span>
+              <span>近視+散光不超過</span>
+              <span>950度</span>
             </div>
           </div>
           <div>
@@ -1439,7 +1439,7 @@ const bannerImg = {
     background: url("https://static.cmereye.com/imgs/2024/05/6edaf38a082c2a25.png")
       no-repeat;
     background-size: 100% 100%;
-    height: 718px;
+    height: 755px;
     width: 100%;
     padding-top: calc(30px + 37px);
     padding-bottom: 35px;

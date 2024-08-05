@@ -45,63 +45,21 @@ const okQuestionList = [
     ],
   },
   {
-    q: "日常如何護理OK鏡片？",
+    q: "配戴OK鏡安全嗎？",
     a: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕捽約20秒，<br />清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
+      `OK鏡經過權威機構驗證如美國FDA及日本厚生勞動省驗證，適合在夜間睡覺時配戴的安全性。只要配戴期間嚴格遵從視光師的指示護理鏡片及定期覆診，便能將風險減到最低，所以基本上配戴OK鏡是十分安全的。`,
     ],
     mAq: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
+      `OK鏡經過權威機構驗證如美國FDA及日本厚生勞動省驗證，適合在夜間睡覺時配戴的安全性。只要配戴期間嚴格遵從視光師的指示護理鏡片及定期覆診，便能將風險減到最低，所以基本上配戴OK鏡是十分安全的。`,
     ],
   },
   {
-    q: "日常如何護理OK鏡片？",
+    q: "配戴OK鏡會導致眼乾嗎？",
     a: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕捽約20秒，<br />清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
+      `OK鏡是由透氧性極高、不含水分的材料製成，經過美國FDA認證戴著睡覺不會影響淚液分泌，所以戴OK鏡會導致眼乾嘅機率相對較低。`,
     ],
     mAq: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
-    ],
-  },
-  {
-    q: "日常如何護理OK鏡片？",
-    a: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕捽約20秒，<br />清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
-    ],
-    mAq: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
-    ],
-  },
-  {
-    q: "日常如何護理OK鏡片？",
-    a: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕捽約20秒，<br />清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
-    ],
-    mAq: [
-      `・建議用生理鹽水沖洗鏡片，正反兩面一邊沖一邊輕輕顫約20秒，清洗後浸泡鏡片於新的隱形眼鏡藥水至少4小時以上作消毒`,
-      `・定期清潔OK鏡盒以防細菌滋生`,
-      `・每周一次用除蛋白清潔液清潔鏡片`,
-      `・盡量避免將鏡片放在太潮濕的地方`,
+      `OK鏡是由透氧性極高、不含水分的材料製成，經過美國FDA認證戴著睡覺不會影響淚液分泌，所以戴OK鏡會導致眼乾嘅機率相對較低。`,
     ],
   },
 ];
@@ -884,11 +842,11 @@ const handlesSliPrev = () => {
             <div>
               <img
                 src="https://static.cmereye.com/imgs/2024/05/724ec145ee8ad287.png"
-                alt="近視加深速度減慢一倍"
+                alt="使用後約一星期已有顯著效果"
               />
             </div>
             <div>
-              <span>近視加深速度減慢一倍</span>
+              <span>使用後約一星期已有顯著效果</span>
             </div>
           </div>
         </div>
@@ -1346,7 +1304,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/035b8f642a889227.png"
+                src="https://static.cmereye.com/imgs/2024/05/ffcf511ef45d00b0.png"
                 alt="綜合眼睛檢查"
               />
             </div>
@@ -1357,16 +1315,16 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/146b6d172795ea39.png"
+                src="https://static.cmereye.com/imgs/2024/05/9540f8c9e521c9cb.png"
                 alt="MiSight近視控制"
               />
             </div>
-            <div><span>MiSight近視控制</span><span>隱形眼鏡訂製</span></div>
+            <div><span>MiSight近視控</span><span>制隱形眼鏡訂製</span></div>
           </div>
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/9540f8c9e521c9cb.png"
+                src="https://static.cmereye.com/imgs/2024/05/146b6d172795ea39.png"
                 alt="1年內4次覆診"
               />
             </div>
@@ -1384,7 +1342,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/ffcf511ef45d00b0.png"
+                src="https://static.cmereye.com/imgs/2024/05/035b8f642a889227.png"
                 alt="詳細戴除鏡片"
               />
             </div>
@@ -3952,6 +3910,7 @@ const handlesSliPrev = () => {
           font-weight: 500;
           line-height: 22.5px; /* 136.364% */
           letter-spacing: 0.825px;
+          align-items: flex-start;
         }
       }
       & > div:nth-child(1) {
@@ -4839,12 +4798,12 @@ const handlesSliPrev = () => {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: url("https://static.cmereye.com/imgs/2024/05/1c86e5c7b33cb679.png")
+                background: url("https://static.cmereye.com/imgs/2024/07/472315ed6bb6f4a3.png")
                   no-repeat;
                 background-size: 100% 100%;
                 width: 36px;
                 height: 36px;
-                color: var(--Theme-Color, #fc1682);
+                color: var(--Theme-Color, #17aed2);
                 font-family: "Noto Sans HK";
                 font-size: 17.887px;
                 font-style: normal;
@@ -5324,8 +5283,8 @@ const handlesSliPrev = () => {
       & > p {
         display: inline;
       }
-      color: var(--Sales, #db4444);
-      text-align: center;
+      color: var(--Brand-Color, #00a6ce);
+      text-align: justify;
       font-family: "Noto Sans CJK TC";
       font-size: 14px;
       font-style: normal;

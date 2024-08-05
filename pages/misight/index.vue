@@ -1624,11 +1624,15 @@ const miSightQuestionList = [
       :deep(.btn) {
         .slot {
           & > div {
+            border-radius: 20px;
             background: linear-gradient(
               93deg,
               #efa83e 36.04%,
               #8533ed 84.48%
             ) !important;
+            & > div:nth-child(2) {
+              padding: 3px;
+            }
           }
         }
       }
@@ -1841,7 +1845,7 @@ const miSightQuestionList = [
     }
     & > div:nth-child(3) {
       margin-top: 20px;
-      color: var(--Grey-Deep, #4d4d4d);
+      color: #00A6CE;
       text-align: center;
       font-family: "Noto Sans CJK TC";
       font-size: 15px;
@@ -2114,6 +2118,9 @@ const miSightQuestionList = [
               font-style: normal;
               font-weight: 700;
               line-height: normal;
+            }
+            & > span:nth-child(2) {
+              font-size: 32px;
             }
           }
         }

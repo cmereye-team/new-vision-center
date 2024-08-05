@@ -82,10 +82,10 @@ const props = defineProps({
     color: #00a6ce;
     text-align: justify;
     font-family: "Noto Sans HK";
-    font-size: 24px;
+    font-size: 6.154vw;
     font-style: normal;
     font-weight: 700;
-    line-height: 40.107px; /* 167.112% */
+    line-height: 10.25vw; /* 167.112% */
     letter-spacing: 1.2px;
     display: flex;
     margin: 0 auto;
@@ -108,7 +108,7 @@ const props = defineProps({
     color: #00a6ce;
     text-align: justify;
     font-family: "Noto Sans HK";
-    font-size: 24px;
+    font-size: 6.154vw;
     font-style: normal;
     font-weight: 700;
     line-height: 40.107px; /* 167.112% */

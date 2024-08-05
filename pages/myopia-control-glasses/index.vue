@@ -930,7 +930,7 @@ const btnElement = ref({
                 </div>
                 <div>
                   <span>1-3星期</span>
-                  <span>綜合眼睛檢查 + 鏡片試配+ 鏡片訂製</span>
+                  <span>綜合眼睛檢查 + 鏡片試配+ 鏡片試戴</span>
                 </div>
               </div>
               <div>

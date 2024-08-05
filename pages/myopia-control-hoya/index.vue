@@ -115,7 +115,9 @@ const btnElement = ref({
     />
     <div class="myopia-control-hoya">
       <div class="myopia-control-hoya-head">
-        <PublicPageTitle :title="`HOYA MiYOSMART<br class='br-pc' />兒童近視控制眼鏡`" />
+        <PublicPageTitle
+          :title="`HOYA MiYOSMART<br class='br-pc' />兒童近視控制眼鏡`"
+        />
         <div>
           HOYA MiYOSMART兒童近視控制鏡片又稱為DIMS近視控制鏡片，由香港理工大學與HOYA共同研發，應用了多區正向光學離焦的技術，有如普通眼鏡般容易使用，能有效減慢近視加深 
         </div>
@@ -168,8 +170,8 @@ const btnElement = ref({
           <div>
             <div>為配戴者提供清晰視野</div>
             <div>
-              <span>配戴方法與一般眼鏡無異。</span
-              ><span>臨床實驗證實，配戴MiYOSMART近視控</span
+              <span>配戴方法與一般眼鏡無異。</span><br />
+              <span>臨床實驗證實，配戴MiYOSMART近視控</span
               ><span>制鏡片的兒童：</span>
             </div>
           </div>
@@ -1433,6 +1435,11 @@ const btnElement = ref({
         & > svg {
           width: 21.103px;
           height: 21.103px;
+          overflow: hidden;
+          border-radius: 50%;
+          & > path {
+            animation: downloadArrow 2s linear infinite;
+          }
         }
       }
       & > span:nth-child(2) {
@@ -1448,7 +1455,7 @@ const btnElement = ref({
       content: "";
       position: absolute;
       animation: btntestafterAnima 3s infinite ease-in-out;
-      border-radius: 25px;
+      border-radius: 30px;
       left: 50%;
       top: 50%;
       transform: translate(-50%, -50%);
@@ -1928,6 +1935,11 @@ const btnElement = ref({
           font-weight: 500;
           line-height: 18px; /* 133.333% */
           text-transform: uppercase;
+          & > span:nth-child(3),
+          & > span:nth-child(4) {
+            position: relative;
+            left: -30px;
+          }
         }
         & > div:nth-child(1)::before {
           content: "";
@@ -2137,7 +2149,7 @@ const btnElement = ref({
     width: fit-content;
     margin: 0 auto;
   }
-  :deep(.br-pc){
+  :deep(.br-pc) {
     display: none;
   }
 }
@@ -2195,16 +2207,20 @@ const btnElement = ref({
   .myopia-collapse {
     margin: 30px 25px 40px;
     :deep(.el-collapse-item__header) {
-      padding: 5px 25px 5px 60px;
+      padding: 1.28vw 6.41vw 1.28vw 12.38vw;
       & > span {
-        font-size: 18px;
+        font-size: 4.515vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 20px;
+        line-height: 5.12vw;
+        text-align: left;
       }
       & > span::after {
         left: -40px;
       }
+    }
+    :deep(.el-collapse-item__header::before) {
+      left: 20px;
     }
     .btn-pdf {
       margin-top: 40px;
@@ -2239,12 +2255,21 @@ const btnElement = ref({
           font-weight: 465;
           line-height: normal;
         }
+        & > span:nth-child(1) {
+          & > svg {
+            overflow: hidden;
+            border-radius: 50%;
+            & > path {
+              animation: downloadArrow 2s linear infinite;
+            }
+          }
+        }
       }
       & > a::after {
         content: "";
         position: absolute;
         // animation: btntestafterAnima 3s infinite ease-in-out;
-        border-radius: 25px;
+        border-radius: 24px;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -2263,16 +2288,16 @@ const btnElement = ref({
         color: #00a6ce;
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size: 6vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 40.107px; /* 167.112% */
+        line-height: 10.25vw; /* 167.112% */
       }
       & > div:nth-child(2) {
         margin-top: 20px;
         border-radius: 20px;
         background: var(--White, #fff);
-        padding: 18px 28px;
+        padding: 4.615vw 7.175vw;
         & > div {
           margin-bottom: 10px;
           & > div {
@@ -2281,7 +2306,7 @@ const btnElement = ref({
               flex: 1.8;
               color: #60605f;
               font-family: "Inter";
-              font-size: 14px;
+              font-size: 3.58vw;
               font-style: normal;
               font-weight: 600;
               line-height: 20.566px;
@@ -2293,7 +2318,7 @@ const btnElement = ref({
               & > span:nth-child(1) {
                 color: #59ba68;
                 font-family: "Inter";
-                font-size: 16px;
+                font-size: 4.1vw;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 20.566px;
@@ -2302,7 +2327,7 @@ const btnElement = ref({
               & > span:nth-child(2) {
                 color: #60605f;
                 font-family: "Noto Sans HK";
-                font-size: 14px;
+                font-size: 3.58vw;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 18px; /* 128.571% */
@@ -2370,8 +2395,8 @@ const btnElement = ref({
           border-radius: 5.284px;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-          width: 105.426px;
-          height: 100.141px;
+          width: 26.92vw;
+          height: 25.64vw;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -2381,7 +2406,7 @@ const btnElement = ref({
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
             font-family: "Inter";
-            font-size: 16px;
+            font-size: 4.1vw;
             font-style: normal;
             font-weight: 600;
             line-height: 20px; /* 125% */
@@ -2394,7 +2419,7 @@ const btnElement = ref({
             color: #60605f;
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 14px;
+            font-size: 3.58vw;
             font-style: normal;
             font-weight: 500;
             line-height: 18px; /* 128.571% */
@@ -2430,16 +2455,16 @@ const btnElement = ref({
   }
   .myopia-server {
     margin-top: 27px;
-    padding: 0 25px;
+    padding: 0 6.4vw;
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 30px 12px;
+      gap: 7.692vw 3.07vw;
       margin-top: 25px;
       & > div {
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
           border-radius: 5px;
           background: #e4faff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -2452,7 +2477,7 @@ const btnElement = ref({
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.585vw;
           font-style: normal;
           font-weight: 500;
           line-height: 18px; /* 128.571% */
@@ -2503,17 +2528,17 @@ const btnElement = ref({
     }
   }
   .myopia-control-hoya-upgrade {
-    border-radius: 5.249px;
-    background: #d7e3ec;
+    border-radius: 15px;
+    background: #e4f3ff;
     box-shadow: 0px 1.05px 2.625px 0px rgba(0, 0, 0, 0.25);
     margin: 32px 25px 36px;
     box-sizing: border-box;
-    padding: 30px 30px 33px 25px;
+    padding: 7.692vw 7.692vw 8.46vw 6.4vw;
     & > div:nth-child(2) {
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size: 6.15vw;
         font-style: normal;
         font-weight: 700;
         line-height: 40.107px; /* 167.112% */
@@ -2523,7 +2548,7 @@ const btnElement = ref({
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 12px;
+          font-size: 3.07vw;
           font-style: normal;
           font-weight: 700;
           line-height: 26px; /* 216.667% */
@@ -2538,10 +2563,10 @@ const btnElement = ref({
             & > div:nth-child(1) {
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 11px;
+              font-size: 2.82vw;
               font-style: normal;
               font-weight: 500;
-              line-height: 14px;
+              line-height: 3.585vw;
               letter-spacing: 0.55px;
 
               & > span {
@@ -2561,22 +2586,22 @@ const btnElement = ref({
             & > div:nth-child(2) {
               position: absolute;
               top: 0;
-              right: 20px;
+              right: 2vw;
             }
           }
           & > div:nth-child(1) {
             & > div:nth-child(2) {
               & > svg {
-                width: 27.9px;
-                height: 24.408px;
+                width: 7.17vw;
+                height: 6.15vw;
               }
             }
           }
           & > div:nth-child(2) {
             & > div:nth-child(2) {
               & > svg {
-                width: 26.427px;
-                height: 16.129px;
+                width: 6.79vw;
+                height: 4.1vw;
               }
             }
           }
@@ -2586,20 +2611,20 @@ const btnElement = ref({
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 12px;
+            font-size: 3.076vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 11.811px; /* 98.423% */
+            line-height: 3.076vw; /* 98.423% */
           }
           & > div:nth-child(2) {
             position: relative;
             & > div:nth-child(1) {
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 11px;
+              font-size: 2.82vw;
               font-style: normal;
               font-weight: 500;
-              line-height: 14px;
+              line-height: 3.585vw;
               letter-spacing: 0.55px;
               & > span {
                 display: inline;
@@ -2608,20 +2633,20 @@ const btnElement = ref({
                 display: block;
                 color: var(--Deep-Blue, #3e5270);
                 font-family: "Noto Sans HK";
-                font-size: 11px;
+                font-size: 2.82vw;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 14px; /* 127.273% */
+                line-height: 3.585vw; /* 127.273% */
                 letter-spacing: 0.55px;
               }
             }
             & > div:nth-child(2) {
               position: absolute;
               top: -10px;
-              right: 90px;
+              right: 23vw;
               & > svg {
-                width: 31.918px;
-                height: 18.925px;
+                width: 8.2vw;
+                height: 4.87vw;
               }
             }
           }
@@ -2646,8 +2671,8 @@ const btnElement = ref({
       & > div {
         & > div:nth-child(1) {
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-          height: 105px;
-          width: 105px;
+          height: 26.92vw;
+          width: 26.92vw;
           background: #e4faff;
           border-radius: 15px;
           display: flex;
@@ -2729,9 +2754,9 @@ const btnElement = ref({
     background-size: 100% 100%;
     border-radius: 13.042px;
     box-shadow: 0px 2.608px 6.521px 0px rgba(0, 0, 0, 0.25);
-    height: 322px;
+    height: 82.56vw;
     & > div {
-      padding: 64px 42px;
+      padding: 16.41vw 10.76vw;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
@@ -2814,14 +2839,14 @@ const btnElement = ref({
     border-radius: 30px;
     background: var(--Skin, #eafbff);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-    padding: 18px 23px;
+    padding: 4.615vw 5.89vw;
     box-sizing: border-box;
     margin: 40px 25px 30px;
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size: 6.15vw;
         font-style: normal;
         font-weight: 700;
         line-height: 1; /* 167.112% */
@@ -2843,7 +2868,7 @@ const btnElement = ref({
         padding-right: 7px;
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 18px;
+        font-size: 4.615vw;
         font-style: normal;
         font-weight: 500;
         line-height: 28px; /* 155.556% */
@@ -2854,7 +2879,7 @@ const btnElement = ref({
       }
     }
     & > div:nth-child(2) {
-      width: 295px;
+      width: 75.64vw;
       position: relative;
       & > img {
         width: 100%;
@@ -2987,6 +3012,26 @@ const btnElement = ref({
     border: 0 solid #02ed8500;
     width: calc(100% + 18px);
     height: calc(100% + 18px);
+  }
+}
+@keyframes downloadArrow {
+  0% {
+    transform: translateY(-15px);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+
+  80% {
+    transform: translateY(10px);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(18px);
+    opacity: 0.4;
   }
 }
 </style>
