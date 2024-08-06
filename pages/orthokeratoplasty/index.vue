@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "角膜矯形術評估 - 希瑪眼科視光中心",
+  title: "角膜矯形術｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "角膜矯形術（Ortho-K，OK鏡）是一種夜間配戴的高透氧硬性隱形眼鏡，通過改變角膜弧度以達到矯正視力的效果，並有效減慢近視和散光的加深速度。只需夜間配戴OK鏡，日間摘除鏡片後無需戴眼鏡也能整天維持清晰視力。希瑪視光提供一站式OK鏡驗配服務，包括綜合眼睛檢查、角膜矯形鏡（OK鏡）合適性檢查、角膜矯形鏡片訂製、詳細配戴鏡片教學，以及1年內無限覆診和護理用品。為兒童控制近視提供理想解決方案，立即聯絡我們了解更多並預約驗配服務。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "角膜矯形術 OK鏡 角膜矯視 角膜矯形 Orthokeratology Orthok OK鏡價錢 角膜塑形術 角膜塑型片 角膜矯形鏡 角膜矯形鏡價錢 近視控制 兒童近視控制 Ortho-k Ortho-k lense ok lens ok鏡片價格 ok鏡價錢 ok鏡收費 矯視隱形眼鏡 夜間矯視隱形眼鏡 矯視con 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);

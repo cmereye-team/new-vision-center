@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "MiSight®1 Day 隱形眼鏡 - 希瑪眼科視光中心",
+  title: "MiSight 1 Day近視控制隱形眼鏡｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "MiSight 1 Day近視控制隱形眼鏡是專為兒童設計的每日即棄近視控制隱形眼鏡，全球唯一獲美國FDA認證的軟性隱形眼鏡。這款隱形眼鏡利用周邊離焦技術減慢眼軸增長和兒童近視加深速度，同時提供清晰的視力，臨床數據顯示大部分用家於三年內近視零增長。配戴方法與一般軟性隱形眼鏡相同，每日配戴即可達到控制近視的效果，使用方便衛生，省去了每日清潔和護理鏡片的步驟。立即預約配MiSight 1 Day隱形眼鏡，保護孩子的眼睛健康。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "矯視隱形眼鏡 隱形眼鏡 矯視隱形眼鏡價錢 矯視con 矯視鏡 矯視con價錢 misight misight 1 day misight價錢 misight 1 day價格 控制近視 兒童矯視隱形眼鏡 配隱形眼鏡 近視防控 配con 配con驗眼費 配con價錢 配con驗眼 配con邊間好 近視控制 兒童近視 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 import getWindowSize from "@/utils/width";
 const btnElement = ref({
@@ -1845,7 +1859,7 @@ const miSightQuestionList = [
     }
     & > div:nth-child(3) {
       margin-top: 20px;
-      color: #00A6CE;
+      color: #00a6ce;
       text-align: center;
       font-family: "Noto Sans CJK TC";
       font-size: 15px;

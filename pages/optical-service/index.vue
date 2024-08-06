@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "視光服務 - 希瑪眼科視光中心",
+  title: "服務內容｜專業服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "透過希瑪視光中心提供的十九項視光服務，你可以享受個人化的視力檢查以及由註冊視光師主理的驗眼過程，全面照顧不同年齡人士的視力需要。我們提供屈光視力檢查、斜視／弱視檢查、色弱/色盲檢查、青光眼檢查、眼乾及淚水測試、視野檢查、眼軸檢查等主要視光服務, 讓你保持良好的視力和眼睛健康。我們亦會為客人提供驗配眼鏡、隱形眼鏡和近視控制方案的服務。立即了解更多服務詳情。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "屈光度數檢查 色弱檢查 立體視覺檢查 青光眼檢查 近視控制眼鏡 角膜矯形鏡 鞏膜鏡 漸進眼鏡 視覺訓練 視野檢查 斜視檢查 色盲檢查 視覺檢查 眼壓檢查 淚水測試 乾眼症檢查 OK鏡 角膜矯視 角膜矯形 角膜塑形術 角膜矯形鏡 老花鏡 老花眼鏡 老花隱形眼鏡 兒童視覺訓練 漸進鏡片 驗眼度數 視神經檢查 眼科視光師 註冊視光師 視光師 視光師驗眼 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
@@ -278,9 +292,9 @@ const listDataDetail = [
   <div class="video-information">
     <PublicBanner :banner="bannerImg" />
     <PublicNavbar
-      :name="'服務內容'"
+      :name="'專業服務'"
       :isInsidePage="true"
-      :insidePageTitle="'視光服務'"
+      :insidePageTitle="'服務內容'"
     />
     <div class="optical-service">
       <div class="glasses-type">

@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "近視控制隱形眼鏡 - 希瑪眼科視光中心",
+  title: "近視控制隱形眼鏡｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "希瑪視光提供近視控制隱形眼鏡驗配，隱形眼鏡使用特殊光學設計，可以矯正兒童近視之餘，同時減慢近視加深速度。近視控制隱形眼鏡配戴方法簡單，每日即棄使用更方便衛生，令小朋友運動學習不受眼鏡限制。常見的牌子有MiSight 1 Day、Acuvue abiliti 1-Day和Disc 1-Day等，註冊視光師會根據兒童的用眼習慣和眼睛狀況分析評估最合適配戴的隱形眼鏡，同時提供隱形眼鏡試戴服務。立即聯絡我們查詢了解更多。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "矯視隱形眼鏡 隱形眼鏡 矯視隱形眼鏡價錢 矯視con 矯視鏡 矯視con價錢 misight misight 1 day misight價錢 misight 1 day價格 acuvue acuvue隱眼 acuvue價錢 disc 1 day 控制近視 acuvue abiliti 兒童矯視隱形眼鏡 配隱形眼鏡 近視防控 配con 配con驗眼費 配con價錢 配con驗眼 配con邊間好 近視控制 兒童近視 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/05/2411d80b7ca6dfb0.png",

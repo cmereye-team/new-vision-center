@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "ZEISS兒童近視控制鏡片 - 希瑪眼科視光中心",
+  title: "ZEISS兒童近視控制鏡片｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "ZEISS兒童近視控制鏡片是德國光學鏡片品牌，專為控制兒童近視而設計。這款鏡片結合了周邊視力離焦控制技術，能夠有效減慢眼球增長，有助控制兒童近視加深，同時確保配戴者的視野清晰，適合6至12歲兒童配戴。我們提供多款蔡司鏡片連鏡架套餐可選擇，包括MyoCare鏡片、MyoVision Pro鏡片及MyoKids鏡片等，註冊視光師會分析小朋友的眼睛狀況並建議合適他的鏡片，立即預約驗配ZEISS鏡片。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "兒童近視控制眼鏡 兒童控制鏡片 近視控制鏡片價錢 兒童近視控制鏡片價格 兒童近視控制鏡片多焦點鏡片 myovision pro 成長樂 ZEISS MyoVision Pro ZEISS MyoKids 兒童近視 myocare 近視控制 兒童近視控制鏡片價錢 兒童控制鏡片價格 兒童控制近視鏡片 控制近視鏡片價錢 兒童近視眼鏡 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const detail = {
   title: "立即體驗ZEISS MyoVision Pro 兒童近視控制鏡片",
@@ -238,7 +252,9 @@ const bannerImg = {
                   <p>
                     ・鏡片周邊位置是控制近視的區域，將周邊影像聚焦在視網膜前，從而抑制眼球增長，減緩近視加深。
                   </p>
-                  <p>・中央區域能矯正視力，讓配戴者有清晰的視力。鏡片針對兒童近視眼睛結構和生活模式設計，令配戴者不影響視力同時延緩近視加深，亦可以更快速適應。</p>
+                  <p>
+                    ・中央區域能矯正視力，讓配戴者有清晰的視力。鏡片針對兒童近視眼睛結構和生活模式設計，令配戴者不影響視力同時延緩近視加深，亦可以更快速適應。
+                  </p>
                 </div>
               </div>
             </div>
@@ -321,7 +337,11 @@ const bannerImg = {
             <span>減緩近視加深速度</span>
             <span>減慢眼球軸增長</span>
           </div>
-          <a class="effect-btn" href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
+          <a
+            class="effect-btn"
+            href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+            target="_blank"
+          >
             <div>立即預約檢查</div>
             <div>
               <svg

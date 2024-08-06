@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "眼睛檢查 - 希瑪眼科視光中心",
+  title: "成人眼睛檢查｜成人視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "希瑪視光提供成人眼睛檢查服務，包括屈光度數測試、眼壓檢查、雙眼協調評估、視網膜掃描、眼乾及淚水測試等。透過定期眼睛檢查可監察眼睛的健康狀況，及早發現眼部問題並提供相應的治療和建議。希瑪視光提供綜合眼睛檢查助你預防眼疾，保護視力。立即聯絡我們查詢及預約！",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "驗眼 驗眼度數 驗眼費用 驗眼價錢 驗眼服務 綜合眼科視光檢查 眼科檢查 眼睛檢查 成人眼睛檢查 成人視力 定期眼睛檢查 青光眼檢查 乾眼症 乾眼症檢查 視野檢查 放大瞳孔檢查 眼科檢查費用 眼科檢查推薦 屈光檢查 眼檢查 全面眼睛檢查費用 眼壓檢查 檢查眼睛 眼乾症 視力測試度數 眼科視光師 註冊視光師 視光師驗眼 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/07/683dce2cd87bd6bf.png",
@@ -38,7 +52,7 @@ const showAgeStage = (type: any) => {
     <PublicNavbar
       :name="'成人視力服務'"
       :isInsidePage="true"
-      :insidePageTitle="'眼睛檢查'"
+      :insidePageTitle="'成人眼睛檢查'"
     />
     <div class="adult-box">
       <div class="adult-status">

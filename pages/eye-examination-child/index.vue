@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "眼睛檢查 - 希瑪眼科視光中心",
+  title: "兒童眼睛檢查｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "了解希瑪視光提供的兒童眼睛檢查服務。兒童視力發展對於8歲以下的孩子至關重要。透過綜合眼睛檢查，我們能夠及早發現眼睛異常，提供合適的兒童視力矯正方案。安排定期檢查眼睛，掌握孩子的視覺健康。了解定期為兒童安排綜合眼睛檢查的重要。立即聯絡我們查詢了解更多兒童眼睛檢查套餐，保護孩子的眼睛健康。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "驗眼 驗眼度數 綜合眼科視光檢查  眼科檢查 眼睛檢查 兒童視力測試  兒童眼睛檢查 兒童眼科檢查 兒童視力檢查 兒童驗眼 小朋友驗眼 兒童視力 兒童視力矯正 兒童近視 斜視檢查 近視檢查 兒童斜視 色弱檢查 色盲檢查 立體視覺檢查 青光眼檢查 眼壓檢查 小兒青光眼 兒童青光眼 先天性青光眼 視野檢查 放大瞳孔檢查 驗眼費用 眼科檢查費用 眼科視光師 視光師驗眼  註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/06/229a3265342682c3.png",
@@ -19,7 +33,7 @@ const bannerImg = {
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"
-      :insidePageTitle="'眼睛檢查'"
+      :insidePageTitle="'兒童眼睛檢查'"
     />
     <div class="child-box">
       <div class="stage">
@@ -1738,7 +1752,7 @@ const bannerImg = {
         align-items: center;
         justify-content: center;
       }
-      &>div:nth-child(1){
+      & > div:nth-child(1) {
         border-bottom: 2.25px solid #fff;
       }
     }

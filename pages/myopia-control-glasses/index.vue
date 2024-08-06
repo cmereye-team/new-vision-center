@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "近視控制眼鏡 - 希瑪眼科視光中心",
+  title: "HOYA MiYOSMART兒童近視控制眼鏡｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "HOYA MiYOSMART兒童近視控制鏡片（DIMS鏡片）是一項非入侵式的近視控制方案，由香港理工大學與HOYA合作研發的鏡片。這款鏡片安全可靠、易於使用，可有效減緩近視加深速度，同時提供清晰穩定的視力。臨床證實，使用HOYA MiYOSMART兒童近視控制鏡片能平均減緩近視加深速度達60%，其中21.5%的孩子使用後完全沒有進一步加深近視。我們提供HOYA MiYOSMART兒童近視控制鏡片連鏡架套餐，立即聯絡我們預約配鏡。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "DIMS dims眼鏡 DIMS鏡片 DIMS鏡片價格 hoya MiyoSmart hoya MiyoSmart價錢 hoya兒童近視控制鏡片評價 hoya近視控制鏡片 hoya控制近視鏡片價錢 hoya鏡片 hoya兒童近視控制鏡片 MiyoSmart  MiyoSmart鏡片 MiyoSmart 近視控制鏡片 兒童近視 控制近視鏡片 hoya miyosmart 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -511,11 +525,7 @@ const btnElement = ref({
                 </g>
                 <defs>
                   <clipPath id="clip0_794_6350">
-                    <rect
-                      width="73"
-                      height="95"
-                      fill="white"
-                    />
+                    <rect width="73" height="95" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -687,11 +697,7 @@ const btnElement = ref({
                 </g>
                 <defs>
                   <clipPath id="clip0_794_6312">
-                    <rect
-                      width="108.243"
-                      height="76"
-                      fill="white"
-                    />
+                    <rect width="108.243" height="76" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -760,11 +766,7 @@ const btnElement = ref({
                 </g>
                 <defs>
                   <clipPath id="clip0_794_6319">
-                    <rect
-                      width="102.511"
-                      height="75.5635"
-                      fill="white"
-                    />
+                    <rect width="102.511" height="75.5635" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -826,11 +828,7 @@ const btnElement = ref({
                 </g>
                 <defs>
                   <clipPath id="clip0_794_6329">
-                    <rect
-                      width="109.886"
-                      height="62"
-                      fill="white"
-                    />
+                    <rect width="109.886" height="62" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -906,11 +904,7 @@ const btnElement = ref({
                 </g>
                 <defs>
                   <clipPath id="clip0_794_6339">
-                    <rect
-                      width="78"
-                      height="90.2809"
-                      fill="white"
-                    />
+                    <rect width="78" height="90.2809" fill="white" />
                   </clipPath>
                 </defs>
               </svg>
@@ -1199,7 +1193,7 @@ const btnElement = ref({
           & > p:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -1213,7 +1207,7 @@ const btnElement = ref({
             align-items: center;
             color: #60605f;
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1258,7 +1252,7 @@ const btnElement = ref({
       padding-top: 24px;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 27px;
         font-style: normal;
         font-weight: 600;
@@ -1270,7 +1264,7 @@ const btnElement = ref({
         margin-bottom: 40px;
         & > p:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 19.5px;
           font-style: normal;
           font-weight: 600;
@@ -1316,7 +1310,7 @@ const btnElement = ref({
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #60605f;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1327,7 +1321,7 @@ const btnElement = ref({
               flex-direction: column;
               & > span {
                 color: #60605f;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1335,7 +1329,7 @@ const btnElement = ref({
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 22.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1447,7 +1441,7 @@ const btnElement = ref({
         }
       }
     }
-    &>div:nth-child(3){
+    & > div:nth-child(3) {
       display: flex;
       justify-content: center;
     }
@@ -1754,7 +1748,7 @@ const btnElement = ref({
             margin-bottom: 5px;
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-             font-family: 'Inter';
+            font-family: "Inter";
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -1817,7 +1811,7 @@ const btnElement = ref({
       margin-top: 35px;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
-         font-family: 'Inter';
+        font-family: "Inter";
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
@@ -1829,7 +1823,7 @@ const btnElement = ref({
         margin-bottom: 28px;
         & > p:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
-           font-family: 'Inter';
+          font-family: "Inter";
           font-size: 19px;
           font-style: normal;
           font-weight: 600;
@@ -1878,7 +1872,7 @@ const btnElement = ref({
             & > div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
-               font-family: 'Inter';
+              font-family: "Inter";
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -1890,7 +1884,7 @@ const btnElement = ref({
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                 font-family: 'Inter';
+                font-family: "Inter";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;

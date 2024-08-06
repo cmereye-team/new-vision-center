@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "老花隱形眼鏡 - 希瑪眼科視光中心",
+  title: "多焦點隱形眼鏡｜成人視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "老花人士除了配戴老花眼鏡或漸進眼鏡外，更可以考慮老花隱形眼鏡。老花隱形眼鏡（又稱多焦點隱形眼鏡）原理與老花漸進鏡相似，在同一塊鏡片上提供不同的焦點，能解決遠視、近視和老花問題，適合抗拒戴老花眼鏡和不想做手術的人士配戴。了解更多關於多焦點隱形眼鏡的優點，享受清晰的視覺體驗。我們亦提供老花隱形眼鏡驗配及試戴服務，立即預約驗配服務。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "老花隱形眼鏡 老花隱形眼鏡試戴 老花隱形眼鏡價錢 老花隱形眼鏡原理 老花隱形眼鏡價格 老花隱形眼鏡散光 每月即棄漸進多焦點老花散光隱形眼鏡 多焦點隱形眼鏡 多焦點隱形眼鏡原理 多焦點隱形眼鏡價格 多焦點隱形眼鏡推薦 多焦點隱形眼鏡月拋 隱形眼鏡老花 近視散光老花隱形眼鏡價格 眼科視光師 註冊視光師 視光師 視光師驗眼 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/07/d38ae943d9584b98.png",
@@ -33,7 +47,7 @@ onMounted(() => {
     <PublicNavbar
       :name="'成人視力服務'"
       :isInsidePage="true"
-      :insidePageTitle="'老花隱形眼鏡'"
+      :insidePageTitle="'多焦點隱形眼鏡'"
     />
     <div class="presbyopia-box">
       <div class="fake">

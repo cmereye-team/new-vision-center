@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "硬性隱形眼鏡 - 希瑪眼科視光中心",
+  title: "硬性隱形眼鏡｜成人視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "希瑪視光提供硬性隱形眼鏡驗配，包括RGP鏡和鞏膜鏡。RGP鏡是一種硬式隱形眼鏡，鏡片透氣性高，能有效矯正深度近視、散光和老花。RGP鏡也適合患有圓錐型角膜、屈光手術後角膜或創傷手術後角膜，及乾眼症患者配戴，配戴後能改善視力，控制病情。我們的視光師會進行詳細檢查和了解情況，判斷是否適合使用硬式透氣隱形眼鏡。立即了解更多關於RGP隱形眼鏡的資訊！",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "rgp眼镜 rgp隱形眼鏡 rgp隱形眼鏡香港 rgp隱形眼鏡價格 rgp香港 硬式隱形眼鏡香港價錢 硬式隱形眼鏡 硬式隱形眼鏡價格 硬式隱形眼鏡推薦 硬性隱形眼鏡 鞏膜鏡 鞏膜鏡價錢 眼科視光師 註冊視光師 視光師 視光師驗眼 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/07/dac22b19b807d9ed.png",
