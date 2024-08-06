@@ -90,7 +90,7 @@ const menuList = ref([
       {
         id: "5",
         title: "眼睛檢查",
-        path: "/",
+        path: "/eye-examination-child",
       },
     ],
   },
