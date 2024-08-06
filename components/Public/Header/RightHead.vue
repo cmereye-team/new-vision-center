@@ -277,13 +277,9 @@ const handleMouseleave = () => {
               v-for="child in item.childrenList"
               :key="child.id"
               class="son-menu"
-              @click="
-                isThreeLevel(child)
-                  ? showThreeLevel()
-                  : pathIsTrue()
-              "
+              @click="isThreeLevel(child) ? showThreeLevel() : pathIsTrue()"
             >
-              <nuxt-link :to="child.path == '/' ? '#' : child.path"
+              <nuxt-link :to="child.path == '/' ? '' : child.path"
                 ><span>{{ child.title }}</span>
               </nuxt-link>
               <div v-if="isShowChildList" :class="`three-level-${index}`">
@@ -619,6 +615,9 @@ const handleMouseleave = () => {
       }
     }
   }
+  .router-link-active {
+    color: #00a6ce !important;
+  }
   .menu {
     .fa-2 {
       cursor: pointer;
@@ -887,6 +886,9 @@ const handleMouseleave = () => {
         display: inline-block;
       }
     }
+  }
+  .router-link-active {
+    color: #00a6ce !important;
   }
   // .sub-menu::before {
   //   content: "";
