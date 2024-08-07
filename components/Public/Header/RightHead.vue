@@ -85,7 +85,7 @@ const menuList = ref([
       {
         id: "4",
         title: "近視控制隱形眼鏡",
-        path: "/misight",
+        path: "/child-myopia-control",
       },
       {
         id: "5",
