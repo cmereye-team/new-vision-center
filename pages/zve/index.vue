@@ -685,8 +685,13 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/css/effect-coverflow";
-import { Pagination, Navigation, EffectCoverflow,Autoplay} from "swiper/modules";
-const modules = [Pagination, Navigation, EffectCoverflow,Autoplay];
+import {
+  Pagination,
+  Navigation,
+  EffectCoverflow,
+  Autoplay,
+} from "swiper/modules";
+const modules = [Pagination, Navigation, EffectCoverflow, Autoplay];
 
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
@@ -2379,22 +2384,22 @@ body {
 /* 地址 */
 .address {
   margin: 150px auto 145px;
-  /* max-width: 1300px; */
+  max-width: 100vw;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0 60px;
 }
 
- .address-img {
+.address-img {
   max-width: 550px;
-    /* max-width: 600px; */
-    /* margin: 0 auto; */
+  /* max-width: 600px; */
+  /* margin: 0 auto; */
+}
 
-  }
-
-     .address-img img{
-      width: 100%;
-    }
+.address-img img {
+  width: 100%;
+}
 
 .address-title {
   color: #2449a4;
@@ -2524,7 +2529,6 @@ a {
 
   .address > div {
     margin-top: 50px;
-   
   }
 
   .address-text {
