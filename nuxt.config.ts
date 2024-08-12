@@ -13,6 +13,7 @@ export default defineNuxtConfig({
   build: {
     transpile: ['vue-i18n']
   },
+
   vite: {
     plugins: [
       VueI18nVitePlugin({

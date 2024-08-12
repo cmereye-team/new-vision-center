@@ -40,6 +40,8 @@ a {
 .form-public {
   margin-bottom: 65px;
 }
+
+
 @media screen and (max-width: 768px) {
   .fixed-menu {
     position: fixed;
@@ -52,6 +54,15 @@ a {
   }
   .form-public {
     margin-bottom: 45px;
+  }
+}
+</style>
+
+<style lang="scss">
+  :root {
+  --font-size-base: 16px;
+  html {
+    font-size: var(--font-size-base);
   }
 }
 </style>
