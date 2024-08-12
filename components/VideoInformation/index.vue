@@ -434,21 +434,21 @@ const reelsListClass = ref([
     <div>
       <!-- reelsListOk 竖屏视频未分类 使用 reelsListOk 展示 -->
       <div v-if="allVideo">
-        <VideoInformationVideoList :list="listVideoAll" />
-        <VideoInformationReels :list="reelsListAll" />
+        <VideoInformationVideoList :list="listVideoAll" :key="1"/>
+        <VideoInformationReels :list="reelsListAll" :key="2" />
       </div>
       <div v-if="orthokeratology">
-        <VideoInformationVideoList :list="listVideoOk" />
-        <VideoInformationReels :list="reelsListOk" />
+        <VideoInformationVideoList :list="listVideoOk"  :key="3"/>
+        <VideoInformationReels :list="reelsListOk" :key="4" />
       </div>
       <!-- <div v-if="share">
         <VideoInformationVideoList :list="listVideoShare" />
         <VideoInformationReels :list="reelsListShare" />
       </div> -->
       <div v-if="classSmall">
-        <VideoInformationVideoList :list="listVideoClass" />
+        <VideoInformationVideoList :list="listVideoClass"  :key="5"/>
         <!-- <VideoInformationReels :list="reelsListClass" /> -->
-        <VideoInformationReels :list="reelsListOk" />
+        <VideoInformationReels :list="reelsListOk"  :key="6"/>
       </div>
     </div>
   </div>

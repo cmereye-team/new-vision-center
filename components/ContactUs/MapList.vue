@@ -141,7 +141,7 @@ const newTerritoriesList = ref([
     googleMap: "",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["新界將軍澳中心", "地下G67號舖"],
+    address: ["新界將軍澳中心", "地下54號鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
@@ -153,7 +153,7 @@ const newTerritoriesList = ref([
     googleMap: "",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["將軍澳新都城中心一期", "地下54號鋪"],
+    address: ["將軍澳新都城中心一期", "地下G67號舖"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },

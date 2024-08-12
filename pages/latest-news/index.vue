@@ -94,7 +94,7 @@ const bannerImg = {
     }
   }
   .video-information-box {
-    padding: 0 24px;
+    padding: 0 6.15vw;
   }
 }
 </style>

@@ -16,9 +16,9 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png",
-  mobile: "https://static.cmereye.com/imgs/2024/04/c05702c8c41964c7.png",
-  alt:'長者醫療券計劃'
+  pc: "https://static.cmereye.com/imgs/2024/08/26cc20faacd95e95.png",
+  mobile: "https://static.cmereye.com/imgs/2024/08/37b55212c8d95e85.png",
+  alt:''
 };
 </script>
 
@@ -28,7 +28,6 @@ const bannerImg = {
       <!-- 插槽 -->
       <template #title>
         <div class="medical-voucher-title">
-          <span>長者醫療券計劃</span>
         </div>
       </template>
     </PublicBanner>

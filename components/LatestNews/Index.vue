@@ -236,7 +236,7 @@ const newsListddd = ref([
   <div class="latest-news">
     <div class="latest-news-header">
       <div>最新資訊</div>
-      <div class="hide-on-mobile">
+      <div>
         <!-- <select
           v-model="chooseNumber"
           @change="chooseType(chooseNumber)"
@@ -290,7 +290,7 @@ const newsListddd = ref([
               v-for="element in item.ext_hashTag"
               :key="element.id"
             >
-              {{ element.title }}
+              #{{ element.title }}
             </a>
           </div>
         </div>
@@ -441,9 +441,6 @@ a {
   }
 }
 @media screen and (max-width: 768px) {
-  .hide-on-mobile {
-    display: none;
-  }
   .latest-news {
     margin-bottom: 40px;
   }
@@ -453,7 +450,7 @@ a {
 
     & > div:nth-child(1) {
       flex: 3.5;
-      max-width: 120px;
+      max-width: 30.765vw;
       & > img {
         width: 100%;
       }
@@ -471,7 +468,7 @@ a {
         & > div:nth-child(2) {
           color: #00a6ce;
           font-family: "Inter";
-          font-size: 12px;
+          font-size: 3.07vw;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
@@ -482,10 +479,10 @@ a {
         display: block;
         color: #60605f;
         font-family: "Inter";
-        font-size: 14px;
+        font-size: 3.58vw;
         font-style: normal;
         font-weight: 600;
-        line-height: 24px;
+        line-height: 6.15vw;
 
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -495,11 +492,11 @@ a {
       }
       & > div {
         a {
-          margin-right: 8px;
-          padding: 6px 10px;
+          margin-right: 2.05vw;
+          padding: 1.5vw 2.5vw;
           color: #60605f;
           font-family: "Inter";
-          font-size: 10px;
+          font-size: 2.5vw;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
@@ -520,14 +517,20 @@ a {
     margin-top: 20px;
     display: flex;
     justify-content: space-between;
+    flex-direction: column;
+    gap: 20px 0;
+
     & > div:nth-child(1) {
       color: #00a6ce;
-
       font-family: "Inter";
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+    }
+    &>div:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
     }
   }
   .select-type {

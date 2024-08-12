@@ -86,6 +86,14 @@ const menuList = ref([
         id: "4",
         title: "近視控制隱形眼鏡",
         path: "/child-myopia-control",
+        threeIsChildVisible: false,
+        threeLevelList: [
+          {
+            id: "1",
+            title: "MiSight®1 Day 隱形眼鏡",
+            path: "/misight",
+          },
+        ],
       },
       {
         id: "5",
@@ -239,7 +247,6 @@ const mbToLink = (item: any) => {
     },
   });
   pathIsTrue();
-  // console.log(router,'Proute');
 };
 
 const language = ref("hk");
@@ -274,7 +281,7 @@ const handleMouseleave = () => {
         <transition name="fade">
           <div v-if="item.isChildVisible" class="sub-menu">
             <div
-              v-for="child in item.childrenList"
+              v-for="(child,childIndex) in item.childrenList"
               :key="child.id"
               class="son-menu"
               @click="isThreeLevel(child) ? showThreeLevel() : pathIsTrue()"
@@ -282,7 +289,7 @@ const handleMouseleave = () => {
               <nuxt-link :to="child.path == '/' ? '' : child.path"
                 ><span>{{ child.title }}</span>
               </nuxt-link>
-              <div v-if="isShowChildList" :class="`three-level-${index}`">
+              <div v-if="isShowChildList" :class="`three-level-${childIndex}`">
                 <div
                   v-for="threeLevel in child.threeLevelList"
                   :key="threeLevel.id"
@@ -569,6 +576,49 @@ const handleMouseleave = () => {
         }
       }
     }
+    .three-level-3 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -104%;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -18%;
+      border-radius: 5px;
+      & > div {
+        & > a {
+          padding: 15px 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Inter";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
     .three-level-5 {
       display: flex;
       flex-direction: column;
@@ -656,6 +706,15 @@ const handleMouseleave = () => {
         }
       }
     }
+    .three-level-3 {
+      & > div:last-child {
+        & > a {
+          & > span {
+            border: none;
+          }
+        }
+      }
+    }
     .three-level-5 {
       & > div:last-child {
         & > a {
@@ -676,9 +735,8 @@ const handleMouseleave = () => {
     background-size: 100% 100%;
     background-position: center;
   }
-  .three-level-2 {
-    display: none;
-  }
+  .three-level-2,
+  .three-level-3,
   .three-level-5 {
     display: none;
   }
@@ -960,6 +1018,49 @@ const handleMouseleave = () => {
         }
       }
     }
+    .three-level-3 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -104%;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -18%;
+      border-radius: 5px;
+      & > div {
+        & > a {
+          padding: 15px 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Inter";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
     .three-level-5 {
       display: flex;
       flex-direction: column;
@@ -1036,6 +1137,7 @@ const handleMouseleave = () => {
       }
     }
     .three-level-2,
+    .three-level-3,
     .three-level-5 {
       & > div:last-child {
         & > a {
@@ -1057,6 +1159,7 @@ const handleMouseleave = () => {
     background-position: center;
   }
   .three-level-2,
+  .three-level-3,
   .three-level-5 {
     display: none;
   }

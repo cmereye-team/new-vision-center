@@ -89,7 +89,7 @@ const glaucomaList = ref([
 ]);
 const headerTitle = ref("綜合眼睛檢查");
 const remark = ref("港幣$2000或以上的眼鏡驗配服務已包括1次綜合眼睛檢查");
-const declare = ref("本診所價目清晰，絕無其他額外收費");
+const declare = ref("本中心價目清晰，絕無其他額外收費");
 
 const allData = ref(true);
 const synthesis = ref(false);

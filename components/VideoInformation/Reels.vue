@@ -12,13 +12,7 @@ import "swiper/scss";
 import "swiper/scss/pagination";
 import { Pagination, Navigation } from "swiper/modules";
 const modules = [Pagination, Navigation];
-const isPc = ref(false);
-// 检测获取屏幕宽度
-const getScreenWidth = () => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-};
+
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
 };
@@ -38,18 +32,16 @@ const handlesSliPrev = () => {
   deBoxSwiperRef.slidePrev();
 };
 
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
 onMounted(() => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-  spaceBetweenNum.value = isPc.value ? 12 : 30;
-  slidesPerViewNum.value = isPc.value ? 4 : 1;
-  window.addEventListener("resize", getScreenWidth);
-  window.addEventListener("beforeunload", getScreenWidth);
+  let { widthState, width } = getWindowSize();
+  isPc.value = widthState;
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
 });
-
-const spaceBetweenNum = ref(32);
-const slidesPerViewNum = ref(4);
 </script>
 
 <template>
@@ -57,33 +49,34 @@ const slidesPerViewNum = ref(4);
     <div class="reels-title">REELS</div>
     <div class="reels-content">
       <swiper
-        :slidesPerView="slidesPerViewNum"
-        :spaceBetween="spaceBetweenNum"
+        :slidesPerView="isPc ? 4 : 1"
+        :spaceBetween="isPc ? 12 : 30"
         :modules="modules"
         @swiper="swiperBox"
       >
         <swiper-slide v-for="item in props.list" :key="item.id">
-          <nuxt-link :to="item.videoLink">
+          <a :href="item.videoLink" target="_blank">
             <img :src="item.img" :alt="item.type" />
-          </nuxt-link>
+          </a>
         </swiper-slide>
       </swiper>
     </div>
-    <div class="swiper-button-next-prev" v-if="props.list.length > 4">
-        <div class="button-prev" @click="handlesSliPrev"></div>
-        <div class="button-next" @click="handlesSliNext"></div>
-      </div>
+    <!-- v-if="props.list.length > 4" -->
+    <div class="swiper-button-next-prev">
+      <div class="button-prev" @click="handlesSliPrev"></div>
+      <div class="button-next" @click="handlesSliNext"></div>
+    </div>
   </div>
 </template>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-  .Reels{
+  .Reels {
     position: relative;
   }
   .reels-title {
     color: var(--Brand-Color, #00a6ce);
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -153,6 +146,7 @@ const slidesPerViewNum = ref(4);
 @media screen and (max-width: 767px) {
   .Reels {
     margin-top: 35px;
+    position: relative;
   }
   .reels-title {
     color: var(--Brand-Color, #00a6ce);
@@ -191,7 +185,7 @@ const slidesPerViewNum = ref(4);
   }
   .swiper-button-next-prev {
     position: absolute;
-    top: 9%;
+    top: 50%;
     transform: translateY(-25%);
     z-index: 99;
     width: 100%;

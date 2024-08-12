@@ -144,7 +144,9 @@ const discountsList = ref([
               ><span>{{ item.price }}</span>
             </div>
             <div>
-              <a :href="item.btn1Link">{{ item.btn1 }}</a>
+              <a class="pagination_btn_item" :href="item.btn1Link">{{
+                item.btn1
+              }}</a>
             </div>
           </div>
         </div>
@@ -210,7 +212,7 @@ const discountsList = ref([
       display: flex;
       & > a {
         border-radius: 15px;
-        background: var(--Brand-Color, #00a6ce);
+        // background: var(--Brand-Color, #00a6ce);
         padding: 12px 35px;
         cursor: pointer;
 
@@ -222,13 +224,31 @@ const discountsList = ref([
         line-height: normal;
         text-transform: uppercase;
         margin-right: 25px;
-        box-shadow: 0 0 15px #00a6ce;
+        border-radius: 37.5px;
+        background: url("../../assets/img/bluebtn.svg") no-repeat;
+        background-size: cover;
+      }
+      & > a:nth-child(2) {
+        background: url("../../assets/img/greenbtn.svg") no-repeat;
+        background-size: cover;
       }
       & > a:hover {
-        box-shadow: 0 0 5px #00a6ce, 0 0 15px #00a6ce,
-          0 0 30px #00a6ce, 0 0 100px #00a6ce;
+        box-shadow: 0 0 5px #00a6ce, 0 0 15px #00a6ce, 0 0 30px #00a6ce,
+          0 0 100px #00a6ce;
+      }
+      & > a:nth-child(2):hover {
+        box-shadow: 0 0 5px #80f392, 0 0 15px #80f392, 0 0 30px #80f392,
+          0 0 100px #80f392;
       }
     }
+  }
+  .pagination_btn_item {
+    background: url("../../assets/img/bluebtn.svg") no-repeat !important;
+    background-size: cover !important;
+  }
+  .pagination_btn_item:hover {
+    box-shadow: 0 0 5px #00a6ce, 0 0 15px #00a6ce, 0 0 30px #00a6ce,
+      0 0 100px #00a6ce;
   }
   .swiper-button-next-prev {
     position: absolute;

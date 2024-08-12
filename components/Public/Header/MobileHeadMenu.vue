@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import getWindowSize from "@/utils/width";
+import { isArray } from "element-plus/es/utils";
 const isPc = ref(true);
 
 const menuList = ref([
@@ -29,7 +30,6 @@ const menuList = ref([
   {
     id: "6",
     title: "尊享優惠",
-    isChildVisible: false,
     child: "svg",
     path: "/now-discounts",
   },
@@ -70,12 +70,20 @@ const menuList = ref([
       {
         id: "4",
         title: "近視控制隱形眼鏡",
-        path: "/misight",
+        path: "/child-myopia-control",
+        threeIsChildVisible: false,
+        threeLevelList: [
+          {
+            id: "1",
+            title: "MiSight®1 Day 隱形眼鏡",
+            path: "/misight",
+          },
+        ],
       },
       {
         id: "5",
         title: "眼睛檢查",
-        path: "/",
+        path: "/eye-examination-child",
       },
     ],
   },
@@ -88,22 +96,22 @@ const menuList = ref([
       {
         id: "1",
         title: "眼睛檢查",
-        path: "/",
+        path: "/eye-examination-adult",
       },
       {
         id: "2",
         title: "老花漸進鏡片",
-        path: "/",
+        path: "/presbyopia",
       },
       {
         id: "3",
         title: "軟性隱形眼鏡",
-        path: "/",
+        path: "/soft-contact-lens",
       },
       {
         id: "4",
         title: "硬性隱形眼鏡",
-        path: "/",
+        path: "/rgp-contact-lens",
       },
     ],
   },
@@ -116,7 +124,7 @@ const menuList = ref([
       {
         id: "1",
         title: "服務内容",
-        path: "/",
+        path: "/optical-service",
       },
       {
         id: "2",
@@ -143,15 +151,35 @@ const menuList = ref([
       },
       {
         id: "2",
+        title: "日常護眼",
+        path: "/daily-eye-care",
+      },
+      {
+        id: "3",
         title: "常見眼睛問題",
         path: "/",
+        threeIsChildVisible: false,
+        threeLevelList: [
+          {
+            id: "1",
+            title: "兒童常見眼睛問題",
+            path: "/eye-problems-in-children",
+          },
+          {
+            id: "2",
+            title: "成人常見眼睛問題",
+            path: "/faq",
+          },
+        ],
       },
     ],
   },
 ]);
 
-const isThreeLevel = (item: any) => {
-  return item?.length > 0 ? true : false;
+const isThreeLevel = (item: any, n: any) => {
+  if (item.path !== "") {
+    mbToLink(item.path);
+  }
 };
 
 onMounted(() => {
@@ -200,13 +228,23 @@ const showChildMenu = (index: any) => {
 const route = useRoute();
 const router = useRouter();
 const mbToLink = (item: any) => {
+  pathIsTrue();
   router.push({
     path: item.path,
     query: {
       ...route.query,
     },
   });
-  pathIsTrue();
+};
+
+const goToChildPath = (item: any, i: any) => {
+  console.log(item.path);
+  router.push({
+    path: item.path,
+    query: {
+      ...route.query,
+    },
+  });
 };
 </script>
 
@@ -222,14 +260,10 @@ const mbToLink = (item: any) => {
         <transition name="fade">
           <div v-if="item.isChildVisible" class="sub-menu">
             <div
-              v-for="child in item.childrenList"
+              v-for="(child, childIndex) in item.childrenList"
               :key="child.id"
               class="son-menu"
-              @click="
-                isThreeLevel(child.threeLevelList)
-                  ? showThreeLevel()
-                  : pathIsTrue()
-              "
+              @click="isThreeLevel(child, childIndex)"
             >
               <nuxt-link :to="child.path == '/' ? '#' : child.path"
                 ><span>{{ child.title }}</span>
@@ -239,8 +273,7 @@ const mbToLink = (item: any) => {
                   v-for="threeLevel in child.threeLevelList"
                   :key="threeLevel.id"
                 >
-                  <nuxt-link
-                    :to="threeLevel.path == '/' ? '#' : threeLevel.path"
+                  <nuxt-link :to="threeLevel.path"
                     ><span>{{ threeLevel.title }}</span></nuxt-link
                   >
                 </div>

@@ -47,6 +47,7 @@ const props = defineProps({
     font-weight: 300;
     text-transform: uppercase;
     margin-bottom: 10px;
+    line-height: 32px;
   }
   :deep(.title1) {
     color: #00a6ce;
