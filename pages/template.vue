@@ -12,7 +12,7 @@ const bannerImg = {
   <div class="video-information">
     <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
-      <template #title>
+      <template #title >
         <div class="profile-title">
           <span>XXXXX</span>
         </div>

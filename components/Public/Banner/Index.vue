@@ -25,7 +25,7 @@ const props = defineProps({
       <img v-if="isPc" :src="banner.pc" />
       <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''" />
     </div>
-    <div>
+    <div class="publicBanner">
       <slot name="title"> </slot>
     </div>
     <div class="public-header-bottom-menu">
