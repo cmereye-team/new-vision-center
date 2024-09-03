@@ -34,6 +34,12 @@ const menuList = ref([
     path: "/now-discounts",
   },
   {
+    id: "9",
+    title: "ZEISS Vision Expert  ",
+    child: "svg",
+    path: "/zve",
+  },
+  {
     id: "2",
     title: "兒童視力服務",
     isChildVisible: false,
@@ -259,11 +265,17 @@ const goToChildPath = (item: any, i: any) => {
         >
         <transition name="fade">
           <div v-if="item.isChildVisible" class="sub-menu">
-            <div
+            <!-- <div
               v-for="(child, childIndex) in item.childrenList"
               :key="child.id"
               class="son-menu"
               @click="isThreeLevel(child, childIndex)"
+            > -->
+            <div
+              v-for="(child, childIndex) in item.childrenList"
+              :key="child.id"
+              class="son-menu"
+              @click="pathIsTrue"
             >
               <nuxt-link :to="child.path == '/' ? '#' : child.path"
                 ><span>{{ child.title }}</span>
@@ -272,8 +284,9 @@ const goToChildPath = (item: any, i: any) => {
                 <div
                   v-for="threeLevel in child.threeLevelList"
                   :key="threeLevel.id"
+                  
                 >
-                  <nuxt-link :to="threeLevel.path"
+                  <nuxt-link :to="threeLevel.path" 
                     ><span>{{ threeLevel.title }}</span></nuxt-link
                   >
                 </div>
@@ -375,7 +388,7 @@ const goToChildPath = (item: any, i: any) => {
         display: block;
         color: #00a6ce;
 
-        font-family: "Inter";
+        font-family: "ABeeZee";
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -443,13 +456,15 @@ const goToChildPath = (item: any, i: any) => {
         right: -3.5px;
       }
     }
-    & > div:nth-child(2) {
+    & > div:nth-child(2),
+    & > div:nth-child(3) {
       .a-link::after {
         content: none;
       }
     }
   }
-  .fa-2 {
+  .fa-2,
+  .fa-3 {
     .a-link::after {
       display: none;
     }

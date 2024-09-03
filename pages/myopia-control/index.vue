@@ -204,7 +204,7 @@ const btnElement = ref({
           </div>
         </div>
         <div>
-          <div class="myopia-fake-title">Fake Text</div>
+          <div class="myopia-fake-title">深近視人口增長</div>
           <div>
             以最新的近視人口統計和調查推算，超過60000個學童到17歲時會患上深近視(近視度數600度或以上)。隨著近視度數增加，眼軸增長會導致視網膜變得越來越薄，大大增加患上各種眼疾的風險！
           </div>
@@ -702,7 +702,7 @@ const btnElement = ref({
                     /></svg></span
                 ><span>日間</span>
               </div>
-              <div><span>方便戴除</span><span>適應期較短</span></div>
+              <div><span>·方便戴除</span><span>適應期較短</span></div>
               <div><span>高達</span><span>60-86%</span></div>
             </div>
             <div>
@@ -2043,7 +2043,7 @@ const btnElement = ref({
                     /></svg></span
                 ><span>日間</span>
               </div>
-              <div><span>每日即棄</span><span>方便衛生</span></div>
+              <div><span>每日即棄，</span><span>方便衛生</span></div>
               <div><span>高達</span><span>59%</span></div>
             </div>
             <div>
@@ -2154,7 +2154,7 @@ const btnElement = ref({
               </div>
               <div><span>按醫生指示</span></div>
               <div>
-                <span>用法簡單</span>
+                <span>用法簡單，</span>
                 <span>安全衛生</span>
               </div>
               <div><span>高達</span><span>67%</span></div>
@@ -2303,7 +2303,7 @@ const btnElement = ref({
       <div class="myopia-control-fake">
         <div>
           <div class="myopia-control-fake-text">
-            <div>Fake Text</div>
+            <div>近視加深的潛在因素</div>
             <div>
               小孩發育期間，適度的眼球增長及近視變化是正常現象。最理想的近視加深速度為每年增加不超過50度，如增加100度或以上，就屬過快。先天遺傳或後天用眼習慣不良，也會導致近視加深速度異常，尤其近年本港學習模式轉變，小孩經常以電子產品上課及溫習，減少外出活動，都可能造成小孩近視度數驟增。
             </div>
@@ -4391,7 +4391,8 @@ const btnElement = ref({
       content: "";
       position: absolute;
       bottom: 0;
-      left: 0;
+      left: 50%;
+      transform: translateX(-50%);
       display: inline-block;
       width: 78%;
       border-radius: 5px;

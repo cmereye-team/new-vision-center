@@ -49,6 +49,12 @@ const menuList = ref([
     path: "/now-discounts",
   },
   {
+    id: "9",
+    title: "ZEISS Vision Expert",
+    child: "svg",
+    path: "/zve",
+  },
+  {
     id: "2",
     title: "兒童視力服務",
     isChildVisible: false,
@@ -272,6 +278,7 @@ const handleMouseleave = () => {
         :key="item.id"
         class="fa-path"
         :class="`fa-${index + 1}`"
+        @mouseover="mouseOver(index)"
       >
         <nuxt-link
           @click="item.path == '/' ? showChildMenu(index) : mbToLink(item)"
@@ -279,9 +286,9 @@ const handleMouseleave = () => {
           >{{ item.title }}</nuxt-link
         >
         <transition name="fade">
-          <div v-if="item.isChildVisible" class="sub-menu">
+          <div v-if="item.isChildVisible" class="sub-menu ">
             <div
-              v-for="(child,childIndex) in item.childrenList"
+              v-for="(child, childIndex) in item.childrenList"
               :key="child.id"
               class="son-menu"
               @click="isThreeLevel(child) ? showThreeLevel() : pathIsTrue()"
@@ -426,9 +433,11 @@ const handleMouseleave = () => {
     }
     & > div:nth-child(1),
     & > div:nth-child(2),
-    & > div:nth-child(3),
     & > div:nth-child(5) {
       padding: 0.5vw 2.1875vw;
+    }
+    & > div:nth-child(3) {
+      padding: 0.5vw 1.1875vw;
     }
     & > div:nth-child(4) {
       padding: 0.5vw 1.302vw;
@@ -436,10 +445,22 @@ const handleMouseleave = () => {
     & > div:nth-child(6) {
       padding: 0.5vw 1.5vw 0.5vw 1.8vw;
     }
+    & > div:nth-child(7) {
+      padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+    }
   }
   .fa-path {
     position: relative;
+
   }
+  .fade-leave-active {
+    transition: opacity 3s;;
+  }
+
+.fa-path:not(:hover) .sub-menu{
+   transition: opacity 3s;
+}
+
   .fa-path:hover {
     & > a {
       color: #00a6ce;
@@ -451,10 +472,10 @@ const handleMouseleave = () => {
       z-index: 10;
     }
     .sub-menu {
+      
       box-shadow: #4d4d4d 5px 5px 10px;
       z-index: 999;
       border-radius: 5px;
-
       width: max-content;
       position: absolute;
       right: 50%;
@@ -486,8 +507,9 @@ const handleMouseleave = () => {
     position: relative;
     width: 100%;
     text-align: center;
-
     & > a {
+      padding-bottom: 0 !important;
+
       color: #6f6f6f;
       font-family: "Inter";
       font-size: 0.78vw;
@@ -669,7 +691,8 @@ const handleMouseleave = () => {
     color: #00a6ce !important;
   }
   .menu {
-    .fa-2 {
+    .fa-2,
+    .fa-3 {
       cursor: pointer;
       & > a::after {
         content: none;
@@ -728,6 +751,7 @@ const handleMouseleave = () => {
   .sub-menu {
     padding-top: 10px;
     display: none;
+    // visibility: hidden;
     position: relative;
     // background: #fff;
     background: url("https://static.cmereye.com/imgs/2024/05/bd478e6eda64c637.png")
@@ -870,15 +894,18 @@ const handleMouseleave = () => {
     }
     & > div:nth-child(1),
     & > div:nth-child(2),
-    & > div:nth-child(3),
     & > div:nth-child(5) {
-      padding: 10px 42px;
+      padding: 0.5vw 1.302vw;
     }
-    & > div:nth-child(4) {
-      padding: 10px 25px;
+    & > div:nth-child(4),
+    & > div:nth-child(3) {
+      padding: 0.5vw 1.302vw;
     }
     & > div:nth-child(6) {
-      padding: 10px 32px 10px 40px;
+      padding: 0.5vw 1.302vw;
+    }
+    & > div:nth-child(7) {
+      padding: 0.5vw 1.302vw;
     }
   }
   .fa-path {
@@ -1108,7 +1135,8 @@ const handleMouseleave = () => {
     }
   }
   .menu {
-    .fa-2 {
+    .fa-2,
+    .fa-3 {
       cursor: pointer;
       & > a::after {
         content: none;

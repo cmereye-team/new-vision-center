@@ -53,6 +53,7 @@ const inform = () => {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .serve {
+  
     position: relative;
     border-radius: 18.443px;
     background: var(--Skin, #eafbff);
@@ -74,7 +75,7 @@ const inform = () => {
         margin-bottom: 10px;
       }
       & > div:nth-child(2) {
-        display: flex;
+        // display: flex;
         flex-direction: column;
         color: #60605f;
         font-family: "Noto Sans HK";
@@ -83,6 +84,9 @@ const inform = () => {
         font-weight: 500;
         line-height: 26px; /* 157.576% */
         letter-spacing: 0.825px;
+        &>span{
+          max-height: 26px;
+        }
       }
     }
     & > div:nth-child(3) {
@@ -104,6 +108,7 @@ const inform = () => {
 }
 @media screen and (max-width: 767px) {
   .serve {
+
     border-radius: 8.023px;
     background: var(--Skin, #eafbff);
     box-shadow: 0px 0px 3.263px 0px rgba(0, 0, 0, 0.25);
@@ -139,6 +144,7 @@ const inform = () => {
         font-weight: 500;
         line-height: 16px; /* 133.333% */
         letter-spacing: 0.6px;
+        line-height: 16px;
       }
     }
     & > div:nth-child(3) {

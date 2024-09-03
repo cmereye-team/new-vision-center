@@ -374,7 +374,92 @@ const activeName1 = ref("1");
 a {
   text-decoration: none;
 }
+
+
+
+
 @media screen and (min-width: 768px) {
+
+
+:deep(.title) {
+  font-size: 40px;
+  line-height: 55px;
+  font-weight: 700;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 100%;
+  text-wrap: wrap;
+  background-color: #ffffff;
+  color: #00a6ce;
+}
+:deep(.newsContent) {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 2px;
+  font-family: inherit;
+  font-optical-sizing: inherit;
+  font-kerning: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  a {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-variant: inherit;
+    font-weight: 700;
+    font-stretch: inherit;
+    line-height: 40px;
+    font-optical-sizing: inherit;
+    font-kerning: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    vertical-align: baseline;
+    letter-spacing: 2.4px;
+    color: #00a6ce;
+  }
+}
+
+:deep(.weight){
+  font-size: 30px ;
+  font-weight: 800;
+  
+}
+
+:deep(.footerNews) {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-optical-sizing: inherit;
+  font-kerning: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  vertical-align: baseline;
+  text-align: left;
+}
+
+
   .news-title {
     // background: url("https://static.cmereye.com/imgs/2024/04/d1372c5de907c9e3.png")
     //   no-repeat;
@@ -491,6 +576,95 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
+
+:deep(.title) {
+  font-size: 20px;
+  line-height: 26px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: center;
+  width: 100%;
+  text-wrap: wrap;
+  background-color: #ffffff;
+  color: #00a6ce;
+}
+:deep(.newsContent) {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-size: 16px !important;
+  line-height: 26px;
+  letter-spacing: 2px;
+  font-family: inherit;
+  font-optical-sizing: inherit;
+  font-kerning: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  vertical-align: baseline;
+  text-align: left;
+  a {
+    font-size: 18px;
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    font-variant: inherit;
+    font-weight: 700;
+    font-stretch: inherit;
+    line-height: 24px;
+    font-optical-sizing: inherit;
+    font-kerning: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    vertical-align: baseline;
+    letter-spacing: 2px;
+    color: #00a6ce;
+  }
+}
+:deep(.firstRow){
+  td{
+    border-radius: 10px !important;
+    overflow: hidden;
+    padding: 5px;
+  }
+}
+
+:deep(.weight){
+  font-size: 28px ;
+  font-weight: 800;
+  
+}
+
+:deep(.footerNews) {
+  box-sizing: inherit;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  padding: 0px;
+  border: 0px;
+  font-style: inherit;
+  font-variant: inherit;
+  font-stretch: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  font-family: inherit;
+  font-optical-sizing: inherit;
+  font-kerning: inherit;
+  font-feature-settings: inherit;
+  font-variation-settings: inherit;
+  vertical-align: baseline;
+  text-align: left;
+}
+
+
+
   .news-title {
     // background: url("https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png")
     //   no-repeat;

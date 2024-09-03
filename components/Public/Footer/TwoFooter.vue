@@ -28,6 +28,11 @@ const menuList = ref([
     title: "尊享優惠",
     path: "/now-discounts",
   },
+  //   {
+  //   id: "9",
+  //   title: "ZEISS Vision Expert  ",
+  //   path: "/zve",
+  // },
   {
     id: "2",
     title: "兒童視力服務",
@@ -66,6 +71,13 @@ const menuList = ref([
         id: "4",
         title: "近視控制隱形眼鏡",
         path: "/",
+           threeLevelList: [
+          {
+            id: "1",
+            title: "MiSight® 1 day隱形眼鏡",
+            path: "/",
+          }
+        ],
       },
       {
         id: "5",
@@ -311,6 +323,7 @@ const showThreeLevel = () => {
     text-decoration: none;
   }
   .twoFooter {
+    font-family: "Noto Sans HK";
     margin-top: 80px;
     display: flex;
     flex-direction: column;
@@ -333,7 +346,7 @@ const showThreeLevel = () => {
           & > div {
             & > a {
               color: #666;
-              font-family: "ABeeZee";
+                 font-family: "Noto Sans HK";
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -412,7 +425,7 @@ const showThreeLevel = () => {
       width: 16px;
       height: 8px;
       top: 18px;
-      right: 0;
+      right: -20px;
       transition: all 0.3s ease-in-out;
     }
   }
@@ -458,12 +471,13 @@ const showThreeLevel = () => {
   .footer-menuList {
     margin-top: 40px;
     margin-bottom: 12px;
+    
     & > div {
       & > a {
         display: flex;
         width: 100%;
         color: #00a6ce;
-        font-family: "Inter";
+        font-family: "ABeeZee";
         font-size: 20px;
         font-style: normal;
         font-weight: 600;

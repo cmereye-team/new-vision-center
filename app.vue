@@ -30,9 +30,56 @@ onMounted(() => {
   </div>
 </template>
 <style>
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=ABeeZee:ital@0;1&family=Noto+Sans+HK:wght@100..900&display=swap");
+
 * {
   padding: 0;
   margin: 0;
+}
+/* .noto-sans-tc-<uniquifier > {
+  font-family: "Noto Sans TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+} */
+
+.noto-sans-hk-<uniquifier > {
+  font-family: "Noto Sans HK", system-ui;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+.noto-sans-HK {
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+@font-face {
+  font-family: "Noto Sans";
+  font-style: italic;
+  font-weight: 100 900;
+  font-stretch: 100%;
+  font-display: swap;
+  src: url(https://fonts.gstatic.com/s/notosans/v36/o-0ZIpQlx3QUlC5A4PNr4C5OaxRsfNNlKbCePevtvXOmDyw.woff2)
+    format("woff2");
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+
+.abeezee-regular {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.abeezee-regular-italic {
+  font-family: "ABeeZee", sans-serif;
+  font-weight: 400;
+  font-style: italic;
 }
 a {
   text-decoration: none;
@@ -40,7 +87,6 @@ a {
 .form-public {
   margin-bottom: 65px;
 }
-
 
 @media screen and (max-width: 768px) {
   .fixed-menu {
@@ -59,7 +105,7 @@ a {
 </style>
 
 <style lang="scss">
-  :root {
+:root {
   --font-size-base: 16px;
   html {
     font-size: var(--font-size-base);

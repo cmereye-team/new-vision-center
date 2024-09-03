@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "HOYA MiYOSMART兒童近視控制眼鏡 - 希瑪眼科視光中心",
+  title: "HOYA MiYOSMART兒童近視控制眼鏡｜兒童視力服務｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "HOYA MiYOSMART兒童近視控制鏡片（DIMS鏡片）是一項非入侵式的近視控制方案，由香港理工大學與HOYA合作研發的鏡片。這款鏡片安全可靠、易於使用，可有效減緩近視加深速度，同時提供清晰穩定的視力。臨床證實，使用HOYA MiYOSMART兒童近視控制鏡片能平均減緩近視加深速度達60%，其中21.5%的孩子使用後完全沒有進一步加深近視。我們提供HOYA MiYOSMART兒童近視控制鏡片連鏡架套餐，立即聯絡我們預約配鏡。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "DIMS dims眼鏡 DIMS鏡片 DIMS鏡片價格 hoya MiyoSmart hoya MiyoSmart價錢 hoya兒童近視控制鏡片評價 hoya近視控制鏡片 hoya控制近視鏡片價錢 hoya鏡片 hoya兒童近視控制鏡片 MiyoSmart  MiyoSmart鏡片 MiyoSmart 近視控制鏡片 兒童近視 控制近視鏡片 hoya miyosmart 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 import getWindowSize from "@/utils/width";
 const isPc = ref(false);
@@ -26,66 +40,30 @@ const miSightQuestionList = [
     q: "配戴MiYOSMART鏡片後，要複查視力嗎？",
     a: [
       `是的，配戴MiYOSMART眼鏡後要進行複查。`,
-      ` (1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
-      `(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
+      `①配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
+      `②配戴MiYOSMART後每半年：評估視力的變化及近視控制的效果。`,
     ],
     mAq: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
+      `是的，配戴MiYOSART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
     ],
   },
   {
-    q: "配戴MiYOSMART鏡片後，要複查視力嗎？",
+    q: "如何選擇適合我的HOYA鏡片？",
     a: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。`,
-      ` (1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
-      `(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
+      `HOYA提供各種功能性的鏡片，可以在評估視力需求後，根據你的視力需求、鏡片類型和功能偏好，在視光師的指導下選擇適合自己的hoya鏡片`,
+      ,
     ],
     mAq: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
+      `HOYA提供各種功能性的鏡片，可以在評估視力需求後，根據你的視力需求、鏡片類型和功能偏好，在視光師的指導下選擇適合自己的hoya鏡片`,
     ],
   },
   {
-    q: "配戴MiYOSMART鏡片後，要複查視力嗎？",
+    q: "HOYA眼鏡度數需要多久調一次？",
     a: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。`,
-      ` (1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
-      `(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
+      `配戴過程中，如果視力發生明顯變化，例如出現視力模糊、眼睛疲勞或遠近距離難以調節，可能就需要視光師幫忙調整眼鏡度數了。`,
     ],
     mAq: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
-    ],
-  },
-  {
-    q: "配戴MiYOSMART鏡片後，要複查視力嗎？",
-    a: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。`,
-      ` (1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
-      `(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
-    ],
-    mAq: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
-    ],
-  },
-  {
-    q: "配戴MiYOSMART鏡片後，要複查視力嗎？",
-    a: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。`,
-      ` (1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
-      `(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
-    ],
-    mAq: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
-    ],
-  },
-  {
-    q: "配戴MiYOSMART鏡片後，要複查視力嗎？",
-    a: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。`,
-      ` (1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。`,
-      `(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
-    ],
-    mAq: [
-      `是的，配戴MiYOSMART眼鏡後要進行複查。(1)配戴後半個月：評估兒童配戴MiYOSMART後的適應情況。(2)配戴MiYOSMART後每半年,評估視力的變化及近視控制的效果。`,
+      `配戴過程中，如果視力發生明顯變化，例如出現視力模糊、眼睛疲勞或遠近距離難以調節，可能就需要視光師幫忙調整眼鏡度數了`,
     ],
   },
 ];
@@ -170,8 +148,9 @@ const btnElement = ref({
           <div>
             <div>為配戴者提供清晰視野</div>
             <div>
-              <span>配戴方法與一般眼鏡無異。</span><br />
-              <span>臨床實驗證實，配戴MiYOSMART近視控</span
+              <span>配戴方法與一般眼鏡無異。</span>
+              <br />
+              <span class="topMargin">臨床實驗證實，配戴MiYOSMART近視控</span
               ><span>制鏡片的兒童：</span>
             </div>
           </div>
@@ -551,11 +530,11 @@ const btnElement = ref({
         <div>
           <div>鏡片升級</div>
           <div>
-            <div>升級Full Control全面防護鍍膜</div>
+            <div>1.升級Full Control全面防護鍍膜</div>
             <div>
               <div>
                 <div>
-                  <span>雙面抗菌鍍膜</span>
+                  <span class="title">雙面抗菌鍍膜</span>
                   <span>抑制细菌、病<br v-if="!isPc" />毒</span>
                   <span>和其他微生物在鏡片內側、</span>
                   <span>外側的繁殖，保持眼鏡的清</span>
@@ -739,10 +718,10 @@ const btnElement = ref({
               </div>
             </div>
             <div>
-              <div>升級Chameleon變色鏡片</div>
+              <div>2.升級Chameleon變色鏡片</div>
               <div>
                 <div>
-                  <span>升級Chameleon變色鏡片</span>
+                  <span class="title">升級Chameleon變色鏡片</span>
                   <span
                     >鏡片採用夾層變色技術，在戶外遇到紫外線鏡片會迅速變深</span
                   >
@@ -1117,6 +1096,7 @@ const btnElement = ref({
             </div>
           </div>
         </div>
+        <p class="myopia-server-tit">*視光師會視乎情況提供散瞳檢查</p>
       </div>
       <div class="myopia-container-step">
         <div>
@@ -1131,7 +1111,7 @@ const btnElement = ref({
                 </div>
                 <div>
                   <span>1星期</span>
-                  <span>綜合眼睛檢查 + 鏡片試配+ 鏡片訂製</span>
+                  <span>綜合眼睛檢查 + 鏡片試戴+ 鏡片訂製</span>
                 </div>
               </div>
               <div>
@@ -1615,6 +1595,18 @@ const btnElement = ref({
     max-width: 960px;
     margin: 42px auto 55px;
     margin-top: 70px;
+    &-tit {
+      width: 100%;
+      text-align: center;
+      color: #60605f;
+      font-family: "Noto Sans HK";
+      font-size: 16.5px;
+      font-style: normal;
+      font-weight: 500;
+      text-align: left;
+      padding-left: 98px;
+      color: var(--Brand-Color, #00a6ce);
+    }
     & > div:nth-child(2) {
       display: flex;
       gap: 0 28px;
@@ -1704,11 +1696,11 @@ const btnElement = ref({
               line-height: 33.75px; /* 187.5% */
               letter-spacing: 0.9px;
               & > span:nth-child(1) {
-                color: var(--Deep-Blue, #3e5270);
+                color: var(--Deep-Blue, #00a6ce);
                 font-family: "Noto Sans HK";
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 33.75px;
                 letter-spacing: 0.9px;
               }
@@ -1760,11 +1752,11 @@ const btnElement = ref({
               display: flex;
               flex-direction: column;
               & > span:nth-child(1) {
-                color: var(--Deep-Blue, #3e5270);
+                color: var(--Deep-Blue, #00a6ce);
                 font-family: "Noto Sans HK";
                 font-size: 18px;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 33.75px;
                 letter-spacing: 0.9px;
               }
@@ -1938,7 +1930,7 @@ const btnElement = ref({
           & > span:nth-child(3),
           & > span:nth-child(4) {
             position: relative;
-            left: -30px;
+            // left: -30px;
           }
         }
         & > div:nth-child(1)::before {
@@ -2456,6 +2448,17 @@ const btnElement = ref({
   .myopia-server {
     margin-top: 27px;
     padding: 0 6.4vw;
+    &-tit {
+      width: 100%;
+      margin-top: 10px;
+      text-align: center;
+      color: #60605f;
+      font-family: "Noto Sans HK";
+      font-size: 3.585vw;
+      font-style: normal;
+      font-weight: 500;
+      color: var(--Brand-Color, #00a6ce);
+    }
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: auto auto auto;
@@ -2574,11 +2577,11 @@ const btnElement = ref({
               }
               & > span:nth-child(1) {
                 display: block;
-                color: var(--Deep-Blue, #3e5270);
+                color: var(--Deep-Blue, #00a6ce);
                 font-family: "Noto Sans HK";
                 font-size: 11px;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 14px; /* 127.273% */
                 letter-spacing: 0.55px;
               }
@@ -2631,11 +2634,11 @@ const btnElement = ref({
               }
               & > span:nth-child(1) {
                 display: block;
-                color: var(--Deep-Blue, #3e5270);
+                color: var(--Deep-Blue, #00a6ce);
                 font-family: "Noto Sans HK";
                 font-size: 2.82vw;
                 font-style: normal;
-                font-weight: 500;
+                font-weight: 600;
                 line-height: 3.585vw; /* 127.273% */
                 letter-spacing: 0.55px;
               }
@@ -2803,6 +2806,10 @@ const btnElement = ref({
           text-transform: uppercase;
           max-width: 140px;
         }
+        .topMargin {
+          display: block;
+          margin-top: 10px;
+        }
       }
       & > div:nth-child(3) {
         max-width: 180px;
@@ -2815,6 +2822,7 @@ const btnElement = ref({
         font-weight: 700;
         line-height: 20px; /* 142.857% */
         padding: 2px 0;
+
         & > span:nth-child(3) {
           padding-right: 20px;
         }

@@ -15,8 +15,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/04/cb749c5077456981.png",
-  mobile: "https://static.cmereye.com/imgs/2024/04/89671f7269cf9352.png",
+  pc: "https://static.cmereye.com/imgs/2024/08/bd3e2538003747d1.jpg",
+  mobile: "https://static.cmereye.com/imgs/2024/08/22f2cd11935da5db.jpg",
 };
 </script>
 
@@ -81,7 +81,7 @@ const bannerImg = {
     margin-top: 87px;
     span {
       position: absolute;
-      bottom: 30px;
+      bottom: 30%;
       right: 20px;
       color: #fff;
       text-align: center;

@@ -20,6 +20,13 @@ const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/07/dac22b19b807d9ed.png",
   mobile: "https://static.cmereye.com/imgs/2024/07/685a9070ccfc7382.png",
 };
+const btnElement = ref({
+  title: "我適合戴RGP鏡嗎？",
+  svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
+  isExternalLink: true,
+  // isExternalLink 外链 true
+  link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+});
 </script>
 
 <template>
@@ -1343,7 +1350,7 @@ const bannerImg = {
         </div>
       </div>
       <div class="fake-text">
-        <PublicPageTitle :title="'Fake Text？'" />
+        <PublicPageTitle :title="'甚麼是RGP鏡？'" />
         <div>
           <span
             >市面上，除了一般軟式隱形眼鏡，亦有硬式隱形眼鏡（Rigid Gas
@@ -1356,6 +1363,22 @@ const bannerImg = {
           <span>較高，較能保持角膜健康。</span>
         </div>
       </div>
+
+      <div class="fake-text">
+        <PublicPageTitle :title="'RGP鏡的功用'" />
+        <div>
+          <span
+            >對於深度近視、散光和老花，硬式透氣隱形眼鏡能更有效地矯正視力。此外，對於各</span
+          >
+          <span
+            >種原因造成的角膜不規則的散光問題，如圓錐型角膜、屈光手術後</span
+          >
+          <span
+            >角膜或創傷手術後角膜，可以藉著配戴硬式透氣隱形眼鏡改善視力，達到控制病情的效果。</span
+          >
+        </div>
+      </div>
+
       <div class="misight-crowd-content">
         <div>合適對象</div>
         <div>
@@ -1848,9 +1871,14 @@ const bannerImg = {
           <span>師會為配戴者進行一系列的檢查及了解情況後作出建議。</span>
         </div>
       </div>
+
+      <div class="misight-btn">
+        <BtnAnimation :btnElement="btnElement" />
+      </div>
+
       <div class="bg-img-fake-text">
         <div>
-          <div>Fake Text</div>
+          <div>硬式隱形眼鏡的適應期</div>
           <div>
             <span>配戴硬鏡的適應期較長，一般需要2星期時間。</span>
             <span
@@ -3164,6 +3192,12 @@ const bannerImg = {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .misight-btn {
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+  }
+
   .rgp-contact-lens {
     max-width: 960px;
     margin: 90px auto 78px;
@@ -3257,6 +3291,7 @@ const bannerImg = {
           align-items: center;
           min-height: 54px;
         }
+
         & > div:nth-child(2) {
           margin-top: 15px;
           display: flex;
@@ -3557,6 +3592,16 @@ const bannerImg = {
   }
 }
 @media screen and (max-width: 767px) {
+  .misight-btn {
+    display: flex;
+    margin: 20px 0;
+    justify-content: center;
+    :deep(.slot) {
+      & > div {
+        border-radius: 10px;
+      }
+    }
+  }
   .rgp-contact-lens {
     padding: 0 25px 0 23px;
     margin-top: 25px;
@@ -3705,7 +3750,7 @@ const bannerImg = {
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 28px;
+            width: 54px;
             height: 44.8px;
           }
         }

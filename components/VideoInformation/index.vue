@@ -499,7 +499,9 @@ const reelsListClass = ref([
       border-left: 0.723px solid var(--Brand-Color, #00a6ce);
       border-radius: 10px;
     }
+
     .active {
+ 
       border-radius: 10px;
       background: var(--Brand-Color, #00a6ce);
       color: var(--Brand-Color, #fff);
@@ -525,7 +527,7 @@ const reelsListClass = ref([
   .information-title {
     color: #00a6ce;
     font-family: "Inter";
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 600;
     line-height: normal;

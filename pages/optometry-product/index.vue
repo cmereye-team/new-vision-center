@@ -3,8 +3,8 @@ useHead(() => ({
   title: "視光產品 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/08/a77ea39669a22178.jpg",
+  mobile: "https://static.cmereye.com/imgs/2024/08/fef8b7c8cf8e4a01.jpg",
 };
 const myopiaControlContactLenses = ref({
   img: "https://static.cmereye.com/imgs/2024/06/ecd1b42f002861e2.png",
@@ -12,11 +12,13 @@ const myopiaControlContactLenses = ref({
   description: [
     "MiSight® 1 day是一款專為兒童設計的每日即棄近視控制隱形眼鏡。",
     "它使用ActivControl® 周邊離焦技術減慢兒童眼軸增長及近視加深。",
-    "這款軟性隱形眼鏡具備了特殊的光學設計，包括：",
-    "1) 兩個近視控制區 (圖片上的紅色部份)",
+    "這款軟性隱形眼鏡具備了特殊的光學設計，包括：<br>",
+   
+    "1) 兩個近視控制區",
     "把光線聚焦在視網膜的前方，形成近視離焦，減慢眼軸增長，有效控",
-    "制近視加深。",
-    "2) 兩個近視矯正視力區(圖片上的綠色部份)",
+    "制近視加深。<br>",
+
+    "2) 兩個近視矯正視力區",
     "能矯正近視，將近視導致的模糊影像重新聚焦於視網膜上，提供日常",
     "生活所需的清晰的視力。",
   ],
@@ -30,7 +32,7 @@ const orthokeratoscope = ref({
     "弧度，使角膜中央部分變得平坦，令外界光線重新聚焦到視網膜上，看見",
     "清晰的影像。由於角膜富有彈性，弧度改善並不持久，不能將近視徹底根",
     "治。一旦停戴，清晰視覺效果將會在數天內消失。因此需長期及定時在晚",
-    "間戴上角膜矯形鏡（OK鏡），以維持清晰視覺的效果。",
+    "間戴上角膜矯形鏡（OK鏡），以維持清晰視覺的效果。<br>",
     "",
     "另外，角膜形狀改變後，眼球聚焦事物時，中心影像會被聚焦在視網膜",
     "上，周邊影像則會被聚焦在視網膜的較前方，產生「周邊離焦」，有效預",
@@ -41,7 +43,7 @@ const scleralLens = ref({
   img: "https://static.cmereye.com/imgs/2024/06/b3370b240196a633.png",
   title: "鞏膜鏡",
   description: [
-    "硬性隱形眼鏡",
+    
     "鞏膜鏡(Scleral Lens)是一款大直徑的高透氧硬性隱形眼鏡，直徑一般是",
     "14mm至22mm。由於鏡片接觸的是眼球中相對不敏感的眼白鞏膜部位，",
     "戴起來比普通隱形眼鏡舒適。鞏膜鏡常用於「角膜病」的患者，如圓錐角",
@@ -55,11 +57,14 @@ const progressiveEyeglasses = ref({
   description: [
     "漸進鏡是一塊能同時矯正多種視力問題的鏡片。原理是透過在同一塊鏡片",
     "上提供不同的焦點，使配戴者只需一副眼鏡便能解決遠視、近視和老花問",
-    "題。",
-    "鏡片的不同位置適用於不同的視力需要，其結構主要分為三大部份：",
-    "鏡片的上半部分會配以「遠用度數」，用作平常觀看遠方景物；",
-    "中間部分是「中光區」，用於看中近距離的景物如電腦；",
-    "至於鏡片的下方則配以「近用度數」，用作看近距離景物如閱讀文件和看",
+    "題。<br>",
+    "",
+    "鏡片的不同位置適用於不同的視力需要，其結構主要分為三大部份：<br>",
+    "鏡片的上半部分會配以「遠用度數」，用作平常觀看遠方景物；<br>",
+    "",
+    "中間部分是「中光區」，用於看中近距離的景物如電腦；<br>",
+    "",
+    "至於鏡片的下方則配以「近用度數」，用作看近距離景物如閱讀文件和看", 
     "手提電話。",
   ],
 });
@@ -69,7 +74,7 @@ const myopiaControlGlasses = ref({
   description: [
     "近視屬常見的都市問題，也是不少家長的煩惱。如兒童近視不斷加深",
     "而沒有適時控制，成深度近視，便有機會增加患上嚴重併發症，包括",
-    "視網膜穿孔或脫落、黄斑病變、青光眼及白内障等疾病的風險。",
+    "視網膜穿孔或脫落、黄斑病變、青光眼及白内障等疾病的風險。<br>",
     "",
     "兒童近視控制鏡片，是把近視離焦理論應用於光學績片上，能為兒童",
     "提供清晰穩定的視力之餘，更有效控制近視加深的情况。配戴方式與",
@@ -102,7 +107,7 @@ const getData = (num: any) => {
   isClose.value = true;
   if (num == 0) {
     defaultDataOne.value = myopiaControlContactLenses.value;
-    productListBox.value.style.gap = "298px 12px";
+    productListBox.value.style.gap = "20px 12px";
     productListBoxOne.value = true;
     productListBoxTwo.value = false;
     productListBoxThree.value = false;
@@ -112,7 +117,7 @@ const getData = (num: any) => {
   }
   if (num == 1) {
     defaultDataOne.value = orthokeratoscope.value;
-    productListBox.value.style.gap = "378px 12px";
+    productListBox.value.style.gap = "20px 12px";
     productListBoxOne.value = false;
     productListBoxTwo.value = true;
     productListBoxThree.value = false;
@@ -122,7 +127,7 @@ const getData = (num: any) => {
   }
   if (num == 2) {
     defaultDataOne.value = scleralLens.value;
-    productListBox.value.style.gap = "248px 12px";
+    productListBox.value.style.gap = "20px 12px";
     productListBoxOne.value = false;
     productListBoxTwo.value = false;
     productListBoxThree.value = true;
@@ -132,7 +137,7 @@ const getData = (num: any) => {
   }
   if (num == 3) {
     defaultDataOne.value = progressiveEyeglasses.value;
-    productListBox.value.style.gap = "278px 12px";
+    productListBox.value.style.gap = "20px 12px";
     productListBoxOne.value = false;
     productListBoxTwo.value = false;
     productListBoxThree.value = false;
@@ -142,7 +147,7 @@ const getData = (num: any) => {
   }
   if (num == 4) {
     defaultDataOne.value = myopiaControlGlasses.value;
-    productListBox.value.style.gap = "268px 12px";
+    productListBox.value.style.gap = "20px 12px";
     productListBoxOne.value = false;
     productListBoxTwo.value = false;
     productListBoxThree.value = false;
@@ -152,7 +157,7 @@ const getData = (num: any) => {
   }
   if (num == 5) {
     defaultDataOne.value = multifocalPresbyopia.value;
-    productListBox.value.style.gap = "248px 12px";
+    productListBox.value.style.gap = "20px 12px";
     productListBoxOne.value = false;
     productListBoxTwo.value = false;
     productListBoxThree.value = false;
@@ -327,6 +332,7 @@ const onInform = (el: any) => {
               <span>角膜矯形鏡</span>
             </div>
           </div>
+      
           <div @click="getData(2)">
             <div :class="[productListBoxThree ? 'active' : '']">
               <svg
@@ -1805,7 +1811,9 @@ const onInform = (el: any) => {
         </div>
         <div v-if="isClose">
           <ServeTag @inform="onInform" :detail="defaultDataOne" />
+          <div ></div>
         </div>
+        <div v-if="isClose" :style="isPc? 'display:none' : 'height:450px'"></div>
       </div>
     </div>
   </div>
@@ -1818,6 +1826,7 @@ const onInform = (el: any) => {
     margin: 96px auto;
   }
   .product-list {
+
     & > div:nth-child(1) {
       display: flex;
       justify-content: space-between;
@@ -1847,6 +1856,7 @@ const onInform = (el: any) => {
           font-weight: 500;
           line-height: 22.5px; /* 136.364% */
           letter-spacing: 0.825px;
+      
         }
       }
     }
@@ -1891,7 +1901,11 @@ const onInform = (el: any) => {
       box-shadow: 0px 6px 8px 3px rgba(7, 7, 7, 0.329);
     }
     & > a:nth-child(2) {
+      background: #3333;
+      &:hover{
       background: #95df82;
+
+      }
     }
   }
 }
@@ -1902,11 +1916,15 @@ const onInform = (el: any) => {
     margin-bottom: 14px;
   }
   .product-list-box {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+      display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     gap: 328px 12px;
   }
   .product-list {
+   
     position: relative;
     & > div:nth-child(1) {
       & > div {
@@ -1938,7 +1956,7 @@ const onInform = (el: any) => {
     }
     & > div:nth-child(2) {
       position: absolute;
-      top: 180px;
+      top: 515px;
       margin: 0 auto;
     }
   }
@@ -1976,7 +1994,8 @@ const onInform = (el: any) => {
       }
     }
     & > a:nth-child(2) {
-      background: #95df82;
+      // background: #95df82;
+           background: #3333;
     }
   }
 }

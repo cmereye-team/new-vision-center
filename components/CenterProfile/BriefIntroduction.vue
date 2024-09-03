@@ -8,7 +8,7 @@
       <div class="brief-introduction-content">
         <div>
           <img
-            src="https://static.cmereye.com/imgs/2024/04/be9c59fdb598845f.png"
+            src="https://static.cmereye.com/imgs/2024/08/25322427d2770364.png"
             alt=""
           />
         </div>
@@ -48,6 +48,8 @@
     & > div {
       flex: 5;
       max-width: 470px;
+      border-radius: 10px;
+      overflow: hidden;
       & > img {
         width: 100%;
       }

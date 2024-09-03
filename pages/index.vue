@@ -12,7 +12,7 @@ useHead({
       hid: "Keywords",
       name: "Keywords",
       content:
-        "希瑪視光 希瑪眼科視光中心 cmer vision 視光中心 視光師 眼睛檢查 視光檢查 蔡司ZVE視光專家 蔡司視覺體驗 註冊視光師 視光師驗眼 視光師驗眼中心 全面眼睛檢查 全面眼科視光檢查 希瑪眼科視光中心旺角 希瑪眼科視光中心中環 旺角視力中心 兒童視光中心 眼科驗眼中心 驗眼 驗眼中心 兒童驗眼 驗眼度數 隱形眼鏡驗眼 檢查眼睛 全面眼睛檢查費用 驗眼費用 綜合眼科視光檢查 眼睛檢查 視野檢查 近視控制 兒童近視控制 ok鏡 控制近視鏡片 ",
+        "希瑪視光 希瑪眼科視光中心 cmer vision 視光中心 視光師 眼睛檢查 視光檢查 蔡司ZVE視光專家 蔡司視覺體驗註冊視光師 視光師驗眼 視光師驗眼中心 全面眼睛檢查 全面眼科視光檢查 希瑪眼科視光中心旺角 希瑪眼科視光中心中環 旺角視力中心 兒童視光中心 眼科驗眼中心 驗眼 驗眼中心 兒童驗眼 驗眼度數 隱形眼鏡驗眼 檢查眼睛 全面眼睛檢查費用 驗眼費用 綜合眼科視光檢查 眼睛檢查 視野檢查 近視控制 兒童近視控制 ok鏡 控制近視鏡片 ",
     },
   ],
 });
@@ -55,7 +55,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/1294e900e7debac6.png",
       title: ["近視控制", "檢查方案"],
-      link: "#",
+      link: "http://cmervision.sprite.eu.org/myopia-control",
       text: ["低至"],
       context: [],
       price: "350",
@@ -63,7 +63,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/4fb495e912701d2c.png",
       title: ["角膜矯形鏡", "合適性檢查套餐"],
-      link: "#",
+      link: "http://cmervision.sprite.eu.org/orthokeratoplasty",
       text: ["低至"],
       context: [],
       price: "1,000",
@@ -71,7 +71,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/2fce54bd583f773d.png",
       title: ["專業驗配近視", "控制眼鏡"],
-      link: "#",
+      link: "http://cmervision.sprite.eu.org/eye-examination-child",
       text: [],
       context: ["買鏡片", "送鏡架"],
       price: "",
@@ -79,7 +79,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/c0e70a7699fdb561.png",
       title: ["眼睛檢查套餐"],
-      link: "#",
+      link: "https://cmervision.sprite.eu.org/eye-examination-adult",
       text: ["低至"],
       context: [],
       price: "350",
@@ -87,7 +87,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/9ffb4105482ebeb2.png",
       title: ["青光眼檢查", "套餐"],
-      link: "#",
+      link: "https://cmervision.sprite.eu.org/eye-examination-adult",
       text: ["低至"],
       context: [],
       price: "1,000",
@@ -95,7 +95,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/345093cb5a583346.png",
       title: ["隱形眼鏡", "驗配套餐"],
-      link: "#",
+      link: "http://cmervision.sprite.eu.org/soft-contact-lens",
       text: ["低至"],
       context: [],
       price: "350",
@@ -233,6 +233,17 @@ const witness = ref({
     },
   ],
 });
+const showIndex = ref(-1);
+
+function onMouseOver(index: number) {
+  showIndex.value = index;
+}
+
+function onMouseOut(index: number) {
+  if (showIndex.value === index) {
+    showIndex.value = -1;
+  }
+}
 const handleIcon = (str: any, idx: any) => {
   witness.value.section1.forEach((item: any, index: any) => {
     if (idx == index) {
@@ -295,6 +306,7 @@ const handleIcon = (str: any, idx: any) => {
               :title="`${item.title}`"
             />
           </div>
+
           <div class="context">
             <div class="context-t">
               <h3
@@ -443,6 +455,65 @@ const handleIcon = (str: any, idx: any) => {
             >
               <div class="image">
                 <img :src="item.img" :alt="item.name" />
+                <div class="divShow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="37"
+                    viewBox="0 0 33 37"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d_2534_37381)">
+                      <path
+                        d="M6.77437 2.18226C6.06857 1.764 5.17578 2.27272 5.17578 3.09314V27.6116C5.17578 28.432 6.06857 28.9408 6.77437 28.5226L27.4619 16.2633C28.1539 15.8532 28.1539 14.8516 27.4619 14.4415L6.77437 2.18226Z"
+                        stroke="white"
+                        stroke-width="3.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_2534_37381"
+                        x="0.300781"
+                        y="0.154785"
+                        width="32.5547"
+                        height="36.3953"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="3" />
+                        <feGaussianBlur stdDeviation="1.5" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_2534_37381"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_2534_37381"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
               </div>
               <div class="title">
                 <h3>{{ item.name }}</h3>
@@ -1034,11 +1105,24 @@ const handleIcon = (str: any, idx: any) => {
           height: 325px;
           display: inline-block;
           box-sizing: border-box;
+          .divShow {
+            display: none; /* 默认情况下隐藏这个div */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%); /* 这会将div居中在其父元素内 */
+          }
+
+          &:hover .divShow {
+            display: block; /* 当鼠标悬停在.parent上时显示div */
+          }
           .image {
             width: 100%;
             overflow: hidden;
             border-radius: 15px;
+            position: relative;
             img {
+              z-index: 999;
               width: 100%;
               border-radius: 15px;
             }
@@ -1526,5 +1610,18 @@ const handleIcon = (str: any, idx: any) => {
   100% {
     filter: drop-shadow(0 0 0 rgba(255, 11, 11, 0));
   }
+}
+
+.element {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 3s, visibility 3s;
+}
+.element:hover {
+  opacity: 1;
+}
+.element:not(:hover) {
+  opacity: 0;
+  visibility: hidden;
 }
 </style>

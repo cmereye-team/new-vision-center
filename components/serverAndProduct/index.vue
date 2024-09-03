@@ -77,7 +77,9 @@ const props = defineProps({
         <img :src="item.img" alt="" />
       </div>
       <div>
-        <span v-for="(el, index) in item.title" :key="index">{{ el }}</span>
+        <span v-for="(el, index) in item.title" :key="index">
+          <span v-if="el=='•'" class="origin">•</span>
+          {{ el }}</span>
       </div>
     </div>
     <div
@@ -94,7 +96,11 @@ const props = defineProps({
             <span
               v-for="(element, index) in props.detailList[cur].description"
               :key="index"
-              >{{ element }}</span
+              
+              :class="element==''?'kong':''"
+              v-html="element"
+              >
+              </span
             >
           </div>
         </div>
@@ -308,6 +314,8 @@ const props = defineProps({
           line-height: 14.681px; /* 104.868% */
           letter-spacing: 0.7px;
           margin-bottom: 10px;
+          
+
         }
         & > div:nth-child(2) {
           color: #60605f;
@@ -317,6 +325,12 @@ const props = defineProps({
           font-weight: 500;
           line-height: 14px; /* 116.667% */
           letter-spacing: 0.6px;
+          // text-indent: 10px;
+            & > .kong {
+            display: block;
+            min-height: 10px;
+          }
+          
         }
       }
       & > div:nth-child(3) {

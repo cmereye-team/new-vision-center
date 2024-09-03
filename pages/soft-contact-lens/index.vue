@@ -893,8 +893,8 @@ const btnElement = ref({
             <div>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                width="43"
-                height="69"
+                width="60"
+                height="60"
                 viewBox="0 0 43 69"
                 fill="none"
               >
@@ -1604,7 +1604,7 @@ const btnElement = ref({
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 28px;
+            width: 46px;
             height: 44.8px;
           }
         }

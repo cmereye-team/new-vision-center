@@ -17,12 +17,12 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/2411d80b7ca6dfb0.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/ac3b7c31e12a7393.png",
+  pc: "https://static.cmereye.com/imgs/2024/08/51ac711323203828.jpg",
+  mobile: "https://static.cmereye.com/imgs/2024/08/c6912ec8adf66150.jpg",
 };
 
 const btnElement = ref({
-  title: "立即預約",
+  title: "預約諮詢視光師！",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
   // isExternalLink 外链 true
@@ -129,13 +129,13 @@ const btnElement = ref({
       <div class="myopia-container-brand">
         <PublicPageTitle :title="'近視控制隱形眼鏡的品牌'" />
         <div>
-          <nuxt-link>
+          <nuxt-link to="/myopia-control-hoya">
             <img
               src="https://static.cmereye.com/imgs/2024/07/2803939cde9d34f7.png"
               alt="cooper"
             />
           </nuxt-link>
-          <nuxt-link>
+          <nuxt-link to="/myopia-control-zeiss">
             <img
               src="https://static.cmereye.com/imgs/2024/07/71654116b2763716.png"
               alt="abiliti"
@@ -149,9 +149,11 @@ const btnElement = ref({
           </nuxt-link>
         </div>
         <div>
+          <p class="myopia-container-brand-tip">如何選擇合適的品牌？</p>
           <BtnAnimation :btnElement="btnElement" />
         </div>
       </div>
+
       <div class="child-myopia-bg-blue">
         <div></div>
         <div>
@@ -163,6 +165,7 @@ const btnElement = ref({
           </div>
         </div>
       </div>
+
       <div class="child-myopia-means">
         <div class="means-box">
           <div><span>隱形眼鏡</span><span>配戴方法</span></div>
@@ -176,63 +179,90 @@ const btnElement = ref({
               </div>
               <div>使用抗菌洗手液徹底清潔雙手及抹乾雙手</div>
             </div>
+
+            <div class="svg-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="17"
+                viewBox="0 0 31 17"
+                fill="none"
+              >
+                <path
+                  d="M29 2L17.8608 14.5832C16.7174 15.8748 14.707 15.8912 13.5427 14.6184L2 2"
+                  stroke="#00A6CE"
+                  stroke-width="2.32368"
+                  stroke-linecap="round"
+                />
+              </svg>
+            </div>
+
             <div>
               <div>
                 <img
                   src="https://static.cmereye.com/imgs/2024/07/8223cb182958c4be.png"
-                  alt="以人工淚液（不含防腐劑）濕潤雙眼"
+                  alt="取出隱形眼鏡，並將鏡片放在指尖上。檢查隱形眼鏡是否呈碗狀向內彎曲，如果是錯誤的方向，隱形眼鏡的邊緣可能會變得平坦
+ "
                 />
               </div>
-              <div>以人工淚液（不含防腐劑）濕潤雙眼</div>
+              <div>
+                取出隱形眼鏡，並將鏡片放在指尖上。檢查隱形眼鏡是否呈碗狀向內彎曲，如果是錯誤的方向，隱形眼鏡的邊緣可能會變得平坦
+                 
+              </div>
+            </div>
+            <div class="svg-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="17"
+                viewBox="0 0 31 17"
+                fill="none"
+              >
+                <path
+                  d="M29 2L17.8608 14.5832C16.7174 15.8748 14.707 15.8912 13.5427 14.6184L2 2"
+                  stroke="#00A6CE"
+                  stroke-width="2.32368"
+                  stroke-linecap="round"
+                />
+              </svg>
             </div>
             <div>
               <div>
                 <img
                   src="https://static.cmereye.com/imgs/2024/07/b7f5f3fb937515eb.png"
-                  alt="取出OK鏡，以生理鹽水清洗乾淨"
+                  alt="在鏡子前，輕輕拉起上下眼瞼，把隱形眼鏡放在眼睛上，過程中保持直視"
                 />
               </div>
-              <div>取出OK鏡，以生理鹽水清洗乾淨</div>
+              <div>
+                在鏡子前，輕輕拉起上下眼瞼，把隱形眼鏡放在眼睛上，過程中保持直視
+              </div>
+            </div>
+            <div class="svg-hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="31"
+                height="17"
+                viewBox="0 0 31 17"
+                fill="none"
+              >
+                <path
+                  d="M29 2L17.8608 14.5832C16.7174 15.8748 14.707 15.8912 13.5427 14.6184L2 2"
+                  stroke="#00A6CE"
+                  stroke-width="2.32368"
+                  stroke-linecap="round"
+                />
+              </svg>
             </div>
             <div>
               <div>
                 <img
                   src="https://static.cmereye.com/imgs/2024/07/5ffc8098ae6f6d34.png"
-                  alt="把OK鏡放在食指或手心上，滴數滴生理鹽水或人工淚液，濕潤鏡片凹面"
+                  alt="放到眼睛後，眼睛向下看，鬆開眼瞼， 稍微閉上眼睛，再保持正常眨眼， 確保鏡片已在角膜中央位置"
                 />
               </div>
               <div>
-                把OK鏡放在食指或手心上，滴數滴生理鹽水或人工淚液，濕潤鏡片凹面
+                放到眼睛後，眼睛向下看，鬆開眼瞼， 稍微閉上眼睛，再保持正常眨眼， 確保鏡片已在角膜中央位置
               </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/26226661b224d7c0.png"
-                  alt="在鏡子前，輕輕拉起上下眼瞼，把OK鏡放在眼睛上"
-                />
-              </div>
-              <div>在鏡子前，輕輕拉起上下眼瞼，把OK鏡放在眼睛上</div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/9d144aff112a7754.png"
-                  alt="放到眼睛後，眼睛向下看，鬆開眼瞼，稍微閉上眼睛，再保持正常眨眼，確保鏡片已在角膜中央位置"
-                />
-              </div>
-              <div>
-                放到眼睛後，眼睛向下看，鬆開眼瞼，稍微閉上眼睛，再保持正常眨眼，確保鏡片已在角膜中央位置
-              </div>
-            </div>
-            <div>
-              <div>
-                <img
-                  src="https://static.cmereye.com/imgs/2024/07/16b5fb3a5ccbb769.png"
-                  alt="再以人工淚液（不含防腐劑）濕潤雙眼"
-                />
-              </div>
-              <div>再以人工淚液（不含防腐劑）濕潤雙眼</div>
             </div>
           </div>
         </div>
@@ -243,6 +273,9 @@ const btnElement = ref({
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .svg-hidden {
+    display: none;
+  }
   .child-myopia-box {
     margin-bottom: 70px;
   }
@@ -344,6 +377,15 @@ const btnElement = ref({
     & > div:nth-child(3) {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      & > p:nth-child(1) {
+        width: 100vw;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 20px;
+        color: var(--Grey, #4d4d4d);
+        font-family: "Noto Sans CJK TC";
+      }
     }
   }
   .child-myopia-bg-blue {
@@ -495,6 +537,10 @@ const btnElement = ref({
   }
 }
 @media screen and (max-width: 767px) {
+  .svg-hidden {
+    padding-left: 30px;
+    display: block;
+  }
   .video-information {
     margin-bottom: 40px;
   }
@@ -742,6 +788,15 @@ const btnElement = ref({
     & > div:nth-child(3) {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      & > p:nth-child(1) {
+        width: 100vw;
+        text-align: center;
+        margin: 20px 0;
+        font-size: 10px;
+        color: var(--Grey, #4d4d4d);
+        font-family: "Noto Sans CJK TC";
+      }
       :deep(.slot) {
         & > div:nth-child(1) {
           border-radius: 20px;

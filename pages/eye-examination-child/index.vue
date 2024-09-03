@@ -79,7 +79,7 @@ const bannerImg = {
               <div>3-4歲</div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/a5f55db499f2502f.png"
+                  src="https://static.cmereye.com/imgs/2024/08/83d5f1f247f468c3.png"
                   alt="3-4歲"
                 />
               </div>
@@ -120,15 +120,15 @@ const bannerImg = {
         <PublicPageTitle :title="'兒童應多久檢查一次眼睛？'" />
         <div>
           <span
-            >我們亦建議兒童每年進行最少一次全面眼睛檢查。兒童入學後，無論在課室上</span
+            >建議兒童四歲時進行首次眼睛檢查，因為他們能理解並配合視力測試。家長應向</span
           >
           <span
-            >課，或在家網上學習，都可能不自覺地長時間近距離閱讀，造成近視度數急升。</span
+            >兒童介紹檢查過程，讓他們感到有趣且無需擔心。每年至少檢查一次眼睛，尤其</span
           >
           <span
-            >綜合眼睛檢查有助監測兒童的視力發展，及早發現眼睛毛病，讓視光師提供合適</span
+            >是入學後，因長時間近距離閱讀可能導致近視加劇。定期檢查有助於監測視力發</span
           >
-          <span>的矯正方案。</span>
+          <span>展，及早發現問題，提供適當矯正方案。</span>
         </div>
       </div>
       <div class="relatives">
@@ -149,6 +149,9 @@ const bannerImg = {
               <span>HKD $600</span>
             </div>
           </div>
+        </div>
+        <div class="relatives_tips">
+          *參加者需預約同一時間及地點進行驗眼服務，詳情請向我們的<span>客戶服務專員</span>查詢
         </div>
       </div>
       <div class="misight-serve-content">
@@ -1566,6 +1569,22 @@ const bannerImg = {
     margin: 0 auto;
     margin-top: 45px;
     max-width: 702px;
+
+    .relatives_tips {
+      margin: 30px 0;
+      color: var(--Brand-Color, #00a6ce);
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 22.5px; /* 150% */
+      letter-spacing: 1px;
+      span {
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+    }
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: "Noto Sans HK";
@@ -1686,6 +1705,11 @@ const bannerImg = {
           justify-content: center;
           align-items: center;
           margin-top: 2.5px;
+          border-radius: 20px;
+          img{
+          background: #FFF;
+
+          }
         }
       }
       & > div:nth-child(2) {
@@ -1729,7 +1753,7 @@ const bannerImg = {
       & > div:nth-child(2),
       & > div:nth-child(3) {
         background: #ffffffd9;
-        text-indent: -16px;
+        text-indent: -23px;
         padding-left: 36px;
         padding-right: 15px;
       }
@@ -1759,10 +1783,12 @@ const bannerImg = {
 
     & > div:nth-child(2) {
       background: #00a6ce;
+   
     }
 
     & > div:nth-child(3) {
       background: #63aa6d;
+ 
     }
 
     & > div:nth-child(4) {
@@ -1829,8 +1855,10 @@ const bannerImg = {
           font-style: normal;
           font-weight: 700;
           line-height: 24px;
+         
           & > span {
             position: relative;
+          
           }
           & > span::before {
             content: "";
@@ -1863,6 +1891,22 @@ const bannerImg = {
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 35px;
+
+    .relatives_tips {
+      margin: 15px 0;
+      color: var(--Brand-Color, #00a6ce);
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      letter-spacing: 1px;
+      span {
+        text-decoration-line: underline;
+        cursor: pointer;
+      }
+    }
     overflow: hidden;
     & > div:nth-child(1) {
       color: #00a6ce;
@@ -1993,6 +2037,7 @@ const bannerImg = {
 
           & > img {
             width: 100%;
+            background: #FFF;
           }
         }
       }
@@ -2000,7 +2045,7 @@ const bannerImg = {
         min-height: 110px;
         box-sizing: border-box;
         padding-top: 9px;
-        padding-left: 7px;
+        padding-left: 12px;
         padding-right: 5px;
         display: flex;
         flex-direction: column;
@@ -2011,11 +2056,12 @@ const bannerImg = {
         font-weight: 500;
         line-height: 18px; /* 138.462% */
         letter-spacing: 0.65px;
+        text-indent: -10px;
       }
       & > div:nth-child(3) {
         min-height: 160px;
         padding-top: 5.5px;
-        padding-left: 7px;
+        padding-left: 12px;
         padding-right: 5px;
         color: #60605f;
         font-family: "Noto Sans HK";
@@ -2026,6 +2072,8 @@ const bannerImg = {
         letter-spacing: 0.65px;
         display: flex;
         flex-direction: column;
+        text-indent: -10px;
+
       }
     }
     & > div:nth-child(2),

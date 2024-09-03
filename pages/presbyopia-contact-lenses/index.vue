@@ -34,6 +34,15 @@ onMounted(() => {
   isPc.value = widthState;
   widthNum.value = width;
 });
+
+
+const btnElement = ref({
+  title: "試戴多焦點隱形眼鏡",
+  svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
+  isExternalLink: true,
+  // isExternalLink 外链 true
+  link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+});
 </script>
 
 <template>
@@ -50,18 +59,7 @@ onMounted(() => {
       :insidePageTitle="'多焦點隱形眼鏡'"
     />
     <div class="presbyopia-box">
-      <div class="fake">
-        <PublicPageTitle :title="'Fake Text'" />
-        <div>
-          <span>
-            大約40歲開始，任何人都有機會患上老花。老花是因睫狀肌退化及晶體失去彈性，影
-          </span>
-          <span>
-            響眼睛對焦功能，引致看近事物時感到視線模糊，而看遠方景物即不受影響。
-          </span>
-        </div>
-      </div>
-      <div class="glasses-type">
+           <div class="glasses-type">
         <nuxt-link to="/soft-contact-lens">
           <span
             ><img src="../../assets/img/triangle-left.svg" alt="triangle"
@@ -81,6 +79,18 @@ onMounted(() => {
           /></span>
         </nuxt-link>
       </div>
+      <div class="fake">
+        <PublicPageTitle :title="'甚麼是老花？'" />
+        <div>
+          <span>
+            大約40歲開始，任何人都有機會患上老花。老花是因睫狀肌退化及晶體失去彈性，影
+          </span>
+          <span>
+            響眼睛對焦功能，引致看近事物時感到視線模糊，而看遠方景物即不受影響。
+          </span>
+        </div>
+      </div>
+ 
       <div class="why">
         <p v-if="isPc">
           <span>為何選用多焦點隱形眼鏡？</span>
@@ -949,6 +959,9 @@ onMounted(() => {
           >
           <span>整，才能達至理想的效果。</span>
         </div>
+        <div class="announcements-btn">
+          <BtnAnimation :btnElement="btnElement" />
+        </div>
       </div>
       <div class="glasses-service">
         <PublicPageTitle :title="'服務內容'" />
@@ -1299,6 +1312,11 @@ onMounted(() => {
   }
   .announcements {
     margin-top: 55px;
+    &-btn{
+       margin-top: 36px;
+      display: flex;
+      justify-content: center;
+    }
     & > div:nth-child(1) {
       padding: 0 315px 10px;
     }
@@ -1393,7 +1411,7 @@ onMounted(() => {
           background: #00a6ce;
           display: flex;
           justify-content: center;
-          align-items: center;
+          // align-items: center;
           width: 51px;
           height: 51px;
           letter-spacing: 1px;
@@ -1776,6 +1794,11 @@ onMounted(() => {
     margin-bottom: 55px;
   }
   .announcements {
+      &-btn{
+      display: flex;
+      margin-top: 15px;
+      justify-content: center;
+    }
     margin-top: 40px;
     & > div:nth-child(1) {
       box-sizing: border-box;
@@ -1816,11 +1839,12 @@ onMounted(() => {
           font-style: normal;
           font-weight: 700;
           line-height: 33.529px; /* 133.333% */
-          letter-spacing: 2.515px;
+          // letter-spacing: 2.515px;
           background: #00a6ce;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          text-align:center;
+          // display: flex;
+          // justify-content: center;
+          // align-items: center;
           width: 38px;
           height: 38px;
         }

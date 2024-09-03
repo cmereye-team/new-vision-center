@@ -34,3 +34,21 @@
   font-family: 'Inter-ExtraLight';
   src: url('../static/Inter-ExtraLight.ttf');
 }
+
+@font-face {
+  font-family: 'Noto Sans';
+  src: url('../static/Noto Sans.ttf');
+}
+
+
+@font-face {
+  font-family: 'ABeeZee';
+  src: url('../static/ABeeZee-Italic-3.ttf') format('truetype');
+
+}
+@font-face {
+  font-family: 'ABeeZee';
+  src: url('../static/ABeeZee-Regular-2.ttf') format('truetype');
+}
+
+

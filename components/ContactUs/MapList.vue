@@ -19,23 +19,7 @@ const choose = (num: number) => {
 };
 
 const portLandList = ref([
-  {
-    id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/c7c23405fb3f9d9b.png",
-    region: "西環",
-    name: "希瑪醫療旗下視光師驗眼中心",
-    googleMap: "https://maps.app.goo.gl/ZTANTUau8LLbTSVZ6",
-    whatsApps:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["西環卑路乍街6-6G號", "新城大樓地下7號舖", "(香港大學站C2出口)"],
-    businessHours: [
-      "星期一至星期日：",
-      "11:00 – 20:00(逢星期四",
-      "休息，公眾假期照常營業）",
-    ],
-    call: "+852 3892 5089",
-  },
-  {
+   {
     id: 2,
     img: "https://static.cmereye.com/imgs/2024/04/bf94f6316d886c48.png",
     region: "中環",
@@ -52,6 +36,23 @@ const portLandList = ref([
     ],
     call: "+852 3892 5089",
   },
+  {
+    id: 1,
+    img: "https://static.cmereye.com/imgs/2024/04/c7c23405fb3f9d9b.png",
+    region: "西環",
+    name: "希瑪醫療旗下視光師驗眼中心",
+    googleMap: "https://maps.app.goo.gl/ZTANTUau8LLbTSVZ6",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    address: ["西環卑路乍街6-6G號", "新城大樓地下7號舖", "(香港大學站C2出口)"],
+    businessHours: [
+      "星期一至星期日：",
+      "11:00 – 20:00(逢星期四",
+      "休息，公眾假期照常營業）",
+    ],
+    call: "+852 3892 5089",
+  },
+ 
   {
     id: 3,
     img: "https://static.cmereye.com/imgs/2024/04/c1230f61a75e9531.png",
@@ -228,9 +229,10 @@ onMounted(() => {
     }
   }
   .map-list-menu {
+    font-family: "Noto Sans HK";
     padding: 10px 80px;
     color: #00a6ce;
-    font-family: "Inter";
+
     font-size: 15px;
     font-style: normal;
     font-weight: 700;
@@ -275,9 +277,10 @@ onMounted(() => {
     }
   }
   .map-list-menu {
+    font-family: "Noto Sans HK";
     padding: 13px 36px;
     color: #00a6ce;
-    font-family: "Inter";
+  
     font-size: 20px;
     font-style: normal;
     font-weight: 700;

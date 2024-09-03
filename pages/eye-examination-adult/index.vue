@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/683dce2cd87bd6bf.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/c88934386018c7c0.png",
+  pc: "https://static.cmereye.com/imgs/2024/08/c6817a94927a9f78.jpg",
+  mobile: "https://static.cmereye.com/imgs/2024/08/9660b07b9deeda5c.jpg",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -2928,7 +2928,7 @@ const showAgeStage = (type: any) => {
               max-width: 380px;
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 13.5px;
+              font-size: 16px;
               font-style: normal;
               font-weight: 500;
               line-height: 18.75px; /* 138.889% */
@@ -3511,7 +3511,7 @@ const showAgeStage = (type: any) => {
               margin-top: 10px;
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 14px;
+              font-size: 15px;
               font-style: normal;
               font-weight: 500;
               line-height: 23px; /* 164.286% */

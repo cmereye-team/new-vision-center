@@ -356,7 +356,7 @@ const props = defineProps({
         margin-top: 10px;
         color: #60605f;
         font-family: Inter;
-        font-size: 15px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;

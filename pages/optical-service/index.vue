@@ -6,7 +6,7 @@ useHead(() => ({
       hid: "description",
       name: "description",
       content:
-        "透過希瑪視光中心提供的十九項視光服務，你可以享受個人化的視力檢查以及由註冊視光師主理的驗眼過程，全面照顧不同年齡人士的視力需要。我們提供屈光視力檢查、斜視／弱視檢查、色弱/色盲檢查、青光眼檢查、眼乾及淚水測試、視野檢查、眼軸檢查等主要視光服務, 讓你保持良好的視力和眼睛健康。我們亦會為客人提供驗配眼鏡、隱形眼鏡和近視控制方案的服務。立即了解更多服務詳情。",
+        "透過希瑪視光中心提供的十九項視光服務，你可以享受個人化的視力檢查以及由註冊視光師主理的驗眼過程，全面照顧不同年齡人士的視力需要。我們提供屈光視力檢查、斜視／弱視檢查、色弱/色盲檢查、青光眼檢查、眼乾及淚水測試、視野檢查、眼軸檢查等主要視光服務，讓你保持良好的視力和眼睛健康。我們亦會為客人提供驗配眼鏡、隱形眼鏡和近視控制方案的服務。立即了解更多服務詳情。",
     },
     {
       hid: "Keywords",
@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0820bdc6f6ea1c8f.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/a6ebf7f784038fed.png",
+  pc: "https://static.cmereye.com/imgs/2024/08/a77ea39669a22178.jpg",
+  mobile: "https://static.cmereye.com/imgs/2024/08/fef8b7c8cf8e4a01.jpg",
 };
 
 import getWindowSize from "@/utils/width";
@@ -138,12 +138,15 @@ const listDataDetail = [
     title: "驗配眼鏡",
     description: [
       "專業驗配各式眼镜",
+      "",
       "希瑪視光提供兒童、成人、長者的專業驗眼服務。由於每个人",
       "的視力及用眼情况不一，我們的視光師會考慮到客人的實際需",
       "要，在进行屈光度數檢查後，如有需要配戴眼鏡矯正視力，視",
       "光師亦會提供配戴不同類型眼鏡的專業意見。",
+      "",
       "應診者可以在希瑪視光選購眼鏡，配鏡包括:兒童控制近視眼",
       "鏡丶漸進鏡丶老花眼鏡丶老花隱形眼鏡、太陽眼鏡、隱形眼鏡等。",
+      "",
       "港幣$2000或以上的眼鏡驗配服務已包括1次綜合眼睛檢查。",
     ],
   },
@@ -168,9 +171,9 @@ const listDataDetail = [
       "眼角膜的厚薄、弧度、形狀等，可以反映眼睛的健康情況。在 ",
       "檢查眼角膜時，視光師會徹底評估應診者的角膜健康狀態，包 ",
       "括:以裂隙鎮檢查角膜有否出現水泡、穿孔、發炎及增生血管 ",
-      "等問題;以角膜底層細胞顯微鏡檢査應診者角膜底層細胞數 ",
+      "等問題;以角膜底層細胞顯微鏡檢査應診者角膜底層細胞數",
       "量。",
-      " ",
+      "",
       "角膜檢查所得結果常用於：評估角膜有否出現缺氧問題和是否 ",
       "錐形角膜；判斷是否適合角膜矯形術;或有否其他潛在眼睛疾 ",
       "病的風险，例如:青光眼。 ",
@@ -202,7 +205,7 @@ const listDataDetail = [
       "神經腫瘤), 屬於一項重要的眼睛檢查。",
       "",
       "進行視野檢查時，視光師會以電腦視野檢查分析儀器為應診者",
-      "測試，分析其視野是否在正常的範圉之内。",
+      "測試，分析其視野是否在正常的範圍之内。",
     ],
   },
   {
@@ -213,6 +216,7 @@ const listDataDetail = [
       "(是否有近視、遺視、散光及老花等屈光不正問題)",
       "",
       "客觀式屈光檢查",
+      "",
       "檢影法常用於客觀式屈光檢查。視光師利用檢影燈，把光照射",
       "到應診者的眼睛，觀察反射出来的光線的移動方向，配合不同",
       "鏡片，判斷出應診者的屈光度數。此檢查方法特別適合表達能",
@@ -220,10 +224,11 @@ const listDataDetail = [
       "影響。為提高準確性，視光師会再以主觀式屈光檢查，確定檢",
       "查结果。",
       "",
-      "主觀式屈光檢查",
+      "主觀式屈光檢查<br>",
       "視光師會把一系列的光學鎮片组合在綜合驗光儀上，透過應診",
       "者的主觀回答，找出應診者認為看得最清楚舒服的屈光度数。",
-      "視力檢查",
+      "",
+      "視力檢查<br>",
       "應診者根據視光師的指示，辨識視力表中不同大小的文字或圖",
       "案，讓視光師了解應診者的視覺敏銳度(知道有否弱視)。",
     ],
@@ -233,6 +238,7 @@ const listDataDetail = [
     title: "眼角膜地形圖分析",
     description: [
       "甚麼是角膜地形圖 ？",
+      "",
       "角膜地形(corneal topography)屬非侵入性的醫學成像技",
       "術，能夠準確地分析和紀錄整個角膜表面的形態、曲率和弧",
       "度，對診斷各種眼角膜病變十分重要。地形圖的顏色呈暖色",
@@ -245,7 +251,9 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/3449b9f6a1f351cd.png",
+    
+    
+    img: "https://static.cmereye.com/imgs/2024/06/296021be922a80ba.png",
     title: "視網膜掃描攝影（SLO）",
     description: [
       "視網膜掃描攝影SLO(scanning laser ophthalmoscopy)是",
@@ -270,10 +278,11 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/296021be922a80ba.png",
+    img: "https://static.cmereye.com/imgs/2024/06/3449b9f6a1f351cd.png",
     title: "眼球結構斷層掃描（OCT）",
     description: [
       "眼球3D影像",
+      "",
       "眼球結構斷層掃描OCT(Optical Coherence Tomography)",
       "是一種光學相干斷層掃描技術，以非入侵性、非接觸性的方式",
       "檢查眼睛。OCT技術所得的横切或縱切剖面3D影像解析度",
@@ -337,7 +346,7 @@ const listDataDetail = [
     & > a {
       display: flex;
       align-items: center;
-      background: #00a6ce;
+      background: #3333;
       box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
       padding: 7px 12px;
       color: #fff;
@@ -348,6 +357,9 @@ const listDataDetail = [
       font-weight: 400;
       line-height: normal;
       border-radius: 20px;
+      &:hover{
+         background: #00a6ce;
+      }
       & > span:nth-child(2) {
         margin: 0 6px;
       }
@@ -374,6 +386,9 @@ const listDataDetail = [
   }
   .product-list {
     position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     & > div:nth-child(1) {
       & > div {
         & > div:nth-child(1) {
@@ -415,7 +430,7 @@ const listDataDetail = [
     & > a {
       display: flex;
       align-items: center;
-      background: #00a6ce;
+      background: #3333;
       box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
       padding: 7px 10px;
       color: #fff;

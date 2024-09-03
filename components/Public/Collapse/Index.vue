@@ -34,10 +34,10 @@ const props = defineProps({
         <template #title>
           <span>{{ item.q }}</span>
         </template>
-        <div v-if="isPc">
+        <div v-if="isPc" class="letf">
           <span v-for="(el, index) in item.a" :key="index" v-html="el"></span>
         </div>
-        <div v-else>
+        <div v-else class="left">
           <span v-for="(el, index) in item.mAq" :key="index" v-html="el"></span>
         </div>
       </el-collapse-item>
@@ -167,7 +167,7 @@ const props = defineProps({
       font-style: normal;
       font-weight: 500;
       line-height: 22.5px; /* 150% */
-      text-transform: uppercase;
+      // text-transform: uppercase;
       position: relative;
       padding-left: 50px;
     }
@@ -314,7 +314,7 @@ const props = defineProps({
       font-style: normal;
       font-weight: 500;
       line-height: 23.181px; /* 165.577% */
-      text-transform: uppercase;
+      // text-transform: uppercase;
       position: relative;
       padding-left: 28px;
     }

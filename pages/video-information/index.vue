@@ -81,8 +81,9 @@ const bannerImg = {
     margin-top: 87px;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      // bottom: 30px;
+      top: 60%;
+      right: 10px;
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Inter";

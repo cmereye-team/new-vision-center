@@ -20,6 +20,22 @@ const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/04/5ae163616b5be08e.png",
   mobile: "https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png",
 };
+import { onMounted, onUnmounted } from "vue";
+import { useRouter } from "nuxt/app";
+
+const router = useRouter();
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
+onMounted(() => {
+  router.afterEach(scrollToTop);
+});
+
+onUnmounted(() => {
+  router.afterEach(() => {}); // 清除监听器
+});
 </script>
 
 <template>
@@ -77,7 +93,7 @@ const bannerImg = {
     min-height: 390px;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -73px;
     margin-top: 87px;
     span {
       position: absolute;

@@ -7,9 +7,11 @@ import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
+
   devServer: {
     port: 3015,
   },
+
   build: {
     transpile: ['vue-i18n']
   },
@@ -23,14 +25,31 @@ export default defineNuxtConfig({
       })
     ]
   },
+  buildModules: [
+    '@nuxtjs/google-fonts',
+  ],
+  googleFonts: {
+    families: {
+      // 指定要加载的字体家族及其变体
+      'Noto+Sans+HK': true,  // 示例：加载Roboto字体的300、400、500权重
+      'ABeeZee':true
+    },
+    download: true, // 将字体下载到本地，并且打包到项目里，防止用户访问不了google字体服务器
+    base64: false, // 不要使用 base64格式，不然首页下载文件会非常大
+    overwriting: true,
+    outputDir: 'assets/fonts'
+  },
+
   modules: [
     '@element-plus/nuxt',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
   ],
+
   i18n: {
     vuei18n: './plugins/i18n.ts'
   },
+
   head: {
     meta: [
       {
@@ -39,6 +58,7 @@ export default defineNuxtConfig({
       },
     ],
   },
+
   intlify: {
     localeDir: 'locales',
     vueI18n: {
@@ -47,5 +67,7 @@ export default defineNuxtConfig({
       availableLocales: ['hk', 'cn', 'en'],
     },
   },
-  elementPlus: { /** Options */ }
+
+  elementPlus: { /** Options */ },
+  compatibilityDate: '2024-08-16'
 })

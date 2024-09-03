@@ -1,6 +1,20 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "常見問題 - 希瑪眼科視光中心",
+  title: "成人常見眼睛問題｜常見眼睛問題｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "成人常見的眼疾問題包括白內障、青光眼、黃斑病變、飛蚊症及視網膜病變等。希瑪視光提供成人眼睛檢查套餐，由註冊視光師主理，詳細檢查你的眼睛狀況，排查任何潛在的眼睛問題。如有發現問題，我們也提供轉介至希瑪眼科專科醫生的服務，作出進一步評估及治療。立即了解更多有關成人眼疾的資訊。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "青光眼 乾眼 黃斑病變 白內障 眼疾 飛蚊症 視網膜病變 眼科醫生 眼科專科 眼科診所 眼專科醫生 青光眼症狀 飛蚊症成因 白內障成因 青光眼症狀前兆 青光眼成因 白內障症狀 黃斑點病變 飛蚊症初期 黃斑病 眼科門診 黃斑部病變 眼科視光師 註冊視光師 視光師 視光師驗眼 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+    },
+  ],
 }));
 const bannerImg = {
   pc: "https://static.cmereye.com/imgs/2024/07/683dce2cd87bd6bf.png",
@@ -63,7 +77,7 @@ onMounted(() => {
     />
     <div class="faq-box">
       <div class="cataract">
-        <div>成人常見眼睛問題</div>
+        <div></div>
         <div>
           <PublicPageTitle :title="'白內障'" />
           <div>
@@ -115,7 +129,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="maculopathy">
-        <PublicPageTitle :title="'白內障'" />
+        <PublicPageTitle :title="'黃斑病變'" />
         <div>
           <div>
             黃斑病變是指眼睛黃斑區出現病徵，導致視力下降、視物扭曲變形及中心視力變差。構成黃斑病變的主因是視網膜色素層及細胞退化，部分病人眼睛脈絡膜血管出現滲漏，嚴重破壞黃斑區的感光細胞，以致視力受損。老年黃斑退化分為乾性和濕性，乾性老年黃斑退化對視功能的損害相對較少。
@@ -143,7 +157,7 @@ onMounted(() => {
         </div>
       </div>
       <div class="muscae-volitantes">
-        <PublicPageTitle :title="'白內障'" />
+        <PublicPageTitle :title="'飛蚊症'" />
         <div>
           <div>
             <div>
@@ -221,7 +235,7 @@ onMounted(() => {
             <span>醫生進一步評估及治療</span>
           </div>
           <div class="bg-text-btn">
-            <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
+            <a href="https://hkcmereye.com" target="_blank">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -1086,10 +1100,16 @@ onMounted(() => {
         margin-bottom: 10px;
         & > span:nth-child(1) {
           display: block;
+          font-size: 14px;
+          
         }
         & > span {
           display: inline;
+          font-size: 14px;
         }
+        // margin-bottom: 30px;
+        // padding: 50px 0;
+      
       }
       :deep(.bg-text-btn) {
         & > a {

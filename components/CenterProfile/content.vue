@@ -32,22 +32,22 @@ const handlesSliPrev = () => {
 const discountsList = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/666c1d99c27658bf.png",
+    img: "https://static.cmereye.com/imgs/2024/08/dc8864b666279003.webp",
     content:'门店',
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/5a960c3598776b5f.png",
+    img: "https://static.cmereye.com/imgs/2024/08/a56d768353c520f8.webp",
     content:'仪器',
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/04/dc0b7696b2d87ed0.png",
+    img: "https://static.cmereye.com/imgs/2024/08/23614bae14a8d0c6.webp",
     content:'展示镜架',
   },
   {
     id: 4,
-    img: "https://static.cmereye.com/imgs/2024/04/a8ff8092442374c1.png",
+    img: "https://static.cmereye.com/imgs/2024/08/4ef10edef0edbaba.webp",
     content:'仪器',
   },
 ]);

@@ -11,14 +11,13 @@
             EXPERT」認證的視光中心，希瑪視光為您提供卓越的視覺解決方案和個人化的眼鏡配鏡服務。我們的專業視光團隊將為您帶來一絲不苟的驗眼流程。</span
           >
         </div>
-        <img
-          class="zveImg"
-          src="https://static.cmereye.com/imgs/2024/08/98a021b3329ea1b1.png"
-          alt=""
-        />
       </template>
     </PublicBanner>
-
+    <img
+      class="zveImg"
+      src="https://static.cmereye.com/imgs/2024/08/98a021b3329ea1b1.png"
+      alt=""
+    />
     <div class="contain">
       <div class="containLine">
         <div class="linear">
@@ -43,7 +42,7 @@
         <div class="selling-point-item">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/a6a5648591f29444.png"
+              src="https://static.cmereye.com/imgs/2024/08/a3cda253cc444fe1.jpg"
               alt="ZEISS Vision Expert"
             />
           </div>
@@ -65,7 +64,7 @@
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/07/a05ce0b8eeee35e3.jpg"
+              src="https://static.cmereye.com/imgs/2024/08/78d28aecc37d2b74.jpg"
               alt="ZEISS Vision Expert"
             />
           </div>
@@ -73,7 +72,7 @@
         <div class="selling-point-item">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/07/378331bad2063dff.jpg"
+              src="https://static.cmereye.com/imgs/2024/08/b723ae16a031ce22.jpg"
               alt="ZEISS Vision Expert"
             />
           </div>
@@ -460,7 +459,8 @@
           ><p class="whatapps-btn-series-two-p">
             <span>想了解更多蔡司鏡片系列?</span>
             <span
-              ><svg
+              >
+              <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="27"
                 height="40"
@@ -819,21 +819,21 @@ const listDiscounts = [
   {
     id: 1,
     title: `精密測量眼睛度數`,
-    img: "https://static.cmereye.com/imgs/2024/08/a6a5648591f29444.png",
+    img: "https://static.cmereye.com/imgs/2024/08/4a688fa160e96203.jpg",
     svg: "https://static.cmereye.com/imgs/2024/08/1dede03366c21b1d.png",
     content: `每個人的眼睛不只單一度數，角膜和瞳孔都是獨一無二, 像指紋一樣獨特。眼睛受高階像差影響會導致度數有差別，因此進行光學指紋測量能全面分析你的視力，找到最真實的度數並優化鏡片度數。`,
   },
   {
     id: 2,
     title: `精準的鏡框中心定位`,
-    img: "https://static.cmereye.com/imgs/2024/07/a05ce0b8eeee35e3.jpg",
+    img: "https://static.cmereye.com/imgs/2024/08/7c34641f63a81653.jpg",
     svg: "https://static.cmereye.com/imgs/2024/08/cb3cecd90c579e62.png",
     content: `精準的鏡框中心定位利用全新儀器VISUFIT 1000精密測量眼睛和眼鏡之間的所有角度，能確定鏡片在鏡框內的確切位置。為客人度身訂造專屬的鏡框，提高配戴舒適度。`,
   },
   {
     id: 3,
     title: `客製化個人鏡片`,
-    img: "https://static.cmereye.com/imgs/2024/08/aba80fd55fdab8d9.jpg",
+    img: "https://static.cmereye.com/imgs/2024/08/fa7584e4f1659ada.jpg",
     svg: "https://static.cmereye.com/imgs/2024/08/0587c601a83a42f8.png",
     content: `利用i.Technology技術得出獨一無二的鏡片數據，根據你的用眼習慣及視覺需求等定制出適合你的鏡片，令你擁有最佳的視覺品質。 `,
   },
@@ -877,6 +877,7 @@ const handleIntersection = (entries: any, observer: any) => {
   transition: transform 0.3s ease-out;
   transform: rotateY(45deg);
 }
+
 @media screen and (min-width: 768px) {
   //轮播图
 
@@ -1136,37 +1137,40 @@ const handleIntersection = (entries: any, observer: any) => {
   .zveTitle {
     h2 {
       position: relative;
-      left: -75%;
+      left: -60%;
       color: #fff;
       font-family: "Noto Sans";
-      font-size: 2.8125rem;
+      font-size: calc(1.5rem + 1vw);
       font-style: normal;
-      font-weight: 700;
+      font-weight: 800;
       line-height: normal;
+      letter-spacing: 4px;
     }
     span {
+      margin-top: 20px;
       position: relative;
-      left: -75%;
+      left: -60%;
       display: block;
-      width: 30.75rem;
+      width: clamp(36.75rem, 4vw, 36rem);
       flex-shrink: 0;
       color: #fff;
-      text-align: justify;
+      // text-align: justify;
       font-family: "Noto Sans";
-      font-size: 1rem;
+      font-size: calc(0.5rem + 1vw);
+
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       line-height: 3.125rem; /* 200% */
-      letter-spacing: 0.3125rem;
+      letter-spacing: .375rem;
     }
   }
 
   .zveImg {
-    width: 3.125rem;
-    height: 3.125rem;
+    width: 4.375rem;
+    height: 4.375rem;
     position: absolute;
-    top: -7.8125rem;
-    right: -115%;
+    top: 70px;
+    right: 20px;
   }
 
   // 服务特色部分
@@ -1474,7 +1478,7 @@ const handleIntersection = (entries: any, observer: any) => {
     width: 3.125rem;
     height: 3.125rem;
     position: absolute;
-    top: 13%;
+    top: 90px;
     right: 0.625rem;
   }
 
@@ -1490,6 +1494,48 @@ const handleIntersection = (entries: any, observer: any) => {
     padding: 0 24px;
   }
 }
+
+@media screen and (min-width: 2000px) {
+  .zveTitle {
+    h2 {
+      position: relative;
+      left: -60%;
+      color: #fff;
+      font-family: "Noto Sans";
+      font-size:calc(3rem + 1vw);
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      letter-spacing: 8px;
+    }
+    span {
+      margin-top: 40px;
+      position: relative;
+      left: -60%;
+      display: block;
+      max-width: 905px !important;
+      width: 100%;
+      flex-shrink: 0;
+      color: #fff;
+      // text-align: justify;
+      font-family: "Noto Sans";
+      font-size: calc(0.7rem + 1vw);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5.125rem;
+      letter-spacing:.4rem;
+    }
+  }
+
+  .zveImg {
+ width: 8.4375rem;
+        height: 8.4375rem;
+        position: absolute;
+        top: 100px;
+        right: 80px;
+  }
+}
+
 
 // i2个人
 a:hover::before {
@@ -1586,7 +1632,7 @@ a:hover::before {
 
 .individuation {
   width: 100vw;
-  background: url(https://static.cmereye.com/imgs/2024/07/b659ac2af9b17ed0.jpg)
+  background: url(https://static.cmereye.com/imgs/2024/08/6566c7476d6d4dda.jpg)
     no-repeat;
   background-size: 100% 100%;
   box-sizing: border-box;
@@ -1660,7 +1706,7 @@ a:hover::before {
 @media screen and (max-width: 768px) {
   .individuation {
     width: 100%;
-    background: url("https://static.cmereye.com/imgs/2024/07/837cac10272a2020.png")
+    background: url(https://static.cmereye.com/imgs/2024/08/4908d57817c05d9c.jpg)
       no-repeat;
     background-position: center;
     padding: 0 40px 25px;
@@ -2082,6 +2128,7 @@ p {
 <style>
 body {
   overflow-x: hidden; /* 禁止水平滚动 */
+  overflow-y:auto;
 }
 
 .contain-bg {
