@@ -560,11 +560,11 @@ const handleMouseleave = () => {
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: -46%;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
       background: #fff;
-      top: -60%;
+      right: -82.2%;
+      top: -68%;
       border-radius: 5px;
       & > div {
         & > a {
@@ -1007,11 +1007,11 @@ const handleMouseleave = () => {
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: -46%;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
       background: #fff;
-      top: -60%;
+      right: -82.2%;
+      top: -68%;
       border-radius: 5px;
       & > div {
         & > a {
