@@ -154,8 +154,8 @@ const props = defineProps({
   }
 
   :deep(.el-collapse-item__content) {
-    padding-left: 45px;
-    padding: 25px;
+    padding-left: 11.538vw;
+    padding: 6.41025vw;
     & > div {
       display: flex;
       flex-direction: column;
@@ -163,13 +163,13 @@ const props = defineProps({
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 15px;
+      font-size: 3.846vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 22.5px; /* 150% */
+      line-height: 5.76vw; /* 150% */
       // text-transform: uppercase;
       position: relative;
-      padding-left: 50px;
+      padding-left: 10.2564vw;
     }
     & > div::before {
       content: "A";

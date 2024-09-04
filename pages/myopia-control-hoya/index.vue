@@ -151,7 +151,7 @@ const btnElement = ref({
               <span>配戴方法與一般眼鏡無異。</span>
               <br />
               <span class="topMargin">臨床實驗證實，配戴MiYOSMART近視控</span
-              ><span>制鏡片的兒童：</span>
+              ><span class="topMargin topMargin2">制鏡片的兒童：</span>
             </div>
           </div>
           <div>
@@ -1646,10 +1646,10 @@ const btnElement = ref({
     margin: 32px auto 65px;
     background: url(https://static.cmereye.com/imgs/2024/05/d8b7024a32df53ec.jpg)
       no-repeat;
-    background-size: 100% 100%;
+    background-size: auto;
     border-radius: 20px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
-    height: 512px;
+    height: 510px;
     box-sizing: border-box;
     padding: 20px 40px 35px;
     display: flex;
@@ -1930,7 +1930,7 @@ const btnElement = ref({
           & > span:nth-child(3),
           & > span:nth-child(4) {
             position: relative;
-            // left: -30px;
+            left: -30px;
           }
         }
         & > div:nth-child(1)::before {
@@ -2808,7 +2808,14 @@ const btnElement = ref({
         }
         .topMargin {
           display: block;
+          position: relative;
+          left: -25px;
+        }
+        .topMargin{
           margin-top: 10px;
+        }
+        .topMargin2{
+          margin-top: 0;
         }
       }
       & > div:nth-child(3) {

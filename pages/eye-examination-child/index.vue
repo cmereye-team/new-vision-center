@@ -1706,9 +1706,8 @@ const bannerImg = {
           align-items: center;
           margin-top: 2.5px;
           border-radius: 20px;
-          img{
-          background: #FFF;
-
+          img {
+            background: #fff;
           }
         }
       }
@@ -1783,12 +1782,10 @@ const bannerImg = {
 
     & > div:nth-child(2) {
       background: #00a6ce;
-   
     }
 
     & > div:nth-child(3) {
       background: #63aa6d;
- 
     }
 
     & > div:nth-child(4) {
@@ -1812,23 +1809,20 @@ const bannerImg = {
 }
 @media screen and (max-width: 767px) {
   .child-box {
-    padding: 18px 23px 0;
+    padding: 4.615vw 5.897vw 0;
   }
   .comprehensive {
-    margin: 40px auto 45px;
+    margin: 10.256vw auto 11.538vw;
     & > div:nth-child(1) {
-      margin-bottom: 20px;
+      margin-bottom: 5.128vw;
       background: url("https://static.cmereye.com/imgs/2024/05/d53175598041a278.jpg")
         no-repeat;
       background-size: 100% 100%;
-      height: 321px;
+      height: 82.05vw;
       display: flex;
       justify-content: space-between;
       box-sizing: border-box;
-      padding-top: 47px;
-      padding-right: 15px;
-      padding-bottom: 30px;
-      padding-left: 22px;
+      padding: 12.05vw 3.846vw 7.69vw 5.64vw;
       & > div {
         flex: 1;
       }
@@ -1836,7 +1830,7 @@ const bannerImg = {
         & > div:nth-child(1) {
           color: #fff;
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 4.615vw;
           font-style: normal;
           font-weight: 700;
           line-height: 20px; /* 111.111% */
@@ -1851,14 +1845,12 @@ const bannerImg = {
           flex-direction: column;
           color: var(--White, #fff);
           font-family: "Noto Sans CJK TC";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 24px;
-         
+          line-height: 6.15vw;
           & > span {
             position: relative;
-          
           }
           & > span::before {
             content: "";
@@ -1912,24 +1904,24 @@ const bannerImg = {
       color: #00a6ce;
       text-align: justify;
       font-family: "Noto Sans HK";
-      font-size: 24px;
+      font-size: 6.15vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 40.107px; /* 167.112% */
-      letter-spacing: 1.2px;
+      line-height: 10.25vw; /* 167.112% */
+      letter-spacing: 0.3vw;
       text-align: center;
-      margin-bottom: 12px;
+      margin-bottom: 3.07vw;
     }
     & > div:nth-child(2) {
       background: url(https://static.cmereye.com/imgs/2024/07/976f70028a7b5e8a.png)
         no-repeat;
       background-size: 100% 100%;
-      height: 340px;
+      height: 87.179vw;
       display: flex;
       box-sizing: border-box;
-      padding-top: 75.5px;
+      padding-top: 19.358vw;
       padding-right: 0;
-      padding-bottom: 75px;
+      padding-bottom: 19.23vw;
       & > div {
         display: none;
         flex: 1;
@@ -1945,44 +1937,44 @@ const bannerImg = {
           flex-direction: column;
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 20px;
+          font-size: 5.128vw;
           font-style: normal;
           font-weight: 700;
           line-height: 1; /* 73.291% */
           text-transform: uppercase;
           & > span:nth-child(2) {
             position: relative;
-            left: -15px;
+            left: -3.846vw;
           }
-          margin-bottom: 17.5px;
+          margin-bottom: 4.487vw;
           position: relative;
-          right: -24px;
+          right: -6.1538vw;
           text-wrap: nowrap;
         }
         & > div:nth-child(2) {
-          padding-left: 24px;
-          max-width: 164px;
+          padding-left: 6.1538vw;
+          max-width: 42.05vw;
           color: #60605f;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 20px; /* 142.857% */
+          line-height: 5.128vw; /* 142.857% */
           text-transform: uppercase;
           & > span {
             display: inline;
           }
-          margin-bottom: 20px;
+          margin-bottom: 5.128vw;
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
           font-family: "Inter";
-          font-size: 27px;
+          font-size: 6.923vw;
           font-style: normal;
           font-weight: 600;
-          line-height: 22.5px; /* 83.333% */
+          line-height: 5.769vw; /* 83.333% */
           text-transform: uppercase;
-          padding-left: 42px;
+          padding-left: 10.769vw;
         }
       }
     }
@@ -1993,38 +1985,35 @@ const bannerImg = {
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.589vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23.007px; /* 164.334% */
+      line-height: 5.89vw; /* 164.334% */
       letter-spacing: -0.07px;
-      margin-top: 15px;
+      margin-top: 3.846vw;
     }
   }
   .stage-table {
-    margin-top: 20px;
-    margin-bottom: 30px;
+    margin-top: 5.128vw;
+    margin-bottom: 7.69vw;
     display: flex;
     & > div {
       display: flex;
       flex-direction: column;
       border-right: 2px #fff solid;
-      & > div {
-        border-bottom: 2px solid #fff;
-      }
       & > div:nth-child(1) {
-        min-height: 115.58px;
+        min-height: 29.615vw;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         & > div:nth-child(1) {
-          min-height: 26.33px;
+          min-height: 6.743vw;
           color: var(--White, #fff);
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 13.784px; /* 98.459% */
+          line-height: 3.5128vw; /* 98.459% */
           letter-spacing: 0.7px;
           display: flex;
           justify-content: center;
@@ -2037,75 +2026,84 @@ const bannerImg = {
 
           & > img {
             width: 100%;
-            background: #FFF;
+            background: #fff;
           }
         }
       }
       & > div:nth-child(2) {
-        min-height: 110px;
+        min-height: 28.2vw;
         box-sizing: border-box;
-        padding-top: 9px;
-        padding-left: 12px;
-        padding-right: 5px;
+        padding-top: 2.3vw;
+        padding-left: 3.076vw;
+        padding-right: 1.28vw;
         display: flex;
         flex-direction: column;
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 13px;
+        font-size: 3.33vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 18px; /* 138.462% */
+        line-height: 4.615vw; /* 138.462% */
         letter-spacing: 0.65px;
-        text-indent: -10px;
+        text-indent: -2.5644vw;
       }
       & > div:nth-child(3) {
-        min-height: 160px;
+        min-height: 41.025vw;
         padding-top: 5.5px;
-        padding-left: 12px;
-        padding-right: 5px;
+        padding-left: 3.076vw;
+        padding-right: 1.28vw;
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 13px;
+        font-size: 3.33vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 18px; /* 138.462% */
+        line-height: 4.615vw; /* 138.462% */
         letter-spacing: 0.65px;
         display: flex;
         flex-direction: column;
         text-indent: -10px;
-
       }
     }
     & > div:nth-child(2),
     & > div:nth-child(3),
     & > div:nth-child(4) {
-      width: calc((100% - 65px) / 3);
-      max-width: calc((100% - 65px) / 3);
+      width: calc((100% - 16.65vw) / 3);
+      max-width: calc((100% - 16.65vw) / 3);
       border-radius: 15px;
+      & > div:nth-child(1) {
+        border-bottom: 2px solid transparent;
+      }
       & > div:nth-child(2),
       & > div:nth-child(3) {
         background: #ffffffd9;
+        border-bottom: 2px solid #fff;
       }
     }
     & > div:nth-child(1) {
-      min-width: calc(100% - (3 * 90px));
-      max-width: calc(100% - (3 * 90px));
+      min-width: calc(100% - (3 * 23.07vw));
+      max-width: calc(100% - (3 * 23.07vw));
       background: #00517e;
       border-radius: 15px;
+      & > div:nth-child(1),
+      & > div:nth-child(2),
+      & > div:nth-child(3) {
+        border-bottom: 2px solid #fff;
+      }
       & > div {
         color: #fff;
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 16px;
+        font-size: 4.1025vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 20px; /* 125% */
+        line-height: 5.128vw; /* 125% */
         letter-spacing: 1.2px;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-left: 3.846vw;
+        padding-right: 3.846vw;
+        text-indent: 0;
       }
     }
 
@@ -2128,11 +2126,11 @@ const bannerImg = {
       margin-top: 25px;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 14px 12px;
+      gap: 3.589vw 3.076vw;
       & > div {
         & > div:nth-child(1) {
-          width: 104.731px;
-          height: 105px;
+          width: 26.923vw;
+          height: 26.923vw;
           background: #e4faff;
           border-radius: 15px;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -2205,11 +2203,11 @@ const bannerImg = {
     }
     & > div:nth-child(3) {
       margin-top: 20px;
-      padding: 0 26px;
+      padding: 0 6.665vw;
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.589vw;
       font-style: normal;
       font-weight: 700;
       line-height: 20px; /* 142.857% */

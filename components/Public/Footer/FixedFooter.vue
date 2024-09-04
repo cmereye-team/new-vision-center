@@ -3,7 +3,10 @@
 
 <template>
   <div class="fixed-footer">
-    <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
+    <a
+      href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+      target="_blank"
+    >
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +81,7 @@
 }
 @media screen and (max-width: 767px) {
   .fixed-footer {
-    padding: 10px 20px;
+    padding: 2.564vw 5.128vw;
     display: flex;
     justify-content: space-between;
     position: relative;
@@ -86,17 +89,18 @@
       display: flex;
       align-items: center;
       & > div:nth-child(1) {
-        margin-right: 10px;
+        margin-right: 2.564vw;
         display: flex;
         align-items: center;
         justify-content: center;
+        width: 7.18vw;
+        height: 7.435vw;
       }
       & > div:nth-child(2) {
         & > span {
           color: #7c7772;
-
           font-family: "Inter";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
@@ -107,13 +111,13 @@
       position: absolute;
       left: 50%;
       transform: translateX(-50%);
-      top: -25px;
+      top: -6.41vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 100px;
-      height: 100px;
+      width: 25.64vw;
+      height: 25.64vw;
       border-radius: 50%;
       background: #fff;
       box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.25);
@@ -121,11 +125,19 @@
         color: #6b6b6b;
         text-align: center;
         font-family: "Inter";
-        font-size: 12.376px;
+        font-size: 3.2vw;
         font-style: normal;
         font-weight: 400;
         line-height: 279%; /* 34.53px */
-        letter-spacing: 3.094px;
+        letter-spacing: 0.8vw;
+      }
+      &>div:nth-child(1) {
+        width: 8.718vw;
+        height: 8.718vw;
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
       }
     }
   }

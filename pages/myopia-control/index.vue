@@ -71,7 +71,6 @@ const studentNum = useTransition(studentNumSource, {
 studentNumSource.value = 95;
 
 import getWindowSize from "@/utils/width";
-import { linkEmits } from "element-plus";
 const isPc = ref(true);
 
 onMounted(() => {

@@ -255,6 +255,10 @@ const handleIcon = (str: any, idx: any) => {
     JSON.stringify(witness.value.section1)
   );
 };
+
+const openVideo = (link: string) => {
+  window.open(link, "_blank");
+};
 </script>
 
 <template>
@@ -447,11 +451,10 @@ const handleIcon = (str: any, idx: any) => {
             :key="index"
             class="witnessSwiper-slide"
           >
-            <a
-              target="_blank"
+            <div
+              @click.stop="openVideo(item.link)"
               class="content"
               :class="{ hot: item.isHot }"
-              :href="item.link"
             >
               <div class="image">
                 <img :src="item.img" :alt="item.name" />
@@ -525,7 +528,7 @@ const handleIcon = (str: any, idx: any) => {
                 </div>
                 <div class="svgIcon">
                   <svg
-                    @click="handleIcon('isNew', index)"
+                    @click.stop="handleIcon('isNew', index)"
                     xmlns="http://www.w3.org/2000/svg"
                     width="25"
                     height="27"
@@ -580,7 +583,7 @@ const handleIcon = (str: any, idx: any) => {
                     </defs>
                   </svg>
                   <svg
-                    @click="handleIcon('isLike', index)"
+                    @click.stop="handleIcon('isLike', index)"
                     v-if="!item.isLike"
                     xmlns="http://www.w3.org/2000/svg"
                     width="24"
@@ -637,7 +640,7 @@ const handleIcon = (str: any, idx: any) => {
                   </svg>
                   <svg
                     v-else
-                    @click="handleIcon('isLike', index)"
+                    @click.stop="handleIcon('isLike', index)"
                     width="28"
                     height="27"
                     viewBox="0 0 28 27"
@@ -698,7 +701,7 @@ const handleIcon = (str: any, idx: any) => {
                   </svg>
                 </div>
               </div>
-            </a>
+            </div>
           </swiper-slide>
         </swiper>
       </section>
@@ -833,7 +836,7 @@ const handleIcon = (str: any, idx: any) => {
                 font-size: 13.5px;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 18px; /* 133.333% */
+                line-height: 130%; /* 133.333% */
                 text-transform: uppercase;
               }
             }
@@ -855,7 +858,7 @@ const handleIcon = (str: any, idx: any) => {
                 font-size: 13.5px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 18px;
+                line-height: 130%;
                 text-transform: uppercase;
                 span {
                   font-size: 25.5px;
@@ -967,7 +970,7 @@ const handleIcon = (str: any, idx: any) => {
         max-width: 218px;
         border-radius: 15px;
         background: #fff;
-        padding: 20px 16px;
+        padding: 20px 20px;
         box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
         .image {
           width: 100%;
@@ -1001,7 +1004,7 @@ const handleIcon = (str: any, idx: any) => {
             font-size: 8.462px;
             font-style: normal;
             font-weight: 700;
-            line-height: 21.016px;
+            line-height: 21.04.1025vw;
             span {
               font-size: 18.914px;
             }
@@ -1098,6 +1101,7 @@ const handleIcon = (str: any, idx: any) => {
       &-slide {
         padding: 20px 0 0 0;
         .content {
+          cursor: pointer;
           padding: 20px 15px 18px 8px;
           background: #fff;
           border-radius: 15px;
@@ -1174,6 +1178,10 @@ const handleIcon = (str: any, idx: any) => {
             .svgIcon {
               width: 20px;
               margin-left: 20px;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              gap: 5px 0;
               svg {
                 cursor: pointer;
               }
@@ -1295,43 +1303,43 @@ const handleIcon = (str: any, idx: any) => {
 @media screen and (max-width: 768px) {
   .miyosmart {
     &-banner {
-      margin-top: 87px;
+      margin-top: 22.307vw;
     }
   }
   .services {
-    padding: 0 30px;
+    padding: 0 7.692vw;
     box-sizing: border-box;
-    margin: 24px auto 0;
+    margin: 6.1538vw auto 0;
     &-t {
       .title {
-        font-size: 24px;
-        line-height: 30px;
+        font-size: 6.1538vw;
+        line-height: 7.692vw;
       }
       .btn {
         display: none;
       }
     }
     &-b {
-      margin-top: 16px;
-      gap: 8px;
+      margin-top: 4.1025vw;
+      gap: 2.05vw;
       .list-in {
         flex-direction: column;
-        padding: 9px;
-        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.05);
-        border-radius: 15px;
+        padding: 2.307vw;
+        box-shadow: 0 0 2.564vw 0 rgba(0, 0, 0, 0.05);
+        border-radius: 3.846vw;
         .image {
           width: 100%;
           margin-right: 0;
           img {
-            border-radius: 10px;
+            border-radius: 2.56vw;
           }
         }
         .context {
           &-t {
             display: inline-block;
             h3 {
-              font-size: 14px;
-              line-height: 16px;
+              font-size: 3.589vw;
+              line-height: 4.1025vw;
               display: block;
             }
           }
@@ -1339,34 +1347,34 @@ const handleIcon = (str: any, idx: any) => {
             &-l {
               .context-text {
                 p {
-                  font-size: 12px;
-                  line-height: 24px;
+                  font-size: 3.07vw;
+                  line-height: 6.1538vw;
                 }
               }
               .context-context {
                 p {
-                  font-size: 16px;
-                  line-height: 24px;
+                  font-size: 4.1025vw;
+                  line-height: 6.1538vw;
                 }
               }
               .context-price {
                 p {
-                  font-size: 18px;
-                  line-height: 24px;
+                  font-size: 4.615vw;
+                  line-height: 6.1538vw;
                   span {
-                    font-size: 18px;
-                    line-height: 24px;
+                    font-size: 4.615vw;
+                    line-height: 6.1538vw;
                   }
                 }
               }
             }
             &-r {
-              width: 19px;
-              height: 19px;
+              width: 4.7818vw;
+              height: 4.7818vw;
               margin-right: 0;
               span {
                 svg {
-                  width: 5px;
+                  width: 1.28vw;
                 }
               }
               animation: breathe 2s ease-in-out infinite;
@@ -1387,67 +1395,67 @@ const handleIcon = (str: any, idx: any) => {
     }
   }
   .newDiscounts {
-    margin-top: 43px;
-    padding: 0 20px 31px;
+    margin-top: 11.025vw;
+    padding: 0 5.128vw 7.948vw;
     box-sizing: border-box;
     &-in {
       &-t {
         & > div {
           & > span {
-            font-size: 24px;
-            line-height: 30px;
+            font-size: 6.1538vw;
+            line-height: 7.692vw;
           }
           img {
-            width: 66px;
+            width: 16.923vw;
           }
           &:nth-of-type(1) {
-            margin-left: -10px;
+            margin-left: -2.564vw;
           }
           &:nth-of-type(2) {
-            margin-top: 20px;
+            margin-top: 5.128vw;
           }
           &:nth-of-type(3) {
-            margin-top: 30px;
-            margin-left: -5px;
+            margin-top: 7.692vw;
+            margin-left: -1.28vw;
           }
         }
       }
       &-b {
-        margin-top: 5px;
+        margin-top: 1.28vw;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
+        gap: 5.128vw;
         .list-in {
-          border-radius: 11px;
-          padding: 12px;
-          box-shadow: 0 0 5px 0px rgba(0, 0, 0, 0.1);
+          border-radius: 2.82vw;
+          padding: 3.076vw;
+          box-shadow: 0 0 1.28vw 0px rgba(0, 0, 0, 0.1);
           h3 {
-            font-size: 14px;
+            font-size: 3.589vw;
             font-style: normal;
             font-weight: 500;
-            line-height: 14.01px; /* 100.069% */
+            line-height: 3.589vw; /* 100.069% */
             letter-spacing: 0.7px;
             -webkit-line-clamp: 3;
-            margin-top: 5px;
+            margin-top: 1.28vw;
           }
           .context {
-            margin-top: 6px;
+            margin-top: 1.538vw;
             align-items: center;
             &-l {
-              font-size: 12px;
-              line-height: 14px;
+              font-size: 3.0769vw;
+              line-height: 3.589vw;
               white-space: pre-wrap;
               span {
-                font-size: 16px;
+                font-size: 4.1025vw;
               }
             }
             &-r {
-              padding: 8px;
+              padding: 2.05vw;
               span {
-                font-size: 8px;
+                font-size: 2.05vw;
               }
               svg {
-                width: 9px;
-                height: 9px;
+                width: 2.307vw;
+                height: 2.307vw;
               }
             }
           }
@@ -1456,12 +1464,12 @@ const handleIcon = (str: any, idx: any) => {
     }
   }
   .witness {
-    padding: 0 25px;
+    padding: 0 6.4102vw;
     box-sizing: border-box;
-    margin: 18px auto 32px;
+    margin: 4.615vw auto 8.2vw;
     overflow: hidden;
     &-t {
-      font-size: 24px;
+      font-size: 6.1538vw;
       line-height: 1.6;
     }
     .section1 {
@@ -1469,13 +1477,13 @@ const handleIcon = (str: any, idx: any) => {
       max-width: 100%;
       margin-top: 0;
       .witnessSwiper {
-        padding: 10px 0;
+        padding: 2.56vw 0;
         overflow: visible;
         :deep(.swiper-scrollbar) {
-          height: 3px;
+          height: 0.76vw;
           background: rgba(217, 217, 217, 0.5);
           border-radius: 2px;
-          margin-top: 30px;
+          margin-top: 7.692vw;
           position: relative;
           &::after {
             content: "";
@@ -1483,40 +1491,40 @@ const handleIcon = (str: any, idx: any) => {
             left: 50%;
             top: 50%;
             transform: translate(-50%, -50%);
-            width: 63px;
-            height: 40px;
+            width: 16.15vw;
+            height: 10.25vw;
             background: url(https://static.cmereye.com/imgs/2024/05/2fe41fe5fcf9b000.png)
               no-repeat;
             background-size: 100% 100%;
             animation: breathe 2s ease-in-out infinite;
           }
           .swiper-scrollbar-drag {
-            height: 3px;
+            height: 0.76vw;
             background: #5bc5de;
             border-radius: 2px;
           }
         }
         &-slide {
-          padding: 10px 0;
+          padding: 2.564vw 0;
           .content {
-            padding: 8px;
-            border-radius: 10px;
-            height: 230px;
-            box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.2);
+            padding: 2.05vw;
+            border-radius: 2.564vw;
+            height: 58.975vw;
+            box-shadow: 0 0 1.025vw 0 rgba(0, 0, 0, 0.2);
             .image {
               img {
-                border-radius: 8px;
+                border-radius: 2.05vw;
               }
             }
             .title {
-              padding: 5px 0;
+              padding: 1.28vw 0;
               align-items: flex-end;
               h3 {
-                font-size: 14px;
+                font-size: 3.589vw;
                 line-height: normal;
               }
               p {
-                font-size: 12px;
+                font-size: 3.076vw;
                 line-height: normal;
               }
             }
@@ -1524,24 +1532,24 @@ const handleIcon = (str: any, idx: any) => {
               padding: 0;
               .text {
                 p {
-                  font-size: 12px;
+                  font-size: 3.076vw;
                   line-height: normal;
                 }
               }
               .svgIcon {
-                width: 15px;
+                width: 3.846vw;
                 margin-right: 0;
                 margin-left: 8px;
                 svg {
                   width: 100%;
-                  height: 15px;
+                  height: 3.846vw;
                 }
               }
             }
             &.hot {
               &::after {
-                width: 24px;
-                height: 24px;
+                width: 6.1538vw;
+                height: 6.1538vw;
                 transform: translate(30%, -15%);
                 animation: breathe2 2s ease-in-out infinite;
               }
@@ -1552,37 +1560,37 @@ const handleIcon = (str: any, idx: any) => {
     }
     .section2 {
       grid-template-columns: repeat(1, 1fr);
-      gap: 20px;
-      margin-top: 20px;
+      gap: 5.128vw;
+      margin-top: 5.128vw;
       .list-in {
         &-t {
           .image {
-            width: 133px;
+            width: 34.1vw;
             img {
               width: 100%;
             }
           }
           .context {
             h3 {
-              font-size: 20px;
-              line-height: 24px;
+              font-size: 5.128vw;
+              line-height: 6.1538vw;
             }
             h4 {
-              font-size: 16px;
-              line-height: 24px;
+              font-size: 4.1025vw;
+              line-height: 6.1538vw;
               letter-spacing: 0.8px;
             }
             p {
-              font-size: 14px;
-              line-height: 20px;
+              font-size: 3.589vw;
+              line-height: 5.128vw;
               letter-spacing: 0.7px;
             }
           }
         }
         &-b {
           p {
-            font-size: 14px;
-            line-height: 24px;
+            font-size: 3.589vw;
+            line-height: 6.1538vw;
           }
         }
       }

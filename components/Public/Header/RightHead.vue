@@ -376,6 +376,7 @@ const handleMouseleave = () => {
       <el-input v-model="input2" placeholder="" :prefix-icon="Search" />
     </div>
     <div
+    style="display: none;"
       class="language"
       @mouseenter="handleMouseenter"
       @mouseleave="handleMouseleave"

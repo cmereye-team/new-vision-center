@@ -272,7 +272,7 @@ const goToChildPath = (item: any, i: any) => {
               @click="isThreeLevel(child, childIndex)"
             > -->
             <div
-              v-for="(child, childIndex) in item.childrenList"
+              v-for="child in item.childrenList"
               :key="child.id"
               class="son-menu"
               @click="pathIsTrue"
@@ -284,9 +284,8 @@ const goToChildPath = (item: any, i: any) => {
                 <div
                   v-for="threeLevel in child.threeLevelList"
                   :key="threeLevel.id"
-                  
                 >
-                  <nuxt-link :to="threeLevel.path" 
+                  <nuxt-link :to="threeLevel.path"
                     ><span>{{ threeLevel.title }}</span></nuxt-link
                   >
                 </div>
@@ -389,6 +388,7 @@ const goToChildPath = (item: any, i: any) => {
         color: #00a6ce;
 
         font-family: "ABeeZee";
+        font-family: "Noto Sans CJK TC";
         font-size: 20px;
         font-style: normal;
         font-weight: 600;
@@ -475,6 +475,7 @@ const goToChildPath = (item: any, i: any) => {
       & > a {
         color: #3e5270;
         font-family: "ABeeZee";
+        font-family: "Noto Sans CJK TC";
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -488,7 +489,7 @@ const goToChildPath = (item: any, i: any) => {
           background: #3e5270;
           position: absolute;
           left: -10px;
-          top: 10px;
+          top: 6px;
         }
       }
     }
@@ -498,6 +499,7 @@ const goToChildPath = (item: any, i: any) => {
       color: #666;
 
       font-family: "ABeeZee";
+      font-family: "Noto Sans CJK TC";
       font-size: 16px;
       font-style: normal;
       font-weight: 400;

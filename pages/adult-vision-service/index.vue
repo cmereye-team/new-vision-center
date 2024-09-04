@@ -32,7 +32,7 @@ const btnElement = ref({
     <div class="adult-vision-box">
       <div class="glaucoma">
         <div>
-          <nuxt-link to="/eye-examination-adult">
+          <!-- <nuxt-link to="/eye-examination-adult">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"
@@ -73,6 +73,60 @@ const btnElement = ref({
               />
             </svg>
             <span>兒童檢查</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="21"
+              viewBox="0 0 14 21"
+              fill="none"
+            >
+              <path
+                d="M13.25 1.87671L13.25 19.196C13.25 20.4845 11.7327 21.1734 10.7627 20.3253L1.02055 11.8076C0.344359 11.2164 0.335821 10.1675 1.0023 9.56531L10.7444 0.763687C11.7091 -0.107819 13.25 0.576696 13.25 1.87671Z"
+                fill="white"
+              />
+            </svg>
+          </nuxt-link> -->
+          <nuxt-link to="/eye-examination-adult">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="21"
+              viewBox="0 0 13 21"
+              fill="none"
+            >
+              <path
+                d="M0.25 19.1233V1.80395C0.25 0.515489 1.76732 -0.17338 2.73732 0.674705L12.4794 9.19241C13.1556 9.78362 13.1642 10.8325 12.4977 11.4347L2.75557 20.2363C1.79094 21.1078 0.25 20.4233 0.25 19.1233Z"
+                fill="white"
+              />
+            </svg>
+            <span>成人綜合眼睛檢查</span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="21"
+              viewBox="0 0 14 21"
+              fill="none"
+            >
+              <path
+                d="M13.25 1.87671L13.25 19.196C13.25 20.4845 11.7327 21.1734 10.7627 20.3253L1.02055 11.8076C0.344359 11.2164 0.335821 10.1675 1.0023 9.56531L10.7444 0.763687C11.7091 -0.107819 13.25 0.576696 13.25 1.87671Z"
+                fill="white"
+              />
+            </svg>
+          </nuxt-link>
+          <nuxt-link to="/adult-vision-service">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="13"
+              height="21"
+              viewBox="0 0 13 21"
+              fill="none"
+            >
+              <path
+                d="M0.25 19.1233V1.80395C0.25 0.515489 1.76732 -0.17338 2.73732 0.674705L12.4794 9.19241C13.1556 9.78362 13.1642 10.8325 12.4977 11.4347L2.75557 20.2363C1.79094 21.1078 0.25 20.4233 0.25 19.1233Z"
+                fill="white"
+              />
+            </svg>
+            <span>青光眼檢查</span>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="14"
@@ -1396,9 +1450,9 @@ const btnElement = ref({
           <p>或內部轉介至眼科專科醫生。</p>
         </div>
 
-          <div class="btn-element">
-        <BtnAnimation :btnElement="btnElement" />
-      </div>
+        <div class="btn-element">
+          <BtnAnimation :btnElement="btnElement" />
+        </div>
       </div>
     </div>
   </div>
@@ -1406,7 +1460,7 @@ const btnElement = ref({
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
-   .btn-element {
+  .btn-element {
     margin-top: 36px;
     display: flex;
     justify-content: center;
@@ -1792,7 +1846,7 @@ const btnElement = ref({
   }
 }
 @media screen and (max-width: 767px) {
-   .btn-element {
+  .btn-element {
     display: flex;
     justify-content: center;
     :deep(.slot) {
@@ -1802,24 +1856,24 @@ const btnElement = ref({
     }
   }
   .adult-vision-box {
-    padding: 0 23px 0 22px;
-    margin: 30px auto 40px;
+    padding: 0 5.89vw 0 5.64vw;
+    margin: 7.69vw auto 10.25vw;
   }
   .misight-serve-content {
-    margin-top: 32px;
-    margin-bottom: 40px;
+    margin-top: 8.205vw;
+    margin-bottom: 10.25vw;
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 14px 12px;
+      gap: 3.589vw 3.07vw;
       & > div {
         & > div:nth-child(1) {
           width: 26.92vw;
           height: 26.92vw;
           background: #e4faff;
           border-radius: 15px;
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0.5128vw 1.025vw rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1828,12 +1882,12 @@ const btnElement = ref({
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1025vw; /* 114.286% */
           text-transform: uppercase;
-          margin-top: 17px;
+          margin-top: 4.3589vw;
           display: flex;
           flex-direction: column;
         }
@@ -1841,147 +1895,149 @@ const btnElement = ref({
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 62px;
-            height: 62px;
+            width: 15.897vw;
+            height: 15.897vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 70px;
-            height: 49.228px;
+            width: 17.948vw;
+            height: 12.635vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 60px;
-            height: 52.174px;
+            width: 15.38vw;
+            height: 13.379vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 53.525px;
-            height: 55px;
+            width: 13.717vw;
+            height: 14.1vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 58px;
-            height: 58px;
+            width: 14.8717vw;
+            height: 14.8717vw;
           }
         }
       }
       & > div:nth-child(6) {
         & > div:nth-child(1) {
           & > svg {
-            width: 73.125px;
-            height: 45px;
+            width: 18.75vw;
+            height: 11.5vw;
           }
         }
       }
     }
     & > div:nth-child(3) {
-      margin-top: 20px;
-      padding: 0 26px;
+      margin-top: 5.128vw;
+      margin-bottom: 5.128vw;
+      padding: 0 6.665vw;
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.589vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 20px; /* 142.857% */
+      line-height: 5.128vw; /* 142.857% */
       & > p {
         display: inline;
       }
     }
   }
   .glasses-step {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-radius: 30px;
+    margin-top: 10.256vw;
+    margin-bottom: 10.256vw;
+    border-radius: 7.692vw;
     background: var(--Skin, #eafbff);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 2.564vw 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 25px 15px;
+    padding: 6.41vw 3.846vw;
     & > div:nth-child(1) {
       position: relative;
       & > div:nth-child(1) {
         position: relative;
-        height: 38px;
+        height: 9.74vw;
       }
       & > div:nth-child(1)::after {
         content: "";
         background: url("https://static.cmereye.com/imgs/2024/05/ba211b6cd92570ba.png")
           no-repeat;
         background-size: 100% 100%;
-        width: 114px;
-        height: 38px;
+        width: 29.23vw;
+        height: 9.74vw;
         display: inline-block;
         position: absolute;
-        left: 50%;
-        transform: translateX(-50%);
+        // left: 50%;
+        // transform: translateX(-50%);
         top: 0;
         z-index: 1;
       }
       & > div:nth-child(1)::before {
         content: "青 光 眼";
         position: absolute;
-        left: 51%;
+        left: 18%;
         transform: translateX(-50%);
         top: 0;
         z-index: 3;
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 25.147px;
+        font-size: 6.447vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 33.529px; /* 133.333% */
-        letter-spacing: 2.7px;
+        line-height: 9.0128vw; /* 133.333% */
+        letter-spacing: 0.8717vw;
+        padding-left: 0.625vw;
       }
       & > div:nth-child(2) {
-        margin-top: 3px;
-        padding-left: 8px;
-        padding-bottom: 12px;
+        margin-top: 0.769vw;
+        padding-left: 2.05vw;
+        padding-bottom: 3.07vw;
         & > span:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 16px;
+          font-size: 4.1vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 26.51px; /* 165.686% */
+          line-height: 6.79vw; /* 165.686% */
           letter-spacing: 0.8px;
         }
         & > span:nth-child(2) {
-          margin-left: 5px;
+          margin-left: 1.28vw;
           color: #6f6f6f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 214.286% */
+          line-height: 7.69vw; /* 214.286% */
           letter-spacing: 0.7px;
         }
       }
       & > div:nth-child(3) {
         position: absolute;
-        right: 3px;
-        bottom: 13px;
+        right: 0.769vw;
+        bottom: 3.33vw;
         color: #f04e4e;
         font-family: "Noto Sans HK";
-        font-size: 35.346px;
+        font-size: 9.06vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 35.346px;
+        line-height: 9.06vw;
         & > span:nth-child(1) {
-          font-size: 26.51px;
+          font-size: 6.79vw;
         }
       }
     }
@@ -1989,98 +2045,98 @@ const btnElement = ref({
       content: "";
       display: inline-block;
       width: 100%;
-      height: 6px;
+      height: 1.58vw;
       background: #00a6ce;
       position: absolute;
       bottom: 0;
       left: 0;
     }
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 15px 35px;
+      gap: 1.846vw 8.97vw;
       & > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         & > div:nth-child(1) {
-          min-height: 45px;
+          min-height: 11.538vw;
           display: flex;
           justify-content: center;
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 10px;
+          margin-top: 2.564vw;
           display: flex;
           flex-direction: column;
           align-items: center;
           color: var(--Grey-Deep, #4d4d4d);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 400;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw; /* 114.286% */
         }
       }
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 54px;
-            height: 37.976px;
+            width: 13.846vw;
+            height: 9.743vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 43px;
-            height: 37.535px;
+            width: 11.025vw;
+            height: 9.62vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 41px;
-            height: 42.13px;
+            width: 10.5vw;
+            height: 10.79vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 38px;
-            height: 38px;
+            width: 9.74vw;
+            height: 9.74vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 51px;
-            height: 31.369px;
+            width: 13.07vw;
+            height: 8vw;
           }
         }
       }
     }
   }
   .misight-crowd-content {
-    margin-top: 40px;
+    margin-top: 10.256vw;
     & > div:nth-child(1) {
       color: #00a6ce;
       font-family: "Inter";
-      font-size: 20px;
+      font-size: 5.128vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      margin-bottom: 16px;
+      margin-bottom: 4.1vw;
     }
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px 12px;
+      gap: 5.64vw 3.07vw;
       & > div {
         & > div:nth-child(1) {
           width: 26.92vw;
@@ -2090,67 +2146,68 @@ const btnElement = ref({
           display: flex;
           justify-content: center;
           align-items: center;
-          border-radius: 10px;
+          border-radius: 2.56vw;
         }
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top: 4.35vw;
           display: flex;
           flex-direction: column;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 128.571% */
+          line-height: 4.615vw; /* 128.571% */
           text-transform: uppercase;
+          white-space: nowrap;
         }
       }
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 59px;
-            height: 59px;
+            width: 15.128vw;
+            height: 15.128vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 76.001px;
-            height: 58.376px;
+            width: 19.48vw;
+            height: 14.968vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 69.523px;
-            height: 46.416px;
+            width: 15.26vw;
+            height: 11.9vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 64.758px;
-            height: 41.499px;
+            width: 16.6vw;
+            height: 10.64vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 56.023px;
-            height: 53px;
+            width: 14.35vw;
+            height: 13.589vw;
           }
         }
       }
       & > div:nth-child(6) {
         & > div:nth-child(1) {
           & > svg {
-            width: 66.625px;
-            height: 41px;
+            width: 17.83vw;
+            height: 10.512vw;
           }
         }
       }
@@ -2161,77 +2218,77 @@ const btnElement = ref({
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.589vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23.007px; /* 164.334% */
+      line-height: 5.89vw; /* 164.334% */
       letter-spacing: -0.07px;
-      margin-top: 15px;
+      margin-top: 3.846vw;
     }
   }
   .glaucoma {
-    margin: 22px auto 30px;
+    margin: 5.64vw auto 7.69vw;
     & > div:nth-child(1) {
       display: flex;
       justify-content: center;
-      gap: 0 5px;
+      gap: 0 1.28vw;
       & > a {
         display: flex;
         align-items: center;
         & > span:nth-child(2) {
-          margin: 0 5px;
+          margin: 0 1.28vw;
           color: #fff;
           text-align: center;
           font-family: "Inter";
-          font-size: 18px;
+          font-size: 4.615vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           text-wrap: nowrap;
         }
         box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
-        padding: 6px 10px;
+        padding: 1.583vw 2.564vw;
         background: #00a6ce;
-        border-radius: 20px;
+        border-radius: 5.128vw;
       }
       & > a:nth-child(2) {
         background: #95df82;
       }
     }
     & > div:nth-child(2) {
-      margin-top: 22px;
-      border-radius: 13.723px;
-      box-shadow: 0px 2.745px 6.861px 0px rgba(0, 0, 0, 0.25);
+      margin-top: 5.64vw;
+      border-radius: 3.158vw;
+      box-shadow: 0px 0.7vw 1.758vw 0px rgba(0, 0, 0, 0.25);
       background: url("https://static.cmereye.com/imgs/2024/05/b08ebd833d7d05ed.png")
         no-repeat;
       background-size: 100% 100%;
-      min-height: 370px;
+      min-height: 94.8717vw;
       display: flex;
       & > div {
         flex: 1;
       }
       & > div:nth-child(2) {
-        padding-top: 75px;
-        padding-right: 5px;
+        padding-top: 19.23vw;
+        padding-right: 1.28vw;
         & > div:nth-child(1) {
           color: var(--Deep-Blue, #3e5270);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 5.64vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 24px; /* 109.091% */
-          letter-spacing: 1.1px;
+          line-height: 6.15vw; /* 109.091% */
+          letter-spacing: 0.28vw;
         }
         & > div:nth-child(2) {
-          margin-top: 10px;
+          margin-top: 2.56vw;
           color: var(--Grey-Deep, #4d4d4d);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 12px;
+          font-size: 3.07vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 22px; /* 183.333% */
+          line-height: 5.65vw; /* 183.333% */
           & > span {
             display: inline;
           }
