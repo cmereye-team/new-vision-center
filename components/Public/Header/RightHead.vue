@@ -233,6 +233,7 @@ const pathIsTrue = () => {
 };
 
 const showChildMenu = (index: any) => {
+  console.log('showChildMenu');
   menuList.value.forEach((item: any, i: number) => {
     if (i === index) {
       menuList.value[index].isChildVisible =
@@ -246,6 +247,7 @@ const showChildMenu = (index: any) => {
 const route = useRoute();
 const router = useRouter();
 const mbToLink = (item: any) => {
+  console.log('mbToLink');
   router.push({
     path: item.path,
     query: {
@@ -253,6 +255,17 @@ const mbToLink = (item: any) => {
     },
   });
   pathIsTrue();
+};
+
+
+const headLink = (index: number, item: any) => {
+  if (item.path == '/' && !isPc) {
+    showChildMenu(index)
+  } else if (item.path == '/' && isPc) {
+    // console.log('pc')
+  } else {
+    mbToLink(item)
+  }
 };
 
 const language = ref("hk");
@@ -278,15 +291,14 @@ const handleMouseleave = () => {
         :key="item.id"
         class="fa-path"
         :class="`fa-${index + 1}`"
-        @mouseover="mouseOver(index)"
       >
         <nuxt-link
-          @click="item.path == '/' ? showChildMenu(index) : mbToLink(item)"
+          @click="headLink(index,item)"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
         <transition name="fade">
-          <div v-if="item.isChildVisible" class="sub-menu ">
+          <div v-if="item.isChildVisible" class="sub-menu">
             <div
               v-for="(child, childIndex) in item.childrenList"
               :key="child.id"
@@ -376,7 +388,7 @@ const handleMouseleave = () => {
       <el-input v-model="input2" placeholder="" :prefix-icon="Search" />
     </div>
     <div
-    style="display: none;"
+      style="display: none"
       class="language"
       @mouseenter="handleMouseenter"
       @mouseleave="handleMouseleave"
@@ -452,19 +464,19 @@ const handleMouseleave = () => {
   }
   .fa-path {
     position: relative;
-
   }
   .fade-leave-active {
-    transition: opacity 3s;;
+    transition: opacity 3s;
   }
 
-.fa-path:not(:hover) .sub-menu{
-   transition: opacity 3s;
-}
+  .fa-path:not(:hover) .sub-menu {
+    transition: opacity 3s;
+  }
 
   .fa-path:hover {
     & > a {
       color: #00a6ce;
+      cursor: default;
     }
     & > a::after {
       background: url("https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png");
@@ -473,7 +485,6 @@ const handleMouseleave = () => {
       z-index: 10;
     }
     .sub-menu {
-      
       box-shadow: #4d4d4d 5px 5px 10px;
       z-index: 999;
       border-radius: 5px;
@@ -576,9 +587,19 @@ const handleMouseleave = () => {
           font-style: normal;
           font-weight: 700;
           line-height: 1.04165vw;
+          min-width: 120px;
           & > span {
             padding-bottom: 1.04165vw;
             border-bottom: 1px solid #00a6ce;
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+      &>div:last-child{
+        &>a{
+          &>span{
+            padding-bottom: 0;
           }
         }
       }
@@ -722,10 +743,21 @@ const handleMouseleave = () => {
       }
     }
     .three-level-2 {
+      & > div {
+        & > a {
+          min-width: 120px;
+          display: block;
+          &>span {
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
       & > div:last-child {
         & > a {
           & > span {
             border: none;
+            padding-bottom: 0;
           }
         }
       }
@@ -915,6 +947,7 @@ const handleMouseleave = () => {
   .fa-path:hover {
     & > a {
       color: #00a6ce;
+      cursor: pointer;
     }
     & > a::after {
       background: url("https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png");
@@ -1023,9 +1056,19 @@ const handleMouseleave = () => {
           font-style: normal;
           font-weight: 700;
           line-height: 20px;
+          min-width: 120px;
           & > span {
             padding-bottom: 10px;
             border-bottom: 1px solid #00a6ce;
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+      &>div:last-child{
+        &>a{
+          &>span{
+            padding-bottom: 0;
           }
         }
       }

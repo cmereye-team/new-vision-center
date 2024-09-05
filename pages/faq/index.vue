@@ -29,7 +29,7 @@ watch(elementX, (n, o) => {
   if (isDragging.value) {
     let a = (elementX.value + 5) / elementWidth.value;
     if (a < 0) {
-      imgLeft.value = "10px";
+      imgLeft.value = "0px";
     } else if (a > 1) {
       imgLeft.value = "100%";
     } else {
@@ -113,13 +113,13 @@ onMounted(() => {
             }"
           >
             <img
-              src="https://static.cmereye.com/imgs/2024/06/cdce24b4dd2099c6.png"
+              src="https://static.cmereye.com/imgs/2024/09/e87447336103ad77.png"
               alt="正常"
             />
           </div>
           <span :style="{ left: imgLeft }" id="imgline"> </span>
           <img
-            src="https://static.cmereye.com/imgs/2024/06/cdce24b4dd2099c6.png"
+            src="https://static.cmereye.com/imgs/2024/09/654736882a8875df.png"
             alt="視野缺損"
           />
         </div>
@@ -426,9 +426,11 @@ onMounted(() => {
       position: relative;
       display: flex;
       justify-content: center;
+      z-index: 5;
       img {
         //禁止选中
         user-select: none;
+        border-radius: 15px;
       }
       .yuan {
         width: fit-content;
@@ -442,9 +444,11 @@ onMounted(() => {
         display: flex;
         flex-direction: column;
         align-items: center;
+        border-radius: 15px;
         img {
           width: auto;
           height: 100%;
+          border-radius: 15px;
         }
       }
       span {

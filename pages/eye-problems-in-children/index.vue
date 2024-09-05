@@ -387,19 +387,15 @@ onMounted(() => {
             </div>
             <div>
               <div>
-                <span>「多區正向光學離焦」眼鏡鏡片</span
-                ><span>（簡稱DIMS近視控制鏡片）</span>
+                <span>角膜矯形術</span>
               </div>
               <div>
                 <span
-                  >把近視離焦理論應用於光學鏡片上，能提供清晰穩定的視力之</span
-                >
-                <span
-                  >餘，更有效控制近視加深的情況。配戴方式與普通眼鏡無異。</span
+                  >兒童在睡覺時配戴角膜矯形鏡片，起床後摘除，便不需配戴眼鏡也能整天保持良好視力，特別適合活躍好動的小孩。此外，角膜矯形術亦有效控制兒童近視加深的情況。</span
                 >
               </div>
               <div class="bg-text-btn">
-                <a href="http://cmervision.sprite.eu.org/myopia-control-zeiss">
+                <nuxt-link to="/orthokeratoplasty">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -450,7 +446,7 @@ onMounted(() => {
                       />
                     </svg>
                   </span>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -463,19 +459,16 @@ onMounted(() => {
             </div>
             <div>
               <div>
-                <span>「多區正向光學離焦」眼鏡鏡片</span
-                ><span>（簡稱DIMS近視控制鏡片）</span>
+                <span>阿托品眼藥水</span>
               </div>
               <div>
                 <span
-                  >把近視離焦理論應用於光學鏡片上，能提供清晰穩定的視力之</span
-                >
-                <span
-                  >餘，更有效控制近視加深的情況。配戴方式與普通眼鏡無異。</span
+                style="line-height: 22px;"
+                  >阿托品是一種非選擇性抗毒蕈（nonselective anti-muscarinic blocker），能抑制鞏膜纖維組織生長、防止或減慢眼球進一步延長，以抑制近視加深速度。近年的研究發現，使用低濃度的阿托品眼藥水（0.01%），除了能有效控制近視，也能舒緩畏光及看不清楚近物的副作用。阿托品眼藥水需由眼科醫生處方，一般在發育期間（大概6至15歲）使用，一直維持到發育完成才可停止治療。</span
                 >
               </div>
               <div class="bg-text-btn">
-                <a href="http://cmervision.sprite.eu.org/myopia-control-zeiss">
+                <nuxt-link to="/eye-examination-adult">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -526,7 +519,7 @@ onMounted(() => {
                       />
                     </svg>
                   </span>
-                </a>
+                </nuxt-link>
               </div>
             </div>
           </div>
@@ -556,7 +549,7 @@ onMounted(() => {
                 兒童無法察覺自己有色弱或色盲問題。因此，在兒童到了約四歲時，家長應為他們安排綜合眼睛檢查。視光師會使用石原氏色覺測試圖表進行色覺檢查，以判斷出色覺異常問題。
               </div>
               <div class="find-dispose-content" v-if="numberFind == 1">
-                2兒童無法察覺自己有色弱或色盲問題。因此，在兒童到了約四歲時，家長應為他們安排綜合眼睛檢查。視光師會使用石原氏色覺測試圖表進行色覺檢查，以判斷出色覺異常問題。
+                色弱或色盲暫時無法醫治，但及早發現，並協助孩子建立一套自己的顏色辨認標準，可大大減低對日常生活的影響。
               </div>
             </div>
           </div>
@@ -574,7 +567,7 @@ onMounted(() => {
             <span>分別對藍色、綠色及紅色的光最敏感。</span>
           </div>
           <div class="bg-text-btn">
-            <a href="https://cmervision.sprite.eu.org/eye-examination-adult">
+            <nuxt-link to="/eye-examination-adult">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -625,7 +618,7 @@ onMounted(() => {
                   />
                 </svg>
               </span>
-            </a>
+            </nuxt-link>
           </div>
         </div>
       </div>
@@ -667,7 +660,7 @@ onMounted(() => {
               斜視是由於雙眼視軸不平行，導致其中一個眼球向內、外、上或下傾斜。患有斜視的兒童習慣用一隻眼睛觀看事物，甚少使用另一隻眼睛，容易出現弱視等併發症，更有可能使兒童產生自卑心理。
             </div>
             <div class="bg-text-btn">
-              <a>
+              <nuxt-link to="/eye-examination-adult">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -718,7 +711,7 @@ onMounted(() => {
                     />
                   </svg>
                 </span>
-              </a>
+              </nuxt-link>
             </div>
           </div>
           <div>
@@ -758,14 +751,14 @@ onMounted(() => {
         >
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/06/26156b818e07191f.png"
+              src="https://static.cmereye.com/imgs/2024/09/17be528b25568639.png"
               alt="斜視"
             />
           </div>
           <div>
-            <div>弱視-暂无内填</div>
+            <div>人類並非一出生便會擁有1.0視功能，而是隨著外界的刺激才慢慢發展出各種視覺機能，而出生後到3歲期間是視功能發育最重要的階段。如果發育受到不良的影響，就有可能導致弱視。</div>
             <div class="bg-text-btn">
-              <a>
+              <nuxt-link to="/eye-examination-child" >
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -801,7 +794,7 @@ onMounted(() => {
                     />
                   </svg>
                 </span>
-                <span>按此了解更多兒童綜合眼睛檢查資訊</span>
+                <span>按此了解更多斜視資訊</span>
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -816,7 +809,7 @@ onMounted(() => {
                     />
                   </svg>
                 </span>
-              </a>
+              </nuxt-link>
             </div>
           </div>
           <div>

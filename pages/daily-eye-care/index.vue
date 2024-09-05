@@ -338,56 +338,10 @@ const myopiaQuestionList = ref([
       `•建議多在戶外活動，有多項研究顯示，戶外活動或有助減慢近視速度。`,
     ],
   },
-  {
-    q: "如何防止散光加深？",
-    a: [
-      `•觀看電子螢幕時，眼睛要適當休息，應用「20-20-20」護眼法則︰看電子產品螢幕20分鐘，建議雙眼要休息20秒，或者遠望20呎﹙約50厘米﹚外的景觀。`,
-
-      `•閱讀時，眼睛距離書本最好保持30厘米。看智能電話、平板電腦、電腦時，盡量保持適當距離至30厘米、40厘米及50厘米。`,
-      `•避免躺著看電話、閱讀的壞習慣，這些動作會使角膜與晶狀體偏移，加深散光，也容易造成左右眼睛度數差距大的情況。`,
-      `•建議2歲以下兒童須避免使用電子產品；2至18歲人士在家長指導下使用；18歲或以上應避免長時間看著螢幕，注意要給予眼睛適當的休息時間。`,
-      `•切勿在光線不足的地方閱讀 。`,
-    ],
-    mAq: [
-      `•觀看電子螢幕時，眼睛要適當休息，應用「20-20-20」護眼法則︰看電子產品螢幕20分鐘，建議雙眼要休息20秒，或者遠望20呎﹙約50厘米﹚外的景觀。`,
-
-      `•閱讀時，眼睛距離書本最好保持30厘米。看智能電話、平板電腦、電腦時，盡量保持適當距離至30厘米、40厘米及50厘米。`,
-      `•避免躺著看電話、閱讀的壞習慣，這些動作會使角膜與晶狀體偏移，加深散光，也容易造成左右眼睛度數差距大的情況。`,
-      `•建議2歲以下兒童須避免使用電子產品；2至18歲人士在家長指導下使用；18歲或以上應避免長時間看著螢幕，注意要給予眼睛適當的休息時間。`,
-      `•切勿在光線不足的地方閱讀 。`,
-    ],
-  },
-  {
-    q: "眼睛看到黑點、黑線是否患有眼晴疾病？",
-    a: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視`,
-    ],
-    mAq: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
-    ],
-  },
-  {
-    q: "如何防止散光加深？",
-    a: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視`,
-    ],
-    mAq: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
-    ],
-  },
-  {
-    q: "眼睛看到黑點、黑線是否患有眼晴疾病？",
-    a: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視`,
-    ],
-    mAq: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
-    ],
-  },
 ]);
 const astigmatismQuestionList = ref([
   {
-    q: "散光",
+    q: "如何防止散光加深？",
     a: [
       `•觀看電子螢幕時，眼睛要適當休息，應用「20-20-20」護眼法則︰看電子產品螢幕20分鐘，建議雙眼要休息20秒，或者遠望20呎﹙約50厘米﹚外的景觀。`,
 
@@ -403,26 +357,6 @@ const astigmatismQuestionList = ref([
       `•避免躺著看電話、閱讀的壞習慣，這些動作會使角膜與晶狀體偏移，加深散光，也容易造成左右眼睛度數差距大的情況。`,
       `•建議2歲以下兒童須避免使用電子產品；2至18歲人士在家長指導下使用；18歲或以上應避免長時間看著螢幕，注意要給予眼睛適當的休息時間。`,
       `•切勿在光線不足的地方閱讀 。`,
-    ],
-  },
-  {
-    q: "配戴RGP鏡或鞏膜鏡需要注意什麼？",
-    a: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視`,
-      `覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
-    ],
-    mAq: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
-    ],
-  },
-  {
-    q: "RGP鏡和鞏膜鏡的適應期是多久？",
-    a: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視`,
-      `覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
-    ],
-    mAq: [
-      `選擇適合的鏡片需要考慮多個因素，包括你的角膜形狀、視力問題的嚴重程度、舒適度和使用需求等。通常RGP鏡在提供更好的視覺清晰度和角膜形狀穩定性方面表現較好，而鞏膜鏡則更舒適易適應。最好建議在視光師的指導下進行詳細的評估和選擇。`,
     ],
   },
 ]);
@@ -982,6 +916,7 @@ const clickQuestion = (id: number) => {
         border-radius: 10px;
         background: var(--Skin, #eafbff);
         box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+        border: 2px solid transparent;
         cursor: pointer;
         & > img {
           width: 100%;
@@ -991,6 +926,7 @@ const clickQuestion = (id: number) => {
       & > div:hover {
         border-radius: 10px;
         background: var(--Skin, #eafbff);
+        border: 2px solid transparent;
         box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
         transform: scale(1.1);
         transition: all 0.3s ease-out;
@@ -1007,6 +943,7 @@ const clickQuestion = (id: number) => {
   }
   .active-question {
     position: relative;
+    border: 2px solid #00a6ce !important;
   }
   .active-question::before {
     content: "";
@@ -1020,7 +957,7 @@ const clickQuestion = (id: number) => {
 }
 @media screen and (max-width: 767px) {
   :deep(.questionTip) {
-    .el-collapse-item__header{
+    .el-collapse-item__header {
       font-size: 4.615vw;
       padding: 2.3vw 10.25vw 2.3vw 11.38vw;
       letter-spacing: 1px;
@@ -1135,6 +1072,7 @@ const clickQuestion = (id: number) => {
   }
   .active-question {
     position: relative;
+    border: 2px solid #00a6ce !important;
   }
   .active-question::before {
     content: "";
@@ -1191,13 +1129,13 @@ const clickQuestion = (id: number) => {
   .m-img {
     position: relative;
     max-width: 91vw;
-    margin: 12px auto 0;
+    margin: 3.07vw auto 0;
     & > div:nth-child(1) {
       width: 91vw;
       height: 69.23vw;
       overflow: hidden;
       margin: 0 auto;
-      border-radius: 27.692px;
+      border-radius: 7.1vw;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1207,27 +1145,27 @@ const clickQuestion = (id: number) => {
     }
     & > div:nth-child(2) {
       position: absolute;
-      bottom: 18px;
-      left: 10px;
+      bottom: 4.615vw;
+      left: 2.564vw;
       display: flex;
       gap: 0 5px;
       & > div:nth-child(1) {
-        width: 90.77px;
-        height: 40.462px;
-        border-radius: 20.769px;
+        width: 23.27vw;
+        height: 10.37vw;
+        border-radius: 5.325vw;
         color: #fff;
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 12.308px;
+        font-size: 3.15vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 17.692px;
+        line-height: 4.53vw;
         letter-spacing: 0.415px;
         & > span:nth-child(3) {
           display: block;
         }
         box-sizing: border-box;
-        padding-top: 5px;
+        padding-top: 1.28vw;
         white-space: nowrap;
       }
       & > div:nth-child(2) {
@@ -1238,26 +1176,26 @@ const clickQuestion = (id: number) => {
         font-weight: 500;
         display: flex;
         flex-direction: column;
-        font-size: 12px;
+        font-size: 3.07vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 16.846px; /* 166.667% */
+        line-height: 4.32vw; /* 166.667% */
         letter-spacing: 0.415px;
       }
     }
   }
   .question {
-    margin-top: 30px;
+    margin-top: 7.69vw;
     & > div:nth-child(2) {
-      margin-top: 23px;
-      margin-bottom: 34px;
+      margin-top: 5.897vw;
+      margin-bottom: 8.717vw;
       display: grid;
       grid-template-columns: repeat(4, 2fr);
-      gap: 13px;
+      gap: 3.33vw;
       & > div {
         width: 20.1vw;
         height: 20.1vw;
-        border-radius: 7.489px;
+        border-radius: 1.92vw;
         background: var(--Skin, #eafbff);
         box-shadow: 0px 0px 5.617px 0px rgba(0, 0, 0, 0.25);
         & > img {
@@ -1271,24 +1209,24 @@ const clickQuestion = (id: number) => {
         display: none;
       }
       .el-collapse-item__content {
-        padding-left: 20px;
+        padding-left: 5.128vw;
       }
       .el-collapse-item__header {
         display: flex;
         align-items: center;
-        padding: 9px 30px 9px 40px;
+        padding: 2.3vw 7.69vw 2.3vw 10.2564vw;
         text-align: left;
         justify-content: flex-start;
       }
       .el-collapse-item__header > i {
         position: absolute;
-        right: 10px;
+        right: 2.564vw;
       }
       .el-collapse-item__header::before {
-        left: 10px;
+        left: 2.564vw;
       }
       .el-collapse-item__content > div {
-        padding-left: 30px;
+        padding-left: 7.69vw;
       }
     }
   }

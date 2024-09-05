@@ -208,7 +208,7 @@ const props = defineProps({
     position: relative;
     & > div:nth-child(1) {
       // max-width: 1920px;
-      margin: 136px auto 0;
+      margin: 130px auto 0;
       // margin-top: 136px;
       img {
         width: 100%;
