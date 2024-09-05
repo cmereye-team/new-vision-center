@@ -1149,7 +1149,9 @@ const btnElement = ref({
         font-style: normal;
         font-weight: 700;
         line-height: 45px; /* 133.333% */
-        letter-spacing: 2.5px;
+        letter-spacing: 3.6px;
+        padding-left: 0.5px;
+        padding-top: 2px;
         position: absolute;
         left: 6px;
         z-index: 2;
@@ -1286,86 +1288,86 @@ const btnElement = ref({
 }
 @media screen and (max-width: 767px) {
   .soft-contact {
-    margin: 30px 25px 45px;
+    margin: 7.692vw 6.4vw 11.3845vw;
   }
   .glasses-service {
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 15px 12px;
+      gap: 3.846vw 3.076vw;
       & > div {
         & > div:nth-child(1) {
-          border-radius: 18.443px;
+          border-radius: 4.728vw;
           background: var(--Skin, #eafbff);
-          box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
-          width: 105px;
-          height: 105px;
+          width: 26.923vw;
+          height: 26.923vw;
         }
         & > div:nth-child(2) {
-          margin-top: 13px;
+          margin-top: 3.33vw;
           display: flex;
           flex-direction: column;
           align-items: center;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px;
+          line-height: 4.615vw;
         }
       }
     }
   }
   .glasses-kind {
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: flex;
       justify-content: center;
       flex-direction: column;
-      gap: 20px;
+      gap: 5.128vw;
       flex-wrap: nowrap;
       & > div {
-        max-width: 340px;
-        border-radius: 37.5px;
-        padding: 0 8px;
+        max-width: 87.179vw;
+        border-radius: 9.615vw;
+        padding: 0 2.05vw;
         box-sizing: border-box;
         background: var(--Skin, #eafbff);
         display: flex;
         align-items: center;
         position: relative;
-        gap: 20px 0;
+        gap: 5.128vw 0;
         & > span:nth-child(1) {
           position: absolute;
-          width: 42.855px;
-          height: 42.855px;
+          width: 10.9846vw;
+          height: 10.9846vw;
           border-radius: 50%;
           background: #00a6ce;
           color: #fff;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 33.75px;
+          font-size: 8.654vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 45px; /* 133.333% */
-          letter-spacing: 1.688px;
+          line-height: 11.538vw; /* 133.333% */
+          letter-spacing: 0.432vw;
           display: flex;
           justify-content: center;
           align-items: center;
         }
         & > span:nth-child(2) {
-          padding: 15px 0 15px 42px;
+          padding: 3.846vw 0 3.846vw 10.7692vw;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 4.615vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 23.235px; /* 129.082% */
+          line-height: 5.958vw; /* 129.082% */
           letter-spacing: 0.9px;
           text-align: center;
           width: 100%;
@@ -1373,17 +1375,17 @@ const btnElement = ref({
       }
     }
     & > div:nth-child(3) {
-      margin: 25px auto 40px;
+      margin: 6.4vw auto 10.2564vw;
       display: flex;
       justify-content: center;
     }
   }
   .target-population {
-    margin: 42px auto 30px;
+    margin: 10.7692vw auto 7.69vw;
     & > div:nth-child(1) {
       color: #00a6ce;
       font-family: "Inter";
-      font-size: 20px;
+      font-size: 5.128vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -1392,67 +1394,67 @@ const btnElement = ref({
     & > div:nth-child(2) {
       display: flex;
       justify-content: center;
-      gap: 0 12px;
+      gap: 0 3.076vw;
       & > div {
-        margin-top: 12px;
+        margin-top: 3.076vw;
         display: flex;
         flex-direction: column;
         gap: 0 20px;
         align-items: center;
         & > div:nth-child(1) {
           background: #eafbff;
-          border-radius: 15px;
-          box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
-          width: 105px;
-          height: 105px;
+          border-radius: 3.846vw;
+          box-shadow: 0px 0.769vw 1.923vw 0px rgba(0, 0, 0, 0.25);
+          width: 26.923vw;
+          height: 26.923vw;
           display: flex;
           justify-content: center;
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top: 4.3589vw;
           display: flex;
           flex-direction: column;
           color: #60605f;
           text-align: center;
           font-family: "Inter";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw; /* 114.286% */
           text-transform: uppercase;
         }
       }
     }
   }
   .glasses-check {
-    margin: 25px auto 42px;
-    height: 340.999px;
-    border-radius: 13.862px;
-    box-shadow: 0px 2.772px 6.931px 0px rgba(0, 0, 0, 0.25);
+    margin: 6.4vw auto 10.7692vw;
+    height: 87.4356vw;
+    border-radius: 3.554vw;
+    box-shadow: 0px 0.7vw 1.78vw 0px rgba(0, 0, 0, 0.25);
     background: url("https://static.cmereye.com/imgs/2024/05/973e8025696a12f0.png")
       no-repeat;
     background-size: 100% 100%;
-    padding-top: 100px;
-    padding-left: 13px;
+    padding-top: 25.64vw;
+    padding-left: 3.33vw;
     box-sizing: border-box;
     color: var(--Grey, #4d4d4d);
     font-family: "Noto Sans HK";
-    font-size: 12px;
+    font-size: 3.07vw;
     font-style: normal;
     font-weight: 700;
-    line-height: 18px; /* 150% */
+    line-height: 4.615vw; /* 150% */
     letter-spacing: 0.6px;
     & > p {
       & > span:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 22px;
+        font-size: 5.64vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 26px; /* 118.182% */
-        letter-spacing: 1.1px;
-        margin-bottom: 20px;
+        line-height: 6.665vw; /* 118.182% */
+        letter-spacing: 0.282vw;
+        margin-bottom: 5.128vw;
         display: block;
       }
       display: flex;
@@ -1460,24 +1462,24 @@ const btnElement = ref({
     }
   }
   .glasses-step {
-    border-radius: 30px;
+    border-radius: 7.692vw;
     background: var(--Skin, #eafbff);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 2.564vw 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 25px 15px;
+    padding: 6.4vw 3.846vw;
     & > div:nth-child(1) {
       position: relative;
       & > div:nth-child(1) {
         position: relative;
-        height: 38px;
+        height: 9.74vw;
       }
       & > div:nth-child(1)::after {
         content: "";
         background: url("https://static.cmereye.com/imgs/2024/05/29e22fabbebfa112.png")
           no-repeat;
         background-size: 100% 100%;
-        width: 145px;
-        height: 38px;
+        width: 37.18vw;
+        height: 9.74vw;
         display: inline-block;
         position: absolute;
         left: 0;
@@ -1492,23 +1494,23 @@ const btnElement = ref({
         z-index: 3;
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 25.147px;
+        font-size: 6.45vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 33.529px; /* 133.333% */
-        letter-spacing: 1.915px;
+        line-height: 8.598vw; /* 133.333% */
+        letter-spacing: 0.6754vw;
       }
       & > div:nth-child(2) {
         margin-top: 3px;
-        padding-left: 8px;
-        padding-bottom: 12px;
+        padding-left: 2.05vw;
+        padding-bottom: 3.07vw;
         & > span:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 16px;
+          font-size: 4.1vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 26.51px; /* 165.686% */
+          line-height: 6.798vw; /* 165.686% */
           letter-spacing: 0.8px;
         }
         & > span:nth-child(2) {
@@ -1516,25 +1518,25 @@ const btnElement = ref({
           color: #6f6f6f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 214.286% */
+          line-height: 7.692vw; /* 214.286% */
           letter-spacing: 0.7px;
         }
       }
       & > div:nth-child(3) {
         position: absolute;
-        right: 3px;
-        bottom: 13px;
+        right: 0.76vw;
+        bottom: 3.33vw;
         color: #f04e4e;
         font-family: "Noto Sans HK";
-        font-size: 35.346px;
+        font-size: 9.06vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 35.346px;
+        line-height: 9.06vw;
         & > span:nth-child(1) {
-          font-size: 26.51px;
+          font-size: 6.798vw;
         }
       }
     }
@@ -1542,23 +1544,23 @@ const btnElement = ref({
       content: "";
       display: inline-block;
       width: 100%;
-      height: 6px;
+      height: 1.538vw;
       background: #00a6ce;
       position: absolute;
       bottom: 0;
       left: 0;
     }
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto;
-      gap: 25px 35px;
+      gap: 6.4vw 8.974vw;
       & > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         & > div:nth-child(1) {
-          min-height: 45px;
+          min-height: 11.538vw;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1570,69 +1572,69 @@ const btnElement = ref({
           color: var(--Grey-Deep, #4d4d4d);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 400;
-          line-height: 16px; /* 114.286% */
-          margin-top: 5px;
+          line-height: 4vw; /* 114.286% */
+          margin-top: 1.28vw;
         }
       }
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 54px;
-            height: 37.976px;
+            width: 13.8vw;
+            height: 9.74vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 52px;
-            height: 43.632px;
+            width: 13.33vw;
+            height: 11.1876vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 44.958px;
-            height: 39px;
+            width: 11.527vw;
+            height: 10vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 46px;
-            height: 44.8px;
+            width: 11.795vw;
+            height: 11.48vw;
           }
         }
       }
     }
   }
   .glasses-type {
-    margin: 30px auto 20px;
+    margin: 7.692vw auto 5.128vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7.5px;
+    gap:  1.923vw;
     & > a {
       display: flex;
       align-items: center;
       background: #00a6ce;
-      box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
-      padding: 7px 10px;
+      box-shadow: 0px 1.538vw 2.05vw 0.769vw rgba(0, 0, 0, 0.1) inset;
+      padding: 1.795vw 2.564vw;
       color: #fff;
       text-align: center;
       font-family: "Inter";
-      font-size: 18px;
+      font-size: 4.615vw;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      border-radius: 20px;
+      border-radius: 5.128vw;
       & > span:nth-child(2) {
-        margin: 0 3px;
+        margin: 0 0.76vw;
       }
       & > span:nth-child(1),
       & > span:nth-child(3) {
@@ -1646,23 +1648,23 @@ const btnElement = ref({
     }
   }
   .profile-title {
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 22.31vw;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      bottom: 7.692vw;
+      right: 5.128vw;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Inter";
-      font-size: 28px;
+      font-size: 7.18vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 5.6px;
+      letter-spacing: 1.4358vw;
     }
   }
 }

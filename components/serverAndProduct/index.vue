@@ -247,120 +247,135 @@ const props = defineProps({
   }
 }
 @media screen and (max-width: 767px) {
-  .product-list {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: space-between;
-    gap: 30px 12px;
-  }
-  .product-list-box {
-    cursor: pointer;
-    & > div:nth-child(1) {
-      border-radius: 10px;
-      background: var(--Skin, #eafbff);
-      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-      width: 105px;
-      height: 105px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-    & > div:nth-child(2) {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-top: 13px;
-      color: #60605f;
-      text-align: center;
-      font-family: "Noto Sans HK";
-      font-size: 16.5px;
-      font-style: normal;
-      font-weight: 500;
-      line-height: 22.5px; /* 136.364% */
-      letter-spacing: 0.825px;
-    }
-  }
-  .context {
-    grid-column: span 3;
-    & > div {
-      width: 100% !important;
-      height: auto !important;
-      position: relative;
-      border-radius: 8.023px;
-      background: var(--Skin, #eafbff);
-      box-shadow: 0px 0px 3.263px 0px rgba(0, 0, 0, 0.25);
-      min-height: 166px;
-      display: flex;
-      align-items: flex-start !important;
-      gap: 0 12px;
-      box-sizing: border-box;
-      padding: 14px 13px 20px;
-      & > div:nth-child(1) {
-        width: 97.876px;
-        height: 97.876px;
-        min-width: 97.876px;
-        & > img {
-          width: 100%;
-          height: 100%;
-        }
+      .product-list {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        justify-content: space-between;
+        gap: 7.69vw 3.07vw;
       }
-      & > div:nth-child(2) {
-        & > div:nth-child(1) {
-          color: var(--Deep-Blue, #3e5270);
-          font-family: "Noto Sans HK";
-          font-size: 14px;
-          font-style: normal;
-          font-weight: 700;
-          line-height: 14.681px; /* 104.868% */
-          letter-spacing: 0.7px;
-          margin-bottom: 10px;
-          
 
+      .product-list-box {
+        cursor: pointer;
+
+        &>div:nth-child(1) {
+          border-radius: 2.564vw;
+          background: var(--Skin, #eafbff);
+          box-shadow: 0px 0.5128vw 1.025vw rgba(0, 0, 0, 0.25);
+          width: 26.923vw;
+          height: 26.923vw;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         }
-        & > div:nth-child(2) {
+
+        &>div:nth-child(2) {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 3.33vw;
           color: #60605f;
+          text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 12px;
+          font-size: 4.2vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 14px; /* 116.667% */
-          letter-spacing: 0.6px;
-          // text-indent: 10px;
-            & > .kong {
-            display: block;
-            min-height: 10px;
+          line-height: 5.768vw;
+          /* 136.364% */
+          letter-spacing: 0.825px;
+        }
+      }
+
+      .context {
+        grid-column: span 3;
+
+        &>div {
+          width: 100% !important;
+          height: auto !important;
+          position: relative;
+          border-radius: 2.05vw;
+          background: var(--Skin, #eafbff);
+          box-shadow: 0px 0px 0.85vw 0px rgba(0, 0, 0, 0.25);
+          min-height: 166px;
+          display: flex;
+          align-items: flex-start !important;
+          gap: 0 3.07vw;
+          box-sizing: border-box;
+          padding: 3.589vw 3.33vw 5.128vw;
+
+          &>div:nth-child(1) {
+            width: 25.0965vw;
+            height: 25.0965vw;
+            min-width: 25.0965vw;
+
+            &>img {
+              width: 100%;
+              height: 100%;
+            }
           }
-          
+
+          &>div:nth-child(2) {
+            &>div:nth-child(1) {
+              color: var(--Deep-Blue, #3e5270);
+              font-family: "Noto Sans HK";
+              font-size: 3.589vw;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 3.765vw;
+              /* 104.868% */
+              letter-spacing: 0.7px;
+              margin-bottom: 2.564vw;
+
+
+            }
+
+            &>div:nth-child(2) {
+              color: #60605f;
+              font-family: "Noto Sans HK";
+              font-size: 3.07vw;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 3.589vw;
+              /* 116.667% */
+              letter-spacing: 0.1.538vw;
+              text-indent: 2.564vw;
+
+              &>.kong {
+                display: block;
+                min-height: 2.564vw;
+              }
+
+            }
+          }
+
+          &>div:nth-child(3) {
+            position: absolute;
+            right: 2.564vw;
+            top: 1.538vw;
+            cursor: pointer;
+            box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
+            border-radius: 50%;
+            width: 16px;
+            height: 16px;
+
+            &>svg {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          &>div:nth-child(3):hover {
+            transform: scale(1.1);
+            transition: all 0.3s ease;
+            box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
+          }
         }
       }
-      & > div:nth-child(3) {
-        position: absolute;
-        right: 10px;
-        top: 6px;
-        cursor: pointer;
-        box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
-        border-radius: 50%;
-        width: 16px;
-        height: 16px;
-        & > svg {
-          width: 100%;
-          height: 100%;
-        }
-      }
-      & > div:nth-child(3):hover {
-        transform: scale(1.1);
-        transition: all 0.3s ease;
-        box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+
+      .active {
+        background: linear-gradient(0deg,
+            rgba(0, 100, 255, 0.1) 0%,
+            rgba(0, 100, 255, 0.1) 100%),
+          var(--Skin, #eafbff) !important;
       }
     }
-  }
-  .active {
-    background: linear-gradient(
-        0deg,
-        rgba(0, 100, 255, 0.1) 0%,
-        rgba(0, 100, 255, 0.1) 100%
-      ),
-      var(--Skin, #eafbff) !important;
-  }
-}
 </style>

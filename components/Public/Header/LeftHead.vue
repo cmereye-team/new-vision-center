@@ -86,14 +86,25 @@
 </template>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+  .LeftHead {
+    & > a {
+      display: flex;
+      width: 8.4895vw;
+      height: 3.125vw;
+      & > svg {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
 }
 @media screen and (max-width: 767px) {
   .LeftHead {
     & > a {
       display: flex;
-      width: 117.555px;
-      height: 49px;
+      width: 30.1423vw;
+      height: 12.564vw;
       & > svg {
         width: 100%;
         height: 100%;

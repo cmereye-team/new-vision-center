@@ -563,21 +563,21 @@ const handleMouseleave = () => {
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
       background: #fff;
-      right: -82.2%;
+      right: -82%;
       top: -68%;
       border-radius: 5px;
       & > div {
         & > a {
-          padding: 15px 30px;
+          padding: 0.78125vw 1.5625vw;
           display: block;
           color: #6f6f6f;
           font-family: "Inter";
-          font-size: 15px;
+          font-size: 0.78125vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 20px;
+          line-height: 1.04165vw;
           & > span {
-            padding-bottom: 10px;
+            padding-bottom: 1.04165vw;
             border-bottom: 1px solid #00a6ce;
           }
         }
@@ -593,8 +593,8 @@ const handleMouseleave = () => {
             background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
               no-repeat;
             position: absolute;
-            left: 15px;
-            top: 18px;
+            left: 0.48125vw;
+            top: 0.7375vw;
           }
         }
       }
@@ -783,8 +783,8 @@ const handleMouseleave = () => {
     }
   }
   .search {
-    max-width: 190px;
-    margin: 0 10px 0 30px;
+    max-width: 9.895vw;
+    margin: 0 0.52vw 0 1.5625vw;
     :deep(.el-input) {
       width: 100%;
     }
@@ -1210,8 +1210,8 @@ const handleMouseleave = () => {
     }
   }
   .search {
-    max-width: 190px;
-    margin: 0 10px 0 30px;
+    max-width: 9.895vw;
+    margin: 0 0.52vw 0 1.5625vw;
     :deep(.el-input) {
       width: 100%;
     }

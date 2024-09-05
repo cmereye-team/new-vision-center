@@ -251,8 +251,6 @@ const listDataDetail = [
     ],
   },
   {
-    
-    
     img: "https://static.cmereye.com/imgs/2024/06/296021be922a80ba.png",
     title: "視網膜掃描攝影（SLO）",
     description: [
@@ -357,8 +355,8 @@ const listDataDetail = [
       font-weight: 400;
       line-height: normal;
       border-radius: 20px;
-      &:hover{
-         background: #00a6ce;
+      &:hover {
+        background: #00a6ce;
       }
       & > span:nth-child(2) {
         margin: 0 6px;
@@ -380,19 +378,21 @@ const listDataDetail = [
 }
 @media screen and (max-width: 767px) {
   .optical-service {
-    padding: 0 25px;
-    margin-top: 30px;
-    margin-bottom: 14px;
+    padding: 0 6.4vw;
+    margin-top: 7.69vw;
+    margin-bottom: 3.589vw;
   }
+
   .product-list {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+
     & > div:nth-child(1) {
       & > div {
         & > div:nth-child(1) {
-          border-radius: 10px;
+          border-radius: 2.564vw;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           width: 105px;
@@ -401,6 +401,7 @@ const listDataDetail = [
           justify-content: center;
           align-items: center;
         }
+
         & > div:nth-child(2) {
           display: flex;
           flex-direction: column;
@@ -412,38 +413,44 @@ const listDataDetail = [
           font-size: 16.5px;
           font-style: normal;
           font-weight: 500;
-          line-height: 22.5px; /* 136.364% */
+          line-height: 22.5px;
+          /* 136.364% */
           letter-spacing: 0.825px;
         }
       }
     }
+
     & > div:nth-child(2) {
       margin: 0 auto;
     }
   }
+
   .glasses-type {
-    margin: 30px auto 20px;
+    margin: 7.69vw auto 5.128vw;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 7.5px;
+
     & > a {
       display: flex;
       align-items: center;
       background: #3333;
-      box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
-      padding: 7px 10px;
+      box-shadow: 0px 1.538vw 2.05vw 0.76vw rgba(0, 0, 0, 0.1) inset;
+      padding: 1.79vw 2.564vw;
       color: #fff;
       text-align: center;
       font-family: "Inter";
-      font-size: 18px;
+      font-size: 4.615vw;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      border-radius: 20px;
+      border-radius: 5.128vw;
+
       & > span:nth-child(2) {
-        margin: 0 3px;
+        margin: 0 0.76vw;
       }
+
       & > span:nth-child(1),
       & > span:nth-child(3) {
         display: flex;
@@ -451,6 +458,7 @@ const listDataDetail = [
         justify-content: center;
       }
     }
+
     & > a:nth-child(2) {
       background: #95df82;
     }

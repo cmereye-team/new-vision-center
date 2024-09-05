@@ -25,11 +25,9 @@ const miSightQuestionList = [
       `觸等。此外，定期的眼部檢查和鏡片更換也是確保鏡片效果和眼部健康`,
       `的重要步驟。嚴格遵循視光師的建議和指導，以確保正確使用和維護鏡`,
       `片。`,
-
-
     ],
     mAq: [
-     `配戴任何接觸鏡都需要特殊的護理和注意事項。這包括定期清潔鏡片遵循視光師的建議和指示、避免使用過期的鏡片、避免與水或化妝品接觸等。此外，定期的眼部檢查和鏡片更換也是確保鏡片效果和眼部健康的重要步驟。嚴格遵循視光師的建議和指導，以確保正確使用和維護鏡片。`,
+      `配戴任何接觸鏡都需要特殊的護理和注意事項。這包括定期清潔鏡片遵循視光師的建議和指示、避免使用過期的鏡片、避免與水或化妝品接觸等。此外，定期的眼部檢查和鏡片更換也是確保鏡片效果和眼部健康的重要步驟。嚴格遵循視光師的建議和指導，以確保正確使用和維護鏡片。`,
     ],
   },
   {
@@ -39,7 +37,6 @@ const miSightQuestionList = [
       `能完全適應。在適應期間，可能會出現一些不適感、模糊和眼睛疲勞等`,
       `症狀，但這些通常會隨著時間的推移而改善。重要的是在適應期內與視`,
       `光師保持密切的聯繫，並遵循視光師的建議和指示。`,
-
     ],
     mAq: [
       `RGP鏡和鞏膜鏡的適應期因個人而異，可能需要幾天到幾個月的時間才能完全適應。在適應期間，可能會出現一些不適感、模糊和眼睛疲勞等症狀，但這些通常會隨著時間的推移而改善。重要的是在適應期內與視光師保持密切的聯繫，並遵循視光師的建議和指示。`,
@@ -677,187 +674,262 @@ const btnElement = ref({
   }
 }
 @media screen and (max-width: 767px) {
-  .scleral-lens {
-    padding: 0 25px;
-    margin-top: 25px;
-    margin-bottom: 40px;
-  }
-  .misight-btn {
-    display: flex;
-    justify-content: center;
-    :deep(.slot) {
-      & > div {
-        border-radius: 10px;
+  :deep(.question) {
+    padding: 0 5.897vw 0 5.64vw;
+    margin-top: 8.2vw;
+    & > div {
+      & > div:nth-child(2) {
+        & > div {
+          button {
+            font-size: 4.615vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 6.665vw;
+            text-align: left;
+            padding-left: 10.1025vw;
+            min-height: 17.948vw;
+            padding-right: 6.6vw;
+          }
+          .el-collapse-item__header::before {
+            font-size: 7.179vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 11.8874vw; /* 165.577% */
+            letter-spacing: 1.4px;
+            left: 2.564vw;
+          }
+          .el-collapse-item__header {
+            & > i {
+              min-width: 3.589vw;
+              min-height: 6.665vw;
+            }
+          }
+          .el-collapse-item__arrow.is-active {
+            min-width: 6.665vw;
+            min-height: 3.589vw;
+          }
+          .el-collapse-item__header.is-active::before {
+            font-size: 7.1789vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 11.88vw; /* 165.577% */
+            letter-spacing: 0.3589vw;
+          }
+        }
       }
     }
   }
+  .scleral-lens {
+    padding: 0 6.4vw;
+    margin-top: 6.4vw;
+    margin-bottom: 10.25vw;
+  }
+
+  .misight-btn {
+    display: flex;
+    justify-content: center;
+
+    :deep(.slot) {
+      & > div {
+        border-radius: 2.564vw;
+      }
+    }
+  }
+
   .type {
     & > div:nth-child(1) {
       display: flex;
       justify-content: center;
-      gap: 0 5px;
+      gap: 0 1.28vw;
+
       & > a {
         display: flex;
         align-items: center;
+
         & > span:nth-child(2) {
-          margin: 0 5px;
+          margin: 0 1.28vw;
           color: #fff;
           text-align: center;
           font-family: "Inter";
-          font-size: 18px;
+          font-size: 4.615vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
           text-wrap: nowrap;
         }
+
         box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
-        padding: 6px 10px;
+        padding: 6px 2.564vw;
         background: #00a6ce;
-        border-radius: 20px;
+        border-radius: 5.128vw;
       }
+
       & > a:nth-child(2) {
         background: #6f5ea0;
       }
     }
+
     & > div:nth-child(2) {
       display: flex;
       flex-direction: column-reverse;
-      border-radius: 27.75px;
+      border-radius: 7.12vw;
       background: var(--Skin, #eafbff);
-      box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
-      margin-top: 23px;
+      box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
+      margin-top: 5.897vw;
       box-sizing: border-box;
-      padding: 18px 19px;
+      padding: 4.615vw 4.87vw;
       position: relative;
+
       & > div:nth-child(1) {
-        margin-top: 25px;
+        margin-top: 6.4vw;
+
         & > div:nth-child(1) {
           position: absolute;
-          top: 23px;
+          top: 5.897vw;
           left: 50%;
           transform: translateX(-50%);
         }
+
         & > div:nth-child(2) {
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 23px; /* 164.286% */
+          line-height: 5.897vw;
+          /* 164.286% */
         }
       }
+
       & > div:nth-child(2) {
-        width: 281px;
-        margin: 85px auto 0;
+        width: 72.05vw;
+        margin: 21.78vw auto 0;
+
         & > img {
           width: 100%;
         }
       }
     }
   }
+
   .fake-text {
-    margin: 24px auto;
+    margin: 6.154vw auto;
+
     & > div:nth-child(2) {
-      margin-top: 16px;
+      margin-top: 4.1vw;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 14px;
+      font-size: 3.589vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23px; /* 164.286% */
+      line-height: 5.897vw;
+      /* 164.286% */
     }
   }
+
   .misight-crowd-content {
-    margin-top: 40px;
+    margin-top: 10.25vw;
+
     & > div:nth-child(1) {
       color: #00a6ce;
       font-family: "Inter";
-      font-size: 20px;
+      font-size: 5.128vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      margin-bottom: 16px;
+      margin-bottom: 4.1vw;
     }
+
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px 12px;
+      gap: 5.64vw 3.076vw;
+
       & > div {
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
           background: #e4faff;
-          box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 0.5128vw 1.025vw rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
-          border-radius: 10px;
+          border-radius: 2.564vw;
         }
+
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top: 4.35vw;
           display: flex;
           flex-direction: column;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw;
+          /* 114.286% */
           text-transform: uppercase;
         }
       }
+
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 59.014px;
-            height: 64px;
+            width: 15.128vw;
+            height: 16.41vw;
           }
         }
       }
+
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 64.516px;
-            height: 57.001px;
+            width: 16.41vw;
+            height: 14.615vw;
           }
         }
       }
+
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 80px;
-            height: 59.688px;
+            width: 20.5128vw;
+            height: 15.384vw;
           }
         }
       }
+
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 59px;
-            height: 59px;
+            width: 15.128vw;
+            height: 15.128vw;
           }
         }
       }
+
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 69px;
-            height: 69px;
+            width: 17.69vw;
+            height: 17.69vw;
           }
         }
       }
     }
   }
+
   :deep(.question) {
     margin-top: 32px;
+
     & > div {
       & > div:nth-child(2) {
         & > div {
           button {
-            font-size: 18px;
+            font-size: 4.615vw;
             font-style: normal;
             font-weight: 700;
             line-height: 26px;
@@ -865,29 +937,35 @@ const btnElement = ref({
             padding-left: 50px;
             min-height: 71px;
           }
+
           .el-collapse-item__header::before {
             font-size: 28px;
             font-style: normal;
             font-weight: 700;
-            line-height: 46.361px; /* 165.577% */
+            line-height: 46.361px;
+            /* 165.577% */
             letter-spacing: 1.4px;
-            left: 10px;
+            left: 2.564vw;
           }
+
           .el-collapse-item__header {
             & > i {
-              min-width: 14px;
+              min-width: 3.589vw;
               min-height: 26px;
             }
           }
+
           .el-collapse-item__arrow.is-active {
             min-width: 26px;
-            min-height: 14px;
+            min-height: 3.589vw;
           }
+
           .el-collapse-item__header.is-active::before {
             font-size: 28px;
             font-style: normal;
             font-weight: 700;
-            line-height: 46.361px; /* 165.577% */
+            line-height: 46.361px;
+            /* 165.577% */
             letter-spacing: 1.4px;
           }
         }

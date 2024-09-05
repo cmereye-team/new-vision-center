@@ -751,6 +751,11 @@ const clickQuestion = (id: number) => {
 //       }
 // }
 @media screen and (min-width: 768px) {
+  :deep(.questionTip) {
+    .el-collapse-item__content {
+      padding: 24px 30px;
+    }
+  }
   .daily-eye-care-box {
     max-width: 960px;
     padding: 0 120px;
@@ -1014,6 +1019,20 @@ const clickQuestion = (id: number) => {
   }
 }
 @media screen and (max-width: 767px) {
+  :deep(.questionTip) {
+    .el-collapse-item__header{
+      font-size: 4.615vw;
+      padding: 2.3vw 10.25vw 2.3vw 11.38vw;
+      letter-spacing: 1px;
+      line-height: 6.15vw;
+    }
+    .el-collapse-item__content {
+      font-size: 3.589vw;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5.89vw;
+    }
+  }
   .daily-eye-care-box {
     margin-top: 25px;
     padding: 0 18px;
@@ -1021,33 +1040,33 @@ const clickQuestion = (id: number) => {
   }
   .everyday {
     & > div:nth-child(2) {
-      margin-top: 28px;
+      margin-top: 7.178vw;
       :deep(.product-list) {
-        gap: 30px 10px;
+        gap: 7.69vw 3.07vw;
         & > div {
           display: flex;
           flex-direction: column;
           align-items: center;
           & > div:nth-child(1) {
-            width: 95.116px;
-            height: 95.116px;
-            border-radius: 17.294px;
+            width: 24.389vw;
+            height: 24.389vw;
+            border-radius: 7.1vw;
             display: flex;
             justify-content: center;
             align-items: center;
             & > img {
-              max-height: 62px;
-              max-width: 72px;
+              max-height: 15.89vw;
+              max-width: 18.46vw;
               width: 50%;
               height: auto;
-              min-height: 25px;
-              min-width: 43px;
+              min-height: 6.4vw;
+              min-width: 11vw;
             }
           }
           & > div:nth-child(2) {
-            font-size: 16px;
+            font-size: 4.1vw;
             font-weight: 500;
-            line-height: 20px;
+            line-height: 5.128vw;
             display: block;
             & > span {
               display: inline;

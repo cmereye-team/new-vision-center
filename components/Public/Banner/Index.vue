@@ -96,30 +96,31 @@ const props = defineProps({
     }
     & > div:nth-child(3) {
       position: fixed;
-      top: 8.183vw;
+      top: 7vw;
       right: 0;
-      z-index: 99;
       .banner-template-btn {
-        position: absolute;
+        z-index: 99;
+        position: sticky;
         top: 0;
+        right: 0;
         display: flex;
         z-index: 9;
 
         & > a {
           display: flex;
           align-items: center;
-          margin-right: 10px;
+          margin-right: 0.52vw;
           text-decoration: none;
           & > div:nth-child(1) {
             display: flex;
             align-items: center;
-            margin-right: 5px;
+            margin-right: 0.26vw;
           }
           & > div:nth-child(2) {
             color: #fff;
             text-align: center;
             font-family: "Inter";
-            font-size: 12px;
+            font-size: 0.625vw;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -133,19 +134,19 @@ const props = defineProps({
         // }
         & > a:hover {
           background: rgb(61, 106, 255);
-          box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
+          box-shadow: 0 0 1.5625vw 0.26vw rgba(0, 142, 236, 0.815);
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
         }
         & > a:nth-child(1) {
-          padding: 13px 11px 13px 16px;
-          border-radius: 0px 0px 10px 10px;
+          padding: 0.675vw 0.573vw 0.675vw 0.83vw;
+          border-radius: 0px 0px 0.521vw 0.521vw;
           background: var(--Basic-2, #59ba68);
         }
         & > a:nth-child(2) {
-          padding: 15px 13px 15px 19px;
-          border-radius: 0px 0px 10px 10px;
+          padding: 0.78125vw 0.6771vw 0.78125vw 0.99vw;
+          border-radius: 0px 0px 0.521vw 0.521vw;
           background: #00a6ce;
         }
       }
@@ -221,7 +222,7 @@ const props = defineProps({
     }
     & > div:nth-child(3) {
       position: fixed;
-      top: 136px;
+      top: 130px;
       right: 0;
       z-index: 99;
       .banner-template-btn {

@@ -55,7 +55,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/1294e900e7debac6.png",
       title: ["近視控制", "檢查方案"],
-      link: "http://cmervision.sprite.eu.org/myopia-control",
+      link: "/myopia-control",
       text: ["低至"],
       context: [],
       price: "350",
@@ -63,7 +63,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/4fb495e912701d2c.png",
       title: ["角膜矯形鏡", "合適性檢查套餐"],
-      link: "http://cmervision.sprite.eu.org/orthokeratoplasty",
+      link: "/orthokeratoplasty",
       text: ["低至"],
       context: [],
       price: "1,000",
@@ -71,7 +71,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/2fce54bd583f773d.png",
       title: ["專業驗配近視", "控制眼鏡"],
-      link: "http://cmervision.sprite.eu.org/eye-examination-child",
+      link: "/eye-examination-child",
       text: [],
       context: ["買鏡片", "送鏡架"],
       price: "",
@@ -79,7 +79,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/c0e70a7699fdb561.png",
       title: ["眼睛檢查套餐"],
-      link: "https://cmervision.sprite.eu.org/eye-examination-adult",
+      link: "/eye-examination-adult",
       text: ["低至"],
       context: [],
       price: "350",
@@ -87,7 +87,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/9ffb4105482ebeb2.png",
       title: ["青光眼檢查", "套餐"],
-      link: "https://cmervision.sprite.eu.org/eye-examination-adult",
+      link: "/eye-examination-adult",
       text: ["低至"],
       context: [],
       price: "1,000",
@@ -95,7 +95,7 @@ const services = {
     {
       img: "https://static.cmereye.com/imgs/2024/05/345093cb5a583346.png",
       title: ["隱形眼鏡", "驗配套餐"],
-      link: "http://cmervision.sprite.eu.org/soft-contact-lens",
+      link: "/soft-contact-lens",
       text: ["低至"],
       context: [],
       price: "350",
