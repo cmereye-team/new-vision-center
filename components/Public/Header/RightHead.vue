@@ -1067,8 +1067,16 @@ const handleMouseleave = () => {
       }
       &>div:last-child{
         &>a{
+          padding-top: 5px;
           &>span{
             padding-bottom: 0;
+          }
+        }
+      }
+      &>div:last-child:hover{
+        &>a{
+          &>span::before{
+            top: 10px;
           }
         }
       }
