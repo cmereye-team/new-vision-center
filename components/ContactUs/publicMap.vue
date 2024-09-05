@@ -310,7 +310,7 @@ const props = defineProps({
   .publicMap {
     margin-top: 86px;
     & > div:nth-child(2) {
-      margin: 20px 0;
+      margin: 30px 0;
     }
   }
   .publicMap-item {
@@ -335,7 +335,7 @@ const props = defineProps({
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 20.895px;
         font-style: normal;
         font-weight: 600;
@@ -355,7 +355,7 @@ const props = defineProps({
       & > div:nth-child(2) {
         margin-top: 10px;
         color: #60605f;
-        font-family: Inter;
+        font-family: "Noto Sans HK";
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
@@ -370,7 +370,7 @@ const props = defineProps({
           display: flex;
           align-items: center;
           color: #59ba68;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 13.197px;
           font-style: normal;
           font-weight: 600;
@@ -386,7 +386,7 @@ const props = defineProps({
           display: flex;
           flex-direction: column;
           color: #60605f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 13.5px;
           font-style: normal;
           font-weight: 400;
@@ -427,7 +427,7 @@ const props = defineProps({
         position: relative;
         width: fit-content;
         color: #fff;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 13.134px;
         font-style: normal;
         font-weight: 400;
@@ -475,7 +475,7 @@ const props = defineProps({
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 27.86px;
         font-style: normal;
         font-weight: 600;
@@ -495,7 +495,7 @@ const props = defineProps({
       & > div:nth-child(2) {
         color: #60605f;
 
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15.92px;
         font-style: normal;
         font-weight: 500;
@@ -512,7 +512,7 @@ const props = defineProps({
           align-items: center;
           color: #59ba68;
 
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 16px;
           font-style: normal;
           font-weight: 600;
@@ -526,7 +526,7 @@ const props = defineProps({
         & > div:nth-child(2) {
           margin-top: 10px;
           color: #60605f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -559,7 +559,7 @@ const props = defineProps({
 
         color: #fff;
 
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 17.512px;
         font-style: normal;
         font-weight: 400;

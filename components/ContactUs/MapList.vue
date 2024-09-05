@@ -19,9 +19,9 @@ const choose = (num: number) => {
 };
 
 const portLandList = ref([
-   {
+  {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/bf94f6316d886c48.png",
+    img: "https://static.cmereye.com/imgs/2024/04/c7c23405fb3f9d9b.png",
     region: "中環",
     name: "希瑪視光中心 - ZEISS VISION EXPERT",
     googleMap: "https://maps.app.goo.gl/moVYZoZpcDKeraBz6",
@@ -38,7 +38,7 @@ const portLandList = ref([
   },
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/c7c23405fb3f9d9b.png",
+    img: "https://static.cmereye.com/imgs/2024/04/bf94f6316d886c48.png",
     region: "西環",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/ZTANTUau8LLbTSVZ6",
@@ -52,7 +52,7 @@ const portLandList = ref([
     ],
     call: "+852 3892 5089",
   },
- 
+
   {
     id: 3,
     img: "https://static.cmereye.com/imgs/2024/04/c1230f61a75e9531.png",
@@ -280,7 +280,7 @@ onMounted(() => {
     font-family: "Noto Sans HK";
     padding: 13px 36px;
     color: #00a6ce;
-  
+
     font-size: 20px;
     font-style: normal;
     font-weight: 700;

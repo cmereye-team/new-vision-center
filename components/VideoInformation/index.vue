@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import getWindowSize from "@/utils/width";
 const isPc = ref(false);
 // 检测获取屏幕宽度
 const getScreenWidth = () => {
@@ -8,17 +9,18 @@ const getScreenWidth = () => {
 };
 
 onMounted(() => {
-  if (window.innerWidth >= 768) {
-    isPc.value = true;
-  }
-  window.addEventListener("resize", getScreenWidth);
-  window.addEventListener("beforeunload", getScreenWidth);
   chooseType(1);
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
 });
 const listVideoAll: any = ref([]);
 const reelsListAll: any = ref([]);
 
-const chooseNumber = ref(2);
+const chooseNumber = ref(1);
 
 const allVideo = ref(true);
 const orthokeratology = ref(false);
@@ -434,11 +436,11 @@ const reelsListClass = ref([
     <div>
       <!-- reelsListOk 竖屏视频未分类 使用 reelsListOk 展示 -->
       <div v-if="allVideo">
-        <VideoInformationVideoList :list="listVideoAll" :key="1"/>
+        <VideoInformationVideoList :list="listVideoAll" :key="1" />
         <VideoInformationReels :list="reelsListAll" :key="2" />
       </div>
       <div v-if="orthokeratology">
-        <VideoInformationVideoList :list="listVideoOk"  :key="3"/>
+        <VideoInformationVideoList :list="listVideoOk" :key="3" />
         <VideoInformationReels :list="reelsListOk" :key="4" />
       </div>
       <!-- <div v-if="share">
@@ -446,9 +448,9 @@ const reelsListClass = ref([
         <VideoInformationReels :list="reelsListShare" />
       </div> -->
       <div v-if="classSmall">
-        <VideoInformationVideoList :list="listVideoClass"  :key="5"/>
+        <VideoInformationVideoList :list="listVideoClass" :key="5" />
         <!-- <VideoInformationReels :list="reelsListClass" /> -->
-        <VideoInformationReels :list="reelsListOk"  :key="6"/>
+        <VideoInformationReels :list="reelsListOk" :key="6" />
       </div>
     </div>
   </div>
@@ -477,7 +479,7 @@ const reelsListClass = ref([
     margin: 55px auto 35px;
     display: flex;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 15px;
     border: 0.723px solid var(--Brand-Color, #00a6ce);
     & > div {
       text-align: center;
@@ -501,7 +503,6 @@ const reelsListClass = ref([
     }
 
     .active {
- 
       border-radius: 10px;
       background: var(--Brand-Color, #00a6ce);
       color: var(--Brand-Color, #fff);
@@ -519,15 +520,15 @@ const reelsListClass = ref([
 }
 @media screen and (max-width: 767px) {
   .information {
-    margin-bottom: 40px;
+    margin-bottom: 10.25px;
     & > div {
-      padding: 20px 0 0;
+      padding: 5.128vw 0 0;
     }
   }
   .information-title {
     color: #00a6ce;
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 5.128vw;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -537,22 +538,22 @@ const reelsListClass = ref([
     width: 100%;
     background: url("https://static.cmereye.com/imgs/2024/04/c786ab28df4196ee.png")
       no-repeat;
-    height: 42px;
+    height: 10.769vw;
     background-position: right;
-    border-radius: 18px;
+    border-radius: 4.615vw;
     border: 1px solid #d9d9d9;
-    padding: 11px 18px;
+    padding: 2.82vw 4.615vw;
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 16px;
+    font-size: 4.1vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
-    letter-spacing: 1.6px;
+    letter-spacing: 0.41vw;
     text-transform: uppercase;
   }
   .select-type option {
-    margin-top: 10px;
+    margin-top: 2.56vw;
   }
   .select-type:focus-visible {
     outline: none;

@@ -454,7 +454,8 @@ const props = defineProps({
     }
 
     & > div:nth-child(2),
-    & > div:nth-child(4) {
+    & > div:nth-child(4),
+    & > div:nth-child(6) {
       & > div:nth-child(1) {
         background: #4a83a3;
         border-top: 1px solid #8fb3c6;

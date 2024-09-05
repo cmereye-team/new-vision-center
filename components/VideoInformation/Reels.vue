@@ -145,18 +145,18 @@ onMounted(() => {
 }
 @media screen and (max-width: 767px) {
   .Reels {
-    margin-top: 35px;
+    margin-top: 8.97vw;
     position: relative;
   }
   .reels-title {
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 5.128vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     text-transform: uppercase;
-    margin-bottom: 20px;
+    margin-bottom: 5.128vw;
   }
   :deep(.swiper-button-next) {
     right: 0;
@@ -181,7 +181,7 @@ onMounted(() => {
   }
 
   :deep(.swiper) {
-    padding: 0 30px;
+    padding: 0 7.69vw;
   }
   .swiper-button-next-prev {
     position: absolute;
@@ -196,8 +196,8 @@ onMounted(() => {
       background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
         no-repeat;
       background-position: right;
-      width: 20px;
-      height: 40px;
+      width: 5.128vw;
+      height: 10.25vw;
     }
     & > div:nth-child(2) {
       display: inline-block;
@@ -206,8 +206,8 @@ onMounted(() => {
       background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
         no-repeat;
       background-position: right;
-      width: 20px;
-      height: 40px;
+      width: 5.128vw;
+      height: 10.25vw;
     }
   }
 }

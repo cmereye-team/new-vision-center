@@ -233,7 +233,7 @@ const pathIsTrue = () => {
 };
 
 const showChildMenu = (index: any) => {
-  console.log('showChildMenu');
+  console.log("showChildMenu");
   menuList.value.forEach((item: any, i: number) => {
     if (i === index) {
       menuList.value[index].isChildVisible =
@@ -247,7 +247,7 @@ const showChildMenu = (index: any) => {
 const route = useRoute();
 const router = useRouter();
 const mbToLink = (item: any) => {
-  console.log('mbToLink');
+  console.log("mbToLink");
   router.push({
     path: item.path,
     query: {
@@ -257,14 +257,13 @@ const mbToLink = (item: any) => {
   pathIsTrue();
 };
 
-
 const headLink = (index: number, item: any) => {
-  if (item.path == '/' && !isPc) {
-    showChildMenu(index)
-  } else if (item.path == '/' && isPc) {
+  if (item.path == "/" && !isPc) {
+    showChildMenu(index);
+  } else if (item.path == "/" && isPc) {
     // console.log('pc')
   } else {
-    mbToLink(item)
+    mbToLink(item);
   }
 };
 
@@ -293,7 +292,7 @@ const handleMouseleave = () => {
         :class="`fa-${index + 1}`"
       >
         <nuxt-link
-          @click="headLink(index,item)"
+          @click="headLink(index, item)"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
@@ -496,7 +495,7 @@ const handleMouseleave = () => {
       display: flex;
       flex-direction: column;
       align-items: center;
-      padding-top: 10px;
+      padding-top: 0;
 
       & > div:last-child {
         border-bottom: none;
@@ -577,9 +576,10 @@ const handleMouseleave = () => {
       right: -82%;
       top: -68%;
       border-radius: 5px;
+      padding: 0.625vw 0;
       & > div {
         & > a {
-          padding: 0.78125vw 1.5625vw;
+          padding: 0.78125vw 1.5625vw 0 1.5625vw;
           display: block;
           color: #6f6f6f;
           font-family: "Inter";
@@ -587,19 +587,12 @@ const handleMouseleave = () => {
           font-style: normal;
           font-weight: 700;
           line-height: 1.04165vw;
-          min-width: 120px;
+          min-width: 6.25vw;
           & > span {
-            padding-bottom: 1.04165vw;
+            padding-bottom: 0.74165vw;
             border-bottom: 1px solid #00a6ce;
             width: 100%;
             display: inline-block;
-          }
-        }
-      }
-      &>div:last-child{
-        &>a{
-          &>span{
-            padding-bottom: 0;
           }
         }
       }
@@ -609,13 +602,15 @@ const handleMouseleave = () => {
           color: #00a6ce;
           & > span::before {
             content: "";
-            width: 11px;
-            height: 15px;
+            width: 0.58vw;
+            height: 0.78125vw;
             background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
               no-repeat;
             position: absolute;
+            background-size: 100% 100%;
             left: 0.48125vw;
-            top: 0.7375vw;
+            top: 50%;
+            transform: translateY(-50%);
           }
         }
       }
@@ -630,18 +625,19 @@ const handleMouseleave = () => {
       background: #fff;
       top: -18%;
       border-radius: 5px;
+      padding: 0.625vw 0;
       & > div {
         & > a {
-          padding: 15px 30px;
+          padding: 0.78125vw 1.5625vw ;
           display: block;
           color: #6f6f6f;
           font-family: "Inter";
-          font-size: 15px;
+          font-size: 0.78125vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 20px;
+          line-height: 1.04165vw;
           & > span {
-            padding-bottom: 10px;
+            padding-bottom: 0.52vw;
             border-bottom: 1px solid #00a6ce;
           }
         }
@@ -652,13 +648,15 @@ const handleMouseleave = () => {
           color: #00a6ce;
           & > span::before {
             content: "";
-            width: 11px;
-            height: 15px;
+            width: 0.58vw;
+            height: 0.78125vw;
             background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
               no-repeat;
             position: absolute;
-            left: 15px;
-            top: 18px;
+            background-size: 100% 100%;
+            left: 0.48125vw;
+            top: 50%;
+            transform: translateY(-50%);
           }
         }
       }
@@ -747,7 +745,7 @@ const handleMouseleave = () => {
         & > a {
           min-width: 120px;
           display: block;
-          &>span {
+          & > span {
             width: 100%;
             display: inline-block;
           }
@@ -757,7 +755,6 @@ const handleMouseleave = () => {
         & > a {
           & > span {
             border: none;
-            padding-bottom: 0;
           }
         }
       }
@@ -955,6 +952,7 @@ const handleMouseleave = () => {
     }
     .sub-menu {
       padding-top: 10px;
+      padding-bottom: 10px;
       box-shadow: #4d4d4d 5px 5px 10px;
       z-index: 999;
       border-radius: 5px;
@@ -996,7 +994,7 @@ const handleMouseleave = () => {
       font-style: normal;
       font-weight: 700;
       line-height: 20px;
-      padding: 15px 50px;
+      padding: 15px 50px 0 50px;
       display: block;
       & > span {
         padding-bottom: 10px;
@@ -1032,7 +1030,8 @@ const handleMouseleave = () => {
           no-repeat;
         position: absolute;
         left: 25px;
-        top: 18px;
+        top: 50%;
+        transform: translateY(-50%);
       }
     }
 
@@ -1046,9 +1045,10 @@ const handleMouseleave = () => {
       right: -82.2%;
       top: -68%;
       border-radius: 5px;
+      padding: 15px 0;
       & > div {
         & > a {
-          padding: 15px 30px;
+          padding: 15px 30px 0 30px;
           display: block;
           color: #6f6f6f;
           font-family: "Inter";
@@ -1065,17 +1065,9 @@ const handleMouseleave = () => {
           }
         }
       }
-      &>div:last-child{
-        &>a{
-          padding-top: 5px;
-          &>span{
-            padding-bottom: 0;
-          }
-        }
-      }
-      &>div:last-child:hover{
-        &>a{
-          &>span::before{
+      & > div:last-child:hover {
+        & > a {
+          & > span::before {
             top: 10px;
           }
         }

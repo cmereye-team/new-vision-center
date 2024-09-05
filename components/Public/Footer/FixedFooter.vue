@@ -27,7 +27,7 @@
       </div>
       <div><span>WhatsApp: </span><br /><span>6918 0511</span></div>
     </a>
-    <nuxt-link>
+    <a href="#public-form">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -55,7 +55,7 @@
         </svg>
       </div>
       <div>馬上預約</div>
-    </nuxt-link>
+    </a>
     <a href="tel:+85038925089" target="_blank">
       <div>
         <svg

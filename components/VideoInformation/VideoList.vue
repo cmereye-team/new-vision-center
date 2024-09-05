@@ -109,13 +109,13 @@ onMounted(() => {
 @media screen and (max-width: 767px) {
   .VideoList {
     & > div {
-      margin-top: 30px;
+      margin-top: 7.69vw;
     }
   }
   .video-title {
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 20px;
+    font-size: 5.128vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -128,22 +128,22 @@ onMounted(() => {
     }
     & > div::after {
       position: absolute;
-      top: 10px;
-      right: -20px;
+      top: 2.564vw;
+      right: -5.128vw;
       content: "";
       background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
         no-repeat;
       background-size: 100% 100%;
-      width: 14px;
-      height: 7px;
+      width: 3.589vw;
+      height: 1.79vw;
       display: block;
     }
   }
   .video-list {
-    margin: 30px auto 0;
+    margin: 7.69vw auto 0;
     & > a {
       display: block;
-      margin-bottom: 20px;
+      margin-bottom: 5.128vw;
       & > div:nth-child(1) {
         & > img {
           width: 100%;
@@ -157,10 +157,10 @@ onMounted(() => {
           color: #60605f;
           text-align: center;
           font-family: "Inter";
-          font-size: 18.13px;
+          font-size: 4.6vw;
           font-style: normal;
           font-weight: 400;
-          line-height: 24.723px; /* 136.364% */
+          line-height: 6.33vw; /* 136.364% */
           text-transform: uppercase;
         }
       }

@@ -42,12 +42,6 @@ const bannerImg = {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png")
-    //   no-repeat;
-    // background-size: 100% 100%;
-    // width: 100%;
-    // min-height: 800px;
-    // position: relative;
     span {
       position: relative;
       right: -180%;
@@ -68,34 +62,27 @@ const bannerImg = {
 }
 @media screen and (max-width: 767px) {
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/3deb4ec1da398c47.png")
-    //   no-repeat;
-    // background-size: 100% 100%;
-    // width: 100%;
-    // min-height: 390px;
-    // position: relative;
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 20.5128vw;
     span {
       position: absolute;
-      // bottom: 30px;
       top: 60%;
-      right: 10px;
+      right: 7.69vw;
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Inter";
-      font-size: 28px;
+      font-size: 7.179vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 5.6px;
+      letter-spacing: 1.436vw;
     }
   }
   .video-information-box {
-    padding: 0 24px;
+    padding: 0 6.15vw;
   }
 }
 </style>

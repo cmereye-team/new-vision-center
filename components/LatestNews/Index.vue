@@ -492,11 +492,11 @@ a {
       }
       & > div {
         a {
-          margin-right: 2.05vw;
-          padding: 1.5vw 2.5vw;
+          margin-right: 1.65vw;
+          padding: 1vw 2vw;
           color: #60605f;
           font-family: "Inter";
-          font-size: 2.5vw;
+          font-size: 2.4vw;
           font-style: normal;
           font-weight: 500;
           line-height: normal;
@@ -528,7 +528,7 @@ a {
       font-weight: 600;
       line-height: normal;
     }
-    &>div:nth-child(2) {
+    & > div:nth-child(2) {
       display: flex;
       justify-content: flex-end;
     }

@@ -745,6 +745,7 @@ const openVideo = (link: string) => {
   width: 100%;
   max-width: 960px;
   margin: 90px auto 0;
+  position: relative;
   &-t {
     display: flex;
     justify-content: space-between;
@@ -760,6 +761,7 @@ const openVideo = (link: string) => {
     .btn {
       display: flex;
       justify-content: space-between;
+      top: 10px;
       &-in {
         color: var(--White, #fff);
         text-align: center;
@@ -1299,6 +1301,185 @@ const openVideo = (link: string) => {
 }
 
 @media (min-width: 768px) and (max-width: 1452px) {
+  .services {
+    width: 100%;
+    max-width: 960px;
+    margin: 90px auto 0;
+    position: relative;
+    &-t {
+      display: flex;
+      justify-content: space-between;
+      .title {
+        color: var(--Brand-Color, #00a6ce);
+        font-family: "Noto Sans HK";
+        font-size: 33.75px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 45px; /* 133.333% */
+        letter-spacing: 1.688px;
+      }
+      .btn {
+        display: flex;
+        justify-content: space-between;
+        top: 0.52vw;
+        &-in {
+          color: var(--White, #fff);
+          text-align: center;
+          font-family: "Inter";
+          font-size: 1.146vw;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 120%;
+          border-radius: 30px;
+          display: flex;
+          align-items: center;
+          padding: 0.35vw 0.52vw;
+          margin-left: 7px;
+          box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
+          & > span:nth-child(1),
+          & > span:nth-child(3) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+          & > span:nth-child(2) {
+            padding: 0 6px 0 3px;
+          }
+        }
+        &-in:hover {
+          box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
+        }
+      }
+    }
+    &-b {
+      margin-top: 52px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 25px 24px;
+      .list-in {
+        padding: 10px 0 20px 15px;
+        background: #fff;
+        box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.1);
+        border-radius: 25px;
+        display: flex;
+        .image {
+          width: 148px;
+          margin-right: 15px;
+          img {
+            width: 100%;
+            border-radius: 20px;
+          }
+        }
+        .context {
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          &-t {
+            h3 {
+              color: var(--Grey, #4d4d4d);
+              font-family: "Noto Sans HK";
+              font-size: 16.5px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 22.5px; /* 136.364% */
+              letter-spacing: 0.825px;
+            }
+          }
+          &-b {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            &-l {
+              .context-text {
+                p {
+                  color: var(--Brand-2, #59ba68);
+                  font-family: "Noto Sans HK";
+                  font-size: 13.5px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 130%; /* 133.333% */
+                  text-transform: uppercase;
+                }
+              }
+              .context-context {
+                p {
+                  color: var(--Brand-2, #59ba68);
+                  font-family: "Noto Sans HK";
+                  font-size: 16.5px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 22.5px; /* 136.364% */
+                  letter-spacing: 0.825px;
+                }
+              }
+              .context-price {
+                p {
+                  color: var(--Brand-2, #59ba68);
+                  font-family: "Noto Sans HK";
+                  font-size: 13.5px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 130%;
+                  text-transform: uppercase;
+                  span {
+                    font-size: 25.5px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 30px;
+                  }
+                }
+              }
+            }
+            &-r {
+              margin-right: 20px;
+              width: 28px;
+              height: 28px;
+              position: relative;
+              & > span {
+                position: relative;
+                z-index: 1;
+                background: linear-gradient(90deg, #00a6ce 40%, #3346ed);
+                border-radius: 50%;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                transition: all 0.3s;
+                box-sizing: border-box;
+                cursor: pointer;
+              }
+              &::after {
+                content: "";
+                background: linear-gradient(90deg, #00a6ce 40%, #3346ed);
+                filter: blur(10px);
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                z-index: 0;
+                border-radius: 50%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                opacity: 0;
+                transition: all 0.3s;
+              }
+              &:hover {
+                & > span {
+                  border: 2px solid #fff;
+                }
+                &::after {
+                  opacity: 1;
+                  transform: translate(-50%, -50%) scale(1.2);
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
 @media screen and (max-width: 768px) {
   .miyosmart {
