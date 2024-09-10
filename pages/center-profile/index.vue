@@ -15,8 +15,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/bd3e2538003747d1.jpg",
-  mobile: "https://static.cmereye.com/imgs/2024/08/22f2cd11935da5db.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/bd3e2538003747d1.jpg",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/22f2cd11935da5db.jpg",
 };
 </script>
 
@@ -42,7 +42,7 @@ const bannerImg = {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/cb749c5077456981.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/cb749c5077456981.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
@@ -68,7 +68,7 @@ const bannerImg = {
 }
 @media screen and (max-width: 767px) {
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/89671f7269cf9352.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/89671f7269cf9352.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;

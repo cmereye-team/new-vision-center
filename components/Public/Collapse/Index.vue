@@ -109,7 +109,7 @@ const props = defineProps({
     }
 
     & > i {
-      background: url("https://static.cmereye.com/imgs/2024/05/f7365790c4b6ade8.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/f7365790c4b6ade8.png")
         no-repeat;
       background-size: 100% 100%;
       width: 19px;
@@ -137,7 +137,7 @@ const props = defineProps({
     letter-spacing: 1.688px;
   }
   :deep(.el-collapse-item__arrow.is-active) {
-    background: url("https://static.cmereye.com/imgs/2024/05/50c8a51799598ce1.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/50c8a51799598ce1.png")
       no-repeat;
     background-size: 100% 100%;
     width: 30px;
@@ -257,7 +257,7 @@ const props = defineProps({
     //   letter-spacing: 1.4px;
     // }
     & > i {
-      background: url("https://static.cmereye.com/imgs/2024/05/f7365790c4b6ade8.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/f7365790c4b6ade8.png")
         no-repeat;
       background-size: 100% 100%;
       width: 14px;
@@ -286,7 +286,7 @@ const props = defineProps({
     letter-spacing: 1.4px;
   }
   :deep(.el-collapse-item__arrow.is-active) {
-    background: url("https://static.cmereye.com/imgs/2024/05/50c8a51799598ce1.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/50c8a51799598ce1.png")
       no-repeat;
     background-size: 100% 100%;
     width: 26px;

@@ -21,7 +21,7 @@ const choose = (num: number) => {
 const portLandList = ref([
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/c7c23405fb3f9d9b.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c7c23405fb3f9d9b.png",
     region: "中環",
     name: "希瑪視光中心 - ZEISS VISION EXPERT",
     googleMap: "https://maps.app.goo.gl/moVYZoZpcDKeraBz6",
@@ -38,7 +38,7 @@ const portLandList = ref([
   },
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/bf94f6316d886c48.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/bf94f6316d886c48.png",
     region: "西環",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/ZTANTUau8LLbTSVZ6",
@@ -55,7 +55,7 @@ const portLandList = ref([
 
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/04/c1230f61a75e9531.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c1230f61a75e9531.png",
     region: "北角",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/mYM18kHBkvewkvpR9",
@@ -73,7 +73,7 @@ const portLandList = ref([
 const kowLoonList = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/f9531434e80bf5fd.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f9531434e80bf5fd.png",
     region: "旺角",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/4Bq588uzvEvFPWk78",
@@ -89,7 +89,7 @@ const kowLoonList = ref([
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/c75e4216c9d81a2e.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c75e4216c9d81a2e.png",
     region: "旺角雅蘭",
     name: "希瑪眼科視光中心",
     googleMap: "https://maps.app.goo.gl/Ya6NFkJQbiB1jFdk7",
@@ -106,7 +106,7 @@ const kowLoonList = ref([
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/04/99d36f94eaf96a1d.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/99d36f94eaf96a1d.png",
     region: "鑽石山",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "https://maps.app.goo.gl/xjng7ohyTBZMx5na6",
@@ -124,7 +124,7 @@ const kowLoonList = ref([
 const newTerritoriesList = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/873265f7b34ec11f.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/873265f7b34ec11f.png",
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "",
@@ -136,7 +136,7 @@ const newTerritoriesList = ref([
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/873265f7b34ec11f.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/873265f7b34ec11f.png",
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心（兒童近視控制中心）",
     googleMap: "",
@@ -148,7 +148,7 @@ const newTerritoriesList = ref([
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/04/c631f8678184f3da.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c631f8678184f3da.png",
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心（兒童近視控制中心）",
     googleMap: "",

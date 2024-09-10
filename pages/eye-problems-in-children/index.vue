@@ -18,8 +18,8 @@ useHead(() => ({
 }));
 
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/5e27719e1efbd627.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/b60c12bfd7f927fe.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/5e27719e1efbd627.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/b60c12bfd7f927fe.png",
 };
 const numberContent = ref(0);
 const checkClassify = (idx: any) => {
@@ -305,7 +305,7 @@ onMounted(() => {
           <div v-if="numberContent == 0" class="classify-box">
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/06/25db4fe9ac22dac9.png"
+                src="https://statichk.cmermedical.com/vision/imgs/25db4fe9ac22dac9.png"
                 alt="多區正向光學離焦"
               />
             </div>
@@ -381,7 +381,7 @@ onMounted(() => {
           <div v-if="numberContent == 1" class="classify-box">
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/06/8843b7fa37f67b92.png"
+                src="https://statichk.cmermedical.com/vision/imgs/8843b7fa37f67b92.png"
                 alt="角膜矯形術"
               />
             </div>
@@ -453,7 +453,7 @@ onMounted(() => {
           <div v-if="numberContent == 2" class="classify-box">
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/06/fe1a6f8670e74335.png"
+                src="https://statichk.cmermedical.com/vision/imgs/fe1a6f8670e74335.png"
                 alt="阿托品眼藥水"
               />
             </div>
@@ -558,7 +558,7 @@ onMounted(() => {
           <div>視網膜上的視錐細胞：</div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/06/f1840904b899e35c.png"
+              src="https://statichk.cmermedical.com/vision/imgs/f1840904b899e35c.png"
               alt="色彩系统"
             />
           </div>
@@ -651,7 +651,7 @@ onMounted(() => {
         >
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/06/26156b818e07191f.png"
+              src="https://statichk.cmermedical.com/vision/imgs/26156b818e07191f.png"
               alt="斜視"
             />
           </div>
@@ -751,7 +751,7 @@ onMounted(() => {
         >
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/09/17be528b25568639.png"
+              src="https://statichk.cmermedical.com/vision/imgs/17be528b25568639.png"
               alt="斜視"
             />
           </div>
@@ -1441,7 +1441,7 @@ onMounted(() => {
     }
   }
   .ocular-sore {
-    background: url("https://static.cmereye.com/imgs/2024/06/aff037f00bb9f49c.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/aff037f00bb9f49c.png")
       no-repeat;
     background-size: 100% 100%;
     min-height: 370px;
@@ -1515,7 +1515,7 @@ onMounted(() => {
         & > div:nth-child(2)::after {
           content: "";
           position: absolute;
-          background: url("https://static.cmereye.com/imgs/2024/06/ae2a0af1db5be323.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/ae2a0af1db5be323.png")
             no-repeat;
           width: 19.5px;
           height: 35.25px;
@@ -2020,7 +2020,7 @@ onMounted(() => {
   .ocular-sore {
     margin-top: 30px;
     margin-bottom: 25px;
-    background: url("https://static.cmereye.com/imgs/2024/06/9448e8b36dc31ce2.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/9448e8b36dc31ce2.png")
       no-repeat;
     background-size: 100% 100%;
     min-height: 340px;

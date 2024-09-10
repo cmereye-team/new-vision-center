@@ -3,8 +3,8 @@ useHead(() => ({
   title: "成人視力服務- 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/63a1472e5dded066.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/48f29da7cff637da.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/63a1472e5dded066.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/48f29da7cff637da.png",
 };
 
 const btnElement = ref({
@@ -1588,7 +1588,7 @@ const btnElement = ref({
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url(https://static.cmereye.com/imgs/2024/05/ba211b6cd92570ba.png)
+        background: url(https://statichk.cmermedical.com/vision/imgs/ba211b6cd92570ba.png)
           no-repeat;
         background-size: 100% 100%;
         width: 148px;
@@ -1792,7 +1792,7 @@ const btnElement = ref({
       margin-top: 55px;
       height: 370px;
       box-sizing: border-box;
-      background: url("https://static.cmereye.com/imgs/2024/05/9d5f369cac280eda.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/9d5f369cac280eda.png")
         no-repeat;
       background-size: 100% 100%;
       border-radius: 15px;
@@ -1973,7 +1973,7 @@ const btnElement = ref({
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/ba211b6cd92570ba.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/ba211b6cd92570ba.png")
           no-repeat;
         background-size: 100% 100%;
         width: 29.23vw;
@@ -2259,7 +2259,7 @@ const btnElement = ref({
       margin-top: 5.64vw;
       border-radius: 3.158vw;
       box-shadow: 0px 0.7vw 1.758vw 0px rgba(0, 0, 0, 0.25);
-      background: url("https://static.cmereye.com/imgs/2024/05/b08ebd833d7d05ed.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/b08ebd833d7d05ed.png")
         no-repeat;
       background-size: 100% 100%;
       min-height: 94.8717vw;

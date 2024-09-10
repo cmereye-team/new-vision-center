@@ -421,7 +421,7 @@ const showThreeLevel = () => {
     & > a::after {
       content: "";
       position: absolute;
-      background: url("https://static.cmereye.com/imgs/2024/04/6f68e977441f318c.png");
+      background: url("https://statichk.cmermedical.com/vision/imgs/6f68e977441f318c.png");
       width: 16px;
       height: 8px;
       top: 18px;
@@ -431,7 +431,7 @@ const showThreeLevel = () => {
   }
   .threeLevel:hover {
     a::after {
-      background: url(https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png);
+      background: url(https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png);
       transform: rotate(180deg) translateX(50%);
       width: 16px;
       height: 8px;
@@ -487,7 +487,7 @@ const showThreeLevel = () => {
       }
       & > .a-link::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/afcc2515ac219afd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/afcc2515ac219afd.png")
           no-repeat;
         width: 7px;
         height: 14px;
@@ -498,7 +498,7 @@ const showThreeLevel = () => {
 
       & > .a-link-1::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -507,7 +507,7 @@ const showThreeLevel = () => {
       }
       & > .a-link-2::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -516,7 +516,7 @@ const showThreeLevel = () => {
       }
       & > .a-link-3::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -525,7 +525,7 @@ const showThreeLevel = () => {
       }
       & > .a-link-4::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -534,7 +534,7 @@ const showThreeLevel = () => {
       }
       & > .a-link-5::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;

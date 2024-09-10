@@ -228,7 +228,7 @@ onMounted(() => {
   .select-type {
     appearance: none;
     width: 314px;
-    background: url("https://static.cmereye.com/imgs/2024/04/e496d5c11cab80cf.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/e496d5c11cab80cf.png")
       no-repeat;
     height: 53px;
     background-position: right;
@@ -274,7 +274,7 @@ onMounted(() => {
   .select-type {
     appearance: none;
     width: 214px;
-    background: url("https://static.cmereye.com/imgs/2024/04/e496d5c11cab80cf.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/e496d5c11cab80cf.png")
       no-repeat;
     height: 30px;
     background-size: contain;

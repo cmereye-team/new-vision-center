@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/6e3bfe429734a26d.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/db3138211f42c02b.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/6e3bfe429734a26d.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/db3138211f42c02b.png",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(false);
@@ -1097,7 +1097,7 @@ const btnElement = ref({
     margin: 65px auto;
     border-radius: 15px;
     box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
-    background: url("https://static.cmereye.com/imgs/2024/05/3617c0fbf39dc877.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/3617c0fbf39dc877.png")
       no-repeat;
     background-size: 100% 100%;
     padding: 50px 0 45px 100px;
@@ -1158,7 +1158,7 @@ const btnElement = ref({
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url(https://static.cmereye.com/imgs/2024/05/29e22fabbebfa112.png)
+        background: url(https://statichk.cmermedical.com/vision/imgs/29e22fabbebfa112.png)
           no-repeat;
         background-size: 100% 100%;
         width: 195px;
@@ -1432,7 +1432,7 @@ const btnElement = ref({
     height: 87.4356vw;
     border-radius: 3.554vw;
     box-shadow: 0px 0.7vw 1.78vw 0px rgba(0, 0, 0, 0.25);
-    background: url("https://static.cmereye.com/imgs/2024/05/973e8025696a12f0.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/973e8025696a12f0.png")
       no-repeat;
     background-size: 100% 100%;
     padding-top: 25.64vw;
@@ -1475,7 +1475,7 @@ const btnElement = ref({
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/29e22fabbebfa112.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/29e22fabbebfa112.png")
           no-repeat;
         background-size: 100% 100%;
         width: 37.18vw;

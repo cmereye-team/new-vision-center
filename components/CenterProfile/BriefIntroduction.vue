@@ -8,7 +8,7 @@
       <div class="brief-introduction-content">
         <div>
           <img
-            src="https://static.cmereye.com/imgs/2024/08/25322427d2770364.png"
+            src="https://statichk.cmermedical.com/vision/imgs/25322427d2770364.png"
             alt=""
           />
         </div>

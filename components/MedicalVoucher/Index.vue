@@ -18,7 +18,7 @@ const serverList = ref({
         <div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/0e1161350e2c3b86.png"
+              src="https://statichk.cmermedical.com/vision/imgs/0e1161350e2c3b86.png"
               alt="長者醫療券計劃"
             />
           </div>
@@ -70,7 +70,7 @@ const serverList = ref({
               </a>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/04/be467896e40580eb.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/be467896e40580eb.png"
                   alt="長者醫療券計劃"
                 />
               </div>

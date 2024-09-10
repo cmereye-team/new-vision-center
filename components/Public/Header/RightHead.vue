@@ -383,7 +383,7 @@ const handleMouseleave = () => {
       </div>
       <div>條款細則</div>
     </div>
-    <div class="search">
+    <div class="search" style="display: none">
       <el-input v-model="input2" placeholder="" :prefix-icon="Search" />
     </div>
     <div
@@ -429,7 +429,7 @@ const handleMouseleave = () => {
       & > a::after {
         content: "";
         position: absolute;
-        background: url("https://static.cmereye.com/imgs/2024/04/6f68e977441f318c.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/6f68e977441f318c.png")
           no-repeat;
         background-size: 100% 100%;
         width: 14px;
@@ -478,7 +478,7 @@ const handleMouseleave = () => {
       cursor: default;
     }
     & > a::after {
-      background: url("https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png");
+      background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
       transform: rotate(180deg) translateX(50%);
       background-size: 100% 100%;
       z-index: 10;
@@ -556,7 +556,7 @@ const handleMouseleave = () => {
         content: "";
         width: 7px;
         height: 10px;
-        background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
           no-repeat;
         background-size: 100% 100%;
         position: absolute;
@@ -604,7 +604,7 @@ const handleMouseleave = () => {
             content: "";
             width: 0.58vw;
             height: 0.78125vw;
-            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
               no-repeat;
             position: absolute;
             background-size: 100% 100%;
@@ -650,7 +650,7 @@ const handleMouseleave = () => {
             content: "";
             width: 0.58vw;
             height: 0.78125vw;
-            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
               no-repeat;
             position: absolute;
             background-size: 100% 100%;
@@ -697,7 +697,7 @@ const handleMouseleave = () => {
             content: "";
             width: 11px;
             height: 15px;
-            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
               no-repeat;
             position: absolute;
             left: 15px;
@@ -784,7 +784,7 @@ const handleMouseleave = () => {
     // visibility: hidden;
     position: relative;
     // background: #fff;
-    background: url("https://static.cmereye.com/imgs/2024/05/bd478e6eda64c637.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/bd478e6eda64c637.png")
       no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -835,7 +835,7 @@ const handleMouseleave = () => {
   .language-svg::after {
     content: "";
     position: absolute;
-    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
       no-repeat;
     background-size: 100%;
     width: 14px;
@@ -850,7 +850,7 @@ const handleMouseleave = () => {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     content: "";
     position: absolute;
-    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
       no-repeat;
     background-size: 100%;
     transform: translateY(-50%) rotate(0deg);
@@ -910,7 +910,7 @@ const handleMouseleave = () => {
       & > a::after {
         content: "";
         position: absolute;
-        background: url("https://static.cmereye.com/imgs/2024/04/6f68e977441f318c.png");
+        background: url("https://statichk.cmermedical.com/vision/imgs/6f68e977441f318c.png");
         width: 16px;
         height: 8px;
         bottom: -20px;
@@ -947,7 +947,7 @@ const handleMouseleave = () => {
       cursor: pointer;
     }
     & > a::after {
-      background: url("https://static.cmereye.com/imgs/2024/04/e7f6cda30324f416.png");
+      background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
       transform: rotate(180deg) translateX(50%);
     }
     .sub-menu {
@@ -1026,7 +1026,7 @@ const handleMouseleave = () => {
         content: "";
         width: 11px;
         height: 15px;
-        background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
           no-repeat;
         position: absolute;
         left: 25px;
@@ -1080,7 +1080,7 @@ const handleMouseleave = () => {
             content: "";
             width: 11px;
             height: 15px;
-            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
               no-repeat;
             position: absolute;
             left: 15px;
@@ -1123,7 +1123,7 @@ const handleMouseleave = () => {
             content: "";
             width: 11px;
             height: 15px;
-            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
               no-repeat;
             position: absolute;
             left: 15px;
@@ -1168,7 +1168,7 @@ const handleMouseleave = () => {
             content: "";
             width: 11px;
             height: 15px;
-            background: url("https://static.cmereye.com/imgs/2024/04/79423085f7588927.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
               no-repeat;
             position: absolute;
             left: 15px;
@@ -1225,7 +1225,7 @@ const handleMouseleave = () => {
     display: none;
     position: relative;
     // background: #fff;
-    background: url("https://static.cmereye.com/imgs/2024/05/bd478e6eda64c637.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/bd478e6eda64c637.png")
       no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -1275,7 +1275,7 @@ const handleMouseleave = () => {
   .language-svg::after {
     content: "";
     position: absolute;
-    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
       no-repeat;
     background-size: 100%;
     width: 14px;
@@ -1290,7 +1290,7 @@ const handleMouseleave = () => {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     content: "";
     position: absolute;
-    background: url("https://static.cmereye.com/imgs/2024/06/a92b5485e65dc841.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
       no-repeat;
     background-size: 100%;
     transform: translateY(-50%) rotate(0deg);

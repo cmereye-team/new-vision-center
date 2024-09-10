@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/a77ea39669a22178.jpg",
-  mobile: "https://static.cmereye.com/imgs/2024/08/fef8b7c8cf8e4a01.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/a77ea39669a22178.jpg",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/fef8b7c8cf8e4a01.jpg",
 };
 
 import getWindowSize from "@/utils/width";
@@ -33,61 +33,61 @@ onMounted(() => {
 
 const listData = ref([
   {
-    img: "https://static.cmereye.com/imgs/2024/06/c2e52e755f48079a.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c2e52e755f48079a.png",
     title: ["雙眼協調及", "斜視檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/4de6b28d618c7483.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/4de6b28d618c7483.png",
     title: ["色弱/色盲", "檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/8c0818ec1e899da6.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/8c0818ec1e899da6.png",
     title: ["眼乾及淚水", "測試"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/0d31da47fb9dc6ef.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/0d31da47fb9dc6ef.png",
     title: ["驗配眼鏡"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/58a06bfa5d4a4b52.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/58a06bfa5d4a4b52.png",
     title: ["立體視覺", "檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/abe1875b3eee24a5.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/abe1875b3eee24a5.png",
     title: ["角膜健康", "檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/2fc29b45e62f72ce.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/2fc29b45e62f72ce.png",
     title: ["青光眼篩查", "(眼壓)"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/8a95d727e1a25f9f.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/8a95d727e1a25f9f.png",
     title: ["視野檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/b103780437afdab1.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/b103780437afdab1.png",
     title: ["視力及屈光", "度數檢查檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/00a380916ac346dd.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/00a380916ac346dd.png",
     title: ["眼角膜地", "形圖分析"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/fe595b34e6f383ad.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/fe595b34e6f383ad.png",
     title: ["視網膜掃描", "攝影(SLO）"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/038ffbe76fe5e8dc.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/038ffbe76fe5e8dc.png",
     title: ["眼軸檢查"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/4daa5583f7e6d55d.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/4daa5583f7e6d55d.png",
     title: ["眼球結構斷", "層掃描(OCT）"],
   },
 ]);
 const listDataDetail = [
   {
-    img: "https://static.cmereye.com/imgs/2024/06/b789eee61a68f7be.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/b789eee61a68f7be.png",
     title: "雙眼協調及斜視檢查",
     description: [
       "雙眼不能協調地看事物，便會形成斜視。這協調能力需要腦",
@@ -104,7 +104,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/0116bf3c9677860b.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/0116bf3c9677860b.png",
     title: "色弱/色盲檢查",
     description: [
       "甚麼是色弱盲？",
@@ -119,7 +119,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/05facfcedafca7a1.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/05facfcedafca7a1.png",
     title: "眼乾及淚水測試",
     description: [
       "人的涙水有三層，由最外層起分別為油脂層、中周為水層、最",
@@ -134,7 +134,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/86a35b67a1a25c97.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/86a35b67a1a25c97.png",
     title: "驗配眼鏡",
     description: [
       "專業驗配各式眼镜",
@@ -151,7 +151,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/11f3a2cb523d5392.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/11f3a2cb523d5392.png",
     title: "立體視覺檢查",
     description: [
       "立體視覺是對物體:遠近、高低、深度等的感知能力,並不是與",
@@ -165,7 +165,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/e12381a19dc443db.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/e12381a19dc443db.png",
     title: "角膜健康檢查",
     description: [
       "眼角膜的厚薄、弧度、形狀等，可以反映眼睛的健康情況。在 ",
@@ -180,7 +180,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/d63b7152c39ae201.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/d63b7152c39ae201.png",
     title: "青光眼篩查(眼壓)",
     description: [
       "眼壓通高會令視神經受捐，更可能引致青光眼。早期至中期的",
@@ -197,7 +197,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/56a022e0c3167773.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/56a022e0c3167773.png",
     title: "視野檢查",
     description: [
       "視野檢查是量度視野的寬闊度和敏感度，用於診斷青光眼、視",
@@ -209,7 +209,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/43ee85ffad887734.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/43ee85ffad887734.png",
     title: "視力及屈光度數檢查",
     description: [
       "視光師會透過不同程序和儀器，準確判斷應診者的屈光情况",
@@ -234,7 +234,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/e44d413404c12603.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/e44d413404c12603.png",
     title: "眼角膜地形圖分析",
     description: [
       "甚麼是角膜地形圖 ？",
@@ -251,7 +251,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/296021be922a80ba.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/296021be922a80ba.png",
     title: "視網膜掃描攝影（SLO）",
     description: [
       "視網膜掃描攝影SLO(scanning laser ophthalmoscopy)是",
@@ -261,7 +261,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/74a17a31e5b85bd2.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/74a17a31e5b85bd2.png",
     title: "眼軸檢查",
     description: [
       "眼軸是指眼球的長度，從接收光線表層的眼角膜，至眼球內感",
@@ -276,7 +276,7 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/3449b9f6a1f351cd.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/3449b9f6a1f351cd.png",
     title: "眼球結構斷層掃描（OCT）",
     description: [
       "眼球3D影像",

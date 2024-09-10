@@ -34,8 +34,8 @@ onMounted(() => {
 import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation, Scrollbar];
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/13d1975ec227a911.webp",
-  mobile: "https://static.cmereye.com/imgs/2024/05/7723d746a83f1695.webp",
+  pc: "https://statichk.cmermedical.com/vision/imgs/13d1975ec227a911.webp",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/7723d746a83f1695.webp",
 };
 const services = {
   title: "專業視光服務",
@@ -53,7 +53,7 @@ const services = {
   ],
   lists: [
     {
-      img: "https://static.cmereye.com/imgs/2024/05/1294e900e7debac6.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/1294e900e7debac6.png",
       title: ["近視控制", "檢查方案"],
       link: "/myopia-control",
       text: ["低至"],
@@ -61,7 +61,7 @@ const services = {
       price: "350",
     },
     {
-      img: "https://static.cmereye.com/imgs/2024/05/4fb495e912701d2c.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/4fb495e912701d2c.png",
       title: ["角膜矯形鏡", "合適性檢查套餐"],
       link: "/orthokeratoplasty",
       text: ["低至"],
@@ -69,7 +69,7 @@ const services = {
       price: "1,000",
     },
     {
-      img: "https://static.cmereye.com/imgs/2024/05/2fce54bd583f773d.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2fce54bd583f773d.png",
       title: ["專業驗配近視", "控制眼鏡"],
       link: "/eye-examination-child",
       text: [],
@@ -77,7 +77,7 @@ const services = {
       price: "",
     },
     {
-      img: "https://static.cmereye.com/imgs/2024/05/c0e70a7699fdb561.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/c0e70a7699fdb561.png",
       title: ["眼睛檢查套餐"],
       link: "/eye-examination-adult",
       text: ["低至"],
@@ -85,7 +85,7 @@ const services = {
       price: "350",
     },
     {
-      img: "https://static.cmereye.com/imgs/2024/05/9ffb4105482ebeb2.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/9ffb4105482ebeb2.png",
       title: ["青光眼檢查", "套餐"],
       link: "/eye-examination-adult",
       text: ["低至"],
@@ -93,7 +93,7 @@ const services = {
       price: "1,000",
     },
     {
-      img: "https://static.cmereye.com/imgs/2024/05/345093cb5a583346.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/345093cb5a583346.png",
       title: ["隱形眼鏡", "驗配套餐"],
       link: "/soft-contact-lens",
       text: ["低至"],
@@ -107,25 +107,25 @@ const newDiscounts = {
   lists: [
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://static.cmereye.com/imgs/2024/05/2a5b0c7c66fbe4db.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
       link: "#",
       price: "4,560",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://static.cmereye.com/imgs/2024/05/2a5b0c7c66fbe4db.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
       link: "#",
       price: "4,560",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://static.cmereye.com/imgs/2024/05/2a5b0c7c66fbe4db.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
       link: "#",
       price: "4,560",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://static.cmereye.com/imgs/2024/05/2a5b0c7c66fbe4db.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
       link: "#",
       price: "4,560",
     },
@@ -173,7 +173,7 @@ const witness = ref({
       identity: "小演員",
       text: "戴住OK鏡感覺幾舒服，戴咗半年近視無再加深！",
       link: "https://www.youtube.com/watch?v=qXcrf_ASWE0",
-      img: "https://static.cmereye.com/imgs/2024/05/ab443d83f1e23f4c.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/ab443d83f1e23f4c.png",
       isNew: true,
       isLike: true,
       isHot: true,
@@ -183,7 +183,7 @@ const witness = ref({
       identity: "",
       text: "唔使戴眼鏡踩BMX好方便，流汗又好容易抹到。",
       link: "https://youtu.be/BkYXEbfg2Zk?si=q1mqnmaDXFM6S4Zj",
-      img: "https://static.cmereye.com/imgs/2024/05/fac277db5a73523b.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/fac277db5a73523b.png",
       isNew: false,
       isLike: false,
       isHot: false,
@@ -193,7 +193,7 @@ const witness = ref({
       identity: "",
       text: "戴咗OK鏡９個月後， 近視只係加深咗少少！",
       link: "https://www.youtube.com/watch?v=2UJcMkLfuxE",
-      img: "https://static.cmereye.com/imgs/2024/05/2dea526a3dde6751.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2dea526a3dde6751.png",
       isNew: false,
       isLike: false,
       isHot: false,
@@ -203,7 +203,7 @@ const witness = ref({
       identity: "",
       text: "戴完OK鏡第二朝睇嘢好清楚， 打劍擊可以瞄準啲，游水清楚睇到池邊。",
       link: "https://www.youtube.com/watch?v=J5tfqyp-lQQ",
-      img: "https://static.cmereye.com/imgs/2024/05/2f4593874540b73c.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/2f4593874540b73c.png",
       isNew: false,
       isLike: false,
       isHot: false,
@@ -212,21 +212,21 @@ const witness = ref({
   section2: [
     {
       name: "Carson",
-      img: "https://static.cmereye.com/imgs/2024/05/00f4eb10c798679f.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
       services: "角膜矯形鏡 (ok鏡)",
       slogan: "安心、舒服、無痛",
       text: "童星Carson黃梓賢平時熱愛運動，不過有近視要戴眼鏡做運動冇咁方便。最後決定去配OK鏡，童星細佬Sean更有一齊陪哥哥去做檢查。",
     },
     {
       name: "Carson",
-      img: "https://static.cmereye.com/imgs/2024/05/00f4eb10c798679f.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
       services: "角膜矯形鏡 (ok鏡)",
       slogan: "安心、舒服、無痛",
       text: "童星Carson黃梓賢平時熱愛運動，不過有近視要戴眼鏡做運動冇咁方便。最後決定去配OK鏡，童星細佬Sean更有一齊陪哥哥去做檢查。",
     },
     {
       name: "Carson",
-      img: "https://static.cmereye.com/imgs/2024/05/00f4eb10c798679f.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
       services: "角膜矯形鏡 (ok鏡)",
       slogan: "安心、舒服、無痛",
       text: "童星Carson黃梓賢平時熱愛運動，不過有近視要戴眼鏡做運動冇咁方便。最後決定去配OK鏡，童星細佬Sean更有一齊陪哥哥去做檢查。",
@@ -378,7 +378,7 @@ const openVideo = (link: string) => {
         <div class="newDiscounts-in-t">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/96bb721f05c4cfd5.png"
+              src="https://statichk.cmermedical.com/vision/imgs/96bb721f05c4cfd5.png"
               alt=""
             />
           </div>
@@ -389,7 +389,7 @@ const openVideo = (link: string) => {
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/fd41cbf881791a4b.png"
+              src="https://statichk.cmermedical.com/vision/imgs/fd41cbf881791a4b.png"
               alt=""
             />
           </div>
@@ -1199,7 +1199,7 @@ const openVideo = (link: string) => {
               width: 36px;
               height: 36px;
               border-radius: 50%;
-              background: url(https://static.cmereye.com/imgs/2024/05/42273ef87c224cab.png)
+              background: url(https://statichk.cmermedical.com/vision/imgs/42273ef87c224cab.png)
                 no-repeat;
               background-size: 100% 100%;
               animation: breathe2 2s ease-in-out infinite;
@@ -1674,7 +1674,7 @@ const openVideo = (link: string) => {
             transform: translate(-50%, -50%);
             width: 16.15vw;
             height: 10.25vw;
-            background: url(https://static.cmereye.com/imgs/2024/05/2fe41fe5fcf9b000.png)
+            background: url(https://statichk.cmermedical.com/vision/imgs/2fe41fe5fcf9b000.png)
               no-repeat;
             background-size: 100% 100%;
             animation: breathe 2s ease-in-out infinite;

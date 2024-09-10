@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/683dce2cd87bd6bf.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/c88934386018c7c0.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/683dce2cd87bd6bf.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/c88934386018c7c0.png",
 };
 let imgLeft = ref("50%");
 const yuanspan = ref(null);
@@ -86,7 +86,7 @@ onMounted(() => {
             </div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/06/c090458a4041c424.png"
+                src="https://statichk.cmermedical.com/vision/imgs/c090458a4041c424.png"
                 alt="白內障"
               />
             </div>
@@ -113,13 +113,13 @@ onMounted(() => {
             }"
           >
             <img
-              src="https://static.cmereye.com/imgs/2024/09/e87447336103ad77.png"
+              src="https://statichk.cmermedical.com/vision/imgs/e87447336103ad77.png"
               alt="正常"
             />
           </div>
           <span :style="{ left: imgLeft }" id="imgline"> </span>
           <img
-            src="https://static.cmereye.com/imgs/2024/09/654736882a8875df.png"
+            src="https://statichk.cmermedical.com/vision/imgs/654736882a8875df.png"
             alt="視野缺損"
           />
         </div>
@@ -138,7 +138,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/031158104e912d25.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/031158104e912d25.png"
                   alt="直線邊曲線"
                 />
               </div>
@@ -147,7 +147,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/a76941515030bbc6.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/a76941515030bbc6.png"
                   alt="盲區"
                 />
               </div>
@@ -163,7 +163,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/0f1743f0362974f7.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/0f1743f0362974f7.png"
                   alt="芝麻形狀"
                 />
               </div>
@@ -172,7 +172,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/3b66bc2414420b2d.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/3b66bc2414420b2d.png"
                   alt="蟲形狀"
                 />
               </div>
@@ -181,7 +181,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/2bf448147051f259.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/2bf448147051f259.png"
                   alt="線狀"
                 />
               </div>
@@ -190,7 +190,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/f3708492eb392a97.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/f3708492eb392a97.png"
                   alt="橢圓形卵狀"
                 />
               </div>
@@ -199,7 +199,7 @@ onMounted(() => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/06/7700fc3fe9313371.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/7700fc3fe9313371.png"
                   alt="環狀"
                 />
               </div>
@@ -219,7 +219,7 @@ onMounted(() => {
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/06/70bff633a83d1fe7.png"
+              src="https://statichk.cmermedical.com/vision/imgs/70bff633a83d1fe7.png"
               alt="視網膜病變"
             />
           </div>
@@ -454,7 +454,7 @@ onMounted(() => {
       span {
         width: 62px;
         height: 493px;
-        background: url("https://static.cmereye.com/imgs/2024/06/905634ed84693ed9.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/905634ed84693ed9.png")
           no-repeat;
         display: block;
         position: absolute;
@@ -598,7 +598,7 @@ onMounted(() => {
   }
   .assess {
     margin-top: 95px;
-    background: url("https://static.cmereye.com/imgs/2024/06/c12bb8c6c1ffbfa9.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/c12bb8c6c1ffbfa9.png")
       no-repeat;
     background-size: 100% 100%;
     border-radius: 15px;
@@ -833,7 +833,7 @@ onMounted(() => {
       span {
         width: 36px;
         height: 293px;
-        background: url("https://static.cmereye.com/imgs/2024/06/905634ed84693ed9.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/905634ed84693ed9.png")
           no-repeat;
         background-size: 100% 100%;
         display: block;
@@ -1077,7 +1077,7 @@ onMounted(() => {
   }
   .assess {
     margin-top: 35px;
-    background: url("https://static.cmereye.com/imgs/2024/06/92a1b1c25210081b.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/92a1b1c25210081b.png")
       no-repeat;
     background-size: 100% 100%;
     border-radius: 13.723px;

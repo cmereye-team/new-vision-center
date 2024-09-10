@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/51ac711323203828.jpg",
-  mobile: "https://static.cmereye.com/imgs/2024/08/c6912ec8adf66150.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/51ac711323203828.jpg",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/c6912ec8adf66150.jpg",
 };
 
 const btnElement = ref({
@@ -61,7 +61,7 @@ const btnElement = ref({
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/07/bbf4190bda4b3bbb.png"
+              src="https://statichk.cmermedical.com/vision/imgs/bbf4190bda4b3bbb.png"
               alt="五大優點"
             />
           </div>
@@ -70,7 +70,7 @@ const btnElement = ref({
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/61a6eeb70b8972c4.png"
+                src="https://statichk.cmermedical.com/vision/imgs/61a6eeb70b8972c4.png"
                 alt="舒適配戴"
               />
             </div>
@@ -81,7 +81,7 @@ const btnElement = ref({
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/07/8d57dc9d3ef9f766.png"
+                src="https://statichk.cmermedical.com/vision/imgs/8d57dc9d3ef9f766.png"
                 alt="每日即棄方便衛生"
               />
             </div>
@@ -93,7 +93,7 @@ const btnElement = ref({
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/07/cef6d0c92b2a2183.png"
+                src="https://statichk.cmermedical.com/vision/imgs/cef6d0c92b2a2183.png"
                 alt="易於兒童配戴"
               />
             </div>
@@ -104,7 +104,7 @@ const btnElement = ref({
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/07/0909cc3ec309fff2.png"
+                src="https://statichk.cmermedical.com/vision/imgs/0909cc3ec309fff2.png"
                 alt="運動學習不受限制"
               />
             </div>
@@ -116,7 +116,7 @@ const btnElement = ref({
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/07/5423e25ba5f965b6.png"
+                src="https://statichk.cmermedical.com/vision/imgs/5423e25ba5f965b6.png"
                 alt="控制度數增加"
               />
             </div>
@@ -131,19 +131,19 @@ const btnElement = ref({
         <div>
           <nuxt-link to="/myopia-control-hoya">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/2803939cde9d34f7.png"
+              src="https://statichk.cmermedical.com/vision/imgs/2803939cde9d34f7.png"
               alt="cooper"
             />
           </nuxt-link>
           <nuxt-link to="/myopia-control-zeiss">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/71654116b2763716.png"
+              src="https://statichk.cmermedical.com/vision/imgs/71654116b2763716.png"
               alt="abiliti"
             />
           </nuxt-link>
           <nuxt-link>
             <img
-              src="https://static.cmereye.com/imgs/2024/07/f4d1dfa62bc098b5.png"
+              src="https://statichk.cmermedical.com/vision/imgs/f4d1dfa62bc098b5.png"
               alt="disc"
             />
           </nuxt-link>
@@ -173,7 +173,7 @@ const btnElement = ref({
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/07/a44f84cd6e251ccb.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/a44f84cd6e251ccb.png"
                   alt="使用抗菌洗手液徹底清潔雙手及抹乾雙手"
                 />
               </div>
@@ -200,7 +200,7 @@ const btnElement = ref({
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/07/8223cb182958c4be.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/8223cb182958c4be.png"
                   alt="取出隱形眼鏡，並將鏡片放在指尖上。檢查隱形眼鏡是否呈碗狀向內彎曲，如果是錯誤的方向，隱形眼鏡的邊緣可能會變得平坦
  "
                 />
@@ -229,7 +229,7 @@ const btnElement = ref({
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/07/b7f5f3fb937515eb.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/b7f5f3fb937515eb.png"
                   alt="在鏡子前，輕輕拉起上下眼瞼，把隱形眼鏡放在眼睛上，過程中保持直視"
                 />
               </div>
@@ -256,7 +256,7 @@ const btnElement = ref({
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/07/5ffc8098ae6f6d34.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/5ffc8098ae6f6d34.png"
                   alt="放到眼睛後，眼睛向下看，鬆開眼瞼， 稍微閉上眼睛，再保持正常眨眼， 確保鏡片已在角膜中央位置"
                 />
               </div>
@@ -390,7 +390,7 @@ const btnElement = ref({
   }
   .child-myopia-bg-blue {
     border-radius: 15px;
-    background: url(https://static.cmereye.com/imgs/2024/07/34ec197ccf849c41.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/34ec197ccf849c41.jpg)
       no-repeat;
     min-height: 370px;
     box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
@@ -434,7 +434,7 @@ const btnElement = ref({
         }
         & > span::before {
           content: "";
-          background: url(https://static.cmereye.com/imgs/2024/07/017d81f5304355b1.png)
+          background: url(https://statichk.cmermedical.com/vision/imgs/017d81f5304355b1.png)
             no-repeat;
           background-size: 100% 100%;
           display: inline-block;
@@ -479,7 +479,7 @@ const btnElement = ref({
       top: 50%;
       transform: translateY(-50%);
       left: -75px;
-      background: url("https://static.cmereye.com/imgs/2024/07/12ebaaf276b467f0.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/12ebaaf276b467f0.png")
         no-repeat;
       background-size: 100% 100%;
       display: inline-block;
@@ -526,7 +526,7 @@ const btnElement = ref({
           top: 50%;
           right: -40px;
           transform: translateY(-50%);
-          background: url("https://static.cmereye.com/imgs/2024/07/e3b5768533655da4.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/e3b5768533655da4.png")
             no-repeat;
           display: inline-block;
           width: 22px;
@@ -629,7 +629,7 @@ const btnElement = ref({
   }
   .child-myopia-bg-blue {
     border-radius: 15px;
-    background: url(https://static.cmereye.com/imgs/2024/07/70834b759522def8.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/70834b759522def8.jpg)
       no-repeat;
     height: 81.5vw;
     box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
@@ -676,7 +676,7 @@ const btnElement = ref({
         }
         & > span::before {
           content: "";
-          background: url(https://static.cmereye.com/imgs/2024/07/017d81f5304355b1.png)
+          background: url(https://statichk.cmermedical.com/vision/imgs/017d81f5304355b1.png)
             no-repeat;
           background-size: 100% 100%;
           display: inline-block;
@@ -717,7 +717,7 @@ const btnElement = ref({
       position: absolute;
       bottom: 20px;
       left: -40px;
-      background: url("https://static.cmereye.com/imgs/2024/07/12ebaaf276b467f0.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/12ebaaf276b467f0.png")
         no-repeat;
       background-size: 100% 100%;
       display: inline-block;

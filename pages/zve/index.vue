@@ -15,7 +15,7 @@
     </PublicBanner>
     <img
       class="zveImg"
-      src="https://static.cmereye.com/imgs/2024/08/98a021b3329ea1b1.png"
+      src="https://statichk.cmermedical.com/vision/imgs/98a021b3329ea1b1.png"
       alt=""
     />
     <div class="contain">
@@ -42,7 +42,7 @@
         <div class="selling-point-item">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/a3cda253cc444fe1.jpg"
+              src="https://statichk.cmermedical.com/vision/imgs/a3cda253cc444fe1.jpg"
               alt="ZEISS Vision Expert"
             />
           </div>
@@ -64,7 +64,7 @@
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/78d28aecc37d2b74.jpg"
+              src="https://statichk.cmermedical.com/vision/imgs/78d28aecc37d2b74.jpg"
               alt="ZEISS Vision Expert"
             />
           </div>
@@ -72,7 +72,7 @@
         <div class="selling-point-item">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/08/b723ae16a031ce22.jpg"
+              src="https://statichk.cmermedical.com/vision/imgs/b723ae16a031ce22.jpg"
               alt="ZEISS Vision Expert"
             />
           </div>
@@ -190,14 +190,14 @@
         <div class="center-text">你的蔡司<br />視覺體驗</div>
         <div class="step step-one">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/1f7082c52e49d500.png"
+            src="https://statichk.cmermedical.com/vision/imgs/1f7082c52e49d500.png"
             alt="視覺需求分析"
           />
           <h3><span>01</span><span>了解您的生活</span></h3>
         </div>
         <div class="step step-two">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/4d325fb0af213050.png"
+            src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png"
             alt="光學指紋測量及視覺表現分析"
           />
           <h3>
@@ -205,7 +205,7 @@
           </h3>
           <div class="btn" @click="changeBtn(1)">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/3e6e24f3edea4675.png"
+              src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
               alt="按钮"
               :style="{
                 transform:
@@ -222,14 +222,14 @@
         </div>
         <div class="step step-three">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/3356b98dc5f9bbc9.png"
+            src="https://statichk.cmermedical.com/vision/imgs/3356b98dc5f9bbc9.png"
             alt="鏡框選擇"
           />
           <h3><span>03</span><span>打造您的滿意造形</span></h3>
         </div>
         <div class="step step-four">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/5543b949c6357f3b.png"
+            src="https://statichk.cmermedical.com/vision/imgs/5543b949c6357f3b.png"
             alt="鏡框中心定位"
           />
           <h3>
@@ -237,7 +237,7 @@
           </h3>
           <div class="btn-four-two" @click="changeBtn(2)">
             <img
-              src="https://static.cmereye.com/imgs/2024/07/3e6e24f3edea4675.png"
+              src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
               alt="按钮"
               :style="{
                 transform:
@@ -254,21 +254,21 @@
         </div>
         <div class="step step-five">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/2d665e15c13a5de0.png"
+            src="https://statichk.cmermedical.com/vision/imgs/2d665e15c13a5de0.png"
             alt="專屬鏡片"
           />
           <h3><span>05</span><span>個人化鏡片方案</span></h3>
         </div>
         <div class="step step-six">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/89ac432219c4fabf.png"
+            src="https://statichk.cmermedical.com/vision/imgs/89ac432219c4fabf.png"
             alt="領取眼鏡"
           />
           <h3><span>06</span><span>您的全新專屬眼鏡</span></h3>
         </div>
         <div class="step step-seven">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/7bcbb1ffe6f3d63c.png"
+            src="https://statichk.cmermedical.com/vision/imgs/7bcbb1ffe6f3d63c.png"
             alt="服務和跟進"
           />
           <h3><span>07</span><span>售後服務與保養</span></h3>
@@ -283,8 +283,8 @@
           <img
             :src="
               indexBollean == true
-                ? 'https://static.cmereye.com/imgs/2024/07/4d325fb0af213050.png'
-                : 'https://static.cmereye.com/imgs/2024/07/2d665e15c13a5de0.png'
+                ? 'https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png'
+                : 'https://statichk.cmermedical.com/vision/imgs/2d665e15c13a5de0.png'
             "
             alt=""
           />
@@ -297,8 +297,8 @@
               @click="closeBtn"
               :src="
                 indexBollean == true
-                  ? 'https://static.cmereye.com/imgs/2024/07/3e6e24f3edea4675.png'
-                  : 'https://static.cmereye.com/imgs/2024/07/3e6e24f3edea4675.png'
+                  ? 'https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png'
+                  : 'https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png'
               "
               alt="按钮"
             />
@@ -327,7 +327,7 @@
       </div>
       <div class="btn-child mb-show">
         <img
-          src="https://static.cmereye.com/imgs/2024/07/4d325fb0af213050.png"
+          src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png"
           alt="一站式精準驗光流程"
         />
         <h3>
@@ -335,7 +335,7 @@
         </h3>
         <div class="btn-two mb-show">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/3e6e24f3edea4675.png"
+            src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
             alt="按钮"
           />
         </div>
@@ -346,7 +346,7 @@
       </div>
       <div class="btn-child-two mb-show">
         <img
-          src="https://static.cmereye.com/imgs/2024/07/4d325fb0af213050.png"
+          src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png"
           alt="光學指紋測量及視覺表現分析"
         />
         <h3>
@@ -354,7 +354,7 @@
         </h3>
         <div class="btn-child-four-two mb-show">
           <img
-            src="https://static.cmereye.com/imgs/2024/07/3e6e24f3edea4675.png"
+            src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
             alt="按钮"
           />
         </div>
@@ -538,7 +538,7 @@
           href="https://myvisionprofile.zeiss.com/?locale=zh_hk#intro"
         >
           <img
-            src="https://static.cmereye.com/imgs/2024/07/52e8a906f96b5fe7.gif"
+            src="https://statichk.cmermedical.com/vision/imgs/52e8a906f96b5fe7.gif"
             alt="ZEISS Vision Expert"
           />
         </a>
@@ -607,7 +607,7 @@
               target="_blank"
               href="https://maps.app.goo.gl/UzkcpBnECESrQ9iX9"
               ><img
-                src="https://static.cmereye.com/imgs/2024/07/1dd53262ddce08de.png"
+                src="https://statichk.cmermedical.com/vision/imgs/1dd53262ddce08de.png"
                 alt="蔡司ZVE視光專家 中環畢打街1-3號中建大廈1515室"
               />
             </a>
@@ -737,41 +737,41 @@ const touchEndX = ref(0);
 const discountsList = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/08/7f56de0049e825da.jpg",
+    img: "https://statichk.cmermedical.com/vision/imgs/7f56de0049e825da.jpg",
     content: "",
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/08/b24898a75d6536b2.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/b24898a75d6536b2.png",
     content: "",
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/08/43654d9aac2f6efb.jpg",
+    img: "https://statichk.cmermedical.com/vision/imgs/43654d9aac2f6efb.jpg",
     content: "",
   },
   {
     id: 4,
-    img: "https://static.cmereye.com/imgs/2024/08/02062e542e03a981.jpg",
+    img: "https://statichk.cmermedical.com/vision/imgs/02062e542e03a981.jpg",
     content: "",
   },
   {
     id: 5,
-    img: "https://static.cmereye.com/imgs/2024/08/ceb824735dbd56f9.jpg",
+    img: "https://statichk.cmermedical.com/vision/imgs/ceb824735dbd56f9.jpg",
     content: "",
   },
 ]);
 
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/17ea7cc68f4cde85.jpg",
-  mobile: "https://static.cmereye.com/imgs/2024/08/857393f0a230aba2.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/17ea7cc68f4cde85.jpg",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/857393f0a230aba2.jpg",
 };
 
 const imgList = [
-  "https://static.cmereye.com/imgs/2024/04/666c1d99c27658bf.png",
-  "https://static.cmereye.com/imgs/2024/04/5a960c3598776b5f.png",
-  "https://static.cmereye.com/imgs/2024/04/dc0b7696b2d87ed0.png",
-  "https://static.cmereye.com/imgs/2024/04/a8ff8092442374c1.png",
+  "https://statichk.cmermedical.com/vision/imgs/666c1d99c27658bf.png",
+  "https://statichk.cmermedical.com/vision/imgs/5a960c3598776b5f.png",
+  "https://statichk.cmermedical.com/vision/imgs/dc0b7696b2d87ed0.png",
+  "https://statichk.cmermedical.com/vision/imgs/a8ff8092442374c1.png",
 ];
 
 import getWindowSize from "@/utils/width";
@@ -819,22 +819,22 @@ const listDiscounts = [
   {
     id: 1,
     title: `精密測量眼睛度數`,
-    img: "https://static.cmereye.com/imgs/2024/08/4a688fa160e96203.jpg",
-    svg: "https://static.cmereye.com/imgs/2024/08/1dede03366c21b1d.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/4a688fa160e96203.jpg",
+    svg: "https://statichk.cmermedical.com/vision/imgs/1dede03366c21b1d.png",
     content: `每個人的眼睛不只單一度數，角膜和瞳孔都是獨一無二, 像指紋一樣獨特。眼睛受高階像差影響會導致度數有差別，因此進行光學指紋測量能全面分析你的視力，找到最真實的度數並優化鏡片度數。`,
   },
   {
     id: 2,
     title: `精準的鏡框中心定位`,
-    img: "https://static.cmereye.com/imgs/2024/08/7c34641f63a81653.jpg",
-    svg: "https://static.cmereye.com/imgs/2024/08/cb3cecd90c579e62.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/7c34641f63a81653.jpg",
+    svg: "https://statichk.cmermedical.com/vision/imgs/cb3cecd90c579e62.png",
     content: `精準的鏡框中心定位利用全新儀器VISUFIT 1000精密測量眼睛和眼鏡之間的所有角度，能確定鏡片在鏡框內的確切位置。為客人度身訂造專屬的鏡框，提高配戴舒適度。`,
   },
   {
     id: 3,
     title: `客製化個人鏡片`,
-    img: "https://static.cmereye.com/imgs/2024/08/fa7584e4f1659ada.jpg",
-    svg: "https://static.cmereye.com/imgs/2024/08/0587c601a83a42f8.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/fa7584e4f1659ada.jpg",
+    svg: "https://statichk.cmermedical.com/vision/imgs/0587c601a83a42f8.png",
     content: `利用i.Technology技術得出獨一無二的鏡片數據，根據你的用眼習慣及視覺需求等定制出適合你的鏡片，令你擁有最佳的視覺品質。 `,
   },
 ];
@@ -954,7 +954,7 @@ const handleIntersection = (entries: any, observer: any) => {
       display: block;
       position: absolute;
       left: -10px;
-      background: url("https://static.cmereye.com/imgs/2024/08/3b468aa44a7ef584.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/3b468aa44a7ef584.png")
         no-repeat;
       // background-position: right;
       width: 20px;
@@ -964,7 +964,7 @@ const handleIntersection = (entries: any, observer: any) => {
       display: inline-block;
       position: absolute;
       right: -10px;
-      background: url("https://static.cmereye.com/imgs/2024/08/6cddc1709f50bfe5.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png")
         no-repeat;
       // background-position: right;
       width: 20px;
@@ -979,7 +979,7 @@ const handleIntersection = (entries: any, observer: any) => {
     }
   }
   :deep(.swiper-button-next::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/6ed7199aaddff6df.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png")
       no-repeat;
     background-size: 100% 100%;
     color: transparent;
@@ -991,7 +991,7 @@ const handleIntersection = (entries: any, observer: any) => {
     left: 0px;
   }
   :deep(.swiper-button-prev::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/f68bf90ff2bad2de.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")
       no-repeat;
     background-size: 100% 100%;
     color: transparent;
@@ -1269,7 +1269,7 @@ const handleIntersection = (entries: any, observer: any) => {
       display: block;
       position: absolute;
       left: 30px;
-      background: url("https://static.cmereye.com/imgs/2024/08/3b468aa44a7ef584.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/3b468aa44a7ef584.png")
         no-repeat;
       // background-position: right;
       background-size: cover;
@@ -1280,7 +1280,7 @@ const handleIntersection = (entries: any, observer: any) => {
       display: inline-block;
       position: absolute;
       right: 30px;
-      background: url("https://static.cmereye.com/imgs/2024/08/6cddc1709f50bfe5.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png")
         no-repeat;
       // background-position: right;
       background-size: cover;
@@ -1296,7 +1296,7 @@ const handleIntersection = (entries: any, observer: any) => {
     }
   }
   :deep(.swiper-button-next::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/6ed7199aaddff6df.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png")
       no-repeat;
     background-size: 100% 100%;
     color: transparent;
@@ -1308,7 +1308,7 @@ const handleIntersection = (entries: any, observer: any) => {
     left: 0px;
   }
   :deep(.swiper-button-prev::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/f68bf90ff2bad2de.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")
       no-repeat;
     background-size: 100% 100%;
     color: transparent;
@@ -1555,7 +1555,7 @@ a:hover::before {
 .whatapps-btn-individuation::before {
   content: "";
   display: inline-block;
-  background: url("https://static.cmereye.com/imgs/2024/07/5fc7910640dbfa83.png")
+  background: url("https://statichk.cmermedical.com/vision/imgs/5fc7910640dbfa83.png")
     no-repeat;
   background-size: 100% 100%;
   padding-top: 20px;
@@ -1632,7 +1632,7 @@ a:hover::before {
 
 .individuation {
   width: 100vw;
-  background: url(https://static.cmereye.com/imgs/2024/08/6566c7476d6d4dda.jpg)
+  background: url(https://statichk.cmermedical.com/vision/imgs/6566c7476d6d4dda.jpg)
     no-repeat;
   background-size: 100% 100%;
   box-sizing: border-box;
@@ -1706,7 +1706,7 @@ a:hover::before {
 @media screen and (max-width: 768px) {
   .individuation {
     width: 100%;
-    background: url(https://static.cmereye.com/imgs/2024/08/4908d57817c05d9c.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/4908d57817c05d9c.jpg)
       no-repeat;
     background-position: center;
     padding: 0 40px 25px;
@@ -1798,7 +1798,7 @@ a:hover::before {
   }
 
   .whatapps-btn-individuation::before {
-    background: url("https://static.cmereye.com/imgs/2024/07/3f96636326c3a265.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/3f96636326c3a265.png")
       no-repeat;
     display: inline-block;
     width: 280px;
@@ -3066,7 +3066,7 @@ a {
   content: "";
   position: absolute;
   display: inline-block;
-  background: url("https://static.cmereye.com/imgs/2024/07/7d0a3a2a34b2007e.png")
+  background: url("https://statichk.cmermedical.com/vision/imgs/7d0a3a2a34b2007e.png")
     no-repeat;
   width: 360px;
   background-size: 100%;

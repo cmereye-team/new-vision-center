@@ -31,7 +31,7 @@ const handlesSliPrev = () => {
 const discountsList = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/f69569e081a8a949.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
     title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
     price: "4,560",
     reason: "節日限定",
@@ -46,7 +46,7 @@ const discountsList = ref([
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/f69569e081a8a949.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
     title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
     price: "4,560",
     reason: "節日限定",
@@ -61,7 +61,7 @@ const discountsList = ref([
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/04/b98c74ee6903eb45.jpg",
+    img: "https://statichk.cmermedical.com/vision/imgs/b98c74ee6903eb45.jpg",
     title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
     price: "4,560",
     reason: "節日限定",
@@ -76,7 +76,7 @@ const discountsList = ref([
   },
   {
     id: 4,
-    img: "https://static.cmereye.com/imgs/2024/04/f69569e081a8a949.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
     title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
     price: "4,560",
     reason: "節日限定",
@@ -296,7 +296,7 @@ const discountsList = ref([
       display: block;
       position: absolute;
       left: -4%;
-      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
       background-position: right;
       width: 20px;
@@ -306,7 +306,7 @@ const discountsList = ref([
       display: inline-block;
       position: absolute;
       right: 52%;
-      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
       background-position: right;
       width: 20px;
@@ -501,7 +501,7 @@ const discountsList = ref([
       display: block;
       position: absolute;
       left: -4%;
-      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
       background-position: right;
       width: 20px;
@@ -511,7 +511,7 @@ const discountsList = ref([
       display: inline-block;
       position: absolute;
       right: -5%;
-      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
       background-position: right;
       width: 20px;

@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/5d7947a339ef25d4.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/2a416d456643f54e.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/5d7947a339ef25d4.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2a416d456643f54e.png",
 };
 const isType = ref(0);
 const checkType = (type: number) => {
@@ -220,13 +220,13 @@ const miSightQuestionList = [
             }"
           >
             <img
-              src="https://static.cmereye.com/imgs/2024/05/71a93a687a3f8551.png"
+              src="https://statichk.cmermedical.com/vision/imgs/71a93a687a3f8551.png"
               alt="老花眼鏡"
             />
           </div>
           <span :style="{ left: imgLeft }" id="imgline"> </span>
           <img
-            src="https://static.cmereye.com/imgs/2024/05/157f0472eedb727d.png"
+            src="https://statichk.cmermedical.com/vision/imgs/157f0472eedb727d.png"
             alt="漸進鏡片"
           />
         </div>
@@ -249,7 +249,7 @@ const miSightQuestionList = [
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/9975c36554a2c968.png"
+              src="https://statichk.cmermedical.com/vision/imgs/9975c36554a2c968.png"
               alt=""
             />
           </div>
@@ -272,7 +272,7 @@ const miSightQuestionList = [
         <div class="type-show-style" v-if="isType === 0">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/898c66bd6fa9a2d0.png"
+              src="https://statichk.cmermedical.com/vision/imgs/898c66bd6fa9a2d0.png"
               alt="一般漸進鏡片"
             />
           </div>
@@ -280,7 +280,7 @@ const miSightQuestionList = [
         <div class="type-show-style" v-else-if="isType === 2">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/5c6eda3929b3d1a6.png"
+              src="https://statichk.cmermedical.com/vision/imgs/5c6eda3929b3d1a6.png"
               alt="戶外變色漸進鏡片"
             />
           </div>
@@ -288,7 +288,7 @@ const miSightQuestionList = [
         <div class="type-show-style" v-else-if="isType === 1">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/d2f69094c0ede78e.png"
+              src="https://statichk.cmermedical.com/vision/imgs/d2f69094c0ede78e.png"
               alt="辦公室漸進鏡片"
             />
           </div>
@@ -296,7 +296,7 @@ const miSightQuestionList = [
         <div class="type-show-style" v-else>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/47c0c7944ae29ee2.png"
+              src="https://statichk.cmermedical.com/vision/imgs/47c0c7944ae29ee2.png"
               alt="個人化漸進鏡片"
             />
           </div>
@@ -312,7 +312,7 @@ const miSightQuestionList = [
           >
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/240c6b42780f48f0.png"
+                src="https://statichk.cmermedical.com/vision/imgs/240c6b42780f48f0.png"
                 alt="一般漸進鏡片"
               />
             </div>
@@ -324,7 +324,7 @@ const miSightQuestionList = [
           >
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/53295f03846aa04b.png"
+                src="https://statichk.cmermedical.com/vision/imgs/53295f03846aa04b.png"
                 alt="辦公室漸進鏡片"
               />
             </div>
@@ -336,7 +336,7 @@ const miSightQuestionList = [
           >
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/a9a9d2b01adab5ec.png"
+                src="https://statichk.cmermedical.com/vision/imgs/a9a9d2b01adab5ec.png"
                 alt="戶外變色漸進鏡片"
               />
             </div>
@@ -348,7 +348,7 @@ const miSightQuestionList = [
           >
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/5d857fccb22021bb.png"
+                src="https://statichk.cmermedical.com/vision/imgs/5d857fccb22021bb.png"
                 alt="個人化漸進鏡片"
               />
             </div>
@@ -911,7 +911,7 @@ const miSightQuestionList = [
             <span>立即查詢了解更多</span>
             <span
               ><img
-                src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
+                src="https://statichk.cmermedical.com/vision/imgs/93740deca665eceb.png"
                 alt="立即查詢了解更多"
             /></span>
           </div>
@@ -923,7 +923,7 @@ const miSightQuestionList = [
 
       <main class="Instructions">
         <!-- <img
-          src="https://static.cmereye.com/imgs/2024/08/68d656c91eb8d739.png"
+          src="https://statichk.cmermedical.com/vision/imgs/68d656c91eb8d739.png"
           alt=""
         /> -->
         <div class="Instructions-video">
@@ -963,7 +963,7 @@ const miSightQuestionList = [
           <div class="maintain-items">
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/e7afab7f5dbaac9f.png"
+                src="https://statichk.cmermedical.com/vision/imgs/e7afab7f5dbaac9f.png"
                 alt=""
               />
             </div>
@@ -981,7 +981,7 @@ const miSightQuestionList = [
           <div class="maintain-items maintext">
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/e6d530002f48f642.png"
+                src="https://statichk.cmermedical.com/vision/imgs/e6d530002f48f642.png"
                 alt=""
               />
             </div>
@@ -995,7 +995,7 @@ const miSightQuestionList = [
           <div class="maintain-items">
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/9a47c4aa7af6bfe7.png"
+                src="https://statichk.cmermedical.com/vision/imgs/9a47c4aa7af6bfe7.png"
                 alt=""
               />
             </div>
@@ -1021,7 +1021,7 @@ const miSightQuestionList = [
         <div class="btn-pdf">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/31dcdbf108276b0f.png"
+              src="https://statichk.cmermedical.com/vision/imgs/31dcdbf108276b0f.png"
               alt=""
             />
           </div>
@@ -1120,7 +1120,7 @@ const miSightQuestionList = [
     &-imageConten {
       margin-top: 60px;
       min-height: 369px;
-      background: url(https://static.cmereye.com/imgs/2024/08/afc2bdf93fd75a83.jpg)
+      background: url(https://statichk.cmermedical.com/vision/imgs/afc2bdf93fd75a83.jpg)
         no-repeat;
       position: relative;
       border-radius: 15px;
@@ -1751,7 +1751,7 @@ const miSightQuestionList = [
       span {
         width: 62px;
         height: 567px;
-        background: url("https://static.cmereye.com/imgs/2024/05/1a68b54b1a299577.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/1a68b54b1a299577.png")
           no-repeat;
         display: block;
         position: absolute;
@@ -1802,7 +1802,7 @@ const miSightQuestionList = [
     &-imageConten {
       margin-top: 7.692vw;
       min-height: 94.872vw;
-      background: url(https://static.cmereye.com/imgs/2024/09/cd6c3aa6177d4436.jpg)
+      background: url(https://statichk.cmermedical.com/vision/imgs/cd6c3aa6177d4436.jpg)
         no-repeat;
       position: relative;
       border-radius: 3.84vw;
@@ -2539,7 +2539,7 @@ const miSightQuestionList = [
       span {
         width: 7.1794vw;
         height: 75.128vw;
-        background: url("https://static.cmereye.com/imgs/2024/05/1a68b54b1a299577.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/1a68b54b1a299577.png")
           no-repeat;
         background-size: 100% 100%;
         display: block;

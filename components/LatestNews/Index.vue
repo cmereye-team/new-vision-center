@@ -96,7 +96,7 @@ onMounted(() => {
 const newsListddd = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/04/e2bac320179f4c43.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/e2bac320179f4c43.png",
     tag: "新聞資訊",
     source: "香港01",
     releaseTime: "｜10-11-2021",
@@ -119,7 +119,7 @@ const newsListddd = ref([
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/04/2f5acfbe99367f1c.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/2f5acfbe99367f1c.png",
     tag: "新聞資訊",
     source: "香港01",
     releaseTime: "｜13-12-2021",
@@ -142,7 +142,7 @@ const newsListddd = ref([
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/04/71080a0d646d164d.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/71080a0d646d164d.png",
     tag: "最新文章推薦",
     source: "香港01",
     releaseTime: "｜27-9-2023",
@@ -164,7 +164,7 @@ const newsListddd = ref([
   },
   {
     id: 4,
-    img: "https://static.cmereye.com/imgs/2024/04/2d3cd31678781953.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/2d3cd31678781953.png",
     tag: "新聞資訊",
     source: "Bowtie",
     releaseTime: "｜5-7-2023",
@@ -186,7 +186,7 @@ const newsListddd = ref([
   },
   {
     id: 5,
-    img: "https://static.cmereye.com/imgs/2024/04/edf5a1f5dfb06aa9.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/edf5a1f5dfb06aa9.png",
     tag: "最新文章推薦",
     source: "Urban life",
     releaseTime: "｜1-6-2023",
@@ -209,7 +209,7 @@ const newsListddd = ref([
   },
   {
     id: 6,
-    img: "https://static.cmereye.com/imgs/2024/04/d9c8da0ca91532cf.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/d9c8da0ca91532cf.png",
     tag: "最新文章推薦",
     source: "Bowtie",
     releaseTime: "｜5-7-2023",
@@ -310,7 +310,7 @@ a {
 }
 :deep(.el-select__wrapper::before) {
   content: "";
-  background: url("https://static.cmereye.com/imgs/2024/07/264b7889aa0e7395.png")
+  background: url("https://statichk.cmermedical.com/vision/imgs/264b7889aa0e7395.png")
     no-repeat;
   background-size: 100%;
   width: 22px;
@@ -413,7 +413,7 @@ a {
   .select-type {
     appearance: none;
     width: 314px;
-    background: url("https://static.cmereye.com/imgs/2024/04/e496d5c11cab80cf.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/e496d5c11cab80cf.png")
       no-repeat;
     height: 53px;
     background-position: right;
@@ -536,7 +536,7 @@ a {
   .select-type {
     appearance: none;
     width: 314px;
-    background: url("https://static.cmereye.com/imgs/2024/04/e496d5c11cab80cf.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/e496d5c11cab80cf.png")
       no-repeat;
     height: 53px;
     background-position: right;

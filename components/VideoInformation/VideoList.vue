@@ -131,7 +131,7 @@ onMounted(() => {
       top: 2.564vw;
       right: -5.128vw;
       content: "";
-      background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
         no-repeat;
       background-size: 100% 100%;
       width: 3.589vw;

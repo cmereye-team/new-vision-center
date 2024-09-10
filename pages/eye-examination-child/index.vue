@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/06/229a3265342682c3.png",
-  mobile: "https://static.cmereye.com/imgs/2024/06/028b59dee8dda26b.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/229a3265342682c3.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/028b59dee8dda26b.png",
 };
 </script>
 
@@ -58,7 +58,7 @@ const bannerImg = {
               <div>0-2歲</div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/a5f55db499f2502f.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/a5f55db499f2502f.png"
                   alt="0-2歲"
                 />
               </div>
@@ -79,7 +79,7 @@ const bannerImg = {
               <div>3-4歲</div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/08/83d5f1f247f468c3.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/83d5f1f247f468c3.png"
                   alt="3-4歲"
                 />
               </div>
@@ -98,7 +98,7 @@ const bannerImg = {
               <div>&#60;12歲</div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/154ef9b7e3f09b6f.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/154ef9b7e3f09b6f.png"
                   alt="<12歲"
                 />
               </div>
@@ -1412,7 +1412,7 @@ const bannerImg = {
     margin: 50px auto 36px;
     & > div:nth-child(1) {
       margin-bottom: 26px;
-      background: url("https://static.cmereye.com/imgs/2024/05/1f47e2a6d2857dbe.jpg")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1f47e2a6d2857dbe.jpg")
         no-repeat;
       background-size: 100% 100%;
       height: 370px;
@@ -1453,7 +1453,7 @@ const bannerImg = {
           }
           & > span::before {
             content: "";
-            background: url("https://static.cmereye.com/imgs/2024/05/13a691bf05bc9975.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/13a691bf05bc9975.png")
               no-repeat;
             background-size: 100% 100%;
             width: 24px;
@@ -1597,7 +1597,7 @@ const bannerImg = {
       text-align: center;
     }
     & > div:nth-child(2) {
-      background: url(https://static.cmereye.com/imgs/2024/07/e8689b8a03e0c2cf.png)
+      background: url(https://statichk.cmermedical.com/vision/imgs/e8689b8a03e0c2cf.png)
         no-repeat;
       background-size: 100% 100%;
       height: 395px;
@@ -1815,7 +1815,7 @@ const bannerImg = {
     margin: 10.256vw auto 11.538vw;
     & > div:nth-child(1) {
       margin-bottom: 5.128vw;
-      background: url("https://static.cmereye.com/imgs/2024/05/d53175598041a278.jpg")
+      background: url("https://statichk.cmermedical.com/vision/imgs/d53175598041a278.jpg")
         no-repeat;
       background-size: 100% 100%;
       height: 82.05vw;
@@ -1854,7 +1854,7 @@ const bannerImg = {
           }
           & > span::before {
             content: "";
-            background: url("https://static.cmereye.com/imgs/2024/05/13a691bf05bc9975.png")
+            background: url("https://statichk.cmermedical.com/vision/imgs/13a691bf05bc9975.png")
               no-repeat;
             background-size: 100% 100%;
             width: 12px;
@@ -1913,7 +1913,7 @@ const bannerImg = {
       margin-bottom: 3.07vw;
     }
     & > div:nth-child(2) {
-      background: url(https://static.cmereye.com/imgs/2024/07/976f70028a7b5e8a.png)
+      background: url(https://statichk.cmermedical.com/vision/imgs/976f70028a7b5e8a.png)
         no-repeat;
       background-size: 100% 100%;
       height: 87.179vw;

@@ -1,9 +1,9 @@
 <script lang="ts" setup>
 const imgList = [
-  "https://static.cmereye.com/imgs/2024/04/666c1d99c27658bf.png",
-  "https://static.cmereye.com/imgs/2024/04/5a960c3598776b5f.png",
-  "https://static.cmereye.com/imgs/2024/04/dc0b7696b2d87ed0.png",
-  "https://static.cmereye.com/imgs/2024/04/a8ff8092442374c1.png",
+  "https://statichk.cmermedical.com/vision/imgs/666c1d99c27658bf.png",
+  "https://statichk.cmermedical.com/vision/imgs/5a960c3598776b5f.png",
+  "https://statichk.cmermedical.com/vision/imgs/dc0b7696b2d87ed0.png",
+  "https://statichk.cmermedical.com/vision/imgs/a8ff8092442374c1.png",
 ];
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
@@ -32,22 +32,22 @@ const handlesSliPrev = () => {
 const discountsList = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/08/dc8864b666279003.webp",
+    img: "https://statichk.cmermedical.com/vision/imgs/dc8864b666279003.webp",
     content:'门店',
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/08/a56d768353c520f8.webp",
+    img: "https://statichk.cmermedical.com/vision/imgs/a56d768353c520f8.webp",
     content:'仪器',
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/08/23614bae14a8d0c6.webp",
+    img: "https://statichk.cmermedical.com/vision/imgs/23614bae14a8d0c6.webp",
     content:'展示镜架',
   },
   {
     id: 4,
-    img: "https://static.cmereye.com/imgs/2024/08/4ef10edef0edbaba.webp",
+    img: "https://statichk.cmermedical.com/vision/imgs/4ef10edef0edbaba.webp",
     content:'仪器',
   },
 ]);
@@ -207,7 +207,7 @@ const discountsList = ref([
       display: block;
       position: absolute;
       right: 430px;
-      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
       // background-position: right;
       width: 20px;
@@ -217,7 +217,7 @@ const discountsList = ref([
       display: inline-block;
       position: absolute;
       right: 0;
-      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
       // background-position: right;
       width: 20px;
@@ -232,7 +232,7 @@ const discountsList = ref([
     }
   }
   :deep(.swiper-button-next::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/6ed7199aaddff6df.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png")
       no-repeat;
     background-size: 100% 100%;
     color: transparent;
@@ -244,7 +244,7 @@ const discountsList = ref([
     left: 0px;
   }
   :deep(.swiper-button-prev::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/f68bf90ff2bad2de.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")
       no-repeat;
     background-size: 100% 100%;
     color: transparent;
@@ -332,11 +332,11 @@ const discountsList = ref([
       display: inline-block;
     }
     & > div:nth-child(1) {
-      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
     }
     & > div:nth-child(2) {
-      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
     }
   }
@@ -357,7 +357,7 @@ const discountsList = ref([
     }
   }
   :deep(.swiper-button-next::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/6ed7199aaddff6df.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png")
       no-repeat;
     background-size: 100% 100%;
     width: 11px;
@@ -368,7 +368,7 @@ const discountsList = ref([
     right: 0px;
   }
   :deep(.swiper-button-prev::after) {
-    background: url("https://static.cmereye.com/imgs/2024/04/f68bf90ff2bad2de.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")
       no-repeat;
     background-size: 100% 100%;
     width: 11px;

@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/d38ae943d9584b98.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/6405e350baed3e21.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/d38ae943d9584b98.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/6405e350baed3e21.png",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -130,12 +130,12 @@ const btnElement = ref({
         <div>
           <img
             v-if="widthNum > 768"
-            src="https://static.cmereye.com/imgs/2024/05/f975a5afaf9238d0.png"
+            src="https://statichk.cmermedical.com/vision/imgs/f975a5afaf9238d0.png"
             alt="技術原理"
           />
           <img
             v-else
-            src="https://static.cmereye.com/imgs/2024/05/0a1ea745f7db116a.png"
+            src="https://statichk.cmermedical.com/vision/imgs/0a1ea745f7db116a.png"
             alt="技術原理"
           />
         </div>
@@ -356,7 +356,7 @@ const btnElement = ref({
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/65872632ac3009e3.png"
+              src="https://statichk.cmermedical.com/vision/imgs/65872632ac3009e3.png"
               alt="老花隱形眼鏡"
             />
           </div>
@@ -1583,7 +1583,7 @@ const btnElement = ref({
     }
   }
   .why {
-    background: url("https://static.cmereye.com/imgs/2024/05/d15ac219f8b8cb5d.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/d15ac219f8b8cb5d.png")
       no-repeat;
     background-size: 100% 100%;
     max-width: 960px;
@@ -2141,7 +2141,7 @@ const btnElement = ref({
     }
   }
   .why {
-    background: url("https://static.cmereye.com/imgs/2024/05/d682f63f94319e61.jpg")
+    background: url("https://statichk.cmermedical.com/vision/imgs/d682f63f94319e61.jpg")
       no-repeat;
     background-size: 100% 100%;
     margin: 10.25vw auto 7.7vw;

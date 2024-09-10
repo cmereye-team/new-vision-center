@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/c6817a94927a9f78.jpg",
-  mobile: "https://static.cmereye.com/imgs/2024/08/9660b07b9deeda5c.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/c6817a94927a9f78.jpg",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/9660b07b9deeda5c.jpg",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -117,7 +117,7 @@ const showAgeStage = (type: any) => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/41f7415056968063.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/41f7415056968063.png"
                   alt="18-55歲"
                 />
               </div>
@@ -131,7 +131,7 @@ const showAgeStage = (type: any) => {
             <div>
               <div>
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/6e9ee5ac6bc38a28.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/6e9ee5ac6bc38a28.png"
                   alt="55歲或以上"
                 />
               </div>
@@ -152,7 +152,7 @@ const showAgeStage = (type: any) => {
                 :class="[isYouth == true ? 'show-active' : '']"
               >
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/41f7415056968063.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/41f7415056968063.png"
                   alt="18-55歲"
                 />
               </div>
@@ -161,7 +161,7 @@ const showAgeStage = (type: any) => {
                 :class="[isYouth == false ? 'show-active' : '']"
               >
                 <img
-                  src="https://static.cmereye.com/imgs/2024/05/6e9ee5ac6bc38a28.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/6e9ee5ac6bc38a28.png"
                   alt="55歲或以上"
                 />
               </div>
@@ -2983,7 +2983,7 @@ const showAgeStage = (type: any) => {
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url(https://static.cmereye.com/imgs/2024/05/650d57a0951b6af8.png)
+        background: url(https://statichk.cmermedical.com/vision/imgs/650d57a0951b6af8.png)
           no-repeat;
         background-size: 100% 100%;
         width: 98px;
@@ -3152,7 +3152,7 @@ const showAgeStage = (type: any) => {
     & > div:nth-child(2) {
       max-width: 702px;
       margin: 0 auto;
-      background: url(https://static.cmereye.com/imgs/2024/07/e8689b8a03e0c2cf.png)
+      background: url(https://statichk.cmermedical.com/vision/imgs/e8689b8a03e0c2cf.png)
         no-repeat;
       background-size: 100% 100%;
       height: 395px;
@@ -3348,7 +3348,7 @@ const showAgeStage = (type: any) => {
       text-align: center;
     }
     & > div:nth-child(2) {
-      background: url(https://static.cmereye.com/imgs/2024/07/976f70028a7b5e8a.png)
+      background: url(https://statichk.cmermedical.com/vision/imgs/976f70028a7b5e8a.png)
         no-repeat;
       background-size: 100% 100%;
       height: 340px;
@@ -3559,7 +3559,7 @@ const showAgeStage = (type: any) => {
       }
       & > div:nth-child(1)::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/05/650d57a0951b6af8.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/650d57a0951b6af8.png")
           no-repeat;
         background-size: 100% 100%;
         width: 64px;

@@ -26,8 +26,8 @@ onMounted(() => {
   });
 });
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/0fd7856ae65aea25.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/7e2d6e9bac45673f.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/0fd7856ae65aea25.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/7e2d6e9bac45673f.png",
 };
 const btnElement = ref({
   title: "哪一款鏡片最適合你的小朋友?",
@@ -74,7 +74,7 @@ const btnElement = ref({
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/f33d758eecbb4e90.png"
+              src="https://statichk.cmermedical.com/vision/imgs/f33d758eecbb4e90.png"
               alt="六大優點"
             />
           </div>
@@ -610,7 +610,7 @@ const btnElement = ref({
           <div>兒童近視控制眼鏡</div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/44e6c8483ccfb4c8.png"
+              src="https://statichk.cmermedical.com/vision/imgs/44e6c8483ccfb4c8.png"
               alt="兒童近視控制眼鏡"
             />
           </div>
@@ -621,19 +621,19 @@ const btnElement = ref({
         <div>
           <nuxt-link to="/myopia-control-hoya">
             <img
-              src="https://static.cmereye.com/imgs/2024/05/d9287395e4d6bb6f.png"
+              src="https://statichk.cmermedical.com/vision/imgs/d9287395e4d6bb6f.png"
               alt="hoya"
             />
           </nuxt-link>
           <nuxt-link to="/myopia-control-zeiss">
             <img
-              src="https://static.cmereye.com/imgs/2024/05/7740c29874165677.png"
+              src="https://statichk.cmermedical.com/vision/imgs/7740c29874165677.png"
               alt="zeiss"
             />
           </nuxt-link>
           <nuxt-link>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/ff2b29012a4a6499.png"
+              src="https://statichk.cmermedical.com/vision/imgs/ff2b29012a4a6499.png"
               alt="varilux"
             />
           </nuxt-link>
@@ -642,7 +642,7 @@ const btnElement = ref({
           <div>
             <span>哪一款鏡片最適合你的小朋友?</span>
             <span><img
-                src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
+                src="https://statichk.cmermedical.com/vision/imgs/93740deca665eceb.png"
                 alt="哪一款鏡片最適合你的小朋友?"
               /></span>
           </div>
@@ -963,7 +963,7 @@ const btnElement = ref({
       <div class="myopia-container-attention">
         <div>
           <img
-            src="https://static.cmereye.com/imgs/2024/05/42c870847885506a.png"
+            src="https://statichk.cmermedical.com/vision/imgs/42c870847885506a.png"
             alt="注意事項"
           />
         </div>
@@ -1623,7 +1623,7 @@ const btnElement = ref({
     }
     & > div:nth-child(2) {
       margin-top: 35px;
-      background: url(https://static.cmereye.com/imgs/2024/05/05fdefbeb8645e5a.png)
+      background: url(https://statichk.cmermedical.com/vision/imgs/05fdefbeb8645e5a.png)
         no-repeat;
       height: 370px;
       background-size: 100% 100%;
@@ -1654,7 +1654,7 @@ const btnElement = ref({
     }
   }
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/05/0fd7856ae65aea25.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/0fd7856ae65aea25.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
@@ -2170,7 +2170,7 @@ const btnElement = ref({
       margin-bottom: 12px;
     }
     & > div:nth-child(2) {
-      background: url("https://static.cmereye.com/imgs/2024/05/86a1e2bdc860ef04.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/86a1e2bdc860ef04.png")
         no-repeat;
       background-size: 100% 100%;
       box-sizing: border-box;
@@ -2207,7 +2207,7 @@ const btnElement = ref({
     }
   }
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/05/7e2d6e9bac45673f.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/7e2d6e9bac45673f.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;

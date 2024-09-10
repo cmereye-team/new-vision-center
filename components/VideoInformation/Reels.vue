@@ -101,13 +101,13 @@ onMounted(() => {
     left: 0;
   }
   :deep(.swiper-button-prev:after) {
-    background: url(https://static.cmereye.com/imgs/2024/04/f68bf90ff2bad2de.png)
+    background: url(https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png)
       no-repeat;
     color: transparent;
   }
   :deep(.swiper-button-next:after) {
     color: transparent;
-    background: url(https://static.cmereye.com/imgs/2024/04/6ed7199aaddff6df.png)
+    background: url(https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png)
       no-repeat;
   }
   a {
@@ -125,7 +125,7 @@ onMounted(() => {
       display: block;
       position: absolute;
       left: -3%;
-      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
       background-position: right;
       width: 20px;
@@ -135,7 +135,7 @@ onMounted(() => {
       display: inline-block;
       position: absolute;
       right: -3%;
-      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
       background-position: right;
       width: 20px;
@@ -165,13 +165,13 @@ onMounted(() => {
     left: 0;
   }
   :deep(.swiper-button-prev:after) {
-    background: url(https://static.cmereye.com/imgs/2024/04/f68bf90ff2bad2de.png)
+    background: url(https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png)
       no-repeat;
     color: transparent;
   }
   :deep(.swiper-button-next:after) {
     color: transparent;
-    background: url(https://static.cmereye.com/imgs/2024/04/6ed7199aaddff6df.png)
+    background: url(https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png)
       no-repeat;
   }
   a {
@@ -193,7 +193,7 @@ onMounted(() => {
       display: block;
       position: absolute;
       left: -4%;
-      background: url("https://static.cmereye.com/imgs/2024/04/1c62cfbbfb64b37f.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
       background-position: right;
       width: 5.128vw;
@@ -203,7 +203,7 @@ onMounted(() => {
       display: inline-block;
       position: absolute;
       right: -5%;
-      background: url("https://static.cmereye.com/imgs/2024/04/15988679aad2e086.png")
+      background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
       background-position: right;
       width: 5.128vw;

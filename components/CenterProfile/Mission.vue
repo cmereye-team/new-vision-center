@@ -3,22 +3,22 @@ const missionList = [
   {
     id: 1,
     text: ["提高近視控制的", "普及度"],
-    svg: "https://static.cmereye.com/imgs/2024/04/47894bbdf8a48b92.png",
+    svg: "https://statichk.cmermedical.com/vision/imgs/47894bbdf8a48b92.png",
   },
   {
     id: 2,
     text: ["提供一站式眼科", "視光醫療服務"],
-    svg: "https://static.cmereye.com/imgs/2024/04/b2fb0604926d2640.png",
+    svg: "https://statichk.cmermedical.com/vision/imgs/b2fb0604926d2640.png",
   },
   {
     id: 3,
     text: ["注重細節，更了解", "您的需要"],
-    svg: "https://static.cmereye.com/imgs/2024/04/b8acb5a551803486.png",
+    svg: "https://statichk.cmermedical.com/vision/imgs/b8acb5a551803486.png",
   },
   {
     id: 4,
     text: ["精益求精的醫療技", "術與服務"],
-    svg: "https://static.cmereye.com/imgs/2024/04/b5943e6d49e89ab7.png",
+    svg: "https://statichk.cmermedical.com/vision/imgs/b5943e6d49e89ab7.png",
   },
 ];
 </script>

@@ -22,7 +22,7 @@ const props = defineProps({
       <span>{{ props.title }}</span>
       <span
         ><img
-          src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
+          src="https://statichk.cmermedical.com/vision/imgs/93740deca665eceb.png"
           :alt="props.title"
       /></span>
     </div>
@@ -32,7 +32,7 @@ const props = defineProps({
       <span>{{ props.title }}</span>
       <span
         ><img
-          src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
+          src="https://statichk.cmermedical.com/vision/imgs/93740deca665eceb.png"
           :alt="props.title"
       /></span>
     </div>

@@ -78,7 +78,7 @@ const onSubmit = () => {
       <div>
         <div>
           <img
-            src="https://static.cmereye.com/imgs/2024/05/9b29523a2013871a.png"
+            src="https://statichk.cmermedical.com/vision/imgs/9b29523a2013871a.png"
             alt="zeiss"
           />
         </div>
@@ -296,7 +296,7 @@ const onSubmit = () => {
     color: #00517e !important;
   }
   :deep(.el-select__caret) {
-    background: url("https://static.cmereye.com/imgs/2024/05/d8fec29fcec9f7be.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/d8fec29fcec9f7be.png")
       no-repeat;
     background-size: 100% 100%;
     background-position: center;
@@ -455,7 +455,7 @@ const onSubmit = () => {
     color: #00517e !important;
   }
   :deep(.el-select__caret) {
-    background: url("https://static.cmereye.com/imgs/2024/05/d8fec29fcec9f7be.png")
+    background: url("https://statichk.cmermedical.com/vision/imgs/d8fec29fcec9f7be.png")
       no-repeat;
     background-size: 100% 100%;
     background-position: center;

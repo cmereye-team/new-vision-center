@@ -52,8 +52,8 @@ useHead(() => ({
 }));
 
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/04/d1372c5de907c9e3.png",
-  mobile: "https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/d1372c5de907c9e3.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
 };
 
 const fetchData = async () => {
@@ -461,7 +461,7 @@ a {
 
 
   .news-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/d1372c5de907c9e3.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/d1372c5de907c9e3.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
@@ -666,7 +666,7 @@ a {
 
 
   .news-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;

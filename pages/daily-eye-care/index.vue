@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/443cc07de748c392.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/e43937e07811b8c8.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/443cc07de748c392.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/e43937e07811b8c8.png",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(false);
@@ -33,64 +33,64 @@ onMounted(() => {
 
 const listData = ref([
   {
-    img: "https://static.cmereye.com/imgs/2024/06/f1554038a50d1c05.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f1554038a50d1c05.png",
     title: ["常用20-20-20", "護眼法則"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/838dee6f161f3291.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/838dee6f161f3291.png",
     title: ["與物件保持", "適當距離"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/bae9f69c98a3c021.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/bae9f69c98a3c021.png",
     title: ["經常主動", "眨眼"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/1903f15c11385c14.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/1903f15c11385c14.png",
     title: ["避免長時間", "觀看螢幕"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/5ebe879873e07bf7.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/5ebe879873e07bf7.png",
     title: ["避免在黑暗環境", "使用電子產品"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/57296d584af44c6a.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/57296d584af44c6a.png",
     title: ["配戴隱形眼鏡每", "日少於8小時"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/c7c8561b41e3e925.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c7c8561b41e3e925.png",
     title: ["多配戴有框眼鏡", "代替隱形眼鏡"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/f0516cb6435dfb51.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f0516cb6435dfb51.png",
     title: ["在強光下做好保", "護眼睛措施"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/4b58a2d97b0032fa.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/4b58a2d97b0032fa.png",
     title: ["定期進行眼睛", "檢查"],
   },
 ]);
 const listDataDetail = [
   {
-    img: "https://static.cmereye.com/imgs/2024/06/2943b418ec659ed6.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/2943b418ec659ed6.png",
     title: "常用20-20-20護眼法則",
     description: [
       "觀看電子產品螢幕20分鐘，建議雙眼休息20秒，或者遠望20呎﹙約50厘米﹚外的景觀。",
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/716d87efeff177e8.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/716d87efeff177e8.png",
     title: "與物件保持適當距離",
     description: [
       "使用智能電話、平板電腦及電腦時，建議分別保持30厘米、40 厘米、50厘米的距離。",
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/2d7a7f990a7a1ca2.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/2d7a7f990a7a1ca2.png",
     title: "經常主動眨眼",
     description: ["盡量保持雙眼表面濕潤及主動多眨眼，以免眼睛乾澀。"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/bb38c367c3ad43af.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/bb38c367c3ad43af.png",
     title: "避免長時間觀看螢幕",
     description: [
       "•2歲以下兒童建議避免使用電子產品；",
@@ -102,31 +102,31 @@ const listDataDetail = [
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/d5cd6ca4c0382cb8.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/d5cd6ca4c0382cb8.png",
     title: "避免在黑暗環境使用電子產品",
     description: [
       "建議睡覺前限制使用電子產品的時間，關燈後不要看電子產品螢幕，以減少對眼睛的傷害及影響睡眠質素。",
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/f128d8dc885a89c8.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f128d8dc885a89c8.png",
     title: "配戴隱形眼鏡每日少於8小時",
     description: ["不建議超過連續8小時配戴隱形眼鏡"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/d0302ad478e492b5.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/d0302ad478e492b5.png",
     title: "多配戴有框眼鏡代替隱形眼鏡",
     description: [
       "如果經常使用隱形眼鏡人士，可能需不時改戴有框眼鏡，讓雙眼稍作休息。",
     ],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/51428e09c2362b92.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/51428e09c2362b92.png",
     title: "在強光下做好保護眼睛措施",
     description: ["在猛烈的陽光下，最好戴上能遮擋紫外光和品質良好的太陽眼鏡。"],
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/102bf6aae979516d.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/102bf6aae979516d.png",
     title: "定期進行眼睛檢查",
     description: [
       "定期檢查眼睛以及早找出眼睛問題，尤其是有家疾病史及較高風險患眼疾人士。",
@@ -159,7 +159,7 @@ onMounted(() => {
   }
   questionI(
     {
-      img: "https://static.cmereye.com/imgs/2024/06/c8a417d2cf51179c.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/c8a417d2cf51179c.png",
       title: "近視",
       id: 1,
     },
@@ -170,7 +170,7 @@ onMounted(() => {
 const dailyEyeFood = ref([
   {
     id: 1,
-    img: "https://static.cmereye.com/imgs/2024/06/06a441a58d23d805.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/06a441a58d23d805.png",
     childTitle: ["含", "維他命A", "食物"],
     childBgColor: "#F9AFB1",
     addOpenImg: false,
@@ -184,7 +184,7 @@ const dailyEyeFood = ref([
   },
   {
     id: 2,
-    img: "https://static.cmereye.com/imgs/2024/06/944597d75c1a85f4.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/944597d75c1a85f4.png",
     childTitle: ["含", "維他命B", "食物"],
     childBgColor: "#C75770",
     addOpenImg: false,
@@ -198,7 +198,7 @@ const dailyEyeFood = ref([
   },
   {
     id: 3,
-    img: "https://static.cmereye.com/imgs/2024/06/f4989b4d3c631721.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f4989b4d3c631721.png",
     childTitle: ["含", "維他命C", "食物"],
     childBgColor: "#D16C3E",
     addOpenImg: false,
@@ -212,7 +212,7 @@ const dailyEyeFood = ref([
   },
   {
     id: 4,
-    img: "https://static.cmereye.com/imgs/2024/06/1cb9c954288349e3.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/1cb9c954288349e3.png",
     childTitle: ["含", "維他命E", "食物"],
     childBgColor: "#668331",
     addOpenImg: false,
@@ -225,7 +225,7 @@ const dailyEyeFood = ref([
   },
   {
     id: 5,
-    img: "https://static.cmereye.com/imgs/2024/06/54290239552d9bca.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/54290239552d9bca.png",
     childTitle: ["含", "Omega-3", "食物"],
     childBgColor: "#E59B40",
     addOpenImg: false,
@@ -241,7 +241,7 @@ const dailyEyeFood = ref([
   },
   {
     id: 6,
-    img: "https://static.cmereye.com/imgs/2024/06/fe3227e340eb5a30.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/fe3227e340eb5a30.png",
     childTitle: ["含", "葉黃素", "食物"],
     childBgColor: "#84883A",
     addOpenImg: false,
@@ -255,7 +255,7 @@ const dailyEyeFood = ref([
   },
   {
     id: 7,
-    img: "https://static.cmereye.com/imgs/2024/06/39452f1af77b7f35.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/39452f1af77b7f35.png",
     childTitle: ["含", "花青素", "食物"],
     childBgColor: "#513C75",
     addOpenImg: false,
@@ -271,49 +271,49 @@ const dailyEyeFood = ref([
 
 const questionIconList = ref([
   {
-    img: "https://static.cmereye.com/imgs/2024/06/c8a417d2cf51179c.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/c8a417d2cf51179c.png",
     title: "近視",
     activeQuestion: false,
     id: 1,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/64e581fcf3fb1fbc.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/64e581fcf3fb1fbc.png",
     title: "散光",
     activeQuestion: false,
     id: 2,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/aa7b90be2f4bed85.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/aa7b90be2f4bed85.png",
     title: "眼乾症",
     activeQuestion: false,
     id: 3,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/082b9db2bdaa81c7.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/082b9db2bdaa81c7.png",
     title: "飛蚊症",
     activeQuestion: false,
     id: 4,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/ec2a1af074a6a03e.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/ec2a1af074a6a03e.png",
     title: "青光眼",
     activeQuestion: false,
     id: 5,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/f9e3ffcd522170d5.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/f9e3ffcd522170d5.png",
     title: "白內障",
     activeQuestion: false,
     id: 6,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/bc4992911a72ffa8.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/bc4992911a72ffa8.png",
     title: "弱視/斜視",
     activeQuestion: false,
     id: 7,
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/06/ad00d87b7cfcafb7.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/ad00d87b7cfcafb7.png",
     title: "視光檢查",
     activeQuestion: false,
     id: 8,

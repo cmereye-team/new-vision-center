@@ -328,8 +328,6 @@ onMounted(() => {
             <el-option label="將軍澳寶琳" value="將軍澳寶琳" />
             <el-option label="鑽石山" value="鑽石山" />
             <el-option label="銅鑼灣" value="銅鑼灣" />
-
-
           </el-select>
         </el-form-item>
         <el-form-item prop="FromMe" class="inputItem">
@@ -917,7 +915,7 @@ onMounted(() => {
     content: "";
     width: 0;
     height: 100%;
-    background: url(https://static.cmereye.com/imgs/2024/05/d22d7ed584a56f4d.png)
+    background: url(https://statichk.cmermedical.com/vision/imgs/d22d7ed584a56f4d.png)
       no-repeat;
     background-size: 100% 100%;
     box-sizing: border-box;
@@ -1452,7 +1450,7 @@ onMounted(() => {
     content: "";
     width: 0;
     height: 100%;
-    background: url(https://static.cmereye.com/imgs/2024/05/d22d7ed584a56f4d.png)
+    background: url(https://statichk.cmermedical.com/vision/imgs/d22d7ed584a56f4d.png)
       no-repeat;
     background-size: 100% 100%;
     box-sizing: border-box;

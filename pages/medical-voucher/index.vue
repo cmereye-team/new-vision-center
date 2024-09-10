@@ -16,8 +16,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/26cc20faacd95e95.png",
-  mobile: "https://static.cmereye.com/imgs/2024/08/37b55212c8d95e85.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/26cc20faacd95e95.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/37b55212c8d95e85.png",
   alt:''
 };
 </script>
@@ -42,7 +42,7 @@ const bannerImg = {
     margin-bottom: 90px;
   }
   .medical-voucher-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/735b78a3199c7307.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/735b78a3199c7307.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
@@ -64,7 +64,7 @@ const bannerImg = {
 }
 @media screen and (max-width: 767px) {
   .medical-voucher-title {
-    // background: url("https://static.cmereye.com/imgs/2024/04/c05702c8c41964c7.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/c05702c8c41964c7.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;

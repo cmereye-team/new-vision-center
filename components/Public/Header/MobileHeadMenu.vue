@@ -398,7 +398,7 @@ const goToChildPath = (item: any, i: any) => {
       }
       & > .a-link::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/afcc2515ac219afd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/afcc2515ac219afd.png")
           no-repeat;
         width: 7px;
         height: 14px;
@@ -412,7 +412,7 @@ const goToChildPath = (item: any, i: any) => {
       }
       & > .a-link-1::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -421,7 +421,7 @@ const goToChildPath = (item: any, i: any) => {
       }
       & > .a-link-2::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -430,7 +430,7 @@ const goToChildPath = (item: any, i: any) => {
       }
       & > .a-link-3::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -439,7 +439,7 @@ const goToChildPath = (item: any, i: any) => {
       }
       & > .a-link-4::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;
@@ -448,7 +448,7 @@ const goToChildPath = (item: any, i: any) => {
       }
       & > .a-link-5::after {
         content: "";
-        background: url("https://static.cmereye.com/imgs/2024/04/d8b915b502a6c1cd.png")
+        background: url("https://statichk.cmermedical.com/vision/imgs/d8b915b502a6c1cd.png")
           no-repeat;
         width: 14px;
         height: 7px;

@@ -39,8 +39,8 @@ const wearOrExcise = (str: string) => {
   }
 };
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/294a743cedceec25.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/8b53b098e710bc0a.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/294a743cedceec25.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/8b53b098e710bc0a.jpg",
 };
 const okQuestionList = [
   {
@@ -93,27 +93,27 @@ const modules = [Navigation];
 
 const videoList = [
   {
-    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/046df26e10531539.png",
     title: "視光中心",
     url: "https://www.youtube.com/embed/Ik8VIPaCijM?si=1J_GUQHuiKkbsyEk",
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/046df26e10531539.png",
     title: "視光中心",
     url: "https://www.youtube.com/embed/BkYXEbfg2Zk?si=JGe0LpjQ-f8j5UfG",
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/046df26e10531539.png",
     title: "視光中心",
     url: "https://www.youtube.com/embed/2UJcMkLfuxE?si=u6LNnhZqtcNNGWgp",
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/046df26e10531539.png",
     title: "視光中心",
     url: "https://www.youtube.com/embed/qXcrf_ASWE0?si=Zk_VWQTZdQn8A6Xc",
   },
   {
-    img: "https://static.cmereye.com/imgs/2024/05/046df26e10531539.png",
+    img: "https://statichk.cmermedical.com/vision/imgs/046df26e10531539.png",
     title: "視光中心",
     url: "https://www.youtube.com/embed/J5tfqyp-lQQ?si=5_yreP9LZV-NDFoV",
   },
@@ -644,7 +644,7 @@ const handlesSliPrev = () => {
             <span>預約眼科檢查</span>
             <span
               ><img
-                src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
+                src="https://statichk.cmermedical.com/vision/imgs/93740deca665eceb.png"
                 alt="預約眼科檢查"
             /></span>
           </div>
@@ -668,7 +668,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/382044e809a568f4.png"
+                src="https://statichk.cmermedical.com/vision/imgs/382044e809a568f4.png"
                 alt="沒有戴上鏡片"
               />
             </div>
@@ -682,7 +682,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/e678d98dc601933c.png"
+                src="https://statichk.cmermedical.com/vision/imgs/e678d98dc601933c.png"
                 alt="戴上鏡片後"
               />
             </div>
@@ -694,7 +694,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/b15268bccfa6665b.png"
+                src="https://statichk.cmermedical.com/vision/imgs/b15268bccfa6665b.png"
                 alt="晚上睡覺後"
               />
             </div>
@@ -708,7 +708,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/a818bd7bbe800a51.png"
+                src="https://statichk.cmermedical.com/vision/imgs/a818bd7bbe800a51.png"
                 alt="日間摘除後"
               />
             </div>
@@ -732,7 +732,7 @@ const handlesSliPrev = () => {
             <div>角膜矯形產生的周邊離焦</div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/b8231bd4c5a0c0a5.png"
+                src="https://statichk.cmermedical.com/vision/imgs/b8231bd4c5a0c0a5.png"
                 alt="角膜矯形產生的周邊離焦"
               />
             </div>
@@ -807,7 +807,7 @@ const handlesSliPrev = () => {
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/bfe1476bf8e5ccef.png"
+              src="https://statichk.cmermedical.com/vision/imgs/bfe1476bf8e5ccef.png"
               alt="五大優點"
             />
           </div>
@@ -816,7 +816,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/61a6eeb70b8972c4.png"
+                src="https://statichk.cmermedical.com/vision/imgs/61a6eeb70b8972c4.png"
                 alt="日間摘除鏡片後便能整天保持良好視力"
               />
             </div>
@@ -827,7 +827,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/81e5e70c6c6e271a.png"
+                src="https://statichk.cmermedical.com/vision/imgs/81e5e70c6c6e271a.png"
                 alt="避免日間配戴隱形眼鏡引起的問題，例如眼乾"
               />
             </div>
@@ -838,7 +838,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/7305d2ca62007038.png"
+                src="https://statichk.cmermedical.com/vision/imgs/7305d2ca62007038.png"
                 alt="可隨時停止療程，角膜會在數周後回復原狀"
               />
             </div>
@@ -849,7 +849,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/a1bc1c06de1abddc.png"
+                src="https://statichk.cmermedical.com/vision/imgs/a1bc1c06de1abddc.png"
                 alt="近視加深速度減慢一倍"
               />
             </div>
@@ -860,7 +860,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <img
-                src="https://static.cmereye.com/imgs/2024/05/724ec145ee8ad287.png"
+                src="https://statichk.cmermedical.com/vision/imgs/724ec145ee8ad287.png"
                 alt="使用後約一星期已有顯著效果"
               />
             </div>
@@ -1406,7 +1406,7 @@ const handlesSliPrev = () => {
           <div>
             <div>
               <!-- <img
-                src="https://static.cmereye.com/imgs/2024/05/ffcf511ef45d00b0.png"
+                src="https://statichk.cmermedical.com/vision/imgs/ffcf511ef45d00b0.png"
                 alt="綜合眼睛檢查"
               /> -->
               <div>
@@ -1564,7 +1564,7 @@ const handlesSliPrev = () => {
                 </svg>
               </div>
               <!-- <img
-                src="https://static.cmereye.com/imgs/2024/05/9540f8c9e521c9cb.png"
+                src="https://statichk.cmermedical.com/vision/imgs/9540f8c9e521c9cb.png"
                 alt="MiSight近視控制"
               /> -->
             </div>
@@ -1609,7 +1609,7 @@ const handlesSliPrev = () => {
                 </svg>
               </div>
               <!-- <img
-                src="https://static.cmereye.com/imgs/2024/05/146b6d172795ea39.png"
+                src="https://statichk.cmermedical.com/vision/imgs/146b6d172795ea39.png"
                 alt="1年內4次覆診"
               /> -->
             </div>
@@ -1717,7 +1717,7 @@ const handlesSliPrev = () => {
               </div>
               <!--         
               <img
-                src="https://static.cmereye.com/imgs/2024/05/bac7cff9c9588cd5.png"
+                src="https://statichk.cmermedical.com/vision/imgs/bac7cff9c9588cd5.png"
                 alt="隱形眼鏡驗配"
               /> -->
             </div>
@@ -1786,7 +1786,7 @@ const handlesSliPrev = () => {
               </div>
 
               <!-- <img
-                src="https://static.cmereye.com/imgs/2024/05/035b8f642a889227.png"
+                src="https://statichk.cmermedical.com/vision/imgs/035b8f642a889227.png"
                 alt="詳細戴除鏡片"
               /> -->
             </div>
@@ -2623,13 +2623,13 @@ const handlesSliPrev = () => {
                 <div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/05/1b85d876b4ad43b3.png"
+                      src="https://statichk.cmermedical.com/vision/imgs/1b85d876b4ad43b3.png"
                       alt=""
                     />
                   </div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/05/efc46121ceb56cce.png"
+                      src="https://statichk.cmermedical.com/vision/imgs/efc46121ceb56cce.png"
                       alt=""
                     />
                   </div>
@@ -3572,13 +3572,13 @@ const handlesSliPrev = () => {
                 <div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/05/1b85d876b4ad43b3.png"
+                      src="https://statichk.cmermedical.com/vision/imgs/1b85d876b4ad43b3.png"
                       alt=""
                     />
                   </div>
                   <div>
                     <img
-                      src="https://static.cmereye.com/imgs/2024/05/efc46121ceb56cce.png"
+                      src="https://statichk.cmermedical.com/vision/imgs/efc46121ceb56cce.png"
                       alt=""
                     />
                   </div>
@@ -3729,7 +3729,7 @@ const handlesSliPrev = () => {
       <div class="orthokeratoplasty-video">
         <div>
           <img
-            src="https://static.cmereye.com/imgs/2024/05/3510735ba4ead090.png"
+            src="https://statichk.cmermedical.com/vision/imgs/3510735ba4ead090.png"
             alt="video"
           />
         </div>
@@ -3786,7 +3786,7 @@ const handlesSliPrev = () => {
     max-width: 960px;
     margin: 80px auto 0;
     & > div:nth-child(1) {
-      background: url(https://static.cmereye.com/imgs/2024/05/41500a3b6e4b4618.jpg)
+      background: url(https://statichk.cmermedical.com/vision/imgs/41500a3b6e4b4618.jpg)
         no-repeat;
       background-size: 100% 100%;
       height: 370px;
@@ -3847,7 +3847,7 @@ const handlesSliPrev = () => {
           }
           & > div::before {
             content: "";
-            background: url(https://static.cmereye.com/imgs/2024/05/d35a211758538f81.png)
+            background: url(https://statichk.cmermedical.com/vision/imgs/d35a211758538f81.png)
               no-repeat;
             background-size: 100% 100%;
             width: 25px;
@@ -3970,7 +3970,7 @@ const handlesSliPrev = () => {
                 position: absolute;
                 width: 46.5px;
                 height: 46.5px;
-                background: url("https://static.cmereye.com/imgs/2024/05/2d6a477fed6ee4ea.png")
+                background: url("https://statichk.cmermedical.com/vision/imgs/2d6a477fed6ee4ea.png")
                   no-repeat;
                 background-size: 100%;
                 left: 0;
@@ -4510,7 +4510,7 @@ const handlesSliPrev = () => {
           line-height: 45px; /* 133.333% */
           letter-spacing: 5.575px;
           padding-left: 8px;
-          background: url("https://static.cmereye.com/imgs/2024/05/3598b34f5d471b6c.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/3598b34f5d471b6c.png")
             no-repeat;
           background-size: 100% 100%;
           height: 51px;
@@ -4821,7 +4821,7 @@ const handlesSliPrev = () => {
       height: 370px;
       border-radius: 15px;
       overflow: hidden;
-      background: url("https://static.cmereye.com/imgs/2024/05/fa0a497345651931.jpg")
+      background: url("https://statichk.cmermedical.com/vision/imgs/fa0a497345651931.jpg")
         no-repeat;
       background-size: 100% 100%;
       box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
@@ -4889,7 +4889,7 @@ const handlesSliPrev = () => {
           left: -10%;
           top: 50%;
           transform: translateY(-50%);
-          background: url("https://static.cmereye.com/imgs/2024/05/a81f924fb63f0cb4.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/a81f924fb63f0cb4.png")
             no-repeat;
           background-size: 100% 100%;
           background-position: center;
@@ -5102,7 +5102,7 @@ const handlesSliPrev = () => {
     align-items: center;
     & > div:nth-child(1) {
       position: relative;
-      background: url("https://static.cmereye.com/imgs/2024/05/009abe3faad51822.jpg")
+      background: url("https://statichk.cmermedical.com/vision/imgs/009abe3faad51822.jpg")
         no-repeat;
       background-size: 100% 100%;
       width: 340px;
@@ -5161,7 +5161,7 @@ const handlesSliPrev = () => {
             left: -12%;
             top: 12px;
             transform: translateY(-50%);
-            background: url(https://static.cmereye.com/imgs/2024/05/a19582aa99d56718.png)
+            background: url(https://statichk.cmermedical.com/vision/imgs/a19582aa99d56718.png)
               no-repeat;
             background-size: 100% 100%;
             width: 15px;
@@ -5255,7 +5255,7 @@ const handlesSliPrev = () => {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                background: url("https://static.cmereye.com/imgs/2024/07/472315ed6bb6f4a3.png")
+                background: url("https://statichk.cmermedical.com/vision/imgs/472315ed6bb6f4a3.png")
                   no-repeat;
                 background-size: 100% 100%;
                 width: 36px;
@@ -5901,7 +5901,7 @@ const handlesSliPrev = () => {
           right: -60%;
           top: 50%;
           transform: translateY(-50%);
-          background: url("https://static.cmereye.com/imgs/2024/05/d16a15ed51fbf41e.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/d16a15ed51fbf41e.png")
             no-repeat;
           background-size: 100% 100%;
           width: 27px;
@@ -5965,7 +5965,7 @@ const handlesSliPrev = () => {
       margin: 0 auto;
       margin-top: 28px;
       border-radius: 20px;
-      background: url("https://static.cmereye.com/imgs/2024/05/85fdfbfe6423449b.jpg")
+      background: url("https://statichk.cmermedical.com/vision/imgs/85fdfbfe6423449b.jpg")
         no-repeat;
       background-size: 100% 100%;
       width: 339px;
@@ -6009,7 +6009,7 @@ const handlesSliPrev = () => {
           left: -12%;
           top: 12px;
           transform: translateY(-50%);
-          background: url("https://static.cmereye.com/imgs/2024/05/a19582aa99d56718.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/a19582aa99d56718.png")
             no-repeat;
           background-size: 100% 100%;
           width: 15px;
@@ -6153,7 +6153,7 @@ const handlesSliPrev = () => {
       & > div:nth-child(1) {
         position: relative;
         & > div:nth-child(1) {
-          background: url(https://static.cmereye.com/imgs/2024/05/b9aae2b64a16d473.png)
+          background: url(https://statichk.cmermedical.com/vision/imgs/b9aae2b64a16d473.png)
             no-repeat;
           background-size: 100% 100%;
           color: var(--White, #fff);

@@ -26,8 +26,8 @@ onMounted(() => {
   });
 });
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/05/6446d8c5f0f8f72a.png",
-  mobile: "https://static.cmereye.com/imgs/2024/05/5e82a28589934353.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/6446d8c5f0f8f72a.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/5e82a28589934353.png",
 };
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
@@ -124,11 +124,11 @@ const btnElement = ref({
         </div>
         <div>
           <img
-            src="https://static.cmereye.com/imgs/2024/05/3a9029e1cba19e6e.png"
+            src="https://statichk.cmermedical.com/vision/imgs/3a9029e1cba19e6e.png"
             alt=""
           />
           <img
-            src="https://static.cmereye.com/imgs/2024/05/69d2e49639bda264.png"
+            src="https://statichk.cmermedical.com/vision/imgs/69d2e49639bda264.png"
             alt=""
           />
         </div>
@@ -775,7 +775,7 @@ const btnElement = ref({
           <span>哪一款鏡片最適合你的小朋友?</span>
           <span
             ><img
-              src="https://static.cmereye.com/imgs/2024/05/93740deca665eceb.png"
+              src="https://statichk.cmermedical.com/vision/imgs/93740deca665eceb.png"
               alt="哪一款鏡片最適合你的小朋友?"
           /></span>
         </div>
@@ -1328,7 +1328,7 @@ const btnElement = ref({
         <div class="btn-pdf">
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/05/31dcdbf108276b0f.png"
+              src="https://statichk.cmermedical.com/vision/imgs/31dcdbf108276b0f.png"
               alt=""
             />
           </div>
@@ -1644,7 +1644,7 @@ const btnElement = ref({
   .myopia-control-hoya-upgrade {
     max-width: 960px;
     margin: 32px auto 65px;
-    background: url(https://static.cmereye.com/imgs/2024/05/d8b7024a32df53ec.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/d8b7024a32df53ec.jpg)
       no-repeat;
     background-size: auto;
     border-radius: 20px;
@@ -1875,7 +1875,7 @@ const btnElement = ref({
   .myopia-control-hoya-effect {
     max-width: 960px;
     margin: 38px auto 65px;
-    background: url(https://static.cmereye.com/imgs/2024/05/48c396685a43b48c.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/48c396685a43b48c.jpg)
       no-repeat;
     box-sizing: border-box;
     background-size: 100% 100%;
@@ -1935,7 +1935,7 @@ const btnElement = ref({
         }
         & > div:nth-child(1)::before {
           content: "";
-          background: url("https://static.cmereye.com/imgs/2024/05/d35a211758538f81.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/d35a211758538f81.png")
             no-repeat;
           background-size: 100% 100%;
           width: 25px;
@@ -1962,7 +1962,7 @@ const btnElement = ref({
         }
         & > span::before {
           content: "";
-          background: url("https://static.cmereye.com/imgs/2024/05/d35a211758538f81.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/d35a211758538f81.png")
             no-repeat;
           background-size: 100% 100%;
           width: 25px;
@@ -2069,7 +2069,7 @@ const btnElement = ref({
     }
   }
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/05/6446d8c5f0f8f72a.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/6446d8c5f0f8f72a.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
@@ -2167,7 +2167,7 @@ const btnElement = ref({
     }
   }
   .profile-title {
-    // background: url("https://static.cmereye.com/imgs/2024/05/5e82a28589934353.png")
+    // background: url("https://statichk.cmermedical.com/vision/imgs/5e82a28589934353.png")
     //   no-repeat;
     // background-size: 100% 100%;
     // width: 100%;
@@ -2752,7 +2752,7 @@ const btnElement = ref({
   }
   .myopia-control-hoya-effect {
     margin: 30px 25px 40px;
-    background: url("https://static.cmereye.com/imgs/2024/05/e8aca2da58d075f5.jpg")
+    background: url("https://statichk.cmermedical.com/vision/imgs/e8aca2da58d075f5.jpg")
       no-repeat;
     background-size: 100% 100%;
     border-radius: 13.042px;
@@ -2786,7 +2786,7 @@ const btnElement = ref({
         }
         & > div:nth-child(1)::before {
           content: "";
-          background: url("https://static.cmereye.com/imgs/2024/05/d35a211758538f81.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/d35a211758538f81.png")
             no-repeat;
           background-size: 100% 100%;
           width: 12px;
@@ -2838,7 +2838,7 @@ const btnElement = ref({
         }
         & > span::before {
           content: "";
-          background: url("https://static.cmereye.com/imgs/2024/05/d35a211758538f81.png")
+          background: url("https://statichk.cmermedical.com/vision/imgs/d35a211758538f81.png")
             no-repeat;
           background-size: 100% 100%;
           width: 12px;

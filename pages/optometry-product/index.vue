@@ -3,11 +3,11 @@ useHead(() => ({
   title: "視光產品 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/08/a77ea39669a22178.jpg",
-  mobile: "https://static.cmereye.com/imgs/2024/08/fef8b7c8cf8e4a01.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/a77ea39669a22178.jpg",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/fef8b7c8cf8e4a01.jpg",
 };
 const myopiaControlContactLenses = ref({
-  img: "https://static.cmereye.com/imgs/2024/06/ecd1b42f002861e2.png",
+  img: "https://statichk.cmermedical.com/vision/imgs/ecd1b42f002861e2.png",
   title: "近視控制隱形眼鏡",
   description: [
     "MiSight® 1 day是一款專為兒童設計的每日即棄近視控制隱形眼鏡。",
@@ -24,7 +24,7 @@ const myopiaControlContactLenses = ref({
   ],
 });
 const orthokeratoscope = ref({
-  img: "https://static.cmereye.com/imgs/2024/06/6589f185a295d5ac.png",
+  img: "https://statichk.cmermedical.com/vision/imgs/6589f185a295d5ac.png",
   title: "角膜矯形鏡",
   description: [
     "角膜矯形術（Ortho-K，俗稱OK鏡）是一項非手術矯正視力方法，透過",
@@ -40,7 +40,7 @@ const orthokeratoscope = ref({
   ],
 });
 const scleralLens = ref({
-  img: "https://static.cmereye.com/imgs/2024/06/b3370b240196a633.png",
+  img: "https://statichk.cmermedical.com/vision/imgs/b3370b240196a633.png",
   title: "鞏膜鏡",
   description: [
     
@@ -52,7 +52,7 @@ const scleralLens = ref({
   ],
 });
 const progressiveEyeglasses = ref({
-  img: "https://static.cmereye.com/imgs/2024/06/20b5475790ec3a60.png",
+  img: "https://statichk.cmermedical.com/vision/imgs/20b5475790ec3a60.png",
   title: "漸進眼鏡",
   description: [
     "漸進鏡是一塊能同時矯正多種視力問題的鏡片。原理是透過在同一塊鏡片",
@@ -69,7 +69,7 @@ const progressiveEyeglasses = ref({
   ],
 });
 const myopiaControlGlasses = ref({
-  img: "https://static.cmereye.com/imgs/2024/06/f7119cb17859f1a5.png",
+  img: "https://statichk.cmermedical.com/vision/imgs/f7119cb17859f1a5.png",
   title: "近視控制眼鏡",
   description: [
     "近視屬常見的都市問題，也是不少家長的煩惱。如兒童近視不斷加深",
@@ -82,7 +82,7 @@ const myopiaControlGlasses = ref({
   ],
 });
 const multifocalPresbyopia = ref({
-  img: "https://static.cmereye.com/imgs/2024/06/4a14e8a9bfea5adf.png",
+  img: "https://statichk.cmermedical.com/vision/imgs/4a14e8a9bfea5adf.png",
   title: "多焦點式隱形眼鏡(老花)",
   description: [
     "老花人士時常要做配戴及拿下眼鏡的動作,日常生活甚為不便。近年推",

@@ -3,8 +3,8 @@ useHead(() => ({
   title: "XXXX - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/04/5ae163616b5be08e.png",
-  mobile: "https://static.cmereye.com/imgs/2024/04/a946bc28a9b89d42.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
 };
 </script>
 

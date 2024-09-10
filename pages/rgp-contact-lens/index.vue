@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/dac22b19b807d9ed.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/685a9070ccfc7382.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/dac22b19b807d9ed.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/685a9070ccfc7382.png",
 };
 const btnElement = ref({
   title: "我適合戴RGP鏡嗎？",
@@ -3448,7 +3448,7 @@ const btnElement = ref({
     }
   }
   .bg-img-fake-text {
-    background: url(https://static.cmereye.com/imgs/2024/06/d69046aa5ccfa221.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/d69046aa5ccfa221.jpg)
       no-repeat;
     background-size: 100% 100%;
     box-sizing: border-box;
@@ -3498,7 +3498,7 @@ const btnElement = ref({
         }
         span::before {
           content: "";
-          background: url(https://static.cmereye.com/imgs/2024/06/091deb19da53f07a.png)
+          background: url(https://statichk.cmermedical.com/vision/imgs/091deb19da53f07a.png)
             no-repeat;
           background-size: 100% 100%;
           width: 18.749px;
@@ -3817,7 +3817,7 @@ const btnElement = ref({
     }
   }
   .bg-img-fake-text {
-    background: url(https://static.cmereye.com/imgs/2024/06/3a482cd5b723ed87.jpg)
+    background: url(https://statichk.cmermedical.com/vision/imgs/3a482cd5b723ed87.jpg)
       no-repeat;
     background-size: 100% 100%;
     box-sizing: border-box;
@@ -3873,7 +3873,7 @@ const btnElement = ref({
         }
         span::before {
           content: "";
-          background: url(https://static.cmereye.com/imgs/2024/06/091deb19da53f07a.png)
+          background: url(https://statichk.cmermedical.com/vision/imgs/091deb19da53f07a.png)
             no-repeat;
           background-size: 100% 100%;
           width: 16.624px;

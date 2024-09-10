@@ -3,8 +3,8 @@ useHead(() => ({
   title: "鞏膜鏡 - 希瑪眼科視光中心",
 }));
 const bannerImg = {
-  pc: "https://static.cmereye.com/imgs/2024/07/0f5c46c56604a659.png",
-  mobile: "https://static.cmereye.com/imgs/2024/07/6d85a89b37d46b7b.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/0f5c46c56604a659.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/6d85a89b37d46b7b.png",
 };
 const miSightQuestionList = [
   {
@@ -134,7 +134,7 @@ const btnElement = ref({
           </div>
           <div>
             <img
-              src="https://static.cmereye.com/imgs/2024/06/b4f73ebad37c3647.png"
+              src="https://statichk.cmermedical.com/vision/imgs/b4f73ebad37c3647.png"
               alt="鞏膜鏡"
             />
           </div>
