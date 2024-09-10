@@ -110,7 +110,9 @@ const changeCities = (str: string) => {
     actCitiesTab.value = str;
     temp = cities.value.filter((item: any) => item.type === str);
   }
+  console.log(temp,'temp');
   if (temp.length) {
+    
     actCities.value = temp;
   } else {
     actCities.value = cities.value;
@@ -477,9 +479,9 @@ onMounted(() => {
           </div>
           <el-checkbox-group v-model="ruleForm.checkServe" clearable>
             <el-checkbox
-              v-for="serve in actCities"
-              :key="serve"
-              :value="serve"
+              v-for="(serve,index) in actCities"
+              :key="index"
+              :value="serve.name"
               class="serve"
               label="serve"
               >{{ serve.name }}</el-checkbox
