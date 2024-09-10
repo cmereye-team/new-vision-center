@@ -215,6 +215,11 @@ const resetForm = (formEl: FormInstance | undefined) => {
   formEl.resetFields();
 };
 
+// 获取当前页面 url
+const getUrl = () => {
+  return new URL(window.location.href);
+};
+
 const onsubmit = async (formEl: any) => {
   let _formData = new FormData();
   let _form = ruleForm;
@@ -225,7 +230,7 @@ const onsubmit = async (formEl: any) => {
   _formData.append("formfindour", _form.FromMe);
   _formData.append("checkproject", _form.checkServe.join(","));
   _formData.append("message", _form.sms);
-  _formData.append("source", new URL(window.location.href)?.pathname);
+  _formData.append("source", getUrl().href);
 
   const { data }: any = await useFetch(
     "https://content.cmervision.com/api.php/cms/addmsg/fcode/1",
