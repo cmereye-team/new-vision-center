@@ -22,15 +22,7 @@ import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
-onMounted(() => {
-  let { widthState, width } = getWindowSize();
-  window.addEventListener("resize", () => {
-    let { widthState, width } = getWindowSize();
-    isPc.value = widthState;
-  });
-  isPc.value = widthState;
-  getLocale();
-});
+
 import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation, Scrollbar];
 const bannerImg = {
@@ -108,26 +100,44 @@ const newDiscounts = {
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "#",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
       price: "4,560",
+      routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "#",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
       price: "4,560",
+      routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "#",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
       price: "4,560",
+      routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "#",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
       price: "4,560",
+      routerLink: "/now-discounts",
+    },
+    {
+      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
+      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      price: "4,560",
+      routerLink: "/now-discounts",
+    },
+    {
+      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
+      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      price: "4,560",
+      routerLink: "/now-discounts",
     },
   ],
 };
@@ -259,24 +269,54 @@ const handleIcon = (str: any, idx: any) => {
 const openVideo = (link: string) => {
   window.open(link, "_blank");
 };
+
+interface discounts {
+  id: number;
+  img: string;
+  title: string;
+  tag: string;
+  link: string;
+  price: string;
+}
+const discounts = ref<discounts[]>([]);
+// 获取数据
+const getData = async () => {
+  try {
+    const res = await fetch("https://content.cmervision.com/api.php/list/15");
+    const data = await res.json();
+    if (data.code === 1) {
+      data.data.sort((a: any, b: any) => a.id - b.id);
+      discounts.value = data.data.map((item: any) => {
+        return {
+          id: item.id,
+          img: `https://content.cmervision.com/${item.ico}`,
+          title: item.title,
+          tag: item.tags,
+          price: item.price,
+          link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+        };
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+onMounted(() => {
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
+  getLocale();
+  getData();
+});
 </script>
 
 <template>
   <div class="miyosmart">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title"></div>
-      </template>
-    </PublicBanner>
-    <!-- <div class="miyosmart-banner">
-      <img
-        :srcset="`${bannerData.mb} 768w, ${bannerData.pc}`"
-        :src="bannerData.pc"
-        alt="miyosmart"
-        title="miyosmart"
-      />
-    </div> -->
+    <PublicBanner :banner="bannerImg" />
     <div class="services">
       <div class="services-t">
         <div class="title">
@@ -395,11 +435,57 @@ const openVideo = (link: string) => {
           </div>
         </div>
         <div class="newDiscounts-in-b">
-          <nuxtLink
+          <swiper
+            v-if="isPc"
+            :slidesPerView="4"
+            :spaceBetween="30"
+            :loop="true"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+            }"
+            :modules="[Pagination, Autoplay, Navigation]"
+          >
+            <swiper-slide
+              v-for="item in discounts"
+              :key="item.id"
+              class="list-in"
+            >
+              <div class="image">
+                <img :src="item.img" :alt="item.title" :title="item.title" />
+              </div>
+              <h3>{{ item.title }}</h3>
+              <div class="context">
+                <div class="context-l">
+                  <span>{{ item.tag }}</span> <span v-if="item.price">$</span>
+                  <span>{{ item.price }}</span>
+                </div>
+                <a :href="item.link" target="_blank" class="context-r">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.8106 8.09854C16.8136 9.22292 16.5509 10.3321 16.0439 11.3357C15.4429 12.5384 14.5188 13.5499 13.3753 14.2571C12.2318 14.9643 10.914 15.3391 9.56955 15.3396C8.44516 15.3426 7.33598 15.0799 6.33235 14.5729L1.47656 16.1915L3.09516 11.3357C2.58822 10.3321 2.32552 9.22292 2.32846 8.09854C2.32898 6.75404 2.70381 5.43624 3.41097 4.29275C4.11813 3.14925 5.1297 2.22522 6.33235 1.62415C7.33598 1.11721 8.44516 0.854515 9.56955 0.857446H9.99549C11.7711 0.955407 13.4483 1.70488 14.7057 2.96235C15.9632 4.21983 16.7127 5.89695 16.8106 7.67259V8.09854Z"
+                      stroke="white"
+                      stroke-width="1.36912"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>立即查詢</span>
+                </a>
+              </div>
+            </swiper-slide>
+          </swiper>
+          <!-- <nuxtLink
             class="list-in"
             v-for="(item, index) in newDiscounts.lists"
             :key="index"
-            :to="item.link"
+            :to="item.routerLink"
           >
             <div class="image">
               <img :src="item.img" :alt="item.name" :title="item.name" />
@@ -410,7 +496,7 @@ const openVideo = (link: string) => {
                 {{ "節日限定\n$" }}
                 <span>{{ item.price }}</span>
               </div>
-              <div class="context-r">
+              <a :href="item.link" target="_blank" class="context-r">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="18"
@@ -427,9 +513,9 @@ const openVideo = (link: string) => {
                   />
                 </svg>
                 <span>立即查詢</span>
-              </div>
+              </a>
             </div>
-          </nuxtLink>
+          </nuxtLink> -->
         </div>
       </div>
     </div>
@@ -964,16 +1050,19 @@ const openVideo = (link: string) => {
       }
     }
     &-b {
-      display: grid;
+      // display: grid;
       margin-top: 30px;
-      gap: 30px;
-      grid-template-columns: repeat(4, 1fr);
+      // gap: 30px;
+      // grid-template-columns: repeat(4, 1fr);
+      overflow: hidden;
       .list-in {
-        max-width: 218px;
+        // max-width: 210px;
         border-radius: 15px;
         background: #fff;
         padding: 20px 20px;
+        box-sizing: border-box;
         box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.1);
+        margin: 10px 0;
         .image {
           width: 100%;
           img {
@@ -994,21 +1083,22 @@ const openVideo = (link: string) => {
           -webkit-box-orient: vertical;
           overflow: hidden;
           text-overflow: ellipsis;
+          min-height: 37.5px;
         }
         .context {
           margin-top: 14px;
           display: flex;
           justify-content: space-between;
-          align-items: flex-end;
+          align-items: center;
           &-l {
             color: var(--Sales, #db4444);
             font-family: "Noto Sans HK";
             font-size: 8.462px;
             font-style: normal;
             font-weight: 700;
-            line-height: 21.04.1025vw;
+            line-height: 12px;
             span {
-              font-size: 18.914px;
+              font-size: 12px;
             }
           }
           &-r {

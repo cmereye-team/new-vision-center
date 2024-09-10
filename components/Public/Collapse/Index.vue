@@ -163,13 +163,13 @@ const props = defineProps({
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 3.846vw;
+      font-size: 15px;
       font-style: normal;
       font-weight: 500;
-      line-height: 5.76vw; /* 150% */
+      line-height: 22.5px; /* 150% */
       // text-transform: uppercase;
       position: relative;
-      padding-left: 10.2564vw;
+      padding-left: 40px;
     }
     & > div::before {
       content: "A";

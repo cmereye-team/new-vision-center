@@ -3767,6 +3767,9 @@ const handlesSliPrev = () => {
       .el-collapse-item__arrow {
         margin: 0 8px 0 auto;
       }
+      .el-collapse-item__content {
+        padding: 24px 30px;
+      }
     }
   }
   .orthokeratoplasty-video {

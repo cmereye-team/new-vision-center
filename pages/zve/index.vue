@@ -1,3 +1,210 @@
+<script lang="ts" setup>
+useHead({
+  title: "ZEISS VISION EXPERT｜希瑪視光中心",
+  meta: [
+    {
+      hid: "description",
+      name: "description",
+      content:
+        "希瑪眼科視光中心（CMER VISION）是希瑪眼科醫療集團旗下的視光中心。我們的註冊視光師團隊致力為所有年齡層提供優質的眼睛護理及專業視光服務，包括全面眼睛檢查、視光檢查、角膜矯形術（OK鏡）、兒童近視控制鏡片、近視控制隱形眼鏡，以及各種眼鏡驗配服務等。希瑪視光擁有符合國際水平的視光檢查儀器，並得到蔡司官方認證為ZVE視光專家，提供我的蔡司視覺體驗，為客人提供一站式可靠及個人化的眼睛檢查服務及改善視力方案。",
+    },
+    {
+      hid: "Keywords",
+      name: "Keywords",
+      content:
+        "希瑪視光 希瑪眼科視光中心 cmer vision 視光中心 視光師 眼睛檢查 視光檢查 蔡司ZVE視光專家 蔡司視覺體驗註冊視光師 視光師驗眼 視光師驗眼中心 全面眼睛檢查 全面眼科視光檢查 希瑪眼科視光中心旺角 希瑪眼科視光中心中環 旺角視力中心 兒童視光中心 眼科驗眼中心 驗眼 驗眼中心 兒童驗眼 驗眼度數 隱形眼鏡驗眼 檢查眼睛 全面眼睛檢查費用 驗眼費用 綜合眼科視光檢查 眼睛檢查 視野檢查 近視控制 兒童近視控制 ok鏡 控制近視鏡片 ",
+    },
+  ],
+});
+
+// 轮播
+import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css";
+import "swiper/scss/navigation";
+import "swiper/css/effect-coverflow";
+import {
+  Pagination,
+  Navigation,
+  EffectCoverflow,
+  Autoplay,
+} from "swiper/modules";
+const modules = [Pagination, Navigation, EffectCoverflow, Autoplay];
+
+const swiperBox = (swiper: any) => {
+  deBoxSwiperRef = swiper;
+};
+
+let deBoxSwiperRef = {
+  slideTo: (a: any) => {},
+  slideToLoop: (a: any) => {},
+  slidePrev: () => {},
+  slideNext: () => {},
+};
+
+const handlesSliNext = () => {
+  deBoxSwiperRef.slideNext();
+};
+const handlesSliPrev = () => {
+  deBoxSwiperRef.slidePrev();
+};
+
+const swiperRef = ref(null);
+const isRotated = ref(false);
+const touchStartX = ref(0);
+const touchEndX = ref(0);
+
+// function handleTouchStart(event: any) {
+//   // touchStartX.value = event.touches[0].clientX;
+// }
+
+// function handleTouchEnd(event: any) {
+// console.log(event)
+//   // touchEndX.value = event.changedTouches[0].clientX;
+//   // const deltaX = touchEndX.value - touchStartX.value;
+
+//   // if (Math.abs(deltaX) > 50) {
+//   //   console.log("1");
+//   //   isRotated.value = true;
+//   // } else {
+//   //   isRotated.value = false;
+//   //   console.log("2");
+//   // }
+// }
+
+const discountsList = ref([
+  {
+    id: 1,                                             
+    img: "https://statichk.cmermedical.com/vision/imgs/7f56de0049e825da.jpg",
+    content: "",
+  },
+  {
+    id: 2,
+    img: "https://statichk.cmermedical.com/vision/imgs/b24898a75d6536b2.png",
+    content: "",
+  },
+  {
+    id: 3,
+    img: "https://statichk.cmermedical.com/vision/imgs/43654d9aac2f6efb.jpg",
+    content: "",
+  },
+  {
+    id: 4,
+    img: "https://statichk.cmermedical.com/vision/imgs/02062e542e03a981.jpg",
+    content: "",
+  },
+  {
+    id: 5,
+    img: "https://statichk.cmermedical.com/vision/imgs/ceb824735dbd56f9.jpg",
+    content: "",
+  },
+]);
+
+
+const bannerImg = {
+  pc: "https://statichk.cmermedical.com/vision/imgs/d77ee7b50ef9dce4.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/da875a7bbd73f573.png",
+};
+
+const imgList = [
+  "https://statichk.cmermedical.com/vision/imgs/666c1d99c27658bf.png",
+  "https://statichk.cmermedical.com/vision/imgs/5a960c3598776b5f.png",
+  "https://statichk.cmermedical.com/vision/imgs/dc0b7696b2d87ed0.png",
+  "https://statichk.cmermedical.com/vision/imgs/a8ff8092442374c1.png",
+];
+
+import getWindowSize from "@/utils/width";
+
+const isPc = ref(false);
+const mySwiper = ref<InstanceType<typeof Swiper> | null>(null);
+onMounted(() => {
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+
+  const observer = new IntersectionObserver(handleIntersection, {
+    threshold: 0.1, // 当元素至少10%出现在视口时触发回调
+  });
+
+  if (observerTarget.value) {
+    observer.observe(observerTarget.value);
+  }
+  const swiper = mySwiper;
+  if (swiper) {
+    // (mySwiper.value as any).on("touchStart", handleTouchStart);
+    // (mySwiper.value as any).on("touchEnd", handleTouchEnd);
+  }
+});
+
+//特色服务切换
+const indexNum = ref(0);
+const openDialog = (index: any) => {
+  indexNum.value = index;
+};
+
+const dialogTop = () => {
+  if (indexNum.value > 0) {
+    indexNum.value--;
+  }
+};
+const dialogBottom = () => {
+  if (indexNum.value < 2) {
+    indexNum.value++;
+  }
+};
+const listDiscounts = [
+  {
+    id: 1,
+    title: `精密測量眼睛度數`,
+    img: "https://statichk.cmermedical.com/vision/imgs/4a688fa160e96203.jpg",
+    svg: "https://statichk.cmermedical.com/vision/imgs/1dede03366c21b1d.png",
+    content: `每個人的眼睛不只單一度數，角膜和瞳孔都是獨一無二, 像指紋一樣獨特。眼睛受高階像差影響會導致度數有差別，因此進行光學指紋測量能全面分析你的視力，找到最真實的度數並優化鏡片度數。`,
+  },
+  {
+    id: 2,
+    title: `精準的鏡框中心定位`,
+    img: "https://statichk.cmermedical.com/vision/imgs/7c34641f63a81653.jpg",
+    svg: "https://statichk.cmermedical.com/vision/imgs/cb3cecd90c579e62.png",
+    content: `精準的鏡框中心定位利用全新儀器VISUFIT 1000精密測量眼睛和眼鏡之間的所有角度，能確定鏡片在鏡框內的確切位置。為客人度身訂造專屬的鏡框，提高配戴舒適度。`,
+  },
+  {
+    id: 3,
+    title: `客製化個人鏡片`,
+    img: "https://statichk.cmermedical.com/vision/imgs/fa7584e4f1659ada.jpg",
+    svg: "https://statichk.cmermedical.com/vision/imgs/0587c601a83a42f8.png",
+    content: `利用i.Technology技術得出獨一無二的鏡片數據，根據你的用眼習慣及視覺需求等定制出適合你的鏡片，令你擁有最佳的視覺品質。 `,
+  },
+];
+
+let indexBollean = ref(false);
+let indexTwoBollean = ref(false);
+
+//个性化配镜流程
+
+const changeBtn = (i: number) => {
+  if (i == 1) {
+    indexBollean.value = !indexBollean.value;
+  } else if (i == 2) {
+    indexTwoBollean.value = !indexTwoBollean.value;
+  }
+};
+
+const closeBtn = () => {
+  indexBollean.value = false;
+  indexTwoBollean.value = false;
+};
+
+// 视觉资料
+const observerTarget = ref(null);
+const titleShow = ref(true);
+const handleIntersection = (entries: any, observer: any) => {
+  entries.forEach((entry: any) => {
+    if (entry.isIntersecting) {
+      titleShow.value = !true;
+    }
+  });
+};
+</script>
 
 <template>
   <div class="zve-information">
@@ -13,11 +220,11 @@
         </div>
       </template>
     </PublicBanner>
-    <img
+    <!-- <img
       class="zveImg"
       src="https://statichk.cmermedical.com/vision/imgs/98a021b3329ea1b1.png"
       alt=""
-    />
+    /> -->
     <div class="contain">
       <div class="containLine">
         <div class="linear">
@@ -458,8 +665,7 @@
           target="_blank"
           ><p class="whatapps-btn-series-two-p">
             <span>想了解更多蔡司鏡片系列?</span>
-            <span
-              >
+            <span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="27"
@@ -676,201 +882,6 @@
     </div>
   </div>
 </template>
-
-
-<script lang="ts" setup>
-// 轮播
-
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/scss/navigation";
-import "swiper/css/effect-coverflow";
-import {
-  Pagination,
-  Navigation,
-  EffectCoverflow,
-  Autoplay,
-} from "swiper/modules";
-const modules = [Pagination, Navigation, EffectCoverflow, Autoplay];
-
-const swiperBox = (swiper: any) => {
-  deBoxSwiperRef = swiper;
-};
-
-let deBoxSwiperRef = {
-  slideTo: (a: any) => {},
-  slideToLoop: (a: any) => {},
-  slidePrev: () => {},
-  slideNext: () => {},
-};
-
-const handlesSliNext = () => {
-  deBoxSwiperRef.slideNext();
-};
-const handlesSliPrev = () => {
-  deBoxSwiperRef.slidePrev();
-};
-
-const swiperRef = ref(null);
-const isRotated = ref(false);
-const touchStartX = ref(0);
-const touchEndX = ref(0);
-
-// function handleTouchStart(event: any) {
-//   // touchStartX.value = event.touches[0].clientX;
-// }
-
-// function handleTouchEnd(event: any) {
-// console.log(event)
-//   // touchEndX.value = event.changedTouches[0].clientX;
-//   // const deltaX = touchEndX.value - touchStartX.value;
-
-//   // if (Math.abs(deltaX) > 50) {
-//   //   console.log("1");
-//   //   isRotated.value = true;
-//   // } else {
-//   //   isRotated.value = false;
-//   //   console.log("2");
-//   // }
-// }
-
-const discountsList = ref([
-  {
-    id: 1,
-    img: "https://statichk.cmermedical.com/vision/imgs/7f56de0049e825da.jpg",
-    content: "",
-  },
-  {
-    id: 2,
-    img: "https://statichk.cmermedical.com/vision/imgs/b24898a75d6536b2.png",
-    content: "",
-  },
-  {
-    id: 3,
-    img: "https://statichk.cmermedical.com/vision/imgs/43654d9aac2f6efb.jpg",
-    content: "",
-  },
-  {
-    id: 4,
-    img: "https://statichk.cmermedical.com/vision/imgs/02062e542e03a981.jpg",
-    content: "",
-  },
-  {
-    id: 5,
-    img: "https://statichk.cmermedical.com/vision/imgs/ceb824735dbd56f9.jpg",
-    content: "",
-  },
-]);
-
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/17ea7cc68f4cde85.jpg",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/857393f0a230aba2.jpg",
-};
-
-const imgList = [
-  "https://statichk.cmermedical.com/vision/imgs/666c1d99c27658bf.png",
-  "https://statichk.cmermedical.com/vision/imgs/5a960c3598776b5f.png",
-  "https://statichk.cmermedical.com/vision/imgs/dc0b7696b2d87ed0.png",
-  "https://statichk.cmermedical.com/vision/imgs/a8ff8092442374c1.png",
-];
-
-import getWindowSize from "@/utils/width";
-
-const isPc = ref(false);
-
-const mySwiper = ref<InstanceType<typeof Swiper> | null>(null);
-onMounted(() => {
-  window.addEventListener("resize", () => {
-    let { widthState, width } = getWindowSize();
-    isPc.value = widthState;
-  });
-
-  const observer = new IntersectionObserver(handleIntersection, {
-    threshold: 0.1, // 当元素至少10%出现在视口时触发回调
-  });
-
-  if (observerTarget.value) {
-    observer.observe(observerTarget.value);
-  }
-  const swiper = mySwiper;
-  if (swiper) {
-    // (mySwiper.value as any).on("touchStart", handleTouchStart);
-    // (mySwiper.value as any).on("touchEnd", handleTouchEnd);
-  }
-});
-
-//特色服务切换
-const indexNum = ref(0);
-const openDialog = (index: any) => {
-  indexNum.value = index;
-};
-
-const dialogTop = () => {
-  if (indexNum.value > 0) {
-    indexNum.value--;
-  }
-};
-const dialogBottom = () => {
-  if (indexNum.value < 2) {
-    indexNum.value++;
-  }
-};
-const listDiscounts = [
-  {
-    id: 1,
-    title: `精密測量眼睛度數`,
-    img: "https://statichk.cmermedical.com/vision/imgs/4a688fa160e96203.jpg",
-    svg: "https://statichk.cmermedical.com/vision/imgs/1dede03366c21b1d.png",
-    content: `每個人的眼睛不只單一度數，角膜和瞳孔都是獨一無二, 像指紋一樣獨特。眼睛受高階像差影響會導致度數有差別，因此進行光學指紋測量能全面分析你的視力，找到最真實的度數並優化鏡片度數。`,
-  },
-  {
-    id: 2,
-    title: `精準的鏡框中心定位`,
-    img: "https://statichk.cmermedical.com/vision/imgs/7c34641f63a81653.jpg",
-    svg: "https://statichk.cmermedical.com/vision/imgs/cb3cecd90c579e62.png",
-    content: `精準的鏡框中心定位利用全新儀器VISUFIT 1000精密測量眼睛和眼鏡之間的所有角度，能確定鏡片在鏡框內的確切位置。為客人度身訂造專屬的鏡框，提高配戴舒適度。`,
-  },
-  {
-    id: 3,
-    title: `客製化個人鏡片`,
-    img: "https://statichk.cmermedical.com/vision/imgs/fa7584e4f1659ada.jpg",
-    svg: "https://statichk.cmermedical.com/vision/imgs/0587c601a83a42f8.png",
-    content: `利用i.Technology技術得出獨一無二的鏡片數據，根據你的用眼習慣及視覺需求等定制出適合你的鏡片，令你擁有最佳的視覺品質。 `,
-  },
-];
-
-let indexBollean = ref(false);
-let indexTwoBollean = ref(false);
-
-//个性化配镜流程
-
-const changeBtn = (i: number) => {
-  if (i == 1) {
-    indexBollean.value = !indexBollean.value;
-  } else if (i == 2) {
-    indexTwoBollean.value = !indexTwoBollean.value;
-  }
-};
-
-const closeBtn = () => {
-  indexBollean.value = false;
-  indexTwoBollean.value = false;
-};
-
-// 视觉资料
-const observerTarget = ref(null);
-const titleShow = ref(true);
-const handleIntersection = (entries: any, observer: any) => {
-  entries.forEach((entry: any) => {
-    if (entry.isIntersecting) {
-      titleShow.value = !true;
-    }
-  });
-};
-</script>
-
-
-
 
 <style lang="scss" scoped>
 .rotated {
@@ -1161,7 +1172,7 @@ const handleIntersection = (entries: any, observer: any) => {
       font-style: normal;
       font-weight: 500;
       line-height: 3.125rem; /* 200% */
-      letter-spacing: .375rem;
+      letter-spacing: 0.375rem;
     }
   }
 
@@ -1502,7 +1513,7 @@ const handleIntersection = (entries: any, observer: any) => {
       left: -60%;
       color: #fff;
       font-family: "Noto Sans";
-      font-size:calc(3rem + 1vw);
+      font-size: calc(3rem + 1vw);
       font-style: normal;
       font-weight: 700;
       line-height: normal;
@@ -1523,19 +1534,18 @@ const handleIntersection = (entries: any, observer: any) => {
       font-style: normal;
       font-weight: 500;
       line-height: 5.125rem;
-      letter-spacing:.4rem;
+      letter-spacing: 0.4rem;
     }
   }
 
   .zveImg {
- width: 8.4375rem;
-        height: 8.4375rem;
-        position: absolute;
-        top: 100px;
-        right: 80px;
+    width: 8.4375rem;
+    height: 8.4375rem;
+    position: absolute;
+    top: 100px;
+    right: 80px;
   }
 }
-
 
 // i2个人
 a:hover::before {
@@ -2128,7 +2138,7 @@ p {
 <style>
 body {
   overflow-x: hidden; /* 禁止水平滚动 */
-  overflow-y:auto;
+  overflow-y: auto;
 }
 
 .contain-bg {

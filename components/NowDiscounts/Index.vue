@@ -174,7 +174,7 @@ const discountsList = ref([
               ><span>{{ item.price }}</span>
             </div>
             <div>
-              <a class="pagination_btn_item" :href="item.btn1Link">{{
+              <a class="pagination_btn_item" target="_blank" :href="item.btn1Link">{{
                 item.btn1
               }}</a>
             </div>
