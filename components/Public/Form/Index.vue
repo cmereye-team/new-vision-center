@@ -2,6 +2,8 @@
 import { reactive, ref } from "vue";
 import type { FormInstance, FormRules } from "element-plus";
 import { number } from "@intlify/core-base";
+
+import { useFetch } from "@vueuse/core";
 const formSize = ref("default");
 // const cities = [
 //   "角膜矯形鏡合適性檢查套餐",
@@ -110,15 +112,14 @@ const changeCities = (str: string) => {
     actCitiesTab.value = str;
     temp = cities.value.filter((item: any) => item.type === str);
   }
-  console.log(temp,'temp');
   if (temp.length) {
-    
     actCities.value = temp;
   } else {
     actCities.value = cities.value;
   }
 };
 
+const formLoading = ref(false);
 const ruleFormRef = ref<FormInstance>();
 const ruleForm = reactive({
   name: "",
@@ -138,12 +139,19 @@ const telValidator = (rule: any, value: any, callback: any) => {
     callback();
   }
 };
-
+const nameFormat = (rule: any, value: any, callback: any) => {
+  if (!value) {
+    callback(new Error("請輸入姓名"));
+  } else if (/^\d+$/.test(value)) {
+    callback(new Error("姓名不能是數字"));
+  } else if (value.length < 2 || value.length > 25) {
+    callback(new Error("長度應該是2到25"));
+  } else {
+    callback();
+  }
+};
 const rules = reactive<FormRules>({
-  name: [
-    { required: true, message: "請輸入姓名", trigger: "blur" },
-    { min: 3, max: 25, message: "長度應該是3到25", trigger: "blur" },
-  ],
+  name: [{ required: true, validator: nameFormat, trigger: "blur" }],
   tel: [{ required: true, validator: telValidator, trigger: "blur" }],
   email: [
     {
@@ -169,23 +177,35 @@ const rules = reactive<FormRules>({
   //   },
   // ],
 });
-
+// 获取当前 页面url
+// const url = new URL(window.location.href);
 const submitForm = async (formEl: FormInstance | undefined) => {
   if (!formEl) return;
+  formLoading.value = true;
   await formEl.validate((valid, fields) => {
     if (valid) {
-      console.log("submit!", ruleForm);
-      ElMessage({
-        message: "提交成功！請注意工作人員聯係！",
-        type: "success",
-      });
-      // resetForm(formEl);
+      if (
+        localStorage.getItem("contactForm") &&
+        localStorage.getItem("contactForm") === JSON.stringify(ruleForm)
+      ) {
+        ElMessageBox.alert(
+          "If you have any questions or inquiries, please contact us via WhatsApp: +(如果您有任何问题或疑问，请通过WhatsApp与我们联系：+)",
+          "消息通知",
+          {
+            confirmButtonText: "好的",
+          }
+        );
+        formLoading.value = false;
+        return;
+      }
+      onsubmit(formEl);
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
         type: "error",
       });
       console.log("error submit!", fields);
+      formLoading.value = false;
     }
   });
 };
@@ -195,12 +215,41 @@ const resetForm = (formEl: FormInstance | undefined) => {
   formEl.resetFields();
 };
 
+const onsubmit = async (formEl: any) => {
+  let _formData = new FormData();
+  let _form = ruleForm;
+  _formData.append("name", _form.name);
+  _formData.append("telphoneNumber", String(_form.tel));
+  _formData.append("email", _form.email);
+  _formData.append("address", _form.address);
+  _formData.append("formfindour", _form.FromMe);
+  _formData.append("checkproject", _form.checkServe.join(","));
+  _formData.append("message", _form.sms);
+  _formData.append("source", new URL(window.location.href)?.pathname);
+
+  const { data }: any = await useFetch(
+    "https://content.cmervision.com/api.php/cms/addmsg/fcode/1",
+    {
+      method: "POST",
+      body: _formData,
+    }
+  );
+  let res = JSON.parse(data.value);
+  if (res.code == 1) {
+    formLoading.value = false;
+    ElMessage({
+      message: "提交成功！請注意工作人員聯係！",
+      type: "success",
+    });
+    resetForm(formEl);
+  }
+};
 onMounted(() => {
   changeCities("0");
 });
 </script>
 <template>
-  <div class="formBox" id="public-form">
+  <div class="formBox" id="public-form" v-loading="formLoading">
     <div class="title">預約視光服務</div>
     <div class="Form">
       <el-form
@@ -263,7 +312,7 @@ onMounted(() => {
           <el-input
             v-model.number="ruleForm.tel"
             clearable
-            maxlength="12"
+            maxlength="13"
             placeholder="請輸入聯絡電話"
           />
         </el-form-item>
@@ -322,7 +371,10 @@ onMounted(() => {
             placeholder="請選擇"
             placement="bottom"
           >
-            <el-option label="中環 ZEISS VISION EXPERT" value="中環 ZEISS VISION EXPERT" />
+            <el-option
+              label="中環 ZEISS VISION EXPERT"
+              value="中環 ZEISS VISION EXPERT"
+            />
             <el-option label="旺角" value="Mong Kok" />
             <el-option label="西環" value="Sai Wan" />
             <el-option label="北角" value="North Point" />
@@ -479,7 +531,7 @@ onMounted(() => {
           </div>
           <el-checkbox-group v-model="ruleForm.checkServe" clearable>
             <el-checkbox
-              v-for="(serve,index) in actCities"
+              v-for="(serve, index) in actCities"
               :key="index"
               :value="serve.name"
               class="serve"
@@ -633,7 +685,7 @@ onMounted(() => {
   }
   .formtitle {
     color: #00517e;
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 21px;
     font-style: normal;
     font-weight: 700;
@@ -1157,7 +1209,7 @@ onMounted(() => {
   }
   .formtitle {
     color: #00517e;
-     font-family: 'Inter';
+    font-family: "Inter";
     font-size: 18px;
     font-style: normal;
     font-weight: 600;
