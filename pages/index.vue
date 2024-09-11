@@ -20,11 +20,19 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/scss";
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
+import "swiper/css/grid";
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 
-import { Autoplay, Pagination, Navigation, Scrollbar } from "swiper/modules";
+import {
+  Autoplay,
+  Pagination,
+  Navigation,
+  Scrollbar,
+  Grid,
+} from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation, Scrollbar];
+const modules2 = [Grid, Pagination];
 const bannerImg = {
   pc: "https://statichk.cmermedical.com/vision/imgs/13d1975ec227a911.webp",
   mobile: "https://statichk.cmermedical.com/vision/imgs/7723d746a83f1695.webp",
@@ -434,9 +442,8 @@ onMounted(() => {
             />
           </div>
         </div>
-        <div class="newDiscounts-in-b">
+        <div class="newDiscounts-in-b" v-if="isPc">
           <swiper
-            v-if="isPc"
             :slidesPerView="4"
             :spaceBetween="30"
             :loop="true"
@@ -481,41 +488,9 @@ onMounted(() => {
               </div>
             </swiper-slide>
           </swiper>
-          <!-- <nuxtLink
-            class="list-in"
-            v-for="(item, index) in newDiscounts.lists"
-            :key="index"
-            :to="item.routerLink"
-          >
-            <div class="image">
-              <img :src="item.img" :alt="item.name" :title="item.name" />
-            </div>
-            <h3>{{ item.name }}</h3>
-            <div class="context">
-              <div class="context-l">
-                {{ "節日限定\n$" }}
-                <span>{{ item.price }}</span>
-              </div>
-              <a :href="item.link" target="_blank" class="context-r">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="18"
-                  height="17"
-                  viewBox="0 0 18 17"
-                  fill="none"
-                >
-                  <path
-                    d="M16.8106 8.09854C16.8136 9.22292 16.5509 10.3321 16.0439 11.3357C15.4429 12.5384 14.5188 13.5499 13.3753 14.2571C12.2318 14.9643 10.914 15.3391 9.56955 15.3396C8.44516 15.3426 7.33598 15.0799 6.33235 14.5729L1.47656 16.1915L3.09516 11.3357C2.58822 10.3321 2.32552 9.22292 2.32846 8.09854C2.32898 6.75404 2.70381 5.43624 3.41097 4.29275C4.11813 3.14925 5.1297 2.22522 6.33235 1.62415C7.33598 1.11721 8.44516 0.854515 9.56955 0.857446H9.99549C11.7711 0.955407 13.4483 1.70488 14.7057 2.96235C15.9632 4.21983 16.7127 5.89695 16.8106 7.67259V8.09854Z"
-                    stroke="white"
-                    stroke-width="1.36912"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                  />
-                </svg>
-                <span>立即查詢</span>
-              </a>
-            </div>
-          </nuxtLink> -->
+        </div>
+        <div v-else>
+          <CenterProfileHomePageSwiper :discounts=discounts />
         </div>
       </div>
     </div>
@@ -1106,6 +1081,7 @@ onMounted(() => {
             padding: 7px;
             position: relative;
             align-items: center;
+            min-width: 72px;
             svg {
               position: relative;
               z-index: 2;
@@ -1667,7 +1643,7 @@ onMounted(() => {
   }
   .newDiscounts {
     margin-top: 11.025vw;
-    padding: 0 5.128vw 7.948vw;
+    padding: 0 3.128vw 7.948vw;
     box-sizing: border-box;
     &-in {
       &-t {
@@ -1693,34 +1669,39 @@ onMounted(() => {
       }
       &-b {
         margin-top: 1.28vw;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 5.128vw;
+        // display: grid;
+        // grid-template-columns: repeat(2, 1fr);
+        // gap: 5.128vw;
         .list-in {
+          // width: 158px !important;
           border-radius: 2.82vw;
           padding: 3.076vw;
           box-shadow: 0 0 1.28vw 0px rgba(0, 0, 0, 0.1);
           h3 {
-            font-size: 3.589vw;
+            font-size: 3.075vw;
             font-style: normal;
             font-weight: 500;
-            line-height: 3.589vw; /* 100.069% */
+            line-height: 3.075vw; /* 100.069% */
             letter-spacing: 0.7px;
-            -webkit-line-clamp: 3;
+            -webkit-line-clamp: 2;
             margin-top: 1.28vw;
+            min-height: 7.05128vw;
           }
           .context {
             margin-top: 1.538vw;
             align-items: center;
             &-l {
-              font-size: 3.0769vw;
-              line-height: 3.589vw;
+              font-size: 2.56vw;
+              line-height: 3.075vw;
+              font-weight: 500;
               white-space: pre-wrap;
               span {
-                font-size: 4.1025vw;
+                font-size: 3.58vw;
               }
             }
             &-r {
               padding: 2.05vw;
+              min-width: 12.169vw;
               span {
                 font-size: 2.05vw;
               }
