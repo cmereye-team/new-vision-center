@@ -34,7 +34,7 @@ const props = defineProps<{ discounts: any[] }>();
       class="mySwiper"
     >
       <swiper-slide v-for="item in discounts" :key="item.id">
-        <nuxt-link to="">
+        <nuxt-link to="" :id="item.id">
           <div><img :src="item.img" :alt="item.title" /></div>
           <div>
             <h3>{{ item.title }}</h3>

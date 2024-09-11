@@ -183,7 +183,7 @@ const getLocale = () => {
     );
   }
 };
-
+const isWitness = ref(false);
 const witness = ref({
   section1: [
     {
@@ -293,14 +293,14 @@ const getData = async () => {
     const res = await fetch("https://content.cmervision.com/api.php/list/15");
     const data = await res.json();
     if (data.code === 1) {
-      data.data.sort((a: any, b: any) => a.id - b.id);
+      // data.data.sort((a: any, b: any) => a.id - b.id);
       discounts.value = data.data.map((item: any) => {
         return {
           id: item.id,
           img: `https://content.cmervision.com/${item.ico}`,
           title: item.title,
           tag: item.tags,
-          price: item.price,
+          price: item.ext_price,
           link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
         };
       });
@@ -457,6 +457,7 @@ onMounted(() => {
               v-for="item in discounts"
               :key="item.id"
               class="list-in"
+              :id="item.id"
             >
               <div class="image">
                 <img :src="item.img" :alt="item.title" :title="item.title" />
@@ -464,8 +465,12 @@ onMounted(() => {
               <h3>{{ item.title }}</h3>
               <div class="context">
                 <div class="context-l">
-                  <span>{{ item.tag }}</span> <span v-if="item.price">$</span>
-                  <span>{{ item.price }}</span>
+                  <div>
+                    <span>{{ item.tag }}</span>
+                  </div>
+                  <div>
+                    <span>{{ item.price }}</span>
+                  </div>
                 </div>
                 <a :href="item.link" target="_blank" class="context-r">
                   <svg
@@ -490,7 +495,7 @@ onMounted(() => {
           </swiper>
         </div>
         <div v-else>
-          <CenterProfileHomePageSwiper :discounts=discounts />
+          <CenterProfileHomePageSwiper :discounts="discounts" />
         </div>
       </div>
     </div>
@@ -766,7 +771,7 @@ onMounted(() => {
           </swiper-slide>
         </swiper>
       </section>
-      <section class="section2">
+      <section class="section2" v-if="isWitness">
         <div
           class="list-in"
           v-for="(item, index) in witness.section2"
@@ -1031,6 +1036,7 @@ onMounted(() => {
       // grid-template-columns: repeat(4, 1fr);
       overflow: hidden;
       .list-in {
+        min-height: 334px;
         // max-width: 210px;
         border-radius: 15px;
         background: #fff;
@@ -1066,14 +1072,23 @@ onMounted(() => {
           justify-content: space-between;
           align-items: center;
           &-l {
+            display: flex;
+            flex-direction: column;
+            gap: 2px 0;
             color: var(--Sales, #db4444);
             font-family: "Noto Sans HK";
-            font-size: 8.462px;
+            font-size: 12.462px;
             font-style: normal;
-            font-weight: 700;
+            font-weight: 500;
             line-height: 12px;
             span {
-              font-size: 12px;
+              font-size: 10px;
+              line-height: 1.2;
+            }
+            & > div:nth-child(1) {
+              span {
+                font-size: 8px;
+              }
             }
           }
           &-r {
