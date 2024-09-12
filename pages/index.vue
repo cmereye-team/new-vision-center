@@ -15,6 +15,14 @@ useHead({
         "希瑪視光 希瑪眼科視光中心 cmer vision 視光中心 視光師 眼睛檢查 視光檢查 蔡司ZVE視光專家 蔡司視覺體驗註冊視光師 視光師驗眼 視光師驗眼中心 全面眼睛檢查 全面眼科視光檢查 希瑪眼科視光中心旺角 希瑪眼科視光中心中環 旺角視力中心 兒童視光中心 眼科驗眼中心 驗眼 驗眼中心 兒童驗眼 驗眼度數 隱形眼鏡驗眼 檢查眼睛 全面眼睛檢查費用 驗眼費用 綜合眼科視光檢查 眼睛檢查 視野檢查 近視控制 兒童近視控制 ok鏡 控制近視鏡片 ",
     },
   ],
+  script: [
+    {
+      src: "https://cdn.trustindex.io/loader.js?bafd719348f250549f76a58071f",
+      type: "text/javascript",
+      async: true,
+      defer: true,
+    },
+  ],
 });
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/scss";
@@ -319,6 +327,21 @@ onMounted(() => {
   isPc.value = widthState;
   getLocale();
   getData();
+  // 获取 class section2
+  const section3 = document.querySelector(".section3");
+  const script = document.createElement("script");
+  script.src =
+    "https://cdn.trustindex.io/loader.js?bafd719348f250549f76a58071f";
+  script.type = "text/javascript";
+  script.async = true;
+  script.defer = true;
+
+  script.onload = () => {
+    console.log("Script loaded");
+  };
+  if (section3) {
+    section3.appendChild(script);
+  }
 });
 </script>
 
@@ -792,6 +815,9 @@ onMounted(() => {
             <p>{{ item.text }}</p>
           </div>
         </div>
+      </section>
+      <section class="section3">
+        <ClientOnly> </ClientOnly>
       </section>
     </div>
   </div>
@@ -1379,6 +1405,11 @@ onMounted(() => {
         border-radius: 10px;
       }
     }
+  }
+  .section3{
+    width: 100%;
+    max-width: 960px;
+    margin-top: 65px;
   }
 }
 
