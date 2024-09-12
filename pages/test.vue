@@ -56,11 +56,12 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-const modules = [Autoplay, Pagination, Navigation];
+const modules = [Autoplay, Pagination];
 </script>
 
 <template>
   <div class="video-information">
+    <CenterProfileHomePageSwiper ref="discounts" key="discounts" /> 
     <PublicBanner :banner="bannerImg" />
     <PublicNavbar
       :name="'有三级菜单的二级'"
@@ -69,25 +70,32 @@ const modules = [Autoplay, Pagination, Navigation];
     />
     <div class="xxxx-box">
       <swiper
-        :slidesPerView="4"
-        :spaceBetween="30"
+        :pagination="true"
         :loop="true"
         :autoplay="{
-          delay: 2500,
+          delay: 3000,
           disableOnInteraction: false,
         }"
         :modules="modules"
-        class="mySwiper"
       >
-        <swiper-slide style="display: flex;justify-content: center;">Slide 1</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 2</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 3</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 4</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 5</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 6</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 7</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 8</swiper-slide>
-        <swiper-slide style="display: flex;justify-content: center;">Slide 9</swiper-slide>
+        <swiper-slide
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <p>12</p>
+          <p>12</p>
+          <p>12</p>
+          <p>12</p>
+          <p>12</p>
+        </swiper-slide>
+        <swiper-slide
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <p>13</p>
+          <p>13</p>
+          <p>13</p>
+          <p>13</p>
+          <p>13</p>
+        </swiper-slide>
       </swiper>
     </div>
   </div>

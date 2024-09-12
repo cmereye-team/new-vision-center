@@ -17,7 +17,7 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/0820bdc6f6ea1c8f.png",
+  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104599219862.jpg",
   mobile: "https://statichk.cmermedical.com/vision/imgs/152dc13cba64e3ad.png",
 };
 import { useTransition } from "@vueuse/core";

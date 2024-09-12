@@ -1,30 +1,67 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
 import "swiper/css";
-
 import "swiper/css/grid";
 import "swiper/css/pagination";
+import { Grid, Autoplay, Pagination } from "swiper/modules";
+const modules = [Grid, Autoplay, Pagination];
 
-import { Grid, Autoplay } from "swiper/modules";
-const modules = [Grid, Autoplay];
+interface discounts {
+  id: number;
+  img: string;
+  title: string;
+  tag: string;
+  link: string;
+  price: string;
+}
+const discountsChild = ref<discounts[]>([]);
+const getData = async () => {
+  try {
+    const res = await fetch("https://content.cmervision.com/api.php/list/15");
+    const data = await res.json();
+    if (data.code === 1) {
+      discountsChild.value = data.data.map((item: any) => {
+        return {
+          id: item.id,
+          img: `https://content.cmervision.com/${item.ico}`,
+          title: item.title,
+          tag: item.tags,
+          price: item.ext_price,
+          link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+        };
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+const winWSize = ref(0);
+onMounted(() => {
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    winWSize.value = width;
+    isPc.value = widthState;
+  });
 
-const props = defineProps<{ discounts: any[] }>();
+  winWSize.value = width;
+  isPc.value = widthState;
+  setTimeout(() => {
+    getData();
+  }, 500);
+});
 </script>
 
 <template>
   <div class="HomePageSwiper">
     <swiper
+      v-if="winWSize < 768"
       :slidesPerView="2"
       :grid="{
         rows: 2,
         fill: 'row',
-      }"
-      :loop="true"
-      :autoplay="{
-        delay: 2500,
-        disableOnInteraction: false,
       }"
       :spaceBetween="18"
       :pagination="{
@@ -33,14 +70,14 @@ const props = defineProps<{ discounts: any[] }>();
       :modules="modules"
       class="mySwiper"
     >
-      <swiper-slide v-for="item in discounts" :key="item.id">
-        <nuxt-link to="" :id="item.id">
+      <swiper-slide v-for="item in discountsChild" :key="item.id">
+        <nuxt-link to="/" :id="item.id">
           <div><img :src="item.img" :alt="item.title" /></div>
           <div>
             <h3>{{ item.title }}</h3>
             <div>
               <div>
-                <span>{{ item.tag }}</span> <span v-if="item.price">$</span>
+                <span>{{ item.tag }}</span>
                 <span>{{ item.price }}</span>
               </div>
               <a :href="item.link" target="_blank" class="context-r">
@@ -184,14 +221,15 @@ const props = defineProps<{ discounts: any[] }>();
       }
     }
     h3 {
-      font-size: 3.075vw;
+      font-size: 2.875vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 3.075vw; /* 100.069% */
+      line-height: 3.575vw;
       letter-spacing: 0.7px;
       -webkit-line-clamp: 2;
       margin-top: 1.28vw;
       min-height: 7.05128vw;
+      color: #60605f;
       text-align: left;
     }
   }

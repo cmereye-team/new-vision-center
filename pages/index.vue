@@ -324,7 +324,8 @@ onMounted(() => {
 
 <template>
   <div class="miyosmart">
-    <PublicBanner :banner="bannerImg" />
+    <!-- <PublicBanner :banner="bannerImg" /> -->
+    <PublicBannerHomeBanner ref="homeBanner" key="home_banner" />
     <div class="services">
       <div class="services-t">
         <div class="title">
@@ -495,7 +496,7 @@ onMounted(() => {
           </swiper>
         </div>
         <div v-else>
-          <CenterProfileHomePageSwiper :discounts="discounts" />
+          <CenterProfileHomePageSwiper ref="discounts" key="discounts" />
         </div>
       </div>
     </div>
