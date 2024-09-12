@@ -105,6 +105,7 @@ const bannerImg = {
   // mobile: "https://statichk.cmermedical.com/vision/imgs/da875a7bbd73f573.png",
   pc: "https://content.cmervision.com//static/upload/image/20240912/1726104510585954.png",
   mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104515302361.png",
+  newBanner: true,
 };
 
 const imgList = [

@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
   <div class="banner-template">
-    <div>
+    <div :style="{ height: props.banner.newBanner ? '400px': 'auto' }">
       <img v-if="isPc" :src="banner.pc" />
       <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''" />
     </div>
@@ -216,7 +216,7 @@ const props = defineProps({
   .banner-template {
     position: relative;
     & > div:nth-child(1) {
-      margin: 130px auto 0;
+      margin: 136px auto 0;
       width: 100%;
       height: 400px;
       object-fit: cover;
@@ -240,7 +240,7 @@ const props = defineProps({
     }
     & > div:nth-child(3) {
       position: fixed;
-      top: 130px;
+      top: 136px;
       right: 0;
       z-index: 99;
       .banner-template-btn {

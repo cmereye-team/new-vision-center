@@ -19,6 +19,7 @@ useHead(() => ({
 const bannerImg = {
   pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
   mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
+  newBanner: false,
 };
 </script>
 

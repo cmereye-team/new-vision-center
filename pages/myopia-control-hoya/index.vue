@@ -28,8 +28,9 @@ onMounted(() => {
 const bannerImg = {
   // pc: "https://statichk.cmermedical.com/vision/imgs/6446d8c5f0f8f72a.png",
   // mobile: "https://statichk.cmermedical.com/vision/imgs/5e82a28589934353.png",
-  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104584583733.jpg",
+  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104579791085.jpg",
   mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104584583733.jpg",
+  newBanner: true,
 };
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",

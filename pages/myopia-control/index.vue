@@ -19,6 +19,7 @@ useHead(() => ({
 const bannerImg = {
   pc: "https://content.cmervision.com//static/upload/image/20240912/1726104599219862.jpg",
   mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104603827739.png",
+  newBanner: true,
 };
 import { useTransition } from "@vueuse/core";
 

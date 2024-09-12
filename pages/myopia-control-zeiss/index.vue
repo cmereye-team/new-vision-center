@@ -54,6 +54,7 @@ const bannerImg = {
   pc: "https://content.cmervision.com//static/upload/image/20240912/1726104491847759.jpg",
   mobile:
     "https://content.cmervision.com//static/upload/image/20240912/1726104496123258.jpg",
+  newBanner: true,
 };
 
 const miSightQuestionList = [

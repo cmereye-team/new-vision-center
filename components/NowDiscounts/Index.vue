@@ -343,7 +343,7 @@ onMounted(() => {
   }
   .swiper-button-next-prev {
     position: absolute;
-    top: 30%;
+    top: 21%;
     transform: translateY(-25%);
     z-index: 99;
     width: 100%;
