@@ -859,14 +859,14 @@ onMounted(() => {
         color: var(--White, #fff);
         text-align: center;
         font-family: "Inter";
-        font-size: 21.981px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         border-radius: 30px;
         display: flex;
         align-items: center;
-        padding: 0 10px;
+        padding: 10px 10px;
         margin-left: 7px;
         box-shadow: inset 0px 4px 8px rgba(0, 0, 0, 0.25);
         & > span:nth-child(1),
