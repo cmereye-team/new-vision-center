@@ -18,7 +18,7 @@ useHead(() => ({
 }));
 const bannerImg = {
   pc: "https://content.cmervision.com//static/upload/image/20240912/1726104599219862.jpg",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/152dc13cba64e3ad.png",
+  mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104603827739.png",
 };
 import { useTransition } from "@vueuse/core";
 
@@ -90,14 +90,7 @@ const btnElement = ref({
 
 <template>
   <div class="myopia-control">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title">
-          <span></span>
-        </div>
-      </template>
-    </PublicBanner>
+    <PublicBanner :banner="bannerImg" />
     <PublicNavbar :link="'/center-profile'" :name="'近視防控策略'" />
     <div class="myopia-control-box">
       <div class="myopia-control-significance">

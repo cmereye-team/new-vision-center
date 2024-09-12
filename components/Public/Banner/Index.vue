@@ -81,11 +81,20 @@ const props = defineProps({
   .banner-template {
     position: relative;
     & > div:nth-child(1) {
-      // max-width: 1920px;
       margin: 7.083vw auto 0;
-      // margin-top: 136px;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      object-fit: cover;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
       }
     }
     & > div:nth-child(2) {
@@ -207,11 +216,20 @@ const props = defineProps({
   .banner-template {
     position: relative;
     & > div:nth-child(1) {
-      // max-width: 1920px;
       margin: 130px auto 0;
-      // margin-top: 136px;
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+      display: flex;
+      justify-content: center;
+      object-fit: cover;
       img {
         width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
       }
     }
     & > div:nth-child(2) {

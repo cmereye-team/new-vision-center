@@ -44,9 +44,7 @@ onMounted(() => {
   winWSize.value = width;
   isPc.value = widthState;
 
-  setTimeout(() => {
-    getImgSwiper();
-  }, 500);
+  getImgSwiper();
 });
 </script>
 
@@ -140,8 +138,12 @@ onMounted(() => {
         width: 100%;
         display: flex;
         justify-content: center;
+        height: 400px;
+        object-fit: cover;
         img {
+          height: 100%;
           width: 100%;
+          object-fit: cover;
         }
       }
     }
@@ -267,10 +269,14 @@ onMounted(() => {
 
       a {
         width: 100%;
+        height: 400px;
+        object-fit: cover;
         display: flex;
         justify-content: center;
         img {
+          height: 100%;
           width: 100%;
+          object-fit: cover;
         }
       }
     }
@@ -422,8 +428,11 @@ onMounted(() => {
         width: 100%;
         display: flex;
         justify-content: center;
+        object-fit: cover;
         img {
           width: 100%;
+          height: 100%;
+          object-fit: cover;
         }
       }
     }

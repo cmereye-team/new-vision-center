@@ -28,6 +28,7 @@ const handlesSliNext = () => {
 const handlesSliPrev = () => {
   deBoxSwiperRef.slidePrev();
 };
+
 const discountsList = ref([
   {
     id: 1,
@@ -90,27 +91,75 @@ const discountsList = ref([
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
   },
 ]);
+
+interface TabsList {
+  id: number;
+  img: string;
+  title: string;
+  price: string;
+  reason: string;
+  content: string;
+  btn1: string;
+  btn2: string;
+  btn1Link: string;
+  btn2Link: string;
+  sub_title: string;
+  discounts_text: string;
+}
+const link = ref(
+  "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+);
+const discounts = ref<TabsList[]>([]);
+const getDiscounts = async () => {
+  try {
+    const res = await fetch("https://content.cmervision.com/api.php/list/15");
+    const data = await res.json();
+    if (data.code === 1) {
+      console.log(data.data, "data");
+      // data.data.sort((a: any, b: any) => a.id - b.id);
+      discounts.value = data.data.map((item: any) => {
+        return {
+          id: item.id,
+          img: `https://content.cmervision.com/${item.ico}`,
+          title: item.title,
+          price: item.ext_price,
+          reason: item.sub_title,
+          content: item.content,
+          btn1: "立即查詢",
+          btn2: "了解產品",
+          btn1Link: link.value,
+          btn2Link: link.value,
+          sub_title: item.ext_detail_title,
+          discounts_text: item.ext_detail_discounts,
+        };
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+onMounted(() => {
+  getDiscounts();
+});
 </script>
 
 <template>
   <div class="now-discounts">
     <div class="discounts-title">最新優惠</div>
     <div class="discounts-box">
-      <!-- :autoplay="{
-          delay: 2500,
-          disableOnInteraction: false,
-        }" -->
       <swiper
         :modules="modules"
         :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
         }"
+        :loop="true"
         class="mySwiper"
         @swiper="swiperBox"
       >
         <swiper-slide
-          v-for="item in discountsList"
+          v-for="item in discounts"
           :key="item.id"
           class="discounts-slide"
         >
@@ -119,14 +168,12 @@ const discountsList = ref([
           </div>
           <div class="slide-content">
             <div class="slide-title">
-              <span v-for="(items, index) in item.title" :key="index">{{
-                items
-              }}</span>
+              <span>{{ item.title }}</span>
             </div>
             <div>
-              <span>{{ item.reason }} $</span><span>{{ item.price }}</span>
+              <span>{{ item.reason }} </span><span>{{ item.price }}</span>
             </div>
-            <div class="content">{{ item.content }}</div>
+            <div class="content" v-html="item.content"></div>
             <div>
               <a :href="item.btn1Link" target="_blank">{{ item.btn1 }}</a>
               <a :href="item.btn2Link" target="_blank"
@@ -156,30 +203,38 @@ const discountsList = ref([
         <div class="button-next" @click="handlesSliNext"></div>
       </div>
       <div class="swiper-pagination-btn">
-        <div
-          class="swiper-btn-item"
-          v-for="(item, index) in discountsList"
-          :key="item.id"
-          @click="handleshowdeBox(index)"
+        <swiper
+          :slidesPerView="4"
+          :spaceBetween="20"
+          :modules="[Pagination, Autoplay, Navigation]"
         >
-          <div><img :src="item.img" :alt="item.content" /></div>
-          <div>
-            <span v-for="(items, index) in item.title" :key="index">{{
-              items
-            }}</span>
-          </div>
-          <div class="price-btn">
+          <swiper-slide
+            v-for="(item, index) in discounts"
+            :key="item.id"
+            class="swiper-btn-item"
+            :id="item.id"
+            @click="handleshowdeBox(index)"
+          >
+            <div><img :src="item.img" :alt="item.content" /></div>
             <div>
-              <span class="price-text">{{ item.reason }}$</span
-              ><span>{{ item.price }}</span>
+              <span>{{ item.title }}</span>
             </div>
-            <div>
-              <a class="pagination_btn_item" target="_blank" :href="item.btn1Link">{{
-                item.btn1
-              }}</a>
+            <div class="price-btn">
+              <div>
+                <span class="price-text">{{ item.price }}</span>
+                <!-- <span>{{ item.price }}</span> -->
+              </div>
+              <div>
+                <a
+                  class="pagination_btn_item"
+                  target="_blank"
+                  :href="item.btn1Link"
+                  >{{ item.btn1 }}</a
+                >
+              </div>
             </div>
-          </div>
-        </div>
+          </swiper-slide>
+        </swiper>
       </div>
     </div>
   </div>
@@ -314,10 +369,19 @@ const discountsList = ref([
     }
   }
   .swiper-pagination-btn {
+    & > div {
+      padding: 20px 0;
+    }
     margin-top: 60px;
     .swiper-btn-item {
+      border-radius: 15px;
+      overflow: hidden;
+      margin-bottom: 20px;
       & > div:nth-child(1) {
-        margin-bottom: 18px;
+        margin-bottom: 8px;
+        & > img {
+          width: 100%;
+        }
       }
       & > div:nth-child(2) {
         color: #60605f;
@@ -328,6 +392,12 @@ const discountsList = ref([
         line-height: 20.862px;
         text-transform: uppercase;
         margin-bottom: 10px;
+        display: -webkit-box;
+        -webkit-line-clamp: 2;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        min-height: 37.5px;
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
@@ -336,7 +406,7 @@ const discountsList = ref([
           font-size: 10.5px;
           font-style: normal;
           font-weight: 700;
-          line-height: 26.078px;
+          line-height: 14.078px;
           span:nth-child(2) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
@@ -363,6 +433,9 @@ const discountsList = ref([
           }
         }
       }
+    }
+    .swiper-btn-item:hover {
+      box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3411764706);
     }
   }
   .discounts-slide {
@@ -400,7 +473,7 @@ const discountsList = ref([
   .price-btn {
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     & > div {
       flex: 1;
     }

@@ -24,14 +24,7 @@ const bannerImg = {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title">
-          <span>最新優惠</span>
-        </div>
-      </template>
-    </PublicBanner>
+    <PublicBanner :banner="bannerImg" />
     <PublicNavbar :link="'/center-profile'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
@@ -42,12 +35,6 @@ const bannerImg = {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .profile-title {
-    // background: url("https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png")
-    //   no-repeat;
-    // background-size: 100% 100%;
-    // width: 100%;
-    // min-height: 800px;
-    // position: relative;
     span {
       color: var(--Brand-Color, #fff);
       text-align: center;

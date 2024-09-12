@@ -101,8 +101,10 @@ const discountsList = ref([
 
 
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/d77ee7b50ef9dce4.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/da875a7bbd73f573.png",
+  // pc: "https://statichk.cmermedical.com/vision/imgs/d77ee7b50ef9dce4.png",
+  // mobile: "https://statichk.cmermedical.com/vision/imgs/da875a7bbd73f573.png",
+  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104510585954.png",
+  mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104515302361.png",
 };
 
 const imgList = [
@@ -211,7 +213,7 @@ const handleIntersection = (entries: any, observer: any) => {
     <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
-        <div class="zveTitle">
+        <div style="display: none" class="zveTitle">
           <h2>ZEISS VISION EXPERT</h2>
           <span
             >作為「ZEISS VISION
