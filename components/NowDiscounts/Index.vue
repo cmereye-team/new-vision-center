@@ -325,7 +325,7 @@ onMounted(() => {
       text-transform: uppercase;
     }
     & > div:nth-child(2) {
-      margin-bottom: 52px;
+      margin-bottom: 32px;
       color: var(--Brand-Color, #00a6ce);
       font-family: "Noto Sans HK";
       font-size: 13.5px;
@@ -335,11 +335,11 @@ onMounted(() => {
       & > span:nth-child(2) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
-        font-size: 30px;
+        font-size: 24px;
       }
     }
     & > div:nth-child(3) {
-      margin-bottom: 30px;
+      margin-bottom: 20px;
       color: #60605f;
       font-family: "Inter";
       font-size: 13.5px;
@@ -577,7 +577,7 @@ onMounted(() => {
       & > span:nth-child(2) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
-        font-size: 5.64vw;
+        font-size: 4.64vw;
         line-height: 120%;
         font-style: normal;
         font-weight: 700;
@@ -586,9 +586,8 @@ onMounted(() => {
     & > div:nth-child(3) {
       margin-bottom: 3.846vw;
       color: #60605f;
-
       font-family: "Inter";
-      font-size: 3.589vw;
+      font-size: 3.289vw;
       font-style: normal;
       font-weight: 500;
       line-height: 150%; /* 166.667% */
