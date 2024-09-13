@@ -1192,6 +1192,10 @@ const goTo = (link: string) => {
           }
         }
       }
+      .list-in:hover {
+        transform: translateY(-10px);
+        box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
+      }
     }
   }
 }
@@ -1332,6 +1336,12 @@ const goTo = (link: string) => {
             //     }
             // }
           }
+        }
+      }
+      &-slide:hover {
+        .content {
+          transform: translateY(-10px);
+          box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
         }
       }
     }
