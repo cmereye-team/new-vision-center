@@ -13,6 +13,7 @@ interface discounts {
   tag: string;
   link: string;
   price: string;
+  routerLink: string;
 }
 const discountsChild = ref<discounts[]>([]);
 const getData = async () => {
@@ -27,6 +28,7 @@ const getData = async () => {
           title: item.title,
           tag: item.tags,
           price: item.ext_price,
+          routerLink: "/now-discounts",
           link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
         };
       });
@@ -71,7 +73,7 @@ onMounted(() => {
       class="mySwiper"
     >
       <swiper-slide v-for="item in discountsChild" :key="item.id">
-        <nuxt-link to="/" :id="item.id">
+        <nuxt-link :to="item.routerLink" :id="item.id">
           <div><img :src="item.img" :alt="item.title" /></div>
           <div>
             <h3>{{ item.title }}</h3>

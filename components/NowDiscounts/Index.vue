@@ -7,9 +7,10 @@ import "swiper/scss";
 
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
-import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Grid, Autoplay, Pagination, Navigation } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation];
 
+const modules2 = [Grid, Autoplay, Pagination];
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
 };
@@ -139,7 +140,20 @@ const getDiscounts = async () => {
   }
 };
 
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+const winWSize = ref(0);
 onMounted(() => {
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    winWSize.value = width;
+    isPc.value = widthState;
+  });
+
+  winWSize.value = width;
+  isPc.value = widthState;
+
   getDiscounts();
 });
 </script>
@@ -202,7 +216,7 @@ onMounted(() => {
         <div class="button-prev" @click="handlesSliPrev"></div>
         <div class="button-next" @click="handlesSliNext"></div>
       </div>
-      <div class="swiper-pagination-btn">
+      <div class="swiper-pagination-btn" v-if="winWSize > 768">
         <swiper
           :slidesPerView="4"
           :spaceBetween="20"
@@ -214,6 +228,47 @@ onMounted(() => {
             class="swiper-btn-item"
             :id="item.id"
             @click="handleshowdeBox(index)"
+          >
+            <div><img :src="item.img" :alt="item.content" /></div>
+            <div>
+              <span>{{ item.title }}</span>
+            </div>
+            <div class="price-btn">
+              <div>
+                <span class="price-text">{{ item.price }}</span>
+                <!-- <span>{{ item.price }}</span> -->
+              </div>
+              <div>
+                <a
+                  class="pagination_btn_item"
+                  target="_blank"
+                  :href="item.btn1Link"
+                  >{{ item.btn1 }}</a
+                >
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+      <div class="swiper-pagination-btn" v-else>
+        <swiper
+          :slidesPerView="2"
+          :grid="{
+            rows: 2,
+            fill: 'row',
+          }"
+          :spaceBetween="18"
+          :pagination="{
+            clickable: true,
+          }"
+          :modules="modules2"
+          class="mySwiper"
+        >
+          <swiper-slide
+            class="swiper-btn-item"
+            v-for="(item, index) in discounts"
+            @click="handleshowdeBox(index)"
+            :key="item.id"
           >
             <div><img :src="item.img" :alt="item.content" /></div>
             <div>
@@ -484,14 +539,15 @@ onMounted(() => {
 }
 @media screen and (max-width: 767px) {
   .now-discounts {
-    margin-bottom: 50px;
+    margin-bottom: 12.82vw;
     position: relative;
   }
   .discounts-title {
-    margin-bottom: 40px;
+    margin-top: 5.128vw;
+    margin-bottom: 7.692vw;
     color: var(--Brand-Color, #00a6ce);
     font-family: "Inter";
-    font-size: 50px;
+    font-size: 6.15vw;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
@@ -501,63 +557,61 @@ onMounted(() => {
   }
   .slide-content {
     & > div:nth-child(1) {
-      // display: flex;
-      // flex-direction: column;
-      margin-bottom: 5px;
+      margin-bottom: 1.28vw;
       color: #60605f;
       font-family: "Inter";
-      font-size: 18px;
+      font-size: 4.615vw;
       font-style: normal;
       font-weight: 900;
-      line-height: 21px; /* 133.333% */
+      line-height: 133%; /* 133.333% */
       text-transform: uppercase;
     }
     & > div:nth-child(2) {
-      margin-bottom: 12px;
+      margin-bottom: 3.076vw;
       color: var(--Brand-Color, #00a6ce);
       font-family: "Noto Sans HK";
-      font-size: 12px;
+      font-size: 3.076vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 26.5px; /* 277.778% */
+      line-height: 140%; /* 277.778% */
       & > span:nth-child(2) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 5.64vw;
+        line-height: 120%;
         font-style: normal;
         font-weight: 700;
       }
     }
     & > div:nth-child(3) {
-      margin-bottom: 15px;
+      margin-bottom: 3.846vw;
       color: #60605f;
 
       font-family: "Inter";
-      font-size: 14px;
+      font-size: 3.589vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 22px; /* 166.667% */
+      line-height: 150%; /* 166.667% */
       text-transform: uppercase;
     }
     & > div:nth-child(4) {
       display: flex;
       & > a {
-        border-radius: 8px;
+        border-radius: 2.05vw;
         background: var(--Brand-Color, #00a6ce);
-        padding: 5px 15px;
+        padding: 1.28vw 3.846vw;
         cursor: pointer;
 
         display: flex;
         align-items: center;
         color: #fff;
         font-family: "Inter";
-        font-size: 16px;
+        font-size: 4.1025vw;
         font-style: normal;
         font-weight: 300;
         line-height: normal;
         text-transform: uppercase;
-        margin-right: 25px;
+        margin-right: 6.4vw;
       }
       & > a:hover {
         box-shadow: 2px 3px 8px 0px #b3b2b2;
@@ -577,8 +631,8 @@ onMounted(() => {
       background: url("https://statichk.cmermedical.com/vision/imgs/1c62cfbbfb64b37f.png")
         no-repeat;
       background-position: right;
-      width: 20px;
-      height: 40px;
+      width: 5.128vw;
+      height: 10.25vw;
     }
     & > div:nth-child(2) {
       display: inline-block;
@@ -587,53 +641,67 @@ onMounted(() => {
       background: url("https://statichk.cmermedical.com/vision/imgs/15988679aad2e086.png")
         no-repeat;
       background-position: right;
-      width: 20px;
-      height: 40px;
+      width: 5.128vw;
+      height: 10.25vw;
+    }
+  }
+  :deep(.swiper-btn-item) {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    & > div:nth-child(1) {
+      width: 100%;
+      max-width: 100%;
+      margin-bottom: 2.564vw;
+      border-radius: 3.846vw;
+      overflow: hidden;
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.40);
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
     }
   }
   .swiper-pagination-btn {
-    margin-top: 40px;
+    margin-top: 10.256vw;
     .swiper-btn-item {
-      & > div:nth-child(1) {
-        margin-bottom: 10px;
-      }
       & > div:nth-child(2) {
         color: #60605f;
         font-family: "Inter";
-        font-size: 14px;
+        font-size: 3.589vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 18px; /* 154.534% */
+        line-height: 150%; /* 154.534% */
         text-transform: uppercase;
-        margin-bottom: 12px;
+        margin-bottom: 3.076vw;
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 10px;
+          font-size: 2.564vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 20px;
+          line-height: 180%;
           span:nth-child(2) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 20px;
+            font-size: 5.128vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 20px;
+            line-height: 110%;
           }
         }
         & > div:nth-child(2) {
           a {
-            padding: 4px 14px;
+            padding: 1.0256vw 3.589vw;
             border-radius: 12.686px;
             background: var(--Brand-Color, #00a6ce);
             color: #fff;
 
             font-family: "Inter";
             cursor: pointer;
-            font-size: 14px;
+            font-size: 3.589vw;
             font-style: normal;
             font-weight: 300;
             line-height: normal;
@@ -650,12 +718,12 @@ onMounted(() => {
     justify-content: space-between;
     & > div:nth-child(2) {
       margin-top: 15px;
-      padding: 0 17px;
+      padding: 0 4.358vw;
     }
   }
   .img-slide {
     margin: auto;
-    max-width: 307px;
+    max-width: 78.719vw;
     & > img {
       width: 100%;
     }
@@ -665,8 +733,7 @@ onMounted(() => {
     flex-wrap: wrap;
     justify-content: space-between;
     & > div {
-      margin-top: 15px;
-      max-width: 158px;
+      margin-top: 3.846vw;
       & > div:nth-child(1) {
         & > img {
           width: 100%;
@@ -678,6 +745,7 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 0 2.564vw;
   }
 }
 </style>

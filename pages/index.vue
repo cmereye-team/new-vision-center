@@ -293,6 +293,7 @@ interface discounts {
   tag: string;
   link: string;
   price: string;
+  routerLink: string;
 }
 const discounts = ref<discounts[]>([]);
 // 获取数据
@@ -309,6 +310,7 @@ const getData = async () => {
           title: item.title,
           tag: item.tags,
           price: item.ext_price,
+          routerLink: "/now-discounts",
           link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
         };
       });
@@ -343,6 +345,11 @@ onMounted(() => {
     section3.appendChild(script);
   }
 });
+
+const router = useRouter();
+const goTo = (link: string) => {
+  router.push(link);
+};
 </script>
 
 <template>
@@ -482,6 +489,7 @@ onMounted(() => {
               :key="item.id"
               class="list-in"
               :id="item.id"
+              @click="goTo(item.routerLink)"
             >
               <div class="image">
                 <img :src="item.img" :alt="item.title" :title="item.title" />
@@ -1063,6 +1071,7 @@ onMounted(() => {
       // grid-template-columns: repeat(4, 1fr);
       overflow: hidden;
       .list-in {
+        cursor: pointer;
         min-height: 334px;
         // max-width: 210px;
         border-radius: 15px;
@@ -1406,7 +1415,7 @@ onMounted(() => {
       }
     }
   }
-  .section3{
+  .section3 {
     width: 100%;
     max-width: 960px;
     margin-top: 65px;
@@ -1724,6 +1733,7 @@ onMounted(() => {
           border-radius: 2.82vw;
           padding: 3.076vw;
           box-shadow: 0 0 1.28vw 0px rgba(0, 0, 0, 0.1);
+
           h3 {
             font-size: 3.075vw;
             font-style: normal;
