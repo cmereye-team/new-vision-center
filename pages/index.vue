@@ -237,25 +237,25 @@ const witness = ref({
   ],
   section2: [
     {
-      name: "Carson",
       img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
-      services: "角膜矯形鏡 (ok鏡)",
-      slogan: "安心、舒服、無痛",
-      text: "童星Carson黃梓賢平時熱愛運動，不過有近視要戴眼鏡做運動冇咁方便。最後決定去配OK鏡，童星細佬Sean更有一齊陪哥哥去做檢查。",
+      name: "Billy",
+      services: "漸進鏡",
+      slogan: "價錢實惠、舒適",
+      text: "視光師和助理都非常專業，對各種漸進鏡片的功能和用法講解好詳細，給我們很多有用的意見，價錢更比大型連鎖平，戴了新眼鏡後效果非常好！中心儀器先進，檢查和講解都非常仔細專業，服務一流！",
     },
     {
-      name: "Carson",
       img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
+      name: "Jenny",
       services: "角膜矯形鏡 (ok鏡)",
-      slogan: "安心、舒服、無痛",
-      text: "童星Carson黃梓賢平時熱愛運動，不過有近視要戴眼鏡做運動冇咁方便。最後決定去配OK鏡，童星細佬Sean更有一齊陪哥哥去做檢查。",
+      slogan: "效果顯著、安心",
+      text: "上年開始我帶了兩個小朋友來這間中心配了OK鏡，視光師非常專業，而且服務態度認真。姑娘非常之有耐心，介紹了朋友也讚口不絕。",
     },
     {
-      name: "Carson",
       img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
-      services: "角膜矯形鏡 (ok鏡)",
-      slogan: "安心、舒服、無痛",
-      text: "童星Carson黃梓賢平時熱愛運動，不過有近視要戴眼鏡做運動冇咁方便。最後決定去配OK鏡，童星細佬Sean更有一齊陪哥哥去做檢查。",
+      name: "Paul",
+      services: "近視控制眼鏡",
+      slogan: "適應期短、簡單配戴",
+      text: "大半年前帶小朋友去做眼睛檢查，發現近視加深了很多！幸好視光師給我們很多非常有用的貼士，還建議我們用近視控制眼鏡，最近回去免費覆診，發現只有一隻眼深了25度！超開心！謝謝你們",
     },
   ],
 });
@@ -330,20 +330,20 @@ onMounted(() => {
   getLocale();
   getData();
   // 获取 class section2
-  const section3 = document.querySelector(".section3");
-  const script = document.createElement("script");
-  script.src =
-    "https://cdn.trustindex.io/loader.js?bafd719348f250549f76a58071f";
-  script.type = "text/javascript";
-  script.async = true;
-  script.defer = true;
+  // const section3 = document.querySelector(".section3");
+  // const script = document.createElement("script");
+  // script.src =
+  //   "https://cdn.trustindex.io/loader.js?bafd719348f250549f76a58071f";
+  // script.type = "text/javascript";
+  // script.async = true;
+  // script.defer = true;
 
-  script.onload = () => {
-    console.log("Script loaded");
-  };
-  if (section3) {
-    section3.appendChild(script);
-  }
+  // script.onload = () => {
+  //   console.log("Script loaded");
+  // };
+  // if (section3) {
+  //   section3.appendChild(script);
+  // }
 });
 
 const router = useRouter();
@@ -803,7 +803,7 @@ const goTo = (link: string) => {
           </swiper-slide>
         </swiper>
       </section>
-      <section class="section2" v-if="isWitness">
+      <section class="section2">
         <div
           class="list-in"
           v-for="(item, index) in witness.section2"
@@ -824,9 +824,9 @@ const goTo = (link: string) => {
           </div>
         </div>
       </section>
-      <section class="section3">
+      <!-- <section class="section3">
         <ClientOnly> </ClientOnly>
-      </section>
+      </section> -->
     </div>
   </div>
 </template>
@@ -1415,11 +1415,11 @@ const goTo = (link: string) => {
       }
     }
   }
-  .section3 {
-    width: 100%;
-    max-width: 960px;
-    margin-top: 65px;
-  }
+  // .section3 {
+  //   width: 100%;
+  //   max-width: 960px;
+  //   margin-top: 65px;
+  // }
 }
 
 @media (min-width: 768px) and (max-width: 1452px) {
