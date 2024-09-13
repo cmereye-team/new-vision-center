@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
   <div class="banner-template">
-    <div :style="{ height: props.banner.newBanner ? '400px': 'auto' }">
+    <div :style="{ height: props.banner.newBanner ? '400px' : 'auto' }">
       <img v-if="isPc" :src="banner.pc" />
       <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''" />
     </div>
@@ -108,28 +108,26 @@ const props = defineProps({
       top: 7vw;
       right: 0;
       .banner-template-btn {
-        z-index: 99;
-        position: sticky;
+        position: absolute;
         top: 0;
-        right: 0;
         display: flex;
         z-index: 9;
 
         & > a {
           display: flex;
           align-items: center;
-          margin-right: 0.52vw;
+          margin-right: 10px;
           text-decoration: none;
           & > div:nth-child(1) {
             display: flex;
             align-items: center;
-            margin-right: 0.26vw;
+            margin-right: 5px;
           }
           & > div:nth-child(2) {
             color: #fff;
             text-align: center;
             font-family: "Inter";
-            font-size: 0.625vw;
+            font-size: 12px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -141,22 +139,58 @@ const props = defineProps({
         //   transform: scale(1.1);
         //   transition: all 0.3s ease-in-out;
         // }
+        & > a {
+          overflow: hidden;
+          box-shadow: 0 0 0 0 transparent;
+          -webkit-transition: all 0.2s ease-in;
+          -moz-transition: all 0.2s ease-in;
+          transition: all 0.2s ease-in;
+        }
         & > a:hover {
-          background: rgb(61, 106, 255);
-          box-shadow: 0 0 1.5625vw 0.26vw rgba(0, 142, 236, 0.815);
+          background: #59ba68;
+          box-shadow: 0 0 30px 5px #59ba68;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
         }
+        & > a:hover::before {
+          -webkit-animation: sh02 0.5s 0s linear;
+          -moz-animation: sh02 0.5s 0s linear;
+          animation: sh02 0.5s 0s linear;
+        }
+        & > a::before {
+          content: "";
+          display: block;
+          width: 0px;
+          height: 86%;
+          position: absolute;
+          top: 7%;
+          left: 0%;
+          opacity: 0;
+          background: #fff;
+          box-shadow: 0 0 50px 30px #fff;
+          -webkit-transform: skewX(-20deg);
+          -moz-transform: skewX(-20deg);
+          -ms-transform: skewX(-20deg);
+          -o-transform: skewX(-20deg);
+          transform: skewX(-20deg);
+        }
         & > a:nth-child(1) {
-          padding: 0.675vw 0.573vw 0.675vw 0.83vw;
-          border-radius: 0px 0px 0.521vw 0.521vw;
+          padding: 13px 11px 13px 16px;
+          border-radius: 0px 0px 10px 10px;
           background: var(--Basic-2, #59ba68);
         }
         & > a:nth-child(2) {
-          padding: 0.78125vw 0.6771vw 0.78125vw 0.99vw;
-          border-radius: 0px 0px 0.521vw 0.521vw;
+          padding: 15px 13px 15px 19px;
+          border-radius: 0px 0px 10px 10px;
           background: #00a6ce;
+        }
+        & > a:nth-child(2):hover {
+          background: #00a6ce;
+          box-shadow: 0 0 30px 5px #00a6ce;
+          -webkit-transition: all 0.2s ease-out;
+          -moz-transition: all 0.2s ease-out;
+          transition: all 0.2s ease-out;
         }
       }
     }
@@ -188,17 +222,15 @@ const props = defineProps({
         line-height: normal;
       }
     }
-    // & > a:hover {
-    //   box-shadow: 0 0 7.5px #00000040;
-    //   transform: scale(1.1);
-    //   transition: all 0.3s ease-in-out;
-    // }
     & > a:hover {
-      background: rgb(61, 106, 255);
-      box-shadow: 0 0 30px 5px rgba(0, 142, 236, 0.815);
-      -webkit-transition: all 0.2s ease-out;
-      -moz-transition: all 0.2s ease-out;
-      transition: all 0.2s ease-out;
+      box-shadow: 0 0 7.5px #00000040;
+      transform: scale(1.1);
+      transition: all 0.3s ease-in-out;
+    }
+    & > a:hover::before {
+      -webkit-animation: sh02 0.5s 0s linear;
+      -moz-animation: sh02 0.5s 0s linear;
+      animation: sh02 0.5s 0s linear;
     }
     & > a:nth-child(1) {
       padding: 13px 11px 13px 16px;
@@ -362,6 +394,11 @@ const props = defineProps({
       box-shadow: 0 0 7.5px #00000040;
       transform: scale(1.1);
       transition: all 0.3s ease-in-out;
+    }
+    & > a:hover::before {
+      -webkit-animation: sh02 0.5s 0s linear;
+      -moz-animation: sh02 0.5s 0s linear;
+      animation: sh02 0.5s 0s linear;
     }
     & > a:nth-child(1) {
       padding: 13px 11px 13px 16px;

@@ -1019,6 +1019,9 @@ const goTo = (link: string) => {
         }
       }
     }
+    .list-in:hover {
+      box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
+    }
   }
 }
 .newDiscounts {
@@ -1405,7 +1408,7 @@ const goTo = (link: string) => {
       &::after {
         content: "";
         width: 100%;
-        height: calc(100% - 50px);
+        height: calc(100% - 40px);
         position: absolute;
         z-index: 0;
         bottom: 0;

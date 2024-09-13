@@ -792,7 +792,11 @@ onMounted(() => {
   :deep(.el-select .el-input.is-focus .el-input__wrapper) {
     box-shadow: 0 0 0 1px #6ebcd2 inset !important;
   }
-
+  // :deep(.el-select:hover),
+  // :deep(.el-input:hover) {
+  //   box-shadow: 4px 5px 8px 3px rgb(0 0 0 / 27%);
+  //   border-radius: 20px;
+  // }
   :deep(.el-select .el-input__wrapper.is-focus),
   :deep(.el-select .el-input.is-focus .el-input__wrapper) {
     box-shadow: 0 0 0 1px #6ebcd2 inset !important;
