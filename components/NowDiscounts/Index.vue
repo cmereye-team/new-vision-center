@@ -270,7 +270,9 @@ onMounted(() => {
             @click="handleshowdeBox(index)"
             :key="item.id"
           >
-            <div><img :src="item.img" :alt="item.content" /></div>
+            <div class="discounts_content">
+              <img :src="item.img" :alt="item.content" />
+            </div>
             <div>
               <span>{{ item.title }}</span>
             </div>
@@ -383,6 +385,14 @@ onMounted(() => {
       & > a:nth-child(2):hover {
         box-shadow: 0 0 5px #80f392, 0 0 15px #80f392, 0 0 30px #80f392,
           0 0 100px #80f392;
+      }
+    }
+    :deep(.content) {
+      p {
+        a {
+          color: #00a6ce;
+          border-bottom: 2px solid #00a6ce;
+        }
       }
     }
   }
@@ -616,6 +626,14 @@ onMounted(() => {
         box-shadow: 2px 3px 8px 0px #b3b2b2;
       }
     }
+    :deep(.content) {
+      p {
+        a {
+          color: #00a6ce;
+          border-bottom: 2px solid #00a6ce;
+        }
+      }
+    }
   }
   .swiper-button-next-prev {
     position: absolute;
@@ -654,7 +672,7 @@ onMounted(() => {
       margin-bottom: 2.564vw;
       border-radius: 3.846vw;
       overflow: hidden;
-      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.40);
+      box-shadow: 0px 0px 4px 0px rgba(0, 0, 0, 0.4);
       & > img {
         width: 100%;
         height: 100%;
