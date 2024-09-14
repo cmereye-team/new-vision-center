@@ -244,14 +244,14 @@ const witness = ref({
       text: "視光師和助理都非常專業，對各種漸進鏡片的功能和用法講解好詳細，給我們很多有用的意見，價錢更比大型連鎖平，戴了新眼鏡後效果非常好！中心儀器先進，檢查和講解都非常仔細專業，服務一流！",
     },
     {
-      img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
+      img: "https://static.cmereye.com/imgs/2024/09/1e33b077ed4921c5.jpg",
       name: "Jenny",
       services: "角膜矯形鏡 (ok鏡)",
       slogan: "效果顯著、安心",
       text: "上年開始我帶了兩個小朋友來這間中心配了OK鏡，視光師非常專業，而且服務態度認真。姑娘非常之有耐心，介紹了朋友也讚口不絕。",
     },
     {
-      img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
+      img: "https://static.cmereye.com/imgs/2024/09/cdf158c89af6e873.jpg",
       name: "Paul",
       services: "近視控制眼鏡",
       slogan: "適應期短、簡單配戴",

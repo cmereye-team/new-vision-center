@@ -628,7 +628,7 @@ const handleMouseleave = () => {
       padding: 0.625vw 0;
       & > div {
         & > a {
-          padding: 0.78125vw 1.5625vw ;
+          padding: 0.78125vw 1.5625vw;
           display: block;
           color: #6f6f6f;
           font-family: "Inter";
