@@ -129,7 +129,7 @@ onMounted(() => {
   .home_banner {
     position: relative;
     .banner_size {
-      max-width: 1920px;
+      max-width: 1735px;
       max-height: 800px;
       width: 100%;
       height: 100%;
@@ -138,7 +138,7 @@ onMounted(() => {
         width: 100%;
         display: flex;
         justify-content: center;
-        height: 400px;
+        height: 723px;
         object-fit: cover;
         img {
           height: 100%;
@@ -293,7 +293,7 @@ onMounted(() => {
   .home_banner {
     position: relative;
     .banner_size {
-      max-width: 1920px;
+      max-width: 1735px;
       max-height: 800px;
       width: 100vw;
       margin: 136px auto 0;
@@ -302,7 +302,7 @@ onMounted(() => {
 
       a {
         width: 100%;
-        height: 400px;
+        height: 723px;
         object-fit: cover;
         display: flex;
         justify-content: center;

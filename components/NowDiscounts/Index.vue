@@ -449,6 +449,7 @@ onMounted(() => {
         }
       }
       & > div:nth-child(2) {
+        padding: 0 8px;
         color: #60605f;
         font-family: "Inter";
         font-size: 13.5px;
@@ -483,7 +484,7 @@ onMounted(() => {
         }
         & > div:nth-child(2) {
           a {
-            padding: 5px 24px;
+            padding: 5px 14px;
             border-radius: 12.686px;
             background: var(--Brand-Color, #00a6ce);
             color: #fff;
@@ -522,6 +523,7 @@ onMounted(() => {
   .swiper-pagination-btn {
     display: flex;
     justify-content: space-between;
+
     & > div {
       margin-left: 18px;
       & > div:nth-child(1) {
@@ -539,10 +541,15 @@ onMounted(() => {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    & > div {
-      flex: 1;
-    }
+    gap: 0 8px;
+    box-sizing: border-box;
+    padding: 0 5px;
+
     & > div:nth-child(2) {
+      a {
+        width: fit-content;
+        white-space: nowrap;
+      }
       padding-bottom: 10px;
     }
   }
