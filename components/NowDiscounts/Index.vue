@@ -91,6 +91,21 @@ const discountsList = ref([
     btn2Link:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
   },
+  {
+    id: 5,
+    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
+    title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
+    price: "4,560",
+    reason: "節日限定",
+    content:
+      "B.I.G Vision™打破了舊有鏡片製作思維的基礎，成為第一個根據完整人體眼球的生物模型製造的高精密多焦點鏡片",
+    btn1: "立即查詢",
+    btn2: "了解產品",
+    btn1Link:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    btn2Link:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+  },
 ]);
 
 interface TabsList {
@@ -252,6 +267,11 @@ const getScrollY = () => {
           :slidesPerView="4"
           :spaceBetween="20"
           :modules="[Pagination, Autoplay, Navigation]"
+          :autoplay="{
+            delay: 2000,
+            disableOnInteraction: false,
+          }"
+          :loop="true"
         >
           <swiper-slide
             v-for="(item, index) in discountsList"
