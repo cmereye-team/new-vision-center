@@ -25,7 +25,14 @@ const bannerImg = {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg" />
+    <PublicBanner :banner="bannerImg">
+      <!-- 插槽 -->
+      <template #title>
+        <div class="profile-title">
+          <span>最新優惠</span>
+        </div>
+      </template>
+    </PublicBanner>
     <PublicNavbar :link="'/center-profile'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
@@ -48,6 +55,12 @@ const bannerImg = {
       position: relative;
       right: -180%;
     }
+  }
+  :deep(.publicBanner) {
+    position: absolute;
+    top: 50%;
+    right: 35%;
+    transform: translateY(-50%);
   }
   .video-information-box {
     max-width: 960px;

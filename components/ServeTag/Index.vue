@@ -53,7 +53,6 @@ const inform = () => {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .serve {
-  
     position: relative;
     border-radius: 18.443px;
     background: var(--Skin, #eafbff);
@@ -84,7 +83,7 @@ const inform = () => {
         font-weight: 500;
         line-height: 26px; /* 157.576% */
         letter-spacing: 0.825px;
-        &>span{
+        & > span {
           max-height: 26px;
         }
       }
@@ -108,19 +107,18 @@ const inform = () => {
 }
 @media screen and (max-width: 767px) {
   .serve {
-
-    border-radius: 8.023px;
+    border-radius: 2.05vw;
     background: var(--Skin, #eafbff);
     box-shadow: 0px 0px 3.263px 0px rgba(0, 0, 0, 0.25);
     position: relative;
     display: flex;
     box-sizing: border-box;
-    padding: 14px 13px 20px 9px;
-    gap: 0 12px;
+    padding: 3.589vw 3.33vw 2.564vw 2.3vw;
+    gap: 0 3.07vw;
     & > div:nth-child(1) {
-      width: 97.876px;
-      height: 97.876px;
-      min-width: 97.876px;
+      width: 25.128vw;
+      height: 25.128vw;
+      min-width: 25.128vw;
       & > img {
         width: 100%;
       }
@@ -129,30 +127,30 @@ const inform = () => {
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.589vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 14.681px; /* 104.868% */
+        line-height: 3.75vw; /* 104.868% */
         letter-spacing: 0.7px;
-        margin-bottom: 5px;
+        margin-bottom: 1.28vw;
       }
       & > div:nth-child(2) {
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 12px;
+        font-size: 3.07vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 16px; /* 133.333% */
+        line-height: 4.1vw; /* 133.333% */
         letter-spacing: 0.6px;
-        line-height: 16px;
+        line-height: 4.1vw;
       }
     }
     & > div:nth-child(3) {
       position: absolute;
-      top: 6.5px;
-      right: 9.1px;
-      width: 16.095px;
-      height: 16.095px;
+      top: 1.665vw;
+      right: 2.33vw;
+      width: 4.1vw;
+      height: 4.1vw;
       & > svg {
         width: 100%;
         height: 100%;

@@ -116,7 +116,7 @@ const getDiscounts = async () => {
     const res = await fetch("https://content.cmervision.com/api.php/list/15");
     const data = await res.json();
     if (data.code === 1) {
-      console.log(data.data, "data");
+      // console.log(data.data, "data");
       // data.data.sort((a: any, b: any) => a.id - b.id);
       discounts.value = data.data.map((item: any) => {
         return {
@@ -155,7 +155,38 @@ onMounted(() => {
   isPc.value = widthState;
 
   getDiscounts();
+  window.addEventListener("scroll", getScrollY);
 });
+const maxNum = ref(1500);
+const minNum = ref(1260);
+const minNumMb = ref(1000);
+const maxNumMb = ref(1400);
+const scrollY = ref(0);
+
+const getScrollY = () => {
+  const paginationBtnItems = document.querySelectorAll(".pagination_btn_item");
+  scrollY.value =
+    window.scrollY ||
+    document.documentElement.scrollTop ||
+    document.body.scrollTop;
+
+  if (winWSize.value > 768) {
+    maxNum.value;
+    minNum.value;
+  } else {
+    maxNum.value = maxNumMb.value;
+    minNum.value = minNumMb.value;
+  }
+  if (scrollY.value < maxNum.value && scrollY.value > minNum.value) {
+    paginationBtnItems.forEach((item: any) => {
+      item.classList.add("price-btn_hover");
+    });
+  } else {
+    paginationBtnItems.forEach((item: any) => {
+      item.classList.remove("price-btn_hover");
+    });
+  }
+};
 </script>
 
 <template>
@@ -355,7 +386,7 @@ onMounted(() => {
     & > div:nth-child(4) {
       display: flex;
       & > a {
-        border-radius: 15px;
+        // border-radius: 15px;
         // background: var(--Brand-Color, #00a6ce);
         padding: 12px 35px;
         cursor: pointer;
@@ -441,8 +472,8 @@ onMounted(() => {
     }
     margin-top: 60px;
     .swiper-btn-item {
-      border-radius: 15px;
-      overflow: hidden;
+      //  border-radius: 15px;
+      // overflow: hidden;
       margin-bottom: 20px;
       & > div:nth-child(1) {
         margin-bottom: 8px;
@@ -502,9 +533,6 @@ onMounted(() => {
         }
       }
     }
-    .swiper-btn-item:hover {
-      box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.3411764706);
-    }
   }
   .discounts-slide {
     display: flex;
@@ -552,11 +580,63 @@ onMounted(() => {
         width: fit-content;
         white-space: nowrap;
       }
-      padding-bottom: 10px;
+      // padding-bottom: 10px;
     }
+  }
+  .price-btn_hover {
+    position: relative;
+  }
+  .price-btn_hover::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    -webkit-animation: sh02 1s 0s linear;
+    -moz-animation: sh02 1s 0s linear;
+    animation: sh02 1s 0s linear;
+  }
+  .price-btn_hover:hover::before {
+    -webkit-animation: sh02 1s 0s linear;
+    -moz-animation: sh02 15s 0s linear;
+    animation: sh02 1s 0s linear;
   }
 }
 @media screen and (max-width: 767px) {
+  .price-btn_hover {
+    position: relative;
+  }
+  .price-btn_hover::before {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 86%;
+    position: absolute;
+    top: 7%;
+    left: 0%;
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 50px 30px #fff;
+    -webkit-transform: skewX(-20deg);
+    -moz-transform: skewX(-20deg);
+    -ms-transform: skewX(-20deg);
+    -o-transform: skewX(-20deg);
+    transform: skewX(-20deg);
+    -webkit-animation: sh02 1s 0s linear;
+    -moz-animation: sh02 1s 0s linear;
+    animation: sh02 1s 0s linear;
+  }
+
   .now-discounts {
     margin-bottom: 12.82vw;
     position: relative;
@@ -772,6 +852,22 @@ onMounted(() => {
     justify-content: space-between;
     align-items: center;
     gap: 0 2.564vw;
+  }
+}
+
+@keyframes sh02 {
+  from {
+    opacity: 0;
+    left: 0%;
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    left: 100%;
   }
 }
 </style>

@@ -13,7 +13,7 @@ const myopiaControlContactLenses = ref({
     "MiSight® 1 day是一款專為兒童設計的每日即棄近視控制隱形眼鏡。",
     "它使用ActivControl® 周邊離焦技術減慢兒童眼軸增長及近視加深。",
     "這款軟性隱形眼鏡具備了特殊的光學設計，包括：<br>",
-   
+
     "1) 兩個近視控制區",
     "把光線聚焦在視網膜的前方，形成近視離焦，減慢眼軸增長，有效控",
     "制近視加深。<br>",
@@ -43,7 +43,6 @@ const scleralLens = ref({
   img: "https://statichk.cmermedical.com/vision/imgs/b3370b240196a633.png",
   title: "鞏膜鏡",
   description: [
-    
     "鞏膜鏡(Scleral Lens)是一款大直徑的高透氧硬性隱形眼鏡，直徑一般是",
     "14mm至22mm。由於鏡片接觸的是眼球中相對不敏感的眼白鞏膜部位，",
     "戴起來比普通隱形眼鏡舒適。鞏膜鏡常用於「角膜病」的患者，如圓錐角",
@@ -64,7 +63,7 @@ const progressiveEyeglasses = ref({
     "",
     "中間部分是「中光區」，用於看中近距離的景物如電腦；<br>",
     "",
-    "至於鏡片的下方則配以「近用度數」，用作看近距離景物如閱讀文件和看", 
+    "至於鏡片的下方則配以「近用度數」，用作看近距離景物如閱讀文件和看",
     "手提電話。",
   ],
 });
@@ -170,9 +169,10 @@ onMounted(() => {
   getData(0);
 });
 import getWindowSize from "@/utils/width";
-const isPc = ref(false);
 
+const isPc = ref(false);
 onMounted(() => {
+  isPc.value = getWindowSize().widthState;
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
@@ -332,7 +332,7 @@ const onInform = (el: any) => {
               <span>角膜矯形鏡</span>
             </div>
           </div>
-      
+
           <div @click="getData(2)">
             <div :class="[productListBoxThree ? 'active' : '']">
               <svg
@@ -1811,9 +1811,8 @@ const onInform = (el: any) => {
         </div>
         <div v-if="isClose">
           <ServeTag @inform="onInform" :detail="defaultDataOne" />
-          <div ></div>
+          <div></div>
         </div>
-        <div v-if="isClose" :style="isPc? 'display:none' : 'height:450px'"></div>
       </div>
     </div>
   </div>
@@ -1826,7 +1825,6 @@ const onInform = (el: any) => {
     margin: 96px auto;
   }
   .product-list {
-
     & > div:nth-child(1) {
       display: flex;
       justify-content: space-between;
@@ -1856,7 +1854,6 @@ const onInform = (el: any) => {
           font-weight: 500;
           line-height: 22.5px; /* 136.364% */
           letter-spacing: 0.825px;
-      
         }
       }
     }
@@ -1864,8 +1861,13 @@ const onInform = (el: any) => {
       margin: 45px auto;
     }
   }
-  .active{
-    background: linear-gradient(0deg, rgba(0, 100, 255, 0.1) 0%, rgba(0, 100, 255, 0.1) 100%), var(--Skin, #eafbff) !important;
+  .active {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 100, 255, 0.1) 0%,
+        rgba(0, 100, 255, 0.1) 100%
+      ),
+      var(--Skin, #eafbff) !important;
   }
   .glasses-type {
     margin: 90px auto 65px;
@@ -1902,38 +1904,38 @@ const onInform = (el: any) => {
     }
     & > a:nth-child(2) {
       background: #3333;
-      &:hover{
-      background: #95df82;
-
+      &:hover {
+        background: #95df82;
       }
     }
   }
 }
 @media screen and (max-width: 767px) {
   .optometry-product {
-    padding: 0 25px;
-    margin-top: 30px;
-    margin-bottom: 14px;
+    padding: 0 6.4vw;
+    margin-top: 2.05vw;
+    margin-bottom: 3.589vw;
   }
   .product-list-box {
-    // display: grid;
-    // grid-template-columns: repeat(3, 1fr);
-      display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    gap: 328px 12px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 84.1vw 3.07vw;
   }
   .product-list {
-   
     position: relative;
+    display: flex;
+    flex-direction: column;
+    // align-items: center;
+    gap: 8.2vw 0;
+    margin-bottom: 50px;
     & > div:nth-child(1) {
       & > div {
         & > div:nth-child(1) {
-          border-radius: 10px;
+          border-radius: 2.564vw;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-          width: 105px;
-          height: 105px;
+          width: 26.923vw;
+          height: 26.923vw;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1942,49 +1944,55 @@ const onInform = (el: any) => {
           display: flex;
           flex-direction: column;
           align-items: center;
-          margin-top: 13px;
+          margin-top: 3.33vw;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 16.5px;
+          font-size: 4.23vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 22.5px; /* 136.364% */
+          line-height: 5.765vw; /* 136.364% */
           letter-spacing: 0.825px;
+          white-space: nowrap;
         }
       }
     }
-    & > div:nth-child(2) {
-      position: absolute;
-      top: 515px;
-      margin: 0 auto;
-    }
+    // & > div:nth-child(2) {
+    //   position: absolute;
+    //   top: 515px;
+    //   margin: 0 auto;
+    // }
   }
-  .active{
-    background: linear-gradient(0deg, rgba(0, 100, 255, 0.1) 0%, rgba(0, 100, 255, 0.1) 100%), var(--Skin, #eafbff) !important;
+  .active {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 100, 255, 0.1) 0%,
+        rgba(0, 100, 255, 0.1) 100%
+      ),
+      var(--Skin, #eafbff) !important;
   }
   .glasses-type {
-    margin: 30px auto 20px;
+    margin: 7.69vw auto 5.128vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 7.5px;
+    gap: 1.923vw;
     & > a {
       display: flex;
       align-items: center;
       background: #00a6ce;
       box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
-      padding: 7px 10px;
+      padding: 1.8vw 2.564vw;
       color: #fff;
       text-align: center;
       font-family: "Inter";
-      font-size: 18px;
+      font-size: 4.615vw;
       font-style: normal;
       font-weight: 400;
       line-height: normal;
-      border-radius: 20px;
+      border-radius: 5.128vw;
       & > span:nth-child(2) {
-        margin: 0 3px;
+        margin: 0 0.768vw;
       }
       & > span:nth-child(1),
       & > span:nth-child(3) {
@@ -1995,7 +2003,7 @@ const onInform = (el: any) => {
     }
     & > a:nth-child(2) {
       // background: #95df82;
-           background: #3333;
+      background: #3333;
     }
   }
 }
