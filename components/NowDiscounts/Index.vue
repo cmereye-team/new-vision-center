@@ -231,7 +231,9 @@ onMounted(() => {
           >
             <div><img :src="item.img" :alt="item.content" /></div>
             <div>
-              <span>{{ item.title }}</span>
+              <span v-for="(title, index) in item.title" :key="index">
+                {{ title }}
+              </span>
             </div>
             <div class="price-btn">
               <div>
