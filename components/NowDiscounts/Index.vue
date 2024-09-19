@@ -223,7 +223,7 @@ onMounted(() => {
           :modules="[Pagination, Autoplay, Navigation]"
         >
           <swiper-slide
-            v-for="(item, index) in discounts"
+            v-for="(item, index) in discountsList"
             :key="item.id"
             class="swiper-btn-item"
             :id="item.id"
@@ -235,8 +235,8 @@ onMounted(() => {
             </div>
             <div class="price-btn">
               <div>
-                <span class="price-text">{{ item.price }}</span>
-                <!-- <span>{{ item.price }}</span> -->
+                <span class="price-text">節日限定 $</span>
+                <span>{{ item.price }}</span>
               </div>
               <div>
                 <a
