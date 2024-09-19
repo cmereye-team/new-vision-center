@@ -148,7 +148,7 @@ const props = defineProps({
         }
         & > a:hover {
           background: #59ba68;
-          box-shadow: 0 0 30px 5px #59ba68;
+          // box-shadow: 0 0 30px 5px #59ba68;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -187,7 +187,7 @@ const props = defineProps({
         }
         & > a:nth-child(2):hover {
           background: #00a6ce;
-          box-shadow: 0 0 30px 5px #00a6ce;
+          // box-shadow: 0 0 30px 5px #00a6ce;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -235,12 +235,12 @@ const props = defineProps({
     & > a:nth-child(1) {
       padding: 13px 11px 13px 16px;
       border-radius: 0px 0px 10px 10px;
-      background: var(--Basic-2, #59ba68);
+      // background: var(--Basic-2, #59ba68);
     }
     & > a:nth-child(2) {
       padding: 15px 13px 15px 19px;
       border-radius: 0px 0px 10px 10px;
-      background: #00a6ce;
+      // background: #00a6ce;
     }
   }
 }
@@ -316,7 +316,7 @@ const props = defineProps({
         }
         & > a:hover {
           background: #59ba68;
-          box-shadow: 0 0 30px 5px #59ba68;
+          // box-shadow: 0 0 30px 5px #59ba68;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -355,7 +355,7 @@ const props = defineProps({
         }
         & > a:nth-child(2):hover {
           background: #00a6ce;
-          box-shadow: 0 0 30px 5px #00a6ce;
+          // box-shadow: 0 0 30px 5px #00a6ce;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;

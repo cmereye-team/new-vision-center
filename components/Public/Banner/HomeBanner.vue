@@ -193,7 +193,7 @@ onMounted(() => {
         }
         & > a:hover {
           background: #59ba68;
-          box-shadow: 0 0 30px 5px #59ba68;
+          // box-shadow: 0 0 30px 5px #59ba68;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -232,7 +232,7 @@ onMounted(() => {
         }
         & > a:nth-child(2):hover {
           background: #00a6ce;
-          box-shadow: 0 0 30px 5px #00a6ce;
+          // box-shadow: 0 0 30px 5px #00a6ce;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -242,7 +242,7 @@ onMounted(() => {
   }
   .banner-template-btn {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 50px;
     display: flex;
     z-index: 9;
@@ -360,7 +360,7 @@ onMounted(() => {
         }
         & > a:hover {
           background: #59ba68;
-          box-shadow: 0 0 30px 5px #59ba68;
+          // box-shadow: 0 0 30px 5px #59ba68;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -399,7 +399,7 @@ onMounted(() => {
         }
         & > a:nth-child(2):hover {
           background: #00a6ce;
-          box-shadow: 0 0 30px 5px #00a6ce;
+          // box-shadow: 0 0 30px 5px #00a6ce;
           -webkit-transition: all 0.2s ease-out;
           -moz-transition: all 0.2s ease-out;
           transition: all 0.2s ease-out;
@@ -409,7 +409,7 @@ onMounted(() => {
   }
   .banner-template-btn {
     position: absolute;
-    top: 0;
+    top: 5px;
     right: 50px;
     display: flex;
     z-index: 9;
