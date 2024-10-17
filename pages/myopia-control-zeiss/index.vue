@@ -98,6 +98,7 @@ onMounted(() => {
   });
   isPc.value = widthState;
 });
+
 </script>
 
 <template>
