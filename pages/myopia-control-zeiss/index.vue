@@ -1349,6 +1349,16 @@ onMounted(() => {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+  .myopia-control-zeiss {
+    :deep(.banner-template) {
+      height: 0 !important;
+      & > div {
+        img {
+          display: none !important;
+        }
+      }
+    }
+  }
   .zeiss-container {
     margin-bottom: 65px;
   }
