@@ -23,7 +23,9 @@ const bannerImg = {
       :isInsidePage="true"
       :insidePageTitle="'当前页面title'"
     />
-    <div class="xxxx-box"></div>
+    <div class="xxxx-box">
+      ssssss
+    </div>
   </div>
 </template>
 
