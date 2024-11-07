@@ -44,8 +44,23 @@ export default defineNuxtConfig({
     '@element-plus/nuxt',
     '@nuxtjs/i18n',
     '@vueuse/nuxt',
+    '@zadigetvoltaire/nuxt-gtm'
   ],
-
+  runtimeConfig: {
+    public: {
+      gtm: {
+        id: 'GTM-W87S5KSC',
+        defer: false,
+        compatibility: false,
+        enabled: true,
+        debug: true,
+        loadScript: true,
+        enableRouterSync: true,
+        devtools: true,
+      },
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://hk.cmervision.com/',
+    }
+  },
   i18n: {
     vuei18n: './plugins/i18n.ts'
   },
