@@ -113,7 +113,16 @@ const changeCities = (str: string) => {
     temp = cities.value.filter((item: any) => item.type === str);
   }
   if (temp.length) {
-    actCities.value = temp;
+    const uniqueArray = ref([]);
+    const seenNames = new Set();
+    // 对数组 temp 对比 name 属性去重
+    for (const item of temp) {
+      if (!seenNames.has(item.name)) {
+        uniqueArray.value.push(item);
+        seenNames.add(item.name);
+      }
+    }
+    actCities.value = uniqueArray.value;
   } else {
     actCities.value = cities.value;
   }
