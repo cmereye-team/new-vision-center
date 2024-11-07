@@ -575,7 +575,7 @@ const handleIntersection = (entries: any, observer: any) => {
       </div>
     </div>
     <a
-      class="whatapps-btn-series"
+      class="whatapps-btn-series adult_service_btn"
       href="https://api.whatsapp.com/send?phone=85269180511&amp;text=(ZVE)%E7%AB%8B%E5%8D%B3%E6%9F%A5%E8%A9%A2/%E9%A0%90%E7%B4%84%E8%94%A1%E5%8F%B8%E8%A6%96%E8%A6%BA%E9%AB%94%E9%A9%97"
       target="_blank"
       ><p class="whatapps-btn-series-p">
@@ -663,7 +663,7 @@ const handleIntersection = (entries: any, observer: any) => {
           <div class="item-span"><span></span><span>Office i2 鏡片</span></div>
         </div>
         <a
-          class="whatapps-btn-series-two"
+          class="whatapps-btn-series-two adult_service_btn"
           href="https://api.whatsapp.com/send?phone=85269180511&amp;text=(ZVE)%E7%AB%8B%E5%8D%B3%E6%9F%A5%E8%A9%A2/%E9%A0%90%E7%B4%84%E9%A9%97%E9%85%8D%E8%94%A1%E5%8F%B8%E9%8F%A1%E7%89%87"
           target="_blank"
           ><p class="whatapps-btn-series-two-p">

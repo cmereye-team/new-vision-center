@@ -6,6 +6,7 @@
     <a
       href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
       target="_blank"
+      class="mobile_whatsApp"
     >
       <div>
         <svg
@@ -54,9 +55,9 @@
           />
         </svg>
       </div>
-      <div>馬上預約</div>
+      <div>在線預約</div>
     </a>
-    <a href="tel:+85038925089" target="_blank">
+    <a href="tel:+85038925089" target="_blank" class="mobile_tel">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -131,7 +132,7 @@
         line-height: 279%; /* 34.53px */
         letter-spacing: 0.8vw;
       }
-      &>div:nth-child(1) {
+      & > div:nth-child(1) {
         width: 8.718vw;
         height: 8.718vw;
         & > svg {

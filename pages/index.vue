@@ -116,42 +116,42 @@ const newDiscounts = {
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
       price: "4,560",
       routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
       price: "4,560",
       routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
       price: "4,560",
       routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
       price: "4,560",
       routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
       price: "4,560",
       routerLink: "/now-discounts",
     },
     {
       name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
       img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
       price: "4,560",
       routerLink: "/now-discounts",
     },
@@ -311,7 +311,7 @@ const getData = async () => {
           tag: item.tags,
           price: item.ext_price,
           routerLink: "/now-discounts",
-          link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+          link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
         };
       });
     }
@@ -504,7 +504,11 @@ const goTo = (link: string) => {
                     <span>{{ item.price }}</span>
                   </div>
                 </div>
-                <a :href="item.link" target="_blank" class="context-r">
+                <a
+                  :href="item.link"
+                  target="_blank"
+                  class="context-r WhatsApp_btn"
+                >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="18"

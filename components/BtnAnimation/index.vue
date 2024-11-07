@@ -10,12 +10,21 @@ const props = defineProps({
     },
   },
 });
+const strNoEmpty = (str: string) => {
+  // 判断str是否为空
+  return str.length > 0;
+};
 </script>
 
 <template>
   <div class="btn">
     <a
       class="slot"
+      :class="
+        strNoEmpty(props.btnElement.cls)
+          ? props.btnElement.cls
+          : 'sight_service'
+      "
       v-if="props.btnElement.isExternalLink"
       :href="props.btnElement.link"
       target="_blank"
@@ -25,7 +34,16 @@ const props = defineProps({
         <div v-html="props.btnElement.svgIcon"></div>
       </div>
     </a>
-    <nuxt-link v-else class="slot" :to="props.btnElement.link">
+    <nuxt-link
+      v-else
+      class="slot"
+      :class="
+        strNoEmpty(props.btnElement.cls)
+          ? props.btnElement.cls
+          : 'sight_service'
+      "
+      :to="props.btnElement.link"
+    >
       <div>
         <div>{{ props.btnElement.title }}</div>
         <div v-html="props.btnElement.svgIcon"></div>

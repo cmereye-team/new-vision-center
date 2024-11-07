@@ -44,7 +44,7 @@ const discountsList = ref([
     btn1Link:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
   },
   {
     id: 2,
@@ -59,7 +59,7 @@ const discountsList = ref([
     btn1Link:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
   },
   {
     id: 3,
@@ -74,7 +74,7 @@ const discountsList = ref([
     btn1Link:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
   },
   {
     id: 4,
@@ -89,7 +89,7 @@ const discountsList = ref([
     btn1Link:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
   },
   {
     id: 5,
@@ -104,7 +104,7 @@ const discountsList = ref([
     btn1Link:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
   },
 ]);
 
@@ -123,7 +123,7 @@ interface TabsList {
   discounts_text: string;
 }
 const link = ref(
-  "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+  "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情"
 );
 const discounts = ref<TabsList[]>([]);
 const getDiscounts = async () => {
@@ -235,8 +235,8 @@ const getScrollY = () => {
             </div>
             <div class="content" v-html="item.content"></div>
             <div>
-              <a :href="item.btn1Link" target="_blank">{{ item.btn1 }}</a>
-              <a :href="item.btn2Link" target="_blank"
+              <a :href="item.btn1Link" target="_blank"></a>
+              <a :href="item.btn2Link" target="_blank" class="WhatsApp_btn"
                 ><svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="28"
@@ -293,9 +293,9 @@ const getScrollY = () => {
               </div>
               <div>
                 <a
-                  class="pagination_btn_item"
+                  class="pagination_btn_item WhatsApp_btn"
                   target="_blank"
-                  :href="item.btn1Link"
+                  :href="item.btn2Link"
                   >{{ item.btn1 }}</a
                 >
               </div>
@@ -336,7 +336,7 @@ const getScrollY = () => {
               </div>
               <div>
                 <a
-                  class="pagination_btn_item"
+                  class="pagination_btn_item WhatsApp_btn"
                   target="_blank"
                   :href="item.btn1Link"
                   >{{ item.btn1 }}</a
@@ -418,12 +418,15 @@ const getScrollY = () => {
         font-weight: 300;
         line-height: normal;
         text-transform: uppercase;
-        margin-right: 25px;
+        margin-right: 0;
         border-radius: 37.5px;
         background: url("../../assets/img/bluebtn.svg") no-repeat;
         background-size: cover;
         transition: 0.5s;
         transition-property: box-shadow;
+      }
+      & > a:nth-child(1) {
+        padding: 0;
       }
       & > a:nth-child(2) {
         background: url("../../assets/img/greenbtn.svg") no-repeat;

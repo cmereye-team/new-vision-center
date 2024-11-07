@@ -95,30 +95,21 @@ const onSubmit = () => {
               label-position="top"
               require-asterisk-position="right"
             >
-              <el-form-item
-                label="姓名"
-                prop="name"
-              >
+              <el-form-item label="姓名" prop="name">
                 <el-input
                   v-model="ruleForm.name"
                   placeholder="姓名"
                   clearable
                 />
               </el-form-item>
-              <el-form-item
-                label="電郵地址"
-                prop="email"
-              >
+              <el-form-item label="電郵地址" prop="email">
                 <el-input
                   v-model="ruleForm.name"
                   placeholder="電郵地址"
                   clearable
                 />
               </el-form-item>
-              <el-form-item
-                label="請選擇服務"
-                prop="region"
-              >
+              <el-form-item label="請選擇服務" prop="region">
                 <el-select
                   v-model="ruleForm.region"
                   placeholder="請選擇服務"
@@ -148,14 +139,8 @@ const onSubmit = () => {
                     label="隱形眼鏡驗配套餐"
                     value="隱形眼鏡驗配套餐"
                   />
-                  <el-option
-                    label="青光眼檢查套餐"
-                    value="青光眼檢查套餐"
-                  />
-                  <el-option
-                    label="驗配眼鏡"
-                    value="驗配眼鏡"
-                  />
+                  <el-option label="青光眼檢查套餐" value="青光眼檢查套餐" />
+                  <el-option label="驗配眼鏡" value="驗配眼鏡" />
                   <el-option
                     label="老花隱形眼鏡檢查及試戴套餐"
                     value="老花隱形眼鏡檢查及試戴套餐"
@@ -164,66 +149,33 @@ const onSubmit = () => {
                     label="RGP鏡適配性檢查套餐"
                     value="RGP鏡適配性檢查套餐"
                   />
-                  <el-option
-                    label="其他"
-                    value="其他"
-                  />
+                  <el-option label="其他" value="其他" />
                 </el-select>
               </el-form-item>
-              <el-form-item
-                label="聯絡電話"
-                prop="phoneNumber"
-              >
+              <el-form-item label="聯絡電話" prop="phoneNumber">
                 <el-input
                   v-model="ruleForm.phoneNumber"
                   placeholder="請輸入聯絡電話"
                   clearable
                 />
               </el-form-item>
-              <el-form-item
-                label="選擇門診地點"
-                prop="address"
-              >
+              <el-form-item label="選擇門診地點" prop="address">
                 <el-select
                   v-model="ruleForm.address"
                   clearable
                   placeholder="請選擇服務"
                 >
-                  <el-option
-                    label="中環"
-                    value="中環"
-                  />
-                  <el-option
-                    label="旺角"
-                    value="旺角"
-                  />
-                  <el-option
-                    label="西環"
-                    value="西環"
-                  />
-                  <el-option
-                    label="北角"
-                    value="北角"
-                  />
-                  <el-option
-                    label="将軍澳"
-                    value="将軍澳"
-                  />
-                  <el-option
-                    label="鑽石山"
-                    value="鑽石山"
-                  />
-                  <el-option
-                    label="銅鑼灣"
-                    value="銅鑼灣"
-                  />
+                  <el-option label="中環" value="中環" />
+                  <el-option label="旺角" value="旺角" />
+                  <el-option label="西環" value="西環" />
+                  <el-option label="北角" value="北角" />
+                  <el-option label="将軍澳" value="将軍澳" />
+                  <el-option label="鑽石山" value="鑽石山" />
+                  <el-option label="銅鑼灣" value="銅鑼灣" />
                 </el-select>
               </el-form-item>
-              <el-form-item>
-                <el-button
-                  type="primary"
-                  @click="onSubmit"
-                >領取優惠</el-button>
+              <el-form-item class="zeiss_hoya_submit_btn">
+                <el-button type="primary" @click="onSubmit">領取優惠</el-button>
               </el-form-item>
             </el-form>
           </div>
