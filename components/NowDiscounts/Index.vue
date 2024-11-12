@@ -274,7 +274,7 @@ const getScrollY = () => {
           :loop="true"
         >
           <swiper-slide
-            v-for="(item, index) in discountsList"
+            v-for="(item, index) in discounts"
             :key="item.id"
             class="swiper-btn-item"
             :id="item.id"
@@ -288,7 +288,7 @@ const getScrollY = () => {
             </div>
             <div class="price-btn">
               <div>
-                <span class="price-text">節日限定 $</span>
+                <!-- <span class="price-text">節日限定 $</span> -->
                 <span>{{ item.price }}</span>
               </div>
               <div>
