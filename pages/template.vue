@@ -14,7 +14,7 @@ const bannerImg = {
       <!-- 插槽 -->
       <template #title >
         <div class="profile-title">
-          <span>XXXXX</span>
+          <span>XXXXX11</span>
         </div>
       </template>
     </PublicBanner>
