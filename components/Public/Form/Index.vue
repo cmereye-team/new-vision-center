@@ -208,6 +208,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         return;
       }
       onsubmit(formEl);
+      dingTalk(formEl)
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -249,6 +250,7 @@ const onsubmit = async (formEl: any) => {
     }
   );
   let res = JSON.parse(data.value);
+  localStorage.setItem('contactForm', JSON.stringify(_form))
   if (res.code == 1) {
     formLoading.value = false;
     ElMessage({
@@ -258,6 +260,43 @@ const onsubmit = async (formEl: any) => {
     resetForm(formEl);
   }
 };
+
+
+const dingTalk = async (_form:any) => {
+  let _message = {
+    msgtype: 'text',
+    text: {
+      content: `姓名：${_form.name}
+  聯繫方式： ${String(_form.tel)}
+  郵箱：${_form.email}
+  選擇門診地點	：${_form.address}
+  哪裡找到我們網站	：${_form.FromMe}
+  選擇的服務：${_form.checkServe.join(",")}
+  備注訊息：${_form.sms}
+  提交時間：${new Date().toLocaleString()}
+  来源页面：${getUrl().href}`,
+    },
+  }
+  let { data }: any = await useFetch(
+    '/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028',
+    {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(_message),
+    }
+  )
+  if (data) {
+    localStorage.setItem('contactForm', JSON.stringify(_form))
+  } else {
+    ElMessage({
+      showClose: true,
+      message: '服務異常，請稍後重試',
+      type: 'error',
+    })
+  }
+}
 onMounted(() => {
   changeCities("0");
 });

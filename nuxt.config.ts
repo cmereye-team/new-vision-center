@@ -32,7 +32,7 @@ export default defineNuxtConfig({
     families: {
       // 指定要加载的字体家族及其变体
       'Noto+Sans+HK': true,  // 示例：加载Roboto字体的300、400、500权重
-      'ABeeZee':true
+      'ABeeZee': true
     },
     download: true, // 将字体下载到本地，并且打包到项目里，防止用户访问不了google字体服务器
     base64: false, // 不要使用 base64格式，不然首页下载文件会非常大
@@ -82,7 +82,21 @@ export default defineNuxtConfig({
       availableLocales: ['hk', 'cn', 'en'],
     },
   },
-
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: [
+        '/'
+      ]
+    },
+    devProxy: {
+      "/dingtalk": {
+        target: 'https://oapi.dingtalk.com',
+        prependPath: true,
+        changeOrigin: true,
+      }
+    }
+  },
   elementPlus: { /** Options */ },
   compatibilityDate: '2024-08-16'
 })
