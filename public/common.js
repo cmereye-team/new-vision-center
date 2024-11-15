@@ -8,3 +8,10 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
 fbq('init', '1628632067329513');
 fbq('track', 'PageView');
+
+
+var host = window.location.host;
+function chat(){
+	var p = arguments[0]?arguments[0]:host;
+	openZoosUrl('chatwin','&e='+host+'['+p+']');
+}
