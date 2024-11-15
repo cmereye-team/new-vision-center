@@ -72,6 +72,7 @@ const fetchData = async () => {
         keywords: newObject.description || "",
         description: newObject.keywords || "",
       };
+      scrollToTop();
     })
     .catch((error: any) => {
       console.error("Error:", error);
@@ -90,6 +91,14 @@ const addTime = ref("");
 
 const activeName = ref("1");
 const activeName1 = ref("1");
+
+// 滚动到顶部
+const scrollToTop = () => {
+  window.scrollTo({
+    top: 500,
+    behavior: "smooth",
+  });
+};
 </script>
 
 <template>
@@ -110,7 +119,9 @@ const activeName1 = ref("1");
     />
     <div class="news-box">
       <div class="title"></div>
-      <InsidePage :id="_id" :content="content" />
+      <div class="content">
+        <InsidePage :id="_id" :content="content" />
+      </div>
       <div v-if="_id === '163'" class="news-replenish">
         <div>
           <div>配戴隱形眼鏡可能導致的疾病或問題</div>
@@ -375,90 +386,117 @@ a {
   text-decoration: none;
 }
 
-
-
-
 @media screen and (min-width: 768px) {
-
-
-:deep(.title) {
-  font-size: 40px;
-  line-height: 55px;
-  font-weight: 700;
-  letter-spacing: 4px;
-  text-align: center;
-  width: 100%;
-  text-wrap: wrap;
-  background-color: #ffffff;
-  color: #00a6ce;
-}
-:deep(.newsContent) {
-  box-sizing: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  border: 0px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-stretch: inherit;
-  font-size: 22px;
-  line-height: 30px;
-  letter-spacing: 2px;
-  font-family: inherit;
-  font-optical-sizing: inherit;
-  font-kerning: inherit;
-  font-feature-settings: inherit;
-  font-variation-settings: inherit;
-  vertical-align: baseline;
-  text-align: left;
-  a {
+  :deep(.content) {
+    p {
+      color: #60605f;
+      font-family: "Noto Sans HK";
+      font-size: 16.5px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 30px; /* 181.818% */
+      text-transform: uppercase;
+      width: 100%;
+    }
+    iframe,
+    img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+      margin: 30px auto 30px !important;
+      text-align: center;
+      transform: translateX(0);
+    }
+    iframe {
+      height: 425px;
+      margin-bottom: 30px;
+    }
+    .two_img {
+      display: flex;
+      gap: 0 20px;
+      img {
+        width: 45%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  :deep(.title) {
+    font-size: 40px;
+    line-height: 55px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+    text-wrap: wrap;
+    background-color: #ffffff;
+    color: #00a6ce;
+  }
+  :deep(.newsContent) {
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0px;
     border: 0px;
+    font-style: inherit;
     font-variant: inherit;
-    font-weight: 700;
     font-stretch: inherit;
-    line-height: 40px;
+    font-size: 22px;
+    line-height: 30px;
+    letter-spacing: 2px;
+    font-family: inherit;
     font-optical-sizing: inherit;
     font-kerning: inherit;
     font-feature-settings: inherit;
     font-variation-settings: inherit;
     vertical-align: baseline;
-    letter-spacing: 2.4px;
-    color: #00a6ce;
+    text-align: left;
+    a {
+      box-sizing: inherit;
+      -webkit-font-smoothing: antialiased;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      font-variant: inherit;
+      font-weight: 700;
+      font-stretch: inherit;
+      line-height: 40px;
+      font-optical-sizing: inherit;
+      font-kerning: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      vertical-align: baseline;
+      letter-spacing: 2.4px;
+      color: #00a6ce;
+    }
   }
-}
 
-:deep(.weight){
-  font-size: 30px ;
-  font-weight: 800;
-  
-}
+  :deep(.weight) {
+    font-size: 30px;
+    font-weight: 800;
+  }
 
-:deep(.footerNews) {
-  box-sizing: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  border: 0px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-stretch: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  font-optical-sizing: inherit;
-  font-kerning: inherit;
-  font-feature-settings: inherit;
-  font-variation-settings: inherit;
-  vertical-align: baseline;
-  text-align: left;
-}
-
+  :deep(.footerNews) {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border: 0px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-optical-sizing: inherit;
+    font-kerning: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    vertical-align: baseline;
+    text-align: left;
+  }
 
   .news-title {
     // background: url("https://statichk.cmermedical.com/vision/imgs/d1372c5de907c9e3.png")
@@ -565,7 +603,7 @@ a {
   }
   :deep(.header-title) {
     color: #00a6ce;
-    font-family: Inter;
+    font-family: "Noto Sans HK";
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -576,94 +614,124 @@ a {
   }
 }
 @media screen and (max-width: 767px) {
-
-:deep(.title) {
-  font-size: 20px;
-  line-height: 26px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  text-align: center;
-  width: 100%;
-  text-wrap: wrap;
-  background-color: #ffffff;
-  color: #00a6ce;
-}
-:deep(.newsContent) {
-  box-sizing: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  border: 0px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-stretch: inherit;
-  font-size: 16px !important;
-  line-height: 26px;
-  letter-spacing: 2px;
-  font-family: inherit;
-  font-optical-sizing: inherit;
-  font-kerning: inherit;
-  font-feature-settings: inherit;
-  font-variation-settings: inherit;
-  vertical-align: baseline;
-  text-align: left;
-  a {
-    font-size: 18px;
+  :deep(.content) {
+    p {
+      color: #60605f;
+      font-family: "Noto Sans HK";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 24px; /* 171.429% */
+      text-transform: uppercase;
+      width: 100%;
+    }
+    iframe,
+    img {
+      max-width: 100%;
+      width: 100%;
+      object-fit: cover;
+      margin: 10px auto 20px !important;
+      text-align: center;
+      transform: translateX(0);
+    }
+    iframe {
+      height: 52vw;
+      margin-bottom: 20px;
+    }
+    .two_img {
+      display: flex;
+      gap: 0 20px;
+      img {
+        width: 45%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+  :deep(.title) {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-align: center;
+    width: 100%;
+    text-wrap: wrap;
+    background-color: #ffffff;
+    color: #00a6ce;
+  }
+  :deep(.newsContent) {
     box-sizing: inherit;
     -webkit-font-smoothing: antialiased;
-    margin: 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
     padding: 0px;
     border: 0px;
+    font-style: inherit;
     font-variant: inherit;
-    font-weight: 700;
     font-stretch: inherit;
-    line-height: 24px;
+    font-size: 16px !important;
+    line-height: 26px;
+    letter-spacing: 2px;
+    font-family: inherit;
     font-optical-sizing: inherit;
     font-kerning: inherit;
     font-feature-settings: inherit;
     font-variation-settings: inherit;
     vertical-align: baseline;
-    letter-spacing: 2px;
-    color: #00a6ce;
+    text-align: left;
+    a {
+      font-size: 18px;
+      box-sizing: inherit;
+      -webkit-font-smoothing: antialiased;
+      margin: 0px;
+      padding: 0px;
+      border: 0px;
+      font-variant: inherit;
+      font-weight: 700;
+      font-stretch: inherit;
+      line-height: 24px;
+      font-optical-sizing: inherit;
+      font-kerning: inherit;
+      font-feature-settings: inherit;
+      font-variation-settings: inherit;
+      vertical-align: baseline;
+      letter-spacing: 2px;
+      color: #00a6ce;
+    }
   }
-}
-:deep(.firstRow){
-  td{
-    border-radius: 10px !important;
-    overflow: hidden;
-    padding: 5px;
+  :deep(.firstRow) {
+    td {
+      border-radius: 10px !important;
+      overflow: hidden;
+      padding: 5px;
+    }
   }
-}
 
-:deep(.weight){
-  font-size: 28px ;
-  font-weight: 800;
-  
-}
+  :deep(.weight) {
+    font-size: 28px;
+    font-weight: 800;
+  }
 
-:deep(.footerNews) {
-  box-sizing: inherit;
-  -webkit-font-smoothing: antialiased;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  padding: 0px;
-  border: 0px;
-  font-style: inherit;
-  font-variant: inherit;
-  font-stretch: inherit;
-  font-size: inherit;
-  line-height: inherit;
-  font-family: inherit;
-  font-optical-sizing: inherit;
-  font-kerning: inherit;
-  font-feature-settings: inherit;
-  font-variation-settings: inherit;
-  vertical-align: baseline;
-  text-align: left;
-}
-
-
+  :deep(.footerNews) {
+    box-sizing: inherit;
+    -webkit-font-smoothing: antialiased;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    padding: 0px;
+    border: 0px;
+    font-style: inherit;
+    font-variant: inherit;
+    font-stretch: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-family: inherit;
+    font-optical-sizing: inherit;
+    font-kerning: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    vertical-align: baseline;
+    text-align: left;
+  }
 
   .news-title {
     // background: url("https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png")
@@ -733,7 +801,7 @@ a {
 
   :deep(.header-title) {
     color: #00a6ce;
-    font-family: Inter;
+    font-family: "Noto Sans HK";
     font-size: 13px;
     font-style: normal;
     font-weight: 600;

@@ -51,6 +51,7 @@ const fetchData = async () => {
       newsListA.value = new Array();
       arr.value = res.data;
       arr.value.map((item: any) => {
+        console.log(item, "arr");
         newsListA.value.push({
           id: item.id,
           title: item.title,
