@@ -174,9 +174,29 @@ const onSubmit = () => {
                   <el-option label="銅鑼灣" value="銅鑼灣" />
                 </el-select>
               </el-form-item>
-              <el-form-item class="zeiss_hoya_submit_btn">
-                <el-button type="primary" @click="onSubmit">領取優惠</el-button>
-              </el-form-item>
+              <!-- <el-form-item class="zeiss_hoya_submit_btn"> -->
+              <!-- <el-button
+                  type="primary"
+                  @click="onSubmit"
+                  :class="
+                    props.detail.brand == 'zeiss'
+                      ? 'zeiss_submit_btn'
+                      : 'hoya_submit_btn'
+                  "
+                  >領取優惠</el-button
+                > -->
+              <!-- </el-form-item> -->
+              <div class="el-form-item asterisk-right zeiss_hoya_submit_btn">
+                <div class="el-form-item__content zeiss_hoya_submit_btn">
+                  <button
+                    aria-disabled="false"
+                    type="button"
+                    class="zeiss_hoya_submit_btn el-button el-button--primary"
+                  >
+                    <span class="zeiss_hoya_submit_btn">領取優惠</span>
+                  </button>
+                </div>
+              </div>
             </el-form>
           </div>
           <div>
