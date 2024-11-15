@@ -1788,6 +1788,12 @@ const goTo = (link: string) => {
         }
       }
     }
+    :deep(.HomePageSwiper) {
+      .swiper-slide {
+        border-radius: 2.82vw;
+        overflow: hidden;
+      }
+    }
   }
   .witness {
     padding: 0 6.4102vw;
