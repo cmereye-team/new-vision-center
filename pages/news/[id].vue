@@ -73,6 +73,7 @@ const fetchData = async () => {
         description: newObject.keywords || "",
       };
       scrollToTop();
+      loading.value = false
     })
     .catch((error: any) => {
       console.error("Error:", error);
@@ -99,6 +100,7 @@ const scrollToTop = () => {
     behavior: "smooth",
   });
 };
+const loading = ref(true)
 </script>
 
 <template>
@@ -117,7 +119,7 @@ const scrollToTop = () => {
       :isInsidePage="true"
       :insidePageTitle="insidePageTitle"
     />
-    <div class="news-box">
+    <div class="news-box"  v-loading="loading">
       <div class="title"></div>
       <div class="content">
         <InsidePage :id="_id" :content="content" />

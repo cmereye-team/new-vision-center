@@ -67,6 +67,7 @@ const fetchData = async () => {
       newsList.value = newsListA.value.sort(function (a: any, b: any) {
         return b.ext_addTime.localeCompare(a.ext_addTime);
       });
+      loading.value = false
       data.value = newsList.value;
       hashTagList(newsList.value);
     })
@@ -231,6 +232,7 @@ const newsListddd = ref([
     ],
   },
 ]);
+const loading = ref(true)
 </script>
 
 <template>
@@ -265,7 +267,7 @@ const newsListddd = ref([
         </client-only>
       </div>
     </div>
-    <div>
+    <div  v-loading="loading">
       <div v-for="item in newsList" :key="item.id" class="news-item">
         <div>
           <img
@@ -301,6 +303,9 @@ const newsListddd = ref([
 </template>
 
 <style lang="scss" scoped>
+.example-showcase .el-loading-mask {
+  z-index: 9;
+}
 a {
   text-decoration: none;
 }
