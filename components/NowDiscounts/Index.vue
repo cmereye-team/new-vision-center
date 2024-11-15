@@ -11,6 +11,7 @@ import { Grid, Autoplay, Pagination, Navigation } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation];
 
 const modules2 = [Grid, Autoplay, Pagination];
+const loading = ref(true)
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
 };
@@ -149,6 +150,9 @@ const getDiscounts = async () => {
           discounts_text: item.ext_detail_discounts,
         };
       });
+      loading.value = false
+    } else {
+      console.log("error");
     }
   } catch (error) {
     console.log(error);
@@ -202,12 +206,13 @@ const getScrollY = () => {
     });
   }
 };
+
 </script>
 
 <template>
   <div class="now-discounts">
     <div class="discounts-title">最新優惠</div>
-    <div class="discounts-box">
+    <div class="discounts-box"  v-loading="loading">
       <swiper
         :modules="modules"
         :autoplay="{
