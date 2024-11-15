@@ -468,7 +468,7 @@ const reelsListClass = ref([
   }
   .information-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
@@ -487,7 +487,7 @@ const reelsListClass = ref([
       width: calc(100% / 4);
       min-width: 220px;
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 15px;
       font-style: normal;
       font-weight: 700;
@@ -506,7 +506,7 @@ const reelsListClass = ref([
       border-radius: 10px;
       background: var(--Brand-Color, #00a6ce);
       color: var(--Brand-Color, #fff);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 15px;
       font-style: normal;
       font-weight: 700;
@@ -527,7 +527,7 @@ const reelsListClass = ref([
   }
   .information-title {
     color: #00a6ce;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 5.128vw;
     font-style: normal;
     font-weight: 600;
@@ -544,7 +544,7 @@ const reelsListClass = ref([
     border: 1px solid #d9d9d9;
     padding: 2.82vw 4.615vw;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 4.1vw;
     font-style: normal;
     font-weight: 700;

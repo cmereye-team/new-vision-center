@@ -100,7 +100,7 @@
       & > div:nth-child(2) {
         & > span {
           color: #7c7772;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 3.589vw;
           font-style: normal;
           font-weight: 400;
@@ -125,7 +125,7 @@
       & > div:nth-child(2) {
         color: #6b6b6b;
         text-align: center;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 3.2vw;
         font-style: normal;
         font-weight: 400;

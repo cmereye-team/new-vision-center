@@ -218,7 +218,7 @@ onMounted(() => {
     margin-bottom: 80px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 37.5px;
       font-style: normal;
       font-weight: 600;
@@ -236,7 +236,7 @@ onMounted(() => {
     border: 1px solid #d9d9d9;
     padding: 11px 18px;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -264,7 +264,7 @@ onMounted(() => {
     margin-top: 14px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
@@ -283,7 +283,7 @@ onMounted(() => {
     border: 1px solid #d9d9d9;
     padding: 2px 15px;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 12px;
     font-style: normal;
     font-weight: 700;

@@ -1924,7 +1924,7 @@ const miSightQuestionList = [
         }
         & > span:nth-child(2) {
           color: #fff;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15.828px;
           font-style: normal;
           font-weight: 465;
@@ -1966,7 +1966,7 @@ const miSightQuestionList = [
         justify-content: center;
         & > div {
           color: #60605f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 16.5px;
           font-style: normal;
           font-weight: 600;
@@ -2162,7 +2162,7 @@ const miSightQuestionList = [
     margin: 90px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 40px;
       font-style: normal;
       font-weight: 600;
@@ -2620,7 +2620,7 @@ const miSightQuestionList = [
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -2664,7 +2664,7 @@ const miSightQuestionList = [
           & > div {
             display: flex;
             color: #60605f;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 14px;
             font-style: normal;
             font-weight: 600;
@@ -3001,7 +3001,7 @@ const miSightQuestionList = [
           display: flex;
           align-items: center;
           color: #fff;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15.862px;
           font-style: normal;
           font-weight: 465;
@@ -3144,7 +3144,7 @@ const miSightQuestionList = [
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -3550,7 +3550,7 @@ const miSightQuestionList = [
       right: 20px;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 28px;
       font-style: normal;
       font-weight: 600;

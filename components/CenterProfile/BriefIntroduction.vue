@@ -35,7 +35,7 @@
   }
   .brief-introduction-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
@@ -55,7 +55,7 @@
       }
       & > p {
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 16.5px;
         font-style: normal;
         font-weight: 300;
@@ -76,7 +76,7 @@
     margin-top: 20px;
     color: #00a6ce;
 
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -94,7 +94,7 @@
       p {
         color: #60605f;
 
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 14px;
         font-style: normal;
         font-weight: 300;

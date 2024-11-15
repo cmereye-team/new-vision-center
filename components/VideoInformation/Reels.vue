@@ -76,7 +76,7 @@ onMounted(() => {
   }
   .reels-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 30px;
     font-style: normal;
     font-weight: 700;
@@ -150,7 +150,7 @@ onMounted(() => {
   }
   .reels-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 5.128vw;
     font-style: normal;
     font-weight: 700;

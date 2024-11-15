@@ -361,7 +361,7 @@ const showThreeLevel = () => {
       display: flex;
       justify-content: center;
       color: var(--Deep-Blue, #3e5270);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 16px;
       font-style: normal;
       font-weight: 700;
@@ -370,7 +370,7 @@ const showThreeLevel = () => {
       & > a {
         margin: 0 10px;
         color: var(--Deep-Blue, #3e5270);
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
       }
     }
   }
@@ -387,7 +387,7 @@ const showThreeLevel = () => {
       position: relative;
       & > a {
         color: #3e5270;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 20px;
         font-style: normal;
         font-weight: 500;

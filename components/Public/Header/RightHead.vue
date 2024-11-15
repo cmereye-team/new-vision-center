@@ -419,7 +419,7 @@ const handleMouseleave = () => {
       & > a {
         color: #4d4d4d;
         text-align: center;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 0.8vw;
         font-style: normal;
         font-weight: 600;
@@ -503,7 +503,7 @@ const handleMouseleave = () => {
 
       & > a {
         color: #00a6ce;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15px;
         font-style: normal;
         font-weight: 700;
@@ -522,7 +522,7 @@ const handleMouseleave = () => {
       padding-bottom: 0 !important;
 
       color: #6f6f6f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 0.78vw;
       font-style: normal;
       font-weight: 700;
@@ -582,7 +582,7 @@ const handleMouseleave = () => {
           padding: 0.78125vw 1.5625vw 0 1.5625vw;
           display: block;
           color: #6f6f6f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 0.78125vw;
           font-style: normal;
           font-weight: 700;
@@ -631,7 +631,7 @@ const handleMouseleave = () => {
           padding: 0.78125vw 1.5625vw;
           display: block;
           color: #6f6f6f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 0.78125vw;
           font-style: normal;
           font-weight: 700;
@@ -678,7 +678,7 @@ const handleMouseleave = () => {
           padding: 15px 30px;
           display: block;
           color: #6f6f6f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -900,7 +900,7 @@ const handleMouseleave = () => {
       & > a {
         color: #4d4d4d;
         text-align: center;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 17px;
         font-style: normal;
         font-weight: 600;
@@ -972,7 +972,7 @@ const handleMouseleave = () => {
 
       & > a {
         color: #00a6ce;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15px;
         font-style: normal;
         font-weight: 700;
@@ -989,7 +989,7 @@ const handleMouseleave = () => {
 
     & > a {
       color: #6f6f6f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 15px;
       font-style: normal;
       font-weight: 700;
@@ -1051,7 +1051,7 @@ const handleMouseleave = () => {
           padding: 15px 30px 0 30px;
           display: block;
           color: #6f6f6f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -1104,7 +1104,7 @@ const handleMouseleave = () => {
           padding: 15px 30px;
           display: block;
           color: #6f6f6f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15px;
           font-style: normal;
           font-weight: 700;
@@ -1149,7 +1149,7 @@ const handleMouseleave = () => {
           padding: 15px 30px;
           display: block;
           color: #6f6f6f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15px;
           font-style: normal;
           font-weight: 700;

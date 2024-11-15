@@ -1059,7 +1059,7 @@ const btnElement = ref({
     margin: 65px auto;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -1249,7 +1249,7 @@ const btnElement = ref({
       padding: 7px 12px;
       color: #fff;
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 21.981px;
       font-style: normal;
       font-weight: 400;
@@ -1278,7 +1278,7 @@ const btnElement = ref({
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -1385,7 +1385,7 @@ const btnElement = ref({
     margin: 10.7692vw auto 7.69vw;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 5.128vw;
       font-style: normal;
       font-weight: 600;
@@ -1418,7 +1418,7 @@ const btnElement = ref({
           flex-direction: column;
           color: #60605f;
           text-align: center;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
@@ -1628,7 +1628,7 @@ const btnElement = ref({
       padding: 1.795vw 2.564vw;
       color: #fff;
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 4.615vw;
       font-style: normal;
       font-weight: 400;
@@ -1660,7 +1660,7 @@ const btnElement = ref({
       right: 5.128vw;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 7.18vw;
       font-style: normal;
       font-weight: 600;

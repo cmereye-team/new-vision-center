@@ -55,7 +55,7 @@ onMounted(() => {
     & > div:nth-child(2) {
       color: #fff;
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 12px;
       font-style: normal;
       font-weight: 700;

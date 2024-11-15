@@ -127,7 +127,7 @@ const discountsList = ref([
           color: var(--Brand-Color, #00a6ce);
         }
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 16.5px;
         font-style: normal;
         font-weight: 400;
@@ -274,7 +274,7 @@ const discountsList = ref([
         & > span:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
 
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 14px;
           font-style: normal;
           font-weight: 700;
@@ -282,7 +282,7 @@ const discountsList = ref([
           text-transform: uppercase;
         }
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 14px;
         font-style: normal;
         font-weight: 400;

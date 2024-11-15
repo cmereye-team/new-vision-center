@@ -22,7 +22,7 @@ const props = defineProps({
       p {
         span {
           color: #60605f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 16.5px;
           font-style: normal;
           font-weight: 300;
@@ -41,7 +41,7 @@ const props = defineProps({
   }
   :deep(P) {
     color: #60605f;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 16.5px;
     font-style: normal;
     font-weight: 300;
@@ -51,7 +51,7 @@ const props = defineProps({
   }
   :deep(.title1) {
     color: #00a6ce;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 36px;
     font-style: normal;
     font-weight: 500;
@@ -115,7 +115,7 @@ const props = defineProps({
   }
   :deep(P) {
     color: #60605f;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 14px !important;
     font-style: normal;
     font-weight: 300;
@@ -129,7 +129,7 @@ const props = defineProps({
   }
   :deep(.title1) {
     color: #00a6ce;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 36px;
     font-style: normal;
     font-weight: 500;

@@ -870,7 +870,7 @@ const goTo = (link: string) => {
       &-in {
         color: var(--White, #fff);
         text-align: center;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 18px;
         font-style: normal;
         font-weight: 400;
@@ -1464,7 +1464,7 @@ const goTo = (link: string) => {
         &-in {
           color: var(--White, #fff);
           text-align: center;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 1.146vw;
           font-style: normal;
           font-weight: 400;

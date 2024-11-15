@@ -65,7 +65,7 @@ onMounted(() => {
 @media screen and (min-width: 768px) {
   .video-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 22.5px;
     font-style: normal;
     font-weight: 700;
@@ -96,7 +96,7 @@ onMounted(() => {
         flex-direction: column;
         color: #60605f;
         text-align: center;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 22px;
         font-style: normal;
         font-weight: 400;
@@ -114,7 +114,7 @@ onMounted(() => {
   }
   .video-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 5.128vw;
     font-style: normal;
     font-weight: 700;
@@ -156,7 +156,7 @@ onMounted(() => {
         span {
           color: #60605f;
           text-align: center;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 4.6vw;
           font-style: normal;
           font-weight: 400;

@@ -472,7 +472,7 @@ a {
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -548,7 +548,7 @@ a {
     border: 1px solid var(--Brand-Color, #00a6ce);
     padding: 26px 16px 26px 50px;
     color: #60605f;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 20px;
     font-style: normal;
     font-weight: 300;
@@ -683,7 +683,7 @@ a {
       right: 20px;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -775,7 +775,7 @@ a {
     border: 1px solid var(--Brand-Color, #00a6ce);
     padding: 20px 8px 15px 20px;
     color: #60605f;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 14px;
     font-style: normal;
     font-weight: 300;

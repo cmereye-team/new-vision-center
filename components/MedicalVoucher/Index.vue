@@ -222,7 +222,7 @@ const serverList = ref({
   }
   .medical-voucher-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 50px;
     font-style: normal;
     font-weight: 600;
@@ -338,7 +338,7 @@ const serverList = ref({
     margin: 65px auto 45px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 27px;
       font-style: normal;
       font-weight: 600;
@@ -364,7 +364,7 @@ const serverList = ref({
             display: flex;
             flex-direction: column;
             color: #60605f;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 19.5px;
             font-style: normal;
             font-weight: 400;
@@ -412,7 +412,7 @@ const serverList = ref({
       & > div:nth-child(2) {
         margin-left: 40px;
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -434,7 +434,7 @@ const serverList = ref({
       & > div:nth-child(2) {
         margin-left: 14px;
         color: var(--Brand-Color, #00a6ce);
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15px;
         font-style: normal;
         font-weight: 400;
@@ -449,7 +449,7 @@ const serverList = ref({
     & > div:nth-child(1) {
       padding-left: 7px;
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 27px;
       font-style: normal;
       font-weight: 600;
@@ -463,7 +463,7 @@ const serverList = ref({
       background: #f5fafd;
       & > P {
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15px;
         font-style: normal;
         font-weight: 300;
@@ -480,7 +480,7 @@ const serverList = ref({
   }
   .medical-voucher-title {
     color: #00a6ce;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -517,7 +517,7 @@ const serverList = ref({
         & > div:nth-child(1) {
           color: #60605f;
           text-align: justify;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 14px;
           font-style: normal;
           font-weight: 400;
@@ -610,7 +610,7 @@ const serverList = ref({
     margin: 30px 0;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -633,7 +633,7 @@ const serverList = ref({
             display: flex;
             flex-direction: column;
             color: #60605f;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 14px;
             font-style: normal;
             font-weight: 400;
@@ -657,7 +657,7 @@ const serverList = ref({
       border-radius: 20px;
       border: 1px solid var(--Brand-Color, #00a6ce);
       color: #60605f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 14px;
       font-style: normal;
       font-weight: 300;
@@ -690,7 +690,7 @@ const serverList = ref({
         flex: 9;
         margin-left: 8px;
         color: var(--Brand-Color, #00a6ce);
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 12px;
         font-style: normal;
         font-weight: 400;
@@ -704,7 +704,7 @@ const serverList = ref({
     & > div:nth-child(1) {
       margin-bottom: 15px;
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
@@ -716,7 +716,7 @@ const serverList = ref({
       border-radius: 20px;
       background: #f5fafd;
       color: #60605f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 14px;
       font-style: normal;
       font-weight: 300;

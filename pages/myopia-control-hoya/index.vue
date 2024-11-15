@@ -1428,7 +1428,7 @@ const btnElement = ref({
       }
       & > span:nth-child(2) {
         color: #fff;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15.828px;
         font-style: normal;
         font-weight: 465;
@@ -1473,7 +1473,7 @@ const btnElement = ref({
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -1486,7 +1486,7 @@ const btnElement = ref({
             flex-direction: column;
             color: #60605f;
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1551,7 +1551,7 @@ const btnElement = ref({
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #60605f;
-              font-family: "Inter";
+              font-family: "Noto Sans HK";
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1562,7 +1562,7 @@ const btnElement = ref({
               flex-direction: column;
               & > span {
                 color: #60605f;
-                font-family: "Inter";
+                font-family: "Noto Sans HK";
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1570,7 +1570,7 @@ const btnElement = ref({
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: "Inter";
+                font-family: "Noto Sans HK";
                 font-size: 22.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1784,7 +1784,7 @@ const btnElement = ref({
     margin: 50px auto 50px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 40px;
       font-style: normal;
       font-weight: 600;
@@ -2084,7 +2084,7 @@ const btnElement = ref({
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -2188,7 +2188,7 @@ const btnElement = ref({
       right: 20px;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -2245,7 +2245,7 @@ const btnElement = ref({
           display: flex;
           align-items: center;
           color: #fff;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15.862px;
           font-style: normal;
           font-weight: 465;
@@ -2301,7 +2301,7 @@ const btnElement = ref({
             & > div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
-              font-family: "Inter";
+              font-family: "Noto Sans HK";
               font-size: 3.58vw;
               font-style: normal;
               font-weight: 600;
@@ -2313,7 +2313,7 @@ const btnElement = ref({
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: "Inter";
+                font-family: "Noto Sans HK";
                 font-size: 4.1vw;
                 font-style: normal;
                 font-weight: 600;
@@ -2401,7 +2401,7 @@ const btnElement = ref({
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 4.1vw;
             font-style: normal;
             font-weight: 600;
@@ -2665,7 +2665,7 @@ const btnElement = ref({
     padding: 0 25px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;

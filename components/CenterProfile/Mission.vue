@@ -47,7 +47,7 @@ const missionList = [
   }
   .mission-title {
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
@@ -79,7 +79,7 @@ const missionList = [
         span {
           color: var(--Brand-Color, #00a6ce);
           text-align: center;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 18px;
           font-style: normal;
           font-weight: 600;
@@ -129,7 +129,7 @@ const missionList = [
 @media screen and (max-width: 767px) {
   .mission-title {
     color: #00a6ce;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 24px;
     font-style: normal;
     font-weight: 600;
@@ -162,7 +162,7 @@ const missionList = [
       & > div:nth-child(2) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 14px;
         font-style: normal;
         font-weight: 600;

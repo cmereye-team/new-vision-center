@@ -360,7 +360,7 @@ const getScrollY = () => {
   .discounts-title {
     margin-bottom: 30px;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 37.5px;
     font-style: normal;
     font-weight: 600;
@@ -372,7 +372,7 @@ const getScrollY = () => {
       flex-direction: column;
       margin-bottom: 35px;
       color: #60605f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 22.5px;
       font-style: normal;
       font-weight: 900;
@@ -396,7 +396,7 @@ const getScrollY = () => {
     & > div:nth-child(3) {
       margin-bottom: 20px;
       color: #60605f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 13.5px;
       font-style: normal;
       font-weight: 500;
@@ -412,7 +412,7 @@ const getScrollY = () => {
         cursor: pointer;
 
         color: #fff;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 22.5px;
         font-style: normal;
         font-weight: 300;
@@ -507,7 +507,7 @@ const getScrollY = () => {
       & > div:nth-child(2) {
         padding: 0 8px;
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 13.5px;
         font-style: normal;
         font-weight: 500;
@@ -545,7 +545,7 @@ const getScrollY = () => {
             background: var(--Brand-Color, #00a6ce);
             color: #fff;
 
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             cursor: pointer;
             font-size: 14.272px;
             font-style: normal;
@@ -668,7 +668,7 @@ const getScrollY = () => {
     margin-top: 5.128vw;
     margin-bottom: 7.692vw;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 6.15vw;
     font-style: normal;
     font-weight: 600;
@@ -681,7 +681,7 @@ const getScrollY = () => {
     & > div:nth-child(1) {
       margin-bottom: 1.28vw;
       color: #60605f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 4.615vw;
       font-style: normal;
       font-weight: 900;
@@ -708,7 +708,7 @@ const getScrollY = () => {
     & > div:nth-child(3) {
       margin-bottom: 3.846vw;
       color: #60605f;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 3.289vw;
       font-style: normal;
       font-weight: 500;
@@ -726,7 +726,7 @@ const getScrollY = () => {
         display: flex;
         align-items: center;
         color: #fff;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 4.1025vw;
         font-style: normal;
         font-weight: 300;
@@ -796,7 +796,7 @@ const getScrollY = () => {
     .swiper-btn-item {
       & > div:nth-child(2) {
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 3.589vw;
         font-style: normal;
         font-weight: 500;
@@ -828,7 +828,7 @@ const getScrollY = () => {
             background: var(--Brand-Color, #00a6ce);
             color: #fff;
 
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             cursor: pointer;
             font-size: 3.589vw;
             font-style: normal;

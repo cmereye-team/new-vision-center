@@ -2876,7 +2876,7 @@ const showAgeStage = (type: any) => {
             margin: 0 10px;
             color: #fff;
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 21.981px;
             font-style: normal;
             font-weight: 400;
@@ -3063,7 +3063,7 @@ const showAgeStage = (type: any) => {
     margin: 38px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -3197,7 +3197,7 @@ const showAgeStage = (type: any) => {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -3321,7 +3321,7 @@ const showAgeStage = (type: any) => {
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -3403,7 +3403,7 @@ const showAgeStage = (type: any) => {
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 27px;
           font-style: normal;
           font-weight: 600;
@@ -3458,7 +3458,7 @@ const showAgeStage = (type: any) => {
             margin: 0 5px;
             color: #fff;
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 18px;
             font-style: normal;
             font-weight: 400;
@@ -3709,7 +3709,7 @@ const showAgeStage = (type: any) => {
     margin-top: 40px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -3880,7 +3880,7 @@ const showAgeStage = (type: any) => {
       right: 20px;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 28px;
       font-style: normal;
       font-weight: 600;

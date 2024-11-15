@@ -1432,7 +1432,7 @@ onMounted(() => {
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 22.5px;
             font-style: normal;
             font-weight: 600;
@@ -1445,7 +1445,7 @@ onMounted(() => {
             flex-direction: column;
             color: #606060;
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 16.5px;
             font-style: normal;
             font-weight: 500;
@@ -1510,7 +1510,7 @@ onMounted(() => {
             & > div:nth-child(1) {
               margin-right: 20px;
               color: #606060;
-              font-family: "Inter";
+              font-family: "Noto Sans HK";
               font-size: 16.5px;
               font-style: normal;
               font-weight: 600;
@@ -1521,7 +1521,7 @@ onMounted(() => {
               flex-direction: column;
               & > span {
                 color: #606060;
-                font-family: "Inter";
+                font-family: "Noto Sans HK";
                 font-size: 16.5px;
                 font-style: normal;
                 font-weight: 600;
@@ -1529,7 +1529,7 @@ onMounted(() => {
               }
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: "Inter";
+                font-family: "Noto Sans HK";
                 font-size: 30px;
                 font-style: normal;
                 font-weight: 600;
@@ -1634,7 +1634,7 @@ onMounted(() => {
     margin: 55px auto 0;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 30px;
       font-style: normal;
       font-weight: 600;
@@ -2236,7 +2236,7 @@ onMounted(() => {
       right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -2399,7 +2399,7 @@ onMounted(() => {
       }
       & > span:nth-child(2) {
         color: #fff;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 15.828px;
         font-style: normal;
         font-weight: 465;
@@ -2495,7 +2495,7 @@ onMounted(() => {
             & > div:nth-child(1) {
               flex: 1.8;
               color: #606060;
-              font-family: "Inter";
+              font-family: "Noto Sans HK";
               font-size: 14px;
               font-style: normal;
               font-weight: 600;
@@ -2507,7 +2507,7 @@ onMounted(() => {
               flex-direction: column;
               & > span:nth-child(1) {
                 color: #59ba68;
-                font-family: "Inter";
+                font-family: "Noto Sans HK";
                 font-size: 16px;
                 font-style: normal;
                 font-weight: 600;
@@ -2595,7 +2595,7 @@ onMounted(() => {
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
-            font-family: "Inter";
+            font-family: "Noto Sans HK";
             font-size: 16px;
             font-style: normal;
             font-weight: 600;
@@ -2680,7 +2680,7 @@ onMounted(() => {
     padding: 0 25px;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 20px;
       font-style: normal;
       font-weight: 600;
@@ -2873,7 +2873,7 @@ onMounted(() => {
       right: 20px;
       color: var(--Brand-Color, #fff);
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 28px;
       font-style: normal;
       font-weight: 600;
@@ -3468,7 +3468,7 @@ onMounted(() => {
           display: flex;
           align-items: center;
           color: #fff;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 15.862px;
           font-style: normal;
           font-weight: 465;

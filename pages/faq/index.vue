@@ -301,7 +301,7 @@ onMounted(() => {
     right: -180%;
     color: var(--Brand-Color, #fff);
     text-align: center;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 60px;
     font-style: normal;
     font-weight: 600;

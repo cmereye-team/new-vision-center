@@ -358,7 +358,7 @@ a {
         }
         & > div:nth-child(2) {
           color: #00a6ce;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 19.5px;
           font-style: normal;
           font-weight: 500;
@@ -369,7 +369,7 @@ a {
         margin-bottom: 40px;
         display: block;
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 25.5px;
         font-style: normal;
         font-weight: 600;
@@ -380,7 +380,7 @@ a {
           margin-right: 15px;
           padding: 12px 16px;
           color: #60605f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 18px;
           font-style: normal;
           font-weight: 600;
@@ -403,7 +403,7 @@ a {
     justify-content: space-between;
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 50px;
       font-style: normal;
       font-weight: 600;
@@ -421,7 +421,7 @@ a {
     border: 1px solid #d9d9d9;
     padding: 11px 18px;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -467,7 +467,7 @@ a {
         }
         & > div:nth-child(2) {
           color: #00a6ce;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 3.07vw;
           font-style: normal;
           font-weight: 500;
@@ -478,7 +478,7 @@ a {
         margin-bottom: 15px;
         display: block;
         color: #60605f;
-        font-family: "Inter";
+        font-family: "Noto Sans HK";
         font-size: 3.58vw;
         font-style: normal;
         font-weight: 600;
@@ -495,7 +495,7 @@ a {
           margin-right: 1.65vw;
           padding: 1vw 2vw;
           color: #60605f;
-          font-family: "Inter";
+          font-family: "Noto Sans HK";
           font-size: 2.4vw;
           font-style: normal;
           font-weight: 500;
@@ -522,7 +522,7 @@ a {
 
     & > div:nth-child(1) {
       color: #00a6ce;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 24px;
       font-style: normal;
       font-weight: 600;
@@ -544,7 +544,7 @@ a {
     border: 1px solid #d9d9d9;
     padding: 11px 18px;
     color: var(--Brand-Color, #00a6ce);
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     font-size: 16px;
     font-style: normal;
     font-weight: 700;

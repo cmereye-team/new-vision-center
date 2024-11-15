@@ -216,7 +216,7 @@ onMounted(() => {
     align-items: center;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 37.5px;
       font-style: normal;
       font-weight: 600;
@@ -246,7 +246,7 @@ onMounted(() => {
     border-radius: 10px;
     background: var(--Brand-Color, #00a6ce);
     color: #fff;
-    font-family: "Inter";
+    font-family: "Noto Sans HK";
     transition: all 0.3s;
     font-size: 15px;
     font-style: normal;
@@ -264,7 +264,7 @@ onMounted(() => {
     justify-content: space-between;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 50px;
       font-style: normal;
       font-weight: 600;

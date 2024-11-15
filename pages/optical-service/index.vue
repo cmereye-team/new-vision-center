@@ -349,7 +349,7 @@ const listDataDetail = [
       padding: 7px 12px;
       color: #fff;
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 21.981px;
       font-style: normal;
       font-weight: 400;
@@ -440,7 +440,7 @@ const listDataDetail = [
       padding: 1.79vw 2.564vw;
       color: #fff;
       text-align: center;
-      font-family: "Inter";
+      font-family: "Noto Sans HK";
       font-size: 4.615vw;
       font-style: normal;
       font-weight: 400;
