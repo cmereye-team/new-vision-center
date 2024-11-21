@@ -114,7 +114,7 @@ const loading = ref(true)
       </template>
     </PublicBanner>
     <PublicNavbar
-      :link="'/latest-news'"
+      :link="'/about-us/news-information'"
       :name="'最新資訊'"
       :isInsidePage="true"
       :insidePageTitle="insidePageTitle"

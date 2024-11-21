@@ -212,7 +212,7 @@ const onInform = (el: any) => {
             ><img src="@/assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
-        <nuxt-link to="/optical-service">
+        <nuxt-link to="/services">
           <span
             ><img src="@/assets/img/triangle-left.svg" alt="triangle"
           /></span>

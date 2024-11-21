@@ -620,13 +620,13 @@ const btnElement = ref({
       <div class="myopia-container-brand">
         <PublicPageTitle :title="'兒童近視控制鏡片品牌一覽'" />
         <div>
-          <nuxt-link to="/myopia-control-hoya">
+          <nuxt-link to="/dims-soft-lens">
             <img
               src="https://statichk.cmermedical.com/vision/imgs/d9287395e4d6bb6f.png"
               alt="hoya"
             />
           </nuxt-link>
-          <nuxt-link to="/myopia-control-zeiss">
+          <nuxt-link to="/myopia-control-lenses/zeiss-myovision-pro">
             <img
               src="https://statichk.cmermedical.com/vision/imgs/7740c29874165677.png"
               alt="zeiss"

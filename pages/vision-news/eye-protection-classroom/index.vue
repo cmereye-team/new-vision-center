@@ -32,7 +32,7 @@ const bannerImg = {
         </div>
       </template>
     </PublicBanner>
-    <PublicNavbar :link="'/center-profile'" :name="'影片資訊'" />
+    <PublicNavbar :link="'/about-us/cmer-vision'" :name="'影片資訊'" />
     <div class="video-information-box">
       <VideoInformation />
     </div>

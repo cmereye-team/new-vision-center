@@ -30,7 +30,7 @@ const bannerImg = {
         </div>
       </template>
     </PublicBanner>
-    <PublicNavbar :link="'/center-profile'" :name="'中心簡介'" />
+    <PublicNavbar :link="'/about-us/cmer-vision'" :name="'中心簡介'" />
     <CenterProfileBriefIntroduction />
     <CenterProfileContent />
     <div class="profile-content-max-width">

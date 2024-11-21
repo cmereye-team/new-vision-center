@@ -739,6 +739,10 @@ const getScrollY = () => {
         text-transform: uppercase;
         margin-right: 6.4vw;
       }
+      & > a:nth-child(1) {
+        padding: 0;
+        margin-right: 0;
+      }
       & > a:hover {
         box-shadow: 2px 3px 8px 0px #b3b2b2;
       }

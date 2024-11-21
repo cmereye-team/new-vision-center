@@ -58,7 +58,7 @@ const showAgeStage = (type: any) => {
       <div class="adult-status">
         <div>
           <div>
-            <nuxt-link to="/eye-examination-adult">
+            <nuxt-link to="/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"
@@ -85,7 +85,7 @@ const showAgeStage = (type: any) => {
                 />
               </svg>
             </nuxt-link>
-            <nuxt-link to="/adult-vision-service">
+            <nuxt-link to="/comprehensive/glaucoma-examination">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="13"

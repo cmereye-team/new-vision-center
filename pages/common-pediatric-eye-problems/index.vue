@@ -323,7 +323,7 @@ onMounted(() => {
                 >
               </div>
               <div class="bg-text-btn">
-                <nuxt-link to="/myopia-control-glasses">
+                <nuxt-link to="/myopia-control-lenses">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -395,7 +395,7 @@ onMounted(() => {
                 >
               </div>
               <div class="bg-text-btn">
-                <nuxt-link to="/orthokeratoplasty">
+                <nuxt-link to="/orthokeratology">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -468,7 +468,7 @@ onMounted(() => {
                 >
               </div>
               <div class="bg-text-btn">
-                <nuxt-link to="/eye-examination-adult">
+                <nuxt-link to="/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult">
                   <span>
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -567,7 +567,7 @@ onMounted(() => {
             <span>分別對藍色、綠色及紅色的光最敏感。</span>
           </div>
           <div class="bg-text-btn">
-            <nuxt-link to="/eye-examination-adult">
+            <nuxt-link to="/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult">
               <span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -660,7 +660,7 @@ onMounted(() => {
               斜視是由於雙眼視軸不平行，導致其中一個眼球向內、外、上或下傾斜。患有斜視的兒童習慣用一隻眼睛觀看事物，甚少使用另一隻眼睛，容易出現弱視等併發症，更有可能使兒童產生自卑心理。
             </div>
             <div class="bg-text-btn">
-              <nuxt-link to="/eye-examination-adult">
+              <nuxt-link to="/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult">
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -758,7 +758,7 @@ onMounted(() => {
           <div>
             <div>人類並非一出生便會擁有1.0視功能，而是隨著外界的刺激才慢慢發展出各種視覺機能，而出生後到3歲期間是視功能發育最重要的階段。如果發育受到不良的影響，就有可能導致弱視。</div>
             <div class="bg-text-btn">
-              <nuxt-link to="/eye-examination-child" >
+              <nuxt-link to="/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child" >
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

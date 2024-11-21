@@ -35,9 +35,8 @@ onMounted(() => {
   widthNum.value = width;
 });
 
-
 const btnElement = ref({
-  cls:'adult_service_btn',
+  cls: "adult_service_btn",
   title: "試戴多焦點隱形眼鏡",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
@@ -60,23 +59,23 @@ const btnElement = ref({
       :insidePageTitle="'多焦點隱形眼鏡'"
     />
     <div class="presbyopia-box">
-           <div class="glasses-type">
+      <div class="glasses-type">
         <nuxt-link to="/soft-contact-lens">
           <span
-            ><img src="../../assets/img/triangle-left.svg" alt="triangle"
+            ><img src="../../../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
           <span>隱形眼鏡</span>
           <span
-            ><img src="../../assets/img/triangle-right.svg" alt="triangle"
+            ><img src="../../../../assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
-        <nuxt-link to="/presbyopia-contact-lenses">
+        <nuxt-link to="/comprehensive/contact-lens-fitting/multifocal-contact-lenses-fitting">
           <span
-            ><img src="../../assets/img/triangle-left.svg" alt="triangle"
+            ><img src="../../../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
           <span>老花隱形眼鏡</span>
           <span
-            ><img src="../../assets/img/triangle-right.svg" alt="triangle"
+            ><img src="../../../../assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
       </div>
@@ -91,7 +90,7 @@ const btnElement = ref({
           </span>
         </div>
       </div>
- 
+
       <div class="why">
         <p v-if="isPc">
           <span>為何選用多焦點隱形眼鏡？</span>
@@ -1313,8 +1312,8 @@ const btnElement = ref({
   }
   .announcements {
     margin-top: 55px;
-    &-btn{
-       margin-top: 36px;
+    &-btn {
+      margin-top: 36px;
       display: flex;
       justify-content: center;
     }
@@ -1795,7 +1794,7 @@ const btnElement = ref({
     margin-bottom: 55px;
   }
   .announcements {
-      &-btn{
+    &-btn {
       display: flex;
       margin-top: 15px;
       justify-content: center;
@@ -1842,7 +1841,7 @@ const btnElement = ref({
           line-height: 33.529px; /* 133.333% */
           // letter-spacing: 2.515px;
           background: #00a6ce;
-          text-align:center;
+          text-align: center;
           // display: flex;
           // justify-content: center;
           // align-items: center;

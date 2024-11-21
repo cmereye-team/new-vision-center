@@ -32,7 +32,7 @@ const bannerImg = {
         </div>
       </template>
     </PublicBanner>
-    <PublicNavbar :link="'/center-profile'" :name="'聯絡我們'" />
+    <PublicNavbar :link="'/about-us/cmer-vision'" :name="'聯絡我們'" />
     <div class="contact-us-content">
       <ContactUsMapList />
     </div>

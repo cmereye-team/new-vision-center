@@ -70,7 +70,7 @@ const btnElement = ref({
     <div class="scleral-lens">
       <div class="type">
         <div>
-          <nuxt-link to="/rgp-contact-lens">
+          <nuxt-link to="/comprehensive/contact-lens-fitting/rgp">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="13"

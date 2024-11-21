@@ -27,17 +27,17 @@ const menuList = ref([
     childrenList: [
       {
         title: "公司簡介",
-        path: "/center-profile",
+        path: "/about-us/cmer-vision",
         id: "1",
       },
       {
         title: "聯絡我們",
-        path: "/contact-us",
+        path: "/about-us/contact-us",
         id: "2",
       },
       {
         title: "最新資訊",
-        path: "/latest-news",
+        path: "/about-us/news-information",
         id: "3",
       },
     ],
@@ -46,7 +46,7 @@ const menuList = ref([
     id: "6",
     title: "尊享優惠",
     child: "svg",
-    path: "/now-discounts",
+    path: "/new-discounts",
   },
   {
     id: "9",
@@ -68,23 +68,23 @@ const menuList = ref([
       {
         id: "2",
         title: "角膜矯形鏡",
-        path: "/orthokeratoplasty",
+        path: "/orthokeratology",
       },
       {
         id: "3",
         title: "近視控制眼鏡",
-        path: "/myopia-control-glasses",
+        path: "/myopia-control-lenses",
         threeIsChildVisible: false,
         threeLevelList: [
           {
             id: "1",
             title: "Zeiss",
-            path: "/myopia-control-zeiss",
+            path: "/myopia-control-lenses/zeiss-myovision-pro",
           },
           {
             id: "2",
             title: "Hoya",
-            path: "/myopia-control-hoya",
+            path: "/dims-soft-lens",
           },
         ],
       },
@@ -104,7 +104,7 @@ const menuList = ref([
       {
         id: "5",
         title: "眼睛檢查",
-        path: "/eye-examination-child",
+        path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
       },
     ],
   },
@@ -117,12 +117,12 @@ const menuList = ref([
       {
         id: "1",
         title: "眼睛檢查",
-        path: "/eye-examination-adult",
+        path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
       },
       {
         id: "2",
         title: "老花漸進鏡片",
-        path: "/presbyopia",
+        path: "/progressive-lens",
       },
       {
         id: "3",
@@ -132,7 +132,7 @@ const menuList = ref([
       {
         id: "4",
         title: "硬性隱形眼鏡",
-        path: "/rgp-contact-lens",
+        path: "/comprehensive/contact-lens-fitting/rgp",
       },
     ],
   },
@@ -145,17 +145,17 @@ const menuList = ref([
       {
         id: "1",
         title: "服務内容",
-        path: "/optical-service",
+        path: "/services",
       },
       {
         id: "2",
         title: "收費詳情",
-        path: "/fee",
+        path: "/services-fees",
       },
       {
         id: "3",
         title: "長者醫療券計劃",
-        path: "/medical-voucher",
+        path: "/services/health-care-voucher",
       },
     ],
   },
@@ -168,12 +168,12 @@ const menuList = ref([
       {
         id: "1",
         title: "影片資訊",
-        path: "/video-information",
+        path: "/vision-news/eye-protection-classroom",
       },
       {
         id: "2",
         title: "日常護眼",
-        path: "/daily-eye-care",
+        path: "/vision-news/daily-eye-care",
       },
       {
         id: "3",
@@ -184,12 +184,12 @@ const menuList = ref([
           {
             id: "1",
             title: "兒童常見眼睛問題",
-            path: "/eye-problems-in-children",
+            path: "/common-eye-diseases-in-adults",
           },
           {
             id: "2",
             title: "成人常見眼睛問題",
-            path: "/faq",
+            path: "/common-pediatric-eye-problems",
           },
         ],
       },
@@ -561,7 +561,7 @@ const handleMouseleave = () => {
         background-size: 100% 100%;
         position: absolute;
         left: 20px;
-        top: 40%;
+        top: 55%;
         transform: translateY(-50%);
       }
     }

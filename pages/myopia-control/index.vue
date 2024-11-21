@@ -93,7 +93,7 @@ const btnElement = ref({
 <template>
   <div class="myopia-control">
     <PublicBanner :banner="bannerImg" />
-    <PublicNavbar :link="'/center-profile'" :name="'近視防控策略'" />
+    <PublicNavbar :link="'/about-us/cmer-vision'" :name="'近視防控策略'" />
     <div class="myopia-control-box">
       <div class="myopia-control-significance">
         <div class="myopia-control-title">控制兒童近視的重要性</div>

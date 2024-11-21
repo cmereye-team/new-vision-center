@@ -1,26 +1,41 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "尊享優惠｜希瑪視光中心",
+  title: "最新資訊｜關於我們｜希瑪視光中心",
   meta: [
     {
       hid: "description",
       name: "description",
       content:
-        "希瑪眼科視光中心是您的全方位視光服務中心，我們的註冊視光師提供專業的驗眼服務，並提供各種眼鏡選擇，包括hoya漸進鏡片、全視線鏡片、老花鏡等。我們的眼鏡價錢公道，並經常有配眼鏡優惠活動。我們還提供老花隱形眼鏡和兒童近視控制鏡片等產品。無論您是需要驗眼服務，還是尋找高品質的眼鏡，希瑪視光中心都能滿足您的需求。立即聯絡我們了解更多信息。",
+        "希瑪眼科視光中心提供最新資訊和眼科新聞，專注於兒童近視相關的文章。註冊視光師撰寫了控制近視的方法和護眼資訊，介紹角膜矯形鏡（OK鏡）、近視控制鏡片、近視控制隱形眼鏡及阿托品眼藥水等近視控制方案的原理和配戴方法。此外，還提供實用的護眼知識，幫助預防近視並保護眼睛健康。了解更多兒童近視控制和護眼方法的最新資訊，請訪問希瑪眼科視光中心。",
     },
     {
       hid: "Keywords",
       name: "Keywords",
       content:
-        "眼鏡優惠 配眼鏡優惠 hoya漸進鏡片價錢 漸進鏡片價錢 全視線鏡片價錢 全視線漸進鏡價錢 hoya鏡片價錢 zeiss鏡片價錢 漸進眼鏡價錢 眼鏡價錢 配眼鏡價錢 老花隱形眼鏡價錢 漸進老花眼鏡價錢 hoya兒童近視控制鏡片價錢 OK鏡 ok鏡價錢 老花鏡 老花眼鏡 老花隱形眼鏡 兒童近視控制鏡片價格 近視控制鏡片 驗眼費用 驗眼價錢 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心 ",
+        "最新資訊 兒童近視 近視控制 小朋友近視 兒童近視控制 護眼 護眼食物 護眼睛 護眼方法 控制近視鏡片 控制近視眼藥水 近視 atropine眼藥水 矯視隱形眼鏡 ok鏡 近視成因 眼睛健康 眼睛保健 新聞資訊 預防近視 註冊視光師 視光師 視光師驗眼 眼科驗眼中心 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
     },
   ],
 }));
 const bannerImg = {
   pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
   mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
-  newBanner: false,
 };
+import { onMounted, onUnmounted } from "vue";
+import { useRouter } from "nuxt/app";
+
+const router = useRouter();
+
+const scrollToTop = () => {
+  window.scrollTo(0, 0);
+};
+
+onMounted(() => {
+  router.afterEach(scrollToTop);
+});
+
+onUnmounted(() => {
+  router.afterEach(() => {}); // 清除监听器
+});
 </script>
 
 <template>
@@ -29,13 +44,13 @@ const bannerImg = {
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
-          <span>最新優惠</span>
+          <span>最新資訊</span>
         </div>
       </template>
     </PublicBanner>
-    <PublicNavbar :link="'/center-profile'" :name="'最新優惠'" />
+    <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新資訊'" />
     <div class="video-information-box">
-      <NowDiscounts />
+      <LatestNews />
     </div>
   </div>
 </template>
@@ -43,7 +58,15 @@ const bannerImg = {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .profile-title {
+    // background: url("https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png")
+    //   no-repeat;
+    // background-size: 100% 100%;
+    // width: 100%;
+    // min-height: 800px;
+    // position: relative;
     span {
+      position: relative;
+      right: -180%;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Noto Sans HK";
@@ -52,15 +75,7 @@ const bannerImg = {
       font-weight: 600;
       line-height: normal;
       letter-spacing: 12px;
-      position: relative;
-      right: -180%;
     }
-  }
-  :deep(.publicBanner) {
-    position: absolute;
-    top: 50%;
-    right: 35%;
-    transform: translateY(-50%);
   }
   .video-information-box {
     max-width: 960px;
@@ -78,7 +93,7 @@ const bannerImg = {
     min-height: 390px;
     width: 100%;
     position: absolute;
-    top: 0;
+    top: -73px;
     margin-top: 87px;
     span {
       position: absolute;
@@ -95,7 +110,7 @@ const bannerImg = {
     }
   }
   .video-information-box {
-    padding: 0 24px;
+    padding: 0 6.15vw;
   }
 }
 </style>

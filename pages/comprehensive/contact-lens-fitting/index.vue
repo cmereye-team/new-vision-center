@@ -56,20 +56,20 @@ const btnElement = ref({
       <div class="glasses-type">
         <nuxt-link to="/soft-contact-lens">
           <span
-            ><img src="../../assets/img/triangle-left.svg" alt="triangle"
+            ><img src="../../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
           <span>隱形眼鏡</span>
           <span
-            ><img src="../../assets/img/triangle-right.svg" alt="triangle"
+            ><img src="../../../assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
         <nuxt-link to="/comprehensive/contact-lens-fitting/multifocal-contact-lenses-fitting">
           <span
-            ><img src="../../assets/img/triangle-left.svg" alt="triangle"
+            ><img src="../../../assets/img/triangle-left.svg" alt="triangle"
           /></span>
           <span>老花隱形眼鏡</span>
           <span
-            ><img src="../../assets/img/triangle-right.svg" alt="triangle"
+            ><img src="../../../assets/img/triangle-right.svg" alt="triangle"
           /></span>
         </nuxt-link>
       </div>

@@ -8,17 +8,17 @@ const menuList = ref([
     childrenList: [
       {
         title: "公司簡介",
-        path: "/center-profile",
+        path: "/about-us/cmer-vision",
         id: "1",
       },
       {
         title: "聯絡我們",
-        path: "/",
+        path: "/about-us/contact-us",
         id: "2",
       },
       {
         title: "最新資訊",
-        path: "/latest-news",
+        path: "/about-us/news-information",
         id: "3",
       },
     ],
@@ -26,7 +26,7 @@ const menuList = ref([
   {
     id: "7",
     title: "尊享優惠",
-    path: "/now-discounts",
+    path: "/new-discounts",
   },
   //   {
   //   id: "9",
@@ -42,47 +42,47 @@ const menuList = ref([
       {
         id: "1",
         title: "近視防控策略",
-        path: "/",
+        path: "/myopia-control",
       },
       {
         id: "2",
         title: "角膜矯形鏡",
-        path: "/",
+        path: "/orthokeratology",
       },
       {
         id: "3",
         title: "近視控制眼鏡",
-        path: "/",
+        path: "/myopia-control-lenses",
         threeIsChildVisible: false,
         threeLevelList: [
           {
             id: "1",
             title: "Zeiss",
-            path: "/",
+            path: "/myopia-control-lenses/zeiss-myovision-pro",
           },
           {
             id: "2",
             title: "Hoya",
-            path: "/",
+            path: "/dims-soft-lens",
           },
         ],
       },
       {
         id: "4",
         title: "近視控制隱形眼鏡",
-        path: "/",
-           threeLevelList: [
+        path: "/child-myopia-control",
+        threeLevelList: [
           {
             id: "1",
             title: "MiSight® 1 day隱形眼鏡",
-            path: "/",
-          }
+            path: "/misight",
+          },
         ],
       },
       {
         id: "5",
         title: "眼睛檢查",
-        path: "/",
+        path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
       },
     ],
   },
@@ -95,22 +95,22 @@ const menuList = ref([
       {
         id: "1",
         title: "眼睛檢查",
-        path: "/",
+        path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
       },
       {
         id: "2",
         title: "老花漸進鏡片",
-        path: "/",
+        path: "/progressive-lens",
       },
       {
         id: "3",
         title: "軟性隱形眼鏡",
-        path: "/",
+        path: "/soft-contact-lens",
       },
       {
         id: "4",
         title: "硬性隱形眼鏡",
-        path: "/",
+        path: "/comprehensive/contact-lens-fitting/rgp",
       },
     ],
   },
@@ -123,17 +123,17 @@ const menuList = ref([
       {
         id: "1",
         title: "服務内容",
-        path: "/",
+        path: "/services",
       },
       {
         id: "2",
         title: "收費詳情",
-        path: "/fee",
+        path: "/services-fees",
       },
       {
         id: "3",
         title: "長者醫療券計劃",
-        path: "/medical-voucher",
+        path: "/services/health-care-voucher",
       },
     ],
   },
@@ -146,22 +146,23 @@ const menuList = ref([
       {
         id: "1",
         title: "影片資訊",
-        path: "/video-information",
+        path: "/vision-news/eye-protection-classroom",
       },
       {
         id: "2",
         title: "常見眼睛問題",
-        path: "/",
+        path: "/common-eye-diseases-in-adults",
       },
     ],
   },
   {
     id: "6",
     title: "聯絡我們",
-    path: "/contact-us",
+    path: "/about-us/contact-us",
     child: "svg",
   },
 ]);
+
 const isThreeLevel = (item: any) => {
   return item?.length > 0 ? true : false;
 };
@@ -346,7 +347,7 @@ const showThreeLevel = () => {
           & > div {
             & > a {
               color: #666;
-                 font-family: "Noto Sans HK";
+              font-family: "Noto Sans HK";
               font-size: 20px;
               font-style: normal;
               font-weight: 400;
@@ -471,7 +472,7 @@ const showThreeLevel = () => {
   .footer-menuList {
     margin-top: 40px;
     margin-bottom: 12px;
-    
+
     & > div {
       & > a {
         display: flex;
@@ -544,8 +545,8 @@ const showThreeLevel = () => {
       border-bottom: 1px dashed #4d4d4d;
       padding: 12px 26px 12px 22px;
     }
-    &>div:nth-child(2){
-      &>.a-link:after{
+    & > div:nth-child(2) {
+      & > .a-link:after {
         display: none;
       }
     }

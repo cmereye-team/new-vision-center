@@ -50,12 +50,12 @@ const services = {
   btns: [
     {
       name: "成人檢查",
-      link: "/eye-examination-adult",
+      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
       color: "#00A6CE",
     },
     {
       name: "兒童檢查",
-      link: "/eye-examination-child",
+      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
       color: "#95DF82",
     },
   ],
@@ -71,7 +71,7 @@ const services = {
     {
       img: "https://statichk.cmermedical.com/vision/imgs/4fb495e912701d2c.png",
       title: ["角膜矯形鏡", "合適性檢查套餐"],
-      link: "/orthokeratoplasty",
+      link: "/orthokeratology",
       text: ["低至"],
       context: [],
       price: "1,000",
@@ -79,7 +79,7 @@ const services = {
     {
       img: "https://statichk.cmermedical.com/vision/imgs/2fce54bd583f773d.png",
       title: ["專業驗配近視", "控制眼鏡"],
-      link: "/eye-examination-child",
+      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
       text: [],
       context: ["買鏡片", "送鏡架"],
       price: "",
@@ -87,7 +87,7 @@ const services = {
     {
       img: "https://statichk.cmermedical.com/vision/imgs/c0e70a7699fdb561.png",
       title: ["眼睛檢查套餐"],
-      link: "/eye-examination-adult",
+      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
       text: ["低至"],
       context: [],
       price: "350",
@@ -95,7 +95,7 @@ const services = {
     {
       img: "https://statichk.cmermedical.com/vision/imgs/9ffb4105482ebeb2.png",
       title: ["青光眼檢查", "套餐"],
-      link: "/eye-examination-adult",
+      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
       text: ["低至"],
       context: [],
       price: "1,000",

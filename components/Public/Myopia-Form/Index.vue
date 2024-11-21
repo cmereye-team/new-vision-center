@@ -10,7 +10,7 @@ interface RuleForm {
   name: string;
   email: string;
   region: string;
-  phoneNumber: string;
+  phoneNum: string;
   address: string;
 }
 
@@ -20,7 +20,7 @@ const ruleForm = reactive<RuleForm>({
   name: "",
   email: "",
   region: "",
-  phoneNumber: "",
+  phoneNum: "",
   address: "",
 });
 
@@ -41,20 +41,20 @@ const rules = reactive<FormRules<RuleForm>>({
       trigger: "change",
     },
   ],
-  phoneNumber: [{ required: true, message: "請輸入電話號碼", trigger: "blur" }],
+  phoneNum: [{ required: true, message: "請輸入電話號碼", trigger: "blur" }],
   address: [{ required: true, message: "請輸入地址", trigger: "blur" }],
 });
 
-const submitForm = async (formEl: FormInstance | undefined) => {
-  if (!formEl) return;
-  await formEl.validate((valid, fields) => {
-    if (valid) {
-      console.log("submit!");
-    } else {
-      console.log("error submit!", fields);
-    }
-  });
-};
+// const submitForm = async (formEl: FormInstance | undefined) => {
+//   if (!formEl) return;
+//   await formEl.validate((valid, fields) => {
+//     if (valid) {
+//       console.log("submit!");
+//     } else {
+//       console.log("error submit!", fields);
+//     }
+//   });
+// };
 
 const resetForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
@@ -66,13 +66,110 @@ const resetForm = (formEl: FormInstance | undefined) => {
 //   label: `${idx + 1}`,
 // }));
 
-const onSubmit = () => {
-  console.log("submit!");
+const formLoading = ref(false);
+// 获取当前页面 url
+const getUrl = () => {
+  return new URL(window.location.href);
 };
+const submitForm = async (formEl: FormInstance | undefined) => {
+  if (!formEl) return;
+  formLoading.value = true;
+  await formEl.validate((valid, fields) => {
+    if (valid) {
+      if (
+        localStorage.getItem("zOhForm") &&
+        localStorage.getItem("zOhForm") === JSON.stringify(ruleForm)
+      ) {
+        ElMessageBox.alert(
+          "If you have any questions or inquiries, please contact us via WhatsApp: +(如果您有任何问题或疑问，请通过WhatsApp与我们联系：+)",
+          "消息通知",
+          {
+            confirmButtonText: "好的",
+          }
+        );
+        formLoading.value = false;
+        return;
+      }
+      onsubmit(formEl);
+      // dingTalk(formEl)
+    } else {
+      ElMessage({
+        message: "提交失敗，請檢查内容是否有誤！",
+        type: "error",
+      });
+      console.log("error submit!", fields);
+      formLoading.value = false;
+    }
+  });
+};
+const onsubmit = async (formEl: any) => {
+  console.log("submit", ruleForm);
+  let _formData = new FormData();
+  let _form = ruleForm;
+  _formData.append("name", _form.name);
+  _formData.append("email", _form.email);
+  _formData.append("checkserve", _form.region);
+  _formData.append("phoneNum", _form.phoneNum);
+  _formData.append("address", _form.address);
+  _formData.append("source", getUrl().href);
+
+  const { data }: any = await useFetch(
+    "https://content.cmervision.com/api.php/cms/addform/fcode/4",
+    {
+      method: "POST",
+      body: _formData,
+    }
+  );
+  let res = JSON.parse(data.value);
+  localStorage.setItem("zOhForm", JSON.stringify(_form));
+  if (res.code == 1) {
+    formLoading.value = false;
+    ElMessage({
+      message: "提交成功！請注意工作人員聯係！",
+      type: "success",
+    });
+    resetForm(formEl);
+  }
+};
+
+const dingTalk = async (_form:any) => {
+  let _message = {
+    msgtype: 'text',
+    text: {
+      content: `姓名：${_form.name}
+  聯繫方式： ${String(_form.phoneNum)}
+  郵箱：${_form.email}
+  選擇服務：${_form.region}
+  選擇門診地點：${_form.address}
+  提交時間：${new Date().toLocaleString()}
+  来源：${props.detail.brand}
+  来源页面：${getUrl().href}`,
+    },
+  }
+  let { data }: any = await useFetch(
+    '/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028',
+    {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+      body: JSON.stringify(_message),
+    }
+  )
+  if (data) {
+    localStorage.setItem('contactForm', JSON.stringify(_form))
+  } else {
+    ElMessage({
+      showClose: true,
+      message: '服務異常，請稍後重試',
+      type: 'error',
+    })
+  }
+}
 </script>
 
 <template>
-  <div class="brand-detail">
+  <div class="brand-detail" v-loading="formLoading">
     <div class="detail">
       <div>{{ props.detail.title }}</div>
       <div>
@@ -104,7 +201,7 @@ const onSubmit = () => {
               </el-form-item>
               <el-form-item label="電郵地址" prop="email">
                 <el-input
-                  v-model="ruleForm.name"
+                  v-model="ruleForm.email"
                   placeholder="電郵地址"
                   clearable
                 />
@@ -152,9 +249,9 @@ const onSubmit = () => {
                   <el-option label="其他" value="其他" />
                 </el-select>
               </el-form-item>
-              <el-form-item label="聯絡電話" prop="phoneNumber">
+              <el-form-item label="聯絡電話" prop="phoneNum">
                 <el-input
-                  v-model="ruleForm.phoneNumber"
+                  v-model="ruleForm.phoneNum"
                   placeholder="請輸入聯絡電話"
                   clearable
                 />
@@ -186,7 +283,10 @@ const onSubmit = () => {
                   >領取優惠</el-button
                 > -->
               <!-- </el-form-item> -->
-              <div class="el-form-item asterisk-right zeiss_hoya_submit_btn">
+              <div
+                class="el-form-item asterisk-right zeiss_hoya_submit_btn"
+                @click="submitForm(ruleFormRef)"
+              >
                 <div class="el-form-item__content zeiss_hoya_submit_btn">
                   <button
                     aria-disabled="false"
