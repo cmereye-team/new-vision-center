@@ -37,7 +37,7 @@ onMounted(() => {
 });
 
 const btnElement = ref({
-  cls:'adult_service_btn',
+  cls: "adult_service_btn",
   title: "哪個品牌最適合我？",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
@@ -159,6 +159,23 @@ const miSightQuestionList = [
     ],
   },
 ];
+
+const judge = (num: string) => {
+  const n = Number(num.replace("%", ""));
+  if (n > 60) {
+    return false;
+  } else {
+    return true;
+  }
+};
+const judgeTwo = (num: string) => {
+  const n = Number(num.replace("%", ""));
+  if (n < 40) {
+    return false;
+  } else {
+    return true;
+  }
+};
 </script>
 
 <template>
@@ -209,8 +226,8 @@ const miSightQuestionList = [
       </div>
       <div class="comparison">
         <div>
-          <div>老花眼鏡</div>
-          <div>漸進鏡片</div>
+          <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
+          <div v-if="judge(imgLeft)">漸進鏡片</div>
         </div>
         <div class="imagetowebp-canvasWebp">
           <div
@@ -221,13 +238,13 @@ const miSightQuestionList = [
             }"
           >
             <img
-              src="https://statichk.cmermedical.com/vision/imgs/71a93a687a3f8551.png"
+              src="https://statichk.cmermedical.com/vision/imgs/f46189870e93.png"
               alt="老花眼鏡"
             />
           </div>
           <span :style="{ left: imgLeft }" id="imgline"> </span>
           <img
-            src="https://statichk.cmermedical.com/vision/imgs/157f0472eedb727d.png"
+            src="https://statichk.cmermedical.com/vision/imgs/1912e5aa1992.png"
             alt="漸進鏡片"
           />
         </div>
@@ -1134,7 +1151,7 @@ const miSightQuestionList = [
 
         h2 {
           color: var(--White, #fff);
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 30px;
           font-style: normal;
           font-weight: 700;
@@ -1144,7 +1161,7 @@ const miSightQuestionList = [
         span {
           color: #fff;
           text-align: center;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 22.5px;
           font-style: normal;
           font-weight: 400;
@@ -1196,7 +1213,7 @@ const miSightQuestionList = [
       line-height: 45px; /* 214.286% */
       & > span:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 22.5px;
         font-style: normal;
         font-weight: 700;
@@ -1269,7 +1286,7 @@ const miSightQuestionList = [
         }
         & > span:nth-child(2) {
           color: #fff;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 15.828px;
           font-style: normal;
           font-weight: 465;
@@ -1326,7 +1343,7 @@ const miSightQuestionList = [
       border: 5px solid #ffffff;
       & > span:nth-child(1) {
         color: var(--White, #fff);
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 18.75px;
         font-style: normal;
         font-weight: 500;
@@ -1371,7 +1388,7 @@ const miSightQuestionList = [
         border-radius: 25px;
         & > div:nth-child(1) {
           height: 143px;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 22.5px;
           font-style: normal;
           font-weight: 600;
@@ -1418,7 +1435,7 @@ const miSightQuestionList = [
         & > div:nth-child(2),
         & > div:nth-child(3),
         & > div:nth-child(4) {
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 22.5px;
           font-style: normal;
           font-weight: 400;
@@ -1567,7 +1584,7 @@ const miSightQuestionList = [
           bottom: 0;
           color: var(--Deep-Blue, #3e5270);
           text-align: center;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 20px;
           font-style: normal;
           font-weight: 500;
@@ -1646,7 +1663,7 @@ const miSightQuestionList = [
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         text-align: center;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 30px;
         font-style: normal;
         font-weight: 700;
@@ -1656,7 +1673,7 @@ const miSightQuestionList = [
       & > div:nth-child(2) {
         color: var(--OkLens-color, #0192b0);
         text-align: center;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 30px;
         font-style: normal;
         font-weight: 700;
@@ -1816,7 +1833,7 @@ const miSightQuestionList = [
         text-align: left;
         h2 {
           color: var(--White, #fff);
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 4.195vw;
           font-style: normal;
           font-weight: 700;
@@ -1828,7 +1845,7 @@ const miSightQuestionList = [
         }
         span {
           color: #fff;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 3.589vw;
           font-style: normal;
           font-weight: 400;
@@ -1895,7 +1912,7 @@ const miSightQuestionList = [
           line-height: 5.128vw; /* 142.857% */
           & > span:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
-            font-family: "Noto Sans HK";
+            font-family: "Noto Sans CJK TC" !important;
             font-size: 4.1vw;
             font-style: normal;
             font-weight: 700;
@@ -1983,7 +2000,7 @@ const miSightQuestionList = [
         display: flex;
         align-items: center;
         color: #fff;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 4.067vw;
         font-style: normal;
         font-weight: 400;
@@ -2062,7 +2079,7 @@ const miSightQuestionList = [
         border-radius: 25px;
         & > div:nth-child(1) {
           height: 89px;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 16px;
           font-style: normal;
           font-weight: 600;
@@ -2127,7 +2144,7 @@ const miSightQuestionList = [
         & > div:nth-child(2),
         & > div:nth-child(3),
         & > div:nth-child(4) {
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 16px;
           font-style: normal;
           font-weight: 400;
@@ -2267,7 +2284,7 @@ const miSightQuestionList = [
           width: 100%;
           color: var(--Deep-Blue, #3e5270);
           text-align: center;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
@@ -2283,7 +2300,7 @@ const miSightQuestionList = [
       & > span {
         color: var(--Deep-Blue, #3e5270);
         text-align: center;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 6.15vw;
         font-style: normal;
         font-weight: 700;
@@ -2326,7 +2343,7 @@ const miSightQuestionList = [
       border: 3px solid #ffffff;
       & > span:nth-child(1) {
         color: var(--White, #fff);
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 3.589vw;
         font-style: normal;
         font-weight: 500;
@@ -2384,7 +2401,7 @@ const miSightQuestionList = [
         & > span:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           text-align: center;
-          font-family: "Noto Sans HK";
+          font-family: "Noto Sans CJK TC" !important;
           font-size: 3.589vw;
           font-style: normal;
           font-weight: 500;
@@ -2402,7 +2419,7 @@ const miSightQuestionList = [
           padding: 0 0;
         }
         color: #60605f;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 3.589vw;
         font-style: normal;
         font-weight: 500;
@@ -2425,7 +2442,7 @@ const miSightQuestionList = [
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         text-align: center;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 3.589vw;
         font-style: normal;
         font-weight: 700;
@@ -2435,7 +2452,7 @@ const miSightQuestionList = [
       & > div:nth-child(2) {
         color: var(--OkLens-color, #0192b0);
         text-align: center;
-        font-family: "Noto Sans HK";
+        font-family: "Noto Sans CJK TC" !important;
         font-size: 3.589vw;
         font-style: normal;
         font-weight: 700;

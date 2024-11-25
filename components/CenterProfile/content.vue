@@ -32,7 +32,8 @@ const handlesSliPrev = () => {
 const discountsList = ref([
   {
     id: 1,
-    img: "https://statichk.cmermedical.com/vision/imgs/dc8864b666279003.webp",
+    // img: "https://static.cmereye.com/imgs/2024/11/7abccec71003cd35.png",
+    img: 'https://statichk.cmermedical.com/vision/imgs/0fea7df0b176.png',
     content:'门店',
   },
   {

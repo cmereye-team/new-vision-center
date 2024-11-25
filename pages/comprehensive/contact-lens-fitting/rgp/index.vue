@@ -17,8 +17,10 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/dac22b19b807d9ed.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/685a9070ccfc7382.png",
+  // pc: "https://static.cmereye.com/imgs/2024/11/dac22b19b807d9ed.png",
+  // mobile: "https://static.cmereye.com/imgs/2024/11/685a9070ccfc7382.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/be971bf1c0bc.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/49bd53a53467.png",
 };
 const btnElement = ref({
   cls:'adult_service_btn',

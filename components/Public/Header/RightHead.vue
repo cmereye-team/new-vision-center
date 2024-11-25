@@ -148,9 +148,14 @@ const menuList = ref([
         path: "/services",
       },
       {
+        id: "4",
+        title: "人工智能健康篩查",
+        path: "/services/ai-screening",
+      },
+      {
         id: "2",
         title: "收費詳情",
-        path: "/services-fees",
+        path: "/comprehensive/services-fees",
       },
       {
         id: "3",
@@ -184,12 +189,12 @@ const menuList = ref([
           {
             id: "1",
             title: "兒童常見眼睛問題",
-            path: "/common-eye-diseases-in-adults",
+            path: "/common-pediatric-eye-problems",
           },
           {
             id: "2",
             title: "成人常見眼睛問題",
-            path: "/common-pediatric-eye-problems",
+            path: "/common-eye-diseases-in-adults",
           },
         ],
       },
@@ -292,7 +297,7 @@ const handleMouseleave = () => {
         :class="`fa-${index + 1}`"
       >
         <nuxt-link
-          @click="headLink(index, item)"
+          :to="item.path == '/' ? headLink(index, item) : item.path"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
@@ -464,6 +469,17 @@ const handleMouseleave = () => {
   .fa-path {
     position: relative;
   }
+  .fa-path::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #00a5ce00;
+    bottom: -80%;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .fade-leave-active {
     transition: opacity 3s;
   }
@@ -481,6 +497,7 @@ const handleMouseleave = () => {
       background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
       transform: rotate(180deg) translateX(50%);
       background-size: 100% 100%;
+      bottom: -10px;
       z-index: 10;
     }
     .sub-menu {
@@ -941,6 +958,17 @@ const handleMouseleave = () => {
   .fa-path {
     position: relative;
   }
+  .fa-path::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #00a5ce00;
+    bottom: -80%;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+  }
   .fa-path:hover {
     & > a {
       color: #00a6ce;
@@ -949,6 +977,8 @@ const handleMouseleave = () => {
     & > a::after {
       background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
       transform: rotate(180deg) translateX(50%);
+      bottom: -10px;
+      z-index: 10;
     }
     .sub-menu {
       padding-top: 10px;

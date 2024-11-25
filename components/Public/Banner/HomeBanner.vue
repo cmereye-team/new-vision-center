@@ -2,7 +2,7 @@
 import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Autoplay, Pagination } from "swiper/modules";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const modules = [Autoplay, Pagination];
 
 interface banner {
@@ -46,19 +46,37 @@ onMounted(() => {
 
   getImgSwiper();
 });
+const swiperBox = (swiper: any) => {
+  deBoxSwiperRef = swiper;
+};
+let deBoxSwiperRef = {
+  slideTo: (a: any) => {},
+  slideToLoop: (a: any) => {},
+  slidePrev: () => {},
+  slideNext: () => {},
+};
+
+const handleshowdeBox = (_idx: any) => {
+  deBoxSwiperRef.slideTo(_idx);
+};
 </script>
 
 <template>
   <div class="home_banner">
     <div class="banner_size" v-if="winWSize > 768">
       <swiper
-        :pagination="true"
-        :loop="true"
+        :spaceBetween="30"
+        :centeredSlides="true"
         :autoplay="{
-          delay: 3000,
+          delay: 2500,
           disableOnInteraction: false,
         }"
-        :modules="[Autoplay, Pagination]"
+        :pagination="{
+          clickable: true,
+        }"
+        :navigation="true"
+        :modules="[Autoplay, Pagination, Navigation]"
+        @swiper="swiperBox"
       >
         <swiper-slide v-for="banner in bannerImg" :key="banner.id">
           <nuxt-link :to="banner.link">
@@ -66,6 +84,17 @@ onMounted(() => {
           </nuxt-link>
         </swiper-slide>
       </swiper>
+    </div>
+    <div class="btn_banner" v-if="winWSize > 768">
+      <!-- <div
+        class="btn_banner_item"
+        v-for="(item, index) in bannerImg"
+        :key="item.id"
+        :class="index == deBoxSwiperRef.activeIndex ? 'active' : ''"
+        @click="handleshowdeBox(index)"
+      >
+        <span></span>
+      </div> -->
     </div>
     <div class="banner_size" v-if="winWSize <= 768">
       <swiper :pagination="true" :modules="[Autoplay, Pagination]">
@@ -126,6 +155,10 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
+:deep(.swiper-button-prev),
+:deep(.swiper-button-next) {
+  display: none;
+}
 @media screen and (min-width: 768px) and (max-width: 1620px) {
   .home_banner {
     position: relative;
@@ -148,7 +181,14 @@ onMounted(() => {
         }
       }
     }
-    & > div:nth-child(2) {
+    .btn_banner {
+      position: absolute;
+      bottom: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+    }
+    & > div:nth-child(3) {
       position: fixed;
       top: 7vw;
       right: 0;
@@ -314,8 +354,26 @@ onMounted(() => {
         }
       }
     }
-
-    & > div:nth-child(2) {
+    .btn_banner {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 50;
+      display: flex;
+      gap: 20px;
+      .btn_banner_item {
+        span {
+          width: 16px;
+          height: 16px;
+          border-radius: 50%;
+          display: inline-block;
+          background: #f5f5f5a4;
+          cursor: pointer;
+        }
+      }
+    }
+    & > div:nth-child(3) {
       position: fixed;
       top: 130px;
       right: 0;

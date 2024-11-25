@@ -32,7 +32,7 @@ const bannerImg = {
         </div>
       </template>
     </PublicBanner>
-    <PublicNavbar :link="'/services-fees'" :name="'收費詳情'" />
+    <PublicNavbar :link="'/comprehensive/services-fees'" :name="'收費詳情'" />
     <div class="fee-box">
       <Fee />
     </div>

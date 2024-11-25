@@ -65,6 +65,22 @@ onMounted(() => {
     }
   });
 });
+const judge = (num: string) => {
+  const n = Number(num.replace("%", ""));
+  if (n > 60) {
+    return false;
+  } else {
+    return true;
+  }
+};
+const judgeTwo = (num: string) => {
+  const n = Number(num.replace("%", ""));
+  if (n < 40) {
+    return false;
+  } else {
+    return true;
+  }
+};
 </script>
 
 <template>
@@ -101,8 +117,10 @@ onMounted(() => {
       </div>
       <div class="glaucoma-comparison">
         <div>
-          <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正常</div>
-          <div>視野缺損</div>
+          <div v-if="judgeTwo(imgLeft)">
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正常
+          </div>
+          <div v-if="judge(imgLeft)">視野缺損</div>
         </div>
         <div class="imagetowebp-canvasWebp">
           <div
@@ -1105,7 +1123,6 @@ onMounted(() => {
         & > span:nth-child(1) {
           display: block;
           font-size: 14px;
-          
         }
         & > span {
           display: inline;
@@ -1113,7 +1130,6 @@ onMounted(() => {
         }
         // margin-bottom: 30px;
         // padding: 50px 0;
-      
       }
       :deep(.bg-text-btn) {
         & > a {

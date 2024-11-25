@@ -26,8 +26,10 @@ onMounted(() => {
   });
 });
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/0fd7856ae65aea25.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/7e2d6e9bac45673f.png",
+  // pc: "https://static.cmereye.com/imgs/2024/11/0fd7856ae65aea25.png",
+  // mobile: "https://static.cmereye.com/imgs/2024/11/7e2d6e9bac45673f.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/52609c95fe2a.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/3953764e2acf.png",
 };
 const btnElement = ref({
   cls:'',

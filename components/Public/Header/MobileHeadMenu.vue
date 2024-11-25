@@ -133,9 +133,14 @@ const menuList = ref([
         path: "/services",
       },
       {
+        id: "4",
+        title: "人工智能健康篩查",
+        path: "/services/ai-screening",
+      },
+      {
         id: "2",
         title: "收費詳情",
-        path: "/services-fees",
+        path: "/comprehensive/services-fees",
       },
       {
         id: "3",
