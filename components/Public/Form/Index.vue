@@ -931,7 +931,7 @@ onMounted(() => {
     &::before {
       content: "";
       position: absolute;
-      z-index: 2;
+      z-index: -2;
       background: linear-gradient(75deg, #00a6ce 30%, #3346ed);
       width: 100%;
       height: 100%;
@@ -952,7 +952,7 @@ onMounted(() => {
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
+      z-index: -1;
       opacity: 0;
       border-radius: 20px;
       transition: all 0.3s;
@@ -1456,7 +1456,7 @@ onMounted(() => {
     &::before {
       content: "";
       position: absolute;
-      z-index: 2;
+      z-index: -2;
       background: linear-gradient(75deg, #00a6ce 30%, #3346ed);
       width: 100%;
       height: 100%;
@@ -1477,7 +1477,7 @@ onMounted(() => {
       left: 0;
       width: 100%;
       height: 100%;
-      z-index: 1;
+      z-index: -1;
       opacity: 0;
       border-radius: 20px;
       transition: all 0.3s;

@@ -91,7 +91,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         return;
       }
       onsubmit(formEl);
-      // dingTalk(formEl)
+      dingTalk(formEl)
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -132,7 +132,8 @@ const onsubmit = async (formEl: any) => {
   }
 };
 
-const dingTalk = async (_form:any) => {
+const dingTalk = async (formEl:any) => {
+  let _form = ruleForm;
   let _message = {
     msgtype: 'text',
     text: {

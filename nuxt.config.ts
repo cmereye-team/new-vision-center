@@ -49,7 +49,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       gtm: {
-        id: 'GTM-W87S5KSC',
+        id: 'GTM-MM2653X',
         defer: false,
         compatibility: false,
         enabled: true,
