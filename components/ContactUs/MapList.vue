@@ -265,23 +265,24 @@ onMounted(() => {
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       font-family: "Noto Sans HK";
-      font-size: 50px;
+      font-size: 6.4vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
+      margin-bottom: 2.65vw;
     }
     & > div:nth-child(2) {
-      border-radius: 10px;
-      border: 0.723px solid var(--Brand-Color, #00a6ce);
+      border-radius: 2.65vw;
+      border: 0.78px solid var(--Brand-Color, #00a6ce);
       display: flex;
     }
   }
   .map-list-menu {
     font-family: "Noto Sans HK";
-    padding: 13px 36px;
+    padding: 3.465vw 9.6vw;
     color: #00a6ce;
-
-    font-size: 20px;
+    text-align: center;
+    font-size: 3.733vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -290,12 +291,13 @@ onMounted(() => {
     flex: 1;
   }
   .active {
-    padding: 13px 36px;
-    border-radius: 10px;
+    padding: 3.465vw 9.6vw;
+    border-radius: 2.65vw;
     background: var(--Brand-Color, #00a6ce);
     color: #fff;
     transition: all 0.3s;
-    font-size: 20px;
+    font-size: 3.733vw;
+    text-align: center;
     flex: 1;
     font-weight: 700;
   }

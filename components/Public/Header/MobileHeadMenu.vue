@@ -17,7 +17,7 @@ const menuList = ref([
       },
       {
         title: "聯絡我們",
-        path: "/contact-us",
+        path: "/about-us/contact-us",
         id: "2",
       },
       {
@@ -31,7 +31,7 @@ const menuList = ref([
     id: "6",
     title: "尊享優惠",
     child: "svg",
-    path: "/now-discounts",
+    path: "/new-discounts",
   },
   {
     id: "9",
@@ -107,7 +107,7 @@ const menuList = ref([
       {
         id: "2",
         title: "老花漸進鏡片",
-        path: "/presbyopia",
+        path: "/progressive-lens",
       },
       {
         id: "3",
@@ -117,7 +117,7 @@ const menuList = ref([
       {
         id: "4",
         title: "硬性隱形眼鏡",
-        path: "/rgp-contact-lens",
+        path: "/comprehensive/contact-lens-fitting/rgp",
       },
     ],
   },
@@ -145,7 +145,7 @@ const menuList = ref([
       {
         id: "3",
         title: "長者醫療券計劃",
-        path: "/about-us/news-information",
+        path: "/services/health-care-voucher",
       },
     ],
   },
@@ -158,12 +158,12 @@ const menuList = ref([
       {
         id: "1",
         title: "影片資訊",
-        path: "/video-information",
+        path: "/vision-news/eye-protection-classroom",
       },
       {
         id: "2",
         title: "日常護眼",
-        path: "/daily-eye-care",
+        path: "/vision-news/daily-eye-care",
       },
       {
         id: "3",
@@ -174,12 +174,12 @@ const menuList = ref([
           {
             id: "1",
             title: "兒童常見眼睛問題",
-            path: "/eye-problems-in-children",
+            path: "/common-pediatric-eye-problems",
           },
           {
             id: "2",
             title: "成人常見眼睛問題",
-            path: "/faq",
+            path: "/common-eye-diseases-in-adults",
           },
         ],
       },

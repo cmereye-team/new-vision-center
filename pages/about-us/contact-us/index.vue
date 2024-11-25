@@ -42,12 +42,6 @@ const bannerImg = {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .profile-title {
-    // background: url("https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png")
-    //   no-repeat;
-    // background-size: 100% 100%;
-    // width: 100%;
-    // min-height: 800px;
-    // position: relative;
     span {
       position: relative;
       right: -180%;
@@ -71,29 +65,23 @@ const bannerImg = {
     padding: 0 24px;
   }
   .profile-title {
-    // background: url("https://statichk.cmermedical.com/vision/imgs/7f4b5bcf029a0f4c.png")
-    //   no-repeat;
-    // background-size: 100% 100%;
-    // width: 100%;
-    // min-height: 390px;
-    // position: relative;
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 22.65vw;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      bottom: 7.692vw;
+      right: 5.128vw;
       color: #fff;
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 28px;
+      font-size: 7.17vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 5.6px;
+      letter-spacing: 1.435vw;
     }
   }
 }

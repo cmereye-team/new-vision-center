@@ -446,9 +446,9 @@ const props = defineProps({
 }
 @media screen and (max-width: 767px) {
   .publicMap {
-    margin-top: 24px;
+    margin-top: 6.15vw;
     & > div:nth-child(2) {
-      margin: 20px 0;
+      margin: 5.128vw 0;
     }
   }
   .publicMap-item {
@@ -456,9 +456,9 @@ const props = defineProps({
     flex-direction: column;
     & > div:nth-child(1) {
       flex: 4;
-      border-radius: 40px;
+      border-radius: 10.25vw;
       overflow: hidden;
-      margin-right: 55px;
+      margin-right: 14.10vw;
       width: 100%;
       & > img {
         width: 100%;
@@ -471,32 +471,31 @@ const props = defineProps({
   .publicMap-item-content {
     display: flex;
     flex-direction: column;
-    margin-top: 30px;
+    margin-top: 7.69vw;
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
-        font-size: 27.86px;
+        font-size: 7.178vw;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
       }
       & > div:nth-child(1):before {
         content: "";
-        width: 23px;
-        height: 23px;
+        width: 5.89vw;
+        height: 5.89vw;
         border-radius: 50%;
         background: #00a6ce;
         display: inline-block;
         position: relative;
         top: 3px;
-        margin-right: 14px;
+        margin-right: 3.58vw;
       }
       & > div:nth-child(2) {
         color: #60605f;
-
         font-family: "Noto Sans HK";
-        font-size: 15.92px;
+        font-size: 4.1025vw;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -505,48 +504,47 @@ const props = defineProps({
     & > div:nth-child(2) {
       display: flex;
       flex-direction: column;
-      margin: 30px 0 18px 0;
+      margin: 7.69vw 0 4.615vw 0;
       & > div {
         & > div:nth-child(1) {
           display: flex;
           align-items: center;
           color: #59ba68;
-
           font-family: "Noto Sans HK";
-          font-size: 16px;
+          font-size: 4.10vw;
           font-style: normal;
           font-weight: 600;
           line-height: normal;
           & > div:nth-child(1) {
             display: flex;
             align-items: center;
-            margin-right: 6px;
+            margin-right: 1.538vw;
           }
         }
         & > div:nth-child(2) {
-          margin-top: 10px;
+          margin-top: 2.564vw;
           color: #60605f;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.589vw;
           font-style: normal;
           font-weight: 400;
-          line-height: 21.782px; /* 155.586% */
+          line-height: 5.64vw; /* 155.586% */
           text-transform: uppercase;
         }
       }
       & > div:nth-child(2) {
-        margin: 15px 0;
+        margin: 3.846vw 0;
       }
     }
     & > div:nth-child(3) {
       display: flex;
       justify-content: center;
       & > a:nth-child(1) {
-        border-radius: 50px;
+        border-radius: 12.8vw;
         background: #00a6ce;
       }
       & > a:nth-child(2) {
-        border-radius: 50px;
+        border-radius: 12.8vw;
         background: #59ba68;
       }
       & > a {
@@ -556,15 +554,19 @@ const props = defineProps({
         justify-content: center;
         position: relative;
         width: fit-content;
-
         color: #fff;
-
         font-family: "Noto Sans HK";
-        font-size: 17.512px;
+        font-size: 4.48vw;
         font-style: normal;
         font-weight: 400;
         line-height: normal;
         text-transform: uppercase;
+        & > div:nth-child(1) {
+          &>svg {
+            width: 100%;
+            height: 100%;
+          }
+        }
         & > div:nth-child(2) {
           display: flex;
           align-items: center;
