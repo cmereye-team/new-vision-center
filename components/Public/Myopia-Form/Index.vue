@@ -91,7 +91,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         return;
       }
       onsubmit(formEl);
-      dingTalk(formEl)
+      // dingTalk(formEl);
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -132,10 +132,10 @@ const onsubmit = async (formEl: any) => {
   }
 };
 
-const dingTalk = async (formEl:any) => {
+const dingTalk = async (formEl: any) => {
   let _form = ruleForm;
   let _message = {
-    msgtype: 'text',
+    msgtype: "text",
     text: {
       content: `姓名：${_form.name}
   聯繫方式： ${String(_form.phoneNum)}
@@ -146,27 +146,34 @@ const dingTalk = async (formEl:any) => {
   来源：${props.detail.brand}
   来源页面：${getUrl().href}`,
     },
-  }
+  };
   let { data }: any = await useFetch(
-    '/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028',
+    // '/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028',
+    "https://connector.dingtalk.com/webhook/flow/102e31d841ce213fb305000k",
     {
-      method: 'post',
+      method: "post",
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
+        "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(_message),
     }
-  )
+  );
   if (data) {
-    localStorage.setItem('contactForm', JSON.stringify(_form))
+    localStorage.setItem("zOhForm", JSON.stringify(_form));
+    formLoading.value = false;
+    ElMessage({
+      message: "提交成功！請注意工作人員聯係！",
+      type: "success",
+    });
+    resetForm(formEl);
   } else {
     ElMessage({
       showClose: true,
-      message: '服務異常，請稍後重試',
-      type: 'error',
-    })
+      message: "服務異常，請稍後重試",
+      type: "error",
+    });
   }
-}
+};
 </script>
 
 <template>

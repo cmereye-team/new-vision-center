@@ -94,6 +94,11 @@ export default defineNuxtConfig({
         target: 'https://oapi.dingtalk.com',
         prependPath: true,
         changeOrigin: true,
+      },
+      "/dingtalk2": {
+        target: 'https://connector.dingtalk.com',
+        prependPath: true,
+        changeOrigin: true,
       }
     }
   },
