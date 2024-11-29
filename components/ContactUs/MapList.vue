@@ -69,24 +69,25 @@ const portLandList = ref([
     ],
     call: "+852 3892 5089",
   },
-]);
-const kowLoonList = ref([
+
   {
-    id: 1,
-    img: "https://statichk.cmermedical.com/vision/imgs/f9531434e80bf5fd.png",
-    region: "旺角",
+    id: 4,
+    img: "https://static.cmereye.com/imgs/2024/11/772c40216f083c6c.png",
+    region: "銅鑼灣",
     name: "希瑪醫療旗下視光師驗眼中心",
-    googleMap: "https://maps.app.goo.gl/4Bq588uzvEvFPWk78",
+    googleMap: "https://maps.app.goo.gl/ae1atModkaUkgBNS9",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: [
-      "九龍彌敦道610號",
-      "荷李活商業中心9樓918-919室",
-      "( 旺角站E2出口）",
+    address: ["銅鑼灣怡和街28號恆生", "銅鑼灣大廈11樓A室", "(恆生銀行樓上)"],
+    businessHours: [
+      "星期一至星期六：",
+      "10:30 – 19:00",
+      "( 公眾假期照常營業 ）",
     ],
-    businessHours: ["10:30 – 19:30", "(星期日及公眾假期休息)"],
-    call: "+852 3892 5089 ",
+    call: "+852 3892 5089",
   },
+]);
+const kowLoonList = ref([
   {
     id: 2,
     img: "https://statichk.cmermedical.com/vision/imgs/c75e4216c9d81a2e.png",
@@ -104,6 +105,23 @@ const kowLoonList = ref([
     ],
     call: "+852 3892 5089 ",
   },
+  {
+    id: 1,
+    img: "https://statichk.cmermedical.com/vision/imgs/f9531434e80bf5fd.png",
+    region: "旺角",
+    name: "希瑪醫療旗下視光師驗眼中心",
+    googleMap: "https://maps.app.goo.gl/4Bq588uzvEvFPWk78",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    address: [
+      "九龍彌敦道610號",
+      "荷李活商業中心9樓918-919室",
+      "( 旺角站E2出口）",
+    ],
+    businessHours: ["10:30 – 19:30", "(星期日及公眾假期休息)"],
+    call: "+852 3892 5089 ",
+  },
+
   {
     id: 3,
     img: "https://statichk.cmermedical.com/vision/imgs/99d36f94eaf96a1d.png",
@@ -134,18 +152,7 @@ const newTerritoriesList = ref([
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
-  {
-    id: 2,
-    img: "https://statichk.cmermedical.com/vision/imgs/873265f7b34ec11f.png",
-    region: "將軍澳",
-    name: "希瑪醫療旗下視光師驗眼中心（兒童近視控制中心）",
-    googleMap: "",
-    whatsApps:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["新界將軍澳中心", "地下54號鋪"],
-    businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
-    call: "+852 3892 5089 ",
-  },
+
   {
     id: 3,
     img: "https://statichk.cmermedical.com/vision/imgs/c631f8678184f3da.png",
@@ -155,6 +162,18 @@ const newTerritoriesList = ref([
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["將軍澳新都城中心一期", "地下G67號舖"],
+    businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
+    call: "+852 3892 5089 ",
+  },
+  {
+    id: 2,
+    img: "https://statichk.cmermedical.com/vision/imgs/873265f7b34ec11f.png",
+    region: "將軍澳",
+    name: "希瑪醫療旗下視光師驗眼中心",
+    googleMap: "",
+    whatsApps:
+      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+    address: ["新界將軍澳中心", "地下54號鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },

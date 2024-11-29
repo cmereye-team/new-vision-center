@@ -309,7 +309,8 @@ const props = defineProps({
 @media screen and (min-width: 768px) {
   .publicMap {
     margin-top: 86px;
-    & > div:nth-child(2) {
+    & > div:nth-child(2),
+    & > div:nth-child(3) {
       margin: 30px 0;
     }
   }

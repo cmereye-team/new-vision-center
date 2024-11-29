@@ -221,6 +221,13 @@ const listVideoClass = ref([
     type: "list",
     isShow: false,
     videoList: [
+    {
+        id: 5,
+        type: "orthokeratology",
+        text: ["【希瑪仔小教室】帶小朋友", "去驗眼要做咩檢查？"],
+        img: "https://static.cmereye.com/imgs/2024/11/bc5a98b3afefaa7f.webp",
+        videoLink: "https://youtu.be/tThn-ecALKM?si=8WMnC07iMiuJ3_YN",
+      },
       {
         id: 1,
         type: "orthokeratology",

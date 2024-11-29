@@ -238,13 +238,13 @@ const judgeTwo = (num: string) => {
             }"
           >
             <img
-              src="https://statichk.cmermedical.com/vision/imgs/f46189870e93.png"
+              src="https://statichk.cmermedical.com/vision/imgs/1912e5aa1992.png"
               alt="老花眼鏡"
             />
           </div>
           <span :style="{ left: imgLeft }" id="imgline"> </span>
           <img
-            src="https://statichk.cmermedical.com/vision/imgs/1912e5aa1992.png"
+            src="https://statichk.cmermedical.com/vision/imgs/f46189870e93.png"
             alt="漸進鏡片"
           />
         </div>

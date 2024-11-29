@@ -155,7 +155,7 @@ onMounted(() => {
       </g>
     </svg>
   <div class="media" v-if="!isPc">
-      <div>
+      <a target="_blank" href="https://www.facebook.com/cmervision">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="27"
@@ -168,8 +168,8 @@ onMounted(() => {
             fill="#00A6CE"
           />
         </svg>
-      </div>
-      <div>
+      </a>
+      <a target="_blank" href="https://www.instagram.com/cmervision">
         <svg
           width="27"
           height="27"
@@ -190,8 +190,8 @@ onMounted(() => {
             fill="#00A6CE"
           />
         </svg>
-      </div>
-      <div>
+      </a>
+      <a target="_blank" href="https://www.youtube.com/@cmersmileeyecenter6303">
         <svg
           width="27"
           height="21"
@@ -206,7 +206,7 @@ onMounted(() => {
             fill="#00A6CE"
           />
         </svg>
-      </div>
+      </a>
     </div>
   </div>
 </template>
@@ -229,7 +229,7 @@ onMounted(() => {
     .media{
       display: flex;
       align-items: center;
-      &>div:nth-child(2) {
+      &>a:nth-child(2) {
         margin: 0 23px;
       }
     }

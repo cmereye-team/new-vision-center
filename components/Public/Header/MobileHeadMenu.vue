@@ -63,12 +63,12 @@ const menuList = ref([
         threeLevelList: [
           {
             id: "1",
-            title: "Zeiss",
+            title: "ZEISS",
             path: "/myopia-control-lenses/zeiss-myovision-pro",
           },
           {
             id: "2",
-            title: "Hoya",
+            title: "HOYA",
             path: "/dims-soft-lens",
           },
         ],
@@ -302,7 +302,7 @@ const goToChildPath = (item: any, i: any) => {
     </div>
     <div class="media">
       <div>
-        <div>
+        <a  target="_blank" href="https://www.facebook.com/cmervision">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="27"
@@ -315,8 +315,8 @@ const goToChildPath = (item: any, i: any) => {
               fill="#00A6CE"
             />
           </svg>
-        </div>
-        <div>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/cmervision">
           <svg
             width="27"
             height="27"
@@ -337,8 +337,8 @@ const goToChildPath = (item: any, i: any) => {
               fill="#00A6CE"
             />
           </svg>
-        </div>
-        <div>
+        </a>
+        <a target="_blank" href="https://www.youtube.com/@cmersmileeyecenter6303">
           <svg
             width="27"
             height="21"
@@ -353,7 +353,7 @@ const goToChildPath = (item: any, i: any) => {
               fill="#00A6CE"
             />
           </svg>
-        </div>
+        </a>
       </div>
       <div>條款細則</div>
     </div>
@@ -518,12 +518,12 @@ const goToChildPath = (item: any, i: any) => {
     padding: 17px 25px 17px 40px;
     & > div:nth-child(1) {
       display: flex;
-      & > div {
+      & > a {
         display: flex;
         align-items: center;
         justify-content: center;
       }
-      & > div:nth-child(2) {
+      & > a:nth-child(2) {
         margin: 0 23px;
       }
     }

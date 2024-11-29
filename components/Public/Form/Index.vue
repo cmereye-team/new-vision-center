@@ -132,7 +132,7 @@ const formLoading = ref(false);
 const ruleFormRef = ref<FormInstance>();
 const ruleForm = reactive({
   name: "",
-  tel: 852,
+  tel: "",
   email: "",
   address: "",
   FromMe: "",
@@ -142,7 +142,9 @@ const ruleForm = reactive({
 const telValidator = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error("請輸入手機號"));
-  } else if (value.length < 11 || value.length > 11) {
+  } else if (String(value).length < 8) {
+    callback(new Error("手機號格式不正確"));
+  } else if (String(value).length > 8) {
     callback(new Error("手機號格式不正確"));
   } else {
     callback();
@@ -163,11 +165,6 @@ const rules = reactive<FormRules>({
   name: [{ required: true, validator: nameFormat, trigger: "blur" }],
   tel: [{ required: true, validator: telValidator, trigger: "blur" }],
   email: [
-    {
-      required: true,
-      message: "請輸入電郵地址",
-      trigger: "change",
-    },
     {
       type: "email",
       message: "請輸入正確的電子郵件地址",
@@ -208,7 +205,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
         return;
       }
       onsubmit(formEl);
-      dingTalk(formEl)
+      dingTalk(formEl);
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -234,7 +231,7 @@ const onsubmit = async (formEl: any) => {
   let _formData = new FormData();
   let _form = ruleForm;
   _formData.append("name", _form.name);
-  _formData.append("telphoneNumber", String(_form.tel));
+  _formData.append("telphoneNumber", `+852 ${String(_form.tel)}`);
   _formData.append("email", _form.email);
   _formData.append("address", _form.address);
   _formData.append("formfindour", _form.FromMe);
@@ -250,8 +247,8 @@ const onsubmit = async (formEl: any) => {
     }
   );
   let res = JSON.parse(data.value);
-  localStorage.setItem('contactForm', JSON.stringify(_form))
-  if (res.code == 1) {
+  localStorage.setItem("contactForm", JSON.stringify(_form));
+  if (res.code == 0) {
     formLoading.value = false;
     ElMessage({
       message: "提交成功！請注意工作人員聯係！",
@@ -261,13 +258,13 @@ const onsubmit = async (formEl: any) => {
   }
 };
 
-
-const dingTalk = async (_form:any) => {
+const dingTalk = async (formEl: any) => {
+  let _form = ruleForm;
   let _message = {
-    msgtype: 'text',
+    msgtype: "text",
     text: {
       content: `姓名：${_form.name}
-  聯繫方式： ${String(_form.tel)}
+  聯繫方式： +852 ${String(_form.tel)}
   郵箱：${_form.email}
   選擇門診地點	：${_form.address}
   哪裡找到我們網站	：${_form.FromMe}
@@ -276,27 +273,27 @@ const dingTalk = async (_form:any) => {
   提交時間：${new Date().toLocaleString()}
   来源页面：${getUrl().href}`,
     },
-  }
+  };
   let { data }: any = await useFetch(
-    '/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028',
+    "/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028",
     {
-      method: 'post',
+      method: "post",
       headers: {
-        'Content-Type': 'application/json;charset=utf-8',
+        "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(_message),
     }
-  )
+  );
   if (data) {
-    localStorage.setItem('contactForm', JSON.stringify(_form))
+    localStorage.setItem("contactForm", JSON.stringify(_form));
   } else {
     ElMessage({
       showClose: true,
-      message: '服務異常，請稍後重試',
-      type: 'error',
-    })
+      message: "服務異常，請稍後重試",
+      type: "error",
+    });
   }
-}
+};
 onMounted(() => {
   changeCities("0");
 });

@@ -767,11 +767,11 @@ const handleIntersection = (entries: any, observer: any) => {
         :grab-cursor="true"
         :centered-slides="true"
         :slides-per-view="3"
-        :space-between="0"
-        :loop="true"
+        :space-between="30"
+        :loop="false"
         :initialSlide="1"
         :coverflow-effect="{
-          rotate: 60,
+          rotate: 30,
           stretch: 0,
           depth: 200,
           modifier: 1,
@@ -905,7 +905,7 @@ const handleIntersection = (entries: any, observer: any) => {
   .mySwpier {
     position: relative;
     .mySwiperItem {
-      max-width: 90vw;
+      max-width: 75vw;
     }
   }
   .swiper-pagination-btn {

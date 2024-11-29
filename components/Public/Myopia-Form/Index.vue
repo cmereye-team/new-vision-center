@@ -23,11 +23,20 @@ const ruleForm = reactive<RuleForm>({
   phoneNum: "",
   address: "",
 });
-
+const telValidator1 = (rule: any, value: any, callback: any) => {
+  if (!value) {
+    callback(new Error("請輸入手機號"));
+  } else if (String(value).length < 8) {
+    callback(new Error("手機號格式不正確"));
+  } else if (String(value).length > 8) {
+    callback(new Error("手機號格式不正確"));
+  } else {
+    callback();
+  }
+};
 const rules = reactive<FormRules<RuleForm>>({
   name: [{ required: true, message: "請輸入姓名", trigger: "blur" }],
   email: [
-    { required: true, message: "請輸入電子郵件", trigger: "blur" },
     {
       type: "email",
       message: "請輸入正確的電子郵件",
@@ -41,7 +50,7 @@ const rules = reactive<FormRules<RuleForm>>({
       trigger: "change",
     },
   ],
-  phoneNum: [{ required: true, message: "請輸入電話號碼", trigger: "blur" }],
+  phoneNum: [{ required: true, validator: telValidator1, trigger: "blur" }],
   address: [{ required: true, message: "請輸入地址", trigger: "blur" }],
 });
 

@@ -63,7 +63,7 @@ const bannerImg = {
           <div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/86da6e72f860.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2b0a906966da.webp"
                 alt="青光眼"
               />
             </div>
@@ -75,7 +75,7 @@ const bannerImg = {
           <div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/d04d06632c65.png"
+                src="https://statichk.cmermedical.com/vision/imgs/bad67afca5dc.webp"
                 alt="青光眼"
               />
             </div>

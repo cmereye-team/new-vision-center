@@ -78,12 +78,12 @@ const menuList = ref([
         threeLevelList: [
           {
             id: "1",
-            title: "Zeiss",
+            title: "ZEISS",
             path: "/myopia-control-lenses/zeiss-myovision-pro",
           },
           {
             id: "2",
-            title: "Hoya",
+            title: "HOYA",
             path: "/dims-soft-lens",
           },
         ],
@@ -451,19 +451,29 @@ const handleMouseleave = () => {
     & > div:nth-child(1),
     & > div:nth-child(2),
     & > div:nth-child(5) {
-      padding: 0.5vw 2.1875vw;
+      &>a {
+        padding: 0.5vw 2.1875vw;
+      }
     }
     & > div:nth-child(3) {
-      padding: 0.5vw 1.1875vw;
+      &>a {
+        padding: 0.5vw 1.1875vw;
+      }
     }
     & > div:nth-child(4) {
-      padding: 0.5vw 1.302vw;
+      &>a {
+        padding: 0.5vw 1.302vw;
+      }
     }
     & > div:nth-child(6) {
-      padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+      &>a {
+        padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+      }
     }
     & > div:nth-child(7) {
-      padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+      &>a {
+        padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+      }
     }
   }
   .fa-path {
@@ -923,6 +933,7 @@ const handleMouseleave = () => {
         font-weight: 600;
         line-height: normal;
         position: relative;
+        z-index: 5;
       }
       & > a::after {
         content: "";
@@ -942,17 +953,25 @@ const handleMouseleave = () => {
     & > div:nth-child(1),
     & > div:nth-child(2),
     & > div:nth-child(5) {
-      padding: 0.5vw 1.302vw;
+      &>a {
+        padding: 0.5vw 1.302vw;
+      }
     }
     & > div:nth-child(4),
     & > div:nth-child(3) {
-      padding: 0.5vw 1.302vw;
+      &>a {
+        padding: 0.5vw 1.302vw;
+      }
     }
     & > div:nth-child(6) {
-      padding: 0.5vw 1.302vw;
+      &>a {
+        padding: 0.5vw 1.302vw;
+      }
     }
     & > div:nth-child(7) {
-      padding: 0.5vw 1.302vw;
+      &>a {
+        padding: 0.5vw 1.302vw;
+      }
     }
   }
   .fa-path {
@@ -965,7 +984,7 @@ const handleMouseleave = () => {
     height: 50px;
     background: #00a5ce00;
     bottom: -80%;
-    z-index: 5;
+    z-index: 2;
     left: 50%;
     transform: translateX(-50%);
   }
@@ -991,7 +1010,7 @@ const handleMouseleave = () => {
       position: absolute;
       right: 50%;
       transform: translateX(50%);
-      top: 50px;
+      top: 45px;
       display: flex;
       flex-direction: column;
       align-items: center;

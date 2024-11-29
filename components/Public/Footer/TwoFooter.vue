@@ -57,12 +57,12 @@ const menuList = ref([
         threeLevelList: [
           {
             id: "1",
-            title: "Zeiss",
+            title: "ZEISS",
             path: "/myopia-control-lenses/zeiss-myovision-pro",
           },
           {
             id: "2",
-            title: "Hoya",
+            title: "HOYA",
             path: "/dims-soft-lens",
           },
         ],
