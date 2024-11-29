@@ -21,6 +21,7 @@ const detail = {
   brand: "zeiss",
   explain: "立即1分鐘登記！",
   brandTitle: "ZEISS MyoVision Pro 兒童近視控制鏡片(送鏡架) $1,398起",
+  img:'https://statichk.cmermedical.com/vision/imgs/0d2990252cea.webp'
 };
 const btnElement = ref({
   cls:'',

@@ -192,8 +192,8 @@ const dingTalk = async (formEl: any) => {
       <div>
         <div>
           <img
-            src="https://statichk.cmermedical.com/vision/imgs/9b29523a2013871a.png"
-            alt="zeiss"
+            :src="props.detail.img"
+            :alt="props.detail.brand"
           />
         </div>
         <div>

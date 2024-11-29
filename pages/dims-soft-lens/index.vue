@@ -29,7 +29,8 @@ const bannerImg = {
   // pc: "https://statichk.cmermedical.com/vision/imgs/6446d8c5f0f8f72a.png",
   // mobile: "https://statichk.cmermedical.com/vision/imgs/5e82a28589934353.png",
   pc: "https://content.cmervision.com//static/upload/image/20240912/1726104579791085.jpg",
-  mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104584583733.jpg",
+  mobile:
+    "https://content.cmervision.com//static/upload/image/20240912/1726104584583733.jpg",
   newBanner: true,
 };
 const detail = {
@@ -37,6 +38,7 @@ const detail = {
   brand: "hoya",
   explain: "立即1分鐘登記！",
   brandTitle: "HOYA MiYOSMART 兒童近視控制眼鏡 $3,680起",
+  img: "https://static.cmereye.com/imgs/2024/05/cfc494d71bb517bc.jpg",
 };
 const miSightQuestionList = [
   {
@@ -71,7 +73,7 @@ const miSightQuestionList = [
   },
 ];
 const btnElement = ref({
-  cls:'',
+  cls: "",
   title: "哪一款鏡片最適合你的小朋友?",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
@@ -2815,10 +2817,10 @@ const btnElement = ref({
           position: relative;
           left: -25px;
         }
-        .topMargin{
+        .topMargin {
           margin-top: 10px;
         }
-        .topMargin2{
+        .topMargin2 {
           margin-top: 0;
         }
       }
