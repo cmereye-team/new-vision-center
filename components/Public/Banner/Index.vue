@@ -250,7 +250,7 @@ const props = defineProps({
   .banner-template {
     position: relative;
     & > div:nth-child(1) {
-      margin: 136px auto 0;
+      margin: 130px auto 0;
       width: 100%;
       height: 400px;
       object-fit: cover;
@@ -416,7 +416,7 @@ const props = defineProps({
 }
 @media screen and (max-width: 767px) {
   .banner-template {
-    margin-top: 75px;
+    margin-top: 65px;
     & > div:nth-child(1) {
       width: 100vw;
       & > img {

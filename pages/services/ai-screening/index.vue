@@ -53,11 +53,11 @@ const bannerImg = {
             <div>
               <img
                 src="https://statichk.cmermedical.com/vision/imgs/34e54f5bb4cd.png"
-                alt="青光眼"
+                alt="糖尿眼"
               />
             </div>
             <div>
-              <span>青光眼</span>
+              <span>糖尿眼</span>
             </div>
           </div>
           <div>
@@ -68,15 +68,14 @@ const bannerImg = {
               />
             </div>
             <div>
-              <span>糖尿病性</span>
-              <span>視網膜病變</span>
+              <span>青光眼</span>
             </div>
           </div>
           <div>
             <div>
               <img
                 src="https://statichk.cmermedical.com/vision/imgs/bad67afca5dc.webp"
-                alt="青光眼"
+                alt="老年黃斑病變"
               />
             </div>
             <div>

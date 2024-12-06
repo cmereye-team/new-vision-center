@@ -1801,6 +1801,8 @@ onMounted(() => {
     & > div:nth-child(3) {
       display: flex;
       justify-content: center;
+      box-sizing: border-box;
+      padding-left: 5%;
     }
   }
   //  升級鍍膜鏡片

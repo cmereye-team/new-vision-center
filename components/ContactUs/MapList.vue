@@ -157,7 +157,7 @@ const newTerritoriesList = ref([
     id: 3,
     img: "https://statichk.cmermedical.com/vision/imgs/c631f8678184f3da.png",
     region: "將軍澳",
-    name: "希瑪醫療旗下視光師驗眼中心（兒童近視控制中心）",
+    name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",

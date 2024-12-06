@@ -78,7 +78,7 @@ const okQuestionList = [
   },
 ];
 const btnElement = ref({
-  cls:'',
+  cls: "",
   title: "預約眼科檢查",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
@@ -1237,11 +1237,11 @@ const handlesSliPrev = () => {
           >
             <!-- <img :src="item.img" :alt="item.title" /> -->
             <iframe
-                :src="item.url"
-                width="100%"
-                height="100%"
-                frameborder="0"
-              ></iframe>
+              :src="item.url"
+              width="100%"
+              height="100%"
+              frameborder="0"
+            ></iframe>
           </a>
         </div>
         <a
@@ -3735,14 +3735,14 @@ const handlesSliPrev = () => {
           </div>
         </div>
       </div>
-      <div class="orthokeratoplasty-video">
+      <!-- <div class="orthokeratoplasty-video">
         <div>
           <img
             src="https://statichk.cmermedical.com/vision/imgs/3510735ba4ead090.png"
             alt="video"
           />
         </div>
-      </div>
+      </div> -->
       <div class="orthokeratoplasty-question">
         <PublicCollapse
           :title="'OK 鏡常見問題'"
@@ -4658,6 +4658,10 @@ const handlesSliPrev = () => {
     & > div:nth-child(2) {
       display: flex;
       justify-content: center;
+      width: 100%;
+      margin: 0 auto;
+      box-sizing: border-box;
+      padding: 0 0 0 10%;
     }
     & > a:nth-child(2) {
       width: 100%;
@@ -4914,6 +4918,7 @@ const handlesSliPrev = () => {
         margin-top: 15px;
         display: flex;
         gap: 18px;
+        padding-left: 100px;
         & > a {
           display: flex;
           align-items: center;
@@ -5206,11 +5211,11 @@ const handlesSliPrev = () => {
           }
         }
         & > span:nth-child(2) {
-          margin: 0 5px;
+          margin: 0 1.28vw;
           color: var(--White, #fff);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 18px;
+          font-size: 4.6vw;
           font-style: normal;
           font-weight: 400;
           line-height: normal;
@@ -5224,7 +5229,7 @@ const handlesSliPrev = () => {
       }
     }
     & > div:nth-child(3) {
-      margin-top: 5px;
+      margin-top: 1.28vw;
       display: flex;
       justify-content: center;
       flex-direction: column;
@@ -5236,9 +5241,9 @@ const handlesSliPrev = () => {
         & > div:nth-child(2) {
           width: 100%;
           box-sizing: border-box;
-          padding-top: 35px;
-          padding-left: 21px;
-          padding-right: 21px;
+          padding-top: 8.9vw;
+          padding-left: 5.128vw;
+          padding-right: 5.128vw;
           position: absolute;
           top: 0;
           left: 0;
@@ -5246,19 +5251,19 @@ const handlesSliPrev = () => {
             color: #00a6ce;
             text-align: justify;
             font-family: "Noto Sans HK";
-            font-size: 24px;
+            font-size: 6.15vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 40.107px; /* 167.112% */
+            line-height: 10.28vw; /* 167.112% */
             letter-spacing: 1.2px;
             text-align: center;
           }
           & > div:nth-child(2) {
             display: grid;
             grid-template-columns: auto auto;
-            gap: 0 20px;
+            gap: 0 5.128vw;
             & > div {
-              margin-top: 20px;
+              margin-top: 5.125vw;
               display: flex;
               flex-direction: column;
               align-items: center;
@@ -5270,39 +5275,39 @@ const handlesSliPrev = () => {
                 background: url("https://statichk.cmermedical.com/vision/imgs/472315ed6bb6f4a3.png")
                   no-repeat;
                 background-size: 100% 100%;
-                width: 36px;
-                height: 36px;
+                width: 9.2vw;
+                height: 9.2vw;
                 color: var(--Theme-Color, #17aed2);
                 font-family: "Noto Sans HK";
-                font-size: 17.887px;
+                font-size: 4.564vw;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 26.831px; /* 150% */
+                line-height: 6.889vw; /* 150% */
                 letter-spacing: 0.894px;
-                margin-bottom: 10px;
+                margin-bottom: 2.5vw;
               }
               & > div:nth-child(2) {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                min-height: 58.529px;
+                min-height: 15vw;
                 & > svg {
                   width: 100%;
                   height: 100%;
                 }
               }
               & > div:nth-child(3) {
-                margin-top: 10px;
-                min-height: 90px;
+                margin-top: 2.564vw;
+                min-height: 23.07vw;
                 display: flex;
                 flex-direction: column;
                 color: #3e5270;
                 text-align: center;
                 font-family: "Noto Sans HK";
-                font-size: 14px;
+                font-size: 3.56vw;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 18px; /* 128.571% */
+                line-height: 4.615vw; /* 128.571% */
                 text-transform: uppercase;
                 & > span {
                   text-wrap: nowrap;
@@ -5312,63 +5317,63 @@ const handlesSliPrev = () => {
 
             & > div:nth-child(1) {
               & > div:nth-child(2) {
-                width: 56.864px;
-                height: 58.529px;
+                width: 14.58vw;
+                height: 15vw;
               }
               & > div:nth-child(3) {
-                min-height: 50px !important;
+                min-height: 12.8vw !important;
               }
             }
             & > div:nth-child(2) {
               & > div:nth-child(2) {
-                width: 56.056px;
-                height: 49.096px;
+                width: 14.373vw;
+                height: 12.58vw;
               }
               & > div:nth-child(3) {
-                min-height: 50px !important;
+                min-height: 12.8vw !important;
               }
             }
             & > div:nth-child(3) {
               & > div:nth-child(2) {
-                width: 39.752px;
-                height: 49.196px;
+                width: 10.18vw;
+                height: 12.614vw;
               }
               & > div:nth-child(3) {
-                min-height: 80px !important;
+                min-height: 20.5vw !important;
               }
             }
             & > div:nth-child(4) {
               & > div:nth-child(2) {
-                width: 45.998px;
-                height: 50.76px;
+                width: 11.7vw;
+                height: 13.01vw;
               }
               & > div:nth-child(3) {
-                min-height: 80px !important;
+                min-height: 20.5vw !important;
               }
             }
             & > div:nth-child(5) {
               & > div:nth-child(2) {
-                width: 54.727px;
-                height: 42.275px;
+                width: 14.023vw;
+                height: 10.837vw;
               }
             }
             & > div:nth-child(6) {
               & > div:nth-child(2) {
-                width: 57px;
-                height: 56.984px;
+                width: 14.615vw;
+                height: 14.6vw;
               }
             }
             & > div:nth-child(7) {
               & > div:nth-child(2) {
-                width: 56.056px;
-                height: 49.096px;
+                width: 14.73vw;
+                height: 12.58vw;
               }
             }
             & > :last-child {
-              margin-top: 10px;
+              margin-top: 2.564vw;
               & > div:nth-child(1) {
-                width: 147px;
-                height: 48px;
+                width: 37.69vw;
+                height: 12.3vw;
                 display: flex;
                 justify-content: center;
                 align-items: center;
@@ -5379,18 +5384,18 @@ const handlesSliPrev = () => {
                 background: transparent;
               }
               & > a {
-                margin-top: 24px;
+                margin-top: 6.15vw;
                 display: flex;
                 align-items: center;
-                border: 2px solid #02ed85;
+                border: 0.512vw solid #02ed85;
                 background: #00517e;
-                border-radius: 18px;
-                padding: 8px 24px;
-                box-shadow: 0 0 8px 3px #006b7ea9;
+                border-radius: 4.615vw;
+                padding: 2.05vw 6.15vw;
+                box-shadow: 0 0 2.05vw 0.76vw #006b7ea9;
                 & > span:nth-child(1) {
-                  width: 21px;
-                  height: 21px;
-                  margin-right: 10px;
+                  width: 5.38vw;
+                  height: 5.38vw;
+                  margin-right: 2.564vw;
                   & > svg {
                     width: 100%;
                     height: 100%;
@@ -5404,7 +5409,7 @@ const handlesSliPrev = () => {
                 & > span:nth-child(2) {
                   color: var(--White, #fff);
                   font-family: "Noto Sans HK";
-                  font-size: 16px;
+                  font-size: 4.1vw;
                   font-style: normal;
                   font-weight: 465;
                   line-height: normal;
@@ -5518,23 +5523,23 @@ const handlesSliPrev = () => {
     }
   }
   .orthokeratoplasty-server {
-    margin-top: 55px;
-    padding: 0 25px;
+    margin-top: 14.1vw;
+    padding: 0 6.4vw;
     margin-bottom: 50px;
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 20px 12px;
+      gap: 5.12vw 3.07vw;
       & > div {
         & > div:nth-child(1) {
           // width: 105px;
           // height: 105px;
 
           & > div:nth-child(1) {
-            width: 105px;
-            height: 105px;
-            border-radius: 10.443px;
+            width: 26.92vw;
+            height: 26.92vw;
+            border-radius: 2.67vw;
             background: var(--Skin, #eafbff);
             box-shadow: 0px 0px 2.5px 0px rgba(0, 0, 0, 0.25);
             display: flex;
@@ -5551,10 +5556,10 @@ const handlesSliPrev = () => {
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw; /* 114.286% */
           text-transform: uppercase;
           display: flex;
           flex-direction: column;
@@ -5678,14 +5683,14 @@ const handlesSliPrev = () => {
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 20px 12px;
+      gap: 5.12vw 3.07vw;
       & > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         & > div:nth-child(1) {
-          width: 26.923vw;
-          height: 26.923vw;
+          width: 24.923vw;
+          height: 24.923vw;
           border-radius: 3.5638vw;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 0px 5.652px 0px rgba(0, 0, 0, 0.25);
@@ -5694,7 +5699,7 @@ const handlesSliPrev = () => {
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 15px;
+          margin-top: 3.84vw;
           display: flex;
           flex-direction: column;
           align-items: center;
@@ -5770,9 +5775,9 @@ const handlesSliPrev = () => {
       color: var(--Brand-Color, #00a6ce);
       text-align: justify;
       font-family: "Noto Sans CJK TC";
-      font-size: 3.589vw;
+      font-size: clamp(14px, 3.589vw, 16px);
       font-style: normal;
-      font-weight: 700;
+      font-weight: 500;
       padding: 0 6.15vw;
       line-height: 5.128vw; /* 142.857% */
     }
@@ -6173,15 +6178,15 @@ const handlesSliPrev = () => {
           background-size: 100% 100%;
           color: var(--White, #fff);
           font-family: "Noto Sans CJK TC";
-          font-size: 6.15vw;
+          font-size: 5.15vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 9.06vw; /* 147.277% */
-          letter-spacing: 5.5px;
+          line-height: 6.06vw;
+          letter-spacing: 2.4vw;
           position: relative;
           width: 38.065vw;
-          height: 9.365vw;
-          padding: 3.589vw 2.564vw 1.28vw 3.589vw;
+          height: 7.365vw;
+          padding: 2.789vw 2.564vw 1.78vw 3.589vw;
         }
         & > div:nth-child(2) {
           margin-left: 3.846vw;

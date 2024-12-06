@@ -29,7 +29,7 @@ watch(elementX, (n, o) => {
   if (isDragging.value) {
     let a = (elementX.value + 5) / elementWidth.value;
     if (a < 0) {
-      imgLeft.value = "0px";
+      imgLeft.value = "1%";
     } else if (a > 1) {
       imgLeft.value = "100%";
     } else {
@@ -120,7 +120,7 @@ const judgeTwo = (num: string) => {
           <div v-if="judgeTwo(imgLeft)">
             &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;正常
           </div>
-          <div v-if="judge(imgLeft)">視野缺損</div>
+          <div v-if="judge(imgLeft)" style="color: #0192b0;">視野缺損</div>
         </div>
         <div class="imagetowebp-canvasWebp">
           <div
@@ -721,28 +721,28 @@ const judgeTwo = (num: string) => {
     display: none;
   }
   .faq-box {
-    margin: 25px auto 40px;
-    padding: 0 25px;
+    margin: 6.4vw auto 40px;
+    padding: 0 6.4vw;
   }
   .cataract {
-    margin-bottom: 42px;
+    margin-bottom: 10.78vw;
     & > div:nth-child(1) {
       color: #00a6ce;
       text-align: justify;
       font-family: "Noto Sans HK";
-      font-size: 24px;
+      font-size: 6.15vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 40.107px; /* 167.112% */
-      letter-spacing: 1.2px;
-      margin-bottom: 38px;
+      line-height: 10.76vw; /* 167.112% */
+      letter-spacing: 0.3vw;
+      margin-bottom: 9.7vw;
     }
     & > div:nth-child(2) {
-      border-radius: 18.443px;
+      border-radius: 4.72vw;
       background: var(--Skin, #eafbff);
-      box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 1.9vw 0px rgba(0, 0, 0, 0.25);
       box-sizing: border-box;
-      padding: 21px 18px 25px 25px;
+      padding: 5.38vw 4.61vw 6.4vw 6.4vw;
       :deep(.title-test) {
         margin: auto auto auto 0;
       }
@@ -753,51 +753,51 @@ const judgeTwo = (num: string) => {
           display: flex;
           justify-content: center;
           align-items: baseline;
-          width: 310px;
+          width: 79.5vw;
           & > img {
             width: 100%;
           }
         }
         & > div:nth-child(1) {
-          margin-top: 20px;
+          margin-top: 5.12vw;
           color: #60605f;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 20px; /* 142.857% */
-          letter-spacing: 0.7px;
+          line-height: 5.12vw; /* 142.857% */
+          letter-spacing: 0.17vw;
         }
       }
     }
   }
   .glaucoma-comparison {
-    padding: 0 23px 0 22px;
-    margin-top: 51px;
+    padding: 0 5.8vw 0 5.64vw;
+    margin-top: 13.07vw;
     position: relative;
     & > div:nth-child(1) {
-      margin-bottom: 10px;
+      margin-bottom: 2.5vw;
       display: flex;
       justify-content: center;
-      gap: 0 20px;
+      gap: 0 5.12vw;
       & > div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 26.975px; /* 192.68% */
-        letter-spacing: 0.7px;
+        line-height: 6.9vw; /* 192.68% */
+        letter-spacing: 0.17vw;
       }
       & > div:nth-child(2) {
         color: var(--OkLens-color, #0192b0);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 26.975px; /* 192.68% */
+        line-height: 6.92vw; /* 192.68% */
         letter-spacing: 0.7px;
       }
     }
@@ -806,21 +806,21 @@ const judgeTwo = (num: string) => {
     }
   }
   .glaucoma {
-    margin-top: 42px;
+    margin-top: 10.76vw;
     & > div:nth-child(2) {
-      margin-top: 15px;
+      margin-top: 3.446vw;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 14px;
+      font-size: 3.58vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23px; /* 164.286% */
+      line-height: 5.8vw; /* 164.286% */
     }
   }
   .imagetowebp {
     &-canvasWebp {
-      max-width: 340px;
+      max-width: 87.17vw;
       margin: 0 auto;
       position: relative;
       display: flex;
@@ -828,8 +828,9 @@ const judgeTwo = (num: string) => {
       img {
         //禁止选中
         user-select: none;
-        width: 100%;
+        width: 90%;
         height: auto;
+        border-radius: 10px;
       }
       .yuan {
         width: fit-content;
@@ -844,13 +845,13 @@ const judgeTwo = (num: string) => {
         flex-direction: column;
         align-items: center;
         img {
-          width: 266px;
-          height: 216px;
+          width: 68.205vw;
+          height: 55.3846vw;
         }
       }
       span {
-        width: 36px;
-        height: 293px;
+        width: 9.2vw;
+        height: 75.12vw;
         background: url("https://statichk.cmermedical.com/vision/imgs/905634ed84693ed9.png")
           no-repeat;
         background-size: 100% 100%;
@@ -871,8 +872,8 @@ const judgeTwo = (num: string) => {
       width: fit-content;
       justify-content: center;
       align-items: center;
-      padding: 8px 16px 8px;
-      margin: 15px auto 0;
+      padding: 2.05vw 16px 2.05vw;
+      margin: 3.8vw auto 0;
       // left: -15px;
       & > span {
         display: flex;
@@ -883,25 +884,25 @@ const judgeTwo = (num: string) => {
         color: var(--White, #fff);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 21.042px; /* 150.303% */
+        line-height: 5.3vw; /* 150.303% */
         // letter-spacing: 0.7px;
       }
       & > span:nth-child(1) {
-        width: 21px;
-        height: 21px;
+        width: 5.3vw;
+        height: 5.3vw;
         & > svg {
           width: 100%;
           height: 100%;
         }
       }
       & > span:nth-child(2) {
-        margin: 0 5px;
+        margin: 0 1.2vw;
       }
       & > span:nth-child(3) {
-        width: 10px;
+        width: 2.56vw;
         & > svg {
           width: 100%;
         }
@@ -915,7 +916,7 @@ const judgeTwo = (num: string) => {
       content: "";
       width: 100%;
       height: 100%;
-      border-radius: 21.443px;
+      border-radius: 5.54vw;
       background: var(--OkLens-color, #0192b0);
     }
     & > a::after {
@@ -924,13 +925,13 @@ const judgeTwo = (num: string) => {
       z-index: 3;
       width: 86%;
       text-align: center;
-      height: 30px;
+      height: 7.6vw;
       display: inline-block;
-      bottom: -10px;
+      bottom: -2.5vw;
       left: 50%;
-      border-radius: 21.443px;
+      border-radius: 5.54vw;
       background: var(--OkLens-color, #0192b0);
-      filter: blur(15px); /* 添加模糊效果 */
+      filter: blur(3.8vw); /* 添加模糊效果 */
       transform: translateX(-50%) scaleY(-1) rotate(180deg);
     }
   }
@@ -943,13 +944,13 @@ const judgeTwo = (num: string) => {
     }
   }
   .maculopathy {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-radius: 18.443px;
+    margin-top: 10.25vw;
+    margin-bottom: 10.25vw;
+    border-radius: 4.72vw;
     background: var(--Skin, #eafbff);
-    box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 1.9vw 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 25px 18px 24px 25px;
+    padding: 6.4vw 4.6vw 6.15vw 6.4vw;
     :deep(.title-test) {
       margin: auto auto auto 0;
     }
@@ -957,7 +958,7 @@ const judgeTwo = (num: string) => {
       display: flex;
       flex-direction: column-reverse;
       & > div:nth-child(2) {
-        margin-top: 20px;
+        margin-top: 5.12vw;
         display: flex;
         justify-content: center;
         & > div {
@@ -974,11 +975,11 @@ const judgeTwo = (num: string) => {
           & > div:nth-child(2) {
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 16px;
+            font-size: 4.1vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 21.987px; /* 137.421% */
-            letter-spacing: 0.8px;
+            line-height: 5.6vw; /* 137.421% */
+            letter-spacing: 0.2vw;
           }
         }
         & > div:nth-child(1) {
@@ -993,90 +994,90 @@ const judgeTwo = (num: string) => {
         }
       }
       & > div:nth-child(1) {
-        margin-top: 20px;
+        margin-top: 5.128vw;
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 22px; /* 157.143% */
-        letter-spacing: 0.7px;
+        line-height: 5.6vw; /* 157.143% */
+        letter-spacing: 0.17vw;
       }
     }
   }
   .muscae-volitantes {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-radius: 18.443px;
+    margin-top: 10.25vw;
+    margin-bottom: 10.25vw;
+    border-radius: 4.72vw;
     background: var(--Skin, #eafbff);
-    box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 1.92vw 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 25px 18px 24px 25px;
+    padding: 6.4vw 4.6vw 6.15vw 6.4vw;
     :deep(.title-test) {
       margin: auto auto auto 0;
     }
     & > div:nth-child(2) {
-      margin-top: 15px;
+      margin-top: 3.8vw;
       & > div:nth-child(1) {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        gap: 20px 28px;
+        gap: 5.12vw 7.17vw;
         & > div {
           display: flex;
           flex-direction: column;
           & > div:nth-child(1) {
-            width: 132.604px;
-            height: 132.604px;
+            width: 34vw;
+            height: 34vw;
             & > img {
               width: 100%;
               height: auto;
             }
           }
           & > div:nth-child(2) {
-            margin-top: 6px;
+            margin-top: 1.5vw;
             color: var(--Deep-Blue, #3e5270);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 15.807px;
+            font-size: 4.05vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 29.858px; /* 188.889% */
-            letter-spacing: 0.79px;
+            line-height: 7.65vw; /* 188.889% */
+            letter-spacing: 0.2vw;
           }
         }
       }
       & > div:nth-child(2) {
-        margin-top: 20px;
+        margin-top: 5.12vw;
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 22px; /* 157.143% */
+        line-height: 5.6vw; /* 157.143% */
         letter-spacing: 0.7px;
       }
     }
   }
   .retinopathy {
-    margin-top: 40px;
-    margin-bottom: 34px;
-    border-radius: 18.443px;
+    margin-top: 10.25vw;
+    margin-bottom: 8.717vw;
+    border-radius: 4.7vw;
     background: var(--Skin, #eafbff);
-    box-shadow: 0px 0px 7.5px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 1.9vw 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 25px 18px 24px 25px;
+    padding: 6.4vw 4.6vw 6.15vw 6.4vw;
     :deep(.title-test) {
       margin: auto auto auto 0;
     }
     & > div:nth-child(2) {
       display: flex;
       flex-direction: column-reverse;
-      gap: 18px 0;
+      gap: 4.615vw 0;
       & > div:nth-child(2) {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 281px;
+        width: 72.05vw;
         margin: 0 auto;
         & > img {
           width: 100%;
@@ -1085,24 +1086,24 @@ const judgeTwo = (num: string) => {
       & > div:nth-child(1) {
         color: #60605f;
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 22px; /* 157.143% */
+        line-height: 5.6vw; /* 157.143% */
         letter-spacing: 0.7px;
       }
     }
   }
   .assess {
-    margin-top: 35px;
+    margin-top: 8.97vw;
     background: url("https://statichk.cmermedical.com/vision/imgs/92a1b1c25210081b.png")
       no-repeat;
     background-size: 100% 100%;
-    border-radius: 13.723px;
-    box-shadow: 0px 2.745px 6.861px 0px rgba(0, 0, 0, 0.25);
-    min-height: 340px;
+    border-radius: 3.5vw;
+    box-shadow: 0px 0.7vw 1.75vw 0px rgba(0, 0, 0, 0.25);
+    min-height: 87.17vw;
     display: flex;
-    padding: 74px 8px 90px 8px;
+    padding: 18.9vw 2.05vw 23.07vw 2.05vw;
     box-sizing: border-box;
     & > div:nth-child(1) {
       flex: 4;
@@ -1114,19 +1115,19 @@ const judgeTwo = (num: string) => {
         color: var(--Deep-Blue, #3e5270);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 22px;
+        font-size: 5.64vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 24px; /* 109.091% */
+        line-height: 6.15vw; /* 109.091% */
         letter-spacing: 1.1px;
-        margin-bottom: 10px;
+        margin-bottom: 2.56vw;
         & > span:nth-child(1) {
           display: block;
-          font-size: 14px;
+          font-size: 3.5vw;
         }
         & > span {
           display: inline;
-          font-size: 14px;
+          font-size: 3.5vw;
         }
         // margin-bottom: 30px;
         // padding: 50px 0;

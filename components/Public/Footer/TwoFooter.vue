@@ -125,11 +125,11 @@ const menuList = ref([
         title: "服務内容",
         path: "/services",
       },
-      {
-        id: "4",
-        title: "人工智能健康篩查",
-        path: "/services/ai-screening",
-      },
+      //{
+      //  id: "4",
+      //  title: "人工智能健康篩查",
+      //  path: "/services/ai-screening",
+      //},
       {
         id: "2",
         title: "收費詳情",
@@ -464,19 +464,19 @@ const showThreeLevel = () => {
       justify-content: center;
       color: var(--Grey, #4d4d4d);
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.5vw;
       font-style: normal;
       font-weight: 400;
-      line-height: 30px;
+      line-height: 7.6vw;
       & > a {
         color: var(--Grey, #4d4d4d);
-        margin: 0 10px;
+        margin: 0 2.5vw;
       }
     }
   }
   .footer-menuList {
-    margin-top: 40px;
-    margin-bottom: 12px;
+    margin-top: 10.25vw;
+    margin-bottom: 3.07vw;
 
     & > div {
       & > a {

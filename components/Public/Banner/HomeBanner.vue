@@ -337,7 +337,7 @@ const handleshowdeBox = (_idx: any) => {
       max-width: 1735px;
       max-height: 800px;
       width: 100vw;
-      margin: 136px auto 0;
+      margin: 130px auto 0;
       object-fit: cover;
       object-position: center;
 

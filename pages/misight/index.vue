@@ -1782,16 +1782,18 @@ const miSightQuestionList = [
     & > div:nth-child(2) {
       margin: 20px auto;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       justify-content: center;
+      align-items: center;
       p {
         text-align: center;
         margin-bottom: 20px;
-        width: 100vw;
+        width: fit-content;
         color: var(--Grey, #4d4d4d);
         font-family: "Noto Sans HK";
       }
       :deep(.btn) {
+        margin-left: 10%;
         .slot {
           & > div {
             border-radius: 20px;
@@ -2631,17 +2633,17 @@ const miSightQuestionList = [
 }
 @media screen and (max-width: 767px) {
   .misight-container {
-    margin-top: 25px;
-    margin-bottom: 40px;
+    margin-top: 6.4vw;
+    margin-bottom: 10.25vw;
     & > div {
-      padding: 0 25px;
+      padding: 0 6.4vw;
     }
   }
   .misight-step {
     padding: 0 !important;
     background: #eafbff;
     & > div {
-      padding: 24px 25px 42px;
+      padding: 6.15vw 6.4vw 10.69vw;
       & > div:nth-child(1) {
         display: flex;
         flex-direction: column;
@@ -2649,26 +2651,26 @@ const miSightQuestionList = [
         color: #00a6ce;
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size: 6.15vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 40.107px; /* 167.112% */
+        line-height: 10.28vw; /* 167.112% */
       }
       & > div:nth-child(2) {
-        margin-top: 20px;
-        border-radius: 20px;
+        margin-top: 5.128vw;
+        border-radius: 5.128vw;
         background: var(--White, #fff);
-        padding: 30px 32px 30px 25px;
+        padding: 7.6vw 8.2vw 7.69vw 6.4vw;
         box-sizing: border-box;
         & > div {
           & > div {
             display: flex;
             color: #60605f;
             font-family: "Noto Sans HK";
-            font-size: 14px;
+            font-size: 3.5vw;
             font-style: normal;
             font-weight: 600;
-            line-height: 20.566px;
+            line-height: 5.25vw;
             & > div:nth-child(1) {
               flex: 2.4;
             }
@@ -2684,33 +2686,33 @@ const miSightQuestionList = [
           & > div::after {
             position: absolute;
             bottom: 0;
-            left: 28px;
-            width: 1.97px;
-            height: 35px;
-            border-radius: 1.97px;
+            left: 7.17vw;
+            width: 0.5vw;
+            height: 8.9vw;
+            border-radius: 0.5vw;
             background: #4d4d4d;
             content: "";
           }
         }
         & > div:nth-child(1) {
           & > div:nth-child(1) {
-            margin-bottom: 18px;
+            margin-bottom: 4.6vw;
           }
           & > div:nth-child(1)::after {
-            bottom: -15px;
+            bottom: -3.846vw;
           }
           & > div:nth-child(2)::after {
-            bottom: -32px;
-            height: 48px;
+            bottom: -8.2vw;
+            height: 12.3vw;
           }
-          margin-bottom: 35px;
+          margin-bottom: 8.9vw;
         }
         & > div:nth-child(2) {
           & > div:nth-child(1) {
-            margin-bottom: 35px;
+            margin-bottom: 8.9vw;
           }
           & > div:nth-child(1)::after {
-            bottom: -35px;
+            bottom: -8.9vw;
           }
           & > div:nth-child(2)::after {
             content: none;
@@ -2720,15 +2722,14 @@ const miSightQuestionList = [
     }
   }
   // 佩戴時間及方法
-   
   .misight-bg-blue {
     padding:0px !important;
-    border-radius: 15px;
+    border-radius: 3.84vw;
     background: url(https://statichk.cmermedical.com/vision/imgs/a942b886563dffc3.jpg)
       no-repeat;
     height: 81.5vw;
     max-width: 100%;
-    margin: 40px auto;
+    margin: 10.25vw auto;
     box-sizing: border-box;
     max-width: 87.17vw;
     background-size: cover;
@@ -2737,18 +2738,18 @@ const miSightQuestionList = [
       flex: 4.5;
     }
     & > div:nth-child(2) {
-      padding-top: 15px;
+      padding-top: 3.84vw;
       flex: 5.5;
       & > div:nth-child(1) {
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.5vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 33.887px; /* 242.052% */
+        line-height: 8.65vw; /* 242.052% */
         width: fit-content;
-        margin-top: 20px;
-        margin-bottom: 20px;
+        margin-top: 5.12vw;
+        margin-bottom: 5.12vw;
         // margin-bottom: 10.25vw;
       }
       & > div:nth-child(2) {
@@ -2756,10 +2757,10 @@ const miSightQuestionList = [
         flex-direction: column;
         color: var(--White, #fff);
         font-family: "Noto Sans CJK TC";
-        font-size: 13px;
+        font-size: 3.33vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 33.887px; /* 242.052% */
+        line-height: 8.65vw; /* 242.052% */
         & > span {
           position: relative;
           // margin-bottom: 25px;
@@ -2773,11 +2774,11 @@ const miSightQuestionList = [
             no-repeat;
           background-size: 100% 100%;
           display: inline-block;
-          width: 18.901px;
-          height: 12.343px;
+          width: 4.8vw;
+          height: 3.16vw;
           position: absolute;
-          left: -30px;
-          top: 14px;
+          left: -7.69vw;
+          top: 3.5vw;
         }
       }
     }
@@ -2785,31 +2786,31 @@ const miSightQuestionList = [
 
   .misight-step-four {
     padding: 0 !important;
-    margin-top: 40px;
+    margin-top: 10.25vw;
     & > div:nth-child(1) {
-      max-width: calc(100% - 50px);
+      max-width: calc(100% - 12.8vw);
       margin: 0 auto;
       width: 100%;
       background: var(--Skin, #eafbff);
-      box-shadow: 0px 0px 2.646px rgba(0, 0, 0, 0.25);
+      box-shadow: 0px 0px 0.6vw rgba(0, 0, 0, 0.25);
       box-sizing: border-box;
-      padding: 10px 20px 25px;
+      padding: 2.5vw 5.12vw 6.4vw;
       & > div:nth-child(1) {
         color: #00a6ce;
         text-align: justify;
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size: 6.15vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 40.107px; /* 167.112% */
-        letter-spacing: 1.2px;
+        line-height: 10.25vw; /* 167.112% */
+        letter-spacing: 0.3vw;
         text-align: center;
-        margin-bottom: 20px;
+        margin-bottom: 5.12vw;
       }
       & > div:nth-child(2) {
         display: grid;
         grid-template-columns: auto auto;
-        gap: 30px 55px;
+        gap: 7.69vw 14.12vw;
         & > div {
           display: flex;
           flex-direction: column;
@@ -2817,13 +2818,13 @@ const miSightQuestionList = [
           & > div:nth-child(1) {
             color: var(--Theme-Color, #17aed2);
             font-family: "Noto Sans HK";
-            font-size: 17.887px;
+            font-size: 4.586vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 26.831px; /* 150% */
+            line-height: 6.879vw; /* 150% */
             letter-spacing: 0.894px;
-            width: 36.967px;
-            height: 36.967px;
+            width: 9.47vw;
+            height: 9.47vw;
             position: relative;
             display: flex;
             justify-content: center;
@@ -2837,12 +2838,12 @@ const miSightQuestionList = [
               no-repeat;
             background-size: 100% 100%;
             content: "";
-            width: 36.967px;
-            height: 36.967px;
+            width: 9.47vw;
+            height: 9.47vw;
           }
           & > div:nth-child(2) {
-            width: 108px;
-            height: 78px;
+            width: 27.69vw;
+            height: 20vw;
             & > svg {
               width: 100%;
               height: 100%;
@@ -2854,29 +2855,32 @@ const miSightQuestionList = [
             align-items: center;
             color: #3e5270;
             font-family: "Noto Sans HK";
-            font-size: 14px;
+            font-size: 3.56vw;
             font-style: normal;
             font-weight: 500;
-            line-height: 18px; /* 128.571% */
+            line-height: 4.615vw; /* 128.571% */
             text-transform: uppercase;
           }
         }
       }
     }
     & > div:nth-child(2) {
-      margin: 20px auto;
+      margin: 5.12vw auto;
       display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
+      // justify-content: center;
+      flex-direction: column;
+      // flex-wrap: wrap;
+      align-items: center;
       p {
         text-align: center;
-        margin-bottom: 20px;
-        width: 100vw;
+        margin-bottom: 5.12vw;
+        width: fit-content;
         color: var(--Grey, #4d4d4d);
         font-family: "Noto Sans HK";
-        font-size: 10px;
+        font-size: 2.5vw;
       }
       :deep(.btn) {
+        margin-left: 10%;
         .slot {
           & > div {
             background: linear-gradient(
@@ -2895,19 +2899,19 @@ const miSightQuestionList = [
       color: var(--Grey-Deep, #4d4d4d);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 9px;
+      font-size: 2.3vw;
       font-style: normal;
       font-weight: 400;
-      line-height: 10px; /* 111.111% */
+      line-height: 2.56vw; /* 111.111% */
       letter-spacing: 0.45px;
-      padding: 0 15px;
+      padding: 0 3.84vw;
       & > p:nth-child(2),
       & > p:nth-child(3) {
         display: inline;
       }
     }
     & > a {
-      margin: 35px auto;
+      margin: 8.97vw auto;
       width: fit-content;
       display: flex;
       align-items: center;
@@ -2915,10 +2919,10 @@ const miSightQuestionList = [
       position: relative;
       z-index: 10;
       & > span:nth-child(1) {
-        margin-right: 7px;
+        margin-right: 1.78vw;
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size: 3.58vw;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -2927,19 +2931,19 @@ const miSightQuestionList = [
         z-index: 10;
       }
       & > span:nth-child(2) {
-        width: 21.892px;
-        height: 21.892px;
+        width: 5.612vw;
+        height: 5.612vw;
         border-radius: 50%;
         background: #fff;
-        box-shadow: 2px 1px 6px rgba(0, 0, 0, 0.25);
+        box-shadow: 0.51vw 0.25vw 0.15vw rgba(0, 0, 0, 0.25);
         display: flex;
         justify-content: center;
         align-items: center;
         position: relative;
         z-index: 10;
         & > svg {
-          width: 14.74px;
-          height: 14.79px;
+          width: 3.78vw;
+          height: 0.37vw;
         }
       }
     }
@@ -2948,9 +2952,9 @@ const miSightQuestionList = [
       position: absolute;
       z-index: 7;
       display: inline-block;
-      width: 109.458px;
-      height: 28.066px;
-      border-radius: 11.226px;
+      width: 28.06vw;
+      height: 7.19vw;
+      border-radius: 2.87vw;
       border: 3px solid #ffffff;
       background: var(
         --Misight,
@@ -2962,11 +2966,11 @@ const miSightQuestionList = [
       content: "";
       position: absolute;
       z-index: 5;
-      width: 119px;
-      height: 35.925px;
+      width: 30.51vw;
+      height: 8.97vw;
       display: inline-block;
-      border-radius: 14.033px;
-      border: 2px solid var(--Misight, #efa83e);
+      border-radius: 3.58vw;
+      border: 0.5vw solid var(--Misight, #efa83e);
     }
 
     .dowloadPdf {
@@ -2974,35 +2978,35 @@ const miSightQuestionList = [
       justify-content: space-around;
     }
     .btn-pdf {
-      margin-top: 20px;
+      margin-top: 5.12vw;
 
       display: flex;
       flex-direction: column;
       align-items: center;
       & > div:nth-child(1) {
-        width: 87.61px;
-        height: 107.935px;
+        width: 22.46vw;
+        height: 27.67vw;
         & > img {
           width: 100%;
           height: 100%;
         }
       }
       & > a {
-        margin-top: 22px;
+        margin-top: 5.64vw;
         background: #00517e;
         border: 1px solid #02ed85;
-        border-radius: 24px;
-        padding: 8px 24px;
-        box-shadow: 0 0 16px 3px #45a9bd;
+        border-radius: 6.158vw;
+        padding: 2.05vw 6.15vw;
+        box-shadow: 0 0 4.1vw 0.76vw #45a9bd;
         display: flex;
         align-items: center;
-        gap: 0 12px;
+        gap: 0 0.3vw;
         & > span {
           display: flex;
           align-items: center;
           color: #fff;
           font-family: "Noto Sans HK";
-          font-size: 15.862px;
+          font-size: 4.06vw;
           font-style: normal;
           font-weight: 465;
           line-height: normal;
@@ -3021,7 +3025,7 @@ const miSightQuestionList = [
         content: "";
         position: absolute;
         // animation: btntestafterAnima 3s infinite ease-in-out;
-        border-radius: 24px;
+        border-radius: 6.15vw;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);
@@ -3029,37 +3033,37 @@ const miSightQuestionList = [
     }
   }
   .misight-question {
-    margin-top: 32px;
-    margin-bottom: 40px;
-    padding: 0 20px 0 24px !important;
+    margin-top: 0.8vw;
+    margin-bottom: 10.25vw;
+    padding: 0 5.12vw 0 6.15vw !important;
     :deep(.el-collapse) {
       .el-collapse-item__header {
-        padding: 9px 35px;
+        padding: 2.3vw 8.9vw;
         justify-content: space-evenly;
       }
       .el-collapse-item__header::before {
-        left: 10px;
+        left: 2.5vw;
       }
       .el-collapse-item__arrow {
         position: absolute;
-        right: 10px;
+        right: 2.5vw;
       }
     }
   }
   .misight-serve-content {
-    margin-top: 70px;
-    margin-bottom: 20px;
+    margin-top: 17.94vw;
+    margin-bottom: 5.12vw;
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 14px 12px;
+      gap: 3.58vw 3.07vw;
       & > div {
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
+          width: 26.9vw;
+          height: 26.9vw;
           background: #e4faff;
-          border-radius: 15px;
+          border-radius: 3.84vw;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
@@ -3069,21 +3073,21 @@ const miSightQuestionList = [
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw; /* 114.286% */
           text-transform: uppercase;
-          margin-top: 17px;
+          margin-top: 4.35vw;
           display: flex;
           flex-direction: column;
           & > span:nth-child(3) {
             color: #60605f;
             font-family: "Noto Sans HK";
-            font-size: 10px;
+            font-size: 2.5vw;
             font-style: normal;
             font-weight: 500;
-            line-height: 16px;
+            line-height: 4.1vw;
             text-transform: uppercase;
           }
         }
@@ -3091,75 +3095,75 @@ const miSightQuestionList = [
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 72px;
-            height: 47.226px;
+            width: 18.4vw;
+            height: 12.1vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 75.475px;
-            height: 48.716px;
+            width: 19.35vw;
+            height: 12.4vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 73.319px;
-            height: 51.562px;
+            width: 18.78vw;
+            height: 13.2vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 58.224px;
-            height: 58.224px;
+            width: 14.92vw;
+            height: 14.92vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 61.767px;
-            height: 61.767px;
+            width: 15.83vw;
+            height: 15.83vw;
           }
         }
       }
     }
     & > div:nth-child(3) {
-      margin-top: 20px;
+      margin-top: 5.12vw;
       color: var(--Sales, #00a6ce);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.58vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 20px; /* 142.857% */
+      line-height: 5.12vw; /* 142.857% */
     }
   }
   .misight-crowd-content {
-    margin-top: 40px;
+    margin-top: 10.25vw;
     & > div:nth-child(1) {
       color: #00a6ce;
       font-family: "Noto Sans HK";
-      font-size: 20px;
+      font-size: 5.12vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      margin-bottom: 16px;
+      margin-bottom: 4.1vw;
     }
     & > div:nth-child(2) {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px 12px;
+      gap: 5.6vw 3.01vw;
       & > div {
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
-          border-radius: 10px;
+          width: 26.92vw;
+          height: 26.92vw;
+          border-radius: 2.564vw;
           background: #e4faff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           display: flex;
@@ -3167,96 +3171,96 @@ const miSightQuestionList = [
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top: 4.35vw;
           display: flex;
           flex-direction: column;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 128.571% */
+          line-height: 4.6vw; /* 128.571% */
           text-transform: uppercase;
         }
       }
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 35.908px;
-            height: 57.951px;
+            width: 9.17vw;
+            height: 14.85vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 54.859px;
-            height: 58.723px;
+            width: 14.05vw;
+            height: 15.05vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 67.01px;
-            height: 54.645px;
+            width: 17.18vw;
+            height: 14vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 48.498px;
-            height: 56.734px;
+            width: 12.4vw;
+            height: 14.5vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 67.826px;
-            height: 54.863px;
+            width: 17.38vw;
+            height: 14.06vw;
           }
         }
       }
       & > div:nth-child(6) {
         & > div:nth-child(1) {
           & > svg {
-            width: 68.185px;
-            height: 52.51px;
+            width: 17.48vw;
+            height: 13.4vw;
           }
         }
       }
     }
   }
   .misight-merit-content {
-    margin-top: 85px;
+    margin-top: 21.7vw;
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 15.65px;
+          font-size: 4.01vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 23.475px; /* 150% */
-          letter-spacing: 0.783px;
+          line-height: 6.01vw; /* 150% */
+          letter-spacing: 0.2vw;
         }
         & > div:nth-child(2) {
-          padding-left: 30px;
+          padding-left: 7.6vw;
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 20px;
+          font-size: 5.128vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 31.3px; /* 156.5% */
+          line-height: 8.02vw; /* 156.5% */
           letter-spacing: 1px;
         }
-        margin-bottom: 10px;
+        margin-bottom: 2.5vw;
       }
       & > div:nth-child(2) {
-        max-width: 388px;
+        max-width: 99.5vw;
         margin: 0 auto;
         & > img {
           width: 100%;
@@ -3264,92 +3268,92 @@ const miSightQuestionList = [
       }
     }
     & > div:nth-child(2) {
-      margin-top: 23px;
+      margin-top: 5.8vw;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 22px 12px;
+      gap: 5.64vw 3.07vw;
       & > div {
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
+          width: 26.92vw;
+          height: 26.92vw;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 15px;
+          border-radius: 3.846vw;
           background: #e4faff;
           display: flex;
           justify-content: center;
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 14px;
+          margin-top: 3.58vw;
           display: flex;
           flex-direction: column;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 128.571% */
+          line-height: 4.6vw; /* 128.571% */
           text-transform: uppercase;
         }
       }
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 51px;
-            height: 66.37px;
+            width: 13.07vw;
+            height: 17.01vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 49.872px;
-            height: 54.325px;
+            width: 12.788vw;
+            height: 13.9vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 60.933px;
-            height: 62.925px;
+            width: 15.62vw;
+            height: 16.14vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 60.843px;
-            height: 54.89px;
+            width: 15.6vw;
+            height: 14.078vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 84.782px;
-            height: 57.824px;
+            width: 21.732vw;
+            height: 14.825vw;
           }
         }
       }
     }
   }
   .misight-effect-content {
-    margin-top: 48px;
+    margin-top: 12.3vw;
     & > div:nth-child(2) {
-      margin-top: 14px;
-      margin-bottom: 28px;
+      margin-top: 3.5vw;
+      margin-bottom: 7.17vw;
       & > p {
         display: inline;
       }
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.5vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23.007px; /* 164.334% */
+      line-height: 5.8vw; /* 164.334% */
       letter-spacing: -0.07px;
     }
     & > div:nth-child(3) {
@@ -3357,38 +3361,38 @@ const miSightQuestionList = [
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 18px;
+        font-size: 4.615vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 22.898px; /* 127.211% */
+        line-height: 5.86vw; /* 127.211% */
         letter-spacing: 0.9px;
       }
       & > div:nth-child(2) {
-        margin-top: 20px;
+        margin-top: 5.12vw;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 0 20px;
+        gap: 0 5.12vw;
         & > div {
           position: relative;
           & > div:nth-child(1) {
             color: #60605f;
             text-align: center;
             font-family: "Noto Sans CJK TC";
-            font-size: 14px;
+            font-size: 3.5vw;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
             letter-spacing: 1.4px;
           }
           & > div:nth-child(2) {
-            padding-left: 12px;
+            padding-left: 3.07vw;
             font-family: "Noto Sans CJK TC";
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            font-size: 43.842px;
+            font-size: 11.2vw;
             & > span:nth-child(2) {
-              font-size: 21.747px;
+              font-size: 5.567vw;
             }
           }
           & > div:nth-child(3) {
@@ -3396,10 +3400,10 @@ const miSightQuestionList = [
             color: #60605f;
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 10px;
+            font-size: 2.564vw;
             font-style: normal;
             font-weight: 400;
-            line-height: 12px; /* 120% */
+            line-height: 3.074vw; /* 120% */
             letter-spacing: 0.5px;
           }
         }
@@ -3423,28 +3427,28 @@ const miSightQuestionList = [
   }
   .misight-theory-content {
     .misight-tip {
-      max-width: 346px;
+      max-width: 88.717vw;
       width: 100%;
-      margin: 10px auto;
+      margin: 2.56vw auto;
       flex-shrink: 0;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.5vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23.007px; /* 164.334% */
+      line-height: 5.8vw; /* 164.334% */
       letter-spacing: -0.07px;
     }
 
-    margin-top: 14px;
+    margin-top: 3.5vw;
     & > div:nth-child(1) {
       color: #60605f;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.5vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 23.007px;
+      line-height: 5.8vw;
       letter-spacing: -0.07px;
       text-align: center;
       span {
@@ -3452,54 +3456,54 @@ const miSightQuestionList = [
       }
     }
     & > div:nth-child(2) {
-      border-radius: 30px;
+      border-radius: 7.6vw;
       background: var(--Skin, #eafbff);
-      box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
-      padding: 30px 25px;
+      box-shadow: 0px 0px 2.5vw 0px rgba(0, 0, 0, 0.25);
+      padding: 7.6vw 6.4vw;
       box-sizing: border-box;
-      margin-top: 20px;
+      margin-top: 5.12vw;
       & > div:nth-child(1) {
         & > div {
-          margin-bottom: 10px;
+          margin-bottom: 2.5vw;
           & > div:nth-child(1) {
             color: var(--Brand-Color, #00a6ce);
             font-family: "Noto Sans HK";
-            font-size: 16px;
+            font-size: 4.1vw;
             font-style: normal;
             font-weight: 700;
-            line-height: 19.257px; /* 120.357% */
+            line-height: 4.93vw; /* 120.357% */
           }
           & > div:last-child {
             color: #60605f;
             text-align: justify;
             font-family: "Noto Sans HK";
-            font-size: 14px;
+            font-size: 3.5vw;
             font-style: normal;
             font-weight: 500;
-            line-height: 23px; /* 164.286% */
+            line-height: 5.8vw; /* 164.286% */
           }
         }
         & > div:nth-child(1) {
           & > div:nth-child(2) {
-            margin: 40px 0 16px;
+            margin: 10.25vw 0 4.1vw;
             display: flex;
             justify-content: center;
             align-items: center;
             & > img {
-              width: 180.628px;
-              height: 180.624px;
+              width: 43.314vw;
+              height: 43.314vw;
             }
           }
         }
         & > div:nth-child(2) {
           & > div:nth-child(2) {
-            margin: 22px 0 31px;
+            margin: 5.6vw 0 7.9vw;
             display: flex;
             justify-content: center;
             align-items: center;
             & > img {
-              width: 298.233px;
-              height: 173px;
+              width: 76.47vw;
+              height: 44.35vw;
             }
           }
         }
@@ -3512,17 +3516,17 @@ const miSightQuestionList = [
           display: flex;
           color: var(--Dark-Grey, var(--Deep-Blue, #3e5270));
           font-family: "Noto Sans CJK TC";
-          font-size: 14px;
+          font-size: 3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 212.475% */
+          line-height: 4.6vw; /* 212.475% */
         }
         & > div::before {
           content: "";
-          min-width: 17.588px;
-          width: 17.588px;
-          height: 17.634px;
-          margin-right: 7.5px;
+          min-width: 4.5vw;
+          width: 4.5vw;
+          height: 4.5vw;
+          margin-right: 1.9vw;
           background: #6b2a7e;
           display: block;
         }
@@ -3539,23 +3543,23 @@ const miSightQuestionList = [
     // width: 100%;
     // min-height: 390px;
     // position: relative;
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 22.3vw;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      bottom: 7.6vw;
+      right: 5.12vw;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 28px;
+      font-size: 7.17vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 5.6px;
+      letter-spacing: 1.4vw;
     }
   }
 }

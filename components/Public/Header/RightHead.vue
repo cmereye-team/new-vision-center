@@ -147,11 +147,11 @@ const menuList = ref([
         title: "服務内容",
         path: "/services",
       },
-      {
-        id: "4",
-        title: "人工智能健康篩查",
-        path: "/services/ai-screening",
-      },
+      //{
+      //  id: "4",
+      //  title: "人工智能健康篩查",
+      //  path: "/services/ai-screening",
+      //},
       {
         id: "2",
         title: "收費詳情",
@@ -294,7 +294,7 @@ const handleMouseleave = () => {
         v-for="(item, index) in menuList"
         :key="item.id"
         class="fa-path"
-        :class="`fa-${index + 1}`"
+        :class="[`fa-${index + 1}`,item?.childrenList?.length > 0? 'isChildNode' : 'noNodeChild']"
       >
         <nuxt-link
           :to="item.path == '/' ? headLink(index, item) : item.path"
@@ -308,9 +308,21 @@ const handleMouseleave = () => {
               :key="child.id"
               class="son-menu"
               @click="isThreeLevel(child) ? showThreeLevel() : pathIsTrue()"
+              :class="[
+                child.path === '/services/ai-screening'
+                  ? 'is_ai_screening'
+                  : '',
+              ]"
             >
               <nuxt-link :to="child.path == '/' ? '' : child.path"
-                ><span>{{ child.title }}</span>
+                ><span
+                  :class="[
+                    child.path === '/services/ai-screening'
+                      ? 'ai_screening_title'
+                      : '',
+                  ]"
+                  >{{ child.title }}
+                </span>
               </nuxt-link>
               <div v-if="isShowChildList" :class="`three-level-${childIndex}`">
                 <div
@@ -451,27 +463,27 @@ const handleMouseleave = () => {
     & > div:nth-child(1),
     & > div:nth-child(2),
     & > div:nth-child(5) {
-      &>a {
+      & > a {
         padding: 0.5vw 2.1875vw;
       }
     }
     & > div:nth-child(3) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.1875vw;
       }
     }
     & > div:nth-child(4) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.302vw;
       }
     }
     & > div:nth-child(6) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.5vw 0.5vw 1.8vw;
       }
     }
     & > div:nth-child(7) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.5vw 0.5vw 1.8vw;
       }
     }
@@ -479,16 +491,22 @@ const handleMouseleave = () => {
   .fa-path {
     position: relative;
   }
-  .fa-path::after {
+  .isChildNode::after {
     content: "";
     position: absolute;
     width: 100%;
     height: 50px;
     background: #00a5ce00;
-    bottom: -80%;
+    // background:palegoldenrod;
+    bottom: -120%;
     z-index: 5;
     left: 50%;
     transform: translateX(-50%);
+  }
+  .noNodeChild {
+    a {
+      cursor: pointer;
+    }
   }
   .fade-leave-active {
     transition: opacity 3s;
@@ -953,23 +971,23 @@ const handleMouseleave = () => {
     & > div:nth-child(1),
     & > div:nth-child(2),
     & > div:nth-child(5) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.302vw;
       }
     }
     & > div:nth-child(4),
     & > div:nth-child(3) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.302vw;
       }
     }
     & > div:nth-child(6) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.302vw;
       }
     }
     & > div:nth-child(7) {
-      &>a {
+      & > a {
         padding: 0.5vw 1.302vw;
       }
     }
@@ -1043,7 +1061,7 @@ const handleMouseleave = () => {
       font-style: normal;
       font-weight: 700;
       line-height: 20px;
-      padding: 15px 50px 0 50px;
+      padding: 15px 40px 0 40px;
       display: block;
       & > span {
         padding-bottom: 10px;
@@ -1052,6 +1070,31 @@ const handleMouseleave = () => {
         display: inline-block;
       }
     }
+  }
+  .is_ai_screening {
+    & > a {
+      & > span {
+        min-width: 155px;
+      }
+    }
+  }
+  .ai_screening_title {
+    position: relative;
+  }
+  .ai_screening_title::before{
+    left: -25px !important;
+    top: 35% !important;
+  }
+  .ai_screening_title::after {
+    content: "";
+    position: absolute;
+    background: url(https://statichk.cmermedical.com/hkcmereye/LAL/iconNew.svg)
+      no-repeat;
+    width: 50px;
+    height: 22px;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
   }
   .router-link-active {
     color: #00a6ce !important;
@@ -1091,7 +1134,7 @@ const handleMouseleave = () => {
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
       background: #fff;
-      right: -82.2%;
+      right: -89.2%;
       top: -68%;
       border-radius: 5px;
       padding: 15px 0;
@@ -1142,7 +1185,7 @@ const handleMouseleave = () => {
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: -104%;
+      right: -114%;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
       background: #fff;

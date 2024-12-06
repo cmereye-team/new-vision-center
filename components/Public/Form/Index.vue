@@ -142,10 +142,10 @@ const ruleForm = reactive({
 const telValidator = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error("請輸入手機號"));
+    dataAllUnauthorized("輸入手機號为空");
   } else if (String(value).length < 8) {
     callback(new Error("手機號格式不正確"));
-  } else if (String(value).length > 8) {
-    callback(new Error("手機號格式不正確"));
+    dataAllUnauthorized("手機號格式错误");
   } else {
     callback();
   }
@@ -153,10 +153,24 @@ const telValidator = (rule: any, value: any, callback: any) => {
 const nameFormat = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error("請輸入姓名"));
+    dataAllUnauthorized("輸入姓名为空");
   } else if (/^\d+$/.test(value)) {
     callback(new Error("姓名不能是數字"));
+    dataAllUnauthorized("姓名类型是數字");
   } else if (value.length < 2 || value.length > 25) {
     callback(new Error("長度應該是2到25"));
+    dataAllUnauthorized("長度應該错误");
+  } else {
+    callback();
+  }
+};
+const emailFormat = (rule: any, value: any, callback: any) => {
+  if (!value) {
+    callback(new Error("請輸入電子郵件地址"));
+    dataAllUnauthorized("電子郵件地址未輸入");
+  } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
+    callback(new Error("請輸入正確的電子郵件地址"));
+    dataAllUnauthorized("電子郵件地址格式错误");
   } else {
     callback();
   }
@@ -164,13 +178,7 @@ const nameFormat = (rule: any, value: any, callback: any) => {
 const rules = reactive<FormRules>({
   name: [{ required: true, validator: nameFormat, trigger: "blur" }],
   tel: [{ required: true, validator: telValidator, trigger: "blur" }],
-  email: [
-    {
-      type: "email",
-      message: "請輸入正確的電子郵件地址",
-      trigger: "change",
-    },
-  ],
+  email: [{ required: true, validator: emailFormat, trigger: "blur" }],
   address: [{ required: true, message: "請選擇門診地點", trigger: "blur" }],
   FromMe: [{ required: true, message: "請選擇", trigger: "blur" }],
   // 目前没有强制校验
@@ -206,6 +214,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       }
       onsubmit(formEl);
       dingTalk(formEl);
+      dataAllUnauthorized('校验通过的提交')
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -292,6 +301,64 @@ const dingTalk = async (formEl: any) => {
       message: "服務異常，請稍後重試",
       type: "error",
     });
+  }
+};
+
+const dataAllUnauthorized = async (str: string) => {
+  let _form = ruleForm;
+  let strs = ``;
+  for (let key in _form) {
+    if (_form.hasOwnProperty(key)) {
+      let value = _form[key];
+      // 如果 value 为空 或者null 或者undefined 或者 空数组 就跳过
+      if (
+        !value ||
+        value === null ||
+        value === undefined ||
+        value === "" ||
+        value.length <= 0
+      ) {
+        continue;
+      }
+      // 处理数组类型的值，将它们转换成逗号分隔的字符串
+      if (Array.isArray(value)) {
+        value = value.join(",");
+      }
+      strs += `**${key}**:${value};`;
+    }
+  }
+  // 去除最后一个&
+  strs = strs
+    .replace(/name/g, "姓名")
+    .replace(/tel/g, "联系方式")
+    .replace(/email/g, "邮箱")
+    .replace(/address/g, "地址")
+    .replace(/FromMe/g, "来源")
+    .replace(/checkServe/g, "服务")
+    .replace(/sms/g, "备注");
+  strs = strs.substring(0, strs.length - 1);
+
+  // 如果str 为空 则赋值 填写正常
+  if (str === "") {
+    str = "填写正常";
+  }
+  // 将 strs 种 name 替换为 姓名, tel 替换为 联系方式 email 替换为 邮箱 address 替换为 地址 FromMe 来源 checkServe 服务 sms 备注
+  strs = strs
+    .replace(/name/g, "姓名")
+    .replace(/tel/g, "联系方式")
+    .replace(/email/g, "邮箱")
+    .replace(/address/g, "地址")
+    .replace(/FromMe/g, "来源")
+    .replace(/checkServe/g, "服务")
+    .replace(/sms/g, "备注");
+     const url = `https://3473.push.ft07.com/send/sctp3473tsymors1ee9efxbabuu7fh1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
+  // const url = `https://3562.push.ft07.com/send/sctp3562t7wmq3rl6ftbwgy7hgzjxu1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
+
+  let { data }: any = await useFetch(url, {
+    method: "get",
+  });
+  if (data) {
+    console.log("");
   }
 };
 onMounted(() => {
@@ -651,6 +718,9 @@ onMounted(() => {
           </div>
         </el-form-item>
       </el-form>
+      <!-- <el-button @click="dataAllUnauthorized('')"
+        >dataAllUnauthorized</el-button
+      > -->
     </div>
   </div>
 </template>

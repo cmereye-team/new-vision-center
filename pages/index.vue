@@ -237,7 +237,7 @@ const witness = ref({
   ],
   section2: [
     {
-      img: "https://statichk.cmermedical.com/vision/imgs/00f4eb10c798679f.png",
+      img: "https://statichk.cmermedical.com/vision/imgs/e2b0a775f356.png",
       name: "Billy",
       services: "漸進鏡",
       slogan: "價錢實惠、舒適",

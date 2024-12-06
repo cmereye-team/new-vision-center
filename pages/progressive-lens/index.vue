@@ -54,7 +54,7 @@ watch(elementX, (n, o) => {
   if (isDragging.value) {
     let a = (elementX.value + 5) / elementWidth.value;
     if (a < 0) {
-      imgLeft.value = "10px";
+      imgLeft.value = "1%";
     } else if (a > 1) {
       imgLeft.value = "100%";
     } else {
@@ -227,7 +227,7 @@ const judgeTwo = (num: string) => {
       <div class="comparison">
         <div>
           <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
-          <div v-if="judge(imgLeft)">漸進鏡片</div>
+          <div v-if="judge(imgLeft)" style="color: #0192b0;">漸進鏡片</div>
         </div>
         <div class="imagetowebp-canvasWebp">
           <div

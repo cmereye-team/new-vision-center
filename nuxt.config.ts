@@ -99,6 +99,11 @@ export default defineNuxtConfig({
         target: 'https://connector.dingtalk.com',
         prependPath: true,
         changeOrigin: true,
+      },
+      '/send':{
+        target:'https://3473.push.ft07.com',
+        prependPath: true,
+        changeOrigin: true,
       }
     }
   },

@@ -132,11 +132,11 @@ const menuList = ref([
         title: "服務内容",
         path: "/services",
       },
-      {
-        id: "4",
-        title: "人工智能健康篩查",
-        path: "/services/ai-screening",
-      },
+      //{
+      //  id: "4",
+      //  title: "人工智能健康篩查",
+      //  path: "/services/ai-screening",
+      //},
       {
         id: "2",
         title: "收費詳情",
@@ -281,9 +281,21 @@ const goToChildPath = (item: any, i: any) => {
               :key="child.id"
               class="son-menu"
               @click="pathIsTrue"
+              :class="[
+                child.path === '/services/ai-screening'
+                  ? 'is_ai_screening'
+                  : '',
+              ]"
             >
               <nuxt-link :to="child.path == '/' ? '#' : child.path"
-                ><span>{{ child.title }}</span>
+                ><span
+                  :class="[
+                    child.path === '/services/ai-screening'
+                      ? 'ai_screening_title'
+                      : '',
+                  ]"
+                  >{{ child.title }}</span
+                >
               </nuxt-link>
               <div v-if="isShowChildList" class="three-level">
                 <div
@@ -302,7 +314,7 @@ const goToChildPath = (item: any, i: any) => {
     </div>
     <div class="media">
       <div>
-        <a  target="_blank" href="https://www.facebook.com/cmervision">
+        <a target="_blank" href="https://www.facebook.com/cmervision">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="27"
@@ -338,7 +350,10 @@ const goToChildPath = (item: any, i: any) => {
             />
           </svg>
         </a>
-        <a target="_blank" href="https://www.youtube.com/@cmersmileeyecenter6303">
+        <a
+          target="_blank"
+          href="https://www.youtube.com/@cmersmileeyecenter6303"
+        >
           <svg
             width="27"
             height="21"
@@ -381,6 +396,8 @@ const goToChildPath = (item: any, i: any) => {
   }
   .menu {
     padding: 10px 25px;
+    overflow-y: scroll;
+    height: 80vh;
     & > div {
       padding: 16px 23px 16px 14px;
       border-bottom: 1px dashed #4d4d4d;
@@ -510,6 +527,31 @@ const goToChildPath = (item: any, i: any) => {
       font-weight: 400;
       line-height: 30px;
     }
+  }
+  .is_ai_screening {
+    & > a {
+      & > span {
+        min-width: 155px;
+      }
+    }
+  }
+  .ai_screening_title {
+    position: relative;
+  }
+  .ai_screening_title::before {
+    left: -25px !important;
+    top: 35% !important;
+  }
+  .ai_screening_title::after {
+    content: "";
+    position: absolute;
+    background: url(https://statichk.cmermedical.com/hkcmereye/LAL/iconNew.svg)
+      no-repeat;
+    width: 50px;
+    height: 15px;
+    top: 50%;
+    right: -60px;
+    transform: translateY(-50%);
   }
   .media {
     display: flex;

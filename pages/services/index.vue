@@ -84,6 +84,10 @@ const listData = ref([
     img: "https://statichk.cmermedical.com/vision/imgs/4daa5583f7e6d55d.png",
     title: ["眼球結構斷", "層掃描(OCT）"],
   },
+  {
+    img: "https://statichk.cmermedical.com/vision/imgs/50c50cb8b98c.png",
+    title: ["人工智能眼底健", "康篩查服務"],
+  },
 ]);
 const listDataDetail = [
   {
@@ -290,6 +294,17 @@ const listDataDetail = [
       "使用眼球結構斷層掃描OCT檢査時不用點散瞳劑，應診者只需",
       "要配合注視螢幕上的光點，儀器即可迅速撮描眼底，並取得一",
       "個完整的眼底立體圖，通程快捷。",
+    ],
+  },
+  {
+    img: "https://statichk.cmermedical.com/vision/imgs/016f821f52a6.png",
+    title: "人工智能眼底健康篩查服務",
+    description: [
+      "人工智能眼底健康篩查服務",
+      "「人工智能眼底篩查」服務結合了全自動眼底照相機、感光元",
+      "件自動化系統以及語音引導系統，打造出全球首創一站式全自",
+      "動化智慧眼底篩檢平台。透過先進的人工智慧演算法，準確判",
+      "別多種眼疾的風險。",
     ],
   },
 ];

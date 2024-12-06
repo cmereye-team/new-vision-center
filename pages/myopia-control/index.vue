@@ -17,10 +17,9 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104599219862.jpg",
-  mobile:
-    "https://content.cmervision.com//static/upload/image/20240912/1726104603827739.png",
-  newBanner: true,
+  pc: "https://statichk.cmermedical.com/vision/imgs/552de6e71f12.png?v=1.0",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/7a349d3975c9.png?v=1.0",
+  newBanner: false,
 };
 import { useTransition } from "@vueuse/core";
 
@@ -4414,6 +4413,7 @@ const btnElement = ref({
       padding: 10px 15px;
       margin: 45px auto 0;
       margin-right: 0;
+
       & > span {
         display: flex;
         align-items: center;
@@ -4524,6 +4524,8 @@ const btnElement = ref({
         margin-top: 15px;
         display: flex;
         gap: 25px;
+        padding-right: 100px;
+        justify-content: center;
         & > a {
           display: flex;
           align-items: center;
@@ -4818,6 +4820,10 @@ const btnElement = ref({
           font-weight: 500;
           line-height: 33.75px; /* 187.5% */
           letter-spacing: 0.9px;
+        }
+        & > div:nth-child(3) {
+          box-sizing: border-box;
+          padding-left: 5%;
         }
       }
     }

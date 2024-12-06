@@ -3333,17 +3333,17 @@ const showAgeStage = (type: any) => {
 @media screen and (max-width: 767px) {
   .relatives {
     margin: 0 auto;
-    margin-top: 30px;
-    margin-bottom: 35px;
+    margin-top: 7.6vw;
+    margin-bottom: 8.9vw;
     overflow: hidden;
     & > div:nth-child(1) {
       color: #00a6ce;
       text-align: justify;
       font-family: "Noto Sans HK";
-      font-size: 24px;
+      font-size: 6.15vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 40.107px; /* 167.112% */
+      line-height: 10.28vw; /* 167.112% */
       letter-spacing: 1.2px;
       text-align: center;
     }
@@ -3351,12 +3351,12 @@ const showAgeStage = (type: any) => {
       background: url(https://statichk.cmermedical.com/vision/imgs/976f70028a7b5e8a.png)
         no-repeat;
       background-size: 100% 100%;
-      height: 340px;
+      height: 87.17vw;
       display: flex;
       box-sizing: border-box;
-      padding-top: 75.5px;
+      padding-top: 19.35vw;
       padding-right: 0;
-      padding-bottom: 75px;
+      padding-bottom: 19.2vw;
       & > div {
         flex: 1;
         display: none;
@@ -3372,94 +3372,94 @@ const showAgeStage = (type: any) => {
           flex-direction: column;
           color: var(--Deep-Blue, #3e5270);
           font-family: "Noto Sans HK";
-          font-size: 20px;
+          font-size: 5.12vw;
           font-style: normal;
           font-weight: 700;
           line-height: 1; /* 73.291% */
           text-transform: uppercase;
           & > span:nth-child(2) {
             position: relative;
-            left: -15px;
+            left: -3.846vw;
           }
-          margin-bottom: 17.5px;
+          margin-bottom: 4.48vw;
           position: relative;
-          right: -24px;
+          right: -6.15vw;
           text-wrap: nowrap;
         }
         & > div:nth-child(2) {
-          padding-left: 24px;
-          max-width: 164px;
+          padding-left: 6.15vw;
+          max-width: 42.05vw;
           color: #60605f;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 20px; /* 142.857% */
+          line-height: 5.12vw; /* 142.857% */
           text-transform: uppercase;
           & > span {
             display: inline;
           }
-          margin-bottom: 20px;
+          margin-bottom: 5.12vw;
         }
         & > div:nth-child(3) {
           color: var(--White, #fff);
           font-family: "Noto Sans HK";
-          font-size: 27px;
+          font-size: 6.92vw;
           font-style: normal;
           font-weight: 600;
-          line-height: 22.5px; /* 83.333% */
+          line-height: 5.76vw; /* 83.333% */
           text-transform: uppercase;
-          padding-left: 42px;
+          padding-left: 10.76vw;
         }
       }
     }
     & > div:nth-child(3) {
       & > div:nth-child(1) {
-        margin-top: 28px;
-        padding: 0 5px;
+        margin-top: 7.17vw;
+        padding: 0 1.2vw;
         & > p {
           display: inline;
         }
         color: #60605f;
         font-family: "Noto Sans CJK TC";
-        font-size: 14px;
+        font-size: 3.58vw;
         font-style: normal;
         font-weight: 500;
-        line-height: 20px; /* 142.857% */
+        line-height: 5.12vw; /* 142.857% */
       }
       & > div:nth-child(2) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
         font-family: "Noto Sans CJK TC";
-        font-size: 14px;
+        font-size: 3.58vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 20px; /* 142.857% */
-        padding: 0 25px;
-        margin-top: 15px;
+        line-height: 5.12vw; /* 142.857% */
+        padding: 0 6.4vw;
+        margin-top: 3.846vw;
       }
     }
   }
   .adult-box {
-    margin: 25px auto 40px;
-    padding: 0 25px;
+    margin: 6.4vw auto 10.25vw;
+    padding: 0 6.4vw;
   }
   .adult-status {
     & > div:nth-child(1) {
-      margin-bottom: 35px;
+      margin-bottom: 8.9vw;
       & > div:nth-child(1) {
         display: flex;
         justify-content: center;
-        gap: 0 5px;
+        gap: 0 1.2vw;
         & > a {
           display: flex;
           align-items: center;
           & > span:nth-child(2) {
-            margin: 0 5px;
+            margin: 0 1.2vw;
             color: #fff;
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 18px;
+            font-size: 4.6vw;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
@@ -3468,20 +3468,20 @@ const showAgeStage = (type: any) => {
           box-shadow: 0px 6px 8px 3px rgba(0, 0, 0, 0.1) inset;
           padding: 6px 10px;
           background: #00a6ce;
-          border-radius: 20px;
+          border-radius: 5.12vw;
         }
         & > a:nth-child(2) {
           background: #6f5ea0;
         }
       }
       & > div:nth-child(2) {
-        margin-top: 35px;
+        margin-top: 8.9vw;
         & > div:nth-child(1) {
           display: flex;
           justify-content: center;
-          gap: 0 20px;
+          gap: 0 5.12vw;
           & > div {
-            border-radius: 8.017px;
+            border-radius: 8.04vw;
             overflow: hidden;
             width: 41.025vw;
             height: 41.025vw;
@@ -3493,7 +3493,7 @@ const showAgeStage = (type: any) => {
           }
         }
         & > div:nth-child(2) {
-          margin-top: 24px;
+          margin-top: 6.15vw;
           & > div {
             & > div:nth-child(1) {
               display: flex;
@@ -3501,17 +3501,17 @@ const showAgeStage = (type: any) => {
               color: var(--Deep-Blue, #3e5270);
               text-align: center;
               font-family: "Noto Sans HK";
-              font-size: 20px;
+              font-size: 5.12vw;
               font-style: normal;
               font-weight: 500;
-              line-height: 25px; /* 125% */
+              line-height: 6.4vw; /* 125% */
               text-transform: uppercase;
             }
             & > div:nth-child(2) {
               margin-top: 10px;
               color: var(--Grey, #4d4d4d);
               font-family: "Noto Sans HK";
-              font-size: 15px;
+              font-size: 3.846vw;
               font-style: normal;
               font-weight: 500;
               line-height: 23px; /* 164.286% */
@@ -3521,36 +3521,36 @@ const showAgeStage = (type: any) => {
       }
     }
     & > div:nth-child(3) {
-      margin-top: 15px;
+      margin-top: 3.846vw;
       color: #60605f;
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 14px;
+      font-size: 3.58vw;
       font-style: normal;
       font-weight: 500;
       line-height: 23px; /* 164.286% */
     }
   }
   .show-active {
-    border-radius: 8.017px;
+    border-radius: 8.04vw;
     width: 41.025vw;
     height: 41.025vw;
     overflow: hidden;
     border: 3px solid var(--Brand-Color, #00a6ce) !important;
-    box-shadow: 0px 2.405px 2.405px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 2.401.2vw 2.401.2vw 0px rgba(0, 0, 0, 0.25);
     & > img {
       width: 100%;
       height: 100%;
     }
   }
   .glasses-step {
-    margin-top: 40px;
-    margin-bottom: 40px;
-    border-radius: 30px;
+    margin-top: 10.25vw;
+    margin-bottom: 10.25vw;
+    border-radius: 7.6vw;
     background: var(--Skin, #eafbff);
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
     box-sizing: border-box;
-    padding: 25px 15px;
+    padding: 6.4vw 3.846vw;
     & > div:nth-child(1) {
       position: relative;
       & > div:nth-child(1) {
@@ -3582,7 +3582,7 @@ const showAgeStage = (type: any) => {
         font-style: normal;
         font-weight: 700;
         line-height: 33.529px; /* 133.333% */
-        letter-spacing: 0.815px;
+        letter-spacing: 0.83.846vw;
       }
       & > div:nth-child(2) {
         margin-top: 3px;
@@ -3591,21 +3591,21 @@ const showAgeStage = (type: any) => {
         & > span:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 16px;
+          font-size: 4.1vw;
           font-style: normal;
           font-weight: 700;
           line-height: 26.51px; /* 165.686% */
           letter-spacing: 0.8px;
         }
         & > span:nth-child(2) {
-          margin-left: 5px;
+          margin-left: 1.2vw;
           color: #6f6f6f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 30px; /* 214.286% */
+          line-height: 7.6vw; /* 214.286% */
           letter-spacing: 0.7px;
         }
       }
@@ -3635,16 +3635,16 @@ const showAgeStage = (type: any) => {
       left: 0;
     }
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 15px 35px;
+      gap: 3.846vw 8.9vw;
       & > div {
         display: flex;
         flex-direction: column;
         align-items: center;
         & > div:nth-child(1) {
-          min-height: 45px;
+          min-height: 41.2vw;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -3657,10 +3657,10 @@ const showAgeStage = (type: any) => {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 400;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw; /* 114.286% */
         }
       }
       & > div:nth-child(1) {
@@ -3675,7 +3675,7 @@ const showAgeStage = (type: any) => {
         & > div:nth-child(1) {
           & > svg {
             width: 43px;
-            height: 37.535px;
+            height: 37.58.9vw;
           }
         }
       }
@@ -3706,15 +3706,15 @@ const showAgeStage = (type: any) => {
     }
   }
   .misight-crowd-content {
-    margin-top: 40px;
+    margin-top: 10.25vw;
     & > div:nth-child(1) {
       color: #00a6ce;
       font-family: "Noto Sans HK";
-      font-size: 20px;
+      font-size: 5.12vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      margin-bottom: 16px;
+      margin-bottom: 4.1vw;
     }
     & > div:nth-child(2) {
       display: grid;
@@ -3732,59 +3732,59 @@ const showAgeStage = (type: any) => {
           align-items: center;
         }
         & > div:nth-child(2) {
-          margin-top: 17px;
+          margin-top:4.35vw;
           display: flex;
           flex-direction: column;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 128.571% */
+          line-height: 4.6vw; /* 128.571% */
           text-transform: uppercase;
         }
       }
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 59px;
-            height: 59px;
+            width: 15.12vw;
+            height: 15.12vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 54.859px;
-            height: 58.723px;
+            width: 14.05vw;
+            height: 15.05vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 67.01px;
-            height: 54.645px;
+            width: 17.17vw;
+            height: 14.012vw;
           }
         }
       }
     }
   }
   .misight-serve-content {
-    margin-top: 32px;
-    margin-bottom: 40px;
+    margin-top: 8.2vw;
+    margin-bottom: 10.25vw;
     & > div:nth-child(2) {
-      margin-top: 25px;
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 14px 12px;
+      gap: 3.58vw 3.07vw;
       & > div {
         & > div:nth-child(1) {
           width: 26.92vw;
           height: 26.92vw;
           background: #e4faff;
-          border-radius: 15px;
+          border-radius: 3.846vw;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
@@ -3794,12 +3794,12 @@ const showAgeStage = (type: any) => {
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size: 3.58vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 16px; /* 114.286% */
+          line-height: 4.1vw; /* 114.286% */
           text-transform: uppercase;
-          margin-top: 17px;
+          margin-top:4.35vw;
           display: flex;
           flex-direction: column;
         }
@@ -3807,81 +3807,81 @@ const showAgeStage = (type: any) => {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
           & > svg {
-            width: 62px;
-            height: 62px;
+            width: 15.89vw;
+            height: 15.89vw;
           }
         }
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           & > svg {
-            width: 70px;
-            height: 49.228px;
+            width: 17.94vw;
+            height: 12.63vw;
           }
         }
       }
       & > div:nth-child(3) {
         & > div:nth-child(1) {
           & > svg {
-            width: 60px;
-            height: 52.174px;
+            width: 15.38vw;
+            height: 13.37vw;
           }
         }
       }
       & > div:nth-child(4) {
         & > div:nth-child(1) {
           & > svg {
-            width: 53.525px;
-            height: 55px;
+            width: 13.73vw;
+            height: 51.2vw;
           }
         }
       }
       & > div:nth-child(5) {
         & > div:nth-child(1) {
           & > svg {
-            width: 58px;
-            height: 58px;
+            width: 14.87vw;
+            height: 14.87vw;
           }
         }
       }
       & > div:nth-child(6) {
         & > div:nth-child(1) {
           & > svg {
-            width: 73.125px;
-            height: 45px;
+            width: 18.75vw;
+            height: 41.2vw;
           }
         }
       }
     }
     & > div:nth-child(3) {
-      margin-top: 20px;
-      padding: 0 26px;
+      margin-top: 5.12vw;
+      padding: 0 6.65vw;
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: "Noto Sans CJK TC";
-      font-size: 14px;
+      font-size: 3.58vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 20px; /* 142.857% */
+      line-height: 5.12vw; /* 142.857% */
       & > p {
         display: inline;
       }
     }
   }
   .profile-title {
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 22.2vw;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      bottom: 7.6vw;
+      right: 5.12vw;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 28px;
+      font-size: 7.17vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;

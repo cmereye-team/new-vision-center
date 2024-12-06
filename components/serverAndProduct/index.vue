@@ -14,7 +14,7 @@ const handleResize = () => {
 onMounted(() => {
   handleResize();
   window.addEventListener("resize", handleResize);
-  handleccc(0)
+  handleccc(0);
 });
 
 const contextOrder = ref(5);
@@ -78,8 +78,9 @@ const props = defineProps({
       </div>
       <div>
         <span v-for="(el, index) in item.title" :key="index">
-          <span v-if="el=='•'" class="origin">•</span>
-          {{ el }}</span>
+          <span v-if="el == '•'" class="origin">•</span>
+          {{ el }}</span
+        >
       </div>
     </div>
     <div
@@ -96,12 +97,10 @@ const props = defineProps({
             <span
               v-for="(element, index) in props.detailList[cur].description"
               :key="index"
-              
-              :class="element==''?'kong':''"
+              :class="element == '' ? 'kong' : ''"
               v-html="element"
-              >
-              </span
             >
+            </span>
           </div>
         </div>
         <div>
@@ -141,8 +140,20 @@ const props = defineProps({
     gap: 20px 32px;
     padding: 0 90px;
   }
+  .product-list-box:nth-last-child(2)::after {
+    content: "";
+    position: absolute;
+    background: url(https://statichk.cmermedical.com/hkcmereye/LAL/iconNew.svg)
+      no-repeat;
+    width: 50px;
+    height: 20px;
+    right: -15%;
+    top: 10%;
+    background-size: cover;
+  }
   .product-list-box {
     cursor: pointer;
+    position: relative;
     & > div:nth-child(1) {
       border-radius: 18.443px;
       background: var(--Skin, #eafbff);
@@ -247,135 +258,135 @@ const props = defineProps({
   }
 }
 @media screen and (max-width: 767px) {
-      .product-list {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        justify-content: space-between;
-        gap: 7.69vw 3.07vw;
+  .product-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    // justify-content: space-between;
+    justify-content: flex-start;
+    gap: 7.69vw 3.07vw;
+  }
+
+  .product-list-box {
+    cursor: pointer;
+
+    & > div:nth-child(1) {
+      border-radius: 2.564vw;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0.5128vw 1.025vw rgba(0, 0, 0, 0.25);
+      width: 26.923vw;
+      height: 26.923vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 3.33vw;
+      color: #60605f;
+      text-align: center;
+      font-family: "Noto Sans HK";
+      font-size: clamp(12px, 3.5vw, 15px);
+      font-style: normal;
+      font-weight: 500;
+      line-height: 5.768vw;
+      /* 136.364% */
+      letter-spacing: 0.825px;
+    }
+  }
+
+  .context {
+    grid-column: span 3;
+
+    & > div {
+      width: 100% !important;
+      height: auto !important;
+      position: relative;
+      border-radius: 2.05vw;
+      background: var(--Skin, #eafbff);
+      box-shadow: 0px 0px 0.85vw 0px rgba(0, 0, 0, 0.25);
+      min-height: 146px;
+      display: flex;
+      align-items: flex-start !important;
+      gap: 0 3.07vw;
+      box-sizing: border-box;
+      padding: 3.589vw 3.33vw 5.128vw;
+
+      & > div:nth-child(1) {
+        width: 25.0965vw;
+        height: 25.0965vw;
+        min-width: 25.0965vw;
+
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
       }
 
-      .product-list-box {
-        cursor: pointer;
-
-        &>div:nth-child(1) {
-          border-radius: 2.564vw;
-          background: var(--Skin, #eafbff);
-          box-shadow: 0px 0.5128vw 1.025vw rgba(0, 0, 0, 0.25);
-          width: 26.923vw;
-          height: 26.923vw;
-          display: flex;
-          justify-content: center;
-          align-items: center;
+      & > div:nth-child(2) {
+        & > div:nth-child(1) {
+          color: var(--Deep-Blue, #3e5270);
+          font-family: "Noto Sans HK";
+          font-size: 3.589vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 3.765vw;
+          /* 104.868% */
+          letter-spacing: 0.7px;
+          margin-bottom: 2.564vw;
         }
 
-        &>div:nth-child(2) {
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          margin-top: 3.33vw;
+        & > div:nth-child(2) {
           color: #60605f;
-          text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 4.2vw;
+          font-size: 3.07vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 5.768vw;
-          /* 136.364% */
-          letter-spacing: 0.825px;
-        }
-      }
+          line-height: 3.589vw;
+          /* 116.667% */
+          letter-spacing: 0.1538vw;
+          text-indent: 2.564vw;
 
-      .context {
-        grid-column: span 3;
-
-        &>div {
-          width: 100% !important;
-          height: auto !important;
-          position: relative;
-          border-radius: 2.05vw;
-          background: var(--Skin, #eafbff);
-          box-shadow: 0px 0px 0.85vw 0px rgba(0, 0, 0, 0.25);
-          min-height: 166px;
-          display: flex;
-          align-items: flex-start !important;
-          gap: 0 3.07vw;
-          box-sizing: border-box;
-          padding: 3.589vw 3.33vw 5.128vw;
-
-          &>div:nth-child(1) {
-            width: 25.0965vw;
-            height: 25.0965vw;
-            min-width: 25.0965vw;
-
-            &>img {
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          &>div:nth-child(2) {
-            &>div:nth-child(1) {
-              color: var(--Deep-Blue, #3e5270);
-              font-family: "Noto Sans HK";
-              font-size: 3.589vw;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 3.765vw;
-              /* 104.868% */
-              letter-spacing: 0.7px;
-              margin-bottom: 2.564vw;
-
-
-            }
-
-            &>div:nth-child(2) {
-              color: #60605f;
-              font-family: "Noto Sans HK";
-              font-size: 3.07vw;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 3.589vw;
-              /* 116.667% */
-              letter-spacing: 0.1.538vw;
-              text-indent: 2.564vw;
-
-              &>.kong {
-                display: block;
-                min-height: 2.564vw;
-              }
-
-            }
-          }
-
-          &>div:nth-child(3) {
-            position: absolute;
-            right: 2.564vw;
-            top: 1.538vw;
-            cursor: pointer;
-            box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
-            border-radius: 50%;
-            width: 16px;
-            height: 16px;
-
-            &>svg {
-              width: 100%;
-              height: 100%;
-            }
-          }
-
-          &>div:nth-child(3):hover {
-            transform: scale(1.1);
-            transition: all 0.3s ease;
-            box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
+          & > .kong {
+            display: block;
+            min-height: 2.564vw;
           }
         }
       }
 
-      .active {
-        background: linear-gradient(0deg,
-            rgba(0, 100, 255, 0.1) 0%,
-            rgba(0, 100, 255, 0.1) 100%),
-          var(--Skin, #eafbff) !important;
+      & > div:nth-child(3) {
+        position: absolute;
+        right: 2.564vw;
+        top: 1.538vw;
+        cursor: pointer;
+        box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
+        border-radius: 50%;
+        width: 16px;
+        height: 16px;
+
+        & > svg {
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      & > div:nth-child(3):hover {
+        transform: scale(1.1);
+        transition: all 0.3s ease;
+        box-shadow: 0px 0px 1.923vw 0px rgba(0, 0, 0, 0.25);
       }
     }
+  }
+
+  .active {
+    background: linear-gradient(
+        0deg,
+        rgba(0, 100, 255, 0.1) 0%,
+        rgba(0, 100, 255, 0.1) 100%
+      ),
+      var(--Skin, #eafbff) !important;
+  }
+}
 </style>

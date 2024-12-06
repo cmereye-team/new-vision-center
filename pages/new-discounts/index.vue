@@ -75,19 +75,19 @@ const bannerImg = {
     // width: 100%;
     // min-height: 390px;
     // position: relative;
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 21.79vw;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      bottom: 7.692vw;
+      right: 5.128vw;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 28px;
+      font-size: 7.178vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;

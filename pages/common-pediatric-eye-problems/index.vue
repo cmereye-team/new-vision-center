@@ -18,8 +18,8 @@ useHead(() => ({
 }));
 
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/5e27719e1efbd627.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/b60c12bfd7f927fe.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/4d47e3398445.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/8662dc65c9d7.png",
 };
 const numberContent = ref(0);
 const checkClassify = (idx: any) => {

@@ -32,7 +32,7 @@ const bannerImg = {
   mobile: "https://statichk.cmermedical.com/vision/imgs/3953764e2acf.png",
 };
 const btnElement = ref({
-  cls:'',
+  cls: "",
   title: "哪一款鏡片最適合你的小朋友?",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
@@ -1447,6 +1447,8 @@ const btnElement = ref({
     & > div:nth-child(3) {
       display: flex;
       justify-content: center;
+      box-sizing: border-box;
+      padding-left: 5%;
     }
   }
   .myopia-container-three {
@@ -1723,49 +1725,56 @@ const btnElement = ref({
 }
 @media screen and (max-width: 767px) {
   .myopia-box {
-    margin-bottom: 40px;
+    margin-bottom: 10.25vw;
   }
+
   .myopia-container-promise {
-    margin-top: 47px;
-    padding: 0 25px;
-    margin-bottom: 50px;
-    & > div:nth-child(2) {
-      margin-top: 30px;
+    margin-top: 12.05vw;
+    padding: 0 6.4vw;
+    margin-bottom: 12.82vw;
+
+    &>div:nth-child(2) {
+      margin-top: 7.69vw;
       display: flex;
       justify-content: center;
-      gap: 0 12px;
-      & > div {
-        & > div:nth-child(1) {
-          width: 105.426px;
-          height: 100.141px;
-          border-radius: 5.284px;
+      gap: 0 3.07vw;
+
+      &>div {
+        &>div:nth-child(1) {
+          width: 27.03vw;
+          height: 25.6vw;
+          border-radius: 1.35vw;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
           display: flex;
           justify-content: center;
           align-items: center;
         }
-        & > div:nth-child(2) {
-          & > p:nth-child(1) {
-            margin-top: 8.5px;
-            margin-bottom: 5px;
+
+        &>div:nth-child(2) {
+          &>p:nth-child(1) {
+            margin-top: 2.17vw;
+            margin-bottom: 1.28vw;
             color: var(--Brand-Color, #00a6ce);
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 16px;
+            font-size: 4.1vw;
             font-style: normal;
             font-weight: 600;
-            line-height: 20px; /* 125% */
+            line-height: 5.12vw;
+            /* 125% */
             text-transform: uppercase;
           }
-          & > p:nth-child(2) {
+
+          &>p:nth-child(2) {
             color: #60605f;
             text-align: center;
             font-family: "Noto Sans HK";
-            font-size: 14px;
+            font-size:3.5vw;
             font-style: normal;
             font-weight: 500;
-            line-height: 18px; /* 128.571% */
+            line-height: 4.6vw;
+            /* 128.571% */
             text-transform: uppercase;
             display: flex;
             flex-direction: column;
@@ -1773,508 +1782,583 @@ const btnElement = ref({
           }
         }
       }
-      & > div:nth-child(1) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 65.409px;
-            height: 28.449px;
+
+      &>div:nth-child(1) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 16.77vw;
+            height: 7.29vw;
           }
         }
       }
-      & > div:nth-child(2) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 44.616px;
-            height: 44.615px;
+
+      &>div:nth-child(2) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 11.44vw;
+            height: 11.44vw;
           }
         }
       }
-      & > div:nth-child(3) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 42px;
-            height: 43.002px;
+
+      &>div:nth-child(3) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 10.76vw;
+            height: 11.02vw;
           }
         }
       }
     }
   }
+
   .myopia-container-attention {
-    margin-top: 36px;
-    padding: 0 25px;
+    margin-top: 9.23vw;
+    padding: 0 6.4vw;
     box-sizing: border-box;
-    & > div:nth-child(1) {
-      width: 340px;
+
+    &>div:nth-child(1) {
+      width: 87.178vw;
       margin: 0 auto;
-      & > img {
+
+      &>img {
         width: 100%;
       }
     }
-    & > div:nth-child(2) {
-      margin-top: 35px;
-      & > div:nth-child(1) {
+
+    &>div:nth-child(2) {
+      margin-top: 8.9vw;
+
+      &>div:nth-child(1) {
         color: var(--Deep-Blue, #3e5270);
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size:6.15vw;
         font-style: normal;
         font-weight: 600;
         line-height: normal;
-        margin-bottom: 26px;
+        margin-bottom: 6.65vw;
       }
-      & > div:nth-child(2),
-      & > div:nth-child(3) {
-        margin-bottom: 28px;
-        & > p:nth-child(1) {
+
+      &>div:nth-child(2),
+      &>div:nth-child(3) {
+        margin-bottom: 7.17vw;
+
+        &>p:nth-child(1) {
           color: var(--Brand-Color, #00a6ce);
           font-family: "Noto Sans HK";
-          font-size: 19px;
+          font-size: 4.8vw;
           font-style: normal;
           font-weight: 600;
           line-height: normal;
           display: block;
         }
+
         p {
           color: var(--Grey-Deep, #4d4d4d);
           text-align: justify;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size:3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 26px; /* 185.714% */
+          line-height: 6.65vw;
+          /* 185.714% */
           display: inline;
         }
       }
     }
   }
+
   .myopia-container-step {
-    margin-top: 45px;
+    margin-top: 11.5vw;
     background: #eafbff;
-    & > div {
-      padding: 24px 25px 33px;
-      & > div:nth-child(1) {
+
+    &>div {
+      padding:6.15vw 6.4vw 8.46vw;
+
+      &>div:nth-child(1) {
         display: flex;
         flex-direction: column;
         align-items: center;
         color: #00a6ce;
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 24px;
+        font-size:6.15vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 40.107px; /* 167.112% */
+        line-height: 10.28vw;
+        /* 167.112% */
       }
-      & > div:nth-child(2) {
-        margin-top: 20px;
-        border-radius: 20px;
+
+      &>div:nth-child(2) {
+        margin-top: 5.12vw;
+        border-radius: 5.12vw;
         background: var(--White, #fff);
-        padding: 18px 28px;
-        & > div {
-          margin-bottom: 10px;
-          & > div {
+        padding: 4.6vw 7.17vw;
+
+        &>div {
+          margin-bottom:2.56vw;
+
+          &>div {
             display: flex;
-            & > div:nth-child(1) {
+
+            &>div:nth-child(1) {
               flex: 1.8;
               color: #60605f;
               font-family: "Noto Sans HK";
-              font-size: 14px;
+              font-size:3.5vw;
               font-style: normal;
               font-weight: 600;
-              line-height: 20.566px;
+              line-height: 5.27vw;
             }
-            & > div:nth-child(2) {
+
+            &>div:nth-child(2) {
               flex: 8;
               display: flex;
               flex-direction: column;
-              & > span:nth-child(1) {
+
+              &>span:nth-child(1) {
                 color: #59ba68;
                 font-family: "Noto Sans HK";
-                font-size: 16px;
+                font-size: 4.1vw;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 20.566px;
-                margin-bottom: 7px;
+                line-height: 5.27vw;
+                margin-bottom: 1.7vw;
               }
-              & > span:nth-child(2) {
+
+              &>span:nth-child(2) {
                 color: #60605f;
                 font-family: "Noto Sans HK";
-                font-size: 14px;
+                font-size:3.5vw;
                 font-style: normal;
                 font-weight: 500;
-                line-height: 18px; /* 128.571% */
+                line-height: 4.6vw;
+                /* 128.571% */
                 text-transform: uppercase;
               }
             }
           }
         }
-        & > div:nth-child(1) {
-          & > div:nth-child(1) {
-            margin-bottom: 22px;
+
+        &>div:nth-child(1) {
+          &>div:nth-child(1) {
+            margin-bottom: 5.64vw;
           }
-          & > div:nth-child(2) {
-            margin-bottom: 22px;
+
+          &>div:nth-child(2) {
+            margin-bottom: 5.64vw;
           }
-          & > div {
+
+          &>div {
             position: relative;
           }
-          & > div::after {
+
+          &>div::after {
             position: absolute;
-            left: 15px;
-            top: 20px;
+            left:3.84vw;
+            top: 5.12vw;
             content: "";
-            width: 1.97px;
-            height: 40px;
-            border-radius: 1.97px;
+            width:0.5vw;
+            height: 10.25vw;
+            border-radius:0.5vw;
             background: #4d4d4d;
           }
-          & > div:nth-child(2)::after {
-            top: 25px;
-            height: 45px;
+
+          &>div:nth-child(2)::after {
+            top: 6.4vw;
+            height: 11.5vw;
           }
         }
-        & > div:nth-child(2) {
-          & > div:nth-child(1) {
-            margin-bottom: 22px;
+
+        &>div:nth-child(2) {
+          &>div:nth-child(1) {
+            margin-bottom: 5.64vw;
           }
-          & > div:nth-child(1) {
+
+          &>div:nth-child(1) {
             position: relative;
           }
-          & > div:nth-child(1)::after {
+
+          &>div:nth-child(1)::after {
             position: absolute;
-            left: 15px;
-            top: 20px;
+            left:3.84vw;
+            top: 5.12vw;
             content: "";
-            width: 1.97px;
-            height: 40px;
-            border-radius: 1.97px;
+            width:0.5vw;
+            height: 10.25vw;
+            border-radius:0;
             background: #4d4d4d;
           }
         }
       }
     }
   }
+
   .myopia-container-serve {
-    margin-top: 40px;
-    padding: 0 25px;
-    & > div:nth-child(2) {
-      margin-top: 25px;
+    margin-top: 10.25vw;
+    padding: 0 6.4vw;
+
+    &>div:nth-child(2) {
+      margin-top: 6.4vw;
       display: grid;
       grid-template-columns: auto auto;
       grid-template-rows: auto auto;
-      gap: 25px 20px;
-      & > div {
+      gap: 6.4vw 5.12vw;
+
+      &>div {
         display: flex;
         flex-direction: column;
         align-items: center;
-        & > div:nth-child(1) {
-          width: 159px;
-          height: 159px;
+
+        &>div:nth-child(1) {
+          width: 40.76vw;
+          height: 40.76vw;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
           background: #e4faff;
-          border-radius: 15px;
+          border-radius:3.84vw;
           display: flex;
           justify-content: center;
           align-items: center;
         }
-        & > div:nth-child(2) {
-          margin-top: 16px;
+
+        &>div:nth-child(2) {
+          margin-top: 4.1vw;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size:3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 128.571% */
+          line-height: 4.6vw;
+          /* 128.571% */
           text-transform: uppercase;
         }
       }
     }
   }
+
   .myopia-container-brand {
-    margin-top: 44px;
-    & > div:nth-child(2) {
-      margin-top: 28px;
-      margin-bottom: 28px;
+    margin-top: 11.28vw;
+
+    &>div:nth-child(2) {
+      margin-top: 7.17vw;
+      margin-bottom: 7.17vw;
       display: flex;
       justify-content: center;
-      gap: 0 8.5px;
-      & > a {
-        width: 107.602px;
-        height: 72.139px;
-        & > img {
+      gap: 0 2.17vw;
+
+      &>a {
+        width: 27.59vw;
+        height: 18.49vw;
+
+        &>img {
           width: 100%;
           height: 100%;
         }
       }
     }
-    & > div:nth-child(3) {
+
+    &>div:nth-child(3) {
       display: flex;
       justify-content: center;
     }
   }
+
   .myopia-container-three {
-    margin: 40px 25px 0;
-    border-radius: 30px;
+    margin: 10.25vw 6.4vw 0;
+    border-radius: 7.69vw;
     background: var(--Skin, #eafbff);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 0px 2.56vw 0px rgba(0, 0, 0, 0.25);
     display: flex;
     flex-direction: column-reverse;
     align-items: center;
-    padding: 22px 25px 30px;
+    padding: 5.64vw 6.4vw 7.69vw;
     box-sizing: border-box;
-    & > div:nth-child(2) {
-      & > div:nth-child(1) {
+
+    &>div:nth-child(2) {
+      &>div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 16px;
+        font-size: 4.1vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 19.257px; /* 120.357% */
-        margin-bottom: 23px;
+        line-height: 5.1vw;
+        /* 120.357% */
+        margin-bottom: 5.8vw;
       }
-      & > div:nth-child(2) {
-        width: 300px;
-        & > img {
+
+      &>div:nth-child(2) {
+        width: 76.9vw;
+
+        &>img {
           width: 100%;
         }
       }
-      margin-bottom: 28px;
+
+      margin-bottom: 7.17vw;
     }
-    & > div:nth-child(1) {
+
+    &>div:nth-child(1) {
       color: #60605f;
       text-align: justify;
       font-family: "Noto Sans HK";
-      font-size: 14px;
+      font-size:3.5vw;
       font-style: normal;
       font-weight: 500;
-      line-height: 26px; /* 185.714% */
+      line-height: 6.65vw;
+      /* 185.714% */
     }
   }
+
   .myopia-container-merit {
-    margin-top: 40px;
-    padding: 0 25px;
-    & > div:nth-child(1) {
-      & > div:nth-child(1) {
+    margin-top: 10.25vw;
+    padding: 0 6.4vw;
+
+    &>div:nth-child(1) {
+      &>div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
-        font-size: 15.65px;
+        font-size: 4.01vw;
         font-style: normal;
         font-weight: 700;
-        line-height: 23.475px; /* 150% */
-        letter-spacing: 0.783px;
-        & > div:nth-child(2) {
-          padding-left: 30px;
-          font-size: 20px;
+        line-height: 6.01vw;
+        /* 150% */
+        letter-spacing: 0.2vw;
+
+        &>div:nth-child(2) {
+          padding-left: 7.69vw;
+          font-size: 5.12vw;
           font-weight: 700;
-          line-height: 31.3px; /* 156.5% */
+          line-height: 8.02vw;
+          /* 156.5% */
           letter-spacing: 1px;
         }
-        margin-bottom: 10px;
+
+        margin-bottom:2.56vw;
       }
-      & > div:nth-child(2) {
-        width: 338px;
-        & > img {
+
+      &>div:nth-child(2) {
+        width: 86.65vw;
+
+        &>img {
           width: 100%;
         }
       }
     }
-    & > div:nth-child(2) {
-      margin-top: 23px;
+
+    &>div:nth-child(2) {
+      margin-top: 5.8vw;
       display: grid;
       grid-template-columns: auto auto auto;
-      gap: 20px 12px;
-      & > div {
-        & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
+      gap: 5.12vw 3.07vw;
+
+      &>div {
+        &>div:nth-child(1) {
+          width: 26.92vw;
+          height: 26.92vw;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
-          border-radius: 15px;
+          border-radius:3.84vw;
           background: #e4faff;
           display: flex;
           justify-content: center;
           align-items: center;
         }
-        & > div:nth-child(2) {
-          margin-top: 14px;
+
+        &>div:nth-child(2) {
+          margin-top:3.5vw;
           display: flex;
           flex-direction: column;
           align-items: center;
           color: #60605f;
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 14px;
+          font-size:3.5vw;
           font-style: normal;
           font-weight: 500;
-          line-height: 18px; /* 128.571% */
+          line-height: 4.6vw;
+          /* 128.571% */
           text-transform: uppercase;
         }
       }
-      & > div:nth-child(1) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 73.001px;
-            height: 57.948px;
+
+      &>div:nth-child(1) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 18.71vw;
+            height: 14.85vw;
           }
         }
       }
-      & > div:nth-child(2) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 60px;
-            height: 57.317px;
+
+      &>div:nth-child(2) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 15.38vw;
+            height: 14.69vw;
           }
         }
       }
-      & > div:nth-child(3) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 62.999px;
-            height: 58.229px;
+
+      &>div:nth-child(3) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 16.15vw;
+            height: 14.92vw;
           }
         }
       }
-      & > div:nth-child(4) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 84.902px;
-            height: 41.73px;
+
+      &>div:nth-child(4) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 21.7vw;
+            height: 10.7vw;
           }
         }
       }
-      & > div:nth-child(5) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 51px;
-            height: 66.37px;
+
+      &>div:nth-child(5) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 13.06vw;
+            height: 17.0174vw;
           }
         }
       }
-      & > div:nth-child(6) {
-        & > div:nth-child(1) {
-          & > svg {
-            width: 66px;
-            height: 66px;
+
+      &>div:nth-child(6) {
+        &>div:nth-child(1) {
+          &>svg {
+            width: 16.92vw;
+            height: 16.92vw;
           }
         }
       }
     }
   }
+
   .myopia-container-head {
-    padding: 0 25px;
-    & > div:nth-child(1) {
+    padding: 0 6.4vw;
+
+    &>div:nth-child(1) {
       color: #00a6ce;
       text-align: justify;
       font-family: "Noto Sans HK";
-      font-size: 24px;
+      font-size:6.15vw;
       font-style: normal;
       font-weight: 700;
-      line-height: 40.107px; /* 167.112% */
+      line-height: 10.287vw;
+      /* 167.112% */
       letter-spacing: 1.2px;
-      margin-bottom: 12px;
+      margin-bottom: 3.07vw;
     }
-    & > div:nth-child(2) {
-      background: url("https://statichk.cmermedical.com/vision/imgs/86a1e2bdc860ef04.png")
-        no-repeat;
+
+    &>div:nth-child(2) {
+      background: url("https://statichk.cmermedical.com/vision/imgs/86a1e2bdc860ef04.png") no-repeat;
       background-size: 100% 100%;
       box-sizing: border-box;
-      width: 340px;
+      width: 87.17vw;
       margin: 0 auto;
-      height: 340px;
-      padding: 53px 15px 50px 200px;
+      height: 87.17vw;
+      padding: 13.58vw 3.84vw 12.82vw 51.28vw;
       display: flex;
 
-      & > div:nth-child(2) {
+      &>div:nth-child(2) {
         text-align: center;
-        & > p:nth-child(1) {
+
+        &>p:nth-child(1) {
           display: inline-block;
           color: var(--Deep-Blue, #3e5270);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 22px;
+          font-size: 5.64vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 24px; /* 109.091% */
+          line-height:6.15vw;
+          /* 109.091% */
           letter-spacing: 1.1px;
         }
-        & > p {
+
+        &>p {
           display: inline;
           color: var(--White, #fff);
           text-align: center;
           font-family: "Noto Sans HK";
-          font-size: 12px;
+          font-size: 3.07vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 22px; /* 183.333% */
+          line-height: 5.64vw;
+          /* 183.333% */
         }
       }
     }
   }
+
   .profile-title {
-    // background: url("https://statichk.cmermedical.com/vision/imgs/7e2d6e9bac45673f.png")
-    //   no-repeat;
-    // background-size: 100% 100%;
-    // width: 100%;
-    // min-height: 390px;
-    // position: relative;
-    min-height: 390px;
+    min-height: 100vw;
     width: 100%;
     position: absolute;
     top: 0;
-    margin-top: 87px;
+    margin-top: 22.3vw;
+
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
+      bottom: 7.69vw;
+      right: 5.12vw;
       color: var(--Brand-Color, #fff);
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 28px;
+      font-size: 7.17vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
       letter-spacing: 5.6px;
     }
   }
+
   .btn-bg {
-    & > div {
+    &>div {
       display: flex;
       align-items: center;
-      border-radius: 12px;
-      background: var(
-        --Style,
-        linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%)
-      );
+      border-radius: 3.07vw;
+      background: var(--Style,
+          linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%));
       width: fit-content;
-      padding: 3px 8px 3px 20px;
+      padding: 3px 8px 3px 5.12vw;
       border: 3px solid #ffffff;
-      & > span:nth-child(1) {
+
+      &>span:nth-child(1) {
         color: var(--White, #fff);
         font-family: "Noto Sans HK";
-        font-size: 14px;
+        font-size:3.5vw;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
         letter-spacing: 1.4px;
-        margin-right: 10px;
+        margin-right:2.56vw;
       }
-      & > span:nth-child(2) {
-        width: 23px;
-        & > img {
+
+      &>span:nth-child(2) {
+        width: 5.8vw;
+
+        &>img {
           width: 100%;
         }
+
         display: flex;
         justify-content: center;
         align-items: center;
       }
+
       position: relative;
       z-index: 5;
     }
-    background: var(
-      --Style,
-      linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%)
-    );
+
+    background: var(--Style,
+      linear-gradient(90deg, #00a6ce 25.95%, #3346ed 100%));
     display: flex;
-    border-radius: 15px;
+    border-radius:3.84vw;
     padding: 4px;
     width: fit-content;
     margin: 0 auto;

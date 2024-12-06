@@ -981,7 +981,7 @@ const handleIntersection = (entries: any, observer: any) => {
       background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png")
         no-repeat;
       // background-position: right;
-      width: 20px;
+      width: 23px;
       height: 40px;
     }
   }
@@ -1000,9 +1000,11 @@ const handleIntersection = (entries: any, observer: any) => {
   }
   :deep(.swiper-button-next) {
     right: 0px;
+    cursor: pointer;
   }
   :deep(.swiper-button-prev) {
     left: 0px;
+    cursor: pointer;
   }
   :deep(.swiper-button-prev::after) {
     background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")

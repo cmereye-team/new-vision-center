@@ -15,6 +15,10 @@ const mobileMenu = ref(false);
 const mobileMenuEvent = () => {
   mobileMenu.value = !mobileMenu.value;
   // document.body.style.overflow = mobileMenu.value ? "hidden" : "auto";
+  // 滚动条禁用
+  if (!isPc) {
+    document.body.style.overflow = mobileMenu.value ? "hidden" : "auto";
+  }
 };
 
 // 获取子组件的值 控制菜单状态

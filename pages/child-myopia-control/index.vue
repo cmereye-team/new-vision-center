@@ -387,6 +387,10 @@ const btnElement = ref({
         color: var(--Grey, #4d4d4d);
         font-family: "Noto Sans CJK TC";
       }
+      .btn {
+        box-sizing: border-box;
+        margin-left: 5%;
+      }
     }
   }
   .child-myopia-bg-blue {
