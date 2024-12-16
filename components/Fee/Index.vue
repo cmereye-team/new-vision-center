@@ -62,11 +62,11 @@ const contactLensList = ref([
   ], // Row 1
   [
     ["視力及屈光度數檢查", " (近視/遠視/散光/老花)"],
-    ["12歲以下", "child"],
+    ["", "child"],
     "adult",
     "friends",
   ], // Row 2
-  ["檢查眼睛前區健康情況", ["12歲或以上", "child"], "adult", ""], // Row 3
+  ["檢查眼睛前區健康情況", ["", "child"], "adult", ""], // Row 3
   ["隱形眼鏡試戴", "child", "adult", ""], // Row 4
   ["隱形眼鏡護理", "child", "adult", ""], // Row 5
   ["雙眼協調及斜視檢查", "", "", "friends"], // Row 6
@@ -75,7 +75,7 @@ const contactLensList = ref([
   ["角膜健康檢查", "", "", "friends"], // Row 9
   ["眼角膜地形圖分析", "", "", "friends"], // Row 10
   ["硬式隱形眼鏡(RGP鏡)試戴", "", "", "friends"], // Fee row
-  ["收費/HKD", ["$350", "$500"], "$500", " $500"],
+  ["收費/HKD", ["$500", "$350"], "$500", " $500"],
 ]);
 
 const glaucomaList = ref([

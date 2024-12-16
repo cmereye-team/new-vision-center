@@ -136,7 +136,7 @@ const btnElement = ref({
               alt="cooper"
             />
           </nuxt-link>
-          <nuxt-link to="/myopia-control-lenses/zeiss-myovision-pro">
+          <nuxt-link>
             <img
               src="https://statichk.cmermedical.com/vision/imgs/71654116b2763716.png"
               alt="abiliti"

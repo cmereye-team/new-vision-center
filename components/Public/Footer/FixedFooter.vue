@@ -57,7 +57,7 @@
       </div>
       <div>在線預約</div>
     </a>
-    <a href="tel:+85038925089" target="_blank" class="mobile_tel">
+    <a href="tel:+85238925089" target="_blank" class="mobile_tel">
       <div>
         <svg
           xmlns="http://www.w3.org/2000/svg"
