@@ -29,8 +29,7 @@ const bannerImg = {
   // pc: "https://statichk.cmermedical.com/vision/imgs/6446d8c5f0f8f72a.png",
   // mobile: "https://statichk.cmermedical.com/vision/imgs/5e82a28589934353.png",
   pc: "https://statichk.cmermedical.com/vision/imgs/552de6e71f12.png",
-  mobile:
-    "https://statichk.cmermedical.com/vision/imgs/7a349d3975c9.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/7a349d3975c9.png",
 };
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
@@ -1125,7 +1124,7 @@ const btnElement = ref({
                 </div>
                 <div>
                   <span>取鏡前</span>
-                  <span>學習戴上，摘下和護理形眼镜的方法</span>
+                  <span>學習戴上，摘下和護理形眼鏡的方法</span>
                 </div>
               </div>
             </div>
@@ -1135,8 +1134,8 @@ const btnElement = ref({
                   <span>STEP 3</span>
                 </div>
                 <div>
-                  <span>取镜後</span>
-                  <span>取镜片在當日開始使用</span>
+                  <span>取鏡後</span>
+                  <span>取鏡片在當日開始使用</span>
                 </div>
               </div>
               <div>
@@ -1366,6 +1365,11 @@ const btnElement = ref({
 </template>
 
 <style lang="scss" scoped>
+:deep(.el-select-dropdown__item) {
+  span {
+    font-family: "Noto Sans HK" !important;
+  }
+}
 @media screen and (min-width: 768px) {
   .myopia-control-hoya {
     margin-bottom: 65px;

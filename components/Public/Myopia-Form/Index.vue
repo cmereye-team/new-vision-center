@@ -191,10 +191,7 @@ const dingTalk = async (formEl: any) => {
       <div>{{ props.detail.title }}</div>
       <div>
         <div>
-          <img
-            :src="props.detail.img"
-            :alt="props.detail.brand"
-          />
+          <img :src="props.detail.img" :alt="props.detail.brand" />
         </div>
         <div>
           <div>
@@ -330,7 +327,7 @@ const dingTalk = async (formEl: any) => {
   :deep(.el-select__placeholder),
   :deep(.el-input__inner) {
     color: #00a6ce;
-    font-family: "Noto Sans CJK TC";
+    font-family: "Noto Sans HK";
     font-size: 11.945px;
     font-style: normal;
     font-weight: 500;
@@ -338,7 +335,7 @@ const dingTalk = async (formEl: any) => {
   }
   :deep(.el-input__inner::placeholder) {
     color: #00a6ce;
-    font-family: "Noto Sans CJK TC";
+    font-family: "Noto Sans HK";
     font-size: 11.945px;
     font-style: normal;
     font-weight: 500;
@@ -375,7 +372,7 @@ const dingTalk = async (formEl: any) => {
   }
   :deep(.el-form-item__label) {
     color: var(--00517-e, #00517e);
-    font-family: "Noto Sans CJK TC";
+    font-family: "Noto Sans HK";
     font-size: 13.677px;
     font-style: normal;
     font-weight: 700;
@@ -404,7 +401,7 @@ const dingTalk = async (formEl: any) => {
       background: var(--Brand-2, #59ba68);
       box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.25);
       color: var(--White, #fff);
-      font-family: "Noto Sans CJK TC";
+      font-family: "Noto Sans HK";
       font-size: 21px;
       font-style: normal;
       font-weight: 500;
@@ -416,6 +413,7 @@ const dingTalk = async (formEl: any) => {
       box-sizing: border-box;
       display: flex;
       gap: 0 27px;
+      font-family: "Noto Sans HK";
       & > div:nth-child(1) {
         width: 266.25px;
         min-width: 266.25px;
@@ -427,10 +425,10 @@ const dingTalk = async (formEl: any) => {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-
+        font-family: "Noto Sans HK";
         & > div:nth-child(1) {
           color: var(--Sales, #db4444);
-          font-family: "Noto Sans CJK TC";
+          font-family: "Noto Sans HK";
           font-size: 18.75px;
           font-style: normal;
           font-weight: 500;
@@ -440,8 +438,10 @@ const dingTalk = async (formEl: any) => {
             font-size: 22.5px;
             font-weight: 700;
             line-height: 33.75px;
+            font-family: "Noto Sans HK";
           }
           margin-block: 5px;
+          font-family: "Noto Sans HK";
         }
         & > div:nth-child(2) {
           padding-right: 80px;
@@ -454,7 +454,7 @@ const dingTalk = async (formEl: any) => {
   :deep(.el-select__placeholder),
   :deep(.el-input__inner) {
     color: #00a6ce;
-    font-family: "Noto Sans CJK TC";
+    font-family: "Noto Sans HK";
     font-size: 15.417px;
     font-style: normal;
     font-weight: 500;
@@ -462,7 +462,7 @@ const dingTalk = async (formEl: any) => {
   }
   :deep(.el-input__inner::placeholder) {
     color: #00a6ce;
-    font-family: "Noto Sans CJK TC";
+    font-family: "Noto Sans HK";
     font-size: 15.417px;
     font-style: normal;
     font-weight: 500;
@@ -499,7 +499,7 @@ const dingTalk = async (formEl: any) => {
       & > div:nth-child(2) {
         & > div:nth-child(1) {
           color: var(--Sales, #db4444);
-          font-family: "Noto Sans CJK TC";
+          font-family: "Noto Sans HK";
           font-size: 16px;
           font-style: normal;
           font-weight: 500;
@@ -509,9 +509,11 @@ const dingTalk = async (formEl: any) => {
             font-size: 22px;
             font-weight: 700;
             line-height: 31.124px;
+            font-family: "Noto Sans HK";
           }
           & > p:nth-child(2) {
             padding: 0 15px;
+            font-family: "Noto Sans HK";
           }
           margin-bottom: 20px;
         }
@@ -534,7 +536,7 @@ const dingTalk = async (formEl: any) => {
   }
   :deep(.el-form-item__label) {
     color: var(--00517-e, #00517e);
-    font-family: "Noto Sans CJK TC";
+    font-family: "Noto Sans HK";
     font-size: 18.237px;
     font-style: normal;
     font-weight: 700;

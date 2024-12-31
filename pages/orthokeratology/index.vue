@@ -39,8 +39,8 @@ const wearOrExcise = (str: string) => {
   }
 };
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/294a743cedceec25.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/8b53b098e710bc0a.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2024123008462701.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2024123008462702.png",
 };
 const okQuestionList = [
   {
@@ -140,13 +140,6 @@ const handlesSliPrev = () => {
 <template>
   <div class="orthokeratoplasty">
     <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title">
-          <span v-if="isPc">角膜矯形鏡</span>
-          <span v-else>角膜矯形鏡</span>
-        </div>
-      </template>
     </PublicBanner>
     <PublicNavbar
       :isInsidePage="true"
@@ -669,7 +662,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/382044e809a568f4.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123008584301.png"
                 alt="沒有戴上鏡片"
               />
             </div>
@@ -683,7 +676,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/e678d98dc601933c.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123008585501.png"
                 alt="戴上鏡片後"
               />
             </div>
@@ -695,7 +688,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/b15268bccfa6665b.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123009013501.png"
                 alt="晚上睡覺後"
               />
             </div>
@@ -709,7 +702,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/a818bd7bbe800a51.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123008465501.png"
                 alt="日間摘除後"
               />
             </div>
@@ -733,7 +726,7 @@ const handlesSliPrev = () => {
             <div>角膜矯形產生的周邊離焦</div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/b8231bd4c5a0c0a5.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123008471201.png"
                 alt="角膜矯形產生的周邊離焦"
               />
             </div>
@@ -4732,6 +4725,11 @@ const handlesSliPrev = () => {
       justify-content: space-between;
       align-items: center;
       & > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
         & > div:nth-child(1) {
           display: flex;
           gap: 0 20px;
@@ -4778,6 +4776,29 @@ const handlesSliPrev = () => {
           justify-content: center;
         }
       }
+      &>div::after{
+        content: "";
+        width: 37px;
+        height: 32px;
+        position: absolute;
+        left: 110%;
+        top: 55%;
+        transform: translateX(-50%);
+        background: url('https://statichk.cmermedical.com/vision/imgs/2024123009055301.png') no-repeat;
+      }
+      &>div:nth-child(2):after{
+        content: "";
+        position: absolute;
+        left: 120%;
+      }
+      &>div:nth-child(3):after{
+        content: "";
+        position: absolute;
+        left: 100%;
+      }
+      &>div:last-child::after{
+        content: none;
+      }
     }
     & > div:nth-child(4) {
       margin: 40px auto 75px;
@@ -4798,15 +4819,17 @@ const handlesSliPrev = () => {
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 35px;
+      padding-right: 35px;
       display: flex;
       gap: 0 35px;
       justify-content: space-between;
       & > div:nth-child(1) {
         padding-top: 25px;
-        padding-right: 20px;
+        padding-right: 25px;
         color: #60605f;
         font-family: "Noto Sans CJK TC";
         font-size: 21px;
+        letter-spacing: 3px;
         font-style: normal;
         font-weight: 500;
         line-height: 45px;
@@ -5918,7 +5941,7 @@ const handlesSliPrev = () => {
         & > div:nth-child(2)::after {
           content: "";
           position: absolute;
-          right: -60%;
+          right: -45%;
           top: 50%;
           transform: translateY(-50%);
           background: url("https://statichk.cmermedical.com/vision/imgs/d16a15ed51fbf41e.png")

@@ -9,6 +9,12 @@ const props = defineProps({
 </template>
 
 <style lang="scss" scoped>
+:deep(p) {
+  font-family: "Noto Sans HK" !important;
+}
+:deep(span) {
+  font-family: "Noto Sans HK" !important;
+}
 @media screen and (min-width: 768px) {
   .Index {
     padding: 0 100px;

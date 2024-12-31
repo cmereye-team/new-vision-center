@@ -5655,7 +5655,7 @@ const btnElement = ref({
         }
       }
       & > div:nth-child(2) {
-        padding: 10px;
+        padding: 10px 10px 10px 0;
         margin-left: 25px;
         margin-bottom: 10px;
         margin-top: 10px;
@@ -5718,6 +5718,9 @@ const btnElement = ref({
           width: 124px;
           min-width: 124px;
           background: #00517e;
+          position: sticky;
+          left: 0;
+          z-index: 10;
           & > div:nth-child(2),
           & > div:nth-child(4),
           & > div:nth-child(6) {

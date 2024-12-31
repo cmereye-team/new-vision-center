@@ -103,8 +103,8 @@ const discountsList = ref([
 const bannerImg = {
   // pc: "https://statichk.cmermedical.com/vision/imgs/d77ee7b50ef9dce4.png",
   // mobile: "https://statichk.cmermedical.com/vision/imgs/da875a7bbd73f573.png",
-  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104510585954.png",
-  mobile: "https://content.cmervision.com//static/upload/image/20240912/1726104515302361.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2024122411593001.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2024122412005101.png",
   newBanner: true,
 };
 
@@ -1343,7 +1343,6 @@ const handleIntersection = (entries: any, observer: any) => {
 
   // 认证
   .contain {
-    margin-top: 3.125rem;
     padding: 2.5rem;
   }
 
