@@ -139,8 +139,7 @@ const handlesSliPrev = () => {
 
 <template>
   <div class="orthokeratoplasty">
-    <PublicBanner :banner="bannerImg">
-    </PublicBanner>
+    <PublicBanner :banner="bannerImg"> </PublicBanner>
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="isPc ? '角膜矯形術評估' : '角膜矯形術 OK鏡'"
@@ -688,7 +687,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/2024123009013501.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123115592501.png"
                 alt="晚上睡覺後"
               />
             </div>
@@ -702,7 +701,7 @@ const handlesSliPrev = () => {
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/2024123008465501.png"
+                src="https://statichk.cmermedical.com/vision/imgs/2024123116341901.svg"
                 alt="日間摘除後"
               />
             </div>
@@ -4766,17 +4765,38 @@ const handlesSliPrev = () => {
           }
         }
         & > div:nth-child(2) {
-          min-height: 243px;
-          max-width: 196px;
+          height: 206.94px;
+          width: 191.1px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
           & > img {
-            width: 100%;
+            object-fit: contain;
           }
           display: flex;
           align-items: center;
           justify-content: center;
         }
       }
-      &>div::after{
+      & > div:nth-child(2) {
+        & > div:nth-child(2) {
+          display: flex;
+          align-items: flex-start;
+        }
+      }
+      & > div:nth-child(3) {
+        & > div:nth-child(2) {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      & > div:nth-child(4) {
+        & > div:nth-child(2) {
+          display: flex;
+          align-items: flex-end;
+        }
+      }
+      & > div::after {
         content: "";
         width: 37px;
         height: 32px;
@@ -4784,19 +4804,20 @@ const handlesSliPrev = () => {
         left: 110%;
         top: 55%;
         transform: translateX(-50%);
-        background: url('https://statichk.cmermedical.com/vision/imgs/2024123009055301.png') no-repeat;
+        background: url("https://statichk.cmermedical.com/vision/imgs/2024123009055301.png")
+          no-repeat;
       }
-      &>div:nth-child(2):after{
+      & > div:nth-child(2):after {
         content: "";
         position: absolute;
         left: 120%;
       }
-      &>div:nth-child(3):after{
+      & > div:nth-child(3):after {
         content: "";
         position: absolute;
         left: 100%;
       }
-      &>div:last-child::after{
+      & > div:last-child::after {
         content: none;
       }
     }
@@ -5893,6 +5914,8 @@ const handlesSliPrev = () => {
         display: flex;
         flex-direction: column;
         align-items: center;
+        justify-content: space-between;
+        flex: 0.5;
         & > div:nth-child(1) {
           display: flex;
           align-items: center;
@@ -5941,7 +5964,7 @@ const handlesSliPrev = () => {
         & > div:nth-child(2)::after {
           content: "";
           position: absolute;
-          right: -45%;
+          right: -25%;
           top: 50%;
           transform: translateY(-50%);
           background: url("https://statichk.cmermedical.com/vision/imgs/d16a15ed51fbf41e.png")

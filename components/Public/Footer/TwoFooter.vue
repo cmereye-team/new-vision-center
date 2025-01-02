@@ -340,7 +340,7 @@ const showThreeLevel = () => {
         & > a:nth-child(1) {
           color: #00a6ce;
           font-family: "Noto Sans CJK TC";
-          font-size: 24px;
+          font-size: clamp(20px, 1.04vw, 24px);
           font-style: normal;
           font-weight: 700;
           line-height: normal;
@@ -353,7 +353,7 @@ const showThreeLevel = () => {
             & > a {
               color: #666;
               font-family: "Noto Sans HK";
-              font-size: 20px;
+              font-size: clamp(16px, 0.83vw, 20px);
               font-style: normal;
               font-weight: 400;
               line-height: 43.5px;
@@ -394,7 +394,7 @@ const showThreeLevel = () => {
       & > a {
         color: #3e5270;
         font-family: "Noto Sans HK";
-        font-size: 20px;
+        font-size: clamp(16px, 0.83vw, 20px);
         font-style: normal;
         font-weight: 500;
         line-height: 43.5px;
@@ -424,6 +424,7 @@ const showThreeLevel = () => {
   }
   .threeLevel {
     position: relative;
+    width: fit-content;
     & > a::after {
       content: "";
       position: absolute;
@@ -436,9 +437,10 @@ const showThreeLevel = () => {
     }
   }
   .threeLevel:hover {
+    width: fit-content;
     a::after {
       background: url(https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png);
-      transform: rotate(180deg) translateX(50%);
+      transform: rotate(180deg) translateX(-50%);
       width: 16px;
       height: 8px;
       top: 18px;
@@ -446,6 +448,7 @@ const showThreeLevel = () => {
     }
   }
   .threeLevel-child {
+    width: fit-content;
     & > div:hover:before {
       background: #00a6ce;
     }
