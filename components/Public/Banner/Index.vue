@@ -21,7 +21,7 @@ const props = defineProps({
 
 <template>
   <div class="banner-template">
-    <div :style="{ height: props.banner.newBanner ? '400px' : 'auto' }">
+    <div :style="{ height: props.banner.newBanner ? 'auto' : 'auto' }">
       <img v-if="isPc" :src="banner.pc" />
       <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''" />
     </div>

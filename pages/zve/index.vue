@@ -836,7 +836,7 @@ const handleIntersection = (entries: any, observer: any) => {
                     <span>14:30–18:00</span>
                   </div>
                   <div class="address-text">
-                    <span>星期六：</span> <span>09:30–13:30</span>
+                    <span>星期六：</span> <span>09:30-13:00</span>
                     <span>(星期日及公眾假期休息)</span>
                   </div>
                 </div>

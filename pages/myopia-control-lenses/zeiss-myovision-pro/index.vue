@@ -20,7 +20,7 @@ const detail = {
   title: "立即體驗ZEISS MyoVision Pro 兒童近視控制鏡片",
   brand: "zeiss",
   explain: "立即1分鐘登記！",
-  brandTitle: "ZEISS MyoVision Pro 兒童近視控制鏡片(送鏡架) $1,398起",
+  brandTitle: "ZEISS MyoVision Pro 兒童近視控制鏡片(送鏡架) $1,598起",
   img:'https://statichk.cmermedical.com/vision/imgs/0d2990252cea.webp'
 };
 const btnElement = ref({
@@ -53,9 +53,9 @@ onMounted(() => {
   handKind(0);
 });
 const bannerImg = {
-  pc: "https://content.cmervision.com//static/upload/image/20240912/1726104491847759.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2025010217543001.png",
   mobile:
-    "https://content.cmervision.com//static/upload/image/20240912/1726104496123258.jpg",
+    "https://statichk.cmermedical.com/vision/imgs/2025010217543002.png",
   newBanner: true,
 };
 
@@ -175,7 +175,7 @@ onMounted(() => {
             >
               <div>
                 <img
-                  src="https://statichk.cmermedical.com/vision/imgs/0757ddde6b5bd37c.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/92ca57e15e76e126.png"
                   alt="MyoVision Pro鏡片"
                 />
               </div>
@@ -191,7 +191,7 @@ onMounted(() => {
             >
               <div>
                 <img
-                  src="https://statichk.cmermedical.com/vision/imgs/92ca57e15e76e126.png"
+                  src="https://statichk.cmermedical.com/vision/imgs/0757ddde6b5bd37c.png"
                   alt="MyoKids鏡片"
                 />
               </div>
@@ -1322,7 +1322,7 @@ onMounted(() => {
               alt=""
             />
           </div>
-          <a href="">
+          <a href="../../../assets/pdf/Zeiss-leaflet.pdf" download="Zeiss-leaflet.pdf" target="_blank">
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -1354,10 +1354,10 @@ onMounted(() => {
 @media screen and (min-width: 768px) {
   .myopia-control-zeiss {
     :deep(.banner-template) {
-      height: 0 !important;
+      // height: 400px !important;
       & > div {
         img {
-          display: none !important;
+          // display: flex !important;
         }
       }
     }
