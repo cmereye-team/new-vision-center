@@ -214,7 +214,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       }
       onsubmit(formEl);
       dingTalk(formEl);
-      dataAllUnauthorized('校验通过的提交')
+      dataAllUnauthorized("校验通过的提交");
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -352,7 +352,7 @@ const dataAllUnauthorized = async (str: string) => {
     .replace(/FromMe/g, "来源")
     .replace(/checkServe/g, "服务")
     .replace(/sms/g, "备注");
-     const url = `https://3473.push.ft07.com/send/sctp3473tsymors1ee9efxbabuu7fh1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
+  const url = `https://3473.push.ft07.com/send/sctp3473tsymors1ee9efxbabuu7fh1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
   // const url = `https://3562.push.ft07.com/send/sctp3562t7wmq3rl6ftbwgy7hgzjxu1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
 
   let { data }: any = await useFetch(url, {
@@ -677,7 +677,7 @@ onMounted(() => {
           </svg>
           訊息
         </div>
-        <el-form-item class="submitFormItem"  @click="submitForm(ruleFormRef)">
+        <el-form-item class="submitFormItem">
           <el-input
             v-model="ruleForm.sms"
             maxlength="500"
@@ -685,7 +685,7 @@ onMounted(() => {
             class="sms"
           />
           <!-- <el-button @click="submitForm(ruleFormRef)"> 提交 </el-button> -->
-          <div class="submitBtn">
+          <div class="submitBtn" @click="submitForm(ruleFormRef)">
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="34"
