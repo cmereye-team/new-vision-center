@@ -228,6 +228,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
 const resetForm = (formEl: FormInstance | undefined) => {
   if (!formEl) return;
   ruleForm.checkServe = [];
+  ruleForm.sms = "";
   formEl.resetFields();
 };
 
@@ -257,7 +258,7 @@ const onsubmit = async (formEl: any) => {
   );
   let res = JSON.parse(data.value);
   localStorage.setItem("contactForm", JSON.stringify(_form));
-  if (res.code == 0) {
+  if (res.code == 1) {
     formLoading.value = false;
     ElMessage({
       message: "提交成功！請注意工作人員聯係！",
@@ -676,7 +677,7 @@ onMounted(() => {
           </svg>
           訊息
         </div>
-        <el-form-item class="submitFormItem">
+        <el-form-item class="submitFormItem"  @click="submitForm(ruleFormRef)">
           <el-input
             v-model="ruleForm.sms"
             maxlength="500"
@@ -714,7 +715,7 @@ onMounted(() => {
                 stroke-linejoin="round"
               />
             </svg>
-            <span @click="submitForm(ruleFormRef)"> 提交 </span>
+            <span> 提交 </span>
           </div>
         </el-form-item>
       </el-form>
