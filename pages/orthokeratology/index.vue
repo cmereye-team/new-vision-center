@@ -2634,7 +2634,10 @@ const handlesSliPrev = () => {
                       alt=""
                     />
                   </div>
-                  <a>
+                  <a
+                    href="../../../assets/pdf/231123_OK-lens-leaflet.pdf"
+                    download="角膜矯形鏡.pdf"
+                  >
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -3583,7 +3586,10 @@ const handlesSliPrev = () => {
                       alt=""
                     />
                   </div>
-                  <a>
+                  <a
+                    href="../../../assets/pdf/231123_OK-lens-leaflet.pdf"
+                    download="角膜矯形鏡.pdf"
+                  >
                     <span>
                       <svg
                         xmlns="http://www.w3.org/2000/svg"

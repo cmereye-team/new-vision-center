@@ -103,8 +103,8 @@ const discountsList = ref([
 const bannerImg = {
   // pc: "https://statichk.cmermedical.com/vision/imgs/d77ee7b50ef9dce4.png",
   // mobile: "https://statichk.cmermedical.com/vision/imgs/da875a7bbd73f573.png",
-  pc: "https://statichk.cmermedical.com/vision/imgs/2025011613485201.jpg",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/2025011613501001.jpg",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2025011615304802.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2025011615304801.png",
   newBanner: true,
 };
 
