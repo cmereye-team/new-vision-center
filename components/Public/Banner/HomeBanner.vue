@@ -172,12 +172,12 @@ const handleshowdeBox = (_idx: any) => {
         width: 100%;
         display: flex;
         justify-content: center;
-        height: 723px;
+        // height: 723px;
         object-fit: cover;
         img {
           height: 100%;
           width: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
@@ -343,14 +343,14 @@ const handleshowdeBox = (_idx: any) => {
 
       a {
         width: 100%;
-        height: 723px;
+        // height: 723px;
         object-fit: cover;
         display: flex;
         justify-content: center;
         img {
           height: 100%;
           width: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
@@ -529,7 +529,7 @@ const handleshowdeBox = (_idx: any) => {
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
