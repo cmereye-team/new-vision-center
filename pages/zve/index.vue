@@ -981,6 +981,9 @@ const handleIntersection = (entries: any, observer: any) => {
 }
 
 @media screen and (min-width: 768px) {
+  .mbShow {
+    display: none !important;
+  }
   //轮播图
   .wpbSwpier {
     background: #f6f9fe;
