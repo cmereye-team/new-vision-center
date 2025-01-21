@@ -4233,6 +4233,7 @@ const handlesSliPrev = () => {
       gap: 21px;
       padding: 20px 0;
       position: relative;
+      z-index: 20;
       & > div {
         width: 309px;
         & > img {

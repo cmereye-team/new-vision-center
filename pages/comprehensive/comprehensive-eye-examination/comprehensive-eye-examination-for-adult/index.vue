@@ -17,8 +17,10 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/c6817a94927a9f78.jpg",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/9660b07b9deeda5c.jpg",
+  // pc: "https://statichk.cmermedical.com/vision/imgs/c6817a94927a9f78.jpg",
+  // mobile: "https://statichk.cmermedical.com/vision/imgs/9660b07b9deeda5c.jpg",
+  pc:"https://content.cmervision.com//static/upload/image/20250121/1737455978559809.png",
+  mobile:"https://content.cmervision.com//static/upload/image/20250121/1737456001165522.png"
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
