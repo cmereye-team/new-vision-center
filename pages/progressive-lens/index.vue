@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/5d7947a339ef25d4.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/2a416d456643f54e.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2025020710545301.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2025020710545302.png",
 };
 const isType = ref(0);
 const checkType = (type: number) => {
