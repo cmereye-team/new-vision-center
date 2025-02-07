@@ -1043,7 +1043,7 @@ const judgeTwo = (num: string) => {
               alt=""
             />
           </div>
-          <a href="../../../assets/pdf/Vision-白內障手術後配鏡23-Leaflet-V11.pdf" download="Vision-白內障手術後配鏡23-Leaflet-V11.pdf">
+          <a href="../../assets/pdf/Vision-白內障手術後配鏡23-Leaflet-V11.pdf" download="Vision-白內障手術後配鏡23-Leaflet-V11.pdf">
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -469,9 +469,6 @@ const regionItem = (index: number) => {
           </div>
           <div class="vision-experience-img-list">
             <div
-              @mouseover="mouseoverItem(3)"
-              @mouseout="mouseoutItem(3)"
-              @click="regionItem(3)"
               class="vision-experience-img-list-item vision-experience-img-list-item1"
             >
               <img
@@ -480,9 +477,6 @@ const regionItem = (index: number) => {
               />
             </div>
             <div
-              @mouseover="mouseoverItem(2)"
-              @mouseout="mouseoutItem(2)"
-              @click="regionItem(2)"
               class="vision-experience-img-list-item vision-experience-img-list-item2"
             >
               <img
@@ -491,9 +485,6 @@ const regionItem = (index: number) => {
               />
             </div>
             <div
-              @mouseover="mouseoverItem(1)"
-              @mouseout="mouseoutItem(1)"
-              @click="regionItem(1)"
               class="vision-experience-img-list-item vision-experience-img-list-item3"
             >
               <img
@@ -502,7 +493,6 @@ const regionItem = (index: number) => {
               />
             </div>
             <div
-              @click="regionItem(4)"
               class="vision-experience-img-list-item4 vision-experience-img-list-box"
             ></div>
           </div>
@@ -1115,7 +1105,7 @@ const regionItem = (index: number) => {
     transition: all 0.3s;
   }
   .vision-experience-bg {
-    width: 98%;
+    width: 90%;
     min-height: 830.854px;
     margin-left: 0;
     background: url("https://statichk.cmermedical.com/vision/imgs/2025012115442801.png")
@@ -1133,7 +1123,7 @@ const regionItem = (index: number) => {
     bottom: 0;
     left: 0;
     min-height: 939.854px;
-    width: 96%;
+    width: 100%;
     background: url("https://statichk.cmermedical.com/vision/imgs/2025012115464301.png")
       no-repeat;
     background-size: cover;
@@ -1147,7 +1137,6 @@ const regionItem = (index: number) => {
     font-weight: 500;
     line-height: 1.2;
     z-index: 10;
-    pointer-events: none;
   }
   .vision-experience-title-text > span {
     color: #fff;
@@ -1167,16 +1156,16 @@ const regionItem = (index: number) => {
   .vision-experience-img-list-box {
     position: relative;
     background: #2449a4;
-    height: 769.854px;
-    width: 1030px;
-    clip-path: polygon(0% 0%, 100% 0%, 73% 100%, 0% 100%);
+    height: 780.854px;
+    width: 1610px;
+    clip-path: polygon(0% 0%, 90% 0%, 72% 100%, 0% 100%);
   }
   .vision-experience-img-list-item4 {
     position: absolute;
-    left: -40px;
+    left: -235px;
   }
   .vision-experience-img-list-item {
-    height: 769.854px;
+    height: 780.854px;
     clip-path: polygon(0% 0%, 100% 0%, 64% 100%, 0% 100%);
     overflow: hidden;
   }
@@ -1187,13 +1176,52 @@ const regionItem = (index: number) => {
   }
   .vision-experience-img-list-item2 {
     position: absolute;
-    right: 339px;
+    right: 425px;
   }
   .vision-experience-img-list-item3 {
     position: absolute;
-    right: 679px;
+    right: 840px;
   }
 
+  .vision-experience-img-list-item3:hover {
+    z-index: 65;
+    right: 0;
+  }
+  .vision-experience-img-list-item2:hover {
+    z-index: 55;
+    right: 0;
+  }
+  .vision-experience-img-list-item1:hover {
+    z-index: 50;
+  }
+  .vision-experience-img-list-item4:hover {
+    width: 2190px;
+    left: -55px;
+    z-index: 52;
+    clip-path: polygon(0% 0%, 92% 0%, 79% 100%, 0% 100%);
+  }
+  .vision-experience-img-list-item1:hover ~ .vision-experience-img-list-item4,
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item4,
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item4 {
+    width: 2190px;
+    left: -55px;
+    z-index: 52;
+    clip-path: polygon(0% 0%, 92% 0%, 79% 100%, 0% 100%);
+  }
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item4 {
+    z-index: 57;
+  }
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item4 {
+    z-index: 65;
+  }
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item2,
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item1,
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item3,
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item1,
+  .vision-experience-img-list-item1:hover ~ .vision-experience-img-list-item2,
+  .vision-experience-img-list-item1:hover ~ .vision-experience-img-list-item3 {
+    display: none !important;
+  }
   .vision-experience-img-list-item > img {
     object-fit: contain;
     width: 100%;
@@ -1395,7 +1423,7 @@ const regionItem = (index: number) => {
         height: 40px;
         border: 10px solid #2449a4;
         border-bottom: 1px solid transparent; /* 下边框透明 */
-        border-right: 1px solid transparent; /* 右边框透明 */
+        border-right: 1px solid透明; /* 右边框透明 */
       }
 
       &::after {
@@ -1681,8 +1709,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-top: 1px solid transparent; /* 下边框透明 */
-      border-right: 1px solid transparent; /* 右边框透明 */
+      border-top: 1px solid透明; /* 下边框透明 */
+      border-right: 1px solid透明; /* 右边框透明 */
     }
 
     &::after {
@@ -1693,8 +1721,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-top: 1px solid transparent; /* 下边框透明 */
-      border-left: 1px solid transparent; /* 右边框透明 */
+      border-top: 1px solid透明; /* 下边框透明 */
+      border-left: 1px solid透明; /* 右边框透明 */
     }
   }
 
@@ -1709,8 +1737,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-bottom: 1px solid transparent; /* 下边框透明 */
-      border-right: 1px solid transparent; /* 右边框透明 */
+      border-bottom: 1px solid透明; /* 下边框透明 */
+      border-right: 1px solid透明; /* 右边框透明 */
     }
 
     &::after {
@@ -1721,8 +1749,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-bottom: 1px solid transparent; /* 下边框透明 */
-      border-left: 1px solid transparent; /* 右边框透明 */
+      border-bottom: 1px solid透明; /* 下边框透明 */
+      border-left: 1px solid透明; /* 右边框透明 */
     }
   }
 
@@ -2878,7 +2906,7 @@ a {
 
 .address-whatsapp-a > svg {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .address-whatsapp-a > div {
