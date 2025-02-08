@@ -464,42 +464,13 @@ const regionItem = (index: number) => {
     <div class="vision-experience-bg">
       <div class="vision-experience-content">
         <div class="vision-experience-title">
-          <div class="vision-experience-title-text">
+          <!-- <div class="vision-experience-title-text">
             MY<br />VISION<span>視界的全新體驗</span><br />EXPERIENCE
-          </div>
-          <div class="vision-experience-img-list">
-            <div
-              class="vision-experience-img-list-item vision-experience-img-list-item1"
-            >
-              <img
-                src="https://statichk.cmermedical.com/vision/imgs/2025012116010801.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="vision-experience-img-list-item vision-experience-img-list-item2"
-            >
-              <img
-                src="https://statichk.cmermedical.com/vision/imgs/2025012116010802.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="vision-experience-img-list-item vision-experience-img-list-item3"
-            >
-              <img
-                src="https://statichk.cmermedical.com/vision/imgs/2025012116010803.png"
-                alt=""
-              />
-            </div>
-            <div
-              class="vision-experience-img-list-item4 vision-experience-img-list-box"
-            ></div>
-          </div>
+          </div> -->
         </div>
         <div></div>
       </div>
-      <div class="bg-mask-layer"></div>
+      <!-- <div class="bg-mask-layer"></div> -->
     </div>
   </div>
   <!-- 个人化配镜流程 -->
@@ -1106,17 +1077,16 @@ const regionItem = (index: number) => {
   }
   .vision-experience-bg {
     width: 90%;
-    min-height: 830.854px;
+    min-height: 43.2219vw;
+    background: #2449a4;
+    clip-path: polygon(90% 80%, 97% 65%, 100% 42%, 100% 0, 84% 0, 60% 0, 43% 0, 20% 0, 15% 0, 0 0, 0 7%, 0% 24%, 0 35%, 0% 44%, 0 74%, 0 91%, 0 100%, 42% 100%, 56% 96%, 78% 89%);
+    clip-path: circle(73.8% at 35% 35%);
     margin-left: 0;
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025012115442801.png")
-      no-repeat;
-    background-size: cover;
     position: relative;
     box-sizing: border-box;
-    padding-top: 100px;
-    padding-left: 100px;
     cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117133718.png"),
       auto;
+
   }
   .bg-mask-layer {
     position: absolute;

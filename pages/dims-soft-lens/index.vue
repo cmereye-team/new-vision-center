@@ -1336,7 +1336,7 @@ const btnElement = ref({
               alt=""
             />
           </div>
-          <a href="../../../assets/pdf/051123_Hoya-dims鏡片.pdf" download="HOYA近視控制鏡片.pdf">
+          <a href="https://www.cmervision.com/pdf/051123_Hoya-dims鏡片.pdf" download="HOYA近視控制鏡片.pdf">
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"

@@ -1322,7 +1322,7 @@ onMounted(() => {
               alt=""
             />
           </div>
-          <a href="../../../assets/pdf/Zeiss-leaflet.pdf" download="Zeiss-leaflet.pdf" target="_blank">
+          <a href="https://www.cmervision.com/pdf/Zeiss-leaflet.pdf" download="Zeiss-leaflet.pdf" target="_blank">
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"

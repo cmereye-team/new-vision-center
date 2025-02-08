@@ -2635,7 +2635,7 @@ const handlesSliPrev = () => {
                     />
                   </div>
                   <a
-                    href="../../../assets/pdf/231123_OK-lens-leaflet.pdf"
+                    href="https://www.cmervision.com/pdf/231123_OK-lens-leaflet.pdf"
                     download="角膜矯形鏡.pdf"
                   >
                     <span>
