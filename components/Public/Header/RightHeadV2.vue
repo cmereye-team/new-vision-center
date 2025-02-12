@@ -1,0 +1,1534 @@
+<script lang="ts" setup>
+import { Search } from "@element-plus/icons-vue";
+import getWindowSize from "@/utils/width";
+const isPc = ref(true);
+
+const input2 = ref("");
+const options = [
+  {
+    value: "hk",
+    label: "HK",
+  },
+  {
+    value: "cn",
+    label: "CN",
+  },
+  {
+    value: "en",
+    label: "EN",
+  },
+];
+const menuList = ref([
+  {
+    id: "1",
+    title: "關於我們",
+    isChildVisible: false,
+    path: "/",
+    childrenList: [
+      {
+        title: "公司簡介",
+        path: "/about-us/cmer-vision",
+        id: "1",
+      },
+      {
+        title: "聯絡我們",
+        path: "/about-us/contact-us",
+        id: "2",
+      },
+      {
+        title: "最新資訊",
+        path: "/about-us/news-information",
+        id: "3",
+      },
+    ],
+  },
+  {
+    id: "6",
+    title: "尊享優惠",
+    child: "svg",
+    path: "/new-discounts",
+  },
+  // {
+  //   id: "9",
+  //   title: "ZEISS Vision Expert",
+  //   child: "svg",
+  //   path: "/zve",
+  // },
+  {
+    id: "2",
+    title: "兒童視力服務",
+    isChildVisible: false,
+    path: "/",
+    childrenList: [
+      {
+        id: "1",
+        title: "近視防控策略",
+        path: "/myopia-control",
+      },
+      {
+        id: "2",
+        title: "角膜矯形鏡",
+        path: "/orthokeratology",
+      },
+      {
+        id: "3",
+        title: "近視控制眼鏡",
+        path: "/myopia-control-lenses",
+        threeIsChildVisible: false,
+        threeLevelList: [
+          {
+            id: "1",
+            title: "ZEISS",
+            path: "/myopia-control-lenses/zeiss-myovision-pro",
+          },
+          {
+            id: "2",
+            title: "HOYA",
+            path: "/dims-soft-lens",
+          },
+        ],
+      },
+      {
+        id: "4",
+        title: "近視控制隱形眼鏡",
+        path: "/child-myopia-control",
+        threeIsChildVisible: false,
+        threeLevelList: [
+          {
+            id: "1",
+            title: "MiSight®1 Day 隱形眼鏡",
+            path: "/misight",
+          },
+        ],
+      },
+      {
+        id: "5",
+        title: "眼睛檢查",
+        path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
+      },
+    ],
+  },
+  {
+    id: "3",
+    title: "成人視力服務",
+    isChildVisible: false,
+    path: "/",
+    childrenList: [
+      {
+        id: "1",
+        title: "眼睛檢查",
+        path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
+      },
+      {
+        id: "2",
+        title: "老花漸進鏡片",
+        path: "/progressive-lens",
+      },
+      {
+        id: "3",
+        title: "軟性隱形眼鏡",
+        path: "/soft-contact-lens",
+      },
+      {
+        id: "4",
+        title: "硬性隱形眼鏡",
+        path: "/comprehensive/contact-lens-fitting/rgp",
+      },
+    ],
+  },
+  {
+    id: "4",
+    title: "專業服務",
+    isChildVisible: false,
+    path: "/",
+    childrenList: [
+      {
+        id: "1",
+        title: "服務内容",
+        path: "/services",
+      },
+      //{
+      //  id: "4",
+      //  title: "人工智能健康篩查",
+      //  path: "/services/ai-screening",
+      //},
+      {
+        id: "2",
+        title: "收費詳情",
+        path: "/comprehensive/services-fees",
+      },
+      {
+        id: "3",
+        title: "長者醫療券計劃",
+        path: "/services/health-care-voucher",
+      },
+    ],
+  },
+  {
+    id: "5",
+    title: "護眼資訊",
+    path: "/",
+    isChildVisible: false,
+    childrenList: [
+      {
+        id: "1",
+        title: "影片資訊",
+        path: "/vision-news/eye-protection-classroom",
+      },
+      {
+        id: "2",
+        title: "日常護眼",
+        path: "/vision-news/daily-eye-care",
+      },
+      {
+        id: "3",
+        title: "常見眼睛問題",
+        path: "/",
+        threeIsChildVisible: false,
+        threeLevelList: [
+          {
+            id: "1",
+            title: "兒童常見眼睛問題",
+            path: "/common-pediatric-eye-problems",
+          },
+          {
+            id: "2",
+            title: "成人常見眼睛問題",
+            path: "/common-eye-diseases-in-adults",
+          },
+        ],
+      },
+    ],
+  },
+]);
+
+const isThreeLevel = (item: any) => {
+  item = item.childrenList;
+  return item?.length > 0 ? true : false;
+};
+
+onMounted(() => {
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
+  if (isPc) {
+    menuListThisPc();
+    showThreeLevel();
+  }
+});
+
+const menuListThisPc = () => {
+  menuList.value.forEach((item: any) => {
+    item.isChildVisible = isPc ? true : false;
+  });
+};
+
+const isShowChildList = ref(false);
+const showThreeLevel = () => {
+  isShowChildList.value = !isShowChildList.value;
+};
+
+const emit = defineEmits(["getValue"]);
+// 传递菜单展开状态
+const pathIsTrue = () => {
+  emit("getValue", "");
+};
+
+const showChildMenu = (index: any) => {
+  console.log("showChildMenu");
+  menuList.value.forEach((item: any, i: number) => {
+    if (i === index) {
+      menuList.value[index].isChildVisible =
+        !menuList.value[index].isChildVisible;
+    } else {
+      item.isChildVisible = false;
+    }
+  });
+};
+// 获取路由
+const route = useRoute();
+const router = useRouter();
+const mbToLink = (item: any) => {
+  console.log("mbToLink");
+  router.push({
+    path: item.path,
+    query: {
+      ...route.query,
+    },
+  });
+  pathIsTrue();
+};
+
+const headLink = (index: number, item: any) => {
+  if (item.path == "/" && !isPc) {
+    showChildMenu(index);
+  } else if (item.path == "/" && isPc) {
+    // console.log('pc')
+  } else {
+    mbToLink(item);
+  }
+};
+
+const language = ref("hk");
+const getValue = (str: string) => {
+  console.log(str, "item");
+  language.value = str;
+};
+
+const checkLanguage = ref(false);
+const handleMouseenter = () => {
+  checkLanguage.value = true;
+};
+const handleMouseleave = () => {
+  checkLanguage.value = false;
+};
+
+const hiddenBox = ref(false);
+</script>
+
+<template>
+  <div class="right-head">
+    <div class="menu">
+      <div
+        v-for="(item, index) in menuList"
+        :key="item.id"
+        class="fa-path"
+        :class="[
+          `fa-${index + 1}`,
+          item?.childrenList?.length > 0 ? 'isChildNode' : 'noNodeChild',
+        ]"
+      >
+        <nuxt-link
+          :to="item.path == '/' ? headLink(index, item) : item.path"
+          :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
+          >{{ item.title }}</nuxt-link
+        >
+        <transition name="fade">
+          <div v-if="item.isChildVisible" class="sub-menu">
+            <div
+              v-for="(child, childIndex) in item.childrenList"
+              :key="child.id"
+              class="son-menu"
+              @click="isThreeLevel(child) ? showThreeLevel() : pathIsTrue()"
+              :class="[
+                child.path === '/services/ai-screening'
+                  ? 'is_ai_screening'
+                  : '',
+              ]"
+            >
+              <nuxt-link :to="child.path == '/' ? '' : child.path"
+                ><span
+                  :class="[
+                    child.path === '/services/ai-screening'
+                      ? 'ai_screening_title'
+                      : '',
+                  ]"
+                  >{{ child.title }}
+                </span>
+              </nuxt-link>
+              <div v-if="isShowChildList" :class="`three-level-${childIndex}`">
+                <div
+                  v-for="threeLevel in child.threeLevelList"
+                  :key="threeLevel.id"
+                >
+                  <nuxt-link
+                    :to="threeLevel.path == '/' ? '#' : threeLevel.path"
+                    ><span>{{ threeLevel.title }}</span></nuxt-link
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </transition>
+      </div>
+    </div>
+    <div class="btn-service">
+      <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+          >
+            <path
+              d="M22.014 17.7869C21.6345 17.6093 19.7435 16.7653 19.3918 16.651C19.0401 16.5305 18.7824 16.4734 18.5282 16.8287C18.2705 17.1809 17.5392 17.9646 17.3093 18.2026C17.0865 18.4374 16.8601 18.4659 16.4805 18.2914C14.2239 17.2634 12.7439 16.4575 11.2569 14.1318C10.8634 13.5131 11.6504 13.5575 12.3852 12.2217C12.5106 11.9869 12.4479 11.7871 12.3504 11.6094C12.2529 11.4317 11.4868 9.712 11.1664 9.0108C10.8565 8.32863 10.5361 8.42382 10.3028 8.41113C10.0799 8.39844 9.82567 8.39844 9.56798 8.39844C9.31028 8.39844 8.89587 8.48728 8.54415 8.83312C8.19243 9.18531 7.19995 10.0325 7.19995 11.7522C7.19995 13.4718 8.5755 15.1376 8.76354 15.3724C8.95856 15.6072 11.4694 19.1354 15.3244 20.6552C17.762 21.6134 18.7162 21.6959 19.935 21.5309C20.6768 21.4294 22.2056 20.6869 22.5225 19.8652C22.8394 19.0466 22.8394 18.3454 22.7453 18.1994C22.6513 18.0439 22.3936 17.9551 22.014 17.7869Z"
+              fill="white"
+            />
+            <path
+              d="M28.8351 9.1875C28.0784 7.38951 26.9936 5.77567 25.6108 4.38951C24.228 3.0067 22.6142 1.91853 20.8128 1.16518C18.9713 0.391741 17.016 0 15.0004 0H14.9334C12.9045 0.0100446 10.9391 0.41183 9.09089 1.20201C7.30631 1.9654 5.70588 3.05022 4.33648 4.43304C2.96708 5.81585 1.89231 7.42299 1.14902 9.21429C0.378518 11.0692 -0.00945119 13.0413 0.000174815 15.0703C0.0102193 17.394 0.566016 19.7009 1.6073 21.7634V26.8527C1.6073 27.7031 2.29702 28.3929 3.14746 28.3929H8.24003C10.3025 29.4342 12.6094 29.99 14.933 30H15.0033C17.0089 30 18.9542 29.6116 20.7856 28.8516C22.5769 28.1049 24.1874 27.0335 25.5668 25.6641C26.9496 24.2946 28.0378 22.6942 28.7978 20.9096C29.588 19.0614 29.9898 17.096 29.9998 15.067C30.0099 13.0279 29.6148 11.0491 28.8346 9.1875H28.8351ZM23.776 23.8527C21.4289 26.1763 18.3151 27.4554 15.0004 27.4554H14.9435C12.9245 27.4453 10.919 26.9431 9.1478 25.9989L8.86656 25.8482H4.15191V21.1339L4.00124 20.8527C3.05706 19.0815 2.55483 17.0759 2.54479 15.0569C2.53139 11.7188 3.80705 8.58482 6.14742 6.22433C8.48445 3.86384 11.6083 2.55804 14.9464 2.54464H15.0033C16.6774 2.54464 18.3013 2.86942 19.8314 3.51228C21.3247 4.13839 22.664 5.03906 23.8157 6.19085C24.9642 7.33929 25.8682 8.68192 26.4943 10.1752C27.1438 11.7221 27.4686 13.3627 27.4619 15.0569C27.4418 18.3917 26.1327 21.5156 23.7756 23.8527H23.776Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div>WhatsApp預約</div>
+      </a>
+      <a href="tel: +85238925089" target="_blank">
+        <div>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+          >
+            <path
+              d="M23.5317 19.0297L18.5518 14.0498C17.9261 13.4259 16.9136 13.4259 16.2883 14.0498L15.1565 15.1816C14.5161 15.8219 12.4431 15.1846 10.6294 13.3708C8.81559 11.5569 8.17711 9.48467 8.81859 8.84356L9.95037 7.71176C10.5742 7.08603 10.5742 6.07352 9.95037 5.44816L4.97047 0.468175C4.34512 -0.156058 3.33263 -0.156058 2.7069 0.468175L1.57512 1.59997C0.73895 2.43616 0.229892 3.53607 0.0610816 4.8697C-0.0953495 6.10653 0.0490773 7.49305 0.48986 8.99099C1.37405 12 3.36789 15.1639 6.10262 17.8976C8.83735 20.6316 12.0001 22.6262 15.0083 23.5104C16.1165 23.8364 17.1635 24 18.1339 24C18.4671 24.0007 18.8002 23.9801 19.1307 23.9388C20.4639 23.77 21.5638 23.2606 22.4003 22.4244L23.5321 21.2926C24.156 20.6669 24.156 19.6547 23.5321 19.029L23.5317 19.0297Z"
+              fill="white"
+            />
+          </svg>
+        </div>
+        <div>電話預約：3892 5089</div>
+      </a>
+    </div>
+    <div class="media" v-if="hiddenBox">
+      <div>
+        <a target="_blank" href="https://www.facebook.com/cmervision/">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="27"
+            height="27"
+            viewBox="0 0 27 27"
+            fill="none"
+          >
+            <path
+              d="M26 13.5825C26 6.08109 20.1797 0 13 0C5.82029 0 0 6.08109 0 13.5825C0 20.3618 4.75389 25.981 10.9688 27V17.5087H7.66797V13.5825H10.9688V10.5901C10.9688 7.18599 12.9096 5.30567 15.879 5.30567C17.3009 5.30567 18.7891 5.57095 18.7891 5.57095V8.91352H17.1498C15.535 8.91352 15.0313 9.96059 15.0313 11.0358V13.5825H18.6367L18.0604 17.5087H15.0313V27C21.2461 25.981 26 20.3618 26 13.5825Z"
+              fill="#00A6CE"
+            />
+          </svg>
+        </a>
+        <a target="_blank" href="https://www.instagram.com/cmervision/">
+          <svg
+            width="27"
+            height="27"
+            viewBox="0 0 27 27"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M13.5 2.43105C17.107 2.43105 17.5342 2.44687 18.9527 2.51016C20.2711 2.56816 20.983 2.78965 21.4576 2.97422C22.0852 3.2168 22.5387 3.51211 23.008 3.98145C23.4826 4.45605 23.7727 4.9043 24.0152 5.53184C24.1998 6.00645 24.4213 6.72363 24.4793 8.03672C24.5426 9.46055 24.5584 9.8877 24.5584 13.4895C24.5584 17.0965 24.5426 17.5236 24.4793 18.9422C24.4213 20.2605 24.1998 20.9725 24.0152 21.4471C23.7727 22.0746 23.4773 22.5281 23.008 22.9975C22.5334 23.4721 22.0852 23.7621 21.4576 24.0047C20.983 24.1893 20.2658 24.4107 18.9527 24.4688C17.5289 24.532 17.1018 24.5479 13.5 24.5479C9.89297 24.5479 9.46582 24.532 8.04727 24.4688C6.72891 24.4107 6.01699 24.1893 5.54238 24.0047C4.91484 23.7621 4.46133 23.4668 3.99199 22.9975C3.51738 22.5229 3.22734 22.0746 2.98477 21.4471C2.8002 20.9725 2.57871 20.2553 2.5207 18.9422C2.45742 17.5184 2.4416 17.0912 2.4416 13.4895C2.4416 9.88242 2.45742 9.45527 2.5207 8.03672C2.57871 6.71836 2.8002 6.00645 2.98477 5.53184C3.22734 4.9043 3.52266 4.45078 3.99199 3.98145C4.4666 3.50684 4.91484 3.2168 5.54238 2.97422C6.01699 2.78965 6.73418 2.56816 8.04727 2.51016C9.46582 2.44687 9.89297 2.43105 13.5 2.43105ZM13.5 0C9.83496 0 9.37617 0.0158203 7.93652 0.0791016C6.50215 0.142383 5.51602 0.374414 4.66172 0.706641C3.77051 1.05469 3.01641 1.51348 2.26758 2.26758C1.51348 3.01641 1.05469 3.77051 0.706641 4.65645C0.374414 5.51602 0.142383 6.49687 0.0791016 7.93125C0.0158203 9.37617 0 9.83496 0 13.5C0 17.165 0.0158203 17.6238 0.0791016 19.0635C0.142383 20.4979 0.374414 21.484 0.706641 22.3383C1.05469 23.2295 1.51348 23.9836 2.26758 24.7324C3.01641 25.4813 3.77051 25.9453 4.65645 26.2881C5.51602 26.6203 6.49688 26.8523 7.93125 26.9156C9.3709 26.9789 9.82969 26.9947 13.4947 26.9947C17.1598 26.9947 17.6186 26.9789 19.0582 26.9156C20.4926 26.8523 21.4787 26.6203 22.333 26.2881C23.2189 25.9453 23.973 25.4813 24.7219 24.7324C25.4707 23.9836 25.9348 23.2295 26.2775 22.3436C26.6098 21.484 26.8418 20.5031 26.9051 19.0688C26.9684 17.6291 26.9842 17.1703 26.9842 13.5053C26.9842 9.84023 26.9684 9.38145 26.9051 7.9418C26.8418 6.50742 26.6098 5.52129 26.2775 4.66699C25.9453 3.77051 25.4865 3.01641 24.7324 2.26758C23.9836 1.51875 23.2295 1.05469 22.3436 0.711914C21.484 0.379687 20.5031 0.147656 19.0688 0.084375C17.6238 0.0158203 17.165 0 13.5 0Z"
+              fill="#00A6CE"
+            />
+            <path
+              d="M13.4971 6.56543C9.66855 6.56543 6.5625 9.67148 6.5625 13.5C6.5625 17.3285 9.66855 20.4346 13.4971 20.4346C17.3256 20.4346 20.4316 17.3285 20.4316 13.5C20.4316 9.67148 17.3256 6.56543 13.4971 6.56543ZM13.4971 17.9982C11.0133 17.9982 8.99883 15.9838 8.99883 13.5C8.99883 11.0162 11.0133 9.00176 13.4971 9.00176C15.9809 9.00176 17.9953 11.0162 17.9953 13.5C17.9953 15.9838 15.9809 17.9982 13.4971 17.9982Z"
+              fill="#00A6CE"
+            />
+            <path
+              d="M22.3316 6.29131C22.3316 7.1878 21.6039 7.91026 20.7127 7.91026C19.8162 7.91026 19.0938 7.18252 19.0938 6.29131C19.0938 5.39483 19.8215 4.67236 20.7127 4.67236C21.6039 4.67236 22.3316 5.4001 22.3316 6.29131Z"
+              fill="#00A6CE"
+            />
+          </svg>
+        </a>
+        <a
+          target="_blank"
+          href="https://www.youtube.com/@cmersmileeyecenter6303"
+        >
+          <svg
+            width="27"
+            height="21"
+            viewBox="0 0 27 21"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M24.6397 2.43802C25.0431 2.85963 25.3328 3.38387 25.4798 3.95828C26.0234 6.07839 26.0234 10.4996 26.0234 10.4996C26.0234 10.4996 26.0234 14.9209 25.4798 17.041C25.3328 17.6154 25.0431 18.1397 24.6397 18.5613C24.2363 18.9829 23.7333 19.2871 23.1812 19.4434C21.1484 20.011 13.0234 20.011 13.0234 20.011C13.0234 20.011 4.89844 20.011 2.86571 19.4434C2.31353 19.2871 1.81057 18.9829 1.40717 18.5613C1.00376 18.1397 0.714069 17.6154 0.567074 17.041C0.0234375 14.9209 0.0234375 10.4996 0.0234375 10.4996C0.0234375 10.4996 0.0234375 6.07839 0.567074 3.95828C0.714069 3.38387 1.00376 2.85963 1.40717 2.43802C1.81057 2.01641 2.31353 1.71222 2.86571 1.55589C4.89844 0.988281 13.0234 0.988281 13.0234 0.988281C13.0234 0.988281 21.1484 0.988281 23.1812 1.55589C23.7333 1.71222 24.2363 2.01641 24.6397 2.43802ZM17.1626 10.4998L10.3672 6.48511V14.5145L17.1626 10.4998Z"
+              fill="#00A6CE"
+            />
+          </svg>
+        </a>
+      </div>
+      <div>條款細則</div>
+    </div>
+    <div class="search" v-if="hiddenBox">
+      <el-input v-model="input2" placeholder="" :prefix-icon="Search" />
+    </div>
+    <div
+      v-if="hiddenBox"
+      class="language"
+      @mouseenter="handleMouseenter"
+      @mouseleave="handleMouseleave"
+    >
+      <div
+        class="language-svg"
+        :class="checkLanguage ? 'language-svg-spin' : ''"
+      >
+        {{ language.toUpperCase() }}
+      </div>
+      <div :class="checkLanguage ? 'language-list-show' : 'language-list-hide'">
+        <input @click="getValue('hk')" readonly type="text" value="HK" />
+        <input @click="getValue('CN')" readonly type="text" value="CN" />
+        <input @click="getValue('EN')" readonly type="text" value="EN" />
+      </div>
+    </div>
+  </div>
+</template>
+<style lang="scss" scoped>
+@media screen and (min-width: 768px) and (max-width: 1620px) {
+  a {
+    text-decoration: none;
+  }
+  .menu {
+    display: flex;
+    & > div {
+      position: relative;
+      border-right: 1px solid #4d4d4d;
+      & > a {
+        color: #4d4d4d;
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 0.8vw;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        position: relative;
+      }
+      & > a::after {
+        content: "";
+        position: absolute;
+        background: url("https://statichk.cmermedical.com/vision/imgs/6f68e977441f318c.png")
+          no-repeat;
+        background-size: 100% 100%;
+        width: 14px;
+        height: 6px;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+      }
+    }
+    & > div:nth-child(1),
+    & > div:nth-child(2),
+    & > div:nth-child(5) {
+      & > a {
+        padding: 0.5vw 2.1875vw;
+      }
+    }
+    & > div:nth-child(3) {
+      & > a {
+        padding: 0.5vw 1.1875vw;
+      }
+    }
+    & > div:nth-child(4) {
+      & > a {
+        padding: 0.5vw 1.302vw;
+      }
+    }
+    & > div:nth-child(6) {
+      & > a {
+        padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+      }
+    }
+    & > div:nth-child(7) {
+      & > a {
+        padding: 0.5vw 1.5vw 0.5vw 1.8vw;
+      }
+    }
+    & > div:last-child {
+      border-right: none;
+    }
+  }
+  .fa-path {
+    position: relative;
+  }
+  .isChildNode::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #00a5ce00;
+    // background:palegoldenrod;
+    bottom: -120%;
+    z-index: 5;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .noNodeChild {
+    a {
+      cursor: pointer;
+    }
+  }
+  .fade-leave-active {
+    transition: opacity 3s;
+  }
+
+  .fa-path:not(:hover) .sub-menu {
+    transition: opacity 3s;
+  }
+
+  .fa-path:hover {
+    & > a {
+      color: #00a6ce;
+      cursor: default;
+    }
+    & > a::after {
+      background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
+      transform: rotate(180deg) translateX(50%);
+      background-size: 100% 100%;
+      bottom: -10px;
+      z-index: 10;
+    }
+    .sub-menu {
+      box-shadow: #4d4d4d 5px 5px 10px;
+      z-index: 999;
+      border-radius: 5px;
+      width: max-content;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      top: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0;
+      background: #00B9E6;
+      & > div:last-child {
+        border-bottom: none;
+      }
+
+      & > a {
+        color: #00a6ce;
+        font-family: "Noto Sans HK";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: left;
+        text-wrap: nowrap;
+        line-height: 20px; /* 133.333% */
+      }
+    }
+  }
+
+  .son-menu {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    & > a {
+      padding-bottom: 0 !important;
+
+      color: #fff;
+      font-family: "Noto Sans HK";
+      font-size: 0.78vw;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      padding: 0.78vw 2.6vw;
+      display: block;
+      & > span {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
+        min-width: 6.25vw;
+        display: inline-block;
+      }
+    }
+  }
+  // .sub-menu::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 0px solid transparent;
+  //   border-bottom: 14px solid #fff;
+  //   border-left: 14px solid transparent;
+  //   border-right: 14px solid transparent;
+  //   top: -18px;
+  // }
+  .son-menu:hover {
+    & > a {
+      position: relative;
+      color: #fff;
+      background: #00A6CE;
+    }
+
+    .three-level-2 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      right: -82%;
+      top: -68%;
+      border-radius: 5px;
+      padding: 0.625vw 0;
+      & > div {
+        & > a {
+          padding: 0.78125vw 1.5625vw 0 1.5625vw;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Noto Sans HK";
+          font-size: 0.78125vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.04165vw;
+          min-width: 6.25vw;
+          & > span {
+            padding-bottom: 0.74165vw;
+            border-bottom: 1px solid #00a6ce;
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 0.58vw;
+            height: 0.78125vw;
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            background-size: 100% 100%;
+            left: 0.48125vw;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    .three-level-3 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -104%;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -18%;
+      border-radius: 5px;
+      padding: 0.625vw 0;
+      & > div {
+        & > a {
+          padding: 0.78125vw 1.5625vw;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Noto Sans HK";
+          font-size: 0.78125vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.04165vw;
+          & > span {
+            padding-bottom: 0.52vw;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 0.58vw;
+            height: 0.78125vw;
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            background-size: 100% 100%;
+            left: 0.48125vw;
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+      }
+    }
+    .three-level-5 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: 0;
+      left: 101%;
+      bottom: 0;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -60%;
+      border-radius: 5px;
+      & > div {
+        & > a {
+          padding: 15px 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Noto Sans HK";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
+  }
+  .router-link-active {
+    color: #00a6ce !important;
+  }
+  .menu {
+    .fa-2,
+    .fa-3 {
+      cursor: pointer;
+      & > a::after {
+        content: none;
+      }
+    }
+    // & > div:last-child:hover {
+    // .sub-menu {
+    // display: none;
+    // }
+    // }
+    // & > div:last-child {
+    //   & > a::after {
+    //     content: none;
+    //   }
+    // }
+
+    & > div {
+      & > div {
+        & > div:last-child {
+          & > a {
+            & > span {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .three-level-2 {
+      & > div {
+        & > a {
+          min-width: 120px;
+          display: block;
+          & > span {
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+      & > div:last-child {
+        & > a {
+          & > span {
+            border: none;
+          }
+        }
+      }
+    }
+    .three-level-3 {
+      & > div:last-child {
+        & > a {
+          & > span {
+            border: none;
+          }
+        }
+      }
+    }
+    .three-level-5 {
+      & > div:last-child {
+        & > a {
+          & > span {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .sub-menu {
+    padding-top: 10px;
+    display: none;
+    // visibility: hidden;
+    position: relative;
+    // background: #fff;
+    background: url("https://statichk.cmermedical.com/vision/imgs/bd478e6eda64c637.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  .three-level-2,
+  .three-level-3,
+  .three-level-5 {
+    display: none;
+  }
+  .right-head {
+    display: flex;
+    align-items: center;
+  }
+  .btn-service {
+    display: flex;
+    gap: 0 28px;
+    a {
+      border-radius: 100px;
+      border: 1px solid #000;
+      background: #59ba68;
+      box-shadow: 0 0 0;
+      transition: all 200ms;
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      box-sizing: border-box;
+      padding: 14px 33px;
+      div:nth-child(2) {
+        color: #fff;
+        text-align: center;
+        font-family: Inter;
+        font-size: 14.4px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    a:nth-child(2) {
+      background: #00a6ce;
+    }
+    a:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 12px 1px #141211;
+      transition: all 0.3s ease-in-out;
+    }
+    a:active {
+      transform: translateY(0);
+      box-shadow: 0px 0px 0px #141211;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .media {
+    & > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      margin-left: 25px;
+      & > a:nth-child(2) {
+        margin: 0 25px;
+      }
+    }
+    & > div:nth-child(2) {
+      display: none;
+    }
+  }
+  .search {
+    max-width: 9.895vw;
+    margin: 0 0.52vw 0 1.5625vw;
+    :deep(.el-input) {
+      width: 100%;
+    }
+  }
+
+  .language {
+    position: relative;
+    & > div:nth-child(1) {
+      color: #4d4d4d;
+      text-align: center;
+      font-family: Inter;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: relative;
+    }
+  }
+  .language-svg::after {
+    content: "";
+    position: absolute;
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 10.5px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(-90deg);
+    filter: grayscale(100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .language-svg-spin::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    content: "";
+    position: absolute;
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%) rotate(0deg);
+    filter: grayscale(0);
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    right: -20px;
+  }
+  .language-list-show {
+    position: absolute;
+    right: 0;
+    width: 120px;
+    max-width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px 0;
+    overflow: hidden;
+    background: #fff;
+    input {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      padding: 5px 20px;
+    }
+    input:hover {
+      background: #00a5ce6b;
+    }
+  }
+  .language-list-hide {
+    display: none;
+    position: absolute;
+  }
+}
+@media screen and (min-width: 1621px) {
+  a {
+    text-decoration: none;
+  }
+  .menu {
+    display: flex;
+    & > div {
+      position: relative;
+      border-right: 1px solid #4d4d4d;
+      & > a {
+        color: #4d4d4d;
+        text-align: center;
+        font-family: "Noto Sans HK";
+        font-size: 17px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        position: relative;
+        z-index: 5;
+      }
+      & > a::after {
+        content: "";
+        position: absolute;
+        background: url("https://statichk.cmermedical.com/vision/imgs/6f68e977441f318c.png");
+        width: 16px;
+        height: 8px;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+      }
+    }
+
+    & > div:nth-child(1),
+    & > div:nth-child(2),
+    & > div:nth-child(5) {
+      & > a {
+        padding: 0.5vw 1.302vw;
+      }
+    }
+    & > div:nth-child(4),
+    & > div:nth-child(3) {
+      & > a {
+        padding: 0.5vw 1.302vw;
+      }
+    }
+    & > div:nth-child(6) {
+      & > a {
+        padding: 0.5vw 1.302vw;
+      }
+    }
+    & > div:nth-child(7) {
+      & > a {
+        padding: 0.5vw 1.302vw;
+      }
+    }
+    & > div:last-child {
+      border-right: 0;
+    }
+  }
+  .fa-path {
+    position: relative;
+  }
+  .fa-path::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50px;
+    background: #00a5ce00;
+    bottom: -80%;
+    z-index: 2;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .fa-path:hover {
+    & > a {
+      color: #00a6ce;
+      cursor: pointer;
+    }
+    & > a::after {
+      background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
+      transform: rotate(180deg) translateX(50%);
+      bottom: -10px;
+      z-index: 10;
+    }
+    .sub-menu {
+      padding-top: 10px;
+      padding-bottom: 10px;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      z-index: 999;
+      border-radius: 5px;
+
+      width: max-content;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      top: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      & > div:last-child {
+        border-bottom: none;
+      }
+
+      & > a {
+        color: #00a6ce;
+        font-family: "Noto Sans HK";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: left;
+        text-wrap: nowrap;
+        line-height: 20px; /* 133.333% */
+      }
+    }
+  }
+  .son-menu {
+    position: relative;
+    width: 100%;
+    text-align: center;
+
+    & > a {
+      color: #6f6f6f;
+      font-family: "Noto Sans HK";
+      font-size: 15px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      padding: 15px 40px 0 40px;
+      display: block;
+      & > span {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #00a6ce;
+        min-width: 120px;
+        display: inline-block;
+      }
+    }
+  }
+  .is_ai_screening {
+    & > a {
+      & > span {
+        min-width: 155px;
+      }
+    }
+  }
+  .ai_screening_title {
+    position: relative;
+  }
+  .ai_screening_title::before {
+    left: -25px !important;
+    top: 35% !important;
+  }
+  .ai_screening_title::after {
+    content: "";
+    position: absolute;
+    background: url(https://statichk.cmermedical.com/hkcmereye/LAL/iconNew.svg)
+      no-repeat;
+    width: 50px;
+    height: 22px;
+    top: 50%;
+    right: -40px;
+    transform: translateY(-50%);
+  }
+  .router-link-active {
+    color: #00a6ce !important;
+  }
+  // .sub-menu::before {
+  //   content: "";
+  //   position: absolute;
+  //   width: 0;
+  //   height: 0;
+  //   border-top: 0px solid transparent;
+  //   border-bottom: 14px solid #fff;
+  //   border-left: 14px solid transparent;
+  //   border-right: 14px solid transparent;
+  //   top: -14px;
+  // }
+  .son-menu:hover {
+    & > a {
+      position: relative;
+      color: #00a6ce;
+      & > span::before {
+        content: "";
+        width: 11px;
+        height: 15px;
+        background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+          no-repeat;
+        position: absolute;
+        left: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+    }
+
+    .three-level-2 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      right: -89.2%;
+      top: -68%;
+      border-radius: 5px;
+      padding: 15px 0;
+      & > div {
+        & > a {
+          padding: 15px 30px 0 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Noto Sans HK";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          min-width: 120px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+            width: 100%;
+            display: inline-block;
+          }
+        }
+      }
+      & > div:last-child:hover {
+        & > a {
+          & > span::before {
+            top: 10px;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
+    .three-level-3 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: -114%;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -18%;
+      border-radius: 5px;
+      & > div {
+        & > a {
+          padding: 15px 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Noto Sans HK";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
+    .three-level-5 {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      right: auto;
+      left: 101%;
+      bottom: 0;
+      box-shadow: #4d4d4d 5px 5px 10px;
+      width: max-content;
+      background: #fff;
+      top: -60%;
+      border-radius: 5px;
+      & > div {
+        & > a {
+          padding: 15px 30px;
+          display: block;
+          color: #6f6f6f;
+          font-family: "Noto Sans HK";
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          & > span {
+            padding-bottom: 10px;
+            border-bottom: 1px solid #00a6ce;
+          }
+        }
+      }
+      & > div:hover {
+        & > a {
+          position: relative;
+          color: #00a6ce;
+          & > span::before {
+            content: "";
+            width: 11px;
+            height: 15px;
+            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
+              no-repeat;
+            position: absolute;
+            left: 15px;
+            top: 18px;
+          }
+        }
+      }
+    }
+  }
+  .menu {
+    .fa-2,
+    .fa-3 {
+      cursor: pointer;
+      & > a::after {
+        content: none;
+      }
+    }
+    // & > div:last-child:hover {
+    // .sub-menu {
+    // display: none;
+    // }
+    // }
+    // & > div:last-child {
+    //   & > a::after {
+    //     content: none;
+    //   }
+    // }
+
+    & > div {
+      & > div {
+        & > div:last-child {
+          & > a {
+            & > span {
+              border: none;
+            }
+          }
+        }
+      }
+    }
+    .three-level-2,
+    .three-level-3,
+    .three-level-5 {
+      & > div:last-child {
+        & > a {
+          & > span {
+            border: none;
+          }
+        }
+      }
+    }
+  }
+  .sub-menu {
+    padding-top: 10px;
+    display: none;
+    position: relative;
+    // background: #fff;
+    background: url("https://statichk.cmermedical.com/vision/imgs/bd478e6eda64c637.png")
+      no-repeat;
+    background-size: 100% 100%;
+    background-position: center;
+  }
+  .three-level-2,
+  .three-level-3,
+  .three-level-5 {
+    display: none;
+  }
+  .right-head {
+    display: flex;
+    align-items: center;
+  }
+  .btn-service {
+    display: flex;
+    gap: 0 28px;
+    a {
+      border-radius: 100px;
+      border: 1px solid #000;
+      background: #59ba68;
+      box-shadow: 0 0 0;
+      transition: all 200ms;
+      display: flex;
+      align-items: center;
+      gap: 0 10px;
+      box-sizing: border-box;
+      padding: 14px 33px;
+      div:nth-child(2) {
+        color: #fff;
+        text-align: center;
+        font-family: Inter;
+        font-size: 14.4px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+    a:nth-child(2) {
+      background: #00a6ce;
+    }
+    a:hover {
+      transform: translateY(-10px);
+      box-shadow: 0px 12px 1px #141211;
+      transition: all 0.3s ease-in-out;
+    }
+    a:active {
+      transform: translateY(0);
+      box-shadow: 0px 0px 0px #141211;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+  .media {
+    & > div:nth-child(1) {
+      display: flex;
+      align-items: center;
+      margin-left: 25px;
+      & > a:nth-child(2) {
+        margin: 0 25px;
+      }
+    }
+    & > div:nth-child(2) {
+      display: none;
+    }
+  }
+  .search {
+    max-width: 9.895vw;
+    margin: 0 0.52vw 0 1.5625vw;
+    :deep(.el-input) {
+      width: 100%;
+    }
+  }
+  .language {
+    position: relative;
+    & > div:nth-child(1) {
+      color: #4d4d4d;
+      text-align: center;
+      font-family: Inter;
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      position: relative;
+    }
+  }
+  .language-svg::after {
+    content: "";
+    position: absolute;
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    width: 14px;
+    height: 10.5px;
+    top: 50%;
+    right: -20px;
+    transform: translateY(-50%) rotate(-90deg);
+    filter: grayscale(100%);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .language-svg-spin::after {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    content: "";
+    position: absolute;
+    background: url("https://statichk.cmermedical.com/vision/imgs/a92b5485e65dc841.png")
+      no-repeat;
+    background-size: 100%;
+    transform: translateY(-50%) rotate(0deg);
+    filter: grayscale(0);
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    right: -20px;
+  }
+  .language-list-show {
+    position: absolute;
+    right: 0;
+    width: 120px;
+    max-width: 180px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    padding: 10px 0;
+    overflow: hidden;
+    background: #fff;
+    input {
+      cursor: pointer;
+      display: block;
+      width: 100%;
+      border: none;
+      outline: none;
+      box-sizing: border-box;
+      padding: 5px 20px;
+    }
+    input:hover {
+      background: #00a5ce6b;
+    }
+  }
+  .language-list-hide {
+    display: none;
+    position: absolute;
+  }
+}
+</style>

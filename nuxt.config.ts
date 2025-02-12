@@ -11,7 +11,6 @@ export default defineNuxtConfig({
   devServer: {
     port: 3015,
   },
-
   build: {
     transpile: ['vue-i18n']
   },
@@ -100,8 +99,8 @@ export default defineNuxtConfig({
         prependPath: true,
         changeOrigin: true,
       },
-      '/send':{
-        target:'https://3473.push.ft07.com',
+      '/send': {
+        target: 'https://3473.push.ft07.com',
         prependPath: true,
         changeOrigin: true,
       }

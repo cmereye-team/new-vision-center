@@ -1,8 +1,9 @@
 <script setup lang="ts">
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
+const route = useRoute();
 const widthNum = ref();
-
+const isNotV2 = ref(true);
 onMounted(() => {
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
@@ -13,6 +14,11 @@ onMounted(() => {
   let { widthState, width } = getWindowSize();
   widthNum.value = width;
   isPc.value = widthState;
+  // 当前 路由route
+  // route.path 包含 /v2 时，显示v2页面
+  if (route.path.includes("/v2")) {
+    isNotV2.value = false;
+  }
 });
 </script>
 <template>
@@ -24,9 +30,12 @@ onMounted(() => {
       <PublicFooterFixedFooter />
     </div>
     <div class="form-public">
-      <PublicForm />
+      <!-- <div style="width: 100%; height: 2px; background: red;margin-bottom: 50px;"></div> -->
+      <!-- <PublicFormV2Index /> -->
+      <!-- <div style="width: 100%; height: 2px; background: red;margin-top: 50px;"></div> -->
+      <PublicForm v-if="isNotV2" />
     </div>
-    <PublicFooter />
+    <PublicV2Footer />
     <noscript
       ><img
         height="1"
@@ -51,17 +60,17 @@ onMounted(() => {
   font-weight: <weight>;
   font-style: normal;
 } */
-
+/* 
 .noto-sans-hk-<uniquifier > {
   font-family: "Noto Sans HK", system-ui;
   font-optical-sizing: auto;
   font-weight: <weight>;
   font-style: normal;
-}
+} */
 .noto-sans-HK {
   font-family: "Noto Sans", sans-serif;
   font-optical-sizing: auto;
-  font-weight: <weight>;
+  font-weight: 500;
   font-style: normal;
   font-variation-settings: "wdth" 100;
 }

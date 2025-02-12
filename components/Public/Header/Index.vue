@@ -1,6 +1,10 @@
 <script lang="ts" setup>
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
+// 当前路由
+const route = useRoute();
+
+const isNotV2 = ref(true);
 onMounted(() => {
   let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
@@ -8,12 +12,18 @@ onMounted(() => {
     isPc.value = widthState;
   });
   isPc.value = widthState;
+
+  // route.path 包含 /v2 时，显示v2页面
+  if (route.path.includes("/v2")) {
+    isNotV2.value = false;
+  }
 });
 </script>
 <template>
   <div class="public-header">
     <PublicHeaderLeftHead />
-    <PublicHeaderRightHead v-if="isPc" />
+    <div v-if="isNotV2"><PublicHeaderRightHead v-if="isPc" /></div>
+    <div v-else><PublicHeaderRightHeadV2 v-if="isPc" /></div>
   </div>
 </template>
 
@@ -29,6 +39,7 @@ onMounted(() => {
   right: 0;
   background: #fff;
   box-shadow: 1px 2px 3px 0px rgba(0, 0, 0, 0.1);
+  align-items: center;
 }
 .public-header-bottom-menu {
   position: absolute;
