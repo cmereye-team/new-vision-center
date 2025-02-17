@@ -2,7 +2,7 @@
 // compiler macro
 const props = defineProps({
   list: {
-    type: Array as PropType<{ id: number | string }[]>,
+    type: Array as PropType<{ id: number | string; region: string; img: string; name: string; address: string[]; businessHours: string[]; }[]>,
     required: true,
   },
 });
