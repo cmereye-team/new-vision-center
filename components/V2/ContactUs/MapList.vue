@@ -351,10 +351,12 @@ onMounted(() => {
         padding: 5px 50px 5px 30px;
         border-radius: 100px;
         background: #59ba68;
-      }
-      & > div:hover {
         transform: translateY(-10px);
         box-shadow: 0px 12px 1px #141211;
+      }
+      & > div:hover {
+        transform: translateY(0px);
+        box-shadow: 0px 0px 0px #000;
         transition: all 0.3s ease-in-out;
       }
       & > div:nth-child(2) {

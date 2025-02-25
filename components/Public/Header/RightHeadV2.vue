@@ -298,11 +298,11 @@ const hiddenBox = ref(false);
         class="fa-path"
         :class="[
           `fa-${index + 1}`,
-          item?.childrenList?.length > 0 ? 'isChildNode' : 'noNodeChild',
+          item.childrenList && item.childrenList.length > 0 ? 'isChildNode' : 'noNodeChild',
         ]"
       >
         <nuxt-link
-          :to="item.path == '/' ? headLink(index, item) : item.path"
+          :to="item.path == '/' ? (headLink(index, item), undefined) : item.path"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
@@ -346,7 +346,10 @@ const hiddenBox = ref(false);
       </div>
     </div>
     <div class="btn-service">
-      <a href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2" target="_blank">
+      <a
+        href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+        target="_blank"
+      >
         <div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -586,7 +589,7 @@ const hiddenBox = ref(false);
       flex-direction: column;
       align-items: center;
       padding-top: 0;
-      background: #00B9E6;
+      background: #00b9e6;
       & > div:last-child {
         border-bottom: none;
       }
@@ -642,7 +645,7 @@ const hiddenBox = ref(false);
     & > a {
       position: relative;
       color: #fff;
-      background: #00A6CE;
+      background: #00a6ce;
     }
 
     .three-level-2 {
@@ -884,7 +887,7 @@ const hiddenBox = ref(false);
       border-radius: 100px;
       border: 1px solid #000;
       background: #59ba68;
-      box-shadow: 0 0 0;
+      
       transition: all 200ms;
       display: flex;
       align-items: center;
@@ -900,14 +903,16 @@ const hiddenBox = ref(false);
         font-weight: 700;
         line-height: normal;
       }
+      transform: translateY(-10px);
+      box-shadow: 0px 12px 1px #141211;
+      transition: all 0.3s ease-in-out;
     }
     a:nth-child(2) {
       background: #00a6ce;
     }
     a:hover {
-      transform: translateY(-10px);
-      box-shadow: 0px 12px 1px #141211;
-      transition: all 0.3s ease-in-out;
+      transform: translateY(0px);
+      box-shadow: 0 0 0;
     }
     a:active {
       transform: translateY(0);

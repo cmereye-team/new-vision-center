@@ -285,7 +285,7 @@ const services = {
                   font-size: clamp(10px, 0.703125vw, 13.5px);
                   font-style: normal;
                   font-weight: 500;
-                  line-height: 130%; /* 133.333% */
+                  line-height: 240%; /* 133.333% */
                   text-transform: uppercase;
                 }
               }
@@ -298,7 +298,7 @@ const services = {
                   font-size: clamp(12px, 0.859375vw, 16.5px);
                   font-style: normal;
                   font-weight: 500;
-                  line-height: 136.364%; /* 136.364% */
+                  line-height: 180%; /* 136.364% */
                   letter-spacing: 0.825px;
                 }
                 p:last-child {

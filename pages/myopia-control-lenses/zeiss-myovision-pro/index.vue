@@ -53,9 +53,9 @@ onMounted(() => {
   handKind(0);
 });
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/2025010217543001.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2025022417592801.webp",
   mobile:
-    "https://statichk.cmermedical.com/vision/imgs/2025010217543002.png",
+    "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
   newBanner: true,
 };
 

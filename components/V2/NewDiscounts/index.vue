@@ -440,6 +440,11 @@ const goTo = (link: string) => {
                 }
               }
             }
+            &-r:hover {
+              box-shadow: 0 0 0;
+              transition: all 0.3s;
+              transform: translateY(10px);
+            }
           }
         }
         .list-in:hover {

@@ -22,14 +22,14 @@ const bannerImg = {
 
 <template>
   <div class="profile">
-    <PublicBanner :banner="bannerImg">
+    <PublicV2Banner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
           <span>中心簡介</span>
         </div>
       </template>
-    </PublicBanner>
+    </PublicV2Banner>
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'中心簡介'" />
     <CenterProfileBriefIntroduction />
     <CenterProfileContent />

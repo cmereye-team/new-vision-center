@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2025021714503601.png",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2025021714510801.png",
 };
 import { onMounted, onUnmounted } from "vue";
 import { useRouter } from "nuxt/app";
@@ -40,17 +40,17 @@ onUnmounted(() => {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
+    <PublicV2Banner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
           <span>最新資訊</span>
         </div>
       </template>
-    </PublicBanner>
+    </PublicV2Banner>
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新資訊'" />
     <div class="video-information-box">
-      <LatestNews />
+      <V2LatestNews />
     </div>
   </div>
 </template>
@@ -67,9 +67,9 @@ onUnmounted(() => {
     span {
       position: relative;
       right: -180%;
-      color: var(--Brand-Color, #fff);
+      color: #00a6ce;
       text-align: center;
-      font-family: "Noto Sans HK";
+      font-family: Inter;
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -78,7 +78,7 @@ onUnmounted(() => {
     }
   }
   .video-information-box {
-    max-width: 960px;
+    max-width: 1000px;
     margin: 48px auto 90px auto;
   }
 }
@@ -97,16 +97,16 @@ onUnmounted(() => {
     margin-top: 87px;
     span {
       position: absolute;
-      bottom: 30px;
-      right: 20px;
-      color: var(--Brand-Color, #fff);
+      top: 33.33vw;
+      right: 5.128vw;
+      color: #00a6ce;
       text-align: center;
-      font-family: "Noto Sans HK";
-      font-size: 28px;
+      font-family: Inter;
+      font-size: 7.179vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 5.6px;
+      letter-spacing: 1.435vw;
     }
   }
   .video-information-box {
