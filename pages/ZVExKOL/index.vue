@@ -461,7 +461,7 @@ const regionItem = (index: number) => {
     </div>
   </div>
   <div class="vision-experience">
-    <div class="vision-experience-bg">
+    <div class="vision-experience-bg" v-if="isPc">
       <div class="vision-experience-content">
         <div class="vision-experience-title">
           <div class="vision-experience-title-text">
@@ -559,6 +559,14 @@ const regionItem = (index: number) => {
         </div>
       </div>
       <div class="bg-mask-layer"></div>
+    </div>
+    <div class="vision-experience-content" v-else>
+      <div class="vision-experience-bg"></div>
+      <div class="vision-item-list">
+        <div><img src="" alt="" /></div>
+        <div><img src="" alt="" /></div>
+        <div><img src="" alt="" /></div>
+      </div>
     </div>
   </div>
   <!-- 个人化配镜流程 -->
@@ -1042,9 +1050,9 @@ const regionItem = (index: number) => {
         :touchMoveStopPropagation="false"
         :touchRatio="1"
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
-        @touch-start="handleTouchStart"
-        @touch-end="handleTouchEnd"
       >
+        <!-- @touch-start="handleTouchStart" -->
+        <!-- @touch-end="handleTouchEnd" -->
         <swiper-slide
           class="swiperIndex"
           v-for="item in discountsList"
@@ -1747,6 +1755,16 @@ const regionItem = (index: number) => {
   }
 }
 @media screen and (max-width: 767px) {
+  .vision-experience-content {
+    margin-bottom: 50px;
+    .vision-experience-bg {
+      background: url("https://statichk.cmermedical.com/vision/imgs/2025022514101801.png")
+        no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 184.1025vw;
+    }
+  }
   //轮播图
 
   .wpbSwpier {
@@ -1901,8 +1919,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-top: 1px solid透明; /* 下边框透明 */
-      border-right: 1px solid透明; /* 右边框透明 */
+      border-top: 1px solid transparent; /* 透明下边框透明 */
+      border-right: 1px solid transparent; /* 透明;右边框透明 */
     }
 
     &::after {
@@ -1913,8 +1931,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-top: 1px solid透明; /* 下边框透明 */
-      border-left: 1px solid透明; /* 右边框透明 */
+      border-top: 1px solid transparent; /* 下边框透明 */
+      border-left: 1px solid transparent; /* 右边框透明 */
     }
   }
 
@@ -1929,8 +1947,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-bottom: 1px solid透明; /* 下边框透明 */
-      border-right: 1px solid透明; /* 右边框透明 */
+      border-bottom: 1px solid transparent; /* 下边框透明 */
+      border-right: 1px solid transparent; /* 右边框透明 */
     }
 
     &::after {
@@ -1941,8 +1959,8 @@ const regionItem = (index: number) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-bottom: 1px solid透明; /* 下边框透明 */
-      border-left: 1px solid透明; /* 右边框透明 */
+      border-bottom: 1px solid transparent; /* 下边框透明 */
+      border-left: 1px solid transparent; /* 右边框透明 */
     }
   }
 
