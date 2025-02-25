@@ -487,7 +487,7 @@ const regionItem = (index: number) => {
               alt=""
             />
           </div>
-          <div class="open-docx docx-two">
+          <div class="open-docx docx-two open-three">
             <div>
               <div>藝人兼主持</div>
               <div>Edmond Hui</div>
@@ -511,7 +511,7 @@ const regionItem = (index: number) => {
               </div>
             </div>
           </div>
-          <div class="open-docx docx-two">
+          <div class="open-docx docx-two open-four">
             <div>
               <div>靚靚媽咪</div>
               <div>雪雪<span>孫慧雪</span></div>
@@ -534,7 +534,7 @@ const regionItem = (index: number) => {
               </div>
             </div>
           </div>
-          <div class="open-docx docx-three">
+          <div class="open-docx docx-three open-five">
             <div>
               <div>港姐兼女神</div>
               <div>Eunice So<span>蘇可欣</span></div>
@@ -1219,14 +1219,23 @@ const regionItem = (index: number) => {
         z-index: 22;
         right: -2px;
       }
-      & > div:nth-child(1):hover ~ & > div:nth-child(4) {
+      & > div:nth-child(1):hover ~ .open-three {
         display: block !important;
       }
-      & > div:nth-child(2):hover ~ & > div:nth-child(5) {
+      .open-three:hover {
+        display: block;
+      }
+      & > div:nth-child(2):hover ~ .open-four {
         display: block !important;
       }
-      & > div:nth-child(3):hover ~ & > div:nth-child(6) {
+      .open-four:hover {
+        display: block;
+      }
+      & > div:nth-child(3):hover ~ .open-five {
         display: block !important;
+      }
+      .open-five:hover {
+        display: block;
       }
       .open-docx {
         display: none;
@@ -1329,6 +1338,7 @@ const regionItem = (index: number) => {
     line-height: 1.2;
     z-index: 80;
     bottom: 60px;
+    pointer-events: none;
   }
   .vision-experience-title-text > span {
     color: #fff;
