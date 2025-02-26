@@ -224,7 +224,7 @@ const showAgeStage = (type: any) => {
         </div>
       </div>
       <div class="adult-crowd">
-        <div>合適對象</div>
+        <div>合適<br v-if="!isPc" /><span>對象</span></div>
         <div>
           <div>
             <div>
@@ -4060,6 +4060,240 @@ const showAgeStage = (type: any) => {
       font-weight: 500;
       line-height: 32px; /* 177.778% */
     }
+  }
+  .adult-crowd {
+    display: flex;
+    position: relative;
+    & > div:nth-child(1) {
+      color: var(--Brand-Color, #00a6ce);
+      text-align: center;
+      font-family: "Noto Sans HK";
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 100;
+      line-height: 45px; /* 112.5% */
+      text-transform: uppercase;
+      & > span {
+        margin-left: 60px;
+        display: block;
+      }
+      position: absolute;
+      bottom: -50px;
+      left: -30px;
+    }
+    & > div:nth-child(2) {
+      display: flex;
+      flex-direction: column;
+      & > div {
+        display: flex;
+        align-items: flex-end;
+        gap: 0 10px;
+        & > div:nth-child(2) {
+          color: var(--Brand-Color, #00a6ce);
+          font-family: "Noto Sans HK";
+          font-size: 16.5px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 22.5px; /* 136.364% */
+          letter-spacing: 0.825px;
+          white-space: nowrap;
+          padding-bottom: 10px;
+          border-bottom: 2px solid #00a6ce;
+        }
+      }
+      & > div:nth-child(2) {
+        margin-left: 50px;
+      }
+      & > div:nth-child(3) {
+        margin-left: 100px;
+      }
+    }
+  }
+  .adult-set-meal {
+    & > div:nth-child(1) {
+      box-sizing: border-box;
+      padding: 80px 24px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      & > div:nth-child(1) {
+        & > div:nth-child(1) {
+          display: flex;
+          flex-direction: column;
+          & > div:nth-child(1) {
+            color: #60605f;
+            font-family: "Intro ";
+            font-size: 23px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px; /* 243.478% */
+            letter-spacing: 3.45px;
+          }
+          & > div:nth-child(2) {
+            color: #00a6ce;
+            font-family: "Noto Sans HK";
+            font-size: 22px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px; /* 254.545% */
+            letter-spacing: 2.64px;
+          }
+          & > div:nth-child(3) {
+            color: #cdcdcd;
+            font-family: "Intro ";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 18px; /* 244.444% */
+            letter-spacing: 2.7px;
+            // 全部大写
+            text-transform: uppercase;
+          }
+        }
+        display: flex;
+        gap: 0 10px;
+        align-items: center;
+        & > div:nth-child(2) {
+          width: 42.975px;
+          height: 42.975px;
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      & > div:nth-child(2) {
+        width: 65px;
+        height: 32px;
+        & > svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .adult-step {
+    position: relative;
+    padding-bottom: 140px;
+    & > div {
+      display: flex;
+      gap: 0 9px;
+    }
+    & > div:nth-child(1) {
+      margin-left: 24px;
+      & > div:nth-child(1) {
+        width: 241px;
+        height: 241px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & > div:nth-child(2) {
+        position: absolute;
+        bottom: 20px;
+        color: var(--Brand-Color, #00a6ce);
+        text-align: justify;
+        font-family: "Noto Sans TC";
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px; /* 142.857% */
+        padding-right: 24px;
+      }
+
+      margin-bottom: 8px;
+    }
+    & > div:nth-child(2) {
+      margin-right: 0;
+      margin-left: auto;
+      margin-bottom: 30px;
+      & > div:nth-child(1) {
+        width: 162px;
+        height: 162px;
+        & > img {
+          margin-top: 40px;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      & > div:nth-child(2) {
+        width: 186px;
+        height: 186px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+    & > div:nth-child(3) {
+      margin-right: auto;
+      margin-left: 0;
+      margin-bottom: 30px;
+      & > div:nth-child(1) {
+        width: 149.459px;
+        height: 149.459px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          margin-top: 130px;
+        }
+      }
+      & > div:nth-child(2) {
+        width: 205.553px;
+        height: 214.613px;
+        & > img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+  .adult-bg-image {
+    background: url("https://statichk.cmermedical.com/vision/imgs/8a5c97c5ebba.webp")
+      no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 126.923vw;
+    position: relative;
+    & > div:nth-child(1) {
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+    }
+  }
+
+  .adult-bg-image-text {
+    & > div {
+      box-sizing: border-box;
+      padding: 24px;
+      color: #60605f;
+      font-family: "Noto Sans CJK TC";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px; /* 171.429% */
+      & > span:last-child {
+        color: var(--Brand-Color, #00a6ce);
+        font-family: "Noto Sans CJK TC";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 22.5px; /* 187.5% */
+        display: block;
+      }
+    }
+  }
+  .adult-bg {
+    background: #f1f8fa;
+    margin-top: 140px;
   }
   .adult-bg-image,
   .adult-step {

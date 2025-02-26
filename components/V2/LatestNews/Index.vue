@@ -254,7 +254,7 @@ const loading = ref(true);
             filterable
             clearable
             placeholder="請選擇"
-            style="width: 46.15vw"
+            style="width: 46.15vw;max-width: 300px;"
           >
             <el-option
               v-for="item in options.value"

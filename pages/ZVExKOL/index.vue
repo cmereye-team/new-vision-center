@@ -117,14 +117,9 @@ const imgList = [
 
 import getWindowSize from "@/utils/width";
 
-const isPc = ref(false);
+const isPc = ref(true);
 const mySwiper = ref<InstanceType<typeof Swiper> | null>(null);
 onMounted(() => {
-  window.addEventListener("resize", () => {
-    let { widthState, width } = getWindowSize();
-    isPc.value = widthState;
-  });
-
   const observer = new IntersectionObserver(handleIntersection, {
     threshold: 0.1, // 当元素至少10%出现在视口时触发回调
   });
@@ -137,8 +132,13 @@ onMounted(() => {
     // (mySwiper.value as any).on("touchStart", handleTouchStart);
     // (mySwiper.value as any).on("touchEnd", handleTouchEnd);
   }
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
 });
-
 //特色服务切换
 const indexNum = ref(0);
 const openDialog = (index: any) => {
@@ -283,6 +283,43 @@ const regionItem = (index: number) => {
       elementBox.classList.remove("active-box");
     }
   }
+};
+
+const showBox = (str: string) => {
+  console.log("show", str);
+  const fourBox = document.querySelector(".fourBox");
+  const fiveBox = document.querySelector(".fiveBox");
+  const sixBox = document.querySelector(".sixBox");
+  console.log(fourBox, "fourBox");
+
+  if (str === "four") {
+    console.log("fourBox", "296");
+
+    //添加类目 active
+    fourBox?.classList.add("activeBox");
+    fiveBox?.classList.remove("activeBox");
+    sixBox?.classList.remove("activeBox");
+  }
+  if (str === "five") {
+    console.log("fiveBox");
+    fourBox?.classList.remove("activeBox");
+    fiveBox?.classList.add("activeBox");
+    sixBox?.classList.remove("activeBox");
+  }
+  if (str === "six") {
+    console.log("sixBox");
+    fourBox?.classList.remove("activeBox");
+    fiveBox?.classList.remove("activeBox");
+    sixBox?.classList.add("activeBox");
+  }
+};
+const close = () => {
+  const fourBox = document.querySelector(".fourBox");
+  const fiveBox = document.querySelector(".fiveBox");
+  const sixBox = document.querySelector(".sixBox");
+  fourBox?.classList.remove("activeBox");
+  fiveBox?.classList.remove("activeBox");
+  sixBox?.classList.remove("activeBox");
 };
 </script>
 
@@ -534,7 +571,7 @@ const regionItem = (index: number) => {
               </div>
             </div>
           </div>
-          <div class="open-docx docx-three open-five">
+          <div class="open-docx docx-two open-five">
             <div>
               <div>港姐兼女神</div>
               <div>Eunice So<span>蘇可欣</span></div>
@@ -563,9 +600,81 @@ const regionItem = (index: number) => {
     <div class="vision-experience-content" v-else>
       <div class="vision-experience-bg"></div>
       <div class="vision-item-list">
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
-        <div><img src="" alt="" /></div>
+        <div @click="showBox('four')"></div>
+        <div @click="showBox('five')"></div>
+        <div @click="showBox('six')"></div>
+        <div class="fourBox">
+          <div>
+            <div>藝人兼主持</div>
+            <div>Edmond Hui<span>許文軒</span></div>
+            <div>
+              作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到
+              ZEISS VISION EXPERT
+              中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司
+              3D 中心定位儀 VISUFIT 1000
+              技術，為我度身定做了一副滿意的眼鏡。這副眼鏡不但戴得舒適，而且能時尚出鏡。更棒的是，鏡片的防藍光功能非常適合我平時看手機和用電腦的需求。如果都也想擁有一副實用與顏值兼具的眼鏡，歡迎來到
+              ZEISS VISION EXPERT
+              檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                  alt=""
+                />
+              </div>
+              <div>視界的全新體驗</div>
+            </div>
+            <div @click="close()"></div>
+          </div>
+        </div>
+        <div class="fiveBox">
+          <div>
+            <div>靚靚媽咪</div>
+            <div>雪雪<span>孫慧雪</span></div>
+            <div>
+              最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到
+              ZEISS VISION EXPERT
+              檢查眼睛。在視光師的建議下，我們給小兒子配上了近視控制眼鏡，幫助他預防近視加深。我也選擇了漸進鏡，滿足日常的視覺需求。他們使用了先進的
+              VISUFIT 1000
+              技術，為我們量身定做最合適的眼鏡，確保配戴舒適並改善視力。如果您的孩子也因為使用電子產品而出現視力問題，建議帶他們來CMER
+              VISION 檢查眼睛，讓我們一起守護孩子的視力健康！
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                  alt=""
+                />
+              </div>
+              <div>視界的全新體驗</div>
+            </div>
+            <div @click="close()"></div>
+          </div>
+        </div>
+        <div class="sixBox">
+          <div>
+            <div>港姐兼女神</div>
+            <div>Eunice So<span>蘇可欣</span></div>
+            <div>
+              因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS
+              Vision Expert 中心，透過蔡司 3D 中心定位儀 VISUFIT 1000
+              技術，為我量身定做了一副舒適的眼鏡。戴上新眼鏡後，我驚喜地發現視力改善讓我的生活更加精彩！不僅減輕了夜晚駕駛時的壓力，還讓我在日常生活中享受到更清晰的視野。如果你也面臨視力挑戰，別再等了！來
+              ZEISS Vision Expert 中心進行一次 My Vision Experience by ZEISS
+              的驗眼流程，讓他們幫助你找到最適合的解決方案，重新擁抱清晰的世界！
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                  alt=""
+                />
+              </div>
+              <div>視界的全新體驗</div>
+            </div>
+            <div @click="close()"></div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -1252,26 +1361,22 @@ const regionItem = (index: number) => {
         height: 43.28125vw;
         bottom: 0;
         left: 0;
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png")
-          no-repeat;
-        z-index: 100;
-        background-size: cover;
         transform: skewX(0deg);
       }
-      .docx-three {
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png")
+      .open-three {
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205502.png")
           no-repeat;
         z-index: 110;
         background-size: cover;
       }
-      .docx-two {
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png")
+      .open-four {
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205501.png")
           no-repeat;
         z-index: 100;
         background-size: cover;
       }
-      .docx-one {
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205502.png")
+      .open-five {
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png")
           no-repeat;
         z-index: 90;
         background-size: cover;
@@ -1280,13 +1385,13 @@ const regionItem = (index: number) => {
       .docx-two,
       .docx-one {
         & > div {
-          margin-top: 65px;
-          margin-left: 85px;
-          max-width: 710px;
+          margin-top: 3.385vw;
+          margin-left: 4.428vw;
+          max-width: 46.979165vw;
           & > div:nth-child(1) {
             color: #fff;
             font-family: "Noto Sans TC";
-            font-size: 34px;
+            font-size: 1.7708vw;
             font-style: normal;
             font-weight: 250;
             line-height: normal;
@@ -1296,15 +1401,15 @@ const regionItem = (index: number) => {
             align-items: flex-end;
             color: #fff;
             font-family: "Noto Sans TC";
-            font-size: 80px;
+            font-size: 4.1665vw;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
-            padding-bottom: 15px;
+            padding-bottom: 0.78125vw;
             & > span {
               color: #fff;
               font-family: "Noto Sans";
-              font-size: 34px;
+              font-size: 1.773vw;
               font-style: normal;
               font-weight: 700;
               line-height: normal;
@@ -1330,10 +1435,21 @@ const regionItem = (index: number) => {
             font-style: normal;
             font-weight: 500;
             letter-spacing: 6.4px;
+            display: flex;
+            align-items: center;
+            gap: 0 5px;
             & > div:nth-child(1) {
               margin-top: 15px;
             }
+            & > div:nth-child(2) {
+              white-space: nowrap;
+            }
           }
+        }
+      }
+      .docx-two {
+        & > div {
+          margin-top: 35px;
         }
       }
     }
@@ -1633,7 +1749,7 @@ const regionItem = (index: number) => {
         height: 40px;
         border: 10px solid #2449a4;
         border-bottom: 1px solid transparent; /* 下边框透明 */
-        border-right: 1px solid透明; /* 右边框透明 */
+        border-right: 1px solid transparent; /* 右边框透明 */
       }
 
       &::after {
@@ -1766,13 +1882,143 @@ const regionItem = (index: number) => {
 }
 @media screen and (max-width: 767px) {
   .vision-experience-content {
-    margin-bottom: 50px;
+    margin-bottom: 12.8vw;
+    position: relative;
     .vision-experience-bg {
       background: url("https://statichk.cmermedical.com/vision/imgs/2025022514101801.png")
         no-repeat;
       background-size: cover;
       width: 100%;
       height: 184.1025vw;
+    }
+    .vision-item-list {
+      position: absolute;
+      bottom: 15.384vw;
+      left: 0;
+      width: 100%;
+      & > div {
+        width: 100%;
+        height: 30.76vw;
+        background: transparent;
+        transform: skewY(20deg);
+      }
+      & > div:nth-child(1) {
+        background: transparent;
+      }
+      & > div:nth-child(2) {
+        background: transparent;
+      }
+      & > div:nth-child(3) {
+        background: transparent;
+      }
+      & > div:nth-child(4),
+      & > div:nth-child(5),
+      & > div:nth-child(6) {
+        display: none;
+      }
+    }
+  }
+  .fourBox {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002601.png")
+      no-repeat !important;
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 185.846vw !important;
+  }
+  .fiveBox {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002602.png")
+      no-repeat !important;
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 185.846vw !important;
+  }
+  .sixBox {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002603.png")
+      no-repeat !important;
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 185.846vw !important;
+  }
+  .activeBox {
+    position: absolute;
+    top: -74.723vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    transform: skewY(0deg) !important;
+    & > div {
+      box-sizing: border-box;
+      padding: 12.8vw;
+      & > div:nth-child(1) {
+        color: #fff;
+        font-family: "Noto Sans TC";
+        font-size: 3.92vw;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+      }
+      & > div:nth-child(2) {
+        color: #fff;
+        font-family: "Noto Sans TC";
+        font-size: 5.995vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        gap: 0 2.56vw;
+        align-items: center;
+        & > span {
+          color: #fff;
+          font-family: "Noto Sans";
+          font-size: 3.996vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+      & > div:nth-child(3) {
+        color: #fff;
+        text-align: justify;
+        font-family: "Noto Sans";
+        font-size: 3.07vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.3vw;
+        margin-top: 1.28vw;
+      }
+      & > div:nth-child(4) {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: justify;
+        font-family: "Noto Sans";
+        font-size: 3.23vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 5.05vw; /* 156.25% */
+        letter-spacing: 0.646vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        & > div:nth-child(1) {
+          width: 44.1vw;
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        margin-top: 40px;
+      }
+      & > div:nth-child(5) {
+        width: 12.8vw;
+        height: 12.8vw;
+        background: transparent;
+        position: absolute;
+        top: 8.717vw;
+        right: 15.38vw;
+        border-radius: 50%;
+      }
     }
   }
   //轮播图
