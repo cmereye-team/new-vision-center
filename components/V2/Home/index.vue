@@ -569,6 +569,7 @@ const services = {
         line-height: 7.692vw;
         color: #00a6ce;
         font-family: Inter;
+        font-family: "Noto Sans HK";
         font-size: 24px;
         font-style: normal;
         font-weight: 600;

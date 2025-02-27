@@ -659,6 +659,7 @@ const openVideo = (link: string) => {
       & > span:nth-child(4) {
         color: #00a6ce;
         font-family: Inter;
+        font-family: "Noto Sans HK";
         font-style: normal;
         font-weight: 600;
         line-height: normal;
@@ -667,6 +668,7 @@ const openVideo = (link: string) => {
       & > span:nth-child(3) {
         color: #00a6ce;
         font-family: Inter;
+        font-family: "Noto Sans HK";
         font-size: 24px;
         font-style: normal;
         font-weight: 600;

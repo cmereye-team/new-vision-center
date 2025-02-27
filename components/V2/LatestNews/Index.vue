@@ -1,20 +1,23 @@
 <script lang="ts" setup>
 const chooseNumber = ref();
 const chooseType = (id: number) => {
+  console.log(id, "id-chooseType");
+
   if (id == 0 || id == null) {
     fetchData();
   }
   if (id) {
     newsList.value = data.value;
   }
+
   // 数组去重
-  newsList.value = newsList.value.filter((item: any) => {
-    if (item.id == id) {
-      return item;
-    }
-  });
+  // newsList.value = newsList.value.filter((item: any) => {
+  //   if (item.id == id) {
+  //     return item;
+  //   }
+  // });
 };
-let arr = ref([]);
+let arr = ref<any[]>([]);
 const newsList: any = ref([
   {
     id: null,
@@ -254,7 +257,7 @@ const loading = ref(true);
             filterable
             clearable
             placeholder="請選擇"
-            style="width: 46.15vw;max-width: 300px;"
+            style="width: 46.15vw; max-width: 300px"
           >
             <el-option
               v-for="item in options.value"
@@ -269,12 +272,12 @@ const loading = ref(true);
     </div>
     <div v-loading="loading" class="latest-news-box-grid">
       <div v-for="item in newsList" :key="item.id" class="news-item">
-        <div>
+        <a :href="`/news/${item.id}`">
           <img
             :src="`https://content.cmervision.com/${item.img}`"
             :alt="item.title"
           />
-        </div>
+        </a>
         <div>
           <div>
             <a
@@ -328,13 +331,14 @@ a {
     margin-bottom: 90px;
   }
   .news-item {
+    padding: 5px;
     margin-bottom: 43px;
     display: flex;
     flex-direction: column;
     gap: 0 28px;
     max-width: 289px;
     position: relative;
-    & > div:nth-child(1) {
+    & > a:nth-child(1) {
       max-width: 100%;
       height: 289px;
       border-radius: 11.25px;
@@ -384,6 +388,7 @@ a {
         color: #60605f;
         text-align: justify;
         font-family: Inter;
+        font-family: "Noto Sans HK";
         font-size: 24px;
         font-style: normal;
         font-weight: 500;
@@ -398,7 +403,7 @@ a {
           background: #00a6ce;
           color: #fff;
           font-family: "Noto Sans HK";
-          font-size: clamp(8.823px, 0.6675vw, 12px);
+          font-size: clamp(8.823px, 0.6675vw, 10px);
           font-style: normal;
           font-weight: 500;
           line-height: normal;
@@ -408,6 +413,18 @@ a {
           align-items: center;
         }
         margin-top: 20px;
+      }
+    }
+  }
+  .news-item:hover {
+    box-shadow: 0px 0px 5px 6px #e3e0e0;
+    border-radius: 11.25px;
+    transition: transform 0.5s;
+    box-sizing: border-box;
+    & > a:nth-child(1) {
+      & > img {
+        transform: scale(1.1);
+        transition: transform 0.5s;
       }
     }
   }
@@ -424,6 +441,7 @@ a {
     & > div:nth-child(1) {
       color: #00a6ce;
       font-family: Inter;
+      font-family: "Noto Sans HK";
       font-size: 37.5px;
       font-style: normal;
       font-weight: 600;

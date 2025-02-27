@@ -70,6 +70,7 @@ onUnmounted(() => {
       color: #00a6ce;
       text-align: center;
       font-family: Inter;
+      font-family: "Noto Sans HK";
       font-size: 60px;
       font-style: normal;
       font-weight: 600;
@@ -102,6 +103,7 @@ onUnmounted(() => {
       color: #00a6ce;
       text-align: center;
       font-family: Inter;
+      font-family: "Noto Sans HK";
       font-size: 7.179vw;
       font-style: normal;
       font-weight: 600;

@@ -331,6 +331,7 @@ onMounted(() => {
             color: #fff;
             text-align: right;
             font-family: Inter;
+            font-family: "Noto Sans HK";
             font-size: 37.5px;
             font-style: normal;
             font-weight: 600;
@@ -340,6 +341,7 @@ onMounted(() => {
             color: #fff;
             text-align: center;
             font-family: Inter;
+            font-family: "Noto Sans HK";
             font-size: 41.316px;
             font-style: normal;
             font-weight: 700;
@@ -503,6 +505,7 @@ onMounted(() => {
             color: #fff;
             text-align: right;
             font-family: Inter;
+            font-family: "Noto Sans HK";
             font-size: 14.677px;
             font-style: normal;
             font-weight: 600;
@@ -518,6 +521,7 @@ onMounted(() => {
             color: #fff;
             text-align: center;
             font-family: Inter;
+            font-family: "Noto Sans HK";
             font-size: 16.171px;
             font-style: normal;
             font-weight: 700;
