@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+definePageMeta({
+  middleware: "redirect",
+});
 import getWindowSize from "@/utils/width";
 import { isArray } from "element-plus/es/utils";
 const isPc = ref(true);

@@ -2,7 +2,16 @@
 // compiler macro
 const props = defineProps({
   list: {
-    type: Array as PropType<{ id: number | string; region: string; img: string; name: string; address: string[]; businessHours: string[]; }[]>,
+    type: Array as PropType<
+      {
+        id: number | string;
+        region: string;
+        img: string;
+        name: string;
+        address: string[];
+        businessHours: string[];
+      }[]
+    >,
     required: true,
   },
 });
@@ -18,6 +27,12 @@ const props = defineProps({
         <div>
           <div>{{ item.region }}</div>
           <div>{{ item.name }}</div>
+          <a :href="item.googleMap" target="_blank">
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/20250214425501.png"
+              alt="address"
+            />
+          </a>
         </div>
         <div>
           <div>
@@ -285,6 +300,8 @@ const props = defineProps({
     display: flex;
     flex-direction: column;
     & > div:nth-child(1) {
+      position: relative;
+      width: fit-content;
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
@@ -305,17 +322,22 @@ const props = defineProps({
         width: fit-content;
         position: relative;
       }
-      & > div:nth-child(2)::before {
-        content: "";
-        width: 52px;
-        height: 52px;
-        background: url("https://statichk.cmermedical.com/vision/imgs/20250214425501.png")
-          no-repeat;
-        background-size: cover;
+      & > a:nth-child(3) {
         position: absolute;
-        right: -42px;
-        bottom: -2px;
+        right: -52px;
+        bottom: -7px;
       }
+      // & > div:nth-child(2)::before {
+      //   content: "";
+      //   width: 52px;
+      //   height: 52px;
+      //   background: url("https://statichk.cmermedical.com/vision/imgs/20250214425501.png")
+      //     no-repeat;
+      //   background-size: cover;
+      //   position: absolute;
+      //   right: -42px;
+      //   bottom: -2px;
+      // }
     }
     & > div:nth-child(2) {
       display: flex;
@@ -340,6 +362,7 @@ const props = defineProps({
           max-height: 28px;
           color: #fff;
           font-family: Inter;
+          font-family: "Noto Sans HK";
           font-size: 13.197px;
           font-style: normal;
           font-weight: 600;
@@ -352,6 +375,7 @@ const props = defineProps({
           display: block;
           color: #60605f;
           font-family: Inter;
+          font-family: "Noto Sans HK";
           font-size: 13.5px;
           font-style: normal;
           font-weight: 400;
@@ -401,9 +425,12 @@ const props = defineProps({
     flex-direction: column;
     margin-top: 7.69vw;
     & > div:nth-child(1) {
+      position: relative;
+      width: fit-content;
       & > div:nth-child(1) {
         color: var(--Brand-Color, #00a6ce);
         font-family: Inter;
+        font-family: "Noto Sans HK";
         font-size: 26px;
         font-style: normal;
         font-weight: 600;
@@ -424,22 +451,30 @@ const props = defineProps({
         position: relative;
         color: #60605f;
         font-family: Inter;
+        font-family: "Noto Sans HK";
         font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: normal;
         width: fit-content;
       }
-      &>div:nth-child(2)::after {
-        content: "";
-        width: 52px;
-        height: 52px;
-        background: url(https://statichk.cmermedical.com/vision/imgs/20250214425501.png) no-repeat;
-        background-size: cover;
+      & > a:nth-child(3) {
+        width: fit-content;
         position: absolute;
-        right: -42px;
-        bottom: -2px;
+        right: -52px;
+        bottom: -7px;
       }
+      // & > div:nth-child(2)::after {
+      // content: "";
+      //   width: 52px;
+      //   height: 52px;
+      //   background: url(https://statichk.cmermedical.com/vision/imgs/20250214425501.png)
+      //     no-repeat;
+      //   background-size: cover;
+      //   position: absolute;
+      //   right: -42px;
+      //   bottom: -2px;
+      // }
     }
     & > div:nth-child(2) {
       display: flex;

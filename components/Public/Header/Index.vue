@@ -22,8 +22,9 @@ onMounted(() => {
 <template>
   <div class="public-header">
     <PublicHeaderLeftHead />
-    <div v-if="isNotV2"><PublicHeaderRightHead v-if="isPc" /></div>
-    <div v-else><PublicHeaderRightHeadV2 v-if="isPc" /></div>
+    <PublicHeaderRightHeadV2 />
+    <!-- <div v-if="isNotV2"><PublicHeaderRightHead v-if="isPc" /></div> -->
+    <!-- <div v-else><PublicHeaderRightHeadV2 v-if="isPc" /></div> -->
   </div>
 </template>
 

@@ -117,14 +117,9 @@ const imgList = [
 
 import getWindowSize from "@/utils/width";
 
-const isPc = ref(false);
+const isPc = ref(true);
 const mySwiper = ref<InstanceType<typeof Swiper> | null>(null);
 onMounted(() => {
-  window.addEventListener("resize", () => {
-    let { widthState, width } = getWindowSize();
-    isPc.value = widthState;
-  });
-
   const observer = new IntersectionObserver(handleIntersection, {
     threshold: 0.1, // 当元素至少10%出现在视口时触发回调
   });
@@ -137,8 +132,13 @@ onMounted(() => {
     // (mySwiper.value as any).on("touchStart", handleTouchStart);
     // (mySwiper.value as any).on("touchEnd", handleTouchEnd);
   }
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
 });
-
 //特色服务切换
 const indexNum = ref(0);
 const openDialog = (index: any) => {
@@ -207,6 +207,144 @@ const handleIntersection = (entries: any, observer: any) => {
     }
   });
 };
+
+const mouseoverItem = (index: number) => {
+  const element1 = document.querySelector(".vision-experience-img-list-item1");
+  const element2 = document.querySelector(".vision-experience-img-list-item2");
+  const element3 = document.querySelector(".vision-experience-img-list-item3");
+  const elementBox = document.querySelector(".vision-experience-img-list-box");
+
+  if (index == 1) {
+    if (element1) {
+      element1.classList.add("active-img");
+    }
+    if (elementBox) {
+      elementBox.classList.add("active-box");
+    }
+  } else if (index == 2) {
+    if (element2) {
+      element2.classList.add("active-img");
+    }
+    if (elementBox) {
+      elementBox.classList.add("active-box");
+    }
+  } else if (index == 3) {
+    if (element3) {
+      element3.classList.add("active-img");
+    }
+    if (elementBox) {
+      elementBox.classList.add("active-box");
+    }
+  }
+};
+// 鼠标移出
+const mouseoutItem = (index: number) => {
+  const element1 = document.querySelector(".vision-experience-img-list-item1");
+  const element2 = document.querySelector(".vision-experience-img-list-item2");
+  const element3 = document.querySelector(".vision-experience-img-list-item3");
+  const elementBox = document.querySelector(".vision-experience-img-list-box");
+  // if (element1) {
+  //   if (element1) {
+  //     element1.classList.remove("active-img");
+  //   }
+  //   if (elementBox) {
+  //     elementBox.classList.remove("active-box");
+  //   }
+  // }
+};
+const regionItem = (index: number) => {
+  const element1 = document.querySelector(".vision-experience-img-list-item1");
+  const element2 = document.querySelector(".vision-experience-img-list-item2");
+  const element3 = document.querySelector(".vision-experience-img-list-item3");
+  const elementBox = document.querySelector(".vision-experience-img-list-box");
+  console.log(element1, "index");
+
+  if (index === 1) {
+    if (element1) {
+      element1.classList.remove("active-img");
+    }
+    if (elementBox) {
+      elementBox.classList.remove("active-box");
+    }
+  }
+  if (index === 2) {
+    if (element2) {
+      element2.classList.remove("active-img");
+    }
+    if (elementBox) {
+      elementBox.classList.remove("active-box");
+    }
+  }
+  if (index === 3) {
+    if (element3) {
+      element3.classList.remove("active-img");
+    }
+    if (elementBox) {
+      elementBox.classList.remove("active-box");
+    }
+  }
+};
+
+const showBox = (str: string) => {
+  const fourBox = document.querySelector(".fourBox");
+  const fiveBox = document.querySelector(".fiveBox");
+  const sixBox = document.querySelector(".sixBox");
+
+  const openThree = document.querySelector(".open-three");
+  const openFour = document.querySelector(".open-four");
+  const openFive = document.querySelector(".open-five");
+
+  if (str === "four") {
+    //添加类目 active
+    fourBox?.classList.add("activeBox");
+    fiveBox?.classList.remove("activeBox");
+    sixBox?.classList.remove("activeBox");
+  }
+  if (str === "five") {
+    fourBox?.classList.remove("activeBox");
+    fiveBox?.classList.add("activeBox");
+    sixBox?.classList.remove("activeBox");
+  }
+  if (str === "six") {
+    fourBox?.classList.remove("activeBox");
+    fiveBox?.classList.remove("activeBox");
+    sixBox?.classList.add("activeBox");
+  }
+
+  if (str === "1") {
+    console.log(str, "315");
+    console.log(openThree, "openThree");
+
+    openThree?.classList.add("activeBox");
+    openFour?.classList.remove("activeBox");
+    openFive?.classList.remove("activeBox");
+  }
+  if (str === "2") {
+    openThree?.classList.remove("activeBox");
+    openFour?.classList.add("activeBox");
+    openFive?.classList.remove("activeBox");
+  }
+  if (str === "3") {
+    openThree?.classList.remove("activeBox");
+    openFour?.classList.remove("activeBox");
+    openFive?.classList.add("activeBox");
+  }
+};
+
+const close = () => {
+  const fourBox = document.querySelector(".fourBox");
+  const fiveBox = document.querySelector(".fiveBox");
+  const sixBox = document.querySelector(".sixBox");
+  const openThree = document.querySelector(".open-three");
+  const openFour = document.querySelector(".open-four");
+  const openFive = document.querySelector(".open-five");
+  fourBox?.classList.remove("activeBox");
+  fiveBox?.classList.remove("activeBox");
+  sixBox?.classList.remove("activeBox");
+  openThree?.classList.remove("activeBox");
+  openFour?.classList.remove("activeBox");
+  openFive?.classList.remove("activeBox");
+};
 </script>
 
 <template>
@@ -236,9 +374,10 @@ const handleIntersection = (entries: any, observer: any) => {
           </div>
         </div>
         <div class="fontText">
-          希瑪視光擁有蔡司全套先進眼科設備和個人化<br />的驗配流程，均得到德國蔡司官方認證。<br />我們提供精確量度眼睛度數、極致全面的<br
-            class="mbShow"
-          />視覺<br class="pcShow" />分析, 以及獨一無二的解決方案。
+          希瑪視光擁有蔡司全套先進眼科設備和個人化<br
+            class="pcShow"
+          />的驗配流程，均得到德國蔡司官方認證。<br />我們提供精確量度眼睛度數、極致全面的視覺<br />分析,
+          以及獨一無二的解決方案。
         </div>
         <div class="fontFooter"></div>
       </div>
@@ -249,11 +388,7 @@ const handleIntersection = (entries: any, observer: any) => {
   <div class="wpb_wrapper">
     <div class="contain-bg">
       <div class="selling-point">
-        <div class="selling-point-title">
-          服務特色<br /><span class="selling-point-title-sub"
-            >feat. Eunice So</span
-          >
-        </div>
+        <div class="selling-point-title">服務特色</div>
         <div class="selling-point-item">
           <div>
             <img
@@ -299,7 +434,7 @@ const handleIntersection = (entries: any, observer: any) => {
           </div>
         </div>
       </div>
-      <!-- <div class="feature_page">
+      <div class="feature_page">
         <div class="wrapper_feature">
           <div class="feature-item">
             <div class="feature-item-img">
@@ -383,10 +518,195 @@ const handleIntersection = (entries: any, observer: any) => {
             </p>
           </div>
         </div>
-      </div> -->
+      </div>
     </div>
   </div>
-
+  <div class="vision-experience">
+    <div class="vision-experience-bg" v-if="isPc">
+      <div class="vision-experience-content">
+        <div class="vision-experience-title">
+          <!-- <div class="vision-experience-title-text"> -->
+          <!-- MY<br />VISION<span>視界的全新體驗</span><br />EXPERIENCE -->
+          <!-- </div> -->
+        </div>
+        <div>
+          <div class="docx-one">
+            <div @click="showBox('1')"></div>
+            <div @click="showBox('2')"></div>
+            <div @click="showBox('3')"></div>
+          </div>
+          <!-- <div>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/2025012116010803.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/2025012116010802.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/2025012116010801.png"
+              alt=""
+            />
+          </div> -->
+          <div @click="close()" class="open-docx docx-two open-three">
+            <div>
+              <div>藝人兼主持</div>
+              <div>Edmond Hui</div>
+              <div>
+                作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到
+                ZEISS VISION EXPERT
+                中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司
+                3D 中心定位儀 VISUFIT 1000
+                技術，為我度身定做了一副滿意的眼鏡。這副眼鏡不但戴得舒適，而且能時尚出鏡。更棒的是，鏡片的防藍光功能非常適合我平時看手機和用電腦的需求。如果都也想擁有一副實用與顏值兼具的眼鏡，歡迎來到
+                ZEISS VISION EXPERT
+                檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                    alt=""
+                  />
+                </div>
+                <div>視界的全新體驗</div>
+              </div>
+            </div>
+          </div>
+          <div @click="close()" class="open-docx docx-two open-four">
+            <div>
+              <div>靚靚媽咪</div>
+              <div>雪雪<span>孫慧雪</span></div>
+              <div>
+                最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到
+                ZEISS VISION EXPERT
+                檢查眼睛。在視光師的建議下，我們給小兒子配上了近視控制眼鏡，幫助他預防近視加深。我也選擇了漸進鏡，滿足日常的視覺需求。他們使用了先進的
+                VISUFIT 1000
+                技術，為我們量身定做最合適的眼鏡，確保配戴舒適並改善視力。如果您的孩子也因為使用電子產品而出現視力問題，建議帶他們來CMER
+                VISION 檢查眼睛，讓我們一起守護孩子的視力健康！
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                    alt=""
+                  />
+                </div>
+                <div>視界的全新體驗</div>
+              </div>
+            </div>
+          </div>
+          <div @click="close()" class="open-docx docx-two open-five">
+            <div>
+              <div>港姐兼女神</div>
+              <div>Eunice So<span>蘇可欣</span></div>
+              <div>
+                因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS
+                Vision Expert 中心，透過蔡司 3D 中心定位儀 VISUFIT 1000
+                技術，為我量身定做了一副舒適的眼鏡。戴上新眼鏡後，我驚喜地發現視力改善讓我的生活更加精彩！不僅減輕了夜晚駕駛時的壓力，還讓我在日常生活中享受到更清晰的視野。如果你也面臨視力挑戰，別再等了！來
+                ZEISS Vision Expert 中心進行一次 My Vision Experience by ZEISS
+                的驗眼流程，讓他們幫助你找到最適合的解決方案，重新擁抱清晰的世界！
+              </div>
+              <div>
+                <div>
+                  <img
+                    src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                    alt=""
+                  />
+                </div>
+                <div>視界的全新體驗</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- <div class="bg-mask-layer"></div> -->
+    </div>
+    <div class="vision-experience-content" v-else>
+      <div class="vision-experience-bg"></div>
+      <div class="vision-item-list">
+        <div @click="showBox('four')"></div>
+        <div @click="showBox('five')"></div>
+        <div @click="showBox('six')"></div>
+        <div class="fourBox">
+          <div>
+            <div>藝人兼主持</div>
+            <div>Edmond Hui<span>許文軒</span></div>
+            <div>
+              作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到
+              ZEISS VISION EXPERT
+              中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司
+              3D 中心定位儀 VISUFIT 1000
+              技術，為我度身定做了一副滿意的眼鏡。這副眼鏡不但戴得舒適，而且能時尚出鏡。更棒的是，鏡片的防藍光功能非常適合我平時看手機和用電腦的需求。如果都也想擁有一副實用與顏值兼具的眼鏡，歡迎來到
+              ZEISS VISION EXPERT
+              檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                  alt=""
+                />
+              </div>
+              <div>視界的全新體驗</div>
+            </div>
+            <div @click="close()"></div>
+          </div>
+        </div>
+        <div class="fiveBox">
+          <div>
+            <div>靚靚媽咪</div>
+            <div>雪雪<span>孫慧雪</span></div>
+            <div>
+              最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到
+              ZEISS VISION EXPERT
+              檢查眼睛。在視光師的建議下，我們給小兒子配上了近視控制眼鏡，幫助他預防近視加深。我也選擇了漸進鏡，滿足日常的視覺需求。他們使用了先進的
+              VISUFIT 1000
+              技術，為我們量身定做最合適的眼鏡，確保配戴舒適並改善視力。如果您的孩子也因為使用電子產品而出現視力問題，建議帶他們來CMER
+              VISION 檢查眼睛，讓我們一起守護孩子的視力健康！
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                  alt=""
+                />
+              </div>
+              <div>視界的全新體驗</div>
+            </div>
+            <div @click="close()"></div>
+          </div>
+        </div>
+        <div class="sixBox">
+          <div>
+            <div>港姐兼女神</div>
+            <div>Eunice So<span>蘇可欣</span></div>
+            <div>
+              因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS
+              Vision Expert 中心，透過蔡司 3D 中心定位儀 VISUFIT 1000
+              技術，為我量身定做了一副舒適的眼鏡。戴上新眼鏡後，我驚喜地發現視力改善讓我的生活更加精彩！不僅減輕了夜晚駕駛時的壓力，還讓我在日常生活中享受到更清晰的視野。如果你也面臨視力挑戰，別再等了！來
+              ZEISS Vision Expert 中心進行一次 My Vision Experience by ZEISS
+              的驗眼流程，讓他們幫助你找到最適合的解決方案，重新擁抱清晰的世界！
+            </div>
+            <div>
+              <div>
+                <img
+                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
+                  alt=""
+                />
+              </div>
+              <div>視界的全新體驗</div>
+            </div>
+            <div @click="close()"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
   <!-- 个人化配镜流程 -->
   <div class="pj_wrapper">
     <div class="linear circle_title" style="height: auto">
@@ -868,9 +1188,9 @@ const handleIntersection = (entries: any, observer: any) => {
         :touchMoveStopPropagation="false"
         :touchRatio="1"
         :autoplay="{ delay: 3000, disableOnInteraction: false }"
-        @touch-start="handleTouchStart"
-        @touch-end="handleTouchEnd"
       >
+        <!-- @touch-start="handleTouchStart" -->
+        <!-- @touch-end="handleTouchEnd" -->
         <swiper-slide
           class="swiperIndex"
           v-for="item in discountsList"
@@ -979,11 +1299,322 @@ const handleIntersection = (entries: any, observer: any) => {
   transition: transform 0.3s ease-out;
   transform: rotateY(45deg);
 }
+.zve-information {
+  cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012116391701.png"),
+    auto;
+}
 
 @media screen and (min-width: 768px) {
-  .mbShow {
+  .vision-experience {
+    position: relative;
+    background: transparent !important;
+    width: 100%;
+    height: auto;
+    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012116391701.png"),
+      auto;
+    transition: all 0.3s;
+  }
+  .vision-experience-bg {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022810423301.png")
+      no-repeat;
+    background-size: contain;
+    position: relative;
+    width: 93.833vw;
+    height: 41.28125vw;
+    box-sizing: border-box;
+    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117133718.png"),
+      auto;
+    top: -2.375vw;
+  }
+  .bg-mask-layer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 98.333vw;
+    height: 43.28125vw;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025012115464301.png")
+      no-repeat;
+    background-size: cover;
+    z-index: 10;
+    pointer-events: none;
+  }
+  .vision-experience-content {
+    & > div:nth-child(2) {
+      display: flex;
+      justify-content: flex-end;
+      max-width: 90.333vw;
+      position: relative;
+      & > div {
+        width: 26.041654vw;
+        height: 43.229vw;
+        overflow: hidden;
+        transform: skewX(-20deg);
+        display: flex;
+        justify-content: flex-end;
+        & > img {
+          transform: skewX(20deg);
+          width: 170%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+      .docx-one {
+        width: auto;
+        position: absolute;
+        right: 8vw;
+        & > div {
+          margin: 0 !important;
+          width: 16.2vw;
+          background: transparent !important;
+          cursor: url("https://statichk.cmermedical.com/vision/imgs/2025022811335001.png"),
+            auto;
+          transition: all 0.3s;
+        }
+      }
+      .open-docx {
+        display: none;
+        position: absolute;
+        width: 94.333vw;
+        height: 43.28125vw;
+        bottom: 0;
+        left: 0;
+        transform: skewX(0deg);
+      }
+      .open-three {
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205502.png")
+          no-repeat;
+        z-index: 110;
+        background-size: contain;
+      }
+      .open-four {
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205501.png")
+          no-repeat;
+        z-index: 100;
+        background-size: contain;
+      }
+      .open-five {
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png")
+          no-repeat;
+        z-index: 90;
+        background-size: contain;
+      }
+      .docx-three,
+      .docx-two,
+      .docx-one {
+        & > div {
+          margin-top: 3.385vw;
+          margin-left: 4.428vw;
+          max-width: 46.979165vw;
+          & > div:nth-child(1) {
+            color: #fff;
+            font-family: "Noto Sans TC";
+            font-size: 1.7708vw;
+            font-style: normal;
+            font-weight: 250;
+            line-height: normal;
+          }
+          & > div:nth-child(2) {
+            display: flex;
+            align-items: flex-end;
+            color: #fff;
+            font-family: "Noto Sans TC";
+            font-size: 4.1665vw;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            padding-bottom: 0.78125vw;
+            & > span {
+              color: #fff;
+              font-family: "Noto Sans";
+              font-size: 1.773vw;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              padding-bottom: 0.78125vw;
+            }
+          }
+          & > div:nth-child(3) {
+            color: #fff;
+            text-align: justify;
+            font-family: "Noto Sans";
+            font-size: 1.33vw;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 1.875vw;
+            letter-spacing: 0.1vw;
+          }
+          & > div:nth-child(4) {
+            display: flex;
+            align-items: center;
+            color: rgba(255, 255, 255, 0.5);
+            text-align: justify;
+            font-family: "Noto Sans";
+            font-size: 1.665vw;
+            font-style: normal;
+            font-weight: 500;
+            letter-spacing: 0.3vw;
+            display: flex;
+            align-items: center;
+            gap: 0 0.2vw;
+            & > div:nth-child(1) {
+              margin-top: 0.78125vw;
+            }
+            & > div:nth-child(2) {
+              white-space: nowrap;
+            }
+          }
+        }
+      }
+      .docx-two {
+        & > div {
+          margin-top: 35px;
+        }
+      }
+      .activeBox {
+        position: absolute;
+        top: 2vw;
+        left: 0;
+        width: 94.633vw;
+        height: 39.08125vw;
+        cursor: url(https://statichk.cmermedical.com/vision/imgs/2025022811132201.png),
+          auto;
+        transition: all 0.3s ease-in-out;
+        display: flex !important;
+        flex-direction: column;
+        justify-content: center;
+      }
+    }
+  }
+  .vision-experience-title {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022813333701.png")
+      no-repeat;
+    background-size: cover;
+    position: absolute;
+    width: 49.69vw;
+    height: 29.48vw;
+    top: 50%;
+    left: 3vw;
+    transform: translateY(-50%);
+  }
+  .vision-experience-title-text {
+    position: absolute;
+    font-size: 7.5rem;
+    color: #fff;
+    font-weight: 500;
+    line-height: 1.2;
+    z-index: 80;
+    bottom: 3.5vw;
+    pointer-events: none;
+    left: 1.5625vw;
+  }
+  .vision-experience-title-text > span {
+    color: #fff;
+    text-align: justify;
+    font-family: "Noto Sans";
+    font-size: 45.929px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 47.843px; /* 104.167% */
+    letter-spacing: 9.186px;
+  }
+  .vision-experience-img-list {
+    position: relative;
+    top: -50px;
+    right: 60px;
+  }
+  .vision-experience-img-list-box {
+    position: relative;
+    background: #2449a4;
+    height: 780.854px;
+    width: 1610px;
+    clip-path: polygon(0% 0%, 90% 0%, 72% 100%, 0% 100%);
+  }
+  .vision-experience-img-list-item4 {
+    position: absolute;
+    left: -235px;
+  }
+  .vision-experience-img-list-item {
+    height: 780.854px;
+    clip-path: polygon(0% 0%, 100% 0%, 64% 100%, 0% 100%);
+    overflow: hidden;
+  }
+
+  .vision-experience-img-list-item1 {
+    position: absolute;
+    right: 0;
+  }
+  .vision-experience-img-list-item2 {
+    position: absolute;
+    right: 425px;
+  }
+  .vision-experience-img-list-item3 {
+    position: absolute;
+    right: 840px;
+  }
+
+  .vision-experience-img-list-item3:hover {
+    z-index: 65;
+    right: 0;
+  }
+  .vision-experience-img-list-item2:hover {
+    z-index: 55;
+    right: 0;
+  }
+  .vision-experience-img-list-item1:hover {
+    z-index: 50;
+  }
+  .vision-experience-img-list-item4:hover {
+    width: 2190px;
+    left: -55px;
+    z-index: 52;
+    clip-path: polygon(0% 0%, 92% 0%, 79% 100%, 0% 100%);
+  }
+  .vision-experience-img-list-item1:hover ~ .vision-experience-img-list-item4,
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item4,
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item4 {
+    width: 2190px;
+    left: -55px;
+    z-index: 52;
+    clip-path: polygon(0% 0%, 92% 0%, 79% 100%, 0% 100%);
+  }
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item4 {
+    z-index: 57;
+  }
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item4 {
+    z-index: 65;
+  }
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item2,
+  .vision-experience-img-list-item3:hover ~ .vision-experience-img-list-item1,
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item3,
+  .vision-experience-img-list-item2:hover ~ .vision-experience-img-list-item1,
+  .vision-experience-img-list-item1:hover ~ .vision-experience-img-list-item2,
+  .vision-experience-img-list-item1:hover ~ .vision-experience-img-list-item3 {
     display: none !important;
   }
+  .vision-experience-img-list-item > img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+  }
+  .vision-experience-img-list-item-active {
+    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117380151.png"),
+      auto;
+    transition: all 0.3s;
+  }
+
+  .active-img {
+    z-index: 22;
+    position: absolute;
+    right: 0;
+    cursor: pointer;
+  }
+  .active-box {
+    z-index: 25;
+    width: 1510px;
+    clip-path: polygon(0% 0%, 100% 0%, 84% 100%, 0% 100%);
+    cursor: pointer;
+  }
+
   //轮播图
   .wpbSwpier {
     background: #f6f9fe;
@@ -1293,6 +1924,146 @@ const handleIntersection = (entries: any, observer: any) => {
   }
 }
 @media screen and (max-width: 767px) {
+  .vision-experience-content {
+    margin-bottom: 12.8vw;
+    position: relative;
+    .vision-experience-bg {
+      background: url("https://statichk.cmermedical.com/vision/imgs/2025022514101801.png")
+        no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 184.1025vw;
+    }
+    .vision-item-list {
+      position: absolute;
+      bottom: 15.384vw;
+      left: 0;
+      width: 100%;
+      & > div {
+        width: 100%;
+        height: 30.76vw;
+        background: transparent;
+        transform: skewY(20deg);
+      }
+      & > div:nth-child(1) {
+        background: transparent;
+      }
+      & > div:nth-child(2) {
+        background: transparent;
+      }
+      & > div:nth-child(3) {
+        background: transparent;
+      }
+      & > div:nth-child(4),
+      & > div:nth-child(5),
+      & > div:nth-child(6) {
+        display: none;
+      }
+    }
+  }
+  .fourBox {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002601.png")
+      no-repeat !important;
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 185.846vw !important;
+  }
+  .fiveBox {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002602.png")
+      no-repeat !important;
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 185.846vw !important;
+  }
+  .sixBox {
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002603.png")
+      no-repeat !important;
+    background-size: cover !important;
+    width: 100vw !important;
+    height: 185.846vw !important;
+  }
+  .activeBox {
+    position: absolute;
+    top: -74.723vw;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block !important;
+    transform: skewY(0deg) !important;
+    & > div {
+      box-sizing: border-box;
+      padding: 12.8vw;
+      & > div:nth-child(1) {
+        color: #fff;
+        font-family: "Noto Sans TC";
+        font-size: 3.92vw;
+        font-style: normal;
+        font-weight: 200;
+        line-height: normal;
+      }
+      & > div:nth-child(2) {
+        color: #fff;
+        font-family: "Noto Sans TC";
+        font-size: 5.995vw;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        display: flex;
+        gap: 0 2.56vw;
+        align-items: center;
+        & > span {
+          color: #fff;
+          font-family: "Noto Sans";
+          font-size: 3.996vw;
+          font-style: normal;
+          font-weight: 700;
+          line-height: normal;
+        }
+      }
+      & > div:nth-child(3) {
+        color: #fff;
+        text-align: justify;
+        font-family: "Noto Sans";
+        font-size: 3.07vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        letter-spacing: 0.3vw;
+        margin-top: 1.28vw;
+      }
+      & > div:nth-child(4) {
+        color: rgba(255, 255, 255, 0.5);
+        text-align: justify;
+        font-family: "Noto Sans";
+        font-size: 3.23vw;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 5.05vw; /* 156.25% */
+        letter-spacing: 0.646vw;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        & > div:nth-child(1) {
+          width: 44.1vw;
+          & > img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        margin-top: 40px;
+      }
+      & > div:nth-child(5) {
+        width: 12.8vw;
+        height: 12.8vw;
+        background: transparent;
+        position: absolute;
+        top: 8.717vw;
+        right: 15.38vw;
+        border-radius: 50%;
+      }
+    }
+  }
   //轮播图
 
   .wpbSwpier {
@@ -1447,8 +2218,8 @@ const handleIntersection = (entries: any, observer: any) => {
       width: 15px;
       height: 15px;
       border: 4px solid #2449a4;
-      border-top: 1px solid transparent; /* 下边框透明 */
-      border-right: 1px solid transparent; /* 右边框透明 */
+      border-top: 1px solid transparent; /* 透明下边框透明 */
+      border-right: 1px solid transparent; /* 透明;右边框透明 */
     }
 
     &::after {
@@ -1503,7 +2274,7 @@ const handleIntersection = (entries: any, observer: any) => {
   }
 
   .fontText {
-    max-width: 89.75vw;
+    max-width: 317px;
     width: 100%;
     color: #6d6d6d;
     text-align: center;
@@ -1589,17 +2360,7 @@ const handleIntersection = (entries: any, observer: any) => {
 
   // 服务特色部分
   .selling-point {
-    display: block;
-  }
-  .selling-point-title-sub {
-    color: #2449a4;
-    text-align: justify;
-    font-family: "Noto Sans";
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 100%; /* 137.5% */
-    letter-spacing: 0px;
+    display: none;
   }
   .feature_page {
     display: block;
@@ -2296,7 +3057,6 @@ body {
 .selling-point-item > div > img {
   display: block;
   width: 100%;
-  object-fit: cover;
 }
 
 .item-content {
@@ -2352,7 +3112,7 @@ body {
     font-size: 18px;
     font-style: normal;
     font-weight: 400;
-    line-height: 100%;
+    line-height: normal;
     letter-spacing: 3.6px;
     position: relative;
     margin-bottom: 40px;
@@ -2380,11 +3140,10 @@ body {
   .selling-point-item > div > img {
     max-width: max-content !important;
     height: 100% !important;
-    object-fit: cover;
   }
 
   .selling-point {
-    margin: 30px auto 0;
+    margin: 50px auto 0;
     padding-bottom: 40px;
   }
 
@@ -2656,7 +3415,7 @@ a {
 
 .address-whatsapp-a > svg {
   position: relative;
-  z-index: 1;
+  z-index: 3;
 }
 
 .address-whatsapp-a > div {

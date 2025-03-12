@@ -312,10 +312,12 @@ const openVideo = (link: string) => {
       </section>
       <section class="section2" v-else>
         <swiper
-          :slidesPerView="1"
-          :centeredSlides="true"
-          :spaceBetween="15"
-          :grabCursor="true"
+          :space-between="15"
+          :slides-per-view="1.5"
+          :modules="[Autoplay]"
+          :loop="true"
+          :autoplay="{ delay: 0 }"
+          :speed="4000"
           class="mySwiper"
         >
           <swiper-slide v-for="(item, index) in witness.section2" :key="index">
@@ -818,13 +820,13 @@ const openVideo = (link: string) => {
     margin-top: 5.128vw;
     .list-in {
       // min-width: 58.46vw;
-      min-height: 37.17vw;
+      min-height: 39.17vw;
       border-radius: 13.123px;
       border: 0.656px solid #00a6ce;
       background: #fff;
       box-sizing: border-box;
       padding: 3.8vw 5.6vw;
-      max-width: 80%;
+      max-width: 100%;
       margin: 0 auto;
       &-t {
         .image {

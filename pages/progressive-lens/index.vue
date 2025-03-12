@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/2025020710545301.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/2025020710545302.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/2025022809330603.webp",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2025022809330602.webp",
 };
 const isType = ref(0);
 const checkType = (type: number) => {
@@ -227,7 +227,7 @@ const judgeTwo = (num: string) => {
       <div class="comparison">
         <div>
           <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
-          <div v-if="judge(imgLeft)" style="color: #0192b0;">漸進鏡片</div>
+          <div v-if="judge(imgLeft)" style="color: #0192b0">漸進鏡片</div>
         </div>
         <div class="imagetowebp-canvasWebp">
           <div
@@ -1043,7 +1043,10 @@ const judgeTwo = (num: string) => {
               alt=""
             />
           </div>
-          <a href="https://www.cmervision.com/pdf/Vision-白內障手術後配鏡23-Leaflet-V11.pdf" download="Vision-白內障手術後配鏡23-Leaflet-V11.pdf">
+          <a
+            href="https://www.cmervision.com/pdf/Vision-白內障手術後配鏡23-Leaflet-V11.pdf"
+            download="Vision-白內障手術後配鏡23-Leaflet-V11.pdf"
+          >
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"

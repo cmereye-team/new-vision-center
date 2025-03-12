@@ -18,7 +18,7 @@ useHead(() => ({
 }));
 const bannerImg = {
   pc: "https://statichk.cmermedical.com/vision/imgs/c6d4a13a7193.avif",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/b42a826d003b.avif",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/2025030610193301.png",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -54,7 +54,7 @@ const showAgeStage = (type: any) => {
       :isInsidePage="true"
       :insidePageTitle="'成人綜合眼睛檢查'"
     />
-    <div class="adult-corset">
+    <nuxt-link to="/comprehensive/glaucoma-examination" class="adult-corset">
       <div>
         <svg
           width="311"
@@ -97,7 +97,7 @@ const showAgeStage = (type: any) => {
         <div>看不見視野中央以外的影像形成「隧道視野」</div>
         <div>查看更多</div>
       </div>
-    </div>
+    </nuxt-link>
     <div class="adult-box">
       <div class="adult-sort">
         <div>
@@ -456,12 +456,15 @@ const showAgeStage = (type: any) => {
       </div>
     </div>
     <div class="adult-bg-image">
-      <div>
+      <a
+        href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
+        target="_blank"
+      >
         <img
-          src="https://statichk.cmermedical.com/vision/imgs/a6befeaaf789.webp"
+          src="https://statichk.cmermedical.com/vision/imgs/2025030515274001.webp"
           alt=""
         />
-      </div>
+      </a>
     </div>
     <div class="adult-bg-image-text">
       <div>
@@ -474,6 +477,7 @@ const showAgeStage = (type: any) => {
         >
       </div>
     </div>
+    <PublicFormV2Index />
   </div>
 </template>
 
@@ -731,13 +735,15 @@ const showAgeStage = (type: any) => {
   .adult-bg-image {
     background: url("https://statichk.cmermedical.com/vision/imgs/84c5a81f4c58.webp")
       no-repeat;
+    background-size: cover;
     width: 100%;
     height: 40.3645vw;
     display: flex;
     align-items: flex-end;
-    & > div {
+    & > a {
       width: 53.59375vw;
       height: 29.1665vw;
+      display: flex;
       & > img {
         width: 100%;
         height: 100%;
@@ -746,7 +752,7 @@ const showAgeStage = (type: any) => {
     }
   }
   .adult-bg-image-text {
-    margin: 20px 9.8953vw 0 auto;
+    margin: 20px 9.8953vw 200px auto;
     display: flex;
     justify-content: flex-end;
     & > div {
@@ -1329,7 +1335,7 @@ const showAgeStage = (type: any) => {
   .adult-sort {
     display: flex;
     height: 100%;
-    padding-left: 30px;
+    padding-left: 40px;
     position: relative;
     margin-top: 35.4vw;
     margin-bottom: 95px;
@@ -1337,6 +1343,8 @@ const showAgeStage = (type: any) => {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      position: relative;
+      left: 10px;
       & > div:nth-child(1) {
         position: relative;
         top: -20px;
@@ -1347,6 +1355,25 @@ const showAgeStage = (type: any) => {
       & > div:nth-child(3) {
         position: relative;
         bottom: -20px;
+      }
+      & > div::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: -50px;
+        width: 40px;
+        height: 1px;
+        background: darkcyan;
+      }
+      &>div:nth-child(1)::after {
+        top: 32%;
+      }
+      &>div:nth-child(2)::after {
+        top: 55%;
+      }
+      &>div:nth-child(3)::after {
+        top: 62%;
       }
     }
     & > div:nth-child(2) {
@@ -1562,7 +1589,9 @@ const showAgeStage = (type: any) => {
       margin-right: 0;
       margin-left: auto;
       margin-bottom: 30px;
-      & > div:nth-child(1) {
+      justify-content: flex-start;
+      flex-direction: row-reverse;
+      & > div:nth-child(2) {
         width: 162px;
         height: 162px;
         & > img {
@@ -1572,7 +1601,7 @@ const showAgeStage = (type: any) => {
           object-fit: cover;
         }
       }
-      & > div:nth-child(2) {
+      & > div:nth-child(1) {
         width: 186px;
         height: 186px;
         & > img {
@@ -1586,7 +1615,8 @@ const showAgeStage = (type: any) => {
       margin-right: auto;
       margin-left: 0;
       margin-bottom: 30px;
-      & > div:nth-child(1) {
+      flex-direction: row-reverse;
+      & > div:nth-child(2) {
         width: 149.459px;
         height: 149.459px;
         & > img {
@@ -1596,7 +1626,7 @@ const showAgeStage = (type: any) => {
           margin-top: 130px;
         }
       }
-      & > div:nth-child(2) {
+      & > div:nth-child(1) {
         width: 205.553px;
         height: 214.613px;
         & > img {
@@ -1611,13 +1641,18 @@ const showAgeStage = (type: any) => {
     background: url("https://statichk.cmermedical.com/vision/imgs/8a5c97c5ebba.webp")
       no-repeat;
     background-size: cover;
-    width: 100%;
+    width: 100vw;
     height: 126.923vw;
     position: relative;
-    & > div:nth-child(1) {
+    & > a:nth-child(1) {
       position: absolute;
-      bottom: -3px;
-      left: 0;
+      bottom: -0.8vw;
+      left: -13.6vw;
+      & > img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
     }
   }
 
@@ -1645,6 +1680,29 @@ const showAgeStage = (type: any) => {
   .adult-bg {
     background: #f1f8fa;
     margin-top: 140px;
+    position: relative;
+  }
+  .adult-bg::before {
+    content: "";
+    background: url(https://statichk.cmermedical.com/vision/imgs/7504bfc893ca.svg)
+      no-repeat;
+    background-size: contain;
+    position: absolute;
+    width: 36.932vw;
+    height: 35.506vw;
+    top: 71.0833vw;
+    right: 0;
+  }
+  .adult-bg::after {
+    content: "";
+    background: url(https://statichk.cmermedical.com/vision/imgs/7504bfc893ca.svg)
+      no-repeat;
+    position: absolute;
+    background-size: contain;
+    top: -14.33vw;
+    left: 0;
+    width: 30.932vw;
+    height: 30.506vw;
   }
   .adult-bg-image,
   .adult-step {

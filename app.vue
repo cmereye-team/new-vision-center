@@ -20,6 +20,7 @@ onMounted(() => {
     isNotV2.value = false;
   }
 });
+
 </script>
 <template>
   <div>

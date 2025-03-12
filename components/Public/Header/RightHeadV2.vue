@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+definePageMeta({
+  middleware: "redirect",
+});
 import { Search } from "@element-plus/icons-vue";
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -48,12 +51,12 @@ const menuList = ref([
     child: "svg",
     path: "/new-discounts",
   },
-  // {
-  //   id: "9",
-  //   title: "ZEISS Vision Expert",
-  //   child: "svg",
-  //   path: "/zve",
-  // },
+  {
+    id: "9",
+    title: "ZEISS Vision Expert",
+    child: "svg",
+    path: "/zve",
+  },
   {
     id: "2",
     title: "兒童視力服務",
@@ -298,11 +301,15 @@ const hiddenBox = ref(false);
         class="fa-path"
         :class="[
           `fa-${index + 1}`,
-          item.childrenList && item.childrenList.length > 0 ? 'isChildNode' : 'noNodeChild',
+          item.childrenList && item.childrenList.length > 0
+            ? 'isChildNode'
+            : 'noNodeChild',
         ]"
       >
         <nuxt-link
-          :to="item.path == '/' ? (headLink(index, item), undefined) : item.path"
+          :to="
+            item.path == '/' ? (headLink(index, item), undefined) : item.path
+          "
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
@@ -669,7 +676,7 @@ const hiddenBox = ref(false);
           font-style: normal;
           font-weight: 700;
           line-height: 1.04165vw;
-          min-width: 6.25vw;
+          min-width: 6.75vw;
           & > span {
             padding-bottom: 0.74165vw;
             border-bottom: 1px solid #00a6ce;
@@ -790,7 +797,7 @@ const hiddenBox = ref(false);
     }
   }
   .router-link-active {
-    color: #00a6ce !important;
+    color: #fff !important;
   }
   .menu {
     .fa-2,
@@ -882,29 +889,38 @@ const hiddenBox = ref(false);
   }
   .btn-service {
     display: flex;
-    gap: 0 28px;
+    gap: 0 1.4583vw;
     a {
       border-radius: 100px;
       border: 1px solid #000;
       background: #59ba68;
-      
+
       transition: all 200ms;
       display: flex;
       align-items: center;
-      gap: 0 10px;
+      gap: 0 0.52vw;
       box-sizing: border-box;
-      padding: 14px 33px;
+      padding: 0.729vw 1.71875vw;
+      & > div:nth-child(1) {
+        width: 1.25vw;
+        height: 1.25vw;
+        & > svg {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
       div:nth-child(2) {
         color: #fff;
         text-align: center;
         font-family: Inter;
-        font-size: 14.4px;
+        font-size: 0.75vw;
         font-style: normal;
         font-weight: 700;
         line-height: normal;
       }
       transform: translateY(-10px);
-      box-shadow: 0px 12px 1px #141211;
+      box-shadow: 0px 0.625vw 1px #141211;
       transition: all 0.3s ease-in-out;
     }
     a:nth-child(2) {
@@ -1149,6 +1165,73 @@ const hiddenBox = ref(false);
       }
     }
   }
+
+  .fa-path:hover {
+    & > a {
+      color: #00a6ce;
+      cursor: default;
+    }
+    & > a::after {
+      background: url("https://statichk.cmermedical.com/vision/imgs/e7f6cda30324f416.png");
+      transform: rotate(180deg) translateX(50%);
+      background-size: 100% 100%;
+      bottom: -10px;
+      z-index: 10;
+    }
+    .sub-menu {
+      box-shadow: #4d4d4d 5px 5px 10px;
+      z-index: 999;
+      border-radius: 5px;
+      width: max-content;
+      position: absolute;
+      right: 50%;
+      transform: translateX(50%);
+      top: 38px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 0;
+      background: #00b9e6;
+      & > div:last-child {
+        border-bottom: none;
+      }
+
+      & > a {
+        color: #fff;
+        font-family: "Noto Sans HK";
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 700;
+        text-align: left;
+        text-wrap: nowrap;
+        line-height: 20px; /* 133.333% */
+      }
+    }
+  }
+
+  .son-menu {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    & > a {
+      padding-bottom: 0 !important;
+
+      color: #fff;
+      font-family: "Noto Sans HK";
+      font-size: 0.78vw;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20px;
+      padding: 0.78vw 0.8vw;
+      display: block;
+      & > span {
+        padding-bottom: 10px;
+        border-bottom: 1px solid #fff;
+        min-width: 6.25vw;
+        display: inline-block;
+      }
+    }
+  }
   .is_ai_screening {
     & > a {
       & > span {
@@ -1175,34 +1258,13 @@ const hiddenBox = ref(false);
     transform: translateY(-50%);
   }
   .router-link-active {
-    color: #00a6ce !important;
+    color: #fff !important;
   }
-  // .sub-menu::before {
-  //   content: "";
-  //   position: absolute;
-  //   width: 0;
-  //   height: 0;
-  //   border-top: 0px solid transparent;
-  //   border-bottom: 14px solid #fff;
-  //   border-left: 14px solid transparent;
-  //   border-right: 14px solid transparent;
-  //   top: -14px;
-  // }
   .son-menu:hover {
     & > a {
       position: relative;
-      color: #00a6ce;
-      & > span::before {
-        content: "";
-        width: 11px;
-        height: 15px;
-        background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
-          no-repeat;
-        position: absolute;
-        left: 25px;
-        top: 50%;
-        transform: translateY(-50%);
-      }
+      color: #fff;
+      background: #00a6ce;
     }
 
     .three-level-2 {
@@ -1211,51 +1273,35 @@ const hiddenBox = ref(false);
       position: absolute;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
-      background: #fff;
-      right: -89.2%;
+      background: #00a6ce;
+      right: -100%;
       top: -68%;
       border-radius: 5px;
-      padding: 15px 0;
+      // padding: 0.625vw 0;
       & > div {
         & > a {
-          padding: 15px 30px 0 30px;
+          padding: 0.78125vw 1.5625vw 0 1.5625vw;
           display: block;
-          color: #6f6f6f;
+          color: #fff;
           font-family: "Noto Sans HK";
-          font-size: 15px;
+          font-size: 0.78125vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 20px;
-          min-width: 120px;
+          line-height: 1.04165vw;
+          min-width: 4.75vw;
           & > span {
-            padding-bottom: 10px;
+            padding-bottom: 0.74165vw;
             border-bottom: 1px solid #00a6ce;
             width: 100%;
             display: inline-block;
           }
         }
       }
-      & > div:last-child:hover {
-        & > a {
-          & > span::before {
-            top: 10px;
-          }
-        }
-      }
       & > div:hover {
         & > a {
           position: relative;
-          color: #00a6ce;
-          & > span::before {
-            content: "";
-            width: 11px;
-            height: 15px;
-            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
-              no-repeat;
-            position: absolute;
-            left: 15px;
-            top: 18px;
-          }
+          color: #fff;
+          background: #00b9e6;
         }
       }
     }
@@ -1263,24 +1309,25 @@ const hiddenBox = ref(false);
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: -114%;
+      right: -150%;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
-      background: #fff;
+      background: #00a6ce;
       top: -18%;
       border-radius: 5px;
+      // padding: 0.625vw 0;
       & > div {
         & > a {
-          padding: 15px 30px;
+          padding: 0.78125vw 1.5625vw;
           display: block;
-          color: #6f6f6f;
+          color: #fff;
           font-family: "Noto Sans HK";
-          font-size: 15px;
+          font-size: 0.78125vw;
           font-style: normal;
           font-weight: 700;
-          line-height: 20px;
+          line-height: 1.04165vw;
           & > span {
-            padding-bottom: 10px;
+            padding-bottom: 0.52vw;
             border-bottom: 1px solid #00a6ce;
           }
         }
@@ -1288,17 +1335,8 @@ const hiddenBox = ref(false);
       & > div:hover {
         & > a {
           position: relative;
-          color: #00a6ce;
-          & > span::before {
-            content: "";
-            width: 11px;
-            height: 15px;
-            background: url("https://statichk.cmermedical.com/vision/imgs/79423085f7588927.png")
-              no-repeat;
-            position: absolute;
-            left: 15px;
-            top: 18px;
-          }
+          color: #fff;
+          background: #00b9e6;
         }
       }
     }
@@ -1306,7 +1344,7 @@ const hiddenBox = ref(false);
       display: flex;
       flex-direction: column;
       position: absolute;
-      right: auto;
+      right: 0;
       left: 101%;
       bottom: 0;
       box-shadow: #4d4d4d 5px 5px 10px;
@@ -1432,14 +1470,16 @@ const hiddenBox = ref(false);
         font-weight: 700;
         line-height: normal;
       }
+      transform: translateY(-10px);
+      box-shadow: 0px 12px 1px #141211;
+      transition: all 0.3s ease-in-out;
     }
     a:nth-child(2) {
       background: #00a6ce;
     }
     a:hover {
-      transform: translateY(-10px);
-      box-shadow: 0px 12px 1px #141211;
-      transition: all 0.3s ease-in-out;
+      transform: translateY(0px);
+      box-shadow: 0 0 0;
     }
     a:active {
       transform: translateY(0);

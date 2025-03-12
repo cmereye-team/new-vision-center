@@ -1,4 +1,7 @@
 <script lang="ts" setup>
+definePageMeta({
+  middleware: "redirect",
+});
 import { Search } from "@element-plus/icons-vue";
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -294,10 +297,14 @@ const handleMouseleave = () => {
         v-for="(item, index) in menuList"
         :key="item.id"
         class="fa-path"
-        :class="[`fa-${index + 1}`,item?.childrenList?.length > 0? 'isChildNode' : 'noNodeChild']"
+        :class="[
+          `fa-${index + 1}`,
+          (item.childrenList ?? []).length > 0 ? 'isChildNode' : 'noNodeChild',
+        ]"
       >
         <nuxt-link
-          :to="item.path == '/' ? headLink(index, item) : item.path"
+          @click="item.path == '/' ? headLink(index, item) : mbToLink(item)"
+          :to="item.path"
           :class="[item.isChildVisible ? `a-link-${item.id}` : '', 'a-link']"
           >{{ item.title }}</nuxt-link
         >
@@ -434,7 +441,7 @@ const handleMouseleave = () => {
       position: relative;
       border-right: 1px solid #4d4d4d;
       & > a {
-        color: #4d4d4d;
+        color: #4d4d4d !important;
         text-align: center;
         font-family: "Noto Sans HK";
         font-size: 0.8vw;
@@ -869,7 +876,7 @@ const handleMouseleave = () => {
     & > div:nth-child(1) {
       color: #4d4d4d;
       text-align: center;
-      font-family: Inter;
+      font-family: "Noto Sans HK";
       font-size: 17px;
       font-style: normal;
       font-weight: 600;
@@ -943,7 +950,7 @@ const handleMouseleave = () => {
       position: relative;
       border-right: 1px solid #4d4d4d;
       & > a {
-        color: #4d4d4d;
+        color: #4d4d4d !important;
         text-align: center;
         font-family: "Noto Sans HK";
         font-size: 17px;
@@ -1081,7 +1088,7 @@ const handleMouseleave = () => {
   .ai_screening_title {
     position: relative;
   }
-  .ai_screening_title::before{
+  .ai_screening_title::before {
     left: -25px !important;
     top: 35% !important;
   }

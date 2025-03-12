@@ -52,6 +52,7 @@ onUnmounted(() => {
     <div class="video-information-box">
       <V2LatestNews />
     </div>
+    <PublicFormV2Index />
   </div>
 </template>
 

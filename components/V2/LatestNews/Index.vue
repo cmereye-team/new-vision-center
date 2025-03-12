@@ -271,7 +271,7 @@ const loading = ref(true);
       </div>
     </div>
     <div v-loading="loading" class="latest-news-box-grid">
-      <div v-for="item in newsList" :key="item.id" class="news-item">
+      <nuxt-link :to="`/news/${item.id}`" v-for="item in newsList" :key="item.id" class="news-item">
         <a :href="`/news/${item.id}`">
           <img
             :src="`https://content.cmervision.com/${item.img}`"
@@ -300,7 +300,7 @@ const loading = ref(true);
           <!-- <nuxt-link>{{ item.title }}</nuxt-link> -->
           <nuxt-link :to="`/news/${item.id}`">{{ item.title }}</nuxt-link>
         </div>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
@@ -416,18 +416,18 @@ a {
       }
     }
   }
-  .news-item:hover {
-    box-shadow: 0px 0px 5px 6px #e3e0e0;
-    border-radius: 11.25px;
-    transition: transform 0.5s;
-    box-sizing: border-box;
-    & > a:nth-child(1) {
-      & > img {
-        transform: scale(1.1);
-        transition: transform 0.5s;
-      }
-    }
-  }
+  // .news-item:hover {
+  //   box-shadow: 0px 0px 5px 6px #e3e0e0;
+  //   border-radius: 11.25px;
+  //   transition: transform 0.5s;
+  //   box-sizing: border-box;
+  //   & > a:nth-child(1) {
+  //     & > img {
+  //       transform: scale(1.1);
+  //       transition: transform 0.5s;
+  //     }
+  //   }
+  // }
   .bgBlue {
     background: #00a6ce;
   }
@@ -496,7 +496,7 @@ a {
     display: flex;
     flex-direction: column;
     max-width: 40vw;
-    & > div:nth-child(1) {
+    & > a:nth-child(1) {
       max-width: 40vw;
       width: 40vw;
       height: 40vw;

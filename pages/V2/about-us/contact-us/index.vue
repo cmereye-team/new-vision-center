@@ -46,14 +46,14 @@ const bannerImg = {
     span {
       position: relative;
       left: -180%;
-      color: #00A6CE;
+      color: #00a6ce;
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 60px;
+      font-size: 3.125vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 12px;
+      letter-spacing: 0.625vw;
     }
   }
   .contact-us-content {

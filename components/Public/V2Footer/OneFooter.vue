@@ -154,7 +154,7 @@ onMounted(() => {
         </g>
       </g>
     </svg>
-  <div class="media" v-if="!isPc">
+    <div class="media" v-if="!isPc">
       <a target="_blank" href="https://www.facebook.com/cmervision">
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -226,10 +226,10 @@ onMounted(() => {
       max-width: 120px;
       height: auto;
     }
-    .media{
+    .media {
       display: flex;
       align-items: center;
-      &>a:nth-child(2) {
+      & > a:nth-child(2) {
         margin: 0 23px;
       }
     }

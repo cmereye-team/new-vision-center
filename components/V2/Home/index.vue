@@ -278,6 +278,7 @@ const services = {
               display: flex;
               align-items: flex-end;
               margin-top: 5px;
+              min-height: 30px;
               .context-text {
                 p {
                   color: #00b9e6;
@@ -468,7 +469,7 @@ const services = {
             &-l {
               .context-text {
                 p {
-                  color: var(--Brand-2, #59ba68);
+                  color: #00b9e6;
                   font-family: "Noto Sans HK";
                   font-size: 13.5px;
                   font-style: normal;
@@ -492,7 +493,7 @@ const services = {
               }
               .context-price {
                 p {
-                  color: var(--Brand-2, #59ba68);
+                  color: #00b9e6;
                   font-family: "Noto Sans HK";
                   font-size: 13.5px;
                   font-style: normal;
