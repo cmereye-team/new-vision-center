@@ -1347,6 +1347,7 @@ onMounted(() => {
         </div>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

@@ -661,8 +661,8 @@ const hiddenBox = ref(false);
       position: absolute;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
-      background: #fff;
-      right: -82%;
+      background: #00B9E6;
+      right: -86%;
       top: -68%;
       border-radius: 5px;
       padding: 0.625vw 0;
@@ -670,7 +670,7 @@ const hiddenBox = ref(false);
         & > a {
           padding: 0.78125vw 1.5625vw 0 1.5625vw;
           display: block;
-          color: #6f6f6f;
+          color: #fff;
           font-family: "Noto Sans HK";
           font-size: 0.78125vw;
           font-style: normal;
@@ -684,11 +684,15 @@ const hiddenBox = ref(false);
             display: inline-block;
           }
         }
+        .router-link-exact-active {
+          color: #fff !important;
+        }
       }
       & > div:hover {
         & > a {
+          background: #00A6CE;
           position: relative;
-          color: #00a6ce;
+          color: #fff;
           & > span::before {
             content: "";
             width: 0.58vw;
@@ -797,7 +801,7 @@ const hiddenBox = ref(false);
     }
   }
   .router-link-active {
-    color: #fff !important;
+    color: #00a6ce !important;
   }
   .menu {
     .fa-2,
@@ -1164,6 +1168,9 @@ const hiddenBox = ref(false);
         display: inline-block;
       }
     }
+    .router-link-exact-active {
+      color: #fff !important;
+    }
   }
 
   .fa-path:hover {
@@ -1231,6 +1238,9 @@ const hiddenBox = ref(false);
         display: inline-block;
       }
     }
+    .router-link-exact-active {
+      color: #fff !important;
+    }
   }
   .is_ai_screening {
     & > a {
@@ -1258,7 +1268,7 @@ const hiddenBox = ref(false);
     transform: translateY(-50%);
   }
   .router-link-active {
-    color: #fff !important;
+    color: #00a6ce !important;
   }
   .son-menu:hover {
     & > a {

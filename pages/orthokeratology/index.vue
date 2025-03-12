@@ -3749,6 +3749,7 @@ const handlesSliPrev = () => {
         />
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

@@ -1156,6 +1156,7 @@ const btnElement = ref({
         </div>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

@@ -37,6 +37,7 @@ const bannerImg = {
     <div class="video-information-box">
       <NowDiscounts />
     </div>
+    <PublicForm />
   </div>
 </template>
 

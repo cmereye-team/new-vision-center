@@ -36,6 +36,7 @@ const bannerImg = {
     <div class="profile-content-max-width">
       <CenterProfileMission />
     </div>
+    <PublicForm />
   </div>
 </template>
 

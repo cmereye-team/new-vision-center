@@ -28,7 +28,7 @@ const props = defineProps({
     <div class="publicBanner">
       <slot name="title"> </slot>
     </div>
-    <div class="public-header-bottom-menu">
+    <!-- <div class="public-header-bottom-menu">
       <div class="banner-template-btn">
         <a
           href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
@@ -73,7 +73,7 @@ const props = defineProps({
           <div>電話預約：3892 5089</div>
         </a>
       </div>
-    </div>
+    </div> -->
   </div>
 </template>
 

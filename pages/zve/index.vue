@@ -1292,6 +1292,8 @@ const close = () => {
       </div>
     </div>
   </div>
+
+  <PublicForm />
 </template>
 
 <style lang="scss" scoped>

@@ -17,25 +17,26 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/7f4b5bcf029a0f4c.png",
+  pc: "https://statichk.cmermedical.com/vision/imgs/5b747211e19c.avif",
+  mobile: "https://statichk.cmermedical.com/vision/imgs/5c9e5e240047.avif",
 };
 </script>
 
 <template>
   <div class="contact-us">
-    <PublicBanner :banner="bannerImg">
+    <PublicV2Banner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
           <span>聯絡我們</span>
         </div>
       </template>
-    </PublicBanner>
+    </PublicV2Banner>
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'聯絡我們'" />
     <div class="contact-us-content">
-      <ContactUsMapList />
+      <V2ContactUsMapList />
     </div>
+    <PublicFormV2Index />
   </div>
 </template>
 
@@ -44,25 +45,25 @@ const bannerImg = {
   .profile-title {
     span {
       position: relative;
-      right: -180%;
-      color: #fff;
+      left: -180%;
+      color: #00a6ce;
       text-align: center;
       font-family: "Noto Sans HK";
-      font-size: 60px;
+      font-size: 3.125vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
-      letter-spacing: 12px;
+      letter-spacing: 0.625vw;
     }
   }
   .contact-us-content {
-    max-width: 960px;
+    max-width: 1050px;
     margin: 0 auto;
   }
 }
 @media screen and (max-width: 767px) {
   .contact-us-content {
-    padding: 0 24px;
+    // padding: 0 24px;
   }
   .profile-title {
     min-height: 100vw;

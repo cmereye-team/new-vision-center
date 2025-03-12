@@ -1669,6 +1669,7 @@ const miSightQuestionList = [
         />
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

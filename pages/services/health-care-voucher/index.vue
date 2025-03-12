@@ -33,6 +33,7 @@ const bannerImg = {
     </PublicBanner>
     <PublicNavbar :link="'/about-us/news-information'" :name="'長者醫療券計劃'" />
     <MedicalVoucher />
+    <PublicForm />
   </div>
 </template>
 
