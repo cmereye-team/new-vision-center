@@ -223,7 +223,6 @@ const showDemonstration = () => {
   const theoryDemonstration = document.querySelector(
     ".comparison"
   ) as HTMLElement | null;
-
   if (theoryContent) theoryContent.style.display = "none";
   if (theoryDemonstration) theoryDemonstration.style.display = "flex";
 };
@@ -501,9 +500,9 @@ const keyTitle = (i: number) => {
           </div>
         </div>
       </div>
-      <div class="theory" v-else>
-        <swiper class="mySwiper">
-          <swiper-slide>
+      <div class="theory" v-if="!isPc">
+        <!-- <swiper class="mySwiper"> -->
+          <!-- <swiper-slide> -->
             <div class="theory-content">
               <div>
                 <PublicV2PageTitle :title="'技術原理'" />
@@ -534,9 +533,9 @@ const keyTitle = (i: number) => {
                   ><span>用作看近距離景物如閱讀文件和看手提電話</span>
                 </div>
               </div>
-            </div></swiper-slide
-          >
-          <swiper-slide>
+            </div>
+          <!-- </swiper-slide> -->
+          <!-- <swiper-slide> -->
             <div class="comparison">
               <div>
                 <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
@@ -561,17 +560,13 @@ const keyTitle = (i: number) => {
                   alt="漸進鏡片"
                 />
               </div>
-              <!-- <div ref="observerTarget" :class="titleShow ? '' : 'hideShow'">
-            <div>{{ `<向左移動` }}</div>
-            <div>{{ `向右移動>` }}</div>
-          </div> -->
               <div class="comparison-content">
                 <span>實際對比</span>
                 <span>拉動手桿看看漸進鏡片跟老花眼鏡的分別。</span>
               </div>
-            </div></swiper-slide
-          >
-        </swiper>
+            </div>
+          <!-- </swiper-slide> -->
+        <!-- </swiper> -->
       </div>
       <div class="classify">
         <div class="classify-list">
@@ -3922,8 +3917,9 @@ const keyTitle = (i: number) => {
     & > div:nth-child(3) {
       position: absolute;
       top: -25vw;
-      left: 12vw;
+      left: 6vw;
       margin-top: 1.564vw;
+      width: max-content;
       display: flex;
       flex-direction: column;
       align-items: center;
