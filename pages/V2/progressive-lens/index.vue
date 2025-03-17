@@ -46,26 +46,31 @@ let imgLeft = ref("50%");
 const yuanspan = ref(null);
 const { elementX, elementWidth } = useMouseInElement(yuanspan);
 let isDragging = ref(false);
-const isPresbyopiaOrMirror = ref(false);
+// const isPresbyopiaOrMirror = ref(false);
 watch(elementX, (n, o) => {
   if (isDragging.value) {
     let a = (elementX.value + 5) / elementWidth.value;
+    console.log(imgLeft.value, "a,imgLeft.value");
+
     if (a < 0) {
       imgLeft.value = "1%";
+      console.log("a", `0`);
     } else if (a > 1) {
       imgLeft.value = "100%";
+      console.log("a", `1`);
     } else {
+      console.log("a", `${(a * 100).toFixed(4)}`);
       imgLeft.value = `${(a * 100).toFixed(4)}%`;
     }
 
-    if (
-      55 < Number((a * 100).toFixed(4)) &&
-      Number((a * 100).toFixed(4)) < 100
-    ) {
-      isPresbyopiaOrMirror.value = true;
-    } else {
-      isPresbyopiaOrMirror.value = false;
-    }
+    // if (
+    //   55 < Number((a * 100).toFixed(4)) &&
+    //   Number((a * 100).toFixed(4)) < 100
+    // ) {
+    //   isPresbyopiaOrMirror.value = true;
+    // } else {
+    //   isPresbyopiaOrMirror.value = false;
+    // }
   }
 });
 onMounted(() => {
@@ -226,7 +231,16 @@ const showDemonstration = () => {
   if (theoryContent) theoryContent.style.display = "none";
   if (theoryDemonstration) theoryDemonstration.style.display = "flex";
 };
-
+const backspaceTheory = () =>{
+  const theoryContent = document.querySelector(
+    ".theory-content"
+  ) as HTMLElement | null;
+  const theoryDemonstration = document.querySelector(
+    ".comparison"
+  ) as HTMLElement | null;
+  if (theoryContent) theoryContent.style.display = "flex";
+  if (theoryDemonstration) theoryDemonstration.style.display = "none";
+}
 const cataractquery = () => {
   const cataractQuery = document.querySelector(".cataract-query");
   const cataractQueryTitle = document.querySelector(".cataract-query-title");
@@ -398,7 +412,7 @@ const keyTitle = (i: number) => {
           </svg>
         </div>
       </div>
-      <div class="presbyopia-glasses" v-if="isPresbyopiaOrMirror">
+      <!-- <div class="presbyopia-glasses" v-if="isPresbyopiaOrMirror">
         <PublicV2PageTitle :title="'漸進鏡片'" />
         <div>
           <div>
@@ -434,7 +448,7 @@ const keyTitle = (i: number) => {
             <span>得清楚，對日常生活十分不便。</span>
           </div>
         </div>
-      </div>
+      </div> -->
 
       <div class="theory" v-if="isPc">
         <div class="theory-content">
@@ -469,7 +483,13 @@ const keyTitle = (i: number) => {
         <div class="comparison">
           <div>
             <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
-            <div v-if="judge(imgLeft)" style="color: #0192b0">漸進鏡片</div>
+            <div
+              v-if="judge(imgLeft)"
+              style="color: #0192b0"
+              class="comparison-right-text"
+            >
+              漸進鏡片
+            </div>
           </div>
           <div class="imagetowebp-canvasWebp">
             <div
@@ -500,73 +520,73 @@ const keyTitle = (i: number) => {
           </div>
         </div>
       </div>
+
       <div class="theory" v-if="!isPc">
-        <!-- <swiper class="mySwiper"> -->
-          <!-- <swiper-slide> -->
-            <div class="theory-content">
-              <div>
-                <PublicV2PageTitle :title="'技術原理'" />
-                <div>
-                  <span>漸進鏡是一塊能同時矯正多種視力問題的鏡片。</span
-                  ><span>透過在同一塊鏡片上提供不同的焦點，</span
-                  ><span>只需一副眼鏡便能解決遠視、近視和老花問題。</span
-                  ><span>鏡片的不同位置適用於不同視力需要，</span
-                  ><span>結構主要分為三大部份：</span>
-                </div>
-              </div>
-              <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/2025030311213501.png"
-                  alt=""
-                />
-                <div @click="showDemonstration"></div>
-              </div>
-              <div>
-                <div>
-                  <span>遠用度數</span><span>用作平常觀看遠方景物</span>
-                </div>
-                <div>
-                  <span>中光區</span><span>用於看中近距離的景物如電腦</span>
-                </div>
-                <div>
-                  <span>近用度數</span
-                  ><span>用作看近距離景物如閱讀文件和看手提電話</span>
-                </div>
-              </div>
+        <div class="theory-content">
+          <div>
+            <PublicV2PageTitle :title="'技術原理'" />
+            <div>
+              <span>漸進鏡是一塊能同時矯正多種視力問題的鏡片。</span
+              ><span>透過在同一塊鏡片上提供不同的焦點，</span
+              ><span>只需一副眼鏡便能解決遠視、近視和老花問題。</span
+              ><span>鏡片的不同位置適用於不同視力需要，</span
+              ><span>結構主要分為三大部份：</span>
             </div>
-          <!-- </swiper-slide> -->
-          <!-- <swiper-slide> -->
-            <div class="comparison">
-              <div>
-                <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
-                <div v-if="judge(imgLeft)" style="color: #0192b0">漸進鏡片</div>
-              </div>
-              <div class="imagetowebp-canvasWebp">
-                <div
-                  ref="yuanspan"
-                  class="yuan"
-                  :style="{
-                    'clip-path': `polygon(0 0, ${imgLeft} 0, ${imgLeft} 100%, 0 100%)`,
-                  }"
-                >
-                  <img
-                    src="https://statichk.cmermedical.com/vision/imgs/1912e5aa1992.png"
-                    alt="老花眼鏡"
-                  />
-                </div>
-                <span :style="{ left: imgLeft }" id="imgline"> </span>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/f46189870e93.png"
-                  alt="漸進鏡片"
-                />
-              </div>
-              <div class="comparison-content">
-                <span>實際對比</span>
-                <span>拉動手桿看看漸進鏡片跟老花眼鏡的分別。</span>
-              </div>
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/2025030311213501.png"
+              alt=""
+            />
+            <div @click="showDemonstration"></div>
+          </div>
+          <div>
+            <div><span>遠用度數</span><span>用作平常觀看遠方景物</span></div>
+            <div>
+              <span>中光區</span><span>用於看中近距離的景物如電腦</span>
             </div>
-          <!-- </swiper-slide> -->
-        <!-- </swiper> -->
+            <div>
+              <span>近用度數</span
+              ><span>用作看近距離景物如閱讀文件和看手提電話</span>
+            </div>
+          </div>
+        </div>
+        <div class="comparison">
+          <div>
+            <div v-if="judgeTwo(imgLeft)">老花眼鏡</div>
+            <div
+              v-if="judge(imgLeft)"
+              style="color: #0192b0"
+              class="comparison-right-text"
+            >
+              漸進鏡片
+            </div>
+          </div>
+          <div class="imagetowebp-canvasWebp">
+            <div
+              ref="yuanspan"
+              class="yuan"
+              :style="{
+                'clip-path': `polygon(0 0, ${imgLeft} 0, ${imgLeft} 100%, 0 100%)`,
+              }"
+            >
+              <img
+                src="https://statichk.cmermedical.com/vision/imgs/1912e5aa1992.png"
+                alt="老花眼鏡"
+              />
+            </div>
+            <span :style="{ left: imgLeft }" id="imgline"> </span>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/f46189870e93.png"
+              alt="漸進鏡片"
+            />
+          </div>
+          <div class="comparison-content">
+            <span>實際對比</span>
+            <span>拉動手桿看看漸進鏡片跟老花眼鏡的分別。</span>
+          </div>
+          <div class="backspace-theory" @click="backspaceTheory()"></div>
+        </div>
       </div>
       <div class="classify">
         <div class="classify-list">
@@ -3875,7 +3895,7 @@ const keyTitle = (i: number) => {
     margin-top: 22.82vw;
     margin-bottom: 5.82vw;
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     & > div:nth-child(1) {
       margin-bottom: 5.564vw;
@@ -3943,6 +3963,29 @@ const keyTitle = (i: number) => {
         font-weight: 400;
         line-height: 20px; /* 321.429% */
       }
+    }
+    .comparison-right-text {
+      position: relative;
+    }
+    .comparison-right-text::after {
+      position: absolute;
+      content: "";
+      background: url(https://statichk.cmermedical.com/vision/imgs/2025030615371001.svg)
+        no-repeat;
+      background-size: cover;
+      width: 8vw;
+      height: 9vw;
+      bottom: -3vw;
+    }
+    .backspace-theory {
+      position: absolute;
+      width: 6vw;
+      height: 62.233vw;
+      background: url(https://statichk.cmermedical.com/vision/imgs/2025031710595801.png)
+        no-repeat;
+      background-size: cover;
+      left: -5vw;
+      top: 0;
     }
   }
   .classify {
