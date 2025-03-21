@@ -231,7 +231,7 @@ const showDemonstration = () => {
   if (theoryContent) theoryContent.style.display = "none";
   if (theoryDemonstration) theoryDemonstration.style.display = "flex";
 };
-const backspaceTheory = () =>{
+const backspaceTheory = () => {
   const theoryContent = document.querySelector(
     ".theory-content"
   ) as HTMLElement | null;
@@ -240,7 +240,7 @@ const backspaceTheory = () =>{
   ) as HTMLElement | null;
   if (theoryContent) theoryContent.style.display = "flex";
   if (theoryDemonstration) theoryDemonstration.style.display = "none";
-}
+};
 const cataractquery = () => {
   const cataractQuery = document.querySelector(".cataract-query");
   const cataractQueryTitle = document.querySelector(".cataract-query-title");
@@ -412,24 +412,7 @@ const keyTitle = (i: number) => {
           </svg>
         </div>
       </div>
-      <!-- <div class="presbyopia-glasses" v-if="isPresbyopiaOrMirror">
-        <PublicV2PageTitle :title="'漸進鏡片'" />
-        <div>
-          <div>
-            <img
-              src="https://statichk.cmermedical.com/vision/imgs/2025030614000101.png"
-              alt=""
-            />
-          </div>
-          <div>
-            <span
-              >漸進鏡片是光學技術上的一大突破，配戴者能在同一塊鏡片上，看清遠、中、近距離</span
-            >
-            <span>的事物，讓老花人士看事物時更靈活，更方便。</span>
-          </div>
-        </div>
-      </div>
-      <div class="presbyopia-glasses" v-else>
+      <div class="presbyopia-glasses">
         <PublicV2PageTitle :title="'老花眼鏡'" />
         <div>
           <div>
@@ -448,8 +431,7 @@ const keyTitle = (i: number) => {
             <span>得清楚，對日常生活十分不便。</span>
           </div>
         </div>
-      </div> -->
-
+      </div>
       <div class="theory" v-if="isPc">
         <div class="theory-content">
           <div>
@@ -1960,6 +1942,9 @@ const keyTitle = (i: number) => {
       font-weight: 700;
       line-height: 45px; /* 133.333% */
       letter-spacing: 1.688px;
+      & > span {
+        white-space: nowrap;
+      }
     }
 
     & > div:nth-child(2) {
