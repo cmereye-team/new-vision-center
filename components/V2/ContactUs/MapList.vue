@@ -438,11 +438,11 @@ onMounted(() => {
 }
 @media screen and (max-width: 767px) {
   .mapList {
-    padding: 20px 0 55px;
+    padding: 5.128vw 0 14.1vw;
   }
 
   .map-list-header {
-    padding: 0 24px;
+    padding: 0 6.15vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -451,16 +451,16 @@ onMounted(() => {
     z-index: 1;
     width: 100vw;
     box-sizing: border-box;
-    padding: 24px 10px;
+    padding: 6.15vw 2.564vw;
     overflow: hidden;
-    margin-bottom: 20px;
+    margin-bottom: 5.128vw;
     position: sticky;
-    top: 70px;
+    top: 17.94vw;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: Inter;
-      font-size: 18px;
+      font-size: 4.615vw;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -472,8 +472,8 @@ onMounted(() => {
       position: relative;
       z-index: 8;
       & > div:nth-child(1) {
-        width: 19.68px;
-        height: 19.68px;
+        width: 5.06vw;
+        height: 5.06vw;
         & > svg {
           width: 100%;
           height: 100%;
@@ -483,20 +483,20 @@ onMounted(() => {
     & > div:nth-child(2) {
       display: flex;
       justify-content: center;
-      gap: 0 6.5px;
+      gap: 0 1.65vw;
       position: relative;
       z-index: 8;
       & > div {
         display: flex;
         align-items: center;
-        border-radius: 39.14px;
+        border-radius: 10.035vw;
         background: #59ba68;
         box-shadow: 1px 1px 0 0.723px #ccc;
         & > a {
           display: flex;
           align-items: center;
           box-sizing: border-box;
-          padding: 14px 12px;
+          padding: 3.58vw 3.07vw;
           gap: 0 10px;
           & > div:nth-child(1) {
             display: flex;
@@ -505,15 +505,15 @@ onMounted(() => {
             text-align: right;
             font-family: Inter;
             font-family: "Noto Sans HK";
-            font-size: 14.677px;
+            font-size: 3.76vw;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
             display: flex;
-            gap: 0 5px;
+            gap: 0 1.28vw;
             & > svg {
-              width: 12px;
-              height: 12px;
+              width: 3.07vw;
+              height: 3.07vw;
             }
           }
           & > div:nth-child(2) {
@@ -521,7 +521,7 @@ onMounted(() => {
             text-align: center;
             font-family: Inter;
             font-family: "Noto Sans HK";
-            font-size: 16.171px;
+            font-size: 4.146vw;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -543,7 +543,7 @@ onMounted(() => {
     height: 100%;
     color: #fff;
     font-family: Inter;
-    font-size: 40.8px;
+    font-size: 10.46vw;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -569,10 +569,10 @@ onMounted(() => {
     }
   }
   .map-list-header-tab {
-    margin: 0 24px;
+    margin: 0 6.15vw;
     display: flex;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 2.56vw;
     border: 0.723px solid var(--Brand-Color, #00a6ce);
   }
   .active {

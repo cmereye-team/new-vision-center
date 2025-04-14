@@ -3,6 +3,7 @@ import { reactive, ref } from "vue";
 import type { FormInstance, FormRules } from "element-plus";
 import { number } from "@intlify/core-base";
 
+const router = useRouter();
 import { useFetch } from "@vueuse/core";
 const formSize = ref("default");
 // const cities = [
@@ -266,6 +267,7 @@ const onsubmit = async (formEl: any) => {
       message: "提交成功！請注意工作人員聯係！",
       type: "success",
     });
+    router.push({ path: "/messageFrom" });
     resetForm(formEl);
   }
 };
@@ -287,7 +289,7 @@ const dingTalk = async (formEl: any) => {
     },
   };
   let { data }: any = await useFetch(
-    "/dingtalk/robot/send?access_token=45e9c7b82a844734579e37790bf19b638f2b7cb4844bd039a87775dd7b2f7028",
+    "/dingtalk/robot/send?access_token=9704d0f7557bce7b919829bf6a3a0652e081572acb8f3afd1a49d61a971a9d4c",
     {
       method: "post",
       headers: {

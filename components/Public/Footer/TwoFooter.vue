@@ -340,7 +340,7 @@ const showThreeLevel = () => {
         & > a:nth-child(1) {
           color: #00a6ce;
           font-family: "Noto Sans CJK TC";
-          font-size: clamp(20px, 1.04vw, 24px);
+          font-size: clamp(16px, 1.04vw, 24px);
           font-style: normal;
           font-weight: 700;
           line-height: normal;
