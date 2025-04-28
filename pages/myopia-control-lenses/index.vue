@@ -26,10 +26,10 @@ onMounted(() => {
   });
 });
 const bannerImg = {
-  // pc: "https://static.cmereye.com/imgs/2024/11/0fd7856ae65aea25.png",
-  // mobile: "https://static.cmereye.com/imgs/2024/11/7e2d6e9bac45673f.png",
-  pc: "https://content.cmervision.com//static/upload/image/20250116/1737012577578491.png",
-  mobile: "https://content.cmervision.com//static/upload/image/20250116/1737012585572209.png",
+  pc: "https://static.cmereye.com/imgs/2024/11/0fd7856ae65aea25.png",
+  mobile: "https://static.cmereye.com/imgs/2024/11/7e2d6e9bac45673f.png",
+  // pc: "https://content.cmervision.com//static/upload/image/20250116/1737012577578491.png",
+  // mobile: "https://content.cmervision.com//static/upload/image/20250116/1737012585572209.png",
 };
 const btnElement = ref({
   cls: "",
@@ -43,8 +43,8 @@ const btnElement = ref({
 
 <template>
   <div class="myopia-control-glasses">
-    <PublicBanner :banner="bannerImg">
       <!-- 插槽 -->
+    <PublicBanner :banner="bannerImg">
       <template #title>
         <div class="profile-title"></div>
       </template>
