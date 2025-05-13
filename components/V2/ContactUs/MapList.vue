@@ -23,7 +23,7 @@ const portLandList = ref([
     id: 2,
     img: "https://statichk.cmermedical.com/vision/imgs/8ff74f4adb35.png",
     region: "中環",
-    name: "希瑪視光中心 - ZEISS VISION EXPERT",
+    name: " 希瑪視光中心 - 蔡司ZVE視光專家",
     googleMap: "https://maps.app.goo.gl/moVYZoZpcDKeraBz6",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
@@ -92,7 +92,7 @@ const kowLoonList = ref([
     id: 2,
     img: "https://statichk.cmermedical.com/vision/imgs/a744351de0b1.png",
     region: "旺角雅蘭",
-    name: "希瑪眼科視光中心",
+    name: "希瑪視光中心 - 蔡司近視控制中心",
     googleMap: "https://maps.app.goo.gl/Ya6NFkJQbiB1jFdk7",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
