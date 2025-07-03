@@ -16,23 +16,25 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
-  newBanner: false,
-};
+
+const bannerImg = [
+  {
+    pc: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
+    mobile:
+      "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
+    newBanner: true,
+  },
+  // {
+  //   pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
+  //   mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
+  //   newBanner: true,
+  // },
+];
 </script>
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title">
-          <span>最新優惠</span>
-        </div>
-      </template>
-    </PublicBanner>
+    <PageSwiperBanner :banner="bannerImg" class="banner" />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
@@ -91,6 +93,26 @@ const bannerImg = {
 }
 
 @media screen and (max-width: 767px) {
+  .video-information {
+    :deep(.banner-swiper) {
+      height: 45vw;
+    }
+
+    :deep(.swiper) {
+
+      .swiper-slide {
+        height: 100%;
+
+
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
   .profile-title {
     // background: url("https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png")
     //   no-repeat;
