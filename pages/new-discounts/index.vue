@@ -43,6 +43,25 @@ const bannerImg = {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+
+  :deep(.profile-title) {
+    min-height: auto;
+    margin-top: 5.79vw;
+  }
+
+  .video-information {
+    :deep(.banner-template) {
+      &>div:first-child {
+        height: 340px !important;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
   .profile-title {
     span {
       color: var(--Brand-Color, #fff);
@@ -57,17 +76,20 @@ const bannerImg = {
       right: -180%;
     }
   }
+
   :deep(.publicBanner) {
     position: absolute;
     top: 50%;
     right: 35%;
     transform: translateY(-50%);
   }
+
   .video-information-box {
     max-width: 960px;
     margin: 48px auto 90px auto;
   }
 }
+
 @media screen and (max-width: 767px) {
   .profile-title {
     // background: url("https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png")
@@ -81,6 +103,7 @@ const bannerImg = {
     position: absolute;
     top: 0;
     margin-top: 21.79vw;
+
     span {
       position: absolute;
       bottom: 7.692vw;
@@ -95,8 +118,27 @@ const bannerImg = {
       letter-spacing: 5.6px;
     }
   }
+
   .video-information-box {
     padding: 0 24px;
+  }
+
+  :deep(.profile-title) {
+    min-height: auto;
+    margin-top: 52.79vw;
+  }
+
+  .video-information {
+    :deep(.banner-template) {
+      &>div:first-child {
+        height: 45vw !important;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
 </style>
