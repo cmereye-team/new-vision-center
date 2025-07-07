@@ -35,6 +35,7 @@ const chooseType = (type: number) => {
       classSmall.value = false;
       // 将listVideoAll.value 赋值为 listVideo.value、listVideoShare.value 和 listVideoClass.value 的合并结果
       listVideoAll.value = [
+        ...ListVideoOne.value,
         ...listVideoOk.value,
         // ...listVideoShare.value,
         ...listVideoClass.value,
@@ -152,6 +153,23 @@ const listVideoOk = ref([
   //   ],
   // },
 ]);
+
+const ListVideoOne = ref([
+  {
+    name: "Carson黃梓賢1",
+    type: "list",
+    isShow: false,
+    videoList: [
+      {
+        id: 7,
+        type: "orthokeratology",
+        text: ["【近視控制隱形眼鏡真實用家分享】挑戰無限！", "解鎖活力新生活✨"],
+        img: "https://statichk.cmermedical.com/vision/imgs/maxresdefault.jpg",
+        videoLink: "https://www.youtube.com/watch?v=IWk_K3PENCs",
+      },
+    ],
+  },
+])
 
 const listVideoShare = ref([
   {
@@ -450,11 +468,7 @@ const reelsListClass = ref([
       </div>
     </div>
     <div v-else>
-      <select
-        v-model="chooseNumber"
-        @change="chooseType(chooseNumber)"
-        class="select-type"
-      >
+      <select v-model="chooseNumber" @change="chooseType(chooseNumber)" class="select-type">
         <option :value="1">所有影片</option>
         <option :value="2">角膜矯形鏡（OK鏡）</option>
         <!-- <option :value="3">真實客戶分享</option> -->
@@ -488,12 +502,14 @@ const reelsListClass = ref([
 @media screen and (min-width: 768px) {
   .information {
     margin-bottom: 125px;
-    & > div {
+
+    &>div {
       display: flex;
       justify-content: space-between;
       flex-direction: column;
     }
   }
+
   .information-title {
     color: var(--Brand-Color, #00a6ce);
     font-family: "Noto Sans HK";
@@ -502,6 +518,7 @@ const reelsListClass = ref([
     font-weight: 600;
     line-height: normal;
   }
+
   .information-list {
     max-width: 880px;
     margin: 55px auto 35px;
@@ -509,7 +526,8 @@ const reelsListClass = ref([
     align-items: center;
     border-radius: 15px;
     border: 0.723px solid var(--Brand-Color, #00a6ce);
-    & > div {
+
+    &>div {
       text-align: center;
       padding: 12px 0;
       width: calc(100% / 4);
@@ -524,7 +542,8 @@ const reelsListClass = ref([
       cursor: pointer;
       transition: all 0.3s;
     }
-    & > div:nth-child(2) {
+
+    &>div:nth-child(2) {
       border-right: 0.723px solid var(--Brand-Color, #00a6ce);
       border-left: 0.723px solid var(--Brand-Color, #00a6ce);
       border-radius: 10px;
@@ -546,13 +565,16 @@ const reelsListClass = ref([
     }
   }
 }
+
 @media screen and (max-width: 767px) {
   .information {
     margin-bottom: 10.25px;
-    & > div {
+
+    &>div {
       padding: 5.128vw 0 0;
     }
   }
+
   .information-title {
     color: #00a6ce;
     font-family: "Noto Sans HK";
@@ -561,11 +583,11 @@ const reelsListClass = ref([
     font-weight: 600;
     line-height: normal;
   }
+
   .select-type {
     appearance: none;
     width: 100%;
-    background: url("https://statichk.cmermedical.com/vision/imgs/c786ab28df4196ee.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/c786ab28df4196ee.png") no-repeat;
     height: 10.769vw;
     background-position: right;
     border-radius: 4.615vw;
@@ -580,9 +602,11 @@ const reelsListClass = ref([
     letter-spacing: 0.41vw;
     text-transform: uppercase;
   }
+
   .select-type option {
     margin-top: 2.56vw;
   }
+
   .select-type:focus-visible {
     outline: none;
   }
