@@ -52,12 +52,12 @@ const chooseType = (type: number) => {
       share.value = false;
       classSmall.value = false;
       break;
-    // case 3:
-    //   allVideo.value = false;
-    //   orthokeratology.value = false;
-    //   share.value = true;
-    //   classSmall.value = false;
-    //   break;
+    case 3:
+      allVideo.value = false;
+      orthokeratology.value = false;
+      share.value = true;
+      classSmall.value = false;
+      break;
     case 4:
       allVideo.value = false;
       orthokeratology.value = false;
@@ -456,12 +456,12 @@ const reelsListClass = ref([
         <div @click="chooseType(1)" :class="[allVideo ? 'active' : '']">
           所有影片
         </div>
+        <div @click="chooseType(3)" :class="[share ? 'active' : '']">
+          近視控制隱形眼鏡
+        </div>
         <div @click="chooseType(2)" :class="[orthokeratology ? 'active' : '']">
           角膜矯形鏡（OK鏡）
         </div>
-        <!-- <div @click="chooseType(3)" :class="[share ? 'active' : '']">
-          真實客戶分享
-        </div> -->
         <div @click="chooseType(4)" :class="[classSmall ? 'active' : '']">
           小教室
         </div>
@@ -470,8 +470,8 @@ const reelsListClass = ref([
     <div v-else>
       <select v-model="chooseNumber" @change="chooseType(chooseNumber)" class="select-type">
         <option :value="1">所有影片</option>
+        <option :value="3">近視控制隱形眼鏡</option>
         <option :value="2">角膜矯形鏡（OK鏡）</option>
-        <!-- <option :value="3">真實客戶分享</option> -->
         <option :value="4">小教室</option>
       </select>
     </div>
@@ -481,14 +481,13 @@ const reelsListClass = ref([
         <VideoInformationVideoList :list="listVideoAll" :key="1" />
         <VideoInformationReels :list="reelsListAll" :key="2" />
       </div>
+      <div v-if="share">
+        <VideoInformationVideoList :list="ListVideoOne" />
+      </div>
       <div v-if="orthokeratology">
         <VideoInformationVideoList :list="listVideoOk" :key="3" />
         <VideoInformationReels :list="reelsListOk" :key="4" />
       </div>
-      <!-- <div v-if="share">
-        <VideoInformationVideoList :list="listVideoShare" />
-        <VideoInformationReels :list="reelsListShare" />
-      </div> -->
       <div v-if="classSmall">
         <VideoInformationVideoList :list="listVideoClass" :key="5" />
         <!-- <VideoInformationReels :list="reelsListClass" /> -->
@@ -543,7 +542,8 @@ const reelsListClass = ref([
       transition: all 0.3s;
     }
 
-    &>div:nth-child(2) {
+    &>div:nth-child(2),
+    &>div:nth-child(3) {
       border-right: 0.723px solid var(--Brand-Color, #00a6ce);
       border-left: 0.723px solid var(--Brand-Color, #00a6ce);
       border-radius: 10px;
