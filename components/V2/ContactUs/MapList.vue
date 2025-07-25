@@ -145,7 +145,7 @@ const newTerritoriesList = ref([
     img: "https://statichk.cmermedical.com/vision/imgs/6400fbbefbec.png",
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心",
-    googleMap: "",
+    googleMap: "https://maps.app.goo.gl/rRZSzjytXdmjDA3X6",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
     address: ["新界將軍澳新都城", "商場第1期地下G63鋪"],
@@ -158,7 +158,7 @@ const newTerritoriesList = ref([
     img: "https://statichk.cmermedical.com/vision/imgs/317fa4077072.png",
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心",
-    googleMap: "",
+    googleMap: "https://maps.app.goo.gl/JEmFumQXQd64cqYy6",
     whatsApps:
       "https://statichk.cmermedical.com/vision/1545646465.png",
     address: ["新界將軍澳新都城商場", "第1期地下G54鋪"],
@@ -170,7 +170,7 @@ const newTerritoriesList = ref([
     img: "https://statichk.cmermedical.com/vision/imgs/2025022809330601.png",
     region: "將軍澳",
     name: "希瑪醫療旗下視光師驗眼中心",
-    googleMap: "",
+    googleMap: "https://maps.app.goo.gl/6ptPtFoo1aByoMZWA",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
  address: ["新界將軍澳中心", "地下67號鋪"],

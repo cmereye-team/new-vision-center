@@ -22,7 +22,7 @@ const bannerImg = {
 };
 
 const btnElement = ref({
-  cls:'',
+  cls: "",
   title: "預約諮詢視光師！",
   svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
   isExternalLink: true,
@@ -269,15 +269,99 @@ const btnElement = ref({
         </div>
       </div>
     </div>
+
+    <div class="download-pdf">
+      <div>
+        <img
+          src="https://statichk.cmermedical.com/vision/imgs/1b85d876b4ad43b3.png"
+          alt=""
+        />
+      </div>
+      <div>
+        <img
+          src="https://statichk.cmermedical.com/vision/imgs/efc46121ceb56cce.png"
+          alt=""
+        />
+      </div>
+      <a
+        href="https://statichk.cmermedical.com/vision/pdf/%E5%85%92%E7%AB%A5%E8%BF%91%E8%A6%96%E6%8E%A7%E5%88%B6%E9%9A%B1%E5%BD%A2%E7%9C%BC%E9%8F%A1Leaflet.pdf"
+        download="兒童近視控制隱形眼鏡Leaflet.pdf"
+      >
+        <span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="29"
+            viewBox="0 0 30 29"
+            fill="none"
+          >
+            <circle
+              cx="15.0475"
+              cy="14.0719"
+              r="12.75"
+              stroke="white"
+              stroke-width="2.63793"
+            />
+            <path
+              d="M15.9317 7.91602C15.9317 7.42736 15.5355 7.03123 15.0469 7.03123C14.5582 7.03123 14.1621 7.42736 14.1621 7.91602L15.9317 7.91602ZM14.4212 21.7313C14.7668 22.0768 15.327 22.0768 15.6725 21.7313L21.3033 16.1005C21.6488 15.755 21.6488 15.1948 21.3033 14.8493C20.9577 14.5037 20.3975 14.5037 20.052 14.8493L15.0469 19.8544L10.0418 14.8493C9.69622 14.5037 9.136 14.5037 8.79047 14.8493C8.44494 15.1948 8.44494 15.755 8.79047 16.1005L14.4212 21.7313ZM14.1621 7.91602L14.1621 21.1057L15.9317 21.1057L15.9317 7.91602L14.1621 7.91602Z"
+              fill="white"
+            />
+          </svg>
+        </span>
+        <span>下載</span>
+      </a>
+    </div>
+
     <PublicForm />
   </div>
 </template>
 
 <style lang="scss" scoped>
+  .download-pdf {
+    margin: 0px auto 50px;
+    width: fit-content;
+    text-align: center;
+    & > a:nth-child(3) {
+      width: fit-content;
+      margin: 0 auto;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      padding: 8px 24px;
+      justify-content: center;
+      align-items: flex-start;
+      background: #00517e;
+      border: 2px solid #02ed85;
+      border-radius: 28px;
+      & > span:nth-child(1) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        & > svg {
+          overflow: hidden;
+          border-radius: 50%;
+          & > path {
+            animation: downloadArrow 1.4s linear infinite;
+          }
+        }
+      }
+      & > span:nth-child(2) {
+        color: #fff;
+        font-family: "Noto Sans HK";
+        font-size: 15.828px;
+        font-style: normal;
+        font-weight: 465;
+        line-height: normal;
+        margin-left: 12px;
+      }
+    }
+  }
 @media screen and (min-width: 768px) {
   .svg-hidden {
     display: none;
   }
+
+
   .child-myopia-box {
     margin-bottom: 70px;
   }
