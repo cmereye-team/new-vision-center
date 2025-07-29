@@ -54,6 +54,14 @@ onMounted(() => {
 });
 const bannerImg = [
   {
+    pc: "https://statichk.cmermedical.com/vision/imgs/11111112222222.avif",
+    mobile:
+      "http://statichk.cmermedical.com/vision/imgs/444455666555.avif",
+    newBanner: true,
+  },
+
+
+  {
     pc: "https://statichk.cmermedical.com/vision/imgs/2025022417592801.webp",
     mobile:
       "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
