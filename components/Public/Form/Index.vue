@@ -357,12 +357,12 @@ const dataAllUnauthorized = async (str: string) => {
   const url = `https://3473.push.ft07.com/send/sctp3473tsymors1ee9efxbabuu7fh1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
   // const url = `https://3562.push.ft07.com/send/sctp3562t7wmq3rl6ftbwgy7hgzjxu1.send?tags=Vision表单中断提交记录&title=提交情况:${str}&desp=${strs}`;
 
-  let { data }: any = await useFetch(url, {
-    method: "get",
-  });
-  if (data) {
-    console.log("");
-  }
+  // let { data }: any = await useFetch(url, {
+  //   method: "get",
+  // });
+  // if (data) {
+  //   console.log("");
+  // }
 };
 onMounted(() => {
   changeCities("0");
