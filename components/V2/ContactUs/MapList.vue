@@ -23,7 +23,7 @@ const portLandList = ref([
     id: 2,
     img: "https://statichk.cmermedical.com/vision/imgs/8ff74f4adb35.png",
     region: "中環",
-    name: " 希瑪視光中心 - 蔡司ZVE視光專家",
+    name: "希瑪視光中心 - ZEISS VISION EXPERT",
     googleMap: "https://maps.app.goo.gl/moVYZoZpcDKeraBz6",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
@@ -92,7 +92,7 @@ const kowLoonList = ref([
     id: 2,
     img: "https://statichk.cmermedical.com/vision/imgs/a744351de0b1.png",
     region: "旺角雅蘭",
-    name: "希瑪視光中心 - 蔡司近視控制中心",
+    name: "希瑪眼科視光中心",
     googleMap: "https://maps.app.goo.gl/Ya6NFkJQbiB1jFdk7",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
@@ -160,8 +160,8 @@ const newTerritoriesList = ref([
     name: "希瑪醫療旗下視光師驗眼中心",
     googleMap: "",
     whatsApps:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["將軍澳新都城中心一期", "地下G67號舖"],
+      "https://statichk.cmermedical.com/vision/1545646465.png",
+    address: ["新界將軍澳新都城商場", "第1期地下G54鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
@@ -173,7 +173,7 @@ const newTerritoriesList = ref([
     googleMap: "",
     whatsApps:
       "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["新界將軍澳中心", "地下54號鋪"],
+ address: ["新界將軍澳中心", "地下67號鋪"],
     businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
     call: "+852 3892 5089 ",
   },
@@ -438,11 +438,11 @@ onMounted(() => {
 }
 @media screen and (max-width: 767px) {
   .mapList {
-    padding: 5.128vw 0 14.1vw;
+    padding: 20px 0 55px;
   }
 
   .map-list-header {
-    padding: 0 6.15vw;
+    padding: 0 24px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -451,16 +451,16 @@ onMounted(() => {
     z-index: 1;
     width: 100vw;
     box-sizing: border-box;
-    padding: 6.15vw 2.564vw;
+    padding: 24px 10px;
     overflow: hidden;
-    margin-bottom: 5.128vw;
+    margin-bottom: 20px;
     position: sticky;
-    top: 17.94vw;
+    top: 70px;
     & > div:nth-child(1) {
       color: var(--Brand-Color, #00a6ce);
       text-align: center;
       font-family: Inter;
-      font-size: 4.615vw;
+      font-size: 18px;
       font-style: normal;
       font-weight: 600;
       line-height: normal;
@@ -472,8 +472,8 @@ onMounted(() => {
       position: relative;
       z-index: 8;
       & > div:nth-child(1) {
-        width: 5.06vw;
-        height: 5.06vw;
+        width: 19.68px;
+        height: 19.68px;
         & > svg {
           width: 100%;
           height: 100%;
@@ -483,20 +483,20 @@ onMounted(() => {
     & > div:nth-child(2) {
       display: flex;
       justify-content: center;
-      gap: 0 1.65vw;
+      gap: 0 6.5px;
       position: relative;
       z-index: 8;
       & > div {
         display: flex;
         align-items: center;
-        border-radius: 10.035vw;
+        border-radius: 39.14px;
         background: #59ba68;
         box-shadow: 1px 1px 0 0.723px #ccc;
         & > a {
           display: flex;
           align-items: center;
           box-sizing: border-box;
-          padding: 3.58vw 3.07vw;
+          padding: 14px 12px;
           gap: 0 10px;
           & > div:nth-child(1) {
             display: flex;
@@ -505,15 +505,15 @@ onMounted(() => {
             text-align: right;
             font-family: Inter;
             font-family: "Noto Sans HK";
-            font-size: 3.76vw;
+            font-size: 14.677px;
             font-style: normal;
             font-weight: 600;
             line-height: normal;
             display: flex;
-            gap: 0 1.28vw;
+            gap: 0 5px;
             & > svg {
-              width: 3.07vw;
-              height: 3.07vw;
+              width: 12px;
+              height: 12px;
             }
           }
           & > div:nth-child(2) {
@@ -521,7 +521,7 @@ onMounted(() => {
             text-align: center;
             font-family: Inter;
             font-family: "Noto Sans HK";
-            font-size: 4.146vw;
+            font-size: 16.171px;
             font-style: normal;
             font-weight: 700;
             line-height: normal;
@@ -543,7 +543,7 @@ onMounted(() => {
     height: 100%;
     color: #fff;
     font-family: Inter;
-    font-size: 10.46vw;
+    font-size: 40.8px;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -569,10 +569,10 @@ onMounted(() => {
     }
   }
   .map-list-header-tab {
-    margin: 0 6.15vw;
+    margin: 0 24px;
     display: flex;
     overflow: hidden;
-    border-radius: 2.56vw;
+    border-radius: 10px;
     border: 0.723px solid var(--Brand-Color, #00a6ce);
   }
   .active {
