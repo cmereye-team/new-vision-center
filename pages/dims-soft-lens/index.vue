@@ -25,12 +25,22 @@ onMounted(() => {
     isPc.value = widthState;
   });
 });
-const bannerImg = {
+const bannerImg = [
   // pc: "https://statichk.cmermedical.com/vision/imgs/6446d8c5f0f8f72a.png",
   // mobile: "https://statichk.cmermedical.com/vision/imgs/5e82a28589934353.png",
-  pc: "https://content.cmervision.com//static/upload/image/20250120/1737338994793606.png",
-  mobile: "https://content.cmervision.com//static/upload/image/20250120/1737338997670285.png",
-};
+    {
+    pc: "https://statichk.cmermedical.com/vision/imgs/55555555555544.avif",
+    mobile:
+      "https://statichk.cmermedical.com/vision/imgs/5555555555666.avif",
+          newBanner: true,
+  },
+  {
+    pc: "https://content.cmervision.com//static/upload/image/20250120/1737338994793606.png",
+    mobile:
+      "https://content.cmervision.com//static/upload/image/20250120/1737338997670285.png",
+     newBanner: true,
+ },
+];
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
   brand: "hoya",
@@ -82,12 +92,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title"></div>
-      </template>
-    </PublicBanner>
+    <PageSwiperBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="
@@ -1336,7 +1341,10 @@ const btnElement = ref({
               alt=""
             />
           </div>
-          <a href="https://www.cmervision.com/pdf/051123_Hoya-dims鏡片.pdf" download="HOYA近視控制鏡片.pdf">
+          <a
+            href="https://www.cmervision.com/pdf/051123_Hoya-dims鏡片.pdf"
+            download="HOYA近視控制鏡片.pdf"
+          >
             <span
               ><svg
                 xmlns="http://www.w3.org/2000/svg"
