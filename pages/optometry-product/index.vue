@@ -1815,6 +1815,7 @@ const onInform = (el: any) => {
         </div>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

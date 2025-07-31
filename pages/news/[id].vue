@@ -380,6 +380,7 @@ const loading = ref(true)
         </p>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

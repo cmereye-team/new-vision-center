@@ -16,32 +16,73 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
-  newBanner: false,
-};
+
+const bannerImg = [
+    {
+    pc: "https://content.cmervision.com//static/upload/other/20250731/1753941529390895.webp",
+    mobile:
+      "https://content.cmervision.com//static/upload/other/20250731/1753941529390895.webp",
+    newBanner: true,
+  },
+ 
+   {
+    pc: "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
+    mobile:
+      "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
+    newBanner: true,
+  },
+   {
+    pc: "https://content.cmervision.com//static/upload/other/20250729/1753775933336147.avif",
+    mobile:"https://content.cmervision.com//static/upload/other/20250729/1753775933336147.avif",
+    newBanner: true,
+  },
+
+  {
+    pc: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
+    mobile: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
+    newBanner: true,
+  },
+ 
+  // {
+  //   pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
+  //   mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
+  //   newBanner: true,
+  // },
+];
 </script>
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title">
-          <span>最新優惠</span>
-        </div>
-      </template>
-    </PublicBanner>
+    <PageSwiperBanner :banner="bannerImg" class="banner" />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
     </div>
+    <PublicForm />
   </div>
 </template>
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+
+  :deep(.profile-title) {
+    min-height: auto;
+    margin-top: 5.79vw;
+  }
+
+  .video-information {
+    :deep(.banner-template) {
+      &>div:first-child {
+        height: 340px !important;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+  }
+
   .profile-title {
     span {
       color: var(--Brand-Color, #fff);
@@ -56,18 +97,41 @@ const bannerImg = {
       right: -180%;
     }
   }
+
   :deep(.publicBanner) {
     position: absolute;
     top: 50%;
     right: 35%;
     transform: translateY(-50%);
   }
+
   .video-information-box {
     max-width: 960px;
     margin: 48px auto 90px auto;
   }
 }
+
 @media screen and (max-width: 767px) {
+  .video-information {
+    :deep(.banner-swiper) {
+      height: 45vw;
+    }
+
+    :deep(.swiper) {
+
+      .swiper-slide {
+        height: 100%;
+
+
+      }
+
+      img {
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+
   .profile-title {
     // background: url("https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png")
     //   no-repeat;
@@ -80,6 +144,7 @@ const bannerImg = {
     position: absolute;
     top: 0;
     margin-top: 21.79vw;
+
     span {
       position: absolute;
       bottom: 7.692vw;
@@ -94,8 +159,27 @@ const bannerImg = {
       letter-spacing: 5.6px;
     }
   }
+
   .video-information-box {
     padding: 0 24px;
+  }
+
+  :deep(.profile-title) {
+    min-height: auto;
+    margin-top: 52.79vw;
+  }
+
+  .video-information {
+    :deep(.banner-template) {
+      &>div:first-child {
+        height: 45vw !important;
+
+        img {
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
   }
 }
 </style>

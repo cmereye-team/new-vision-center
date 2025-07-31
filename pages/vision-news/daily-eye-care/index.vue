@@ -666,6 +666,7 @@ const clickQuestion = (id: number) => {
         />
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

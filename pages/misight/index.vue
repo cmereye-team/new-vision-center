@@ -25,10 +25,20 @@ const btnElement = ref({
   link: "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想預約試戴MiSight®1day近視控制隱形眼鏡",
 });
 
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/a76ecb0090da4bd5.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/4a7dbdd10adfa764.png",
-};
+
+const bannerImg = [
+  {
+    pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
+    mobile:
+      "https://content.cmervision.com//static/upload/other/20250624/1750736347433205.webp",
+    newBanner: true,
+  },
+  {
+    pc: "https://statichk.cmermedical.com/vision/imgs/a76ecb0090da4bd5.png",
+    mobile: "https://statichk.cmermedical.com/vision/imgs/4a7dbdd10adfa764.png",
+    newBanner: true,
+  },
+];
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 
@@ -83,14 +93,13 @@ const miSightQuestionList = [
 
 <template>
   <div class="misight-page">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
+    <!-- <PublicBanner :banner="bannerImg">
       <template #title>
         <div class="profile-title">
-          <!-- <span>XXXXX</span> -->
         </div>
       </template>
-    </PublicBanner>
+    </PublicBanner> -->
+    <PageSwiperBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"
@@ -1669,6 +1678,7 @@ const miSightQuestionList = [
         />
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

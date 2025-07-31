@@ -309,6 +309,7 @@ const judgeTwo = (num: string) => {
         </div>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

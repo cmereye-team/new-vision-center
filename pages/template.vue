@@ -26,6 +26,7 @@ const bannerImg = {
     <div class="xxxx-box">
       ssssss
     </div>
+    <PublicForm />
   </div>
 </template>
 

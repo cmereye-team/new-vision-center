@@ -36,6 +36,7 @@ const bannerImg = {
     <div class="fee-box">
       <Fee />
     </div>
+    <PublicForm />
   </div>
 </template>
 

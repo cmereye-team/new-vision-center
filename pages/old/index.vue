@@ -354,11 +354,473 @@ const goTo = (link: string) => {
 
 <template>
   <div class="miyosmart">
-    <PublicV2BannerHomeBanner ref="homeBanner" key="home_banner" />
-    <V2Home />
-    <V2NewDiscounts />
-    <V2Review />
-    <PublicFormV2Index />
+    <PublicBannerHomeBanner />
+    <div class="services">
+      <div class="services-t">
+        <div class="title">
+          {{ services.title }}
+        </div>
+        <div class="btn">
+          <nuxtLink
+            class="btn-in"
+            v-for="(item, index) in services.btns"
+            :style="{ background: item.color }"
+            :key="index"
+            :to="item.link"
+          >
+            <span>{{ item.name }}</span>
+          </nuxtLink>
+        </div>
+      </div>
+      <div class="services-b">
+        <nuxtLink
+          class="list-in"
+          v-for="(item, index) in services.lists"
+          :key="index"
+          :to="item.link"
+        >
+          <div class="image">
+            <img :src="item.img" :alt="`${item.title}`" :title="`${item.title}`" />
+          </div>
+          <div class="context">
+            <div class="context-t">
+              <h3
+                v-for="(titleItem, titleIndex) in item.title"
+                :key="titleIndex"
+              >
+                {{ titleItem }}
+              </h3>
+            </div>
+            <div class="context-b">
+              <div class="context-b-l">
+                <div class="context-text" v-if="item.text.length">
+                  <p
+                    v-for="(textItem, textIndex) in item.text"
+                    :key="textIndex"
+                  >
+                    {{ textItem }}
+                  </p>
+                </div>
+                <div class="context-context" v-if="item.context.length">
+                  <p
+                    v-for="(contextItem, contextIndex) in item.context"
+                    :key="contextIndex"
+                  >
+                    {{ contextItem }}
+                  </p>
+                </div>
+                <div class="context-price" v-if="item.price !== ''">
+                  <p>
+                    $<span>{{ item.price }}</span>
+                  </p>
+                </div>
+              </div>
+              <div class="context-b-r">
+                <span>
+                  <svg
+                    width="8"
+                    height="14"
+                    viewBox="0 0 8 14"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1.17578 1.40332L6.81032 7.03786"
+                      stroke="white"
+                      stroke-width="1.51055"
+                      stroke-linecap="round"
+                    />
+                    <path
+                      d="M6.81032 7.0376L1.17578 12.6721"
+                      stroke="white"
+                      stroke-width="1.51055"
+                      stroke-linecap="round"
+                    />
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nuxtLink>
+      </div>
+    </div>
+    <div class="newDiscounts">
+      <div class="newDiscounts-in">
+        <div class="newDiscounts-in-t">
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/96bb721f05c4cfd5.png"
+              alt=""
+            />
+          </div>
+          <div>
+            <span v-for="(item, index) in newDiscounts.title" :key="index">
+              {{ item }}
+            </span>
+          </div>
+          <div>
+            <img
+              src="https://statichk.cmermedical.com/vision/imgs/fd41cbf881791a4b.png"
+              alt=""
+            />
+          </div>
+        </div>
+        <div class="newDiscounts-in-b" v-if="isPc">
+          <swiper
+            :slidesPerView="4"
+            :spaceBetween="30"
+            :loop="true"
+            :autoplay="{
+              delay: 2500,
+              disableOnInteraction: false,
+            }"
+            :modules="[Pagination, Autoplay, Navigation]"
+          >
+            <swiper-slide
+              v-for="item in discounts"
+              :key="item.id"
+              class="list-in"
+              :id="item.id"
+              @click="goTo(item.routerLink)"
+            >
+              <div class="image">
+                <img :src="item.img" :alt="item.title" :title="item.title" />
+              </div>
+              <h3>{{ item.title }}</h3>
+              <div class="context">
+                <div class="context-l">
+                  <div>
+                    <span>{{ item.tag }}</span>
+                  </div>
+                  <div>
+                    <span>{{ item.price }}</span>
+                  </div>
+                </div>
+                <a
+                  :href="item.link"
+                  target="_blank"
+                  class="context-r WhatsApp_btn"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="17"
+                    viewBox="0 0 18 17"
+                    fill="none"
+                  >
+                    <path
+                      d="M16.8106 8.09854C16.8136 9.22292 16.5509 10.3321 16.0439 11.3357C15.4429 12.5384 14.5188 13.5499 13.3753 14.2571C12.2318 14.9643 10.914 15.3391 9.56955 15.3396C8.44516 15.3426 7.33598 15.0799 6.33235 14.5729L1.47656 16.1915L3.09516 11.3357C2.58822 10.3321 2.32552 9.22292 2.32846 8.09854C2.32898 6.75404 2.70381 5.43624 3.41097 4.29275C4.11813 3.14925 5.1297 2.22522 6.33235 1.62415C7.33598 1.11721 8.44516 0.854515 9.56955 0.857446H9.99549C11.7711 0.955407 13.4483 1.70488 14.7057 2.96235C15.9632 4.21983 16.7127 5.89695 16.8106 7.67259V8.09854Z"
+                      stroke="white"
+                      stroke-width="1.36912"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    />
+                  </svg>
+                  <span>立即查詢</span>
+                </a>
+              </div>
+            </swiper-slide>
+          </swiper>
+        </div>
+        <div v-else>
+          <CenterProfileHomePageSwiper ref="discounts" key="discounts" />
+        </div>
+      </div>
+    </div>
+    <div class="witness">
+      <div class="witness-t">OK 鏡用家<span> 見證</span></div>
+      <section class="section1">
+        <swiper
+          class="witnessSwiper"
+          :modules="[Scrollbar]"
+          :scrollbar="{
+            hide: false,
+          }"
+          :slidesPerView="isPc ? 4 : 2.3"
+          :spaceBetween="isPc ? 35 : 12"
+          @swiper="setSwiper"
+        >
+          <swiper-slide
+            v-for="(item, index) in witness.section1"
+            :key="index"
+            class="witnessSwiper-slide"
+          >
+            <div
+              @click.stop="openVideo(item.link)"
+              class="content"
+              :class="{ hot: item.isHot }"
+            >
+              <div class="image">
+                <img :src="item.img" :alt="item.name" />
+                <div class="divShow">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="33"
+                    height="37"
+                    viewBox="0 0 33 37"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d_2534_37381)">
+                      <path
+                        d="M6.77437 2.18226C6.06857 1.764 5.17578 2.27272 5.17578 3.09314V27.6116C5.17578 28.432 6.06857 28.9408 6.77437 28.5226L27.4619 16.2633C28.1539 15.8532 28.1539 14.8516 27.4619 14.4415L6.77437 2.18226Z"
+                        stroke="white"
+                        stroke-width="3.75"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_2534_37381"
+                        x="0.300781"
+                        y="0.154785"
+                        width="32.5547"
+                        height="36.3953"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset dy="3" />
+                        <feGaussianBlur stdDeviation="1.5" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_2534_37381"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_2534_37381"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+              <div class="title">
+                <h3>{{ item.name }}</h3>
+                <p>{{ item.identity }}</p>
+              </div>
+              <div class="context">
+                <div class="text">
+                  <p>{{ item.text }}</p>
+                </div>
+                <div class="svgIcon">
+                  <svg
+                    @click.stop="handleIcon('isNew', index)"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="25"
+                    height="27"
+                    viewBox="0 0 25 27"
+                    fill="none"
+                  >
+                    <g filter="url(&#35;filter0_d_696_25419)">
+                      <path
+                        d="M12.5261 2.6167C13.28 2.61661 14.0051 2.90678 14.5508 3.42701C15.0966 3.94724 15.4211 4.65759 15.4571 5.4107C16.8178 5.9869 17.9787 6.95114 18.7949 8.18305C19.611 9.41497 20.0462 10.86 20.0461 12.3377V16.5637C20.6639 16.6073 21.2405 16.8897 21.6538 17.351C22.0671 17.8124 22.2846 18.4164 22.2603 19.0353C22.236 19.6542 21.9718 20.2394 21.5236 20.6669C21.0754 21.0944 20.4784 21.3306 19.8591 21.3257H5.19308C4.57373 21.3306 3.97676 21.0944 3.52858 20.6669C3.0804 20.2394 2.81618 19.6542 2.79188 19.0353C2.76757 18.4164 2.98509 17.8124 3.39837 17.351C3.81165 16.8897 4.38825 16.6073 5.00608 16.5637V12.3377C5.00601 10.86 5.44119 9.41497 6.25731 8.18305C7.07343 6.95114 8.23433 5.9869 9.59508 5.4107C9.6313 4.65768 9.95589 3.94746 10.5016 3.42729C11.0473 2.90711 11.7722 2.61686 12.5261 2.6167ZM10.7881 6.9217C9.64126 7.29002 8.641 8.01296 7.93147 8.98632C7.22194 9.95968 6.83978 11.1332 6.84008 12.3377V16.7377C6.83982 17.1753 6.66593 17.595 6.35658 17.9045C6.04723 18.214 5.6277 18.3882 5.19008 18.3887C5.04421 18.3887 4.90432 18.4466 4.80117 18.5498C4.69803 18.6529 4.64008 18.7928 4.64008 18.9387C4.64008 19.0846 4.69803 19.2245 4.80117 19.3276C4.90432 19.4308 5.04421 19.4887 5.19008 19.4887H19.8591C20.005 19.4887 20.1448 19.4308 20.248 19.3276C20.3511 19.2245 20.4091 19.0846 20.4091 18.9387C20.4091 18.7928 20.3511 18.6529 20.248 18.5498C20.1448 18.4466 20.005 18.3887 19.8591 18.3887C19.6423 18.3888 19.4276 18.3462 19.2273 18.2633C19.027 18.1803 18.845 18.0587 18.6917 17.9054C18.5385 17.752 18.4169 17.57 18.3341 17.3696C18.2513 17.1692 18.2088 16.9545 18.2091 16.7377V12.3377C18.2092 11.1332 17.827 9.95979 17.1175 8.98646C16.408 8.01313 15.4078 7.29016 14.2611 6.9217L13.6241 6.7217V5.5487C13.6241 5.25696 13.5082 4.97717 13.3019 4.77088C13.0956 4.56459 12.8158 4.4487 12.5241 4.4487C12.2323 4.4487 11.9526 4.56459 11.7463 4.77088C11.54 4.97717 11.4241 5.25696 11.4241 5.5487V6.7167L10.7881 6.9217ZM9.04108 21.3217H10.8751C10.8674 21.5432 10.9043 21.764 10.9838 21.9709C11.0632 22.1779 11.1835 22.3667 11.3375 22.5261C11.4915 22.6855 11.676 22.8123 11.88 22.8989C12.0841 22.9855 12.3034 23.0302 12.5251 23.0302C12.7467 23.0302 12.9661 22.9855 13.1701 22.8989C13.3742 22.8123 13.5587 22.6855 13.7127 22.5261C13.8666 22.3667 13.9869 22.1779 14.0664 21.9709C14.1458 21.764 14.1828 21.5432 14.1751 21.3217H16.0091C16.0091 22.246 15.6419 23.1324 14.9883 23.786C14.3348 24.4395 13.4484 24.8067 12.5241 24.8067C11.5998 24.8067 10.7134 24.4395 10.0598 23.786C9.40625 23.1324 9.03908 22.246 9.03908 21.3217H9.04108Z"
+                        :fill="item.isNew ? '#20D0C4' : '#BBBBBB'"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_696_25419"
+                        x="0.790039"
+                        y="0.616699"
+                        width="23.4717"
+                        height="26.1899"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="1" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_696_25419"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_696_25419"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <svg
+                    @click.stop="handleIcon('isLike', index)"
+                    v-if="!item.isLike"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="24"
+                    height="22"
+                    viewBox="0 0 24 22"
+                    fill="none"
+                  >
+                    <g filter="url(#filter0_d_696_25417)">
+                      <path
+                        d="M21.655 6.87899C21.4751 5.54712 20.8225 4.32428 19.8162 3.43339C18.81 2.5425 17.5171 2.0429 16.1732 2.02568C14.7761 2.06736 13.4193 2.50406 12.2602 3.28517C11.0996 2.49059 9.73594 2.04465 8.33013 2C6.98297 2.01088 5.68593 2.51224 4.68168 3.41025C3.67744 4.30827 3.03479 5.54142 2.87398 6.87899C2.08649 10.9448 4.5003 16.3227 11.661 19.1547C12.056 19.3165 12.4987 19.3165 12.8936 19.1547C20.025 16.2701 22.4156 10.8922 21.655 6.87899ZM12.2639 17.1628C6.36141 14.749 4.31566 10.474 4.9185 7.27396C4.9952 6.41687 5.38575 5.61831 6.01517 5.03154C6.6446 4.44477 7.46855 4.11113 8.32891 4.09466C9.53752 4.16369 10.6933 4.61358 11.6305 5.37983C11.8121 5.51615 12.0331 5.58985 12.2602 5.58985C12.4873 5.58985 12.7083 5.51615 12.89 5.37983C13.8207 4.6179 14.9677 4.16826 16.1683 4.09466C17.0214 4.11786 17.8371 4.44961 18.4642 5.02838C19.0913 5.60715 19.4873 6.3937 19.5787 7.24216C20.1864 10.4459 18.1664 14.6964 12.2639 17.1628Z"
+                        fill="#BBBBBB"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_696_25417"
+                        x="0.731445"
+                        y="0"
+                        width="23.0586"
+                        height="21.2759"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="1" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.2 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_696_25417"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_696_25417"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                  <svg
+                    v-else
+                    @click.stop="handleIcon('isLike', index)"
+                    width="28"
+                    height="27"
+                    viewBox="0 0 28 27"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <g filter="url(#filter0_d_49_7140)">
+                      <path
+                        d="M6.69891 16.3521L11.6457 20.688L14.6946 21.1628L18.625 18.853L22.1487 14.1052V8.8992L18.625 6.39182L14.2211 7.20537L10.0879 5.98633L6.7002 7.20537L5.41699 10.7291L5.9585 14.1167L6.69891 16.3521Z"
+                        fill="#F02756"
+                        stroke="#F02756"
+                      />
+                      <path
+                        d="M23.8583 9.73718C23.6695 8.33952 22.9847 7.05627 21.9287 6.12138C20.8727 5.18648 19.5159 4.66221 18.1057 4.64413C16.6396 4.68788 15.2158 5.14614 13.9995 5.96584C12.7815 5.13201 11.3505 4.66404 9.87523 4.61719C8.46153 4.62861 7.10043 5.15473 6.04657 6.0971C4.99272 7.03947 4.31833 8.33354 4.14957 9.73718C3.32319 14.0038 5.85623 19.6474 13.3707 22.6193C13.7851 22.789 14.2497 22.789 14.6642 22.6193C22.1478 19.5922 24.6565 13.9487 23.8583 9.73718ZM14.0033 20.5289C7.80927 17.9959 5.66247 13.5098 6.29509 10.1517C6.37558 9.25223 6.78541 8.41423 7.44593 7.79847C8.10644 7.18272 8.9711 6.8326 9.87395 6.81532C11.1423 6.88776 12.3551 7.35986 13.3386 8.16397C13.5292 8.30702 13.7611 8.38436 13.9995 8.38436C14.2378 8.38436 14.4697 8.30702 14.6603 8.16397C15.637 7.3644 16.8407 6.89255 18.1006 6.81532C18.9958 6.83966 19.8518 7.18779 20.5099 7.79515C21.168 8.40252 21.5835 9.22791 21.6794 10.1183C22.3172 13.4803 20.1973 17.9407 14.0033 20.5289Z"
+                        fill="#F02756"
+                      />
+                    </g>
+                    <defs>
+                      <filter
+                        id="filter0_d_49_7140"
+                        x="0"
+                        y="0.617188"
+                        width="28"
+                        height="26.1289"
+                        filterUnits="userSpaceOnUse"
+                        color-interpolation-filters="sRGB"
+                      >
+                        <feFlood
+                          flood-opacity="0"
+                          result="BackgroundImageFix"
+                        />
+                        <feColorMatrix
+                          in="SourceAlpha"
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
+                          result="hardAlpha"
+                        />
+                        <feOffset />
+                        <feGaussianBlur stdDeviation="2" />
+                        <feComposite in2="hardAlpha" operator="out" />
+                        <feColorMatrix
+                          type="matrix"
+                          values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in2="BackgroundImageFix"
+                          result="effect1_dropShadow_49_7140"
+                        />
+                        <feBlend
+                          mode="normal"
+                          in="SourceGraphic"
+                          in2="effect1_dropShadow_49_7140"
+                          result="shape"
+                        />
+                      </filter>
+                    </defs>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </section>
+      <section class="section2">
+        <div
+          class="list-in"
+          v-for="(item, index) in witness.section2"
+          :key="index"
+        >
+          <div class="list-in-t">
+            <div class="image">
+              <img :src="item.img" :alt="item.name" :title="item.name" />
+            </div>
+            <div class="context">
+              <h3>{{ item.name }}</h3>
+              <h4>{{ item.services }}</h4>
+              <p>{{ item.slogan }}</p>
+            </div>
+          </div>
+          <div class="list-in-b">
+            <p>{{ item.text }}</p>
+          </div>
+        </div>
+      </section>
+    </div>
   </div>
 </template>
 

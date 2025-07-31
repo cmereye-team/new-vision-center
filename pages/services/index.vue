@@ -341,6 +341,7 @@ const listDataDetail = [
       </div>
       <serverAndProduct :allData="listData" :detailList="listDataDetail" />
     </div>
+    <PublicForm />
   </div>
 </template>
 

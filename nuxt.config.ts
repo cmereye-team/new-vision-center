@@ -24,19 +24,19 @@ export default defineNuxtConfig({
       })
     ]
   },
-  routeRules: {
+  // routeRules: {
     
-    "/": { 
-      redirect: "/v2/",
-    },
-    "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult": { 
-      redirect: "/v2/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
-    },
-    "/about-us/contact-us": { 
-      redirect: "/v2/about-us/contact-us",
-    },
-    "/about-us/news-information": { redirect: "/v2/about-us/news-information" },
-  },
+  //   "/": { 
+  //     redirect: "/v2/",
+  //   },
+  //   "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult": { 
+  //     redirect: "/v2/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
+  //   },
+  //   "/about-us/contact-us": { 
+  //     redirect: "/v2/about-us/contact-us",
+  //   },
+  //   "/about-us/news-information": { redirect: "/v2/about-us/news-information" },
+  // },
   buildModules: [
     '@nuxtjs/google-fonts',
   ],

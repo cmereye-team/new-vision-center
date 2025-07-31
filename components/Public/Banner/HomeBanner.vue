@@ -517,7 +517,7 @@ const handleshowdeBox = (_idx: any) => {
 }
 @media screen and (max-width: 767px) {
   .home_banner {
-    margin-top: 75px;
+    margin-top: 65px;
     & > div:nth-child(1) {
       max-width: 100%;
       width: 100vw;

@@ -297,6 +297,7 @@ const bannerImg = {
         </div>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

@@ -1015,6 +1015,7 @@ onMounted(() => {
         <div>*若情況依然沒有改善，或不斷復發，便需尋求眼科醫生協助及治療。</div>
       </div>
     </div>
+    <PublicForm />
   </div>
 </template>
 

@@ -58,36 +58,30 @@ onMounted(() => {
 
 <template>
   <div class="HomePageSwiper">
-    <swiper
-      v-if="winWSize < 768"
-      :slidesPerView="2"
-      :grid="{
-        rows: 2,
-        fill: 'row',
-      }"
-      :spaceBetween="18"
-      :pagination="{
-        clickable: true,
-      }"
-      :modules="modules"
-      class="mySwiper"
-    >
+    <swiper v-if="winWSize < 768" :slidesPerView="2" :grid="{
+      rows: 2,
+      fill: 'row',
+    }" :spaceBetween="18" :pagination="{
+      clickable: true,
+    }" :modules="modules" class="mySwiper">
       <swiper-slide v-for="item in discountsChild" :key="item.id">
-        <nuxt-link :to="item.routerLink" :id="item.id">
-          <div><img :src="item.img" :alt="item.title" /></div>
-          <div>
-            <h3>{{ item.title }}</h3>
+        <div class="swiper-slide-item">
+          <nuxt-link :to="item.routerLink" :id="item.id">
+            <div><img :src="item.img" :alt="item.title" /></div>
             <div>
+              <h3>{{ item.title }}</h3>
               <div>
-                <span>{{ item.tag }}</span>
-                <span>{{ item.price }}</span>
+                <div>
+                  <span>{{ item.tag }}</span>
+                  <span>{{ item.price }}</span>
+                </div>
               </div>
-              <a :href="item.link" target="_blank" class="context-r">
-                <span>了解產品</span>
-              </a>
             </div>
-          </div>
-        </nuxt-link>
+          </nuxt-link>
+          <a :href="item.link" target="_blank" class="context-r">
+            <span>了解產品</span>
+          </a>
+        </div>
       </swiper-slide>
     </swiper>
   </div>
@@ -103,30 +97,49 @@ onMounted(() => {
 
 .swiper-slide {
   text-align: center;
-  font-size: 18px;
+  font-size: 4.6vw;
   background: #fff;
   height: calc((100% - 30px) / 2) !important;
   display: flex;
   justify-content: center;
   align-items: center;
-  & > a {
-    width: 164px;
-    border-radius: 2.82vw;
-    box-sizing: border-box;
-    padding: 3.076vw;
-    box-shadow: 0 0 1.28vw 0px rgba(0, 0, 0, 0.1);
-    width: 100%;
-    background: #fff;
-    min-height: 260px;
-    & > div:nth-child(2) {
-      & > div {
+}
+
+.swiper-slide-item {
+  width: 42.05vw;
+  border-radius: 21.82vw;
+  box-sizing: border-box;
+  padding: 3.076vw;
+  box-shadow: 0 0 1.28vw 0px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  background: #fff;
+  min-height: 66.667vw;
+
+  &>a:nth-child(1) {
+    &>div:nth-child(1) {
+      width: 32.28vw;
+      height: 32.28vw;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &>div:nth-child(2) {
+      &>div {
         display: flex;
         justify-content: space-between;
         margin-top: 1.538vw;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        & > div {
+
+        &>div {
           color: var(--Sales, #db4444);
           font-family: "Noto Sans HK";
           font-size: 2.56vw;
@@ -137,96 +150,62 @@ onMounted(() => {
           display: flex;
           flex-direction: column;
           align-items: flex-start;
+
           span {
             font-size: 2.98vw;
           }
         }
-        & > a {
-          display: flex;
-          position: relative;
-          align-items: center;
-          padding: 2.05vw;
-          min-width: 12.169vw;
-          svg {
-            position: relative;
-            z-index: 2;
-            margin-right: 2px;
-          }
-          span {
-            position: relative;
-            z-index: 2;
-            color: #fff;
-            font-family: "Noto Sans HK";
-            font-size: 2.05vw;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 0px; /* 0% */
-            letter-spacing: 1.088px;
-          }
-          svg {
-            width: 2.307vw;
-            height: 2.307vw;
-          }
-          &::before {
-            content: "";
-            position: absolute;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(75deg, #00a6ce 30%, #3346ed);
-            border-radius: 30px;
-            box-sizing: border-box;
-            transition: all 0.3s;
-          }
-          &::after {
-            content: "";
-            position: absolute;
-            z-index: 0;
-            left: 50%;
-            top: 50%;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(75deg, #00a6ce 30%, #3346ed);
-            border-radius: 30px;
-            opacity: 0;
-            transform: translate(-50%, -50%);
-            filter: blur(10px);
-            transition: all 0.3s;
-          }
-          &:hover {
-            &::before {
-              border: 2px solid #fff;
-            }
-            &::after {
-              transform: translate(-50%, -50%) scale(1.2);
-              opacity: 1;
-            }
-          }
-        }
       }
     }
+
     h3 {
-      font-size: 2.875vw;
+      color: #60605F;
+      font-family: "Noto Sans HK";
+      font-size: 3.07vw;
       font-style: normal;
-      font-weight: 500;
-      line-height: 3.575vw;
-      letter-spacing: 0.7px;
+      font-weight: 400;
+      line-height: normal;
+      letter-spacing: 0.6px;
       -webkit-line-clamp: 2;
       margin-top: 1.28vw;
       min-height: 7.05128vw;
-      color: #60605f;
       text-align: left;
     }
   }
-  img {
-    width: 100%;
+
+  &>a:nth-child(2) {
+    display: flex;
+    position: relative;
+    align-items: center;
+    padding: 2.05vw;
+    width: fit-content;
+    border-radius: 100px;
+    background: #00A6CE;
+    box-sizing: border-box;
+    padding: 0.5vw 4.1vw;
+    margin: 3.07vw auto 0;
+    box-shadow: 0px 1.05vw 0px 0px rgba(0, 166, 206, 0.34);
+
+    span {
+      position: relative;
+      z-index: 2;
+      color: #FFF;
+      font-family: "Noto Sans HK";
+      font-size: 3.58vw;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 6.35vw;
+      /* 177.143% */
+      letter-spacing: 0.179vw;
+    }
+
+    &>a:nth-child(2):hover {
+      box-shadow: none;
+    }
   }
 }
 
-@media screen and (min-width: 768px) {
-}
-@media screen and (max-width: 767px) {
-}
+@media screen and (min-width: 768px) {}
+
+@media screen and (max-width: 767px) {}
 </style>

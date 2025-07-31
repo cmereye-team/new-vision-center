@@ -4,6 +4,8 @@ const isPc = ref(true);
 const route = useRoute();
 const widthNum = ref();
 const isNotV2 = ref(true);
+
+const hideOldForm = ref(['/','/about-us/contact-us','/about-us/news-information','/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult'])
 onMounted(() => {
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
@@ -15,8 +17,20 @@ onMounted(() => {
   widthNum.value = width;
   isPc.value = widthState;
   // 当前 路由route
-  // route.path 包含 /v2 时，显示v2页面
-  if (route.path.includes("/v2")) {
+
+
+  if (hideOldForm.value.includes(route.path)) {
+    isNotV2.value = false;
+  }
+});
+
+// 监听路由变化
+watch(route, (newRoute, oldRoute) => {
+  console.log(newRoute, oldRoute, "newRoute, oldRoute");
+  if (newRoute.path == "/") {
+    isNotV2.value = true;
+  }
+  if (newRoute.path == "/v2") {
     isNotV2.value = false;
   }
 });
@@ -34,7 +48,7 @@ onMounted(() => {
       <!-- <div style="width: 100%; height: 2px; background: red;margin-bottom: 50px;"></div> -->
       <!-- <PublicFormV2Index /> -->
       <!-- <div style="width: 100%; height: 2px; background: red;margin-top: 50px;"></div> -->
-      <PublicForm v-if="isNotV2" />
+      <!-- <PublicForm /> -->
     </div>
     <PublicV2Footer />
     <noscript
