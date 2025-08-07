@@ -94,6 +94,11 @@ const menuList = ref([
         title: "眼睛檢查",
         path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
       },
+           {
+        id: "6",
+        title: "蔡司近視防控中心",
+        path: "/zeiss-myopia-management-workplace",
+      },
     ],
   },
   {

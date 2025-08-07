@@ -109,6 +109,11 @@ const menuList = ref([
         title: "眼睛檢查",
         path: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
       },
+      {
+        id: "6",
+        title: "蔡司近視防控中心",
+        path: "/zeiss-myopia-management-workplace",
+      },
     ],
   },
   {
@@ -661,7 +666,7 @@ const hiddenBox = ref(false);
       position: absolute;
       box-shadow: #4d4d4d 5px 5px 10px;
       width: max-content;
-      background: #00B9E6;
+      background: #00b9e6;
       right: -86%;
       top: -68%;
       border-radius: 5px;
@@ -690,7 +695,7 @@ const hiddenBox = ref(false);
       }
       & > div:hover {
         & > a {
-          background: #00A6CE;
+          background: #00a6ce;
           position: relative;
           color: #fff;
           & > span::before {
