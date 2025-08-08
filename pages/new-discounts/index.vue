@@ -24,6 +24,12 @@ const bannerImg = [
       "https://content.cmervision.com//static/upload/other/20250731/1753941529390895.webp",
     newBanner: true,
   },
+  {
+     pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
+    mobile:
+      "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
+    newBanner: true,
+  },
  
    {
     pc: "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
