@@ -56,17 +56,69 @@ const touchEndX = ref(0);
 const discountsList = ref([
   {
     id: 1,
-    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/setion-01.avif",
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/01.avif",
     content: "",
   },
+
   {
     id: 2,
-    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/setion-02.avif",
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/02.avif",
     content: "",
   },
   {
     id: 3,
-    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/setion-03.avif",
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/03.avif",
+    content: "",
+  },
+  {
+    id: 4,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/04.avif",
+    content: "",
+  },
+  {
+    id: 5,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/05.avif",
+    content: "",
+  },
+  {
+    id: 6,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/06.avif",
+    content: "",
+  },
+  {
+    id: 7,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/07.avif",
+    content: "",
+  },
+  {
+    id: 8,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/08.avif",
+    content: "",
+  },
+  {
+    id: 9,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/09.avif",
+    content: "",
+  },
+  {
+    id: 10,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/10.avif",
+    content: "",
+  },
+
+  {
+    id: 12,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/12.avif",
+    content: "",
+  },
+  {
+    id: 13,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/13.avif",
+    content: "",
+  },
+  {
+    id: 14,
+    img: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/14.avif",
     content: "",
   },
 ]);
@@ -189,7 +241,9 @@ const handleIntersection = (entries: any, observer: any) => {
         alt=""
       />
       <p>
-        香港是全球近視發病率最高的地區之一，根據研究顯示，超過40%的<br class="d-none d-lg-block"/>8歲學童已患上近視，學童近視問題已成為社會關注的焦點。為了應對這一挑戰，希瑪視光與蔡司攜手合作打造「蔡司近視防控中心」，並引入最尖端技術的蔡司MYO
+        香港是全球近視發病率最高的地區之一，根據研究顯示，超過40%的<br
+          class="d-none d-lg-block"
+        />8歲學童已患上近視，學童近視問題已成為社會關注的焦點。為了應對這一挑戰，希瑪視光與蔡司攜手合作打造「蔡司近視防控中心」，並引入最尖端技術的蔡司MYO
         200近視管理生物測量儀，致力於為學童提供一站式近視風險評估和管理服務。
       </p>
     </div>
@@ -336,7 +390,10 @@ const handleIntersection = (entries: any, observer: any) => {
         alt=""
       />
       <div class="section4-content-btn">
-        <a target="_blank" href="https://api.whatsapp.com/send?phone=85269180511&text=立即查詢及預約蔡司視覺體驗">
+        <a
+          target="_blank"
+          href="https://api.whatsapp.com/send?phone=85269180511&text=立即查詢及預約蔡司視覺體驗"
+        >
           <span>立即體驗流程</span
           ><svg
             xmlns="http://www.w3.org/2000/svg"
@@ -393,22 +450,27 @@ const handleIntersection = (entries: any, observer: any) => {
         class="mySwiperItem"
         :modules="modules"
         @swiper="swiperBox"
-        :effect="'coverflow'"
         :grab-cursor="true"
         :centered-slides="true"
         :slides-per-view="3"
         :space-between="30"
-        :loop="false"
         :initialSlide="1"
-        :coverflow-effect="{
-          rotate: 30,
-          stretch: 0,
-          depth: 200,
-          modifier: 1,
-          slideShadows: true,
-        }"
         :touchMoveStopPropagation="false"
         :touchRatio="1"
+        :loop="true"
+        :autoplay="{ delay: 0 }"
+        :speed="3000"
+        :breakpoints="{
+          '0': {
+            slidesPerView: 2,
+            spaceBetween: 15,
+          },
+
+          '768': {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        }"
       >
         <!-- :autoplay="{ delay: 3000, disableOnInteraction: false }" -->
         <swiper-slide
@@ -427,10 +489,10 @@ const handleIntersection = (entries: any, observer: any) => {
         </swiper-slide>
       </swiper>
 
-      <div class="swiper-button-next-prev">
+      <!-- <div class="swiper-button-next-prev">
         <div class="button-prev" @click="handlesSliPrev"></div>
         <div class="button-next" @click="handlesSliNext"></div>
-      </div>
+      </div> -->
     </div>
   </main>
   <!-- 地址 -->
@@ -1067,6 +1129,9 @@ const handleIntersection = (entries: any, observer: any) => {
     position: relative;
     .mySwiperItem {
       max-width: 75vw;
+    }
+    :deep(.mySwiperItem > .swiper-wrapper) {
+      transition-timing-function: linear;
     }
   }
   .swiper-pagination-btn {
@@ -1727,10 +1792,9 @@ const handleIntersection = (entries: any, observer: any) => {
     perspective: 1000px; /* 设置透视距离 */
     .mySwiperItem {
       max-width: 100vw;
-
-      .swiper-slide-active {
-        scale: 1.3;
-      }
+    }
+    :deep(.mySwiperItem > .swiper-wrapper) {
+      transition-timing-function: linear;
     }
   }
 
