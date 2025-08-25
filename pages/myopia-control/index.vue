@@ -482,7 +482,7 @@ const btnElement = ref({
                   </svg></span><span>日間</span>
               </div>
               <div><span>·方便戴除</span><span>適應期較短</span></div>
-              <div><span>高達</span><span>60-86%</span></div>
+              <div><span>高達</span><span>60%</span></div>
             </div>
             <div>
               <div><span>角膜矯形術</span><span>（OK鏡）</span></div>
@@ -1422,7 +1422,7 @@ const btnElement = ref({
                   </svg></span><span>晚間</span>
               </div>
               <div><span>日間不需戴眼鏡,</span><span>維持清晰視覺</span></div>
-              <div><span>高達</span><span>59-88%</span></div>
+              <div><span>高達</span><span>63%</span></div>
             </div>
             <div>
               <div><span>近視控制</span><span>隱形眼鏡</span></div>
