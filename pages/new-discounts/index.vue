@@ -18,36 +18,31 @@ useHead(() => ({
 }));
 
 const bannerImg = [
-    {
-    pc: "https://content.cmervision.com//static/upload/other/20250731/1753941529390895.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250731/1753941529390895.webp",
-    newBanner: true,
-  },
+  
   {
      pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
     mobile:
       "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
     newBanner: true,
-  },
+   },
  
-   {
-    pc: "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
-    newBanner: true,
-  },
-   {
-    pc: "https://content.cmervision.com//static/upload/other/20250729/1753775933336147.avif",
-    mobile:"https://content.cmervision.com//static/upload/other/20250729/1753775933336147.avif",
-    newBanner: true,
-  },
+  //  {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
+  //   newBanner: true,
+  // },
+  //  {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250729/1753775933336147.avif",
+  //   mobile:"https://content.cmervision.com//static/upload/other/20250729/1753775933336147.avif",
+  //   newBanner: true,
+  // },
 
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
-    mobile: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
+  //   mobile: "https://content.cmervision.com//static/upload/other/20250703/1751531508536033.webp",
+  //   newBanner: true,
+  // },
  
   // {
   //   pc: "https://statichk.cmermedical.com/vision/imgs/5ae163616b5be08e.png",
