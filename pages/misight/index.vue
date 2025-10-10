@@ -27,12 +27,12 @@ const btnElement = ref({
 
 
 const bannerImg = [
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250624/1750736347433205.webp",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250624/1750736347433205.webp",
+  //   newBanner: true,
+  // },
   {
     pc: "https://statichk.cmermedical.com/vision/imgs/a76ecb0090da4bd5.png",
     mobile: "https://statichk.cmermedical.com/vision/imgs/4a7dbdd10adfa764.png",

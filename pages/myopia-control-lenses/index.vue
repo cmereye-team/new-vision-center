@@ -31,12 +31,12 @@ const bannerImg = [
     mobile: "https://static.cmereye.com/imgs/2024/11/7e2d6e9bac45673f.png",
     newBanner: true,
   },
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20250626/1750918460911067.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250626/1750918480205284.webp",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250626/1750918460911067.webp",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250626/1750918480205284.webp",
+  //   newBanner: true,
+  // },
 ];
 const btnElement = ref({
   cls: "",

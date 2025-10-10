@@ -17,12 +17,12 @@ useHead({
   ],
 });
 const bannerImg = [
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250624/1750736347433205.webp",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250624/1750736347433205.webp",
+  //   newBanner: true,
+  // },
   {
   pc: "https://statichk.cmermedical.com/vision/imgs/Acuvue-abiliti-1-day/pc-banner.avif",
   mobile:

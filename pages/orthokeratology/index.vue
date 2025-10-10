@@ -41,12 +41,12 @@ const wearOrExcise = (str: string) => {
 
 
 const bannerImg = [
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20250624/1750736315458326.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250624/1750736320936413.webp",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250624/1750736315458326.webp",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250624/1750736320936413.webp",
+  //   newBanner: true,
+  // },
   {
     pc: "https://statichk.cmermedical.com/vision/imgs/2024123008462701.png",
     mobile: "https://statichk.cmermedical.com/vision/imgs/2024123008462702.png",
