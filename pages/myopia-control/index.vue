@@ -92,7 +92,8 @@ const btnElement = ref({
 
 <template>
   <div class="myopia-control">
-    <PublicBanner :banner="bannerImg" />
+     <!--   -->
+    <PublicBanner :banner="bannerImg" :img-style="{objectFit: 'contain'}"/>
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'近視防控策略'" />
     <div class="myopia-control-box">
       <div class="myopia-control-significance">

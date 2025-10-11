@@ -12,8 +12,10 @@
   "dependencies": {
     "@element-plus/icons-vue": "^2.3.1",
     "@nuxtjs/google-fonts": "^3.2.0",
+    "dayjs": "^1.11.18",
     "nuxt": "^3.11.1",
     "swiper": "^11.1.0",
+    "unhead": "1.11.20",
     "vue": "^3.4.21",
     "vue-i18n": "9",
     "vue-router": "^4.3.0"
@@ -26,6 +28,7 @@
     "@vueuse/nuxt": "^10.9.0",
     "@zadigetvoltaire/nuxt-gtm": "^0.0.13",
     "element-plus": "^2.6.3",
-    "sass": "^1.72.0"
+    "sass": "^1.72.0",
+    "vite-plugin-commonjs": "^0.10.4"
   }
 }

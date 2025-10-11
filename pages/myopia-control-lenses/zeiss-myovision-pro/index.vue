@@ -53,12 +53,12 @@ onMounted(() => {
   handKind(0);
 });
 const bannerImg = [
-  {
-    pc: "https://statichk.cmermedical.com/vision/imgs/11111112222222.avif",
-    mobile:
-      "http://statichk.cmermedical.com/vision/imgs/444455666555.avif",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://statichk.cmermedical.com/vision/imgs/11111112222222.avif",
+  //   mobile:
+  //     "http://statichk.cmermedical.com/vision/imgs/444455666555.avif",
+  //   newBanner: true,
+  // },
 
 
   {
@@ -67,12 +67,12 @@ const bannerImg = [
       "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
     newBanner: true,
   },
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20250620/1750405342166039.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250620/1750405346786278.webp",
-    newBanner: true,
-  },
+  // {
+  //   pc: "https://content.cmervision.com//static/upload/other/20250620/1750405342166039.webp",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250620/1750405346786278.webp",
+  //   newBanner: true,
+  // },
 ];
 
 const miSightQuestionList = [

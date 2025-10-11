@@ -45,7 +45,7 @@ const props = defineProps({
       object-fit: cover;
       img {
         width: 100%;
-        height: 100%;
+        height: 500px;
         object-fit: cover;
         margin: 0 auto;
         display: flex;
@@ -213,7 +213,7 @@ const props = defineProps({
       object-fit: cover;
       img {
         width: 100%;
-        height: 100%;
+        height: 500px;
         object-fit: cover;
         margin: 0 auto;
         display: flex;

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import banner from "./components/banner.vue";
 useHead(() => ({
   title: "兒童常見眼睛問題｜常見眼睛問題｜希瑪視光中心",
   meta: [
@@ -40,7 +41,7 @@ onMounted(() => {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg" />
+    <banner :banner="bannerImg" />
     <PublicNavbar
       :name="'常見眼睛問題'"
       :isInsidePage="true"

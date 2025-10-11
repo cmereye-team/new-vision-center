@@ -65,6 +65,7 @@ const handleshowdeBox = (_idx: any) => {
   <div class="home_banner">
     <div class="banner_size" v-if="winWSize > 768">
       <swiper
+      :slidesPerView="3"
         :spaceBetween="30"
         :centeredSlides="true"
         :autoplay="{
@@ -97,7 +98,7 @@ const handleshowdeBox = (_idx: any) => {
       </div> -->
     </div>
     <div class="banner_size" v-if="winWSize <= 768">
-      <swiper :pagination="true" :modules="[Autoplay, Pagination]">
+      <swiper :pagination="true" :modules="[Autoplay, Pagination]" >
         <swiper-slide v-for="banner in bannerImg" :key="banner.id">
           <nuxt-link :to="banner.link">
             <img :src="banner.img_mobile" />

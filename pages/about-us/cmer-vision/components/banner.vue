@@ -16,7 +16,6 @@ const props = defineProps({
     type: Object,
     default: () => {},
   },
- 
 });
 </script>
 
@@ -24,7 +23,7 @@ const props = defineProps({
   <div class="banner-template">
     <div :style="{ height: props.banner.newBanner ? 'auto' : 'auto' }">
       <img v-if="isPc" :src="banner.pc" />
-      <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''"  />
+      <img v-else :src="props.banner.mobile" :alt="props.banner.alt || ''" />
     </div>
     <div class="publicBanner">
       <slot name="title"> </slot>
@@ -85,14 +84,14 @@ const props = defineProps({
     & > div:nth-child(1) {
       margin: 7.083vw auto 0;
       width: 100%;
-      height: 400px;
+      height: 280px;
       object-fit: cover;
       display: flex;
       justify-content: center;
       object-fit: cover;
       img {
         width: 100%;
-        height: 500px;
+        height: 280px;
         object-fit: cover;
         margin: 0 auto;
         display: flex;
@@ -260,7 +259,7 @@ const props = defineProps({
       object-fit: cover;
       img {
         width: 100%;
-        height: 500px;
+        height: 280px;
         object-fit: cover;
         margin: 0 auto;
         display: flex;

@@ -7,8 +7,10 @@ const isNotV2 = ref(true);
 
 const hideOldForm = ref(['/','/about-us/contact-us','/about-us/news-information','/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult'])
 onMounted(() => {
+  console.log(getWindowSize(), "getWindowSize()");
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
+    console.log(widthState, width, "widthState, width");
     isPc.value = widthState;
     widthNum.value = width;
   });

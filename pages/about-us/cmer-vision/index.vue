@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import Banner from "./components/banner.vue";
 useHead(() => ({
   title: "公司簡介｜關於我們｜希瑪視光中心",
   meta: [
@@ -22,14 +23,14 @@ const bannerImg = {
 
 <template>
   <div class="profile">
-    <PublicBanner :banner="bannerImg">
+    <Banner :banner="bannerImg" >
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title">
           <span>中心簡介</span>
         </div>
       </template>
-    </PublicBanner>
+    </Banner>
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'中心簡介'" />
     <CenterProfileBriefIntroduction />
     <CenterProfileContent />
