@@ -43,12 +43,12 @@ const showAgeStage = (type: any) => {
 
 <template>
   <div class="video-information">
-    <PublicV2Banner :banner="bannerImg">
+    <PublicContainBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title"></div>
       </template>
-    </PublicV2Banner>
+    </PublicContainBanner>
     <PublicNavbar
       :name="'成人視力服務'"
       :isInsidePage="true"

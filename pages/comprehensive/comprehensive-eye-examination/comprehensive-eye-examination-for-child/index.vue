@@ -26,12 +26,12 @@ const bannerImg = {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
+    <PublicContainBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title"></div>
       </template>
-    </PublicBanner>
+    </PublicContainBanner>
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"

@@ -312,7 +312,7 @@ const listDataDetail = [
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg" />
+    <PublicContainBanner :banner="bannerImg" />
     <PublicNavbar
       :name="'專業服務'"
       :isInsidePage="true"

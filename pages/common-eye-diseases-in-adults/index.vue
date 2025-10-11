@@ -85,7 +85,7 @@ const judgeTwo = (num: string) => {
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg" />
+    <PublicContainBanner :banner="bannerImg" />
     <PublicNavbar
       :name="'常見眼睛問題'"
       :isInsidePage="true"

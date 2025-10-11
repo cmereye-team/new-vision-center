@@ -40,7 +40,7 @@ const wearOrExcise = (str: string) => {
 };
 
 
-const bannerImg = [
+const bannerImg = 
   // {
   //   pc: "https://content.cmervision.com//static/upload/other/20250624/1750736315458326.webp",
   //   mobile:
@@ -51,8 +51,8 @@ const bannerImg = [
     pc: "https://statichk.cmermedical.com/vision/imgs/2024123008462701.png",
     mobile: "https://statichk.cmermedical.com/vision/imgs/2024123008462702.png",
     newBanner: true,
-  },
-];
+  }
+
 const okQuestionList = [
   {
     q: "日常如何護理OK鏡片？",
@@ -151,7 +151,8 @@ const handlesSliPrev = () => {
 <template>
   <div class="orthokeratoplasty">
     <!-- <PublicBanner :banner="bannerImg"> </PublicBanner> -->
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <!-- <PageSwiperBanner :banner="bannerImg" class="banner" /> -->
+         <PublicContainBanner :banner="bannerImg"> </PublicContainBanner>
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="isPc ? '角膜矯形術評估' : '角膜矯形術 OK鏡'"

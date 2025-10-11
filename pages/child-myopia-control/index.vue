@@ -33,7 +33,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg"> </PublicBanner>
+    <PublicContainBanner :banner="bannerImg"> </PublicContainBanner>
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"

@@ -226,7 +226,7 @@ const handleIntersection = (entries: any, observer: any) => {
 
 <template>
   <div class="zve-information">
-    <PublicBanner :banner="bannerImg"> </PublicBanner>
+    <PublicContainBanner :banner="bannerImg"> </PublicContainBanner>
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="'蔡司近視防控中心'"

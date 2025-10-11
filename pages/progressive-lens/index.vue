@@ -365,12 +365,12 @@ const keyTitle = (i: number) => {
 
 <template>
   <div class="video-information">
-    <PublicV2Banner :banner="bannerImg">
+    <PublicContainBanner :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="profile-title"><span>老花漸進鏡片</span></div>
       </template>
-    </PublicV2Banner>
+    </PublicContainBanner>
     <PublicNavbar
       :name="'成人視力服務'"
       :isInsidePage="true"
