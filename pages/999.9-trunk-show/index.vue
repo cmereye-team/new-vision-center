@@ -23,7 +23,7 @@ const bannerImg = []
 </script>
 
 <template>
-    <div style="overflow: hidden;">
+    <div >
         <!-- start banner -->
         <section class="banner">
             <div class="banner__wrapper">
@@ -117,7 +117,7 @@ const bannerImg = []
                             ZEISS VISION EXPERT</p>
 
 
-                        <p class="trunk-show__content-p1">搶先體驗 999.9 TRUNK SHOW 帶來的傳統工藝與充滿現代感設計風格的完美融合！</p>
+                        <p class="trunk-show__content-p1">搶先體驗 999.9 TRUNK SHOW 帶來的傳統工藝與充滿現代感設計風格的完美融合！</p><br>
 
                         <p class="trunk-show__content-p1">活動期間，凡購買 999.9 鏡架，即可享以下禮遇：</p>
 
@@ -242,6 +242,7 @@ const bannerImg = []
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-5.webp" alt="" />
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-4.webp" alt="" />
                     </div>
+                
                     <p class="brand-extend__item-p">
                         溫潤的棕色漸層，與晶瑩剔透的板料光澤相互輝映，勾勒出柔和而不失層次的視覺感受，讓日系文青的優雅韻味油然而生。
 
@@ -250,7 +251,7 @@ const bannerImg = []
                     <p class="brand-extend__item-p">
                         鏡框庄頭與鏡臂的金屬鉚釘精緻點綴，低調卻不容忽視，為整體設計增添一絲復古質感，同時提升鏡框的帥氣魅力。
                     </p>
-
+                    <br>
                     <div class="brand-extend__item-img3">
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-6.webp" alt="" />
 
@@ -326,10 +327,10 @@ const bannerImg = []
                     <div class="brand-extend__item-title">復刻經典・煥新登場</div>
 
                     <div class="brand-extend__item-img4">
-                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-10.webp" alt=""></img>
-                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-11.webp" alt=""></img>
+                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-10.webp" alt=""/>
+                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-11.webp" alt=""/>
                     </div>
-
+                
                     <p class="brand-extend__item-p">
 
                         以過去的熱銷款式為設計基礎，全新演繹為太陽眼鏡款式，細緻金屬圓框造型，呈現極簡與復古並存的優雅韻味。低調卻精緻的輪廓，讓配戴者散發出不凡的氣質，任何人都能輕鬆駕馭，體現優雅知性的時尚風格。
@@ -339,10 +340,10 @@ const bannerImg = []
 
 
                     </p>
-
+                    <br>
 
                     <div class="brand-extend__item-img3">
-                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-12.webp" alt=""></img>
+                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-12.webp" alt="" />
 
                     </div>
 
@@ -361,13 +362,13 @@ const bannerImg = []
 
                 <div class="brand-extend__item">
                     <div class="brand-extend__item-title">經典飛行員鏡框・低調詮釋奢華魅力</div>
-
+                    <br>
                     <div class="brand-extend__item-img4">
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-13.webp" alt=""></img>
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-14.webp" alt=""></img>
 
                     </div>
-
+                
 
                     <p class="brand-extend__item-p">
                         融合類皇冠框型的優雅與飛行員鏡框 的率性，細膩的金屬線條勾勒出俐落結構，賦予鏡框更豐富的層次感。相較於傳統飛行員鏡款，它的設計更顯獨特簡潔。
@@ -377,8 +378,8 @@ const bannerImg = []
                         特別設計的 鏡腿末端鏤空小孔，可自由搭配眼鏡鍊或飾品，能夠大膽展現個人風格，創造獨一無二的造型
                         亮點。
 
-                    </p>
-
+                    </p>   
+                  <br>                          
 
                     <div class="brand-extend__item-img3">
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-15.webp" alt=""></img>
@@ -390,7 +391,7 @@ const bannerImg = []
                         當你戴上 999.9
                         的眼鏡，便能感受到前所未有的服貼感與輕盈度，不再因為鏡架不合適而頻頻調整，真正做到 「眼鏡與人融為一體」，實現無壓力的舒適享受。這不僅是一副眼鏡，更是一場關於匠心工藝與配戴體驗的極致革新。
                     </p>
-
+                    <br>
                     <div class="brand-extend__item-img3">
                         <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-16.webp" alt=""></img>
 
@@ -451,7 +452,7 @@ const bannerImg = []
                         </div>
 
 
-                        <div class="address__info-item address__info-item--show">
+                        <div class="address__info-item ">
                             <div class="address__info-item-title">
                                 查詢電話
                             </div>
