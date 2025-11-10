@@ -75,7 +75,7 @@ const bannerImg =
   .video-information {
     :deep(.banner-template) {
       &>div:first-child {
-        height: 340px !important;
+        height: 500px !important;
 
         img {
           height: 100%;
@@ -118,7 +118,7 @@ const bannerImg =
     :deep(.banner-swiper) {
       height: 45vw;
     }
-
+   
     :deep(.swiper) {
 
       .swiper-slide {

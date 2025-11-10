@@ -52,7 +52,7 @@ const handKind = (index: number) => {
 onMounted(() => {
   handKind(0);
 });
-const bannerImg = [
+const bannerImg = 
   // {
   //   pc: "https://statichk.cmermedical.com/vision/imgs/11111112222222.avif",
   //   mobile:
@@ -66,14 +66,14 @@ const bannerImg = [
     mobile:
       "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
     newBanner: true,
-  },
+  }
   // {
   //   pc: "https://content.cmervision.com//static/upload/other/20250620/1750405342166039.webp",
   //   mobile:
   //     "https://content.cmervision.com//static/upload/other/20250620/1750405346786278.webp",
   //   newBanner: true,
   // },
-];
+// ];
 
 const miSightQuestionList = [
   {
@@ -120,7 +120,7 @@ onMounted(() => {
 
 <template>
   <div class="myopia-control-zeiss">
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <PublicContainBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="'ZEISS兒童近視控制鏡片'"

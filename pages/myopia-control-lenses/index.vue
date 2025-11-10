@@ -25,19 +25,19 @@ onMounted(() => {
     isPc.value = widthState;
   });
 });
-const bannerImg = [
+const bannerImg = 
   {
     pc: "https://static.cmereye.com/imgs/2024/11/0fd7856ae65aea25.png",
     mobile: "https://static.cmereye.com/imgs/2024/11/7e2d6e9bac45673f.png",
     newBanner: true,
-  },
+  }
   // {
   //   pc: "https://content.cmervision.com//static/upload/other/20250626/1750918460911067.webp",
   //   mobile:
   //     "https://content.cmervision.com//static/upload/other/20250626/1750918480205284.webp",
   //   newBanner: true,
   // },
-];
+// ];
 const btnElement = ref({
   cls: "",
   title: "哪一款鏡片最適合你的小朋友?",
@@ -56,7 +56,7 @@ const btnElement = ref({
         <div class="profile-title"></div>
       </template>
 </PublicBanner> -->
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <PublicContainBanner :banner="bannerImg" class="banner" />
     <PublicNavbar :name="'兒童視力服務'" :isInsidePage="true" :insidePageTitle="'近視控制眼鏡'" />
     <div class="myopia-box">
       <div class="myopia-container-head">

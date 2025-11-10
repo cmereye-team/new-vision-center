@@ -26,7 +26,7 @@ const btnElement = ref({
 });
 
 
-const bannerImg = [
+const bannerImg = 
   // {
   //   pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
   //   mobile:
@@ -37,8 +37,8 @@ const bannerImg = [
     pc: "https://statichk.cmermedical.com/vision/imgs/a76ecb0090da4bd5.png",
     mobile: "https://statichk.cmermedical.com/vision/imgs/4a7dbdd10adfa764.png",
     newBanner: true,
-  },
-];
+  }
+// ];
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 
@@ -99,7 +99,7 @@ const miSightQuestionList = [
         </div>
       </template>
     </PublicBanner> -->
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <PublicContainBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"

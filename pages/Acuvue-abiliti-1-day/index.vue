@@ -16,7 +16,7 @@ useHead({
     },
   ],
 });
-const bannerImg = [
+const bannerImg = 
   // {
   //   pc: "https://content.cmervision.com//static/upload/other/20250624/1750736344989348.webp",
   //   mobile:
@@ -28,8 +28,8 @@ const bannerImg = [
   mobile:
     "https://statichk.cmermedical.com/vision/imgs/Acuvue-abiliti-1-day/mb-banner.avif",
   newBanner: true,
-  },
-];
+  }
+// ];
 
 // const bannerImg = {
 //   pc: "https://statichk.cmermedical.com/vision/imgs/Acuvue-abiliti-1-day/pc-banner.avif",
@@ -163,7 +163,7 @@ const handleIntersection = (entries: any, observer: any) => {
 
 <template>
   <div class="zve-information">
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <PublicContainBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="'Abiliti™ 1 day 兒童近視控制隱形眼鏡'"
