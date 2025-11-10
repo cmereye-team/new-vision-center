@@ -1,6 +1,6 @@
 <script lang="ts" setup>
 useHead(() => ({
-  title: "尊享優惠｜希瑪視光中心",
+  title: "TrunkShow｜希瑪視光中心",
   meta: [
     {
       hid: "description",
@@ -12,7 +12,7 @@ useHead(() => ({
       hid: "Keywords",
       name: "Keywords",
       content:
-        "眼鏡優惠 配眼鏡優惠 hoya漸進鏡片價錢 漸進鏡片價錢 全視線鏡片價錢 全視線漸進鏡價錢 hoya鏡片價錢 zeiss鏡片價錢 漸進眼鏡價錢 眼鏡價錢 配眼鏡價錢 老花隱形眼鏡價錢 漸進老花眼鏡價錢 hoya兒童近視控制鏡片價錢 OK鏡 ok鏡價錢 老花鏡 老花眼鏡 老花隱形眼鏡 兒童近視控制鏡片價格 近視控制鏡片 驗眼費用 驗眼價錢 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心 ",
+        "眼鏡優惠 配眼鏡優惠 hoya漸進鏡片價錢 漸進鏡片價錢 全視線鏡片價錢 全視線漸進鏡價錢 hoya鏡片價錢 zeiss鏡片價錢 漸進眼鏡價錢 眼鏡價錢 配眼鏡價錢 老花隱形眼鏡價錢 漸進老花眼鏡價錢 hoya兒童近視控制鏡片價錢 OK鏡 ok鏡價錢 老花鏡 老花眼鏡 老花隱形眼鏡 兒童近視控制鏡片價格 近視控制鏡片 驗眼費用 驗眼價錢 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
     },
   ],
 }));
@@ -239,8 +239,8 @@ const bannerImg = []
                 <div class="brand-extend__item">
                     <div class="brand-extend__item-title">咖啡漸層——溫潤細膩，詮釋日系文青美學</div>
                     <div class="brand-extend__item-img2">
-                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-5.webp" alt=""></img>
-                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-4.webp" alt=""></img>
+                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-5.webp" alt="" />
+                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-4.webp" alt="" />
                     </div>
                     <p class="brand-extend__item-p">
                         溫潤的棕色漸層，與晶瑩剔透的板料光澤相互輝映，勾勒出柔和而不失層次的視覺感受，讓日系文青的優雅韻味油然而生。
@@ -252,7 +252,7 @@ const bannerImg = []
                     </p>
 
                     <div class="brand-extend__item-img3">
-                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-6.webp" alt=""></img>
+                        <img src="https://statichk.cmermedical.com/smile/smileProCare/20251106/s5-6.webp" alt="" />
 
                     </div>
 
