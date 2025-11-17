@@ -107,7 +107,7 @@ const bannerImg = []
                 <div class="trunk-show__content">
                     <div class="trunk-show__content-item">
                         <div class="trunk-show__content-title">時間及地點</div>
-                        <p class="trunk-show__content-p1">10 Nov - 12 Dec 2025</p>
+                        <p class="trunk-show__content-p1">10 Nov - 09 Dec 2025 thanks!</p>
                         <p class="trunk-show__content-p1">中環畢打街1-3號中建大廈1515室</p>
 
 

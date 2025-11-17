@@ -18,13 +18,21 @@ useHead(() => ({
 }));
 
 const bannerImg = 
-  
+  [
   {
      pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
     mobile:
       "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
     newBanner: true,
-   }
+   },
+    {
+     pc: "https://content.cmervision.com/static/upload/other/20251117/1763340561538770.webp",
+    mobile:
+      "https://content.cmervision.com/static/upload/other/20251117/1763340575281198.webp",
+    newBanner: true,
+   },
+   
+  ]
  
   //  {
   //   pc: "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
@@ -54,8 +62,8 @@ const bannerImg =
 
 <template>
   <div class="video-information">
-     <PublicContainBanner  :banner="bannerImg" />
-    <!-- <PageSwiperBanner :banner="bannerImg" class="banner" /> -->
+     <!-- <PublicContainBanner  :banner="bannerImg" /> -->
+    <PageSwiperBannerV2 :banner="bannerImg" class="banner" />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
