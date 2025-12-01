@@ -34,6 +34,12 @@ const bannerImg = [
   //     "https://statichk.cmermedical.com/vision/imgs/5555555555666.avif",
   //         newBanner: true,
   // },
+   {
+    pc: "https://content.cmervision.com//static/upload/other/20251201/1764581267126926.webp",
+    mobile:
+      "https://content.cmervision.com//static/upload/other/20251201/1764581281275186.webp",
+          newBanner: true,
+  },
   {
     pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
     mobile:
