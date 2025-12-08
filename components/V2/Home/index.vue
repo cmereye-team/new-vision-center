@@ -280,7 +280,7 @@ const services = {
                   font-weight: 500;
                   line-height: 240%;
                   /* 133.333% */
-                  text-transform: uppercase;
+                
                 }
               }
 

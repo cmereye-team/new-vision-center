@@ -17,7 +17,7 @@ const isPc = ref(true);
 // 获取轮播图
 const getImgSwiper = async () => {
   const res = await fetch(
-    "https://content.cmervision.com/api.php/cms/slide/gid/1"
+    "https://content.cmervision.com/api.php/cms/slide/gid/1/num/30"
   );
   const data = await res.json();
   if (data.code === 1) {

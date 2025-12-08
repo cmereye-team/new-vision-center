@@ -382,7 +382,7 @@ const getScrollY = () => {
       font-style: normal;
       font-weight: 900;
       line-height: 30px;
-      text-transform: uppercase;
+
     }
     & > div:nth-child(2) {
       margin-bottom: 32px;
@@ -406,7 +406,7 @@ const getScrollY = () => {
       font-style: normal;
       font-weight: 500;
       line-height: 22.5px;
-      text-transform: uppercase;
+    
     }
     & > div:nth-child(4) {
       display: flex;
@@ -422,7 +422,7 @@ const getScrollY = () => {
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        text-transform: uppercase;
+      
         margin-right: 0;
         border-radius: 37.5px;
         background: url("../../assets/img/bluebtn.svg") no-repeat;
@@ -517,7 +517,7 @@ const getScrollY = () => {
         font-style: normal;
         font-weight: 500;
         line-height: 20.862px;
-        text-transform: uppercase;
+   
         margin-bottom: 10px;
         display: -webkit-box;
         -webkit-line-clamp: 2;
@@ -691,7 +691,7 @@ const getScrollY = () => {
       font-style: normal;
       font-weight: 900;
       line-height: 133%; /* 133.333% */
-      text-transform: uppercase;
+      
     }
     & > div:nth-child(2) {
       margin-bottom: 3.076vw;
@@ -718,7 +718,7 @@ const getScrollY = () => {
       font-style: normal;
       font-weight: 500;
       line-height: 150%; /* 166.667% */
-      text-transform: uppercase;
+      
     }
     & > div:nth-child(4) {
       display: flex;
@@ -736,7 +736,7 @@ const getScrollY = () => {
         font-style: normal;
         font-weight: 300;
         line-height: normal;
-        text-transform: uppercase;
+      
         margin-right: 6.4vw;
       }
       & > a:nth-child(1) {
@@ -810,7 +810,7 @@ const getScrollY = () => {
         font-style: normal;
         font-weight: 500;
         line-height: 150%; /* 154.534% */
-        text-transform: uppercase;
+       
         margin-bottom: 3.076vw;
       }
       & > div:nth-child(3) {
@@ -843,7 +843,7 @@ const getScrollY = () => {
             font-style: normal;
             font-weight: 300;
             line-height: normal;
-            text-transform: uppercase;
+      
             text-wrap: nowrap;
           }
         }
