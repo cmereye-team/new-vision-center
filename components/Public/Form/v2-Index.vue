@@ -152,10 +152,10 @@ const ruleForm = reactive({
 const telValidator = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error("請輸入手機號"));
-    dataAllUnauthorized("輸入手機號为空");
+    // dataAllUnauthorized("輸入手機號为空");
   } else if (String(value).length < 8) {
     callback(new Error("手機號格式不正確"));
-    dataAllUnauthorized("手機號格式错误");
+    // dataAllUnauthorized("手機號格式错误");
   } else {
     callback();
   }
@@ -163,13 +163,13 @@ const telValidator = (rule: any, value: any, callback: any) => {
 const nameFormat = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error("請輸入姓名"));
-    dataAllUnauthorized("輸入姓名为空");
+    // dataAllUnauthorized("輸入姓名为空");
   } else if (/^\d+$/.test(value)) {
     callback(new Error("姓名不能是數字"));
-    dataAllUnauthorized("姓名类型是數字");
+    // dataAllUnauthorized("姓名类型是數字");
   } else if (value.length < 2 || value.length > 25) {
     callback(new Error("長度應該是2到25"));
-    dataAllUnauthorized("長度應該错误");
+    // dataAllUnauthorized("長度應該错误");
   } else {
     callback();
   }
@@ -177,10 +177,10 @@ const nameFormat = (rule: any, value: any, callback: any) => {
 const emailFormat = (rule: any, value: any, callback: any) => {
   if (!value) {
     callback(new Error("請輸入電子郵件地址"));
-    dataAllUnauthorized("電子郵件地址未輸入");
+    // dataAllUnauthorized("電子郵件地址未輸入");
   } else if (!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(value)) {
     callback(new Error("請輸入正確的電子郵件地址"));
-    dataAllUnauthorized("電子郵件地址格式错误");
+    // dataAllUnauthorized("電子郵件地址格式错误");
   } else {
     callback();
   }
@@ -225,7 +225,7 @@ const submitForm = async (formEl: FormInstance | undefined) => {
       }
       onsubmit(formEl);
       dingTalk(formEl);
-      dataAllUnauthorized("校验通过的提交");
+      // dataAllUnauthorized("校验通过的提交");
     } else {
       ElMessage({
         message: "提交失敗，請檢查内容是否有誤！",
@@ -316,6 +316,7 @@ const dingTalk = async (formEl: any) => {
   }
 };
 
+// PS:方法已經注釋停用
 const dataAllUnauthorized = async (str: string) => {
   let _form = ruleForm;
   let strs = ``;

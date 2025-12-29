@@ -80,6 +80,7 @@ onMounted(() => {
             background:'#8B8B8D',
             color:'#ffffff'
         },
+         moreBtnIco:'#FFFFFF',
       },
       description: [
         "來自丹麥的 LINDBERG 承襲北歐設計的優雅精髓，以簡約美學、卓越工藝與創新技術享譽全球，丹麥擁有悠久的設計傳統，強調功能性與美感並存，這些理念深深植入 LINDBERG 的品牌哲學之中。",
@@ -137,9 +138,10 @@ onMounted(() => {
           transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
         },
         moreBtn:{
-            background:'#8B8B8D',
-            color:'#ffffff'
+            background:'#FFFFFF',
+            color:'#4D4D4D'
         },
+         moreBtnIco:'#4D4D4D',
       },
       description: [
         "來自日本的 999.9（Four Nines），被譽為「神人級」眼鏡品牌，以極致工藝重新定義舒適標準，讓配戴者體驗前所未有的貼合感與穩定度。",
@@ -203,6 +205,7 @@ onMounted(() => {
             background:'#8B8B8D',
             color:'#ffffff'
         },
+          moreBtnIco:'#FFFFFF',
       },
       description: [
         "MARKUS T 源於德國創立，以「輕盈、耐用、純粹」為品牌核心，專注於打造極致簡約且充滿技術美感的眼鏡。",
@@ -260,9 +263,10 @@ onMounted(() => {
           transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
         },
         moreBtn:{
-            background:'#8B8B8D',
-            color:'#ffffff'
+            background:'#FFFFFF',
+            color:'#4D4D4D'
         },
+         moreBtnIco:'#4D4D4D',
       },
       description: [
         "來自奧地利的 Silhouette，以「純粹、創新、輕盈」為品牌核心，將極致輕盈與現代美學推向新的高度。每一副 Silhouette 眼鏡都以卓越的設計與精密的工藝為基礎，完美融合實用功能與藝術美感，展現出低調而不失奢華的極簡風格。",
@@ -320,6 +324,7 @@ onMounted(() => {
             background:'#8B8B8D',
             color:'#ffffff'
         },
+        moreBtnIco:'#FFFFFF'
       },
       description: [
         "MONOQOOL 結合丹麥設計與日本製造的先驅眼鏡品牌，以簡潔設計與功能美學著稱，為眼鏡業帶來全新的創意科技。",
@@ -653,7 +658,7 @@ const handlesSliPrev = (index: number) => {
                   </div>
                 </div>
                 <!-- 了解更多按鈕 -->
-                <div class="product-spec__more-btn" :style="v.style.moreBtn">
+                <a href="/" class="product-spec__more-btn" :style="v.style.moreBtn">
                   <span>了解更多</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -664,12 +669,12 @@ const handlesSliPrev = (index: number) => {
                   >
                     <path
                       d="M1.01855 1.01562L7.25756 7.25463L1.01855 13.4936"
-                      stroke="white"
+                      :stroke="v.style.moreBtnIco"
                       stroke-width="1.43977"
                       stroke-linecap="square"
                     />
                   </svg>
-                </div>
+                </a>
               </div>
             </div>
           </div>
