@@ -437,7 +437,7 @@ const handlesSliPrev = (index: number) => {
             <div class="banner__main-text-wrap">
               <div class="banner__main-text">GLASSES</div>
               <div class="banner__text-ui">
-                <div class="banner__text-li">
+                <a href="#product-spec-0" class="banner__text-li btn-animation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="banner_text-li-icon"
@@ -450,8 +450,8 @@ const handlesSliPrev = (index: number) => {
                     />
                   </svg>
                   LINDBERG
-                </div>
-                <div class="banner__text-li">
+                </a>
+                <a href="#product-spec-1" class="banner__text-li btn-animation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="banner_text-li-icon"
@@ -464,8 +464,8 @@ const handlesSliPrev = (index: number) => {
                     />
                   </svg>
                   999.9
-                </div>
-                <div class="banner__text-li">
+                </a>
+                <a href="#product-spec-2" class="banner__text-li btn-animation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="banner_text-li-icon"
@@ -478,8 +478,8 @@ const handlesSliPrev = (index: number) => {
                     />
                   </svg>
                   MARKUS T
-                </div>
-                <div class="banner__text-li">
+                </a>
+                <a href="#product-spec-3" class="banner__text-li btn-animation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="banner_text-li-icon"
@@ -492,8 +492,8 @@ const handlesSliPrev = (index: number) => {
                     />
                   </svg>
                   Silhouette
-                </div>
-                <div class="banner__text-li">
+                </a>
+                <a href="#product-spec-4" class="banner__text-li btn-animation">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     class="banner_text-li-icon"
@@ -506,7 +506,7 @@ const handlesSliPrev = (index: number) => {
                     />
                   </svg>
                   MONOQOOL
-                </div>
+                </a>
               </div>
             </div>
 
@@ -519,7 +519,8 @@ const handlesSliPrev = (index: number) => {
                 https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc.webp
               "
               sizes=" (max-width: 992px) 100vw,1216px"
-              alt=""
+              alt="GLASSES"
+                title="GLASSES"
             />
           </div>
         </div>
@@ -546,13 +547,15 @@ const handlesSliPrev = (index: number) => {
     <!-- start product-spec -->
 
     <div class="product-spec__container" style="z-index: 1">
-      <div
+      <section
         class="product-full-width-container"
         v-for="(v, k) in productSpec"
         :key="v.id"
         v-if="productSpec.length > 0"
+        :id="`product-spec-${k}`"
       >
-        <section class="product-spec" :style="{ zIndex: productSpec.length - k }">
+        <div
+         class="product-spec" :style="{ zIndex: productSpec.length - k }">
           <div
             class="background-rotate"
             :style="v.style.backgroundRotate"
@@ -573,7 +576,9 @@ const handlesSliPrev = (index: number) => {
                     :src="v.mainImg.pc"
                     :srcset="`${v.mainImg.mobile} 400w, ${v.mainImg.mobile} 640w, ${v.mainImg.pc}`"
                     sizes="(max-width: 992px) 100vw, 1216px"
-                    alt=""
+                    :alt="v['title']"
+                    :title="v['title']"
+                  
                   />
                 </div>
 
@@ -620,10 +625,12 @@ const handlesSliPrev = (index: number) => {
                   >
                     <template v-for="item in v.swiper" :key="item.id">
                       <swiper-slide class="product-spec__slider">
-                        <div class="product-spec__slider-item">
+                        <div class="product-spec__slider-item btn-animation">
                           <img
                             :src="item.img"
-                            class="product-spec__swiper-img"
+                            class="product-spec__swiper-img "
+                            :alt="item.title"
+                            :title="item.title"
                             @load="onImgLoad"
                           />
                           <div class="product-spec__slider-title">
@@ -666,7 +673,7 @@ const handlesSliPrev = (index: number) => {
                   </div>
                 </div>
                 <!-- 了解更多按鈕 -->
-                <a href="/" class="product-spec__more-btn" :style="v.style.moreBtn">
+                <a :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${v.title}詳情`" class="product-spec__more-btn btn-animation" :style="v.style.moreBtn">
                   <span>了解更多</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -686,8 +693,8 @@ const handlesSliPrev = (index: number) => {
               </div>
             </div>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </div>
     <!-- end product-spec -->
 
@@ -737,9 +744,10 @@ const handlesSliPrev = (index: number) => {
                 <div class="address__phone">+852 3892 5089</div>
                 <a
                   href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%B8%8C%E7%91%AA%E8%A6%96%E5%85%89%E4%B8%AD%E5%BF%83%20X%20999.9%20TrunkShow%E8%A9%B3%E6%83%85"
-                  class="address__whatsapp"
+                  class="address__whatsapp btn-animation"
                 >
                   <span
+                  class="address__whatsapp-icon"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
@@ -773,7 +781,6 @@ const handlesSliPrev = (index: number) => {
 
 <style lang="scss" scoped>
 
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Noto+Sans+HK:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
 @import "./index.css";
 </style>
