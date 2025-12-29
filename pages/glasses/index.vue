@@ -24,7 +24,7 @@ const onImgLoad = () => {
 };
 
 useHead(() => ({
-  title: "TrunkShow｜希瑪視光中心",
+  title: "眼鏡｜希瑪視光中心",
   meta: [
     {
       hid: "description",
@@ -56,8 +56,8 @@ onMounted(() => {
               ? "rotate(-1.377deg) translateZ(0)"
               : "rotate(0deg)",
           background:
-            "radial-gradient(100.98% 100.81% at 50% 50%,#fff 43.27%,#dad8d6 100%)",
-          boxShadow: "0 15px 23px -2px rgba(18, 18, 18, 0.25);",
+             width.value > 768 ? "radial-gradient(100.98% 100.81% at 50% 50%,#fff 43.27%,#dad8d6 100%)":'',
+          boxShadow:  width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25);":"",
         },
         productSpecContentWrapper: {
           flexDirection: width.value > 768 ? "row" : "column",
@@ -196,7 +196,7 @@ onMounted(() => {
             width.value > 768
               ? "rotate(-1.377deg) translateZ(0)"
               : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-12px" : "0",
+          marginBottom: width.value > 768 ? "-17px" : "0",
         },
         productSpecBlock2: {
           transform: width.value > 768 ? "rotate(-1.377deg)" : "rotate(0deg)",
@@ -257,7 +257,7 @@ onMounted(() => {
             width.value > 768
               ? "rotate(0.912deg) translateZ(0)"
               : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-14px" : "0",
+          marginBottom: width.value > 768 ? "-10px" : "0",
         },
         productSpecBlock2: {
           transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
@@ -315,7 +315,7 @@ onMounted(() => {
             width.value > 768
               ? "rotate(-1.377deg) translateZ(0)"
               : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-50px" : "0",
+          marginBottom: width.value > 768 ? "-53px" : "0",
         },
         productSpecBlock2: {
           transform: width.value > 768 ? "rotate(-1.377deg)" : "rotate(0deg)",
@@ -367,13 +367,21 @@ const computedSwiperWrapStyle = computed(() => {
     const length = swiper.length;
     console.log(length);
     let maxWidth = "900px";
+    let maxHeight = "450px";
     if (length == 2 && width.value > 768) {
-      maxWidth = "600px";
+      maxWidth = "650px";
     }else if (length >= 3 && width.value > 768) {
-      maxWidth = "900px";
+      maxWidth = "950px";
+    }
+    else if (length == 2 && width.value < 768) {
+      maxHeight = "309px";
+    }else if (length >= 3 && width.value < 768) {
+      maxHeight = "450px";
     }
     return {
       maxWidth: maxWidth || "100%", // 使用傳入的參數或者默認值
+      maxHeight: maxHeight || "auto",
+     
     };
   };
 });
@@ -601,7 +609,7 @@ const handlesSliPrev = (index: number) => {
                     :modules="modules"
                     :breakpoints="computedBreakPoints(v.swiper)"
                     :slides-per-view="'auto'"
-                    :space-between="width > 768 ? 24 : 12"
+                    :space-between="width > 768 ? 24 : 42"
                     :loop="true"
                     :autoplay="{
                       delay: 2500,
