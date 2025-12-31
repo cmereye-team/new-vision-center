@@ -1,20 +1,25 @@
 <script lang="ts" setup>
 import { ref, onMounted, onUnmounted } from "vue";
-
-import { Swiper, SwiperSlide } from "swiper/vue";
+import getWindowSize from "@/utils/width";
+import { Swiper, SwiperSlide, } from "swiper/vue";
 // Import Swiper styles
 import "swiper/scss";
 
 import "swiper/scss/pagination";
 import "swiper/scss/navigation";
 
-import { Grid, Autoplay, Pagination, Navigation } from "swiper/modules";
+import { Grid, Autoplay, Pagination, Navigation, } from "swiper/modules";
 // 屏幕寬度
-const width = ref(0);
+const width = ref(1920);
+const resizeTimeout = ref(null);
 const modules = [Autoplay, Pagination, Navigation];
 
 const handleResize = () => {
-  width.value = window.innerWidth;
+  clearTimeout(resizeTimeout); // 清除上一个定时器
+  resizeTimeout.value = setTimeout(() => {
+    width.value = window.innerWidth; // 延迟更新宽度
+    console.log("当前宽度:", width.value);
+  }, 500); // 延迟 500 毫秒后更新宽度
 };
 const getDirection = () => (width.value > 768 ? "horizontal" : "vertical");
 
@@ -40,16 +45,16 @@ useHead(() => ({
     },
   ],
 }));
-const productSpec = reactive([]);
-onMounted(() => {
-  handleResize();
-  window.addEventListener("resize", handleResize);
 
-  const productSpec2 = [
-    {
-      id: 1,
-      title: "LINDBERG",
-      style: {
+const productSpec = reactive([
+  {
+    id: 1,
+    title: "LINDBERG",
+     description: [
+        "來自丹麥的 LINDBERG 承襲北歐設計的優雅精髓，以簡約美學、卓越工藝與創新技術享譽全球，丹麥擁有悠久的設計傳統，強調功能性與美感並存，這些理念深深植入 LINDBERG 的品牌哲學之中。",
+        "LINDBERG 以革命性的無螺絲、無焊接設計聞名，打造出極致輕盈且堅固耐用的鏡框，品牌嚴選高品質鈦金屬與醋酸纖維材質，不僅確保配戴的舒適性，更能完美貼合各種臉型。透過高度客製化的設計理念，每一副 LINDBERG 眼鏡皆是個人風格的獨特展現，展現北歐設計的極簡美學與尖端技術的完美融合。",
+      ],
+     style: {
         backgroundRotate: {
           transform:
             width.value > 768
@@ -82,306 +87,422 @@ onMounted(() => {
         },
          moreBtnIco:'#FFFFFF',
       },
-      description: [
-        "來自丹麥的 LINDBERG 承襲北歐設計的優雅精髓，以簡約美學、卓越工藝與創新技術享譽全球，丹麥擁有悠久的設計傳統，強調功能性與美感並存，這些理念深深植入 LINDBERG 的品牌哲學之中。",
-        "LINDBERG 以革命性的無螺絲、無焊接設計聞名，打造出極致輕盈且堅固耐用的鏡框，品牌嚴選高品質鈦金屬與醋酸纖維材質，不僅確保配戴的舒適性，更能完美貼合各種臉型。透過高度客製化的設計理念，每一副 LINDBERG 眼鏡皆是個人風格的獨特展現，展現北歐設計的極簡美學與尖端技術的完美融合。",
-      ],
-      mainImg: {
-        pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc.webp",
-        mobile:
-          "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-m.webp",
+    //   description: [
+    //     "",
+    //     "LINDBERG 以革命性的無螺絲、無焊接設計聞名，打造出極致輕盈且堅固耐用的鏡框，品牌嚴選高品質鈦金屬與醋酸纖維材質，不僅確保配戴的舒適性，更能完美貼合各種臉型。透過高度客製化的設計理念，每一副 LINDBERG 眼鏡皆是個人風格的獨特展現，展現北歐設計的極簡美學與尖端技術的完美融合。",
+    //   ],
+    currentSwiperIndex: 0,
+    swiper: [
+      {
+        id: 1,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper1.png",
+        title: "5543＿PU15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc2.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-5543＿PU15.webp",
+        },
+        active: 1,
       },
-      swiper: [
-        {
-          id: 1,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper1.png",
-          title: "5543＿PU15",
+      {
+        id: 2,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper2.png",
+        title: "9760_U9",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc3.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-9760_U9.webp?v1",
         },
-        {
-          id: 2,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper2.png",
-          title: "9760_U9",
-        },
-        {
-          id: 3,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper3.png",
-          title: "9768_U15",
-        },
-       
-      ],
-    },
-    {
-      id: 2,
-      title: "999.9",
-      style: {
-        backgroundRotate: {
-          transform:
-            width.value > 768
-              ? "rotate(0.912deg) translateZ(0)"
-              : "rotate(0deg)",
-          background:
-            width.value > 768 ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 0%, #B3B3B3 100%)":'',
-          boxShadow: width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)":'',
-        },
-        productSpecContentWrapper: {
-          flexDirection: width.value > 768 ? "row-reverse" : "column",
-          marginLeft: width.value > 768 ? "160px" : "auto",
-        },
-        productSpecImgWrapper: {
-          transform:
-            width.value > 768
-              ? "rotate(0.912deg) translateZ(0)"
-              : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-48px" : "0",
-        },
-        productSpecBlock2: {
-          transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
-        },
-        moreBtn:{
-            background:'#FFFFFF',
-            color:'#4D4D4D'
-        },
-         moreBtnIco:'#4D4D4D',
+        active: 0,
       },
-      description: [
-        "來自日本的 999.9（Four Nines），被譽為「神人級」眼鏡品牌，以極致工藝重新定義舒適標準，讓配戴者體驗前所未有的貼合感與穩定度。",
-        "999.9 始終秉持「舒適、靈活、輕盈」的三大核心理念，將配戴體驗推向更高境界，品牌專為亞洲配戴者設計，每一副鏡架皆經過嚴謹的人體工學調整，確保與東方人的臉型輪廓完美契合，無論鼻梁高度、臉部弧度或耳部支撐，都能達到理想的平衡。",
-      ],
-      mainImg: {
-        pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
-        mobile:
-          "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+      {
+        id: 3,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper3.png",
+        title: "9768_U15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-9768_U15.webp",
+        },
+        active: 0,
       },
-      swiper: [
-        {
-          id: 1,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper1.png",
-          title: "5543＿PU15",
-        },
-        {
-          id: 2,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper2.png",
-          title: "9760_U9",
-        },
-        {
-          id: 3,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper3.png",
-          title: "9768_U15",
-        },
-     
-      ],
-    },
-    {
-      id: 3,
-      title: "MARKUS T",
-      style: {
-        backgroundRotate: {
-          transform:
-            width.value > 768
-              ? "rotate(-1.377deg) translateZ(0)"
-              : "rotate(0deg)",
-          background:
-            width.value > 768
-              ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 25.96%, #B0BDC6 100%)"
-              : "",
-          boxShadow:
-            width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)" : "",
-        },
-        productSpecContentWrapper: {
-          flexDirection: width.value > 768 ? "row" : "column",
-            marginRight: width.value > 768 ? "260px" : "auto",
-        },
-        productSpecImgWrapper: {
-          transform:
-            width.value > 768
-              ? "rotate(-1.377deg) translateZ(0)"
-              : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-17px" : "0",
-        },
-        productSpecBlock2: {
-          transform: width.value > 768 ? "rotate(-1.377deg)" : "rotate(0deg)",
-        },
-        moreBtn:{
-            background:'#8B8B8D',
-            color:'#ffffff'
-        },
-          moreBtnIco:'#FFFFFF',
-      },
-      description: [
-        "MARKUS T 源於德國創立，以「輕盈、耐用、純粹」為品牌核心，專注於打造極致簡約且充滿技術美感的眼鏡。",
-        "MARKUS T 以創新的無螺絲鉸鍊技術聞名，透過極致精密的雷射切割技術，減少傳統螺絲結構可能帶來的鬆動與維護問題，完美體現了德國工藝對細節的極致掌控。品牌強調「設計應該讓人們更像自己」，透過純粹且現代感十足的造型，展現極簡與功能並存的美學，每一副 MARKUS T 眼鏡都能自然融入配戴者的日常風格，強調個人魅力而不過度張揚。",
-      ],
-      mainImg: {
-        pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-pc.webp",
-        mobile:
-          "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-m.webp",
-      },
-      swiper: [
-        {
-          id: 1,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper1.png?v=1",
-          title: "P1012 MIO_663",
-        },
-        {
-          id: 2,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper2.png",
-          title: "P1024_640",
-        },
-        {
-          id: 3,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper3.png",
-          title: "P1034 MIO_670",
-        },
-       
-      ],
-    },
-    {
-      id: 4,
-      title: "Silhouette",
-      style: {
-        backgroundRotate: {
-          transform:
-            width.value > 768
-              ? "rotate(0.912deg) translateZ(0)"
-              : "rotate(0deg)",
-          background:
-            width.value > 768 ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 0%, #E8E2DE 100%)":'',
-          boxShadow: width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)":'',
-        },
-        productSpecContentWrapper: {
-          flexDirection: width.value > 768 ? "row-reverse" : "column",
-          marginLeft: width.value > 768 ? "160px" : "auto",
-        },
-          productSpecImgWrapper: {
-          transform:
-            width.value > 768
-              ? "rotate(0.912deg) translateZ(0)"
-              : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-10px" : "0",
-        },
-        productSpecBlock2: {
-          transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
-        },
-        moreBtn:{
-            background:'#FFFFFF',
-            color:'#4D4D4D'
-        },
-         moreBtnIco:'#4D4D4D',
-      },
-      description: [
-        "來自奧地利的 Silhouette，以「純粹、創新、輕盈」為品牌核心，將極致輕盈與現代美學推向新的高度。每一副 Silhouette 眼鏡都以卓越的設計與精密的工藝為基礎，完美融合實用功能與藝術美感，展現出低調而不失奢華的極簡風格。",
-        "Silhouette 以光學卓越為基礎，為每位佩戴者量身定制，實現無與倫比的舒適貼合。超輕量的高品質框架與鏡片設計，每一條線條都蘊含深意，每一個細節皆經過精密計算與打造，為佩戴者帶來幾乎無感的舒適體驗。",
-      ],
-      mainImg: {
-        pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc.webp?v0=20251205",
-        mobile:
-          "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m.webp",
-      },
-      swiper: [
-        {
-          id: 1,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper1.png?v0=20251205",
-          title: "1609 75 _4522",
-        },
-        {
-          id: 2,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper2.png?v0=20251205",
-          title: "1618 75 _4140",
-        },
-      ],
-    },
-    {
-      id: 5,
-      title: "MONOQOOL",
-      style: {
-        backgroundRotate: {
-          transform:
-            width.value > 768
-              ? "rotate(-1.377deg) translateZ(0)"
-              : "rotate(0deg)",
-          background:
-            width.value > 768
-              ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 25.96%, #9B948A 100%)"
-              : "",
-          boxShadow:
-            width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)" : "",
-        },
-        productSpecContentWrapper: {
-          flexDirection: width.value > 768 ? "row" : "column",
-           marginRight: width.value > 768 ? "260px" : "auto",
-        },
-        productSpecImgWrapper: {
-          transform:
-            width.value > 768
-              ? "rotate(-1.377deg) translateZ(0)"
-              : "rotate(0deg)",
-          marginBottom: width.value > 768 ? "-53px" : "0",
-        },
-        productSpecBlock2: {
-          transform: width.value > 768 ? "rotate(-1.377deg)" : "rotate(0deg)",
-        },
-        moreBtn:{
-            background:'#8B8B8D',
-            color:'#ffffff'
-        },
-        moreBtnIco:'#FFFFFF'
-      },
-      description: [
-        "MONOQOOL 結合丹麥設計與日本製造的先驅眼鏡品牌，以簡潔設計與功能美學著稱，為眼鏡業帶來全新的創意科技。",
-        "品牌核心理念強調對環境友善和永續發展，品牌最為人熟知的是，鏡框製作採用尖端的 3D 列印技術，有效減少資源浪費，並顯著降低重量，達到輕巧而耐用的結構設計。",
-      ],
-      mainImg: {
-        pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-pc.webp",
-        mobile:
-          "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-m.webp",
-      },
-      swiper: [
-        {
-          id: 1,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper1.png",
-          title: "The futurist_FU",
-        },
-        {
-          id: 2,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper2.png",
-          title: "Duke_DK",
-        },
-        {
-          id: 3,
-          img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper3.png",
-          title: "Daffodil_DF ",
-        },
-        
-      ],
-    },
-  ];
 
-  productSpec2.forEach((item) => {
-    productSpec.push(item);
-  });
+
+    
+      
+      
+    ],
+  },
+  {
+    id: 2,
+    title: "999.9",
+    style: {
+      backgroundRotate: {
+        transform:
+          width.value > 768 ? "rotate(0.912deg) translateZ(0)" : "rotate(0deg)",
+        background:
+          width.value > 768
+            ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 0%, #B3B3B3 100%)"
+            : "",
+        boxShadow:
+          width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)" : "",
+      },
+      productSpecContentWrapper: {
+        flexDirection: width.value > 768 ? "row-reverse" : "column",
+        marginLeft: width.value > 768 ? "160px" : "auto",
+      },
+      productSpecImgWrapper: {
+        transform:
+          width.value > 768 ? "rotate(0.912deg) translateZ(0)" : "rotate(0deg)",
+        marginBottom: width.value > 768 ? "-48px" : "0",
+      },
+      productSpecBlock2: {
+        transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
+      },
+      moreBtn: {
+        background: "#FFFFFF",
+        color: "#4D4D4D",
+      },
+      moreBtnIco: "#4D4D4D",
+    },
+    description: [
+      "來自日本的 999.9（Four Nines），被譽為「神人級」眼鏡品牌，以極致工藝重新定義舒適標準，讓配戴者體驗前所未有的貼合感與穩定度。",
+      "999.9 始終秉持「舒適、靈活、輕盈」的三大核心理念，將配戴體驗推向更高境界，品牌專為亞洲配戴者設計，每一副鏡架皆經過嚴謹的人體工學調整，確保與東方人的臉型輪廓完美契合，無論鼻梁高度、臉部弧度或耳部支撐，都能達到理想的平衡。",
+    ],
+
+    currentSwiperIndex: 0,
+    swiper: [
+      {
+        id: 1,
+         active: 1,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper1.png",
+        title: "5543＿PU15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+      {
+        id: 2,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper2.png",
+        title: "9760_U9",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+      {
+        id: 3,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper3.png",
+        title: "9768_U15",
+         mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+    //    {
+    //     id: 4,
+    //      active: 0,
+    //     img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper3.png",
+    //     title: "9768_U15",
+    //     mainImg: {
+    //       pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc-9768_U15.webp",
+    //       mobile:
+    //         "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m-9768_U15.webp?v2",
+    //     },
+    //   },
+    ],
+  },
+  {
+    id: 3,
+    title: "MARKUS T",
+    style: {
+      backgroundRotate: {
+        transform:
+          width.value > 768
+            ? "rotate(-1.377deg) translateZ(0)"
+            : "rotate(0deg)",
+        background:
+          width.value > 768
+            ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 25.96%, #B0BDC6 100%)"
+            : "",
+        boxShadow:
+          width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)" : "",
+      },
+      productSpecContentWrapper: {
+        flexDirection: width.value > 768 ? "row" : "column",
+        marginRight: width.value > 768 ? "260px" : "auto",
+      },
+      productSpecImgWrapper: {
+        transform:
+          width.value > 768
+            ? "rotate(-1.377deg) translateZ(0)"
+            : "rotate(0deg)",
+        marginBottom: width.value > 768 ? "-17px" : "0",
+      },
+      productSpecBlock2: {
+        transform: width.value > 768 ? "rotate(-1.377deg)" : "rotate(0deg)",
+      },
+      moreBtn: {
+        background: "#8B8B8D",
+        color: "#ffffff",
+      },
+      moreBtnIco: "#FFFFFF",
+    },
+    description: [
+      "MARKUS T 源於德國創立，以「輕盈、耐用、純粹」為品牌核心，專注於打造極致簡約且充滿技術美感的眼鏡。",
+      "MARKUS T 以創新的無螺絲鉸鍊技術聞名，透過極致精密的雷射切割技術，減少傳統螺絲結構可能帶來的鬆動與維護問題，完美體現了德國工藝對細節的極致掌控。品牌強調「設計應該讓人們更像自己」，透過純粹且現代感十足的造型，展現極簡與功能並存的美學，每一副 MARKUS T 眼鏡都能自然融入配戴者的日常風格，強調個人魅力而不過度張揚。",
+    ],
+    
+     currentSwiperIndex: 0,
+    swiper: [
+      {
+        id: 1,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper1.png?v=1",
+        title: "P1012 MIO_663",
+        mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-pc-P1012 MIO_663.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-m-P1012 MIO_663.webp",
+    },
+      },
+      {
+        id: 2,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper2.png",
+        title: "P1024_640",
+        mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-pc-P1024_640.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-m-P1024_640.webp",
+    },
+      },
+      {
+        id: 3,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper3.png",
+        title: "P1034 MIO_670",
+        mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-pc-P1034 MIO_670.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-m-P1034 MIO_670.webp",
+    },
+      },
+       {
+        id: 4,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper3.png",
+        title: "P1034 MIO_670",
+        mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-pc-P1035_663.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-m-P1035_663.webp",
+    },
+      },
+       {
+        id: 5,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-swiper3.png",
+        title: "P1038_600",
+        mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-pc-P1038_600.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section3-m-P1038_600.webp",
+    },
+      },
+    ],
+  },
+  {
+    id: 4,
+    title: "Silhouette",
+    style: {
+      backgroundRotate: {
+        transform:
+          width.value > 768 ? "rotate(0.912deg) translateZ(0)" : "rotate(0deg)",
+        background:
+          width.value > 768
+            ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 0%, #E8E2DE 100%)"
+            : "",
+        boxShadow:
+          width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)" : "",
+      },
+      productSpecContentWrapper: {
+        flexDirection: width.value > 768 ? "row-reverse" : "column",
+        marginLeft: width.value > 768 ? "160px" : "auto",
+      },
+      productSpecImgWrapper: {
+        transform:
+          width.value > 768 ? "rotate(0.912deg) translateZ(0)" : "rotate(0deg)",
+        marginBottom: width.value > 768 ? "-10px" : "0",
+      },
+      productSpecBlock2: {
+        transform: width.value > 768 ? "rotate(-0.912deg)" : "rotate(0deg)",
+      },
+      moreBtn: {
+        background: "#FFFFFF",
+        color: "#4D4D4D",
+      },
+      moreBtnIco: "#4D4D4D",
+    },
+    description: [
+      "來自奧地利的 Silhouette，以「純粹、創新、輕盈」為品牌核心，將極致輕盈與現代美學推向新的高度。每一副 Silhouette 眼鏡都以卓越的設計與精密的工藝為基礎，完美融合實用功能與藝術美感，展現出低調而不失奢華的極簡風格。",
+      "Silhouette 以光學卓越為基礎，為每位佩戴者量身定制，實現無與倫比的舒適貼合。超輕量的高品質框架與鏡片設計，每一條線條都蘊含深意，每一個細節皆經過精密計算與打造，為佩戴者帶來幾乎無感的舒適體驗。",
+    ],
+  
+     currentSwiperIndex: 0,
+    swiper: [
+      {
+        id: 1,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper1.png?v0=20251205",
+        title: "1609 75 _4522",
+          mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1609 75 _4522.webp?v0=20251205",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1609 75 _4522.webp",
+    },
+      },
+      {
+        id: 2,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper2.png?v0=20251205",
+        title: "1618 75 _4140",
+          mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1618 75 _4140.webp?v0=20251205",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1618 75 _4140.webp",
+    },
+      },
+    ],
+  },
+  {
+    id: 5,
+    title: "MONOQOOL",
+    style: {
+      backgroundRotate: {
+        transform:
+          width.value > 768
+            ? "rotate(-1.377deg) translateZ(0)"
+            : "rotate(0deg)",
+        background:
+          width.value > 768
+            ? "radial-gradient(100.98% 100.81% at 50% 50%, #FFF 25.96%, #9B948A 100%)"
+            : "",
+        boxShadow:
+          width.value > 768 ? "0 15px 23px -2px rgba(18, 18, 18, 0.25)" : "",
+      },
+      productSpecContentWrapper: {
+        flexDirection: width.value > 768 ? "row" : "column",
+        marginRight: width.value > 768 ? "260px" : "auto",
+      },
+      productSpecImgWrapper: {
+        transform:
+          width.value > 768
+            ? "rotate(-1.377deg) translateZ(0)"
+            : "rotate(0deg)",
+        marginBottom: width.value > 768 ? "-53px" : "0",
+      },
+      productSpecBlock2: {
+        transform: width.value > 768 ? "rotate(-1.377deg)" : "rotate(0deg)",
+      },
+      moreBtn: {
+        background: "#8B8B8D",
+        color: "#ffffff",
+      },
+      moreBtnIco: "#FFFFFF",
+    },
+    description: [
+      "MONOQOOL 結合丹麥設計與日本製造的先驅眼鏡品牌，以簡潔設計與功能美學著稱，為眼鏡業帶來全新的創意科技。",
+      "品牌核心理念強調對環境友善和永續發展，品牌最為人熟知的是，鏡框製作採用尖端的 3D 列印技術，有效減少資源浪費，並顯著降低重量，達到輕巧而耐用的結構設計。",
+    ],
+    currentSwiperIndex: 0,
+    swiper: [
+      {
+        id: 1,
+         active: 1,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper1.png",
+        title: "The futurist_FU",
+          mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-pc-The futurist_FU.webp?v0=20251205",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-m-The futurist_FU.webp",
+    },
+      },
+      {
+        id: 2,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper2.png",
+        title: "Duke_DK",
+          mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-pc-Duke_DK.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-m-Duke_DK.webp",
+    },
+      },
+      {
+        id: 3,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper3.png",
+        title: "Daffodil_DF",
+          mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-pc-Daffodil_DF.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-m-Daffodil_DF.webp",
+    },
+      },
+       {
+        id: 4,
+         active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-swiper3.png",
+        title: "bungalow_BU",
+          mainImg: {
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-pc-bungalow_BU.webp",
+      mobile:
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section5-m-bungalow_BU.webp",
+    },
+      },
+    ],
+  },
+]);
+
+onMounted(() => {
+  handleResize();
+
+  window.addEventListener("resize", handleResize);
+
+  //   productSpec2.forEach((item) => {
+  //     productSpec.push(item);
+  //   });
 });
+
+
 
 // 計算寬度
 const computedSwiperWrapStyle = computed(() => {
   return (swiper) => {
     const length = swiper.length;
+
     console.log(length);
     let maxWidth = "900px";
     let maxHeight = "450px";
     if (length == 2 && width.value > 768) {
       maxWidth = "650px";
-    }else if (length >= 3 && width.value > 768) {
+    } else if (length >= 3 && width.value > 768) {
       maxWidth = "950px";
-    }
-    else if (length == 2 && width.value < 768) {
+    } else if (length == 2 && width.value < 768) {
       maxHeight = "309px";
-    }else if (length >= 3 && width.value < 768) {
-      maxHeight = "450px";
+    } else if (length >= 3 && width.value < 768) {
+      maxHeight = "380px";
     }
     return {
       maxWidth: maxWidth || "100%", // 使用傳入的參數或者默認值
       maxHeight: maxHeight || "auto",
-     
     };
   };
 });
@@ -397,16 +518,47 @@ const computedBreakPoints = computed(() => {
         1024: { slidesPerView: 2 },
       };
     }
-     if (length >= 3) {
+    if (length >= 3) {
+        
       return {
         640: { slidesPerView: 3 },
         768: { slidesPerView: 3 },
         1024: { slidesPerView: 3 },
       };
     }
-
   };
 });
+
+// 添加对宽度的监听
+watch(width, (newWidth) => {
+  // 宽度变化时强制更新所有 swiper
+  Object.values(swiperMap).forEach((swiper) => {
+    if (swiper) {
+      console.log("就哦哦哦", swiper);
+      
+      swiper.update();
+    //   swiper.changeDirection(getDirection());
+
+    
+     
+    }
+  });
+});
+// 輪播切換事件
+const onSlideChange = (specIndex, swiper) => {
+  console.log("specIndex", swiper);
+  console.log(
+    `Swiper =切換到第`,
+    specIndex,
+    `個產品，第`,
+    swiper.realIndex,
+    `張幻燈片`
+  );
+
+  productSpec[specIndex].swiper[swiper.realIndex].active = 1;
+
+  productSpec[specIndex].currentSwiperIndex = swiper.realIndex;
+};
 
 onUnmounted(() => {
   window.removeEventListener("resize", handleResize);
@@ -415,6 +567,8 @@ onUnmounted(() => {
 const swiperMap = reactive<Record<number, any>>({});
 
 const setSwiper = (index: number, swiper: any) => {
+  console.log("index", index);
+  console.log("swiper", index, swiper);
   swiperMap[index] = swiper;
 };
 
@@ -425,6 +579,58 @@ const handlesSliNext = (index: number) => {
 const handlesSliPrev = (index: number) => {
   swiperMap[index]?.slidePrev();
 };
+
+const handlesSliItem = (specIndex, swiperIndex) => {
+  console.log("specIndex", specIndex, swiperIndex);
+  productSpec[specIndex].swiper.forEach((element) => {
+    element.active = 0;
+  });
+  setTimeout(() => {
+    productSpec[specIndex].swiper[swiperIndex].active = 1;
+    console.log("productSpec", productSpec[0].swiper);
+    productSpec[specIndex].currentSwiperIndex = swiperIndex;
+  }, 500); // 等待过
+};
+
+
+// 處理小於等於3個的輪播圖（使用 async/await）
+const mapSwiperAsync = async () => {
+  let currentProductIndex = 0;
+  let currentSwiperIndex = 0;
+  
+  while (true) { // 無限循環
+    await new Promise(resolve => setTimeout(resolve, 2000));
+    
+    // 找到下一個有效產品
+    let found = false;
+    while (!found && currentProductIndex < productSpec.length) {
+      const product = productSpec[currentProductIndex];
+      
+      if (product.swiper.length <= 3) {
+        if (currentSwiperIndex < product.swiper.length) {
+          console.log(`處理產品 ${currentProductIndex} 的輪播 ${currentSwiperIndex}`);
+          handlesSliItem(currentProductIndex, currentSwiperIndex);
+          found = true;
+          
+          currentSwiperIndex++;
+        }
+      }
+      
+      // 如果當前產品處理完或不符合條件，移到下一個
+      if (!found) {
+        currentSwiperIndex = 0;
+        currentProductIndex++;
+      }
+    }
+    
+    // 重置循環
+    if (currentProductIndex >= productSpec.length) {
+      currentProductIndex = 0;
+      currentSwiperIndex = 0;
+    }
+  }
+};
+mapSwiperAsync()
 </script>
 
 <template>
@@ -512,15 +718,13 @@ const handlesSliPrev = (index: number) => {
 
             <img
               class="banner__main-img"
-              src="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc.webp"
-              srcset="
-                https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp  400w,
-                https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp  640w,
-                https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc.webp
+              :src="
+                width > 768
+                  ? 'https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp'
+                  : 'https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp'
               "
-              sizes=" (max-width: 992px) 100vw,1216px"
               alt="GLASSES"
-                title="GLASSES"
+              title="GLASSES"
             />
           </div>
         </div>
@@ -545,90 +749,125 @@ const handlesSliPrev = (index: number) => {
     <!-- end banner -->
 
     <!-- start product-spec -->
+   <div class="product-spec__container" style="z-index: 1;">
 
-    <div class="product-spec__container" style="z-index: 1">
-      <section
-        class="product-full-width-container"
-        v-for="(v, k) in productSpec"
-        :key="v.id"
-        v-if="productSpec.length > 0"
-        :id="`product-spec-${k}`"
-      >
-        <div
-         class="product-spec" :style="{ zIndex: productSpec.length - k }">
+
+
+
+
+      <section class="product-full-width-container" id="product-spec-0">
+        <div class="product-spec" :style="{ zIndex: productSpec.length - 0 }">
           <div
             class="background-rotate"
-            :style="v.style.backgroundRotate"
+            :style="{
+              transform:
+                width > 768
+                  ? 'rotate(-1.377deg) translateZ(0)'
+                  : 'rotate(0deg)',
+              background:
+                width > 768
+                  ? 'radial-gradient(100.98% 100.81% at 50% 50%,#fff 43.27%,#dad8d6 100%)'
+                  : '',
+              boxShadow:
+                width > 768 ? '0 15px 23px -2px rgba(18, 18, 18, 0.25)' : '',
+            }"
           ></div>
           <!-- mobile -->
           <div class="product-spec__wrapper">
             <div
               class="product-spec__content-wrapper"
-              :style="v.style.productSpecContentWrapper"
+              :style="{
+                flexDirection: width > 768 ? 'row' : 'column',
+                marginRight: width > 768 ? '260px' : 'auto',
+              }"
             >
               <div class="product-spec__block1">
                 <div
                   class="product-spec__img-wrapper"
-                  :style="v.style.productSpecImgWrapper"
+                  :style="{
+                    transform:
+                      width > 768
+                        ? 'rotate(-1.377deg) translateZ(0)'
+                        : 'rotate(0deg)',
+                    marginBottom: width > 768 ? '-12px' : '0',
+                  }"
                 >
                   <img
                     class="product-spec__img"
-                    :src="v.mainImg.pc"
-                    :srcset="`${v.mainImg.mobile} 400w, ${v.mainImg.mobile} 640w, ${v.mainImg.pc}`"
-                    sizes="(max-width: 992px) 100vw, 1216px"
-                    :alt="v['title']"
-                    :title="v['title']"
-                  
+                    :class="
+                      productSpec[0].swiper[productSpec[0].currentSwiperIndex]
+                        .active == 1
+                        ? ''
+                        : 'product-spec__img--hidden'
+                    "
+                    :src="
+                      width > 768
+                        ? productSpec[0].swiper[
+                            productSpec[0].currentSwiperIndex
+                          ].mainImg.pc
+                        : productSpec[0].swiper[
+                            productSpec[0].currentSwiperIndex
+                          ].mainImg.mobile
+                    "
+                    alt="LINDBERG"
+                    title="LINDBERG"
                   />
                 </div>
-
-                <!-- <img
-                                  class="product-spec__img"
-        src="https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc.webp"
-        srcset="
-          https://statichk.cmermedical.com/cmermedical/image/20251225/section1-m.webp 400w,
-          https://statichk.cmermedical.com/cmermedical/image/20251225/section1-m.webp 640w,
-          https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc.webp
-        "
-        sizes=" (max-width: 992px) 100vw,1216px"
-        alt=""
-      /> -->
               </div>
               <div class="product-spec__block2">
-                <div class="product-spec__brand">{{ v["title"] }}</div>
+                <div class="product-spec__brand">LINDBERG</div>
                 <div class="product-spec__content">
-                  <div
+                   <div
                     class="product-spec__description"
-                    v-for="(item, key) in v['description']"
+                    v-for="(item, key) in productSpec[0]['description']"
                     v-html="item"
                   ></div>
                 </div>
                 <!-- v.swiper.length > 3 ? 3 : v.swiper.length -->
                 <div
                   class="product-spec__swiper-wrap"
-                  :style="computedSwiperWrapStyle(v.swiper)"
+                 
+                 
+               
                 >
+                  <!-- :breakpoints="computedBreakPoints(productSpec[0].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true } :direction="width > 768 ? 'horizontal' : 'vertical'""-->
                   <swiper
-                    v-if="width > 0 && v.swiper?.length"
+
                     :direction="width > 768 ? 'horizontal' : 'vertical'"
                     :modules="modules"
-                    :breakpoints="computedBreakPoints(v.swiper)"
-                    :slides-per-view="'auto'"
-                    :space-between="width > 768 ? 24 : 42"
+                    :breakpoints="computedBreakPoints(productSpec[0].swiper)"
+            
+                     :slides-per-view="3"
+                    :space-between="width > 768 ? 24 : 20"
                     :loop="true"
                     :autoplay="{
                       delay: 2500,
                       disableOnInteraction: false,
                     }"
+
                     class="product-spec__myswiper"
-                    @swiper="(s) => setSwiper(k, s)"
+                    :style="computedSwiperWrapStyle(productSpec[0].swiper)"
+                    @swiper="(s) => setSwiper(0, s)"
+                    @slideChange="(s) => onSlideChange(0, s)"
+        
+                    
                   >
-                    <template v-for="item in v.swiper" :key="item.id">
-                      <swiper-slide class="product-spec__slider">
-                        <div class="product-spec__slider-item btn-animation">
+                    <template
+                      v-for="(item, index) in productSpec[0].swiper"
+                      :key="item.id"
+                     
+                    >
+                      <swiper-slide
+                        class="product-spec__slider"
+                        
+                        @click="handlesSliItem(0, index)"
+                       
+                      >
+                        <!--  -->
+                        <div class="product-spec__slider-item btn-animation" >
                           <img
                             :src="item.img"
-                            class="product-spec__swiper-img "
+                            class="product-spec__swiper-img"
                             :alt="item.title"
                             :title="item.title"
                             @load="onImgLoad"
@@ -642,7 +881,7 @@ const handlesSliPrev = (index: number) => {
                   </swiper>
 
                   <div class="swiper-button-next-prev">
-                    <div class="button-prev" @click="handlesSliPrev(k)">
+                    <div class="button-prev" @click="handlesSliPrev(0)">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 33 62"
@@ -656,7 +895,7 @@ const handlesSliPrev = (index: number) => {
                         />
                       </svg>
                     </div>
-                    <div class="button-next" @click="handlesSliNext(k)">
+                    <div class="button-next" @click="handlesSliNext(0)">
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 33 62"
@@ -673,7 +912,11 @@ const handlesSliPrev = (index: number) => {
                   </div>
                 </div>
                 <!-- 了解更多按鈕 -->
-                <a :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${v.title}詳情`" class="product-spec__more-btn btn-animation" :style="v.style.moreBtn">
+                <a
+                  :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${productSpec[0].title}詳情`"
+                  class="product-spec__more-btn btn-animation"
+                  :style="productSpec[0].style.moreBtn"
+                >
                   <span>了解更多</span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -684,7 +927,714 @@ const handlesSliPrev = (index: number) => {
                   >
                     <path
                       d="M1.01855 1.01562L7.25756 7.25463L1.01855 13.4936"
-                      :stroke="v.style.moreBtnIco"
+                      :stroke="productSpec[0].style.moreBtnIco"
+                      stroke-width="1.43977"
+                      stroke-linecap="square"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+       <section class="product-full-width-container" id="product-spec-1">
+        <div class="product-spec" :style="{ zIndex: productSpec.length - 1 }">
+          <div
+            class="background-rotate"
+            :style="{
+              transform:
+                width > 768
+                  ? 'rotate(0.912deg) translateZ(0)'
+                  : 'rotate(0deg)',
+              background:
+                width > 768
+                  ? 'radial-gradient(100.98% 100.81% at 50% 50%, #FFF 0%, #B3B3B3 100%)'
+                  : '',
+              boxShadow:
+                width > 768 ? '0 15px 23px -2px rgba(18, 18, 18, 0.25)' : '',
+            }"
+          ></div>
+          <!-- mobile -->
+          <div class="product-spec__wrapper">
+            <div
+              class="product-spec__content-wrapper"
+              :style="{
+                flexDirection: width > 768 ? 'row-reverse' : 'column',
+                marginLeft: width > 768 ? '260px' : 'auto',
+              }"
+            >
+              <div class="product-spec__block1">
+                <div
+                  class="product-spec__img-wrapper"
+                  :style="{
+                    transform:
+                      width > 768
+                        ? 'rotate(0.912deg) translateZ(0)'
+                        : 'rotate(0deg)',
+                    marginBottom: width > 768 ? '-10px' : '0',
+                  }"
+                >
+                  <img
+                    class="product-spec__img"
+                    :class="
+                      productSpec[1].swiper[productSpec[1].currentSwiperIndex]
+                        .active == 1
+                        ? ''
+                        : 'product-spec__img--hidden'
+                    "
+                    :src="
+                      width > 768
+                        ? productSpec[1].swiper[
+                            productSpec[1].currentSwiperIndex
+                          ].mainImg.pc
+                        : productSpec[1].swiper[
+                            productSpec[1].currentSwiperIndex
+                          ].mainImg.mobile
+                    "
+                    :alt="productSpec[1].title"
+                    :title="productSpec[1].title"
+                  />
+                </div>
+              </div>
+              <div class="product-spec__block2">
+                <div class="product-spec__brand">{{ productSpec[1].title }}</div>
+                <div class="product-spec__content">
+                   <div
+                    class="product-spec__description"
+                    v-for="(item, key) in productSpec[1]['description']"
+                    v-html="item"
+                  ></div>
+                </div>
+                <!-- v.swiper.length > 3 ? 3 : v.swiper.length -->
+                <div
+                  class="product-spec__swiper-wrap"
+             
+                  
+                >
+                  <!-- :breakpoints="computedBreakPoints(productSpec[1].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
+                  <swiper
+                    :direction="width > 768 ? 'horizontal' : 'vertical'"
+                    :modules="modules"
+                    :breakpoints="computedBreakPoints(productSpec[1].swiper)"
+                    :space-between="width > 768 ? 24 : 20"
+                     :slides-per-view="3"
+                    :loop="true"
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    :style="computedSwiperWrapStyle(productSpec[1].swiper)"
+                    class="product-spec__myswiper"
+                    @swiper="(s) => setSwiper(1, s)"
+                    @slideChange="(s) => onSlideChange(1, s)"
+                  >
+                    <template
+                      v-for="(item, index) in productSpec[1].swiper"
+                      :key="item.id"
+                      v-if="productSpec[1].swiper"
+                    >
+                      <swiper-slide
+                        class="product-spec__slider"
+                        @click="handlesSliItem(1, index)"
+                      >
+                        <!--  -->
+                        <div class="product-spec__slider-item btn-animation">
+                          <img
+                            :src="item.img"
+                            class="product-spec__swiper-img"
+                            :alt="item.title"
+                            :title="item.title"
+                            @load="onImgLoad"
+                          />
+                          <div class="product-spec__slider-title">
+                            {{ item.title }}
+                          </div>
+                        </div>
+                      </swiper-slide>
+                    </template>
+                  </swiper>
+
+                  <div class="swiper-button-next-prev">
+                    <div class="button-prev" @click="handlesSliPrev(1)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M30.8096 1.5L2.68694 27.8231C1.12148 29.2884 1.1012 31.7657 2.64246 33.2564L30.8096 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="button-next" @click="handlesSliNext(1)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M1.5 1.5L29.6226 27.8231C31.1881 29.2884 31.2084 31.7657 29.6671 33.2564L1.5 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- 了解更多按鈕 -->
+                <a
+                  :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${productSpec[1].title}詳情`"
+                  class="product-spec__more-btn btn-animation"
+                  :style="productSpec[1].style.moreBtn"
+                >
+                  <span>了解更多</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="9"
+                    height="15"
+                    viewBox="0 0 9 15"
+                    fill="none"
+                  >
+                    <path
+                      d="M1.01855 1.01562L7.25756 7.25463L1.01855 13.4936"
+                      :stroke="productSpec[1].style.moreBtnIco"
+                      stroke-width="1.43977"
+                      stroke-linecap="square"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+
+
+            <section class="product-full-width-container" id="product-spec-2">
+        <div class="product-spec" :style="{ zIndex: productSpec.length - 2 }">
+          <div
+            class="background-rotate"
+            :style="{
+              transform:
+                width > 768
+                  ? 'rotate(-1.377deg) translateZ(0)'
+                  : 'rotate(0deg)',
+              background:
+                width > 768
+                  ? 'radial-gradient(100.98% 100.81% at 50% 50%,#fff 43.27%,#dad8d6 100%)'
+                  : '',
+              boxShadow:
+                width > 768 ? '0 15px 23px -2px rgba(18, 18, 18, 0.25)' : '',
+            }"
+          ></div>
+          <!-- mobile -->
+          <div class="product-spec__wrapper">
+            <div
+              class="product-spec__content-wrapper"
+              :style="{
+                flexDirection: width > 768 ? 'row' : 'column',
+                marginRight: width > 768 ? '260px' : 'auto',
+              }"
+            >
+              <div class="product-spec__block1">
+                <div
+                  class="product-spec__img-wrapper"
+                  :style="{
+                    transform:
+                      width > 768
+                        ? 'rotate(-1.377deg) translateZ(0)'
+                        : 'rotate(0deg)',
+                    marginBottom: width > 768 ? '-12px' : '0',
+                  }"
+                >
+                  <img
+                    class="product-spec__img"
+                    :class="
+                      productSpec[2].swiper[productSpec[2].currentSwiperIndex]
+                        .active == 1
+                        ? ''
+                        : 'product-spec__img--hidden'
+                    "
+                    :src="
+                      width > 768
+                        ? productSpec[2].swiper[
+                            productSpec[2].currentSwiperIndex
+                          ].mainImg.pc
+                        : productSpec[2].swiper[
+                            productSpec[2].currentSwiperIndex
+                          ].mainImg.mobile
+                    "
+                    :alt="productSpec[2].title"
+                    :title="productSpec[2].title"
+                  />
+                </div>
+              </div>
+              <div class="product-spec__block2">
+                <div class="product-spec__brand">{{ productSpec[2].title }}</div>
+                <div class="product-spec__content">
+                   <div
+                    class="product-spec__description"
+                    v-for="(item, key) in productSpec[2]['description']"
+                    v-html="item"
+                  ></div>
+                </div>
+                <!-- v.swiper.length > 3 ? 3 : v.swiper.length -->
+                <div
+                  class="product-spec__swiper-wrap"
+                  
+                >
+                  <!-- :breakpoints="computedBreakPoints(productSpec[2].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
+                  <swiper
+                    :direction="width > 768 ? 'horizontal' : 'vertical'"
+                    :modules="modules"
+                    :breakpoints="computedBreakPoints(productSpec[2].swiper)"
+                    :space-between="width > 768 ? 24 : 20"
+                    :slides-per-view="3"
+                    :loop="true"
+               
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    class="product-spec__myswiper"
+                    :style="computedSwiperWrapStyle(productSpec[2].swiper)"
+                    @swiper="(s) => setSwiper(2, s)"
+                    @slideChange="(s) => onSlideChange(2, s)"
+                  >
+                    <template
+                      v-for="(item, index) in productSpec[2].swiper"
+                      :key="item.id"
+                      v-if="productSpec[2].swiper"
+                    >
+                      <swiper-slide
+                        class="product-spec__slider"
+                        @click="handlesSliItem(2, index)"
+                      >
+                        <!--  -->
+                        <div class="product-spec__slider-item btn-animation">
+                          <img
+                            :src="item.img"
+                            class="product-spec__swiper-img"
+                            :alt="item.title"
+                            :title="item.title"
+                            @load="onImgLoad"
+                          />
+                          <div class="product-spec__slider-title">
+                            {{ item.title }}
+                          </div>
+                        </div>
+                      </swiper-slide>
+                    </template>
+                  </swiper>
+
+                  <div class="swiper-button-next-prev">
+                    <div class="button-prev" @click="handlesSliPrev(2)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M30.8096 1.5L2.68694 27.8231C1.12148 29.2884 1.1012 31.7657 2.64246 33.2564L30.8096 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="button-next" @click="handlesSliNext(2)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M1.5 1.5L29.6226 27.8231C31.1881 29.2884 31.2084 31.7657 29.6671 33.2564L1.5 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- 了解更多按鈕 -->
+                <a
+                  :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${productSpec[2].title}詳情`"
+                  class="product-spec__more-btn btn-animation"
+                  :style="productSpec[2].style.moreBtn"
+                >
+                  <span>了解更多</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="9"
+                    height="15"
+                    viewBox="0 0 9 15"
+                    fill="none"
+                  >
+                    <path
+                      d="M1.01855 1.01562L7.25756 7.25463L1.01855 13.4936"
+                      :stroke="productSpec[2].style.moreBtnIco"
+                      stroke-width="1.43977"
+                      stroke-linecap="square"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+        <section class="product-full-width-container" id="product-spec-3">
+        <div class="product-spec" :style="{ zIndex: productSpec.length - 3 }">
+          <div
+            class="background-rotate"
+            :style="{
+              transform:
+                width > 768
+                  ? 'rotate(0.912deg) translateZ(0)'
+                  : 'rotate(0deg)',
+              background:
+                width > 768
+                  ? 'radial-gradient(100.98% 100.81% at 50% 50%, #FFF 0%, #E8E2DE 100%)'
+                  : '',
+              boxShadow:
+                width > 768 ? '0 15px 23px -2px rgba(18, 18, 18, 0.25)' : '',
+            }"
+          ></div>
+          <!-- mobile -->
+          <div class="product-spec__wrapper">
+            <div
+              class="product-spec__content-wrapper"
+              :style="{
+                flexDirection: width > 768 ? 'row-reverse' : 'column',
+                marginLeft: width > 768 ? '160px' : 'auto',
+              }"
+            >
+              <div class="product-spec__block1">
+                <div
+                  class="product-spec__img-wrapper"
+                  :style="{
+                    transform:
+                      width > 768
+                        ? 'rotate(0.912deg) translateZ(0)'
+                        : 'rotate(0deg)',
+                    marginBottom: width > 768 ? '-10px' : '0',
+                  }"
+                >
+                  <img
+                    class="product-spec__img"
+                    :class="
+                      productSpec[3].swiper[productSpec[3].currentSwiperIndex]
+                        .active == 1
+                        ? ''
+                        : 'product-spec__img--hidden'
+                    "
+                    :src="
+                      width > 768
+                        ? productSpec[3].swiper[
+                            productSpec[3].currentSwiperIndex
+                          ].mainImg.pc
+                        : productSpec[3].swiper[
+                            productSpec[3].currentSwiperIndex
+                          ].mainImg.mobile
+                    "
+                    :alt="productSpec[3].title"
+                    :title="productSpec[3].title"
+                  />
+                </div>
+              </div>
+              <div class="product-spec__block2">
+                <div class="product-spec__brand">{{ productSpec[3].title }}</div>
+                <div class="product-spec__content">
+                   <div
+                    class="product-spec__description"
+                    v-for="(item, key) in productSpec[3]['description']"
+                    v-html="item"
+                  ></div>
+                </div>
+                <!-- v.swiper.length > 3 ? 3 : v.swiper.length -->
+                <div
+                  class="product-spec__swiper-wrap"
+                  :style="computedSwiperWrapStyle(productSpec[3].swiper)"
+                >
+                  <!-- :breakpoints="computedBreakPoints(productSpec[3].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
+                  <swiper
+                    :direction="width > 768 ? 'horizontal' : 'vertical'"
+                    :modules="modules"
+                    :breakpoints="computedBreakPoints(productSpec[3].swiper)"
+                    :space-between="width > 768 ? 24 : 42"
+                      :slides-per-view="'auto'"
+                    :loop="true"
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    class="product-spec__myswiper"
+                    @swiper="(s) => setSwiper(3, s)"
+                    @slideChange="(s) => onSlideChange(3, s)"
+                    
+                  >
+                    <template
+                      v-for="(item, index) in productSpec[3].swiper"
+                      :key="item.id"
+                      v-if="productSpec[3].swiper"
+                    >
+                      <swiper-slide
+                        class="product-spec__slider"
+                        @click="handlesSliItem(3, index)"
+                      >
+                        <!--  -->
+                        <div class="product-spec__slider-item btn-animation">
+                          <img
+                            :src="item.img"
+                            class="product-spec__swiper-img"
+                            :alt="item.title"
+                            :title="item.title"
+                            @load="onImgLoad"
+                          />
+                          <div class="product-spec__slider-title">
+                            {{ item.title }}
+                          </div>
+                        </div>
+                      </swiper-slide>
+                    </template>
+                  </swiper>
+
+                  <div class="swiper-button-next-prev">
+                    <div class="button-prev" @click="handlesSliPrev(3)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M30.8096 1.5L2.68694 27.8231C1.12148 29.2884 1.1012 31.7657 2.64246 33.2564L30.8096 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="button-next" @click="handlesSliNext(3)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M1.5 1.5L29.6226 27.8231C31.1881 29.2884 31.2084 31.7657 29.6671 33.2564L1.5 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- 了解更多按鈕 -->
+                <a
+                  :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${productSpec[3].title}詳情`"
+                  class="product-spec__more-btn btn-animation"
+                  :style="productSpec[3].style.moreBtn"
+                >
+                  <span>了解更多</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="9"
+                    height="15"
+                    viewBox="0 0 9 15"
+                    fill="none"
+                  >
+                    <path
+                      d="M1.01855 1.01562L7.25756 7.25463L1.01855 13.4936"
+                      :stroke="productSpec[3].style.moreBtnIco"
+                      stroke-width="1.43977"
+                      stroke-linecap="square"
+                    />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      
+      <section class="product-full-width-container" id="product-spec-4">
+        <div class="product-spec" :style="{ zIndex: productSpec.length - 4 }">
+          <div
+            class="background-rotate"
+            :style="{
+              transform:
+                width > 768
+                  ? 'rotate(-1.377deg) translateZ(0)'
+                  : 'rotate(0deg)',
+              background:
+                width > 768
+                  ? 'radial-gradient(100.98% 100.81% at 50% 50%, #FFF 25.96%, #9B948A 100%)'
+                  : '',
+              boxShadow:
+                width > 768 ? '0 15px 23px -2px rgba(18, 18, 18, 0.25)' : '',
+            }"
+          ></div>
+          <!-- mobile -->
+          <div class="product-spec__wrapper">
+            <div
+              class="product-spec__content-wrapper"
+              :style="{
+                flexDirection: width > 768 ? 'row' : 'column',
+                marginRight: width > 768 ? '260px' : 'auto',
+              }"
+            >
+              <div class="product-spec__block1">
+                <div
+                  class="product-spec__img-wrapper"
+                  :style="{
+                    transform:
+                      width > 768
+                        ? 'rotate(-1.377deg) translateZ(0)'
+                        : 'rotate(0deg)',
+                    marginBottom: width > 768 ? '-12px' : '0',
+                  }"
+                >
+                  <img
+                    class="product-spec__img"
+                    :class="
+                      productSpec[4].swiper[productSpec[4].currentSwiperIndex].active == 1 ? '': 'product-spec__img--hidden'"
+                    :src="
+                      width > 768
+                        ? productSpec[4].swiper[
+                            productSpec[4].currentSwiperIndex
+                          ].mainImg.pc
+                        : productSpec[4].swiper[
+                            productSpec[4].currentSwiperIndex
+                          ].mainImg.mobile
+                    "
+                    :alt="productSpec[4].title"
+                    :title="productSpec[4].title"
+                  />
+                </div>
+              </div>
+              <div class="product-spec__block2">
+                <div class="product-spec__brand">{{ productSpec[4].title }}</div>
+                <div class="product-spec__content">
+                   <div
+                    class="product-spec__description"
+                    v-for="(item, key) in productSpec[4]['description']"
+                    v-html="item"
+                  ></div>
+                </div>
+                <!-- v.swiper.length > 3 ? 3 : v.swiper.length  :style="computedSwiperWrapStyle(productSpec[4].swiper)"-->
+                <div
+                  class="product-spec__swiper-wrap"
+               
+                >
+                  <!-- :breakpoints="computedBreakPoints(productSpec[4].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
+                  <swiper
+                    :direction="width > 768 ? 'horizontal' : 'vertical'"
+                    :modules="modules"
+                    :breakpoints="computedBreakPoints(productSpec[4].swiper)"
+                    :space-between="width > 768 ? 24 : 20"
+                    :loop="true"
+                      :slides-per-view="3"
+                    :autoplay="{
+                      delay: 2500,
+                      disableOnInteraction: false,
+                    }"
+                    class="product-spec__myswiper"
+   :style="computedSwiperWrapStyle(productSpec[4].swiper)"
+                    @swiper="(s) => setSwiper(4, s)"
+                    @slideChange="(s) => onSlideChange(4, s)"
+                  >
+                    <template
+                      v-for="(item, index) in productSpec[4].swiper"
+                      :key="item.id"
+                      v-if="productSpec[4].swiper"
+                    >
+                      <swiper-slide
+                        class="product-spec__slider"
+                        @click="handlesSliItem(4, index)"
+                      >
+                        <!--  -->
+                        <div class="product-spec__slider-item btn-animation">
+                          <img
+                            :src="item.img"
+                            class="product-spec__swiper-img"
+                            :alt="item.title"
+                            :title="item.title"
+                            @load="onImgLoad"
+                          />
+                          <div class="product-spec__slider-title">
+                            {{ item.title }}
+                          </div>
+                        </div>
+                      </swiper-slide>
+                    </template>
+                  </swiper>
+
+                  <div class="swiper-button-next-prev">
+                    <div class="button-prev" @click="handlesSliPrev(4)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M30.8096 1.5L2.68694 27.8231C1.12148 29.2884 1.1012 31.7657 2.64246 33.2564L30.8096 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    <div class="button-next" @click="handlesSliNext(4)">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 0 33 62"
+                        fill="none"
+                      >
+                        <path
+                          d="M1.5 1.5L29.6226 27.8231C31.1881 29.2884 31.2084 31.7657 29.6671 33.2564L1.5 60.5"
+                          stroke="#4D4D4D"
+                          stroke-width="3"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                  </div>
+                </div>
+                <!-- 了解更多按鈕 -->
+                <a
+                  :href="`https://api.whatsapp.com/send?phone=85269180511&text=你好，我想查詢希瑪視光中心X${productSpec[4].title}詳情`"
+                  class="product-spec__more-btn btn-animation"
+                  :style="productSpec[4].style.moreBtn"
+                >
+                  <span>了解更多</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="9"
+                    height="15"
+                    viewBox="0 0 9 15"
+                    fill="none"
+                  >
+                    <path
+                      d="M1.01855 1.01562L7.25756 7.25463L1.01855 13.4936"
+                      :stroke="productSpec[4].style.moreBtnIco"
                       stroke-width="1.43977"
                       stroke-linecap="square"
                     />
@@ -696,6 +1646,12 @@ const handlesSliPrev = (index: number) => {
         </div>
       </section>
     </div>
+
+
+
+
+       
+
     <!-- end product-spec -->
 
     <!-- start address -->
@@ -746,8 +1702,7 @@ const handlesSliPrev = (index: number) => {
                   href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%B8%8C%E7%91%AA%E8%A6%96%E5%85%89%E4%B8%AD%E5%BF%83%20X%20999.9%20TrunkShow%E8%A9%B3%E6%83%85"
                   class="address__whatsapp btn-animation"
                 >
-                  <span
-                  class="address__whatsapp-icon"
+                  <span class="address__whatsapp-icon"
                     ><svg
                       xmlns="http://www.w3.org/2000/svg"
                       width="26"
@@ -780,7 +1735,6 @@ const handlesSliPrev = (index: number) => {
 
 
 <style lang="scss" scoped>
-
-@import url('https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Noto+Sans+HK:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Noto+Sans+HK:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @import "./index.css";
 </style>

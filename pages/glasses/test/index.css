@@ -1,13 +1,10 @@
 body {
   margin: 0;
   padding: 0;
-
 }
 * {
   box-sizing: border-box;
 }
-
-
 
 .btn-animation {
  transition: all 0.3s ease;
@@ -32,7 +29,6 @@ body {
     height: 100%;
     position: relative;
     background: #f8f7f5;
-    overflow: hidden;
   }
   .banner__content {
     position: relative;
@@ -147,11 +143,6 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    
- scroll-behavior: smooth;
-  -webkit-scroll-behavior: smooth; /* Safari */
-  -moz-scroll-behavior: smooth; /* 旧版 Firefox */
-   
   }
   .product-full-width-container {
     width: 100vw;
@@ -163,9 +154,6 @@ body {
     padding: 0;
     box-sizing: border-box;
      scroll-margin-top: 100px;
-
-  
-     
   }
 
   .product-spec {
@@ -207,8 +195,6 @@ body {
 
   .product-spec__swiper-wrap {
     max-width: 868px;
-    
-
     position: relative;
     margin-top: 65px;
     padding: 0 80px;
@@ -247,19 +233,13 @@ body {
   }
   .product-spec__img-wrapper {
     overflow: hidden;
-    max-width: 870px;
-    max-height: 870px;
+    height: 870px;
   }
   .product-spec__img {
     display: block;
     will-change: transform;
     pointer-events: none;
-  
-   transition: opacity 0.5s ease-in-out; /* 设置过渡效果 */
   }
- .product-spec__img--hidden {
-  /* opacity: 0;  */
- }
   .product-spec__content {
     margin-top: 60px;
     display: flex;
@@ -287,7 +267,7 @@ body {
     display: flex;
     justify-content: space-between;
 
-    z-index: 0;
+    z-index: 10;
   }
 
   /* 通用按鈕樣式 */
@@ -323,7 +303,6 @@ body {
     font-weight: 400;
     line-height: normal;
     letter-spacing: 2.8px;
-    text-wrap: nowrap;
   }
 
   /* end section1 */
@@ -347,7 +326,6 @@ body {
     height: 100%;
     position: relative;
     background: #f8f7f5;
-
   }
   .banner__content {
     position: relative;
@@ -478,7 +456,6 @@ body {
   }
   .product-spec__wrapper {
     position: relative;
-    overflow: hidden;
   }
 
   .product-spec__content-wrapper {
@@ -495,19 +472,16 @@ body {
     width: 100%;
     display: flex;
     justify-content: end;
-    overflow: hidden;
   }
   .product-spec__block2 {
   }
 
   .product-spec__swiper-wrap {
- 
+    max-height: 400px;
     padding: 30px 0;
     position: absolute;
     top: 114px;
-    left: 39px;
-   
-
+    left: 9%;
   }
   .product-spec__brand {
     position: absolute;
@@ -523,11 +497,9 @@ body {
     letter-spacing: 10.771px;
     border-bottom: 1px solid #4d4d4d;
     text-wrap: nowrap;
-    
   }
   .product-spec__myswiper {
     height: 100%;
-    
   }
 
   .product-spec__slider {
@@ -561,10 +533,6 @@ body {
     padding-top: 167px;
     height: 663px;
     pointer-events: none;
-       transition: opacity 0.5s ease-in-out; /* 设置过渡效果 */
-  }
-  .product-spec__img--hidden {
-    /* opacity: 0; */
   }
   .product-spec__content {
     margin-top: 30px;
@@ -595,7 +563,7 @@ body {
     justify-content: space-between;
     align-items: center;
     flex-direction: column;
-    z-index: 0;
+    z-index: 10;
   }
 
   /* 通用按鈕樣式 */
@@ -629,7 +597,6 @@ body {
     top: 558px;
     transform: translate(-50%, 0px);
     left: 50%;
-    text-wrap: nowrap;
   }
   .product-spec__more-btn span {
     /* color: #fff; */
