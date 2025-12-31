@@ -363,9 +363,9 @@ const productSpec = reactive([
         img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper1.png?v0=20251205",
         title: "1609 75 _4522",
           mainImg: {
-      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1609 75 _4522.webp?v0=20251205",
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1609_75_4522.webp?v0=20251205",
       mobile:
-        "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1609 75 _4522.webp",
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1609_75_4522.webp",
     },
       },
       {
@@ -374,9 +374,9 @@ const productSpec = reactive([
         img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper2.png?v0=20251205",
         title: "1618 75 _4140",
           mainImg: {
-      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1618 75 _4140.webp?v0=20251205",
+      pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1618_75_4140.webp?v0=20251205",
       mobile:
-        "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1618 75 _4140.webp",
+        "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1618_75_4140.webp",
     },
       },
     ],
@@ -475,6 +475,7 @@ onMounted(() => {
   handleResize();
 
   window.addEventListener("resize", handleResize);
+  mapSwiperAsync()
 
   //   productSpec2.forEach((item) => {
   //     productSpec.push(item);
@@ -534,7 +535,7 @@ watch(width, (newWidth) => {
   // 宽度变化时强制更新所有 swiper
   Object.values(swiperMap).forEach((swiper) => {
     if (swiper) {
-      console.log("就哦哦哦", swiper);
+    //   console.log("就哦哦哦", swiper);
       
       swiper.update();
     //   swiper.changeDirection(getDirection());
@@ -597,40 +598,42 @@ const handlesSliItem = (specIndex, swiperIndex) => {
 const mapSwiperAsync = async () => {
   let currentProductIndex = 0;
   let currentSwiperIndex = 0;
-  
+
   while (true) { // 無限循環
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
+    // 等待 2.5 秒
+    await new Promise(resolve => setTimeout(resolve, 2500));
+
     // 找到下一個有效產品
     let found = false;
     while (!found && currentProductIndex < productSpec.length) {
       const product = productSpec[currentProductIndex];
-      
+
       if (product.swiper.length <= 3) {
         if (currentSwiperIndex < product.swiper.length) {
-          console.log(`處理產品 ${currentProductIndex} 的輪播 ${currentSwiperIndex}`);
+        //   console.log(`處理產品 ${currentProductIndex} 的輪播 ${currentSwiperIndex}`);
           handlesSliItem(currentProductIndex, currentSwiperIndex);
           found = true;
-          
+
           currentSwiperIndex++;
         }
       }
-      
+
       // 如果當前產品處理完或不符合條件，移到下一個
       if (!found) {
-        currentSwiperIndex = 0;
+        currentSwiperIndex = 0; // 重置 swiper index
         currentProductIndex++;
       }
     }
-    
-    // 重置循環
+
+    // 如果處理完所有產品，重新開始
     if (currentProductIndex >= productSpec.length) {
       currentProductIndex = 0;
-      currentSwiperIndex = 0;
+      currentSwiperIndex = 0; // 重置到第一個產品
     }
   }
 };
-mapSwiperAsync()
+
+
 </script>
 
 <template>
