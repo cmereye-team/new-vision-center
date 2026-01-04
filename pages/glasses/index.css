@@ -1,10 +1,42 @@
+html, body {
+  scroll-behavior: smooth;
+}
+
+/* 确保全局的平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
-
 }
+
 * {
   box-sizing: border-box;
+}
+
+
+/* 调试信息 - 可以通过浏览器控制台检查 */
+:root {
+  --debug-scroll: true;
+}
+
+/* 平滑滚动调试样式 */
+html[data-scroll-debug] {
+  outline: 2px solid red;
+}
+
+/* 增强平滑滚动的兼容性 */
+a[href^="#"] {
+  scroll-behavior: smooth;
+}
+
+/* 如果scroll-behavior不支持，使用JavaScript辅助 */
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
 }
 
 
@@ -247,7 +279,7 @@ body {
   }
   .product-spec__img-wrapper {
     overflow: hidden;
-    max-width: 870px;
+    width: 870px;
     max-height: 870px;
   }
   .product-spec__img {
