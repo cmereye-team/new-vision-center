@@ -59,19 +59,19 @@ const onImgLoad = () => {
 };
 
 useHead(() => ({
-  title: "眼鏡｜希瑪視光中心",
+  title: "鏡框類型 | 眼鏡品牌 | 希瑪視光中心",
   meta: [
     {
       hid: "description",
       name: "description",
       content:
-        "希瑪眼科視光中心是您的全方位視光服務中心，我們的註冊視光師提供專業的驗眼服務，並提供各種眼鏡選擇，包括hoya漸進鏡片、全視線鏡片、老花鏡等。我們的眼鏡價錢公道，並經常有配眼鏡優惠活動。我們還提供老花隱形眼鏡和兒童近視控制鏡片等產品。無論您是需要驗眼服務，還是尋找高品質的眼鏡，希瑪視光中心都能滿足您的需求。立即聯絡我們了解更多信息。",
+        "希瑪視光中心提供驗眼及配鏡服務，嚴選多個國際高端鏡框品牌，包括999.9、Silhouette、LINDBERG、MONOQOOL、MARKUS T。視光師會根據你的視力狀況和日常用眼需要，為你推薦最合適的眼鏡，配戴更舒適自然。有別於一般眼鏡店，我們提供售後跟進服務，配鏡片可享度數保證以及品質保證，立即預約配鏡。",
     },
     {
-      hid: "Keywords",
-      name: "Keywords",
+      hid: "keywords",
+      name: "keywords",
       content:
-        "眼鏡優惠 配眼鏡優惠 hoya漸進鏡片價錢 漸進鏡片價錢 全視線鏡片價錢 全視線漸進鏡價錢 hoya鏡片價錢 zeiss鏡片價錢 漸進眼鏡價錢 眼鏡價錢 配眼鏡價錢 老花隱形眼鏡價錢 漸進老花眼鏡價錢 hoya兒童近視控制鏡片價錢 OK鏡 ok鏡價錢 老花鏡 老花眼鏡 老花隱形眼鏡 兒童近視控制鏡片價格 近視控制鏡片 驗眼費用 驗眼價錢 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+        "眼鏡 眼鏡品牌 眼鏡 999.9 眼鏡店 眼鏡舖 眼鏡框 鏡框 鏡框類型 鏡框品牌 silhouette glasses hong kong silhouette glasses frames silhouette glasses silhouette glasses price silhouette 眼鏡 silhouette 眼鏡 價格 silhouette 眼鏡 香港 silhouette眼鏡價錢 999.9 eyewear 999.9 eyewear price 999.9 glasses 999.9 glasses hk 999.9 glasses price 999.9 眼鏡 999.9 眼鏡 價錢 999.9 眼鏡 香港 lindberg glasses lindberg glasses hk lindberg glasses price lindberg frames lindberg 眼鏡 lindberg 眼鏡 價格 markus t eyewear markus t glasses markus t glasses price markus t hong kong markus t眼鏡 markus 眼鏡 monoqool glasses monoqool glasses price onoqool eyewear monoqool frames monoqool price glasses glasses hong kong glasses frames",
     },
   ],
 }));
@@ -763,7 +763,7 @@ const mapSwiperAsync = async () => {
         <div class="banner__content">
           <div class="banner__main">
             <div class="banner__main-text-wrap">
-              <div class="banner__main-text">GLASSES</div>
+              <h1 class="banner__main-text">GLASSES</h1>
               <div class="banner__text-ui">
                 <a
                   href="#product-spec-0"
@@ -952,7 +952,7 @@ const mapSwiperAsync = async () => {
                 </div>
               </div>
               <div class="product-spec__block2">
-                <div class="product-spec__brand">LINDBERG</div>
+                <h2 class="product-spec__brand">LINDBERG</h2>
                 <div class="product-spec__content">
                   <div
                     class="product-spec__description"
@@ -1123,9 +1123,9 @@ const mapSwiperAsync = async () => {
                 </div>
               </div>
               <div class="product-spec__block2">
-                <div class="product-spec__brand">
+                <h2 class="product-spec__brand">
                   {{ productSpec[1].title }}
-                </div>
+                </h2>
                 <div class="product-spec__content">
                   <div
                     class="product-spec__description"
@@ -1297,9 +1297,9 @@ const mapSwiperAsync = async () => {
                 </div>
               </div>
               <div class="product-spec__block2">
-                <div class="product-spec__brand">
+                <h2 class="product-spec__brand">
                   {{ productSpec[2].title }}
-                </div>
+                </h2>
                 <div class="product-spec__content">
                   <div
                     class="product-spec__description"
@@ -1469,9 +1469,9 @@ const mapSwiperAsync = async () => {
                 </div>
               </div>
               <div class="product-spec__block2">
-                <div class="product-spec__brand">
+                <h2 class="product-spec__brand">
                   {{ productSpec[3].title }}
-                </div>
+                </h2>
                 <div class="product-spec__content">
                   <div
                     class="product-spec__description"
@@ -1647,9 +1647,9 @@ const mapSwiperAsync = async () => {
                 </div>
               </div>
               <div class="product-spec__block2">
-                <div class="product-spec__brand">
+                <h2 class="product-spec__brand">
                   {{ productSpec[4].title }}
-                </div>
+                </h2>
                 <div class="product-spec__content">
                   <div
                     class="product-spec__description"
