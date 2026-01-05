@@ -159,6 +159,41 @@ const productSpec = reactive([
         },
         active: 0,
       },
+
+  // 複製
+       {
+        id: 1,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper1.png",
+        title: "5543＿PU15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc2.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-5543＿PU15.webp",
+        },
+        active: 1,
+      },
+      {
+        id: 2,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper2.png",
+        title: "9760_U9",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc3.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-9760_U9.webp?v1",
+        },
+        active: 0,
+      },
+      {
+        id: 3,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-swiper3.png",
+        title: "9768_U15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section1-9768_U15.webp",
+        },
+        active: 0,
+      },
     ],
   },
   {
@@ -233,6 +268,43 @@ const productSpec = reactive([
             "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
         },
       },
+
+
+      // 複製
+          {
+        id: 1,
+        active: 1,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper1.png",
+        title: "5543＿PU15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+      {
+        id: 2,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper2.png",
+        title: "9760_U9",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+      {
+        id: 3,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper3.png",
+        title: "9768_U15",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+
       //    {
       //     id: 4,
       //      active: 0,
@@ -407,6 +479,30 @@ const productSpec = reactive([
             "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1618_75_4140SS.webp?V1=20251205",
         },
       },
+
+// 複製
+       {
+        id: 1,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper1.png?v0=20251205",
+        title: "1609 75 _4522",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1609_75_4522.webp?v0=20251205",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1609_75_4522.webp",
+        },
+      },
+      {
+        id: 2,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-swiper2.png?v0=20251205",
+        title: "1618 75 _4140",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-pc-1618_75_4140.webp?v0=20251205",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section4-m-1618_75_4140SS.webp?V1=20251205",
+        },
+      },
     ],
   },
   {
@@ -522,11 +618,11 @@ const computedSwiperWrapStyle = computed(() => {
     let maxWidth = "900px";
     let maxHeight = "450px";
     if (length == 2 && width.value > 768) {
-      maxWidth = "650px";
+      maxWidth = "450px";
     } else if (length >= 3 && width.value > 768) {
       maxWidth = "950px";
     } else if (length == 2 && width.value < 768) {
-      maxHeight = "309px";
+      maxHeight = "240px";
     } else if (length >= 3 && width.value < 768) {
       maxHeight = "380px";
     }
@@ -873,7 +969,8 @@ const mapSwiperAsync = async () => {
                     :breakpoints="computedBreakPoints(productSpec[0].swiper)"
                     :slides-per-view="3"
                     :space-between="width > 768 ? 24 : 20"
-                    :loop-additional-slides="3"
+           
+                 
                     :loop="true"
                     :autoplay="{
                       delay: 2500,
@@ -893,7 +990,7 @@ const mapSwiperAsync = async () => {
                         @click="handlesSliItem(0, index)"
                       >
                         <!--  -->
-                        <div class="product-spec__slider-item btn-animation">
+                        <div class="product-spec__slider-item">
                           <img
                             :src="item.img"
                             class="product-spec__swiper-img"
@@ -1065,7 +1162,7 @@ const mapSwiperAsync = async () => {
                         @click="handlesSliItem(1, index)"
                       >
                         <!--  -->
-                        <div class="product-spec__slider-item btn-animation">
+                        <div class="product-spec__slider-item">
                           <img
                             :src="item.img"
                             class="product-spec__swiper-img"
@@ -1239,7 +1336,7 @@ const mapSwiperAsync = async () => {
                         @click="handlesSliItem(2, index)"
                       >
                         <!--  -->
-                        <div class="product-spec__slider-item btn-animation">
+                        <div class="product-spec__slider-item">
                           <img
                             :src="item.img"
                             class="product-spec__swiper-img"
@@ -1385,20 +1482,22 @@ const mapSwiperAsync = async () => {
                 <!-- v.swiper.length > 3 ? 3 : v.swiper.length -->
                 <div
                   class="product-spec__swiper-wrap"
-                  :style="computedSwiperWrapStyle(productSpec[3].swiper)"
+                
                 >
-                  <!-- :breakpoints="computedBreakPoints(productSpec[3].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
+                  <!--  :style="computedSwiperWrapStyle(['',''])" :breakpoints="computedBreakPoints(productSpec[3].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
                   <swiper
                     :direction="width > 768 ? 'horizontal' : 'vertical'"
                     :modules="modules"
-                    :breakpoints="computedBreakPoints(productSpec[3].swiper)"
-                    :space-between="width > 768 ? 24 : 42"
-                    :slides-per-view="'auto'"
+  
+                   
+                    :space-between="width > 768 ? 24 : 20"
+                   :slidesPerView="'2'" 
                     :loop="true"
                     :autoplay="{
                       delay: 2500,
                       disableOnInteraction: false,
                     }"
+                      :style="computedSwiperWrapStyle(['',''])"
                     class="product-spec__myswiper"
                     @swiper="(s) => setSwiper(3, s)"
                     @slideChange="(s) => onSlideChange(3, s)"
@@ -1413,7 +1512,7 @@ const mapSwiperAsync = async () => {
                         @click="handlesSliItem(3, index)"
                       >
                         <!--  -->
-                        <div class="product-spec__slider-item btn-animation">
+                        <div class="product-spec__slider-item">
                           <img
                             :src="item.img"
                             class="product-spec__swiper-img"
@@ -1587,7 +1686,7 @@ const mapSwiperAsync = async () => {
                         @click="handlesSliItem(4, index)"
                       >
                         <!--  -->
-                        <div class="product-spec__slider-item btn-animation">
+                        <div class="product-spec__slider-item">
                           <img
                             :src="item.img"
                             class="product-spec__swiper-img"
@@ -1710,7 +1809,7 @@ const mapSwiperAsync = async () => {
               <div class="address__info-content">
                 <div class="address__phone">+852 3892 5089</div>
                 <a
-                  href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2%E5%B8%8C%E7%91%AA%E8%A6%96%E5%85%89%E4%B8%AD%E5%BF%83%20X%20999.9%20TrunkShow%E8%A9%B3%E6%83%85"
+                  href="https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD%EF%BC%8C%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
                   class="address__whatsapp btn-animation"
                 >
                   <span class="address__whatsapp-icon"

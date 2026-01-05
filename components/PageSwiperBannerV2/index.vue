@@ -33,11 +33,15 @@ onMounted(() => {
     class="banner-swiper"
   >
     <swiper-slide v-for="(item, index) in banner" :key="index">
+    
+       <nuxt-link  :to="item?.link || '#'">
       <img
         :src="isMobile ? item.mobile : item.pc"
         :alt="`banner-${index}`"
         class="w-full object-cover"
       />
+      </nuxt-link>
+
     </swiper-slide>
   </swiper>
 </template>
@@ -47,7 +51,7 @@ onMounted(() => {
   // width: 100%;
   max-width: 1320px;
   margin: 0 auto;
-  height: auto;
+  height:auto !important;
 }
 @media screen and (min-width: 768px) and (max-width: 1620px) {
   img {

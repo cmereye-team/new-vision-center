@@ -22,23 +22,16 @@ body {
   --debug-scroll: true;
 }
 
-/* 平滑滚动调试样式 */
-html[data-scroll-debug] {
-  outline: 2px solid red;
-}
 
-/* 增强平滑滚动的兼容性 */
-a[href^="#"] {
-  scroll-behavior: smooth;
-}
 
-/* 如果scroll-behavior不支持，使用JavaScript辅助 */
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    scroll-behavior: smooth;
-  }
-}
 
+
+
+.product-spec__myswiper .swiper-slide-active .product-spec__swiper-img {
+
+
+
+}
 
 
 .btn-animation {
@@ -52,6 +45,14 @@ a[href^="#"] {
 
 /* start banner */
 @media screen and (min-width: 768px) {
+  .product-spec__myswiper .swiper-slide-active .product-spec__slider-item{
+transition: all 0.8s ease;
+ transform: translate(-2px, -5px);
+}
+.product-spec__slider-item:hover{
+transition: all 0.3s ease;
+ transform: translate(-2px, -5px);
+}
  
   .banner {
     height: 800px;

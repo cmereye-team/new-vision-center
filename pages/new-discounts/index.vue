@@ -19,18 +19,87 @@ useHead(() => ({
 
 const bannerImg = 
   [
-  {
-     pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
-    mobile:
-      "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
-    newBanner: true,
-   },
+  // {
+  //    pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
+  //   mobile:
+  //     "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
+  //   newBanner: true,
+  //      link:'',
+  //  },
+  //   {
+  //    pc: "https://content.cmervision.com/static/upload/other/20251117/1763340561538770.webp",
+  //   mobile:
+  //     "https://content.cmervision.com/static/upload/other/20251117/1763340575281198.webp",
+  //   newBanner: true,
+  //   link:'',
+  //  },
+
     {
-     pc: "https://content.cmervision.com/static/upload/other/20251117/1763340561538770.webp",
-    mobile:
-      "https://content.cmervision.com/static/upload/other/20251117/1763340575281198.webp",
-    newBanner: true,
-   },
+    "pc": "https://content.cmervision.com/static/upload/other/20251205/1764923981642320.webp",
+    "mobile": "https://content.cmervision.com/static/upload/other/20251205/1764923990848335.webp",
+    "newBanner": true,
+    "link": "/dims-soft-lens"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20251205/1764924416271276.webp",
+    "mobile": "https://content.cmervision.com/static/upload/other/20251205/1764924428106606.webp",
+    "newBanner": true,
+    "link": "/myopia-control-lenses/zeiss-myovision-pro"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20250818/1755487598516086.avif",
+    "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755486901936980.avif",
+    "newBanner": true,
+    "link": "/dims-soft-lens"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488417408460.avif",
+    "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755488577240915.avif",
+    "newBanner": true,
+    "link": "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20251117/1763340561538770.webp",
+    "mobile": "https://content.cmervision.com/static/upload/other/20251117/1763340575281198.webp",
+    "newBanner": true,
+    "link": ""
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488719670535.avif",
+    "mobile": "https://content.cmervision.com/static/upload/image/20250224/1740390699424002.jpg",
+    "newBanner": true,
+    "link": "/myopia-control-lenses/zeiss-myovision-pro"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20251112/1762908812202082.webp",
+    "mobile": "https://content.cmervision.com/static/upload/image/20241017/1729136367696551.png",
+    "newBanner": true,
+    "link": "/zve"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20250228/1740704852410771.webp",
+    "mobile": "https://content.cmervision.com/static/upload/other/20250228/1740704885916525.webp",
+    "newBanner": true,
+    "link": "/progressive-lens"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20251112/1762908852166069.webp",
+    "mobile": "https://content.cmervision.com/static/upload/image/20250213/1739435389470148.png",
+    "newBanner": true,
+    "link": "/zve"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20250818/1755485902155245.avif",
+    "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755486748874678.avif",
+    "newBanner": true,
+    "link": "/dims-soft-lens"
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/other/20251208/1765178588349370.webp",
+    "mobile": "https://content.cmervision.com/static/upload/other/20251208/1765178594744250.webp",
+    "newBanner": true,
+    "link": "/misight"
+  }
    
   ]
  
