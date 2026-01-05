@@ -112,6 +112,11 @@ const menuList = ref([
     isChildVisible: false,
     path: "/",
     childrenList: [
+       {
+        id: "0",
+        title: "眼鏡",
+        path: "/glasses",
+      },
       {
         id: "1",
         title: "眼睛檢查",
