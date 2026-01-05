@@ -1482,7 +1482,7 @@ const mapSwiperAsync = async () => {
                 <!-- v.swiper.length > 3 ? 3 : v.swiper.length -->
                 <div
                   class="product-spec__swiper-wrap"
-                
+                   :style="width > 768 ? 'width: 650px' : ''"
                 >
                   <!--  :style="computedSwiperWrapStyle(['',''])" :breakpoints="computedBreakPoints(productSpec[3].swiper)"     :slidesPerView="3"   :pagination="{ clickable: true }"-->
                   <swiper
