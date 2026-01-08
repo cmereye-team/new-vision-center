@@ -129,7 +129,7 @@ const menuList = ref([
     childrenList: [
        {
         id: "0",
-        title: "眼鏡",
+        title: "眼鏡品牌",
         path: "/glasses",
       },
       {

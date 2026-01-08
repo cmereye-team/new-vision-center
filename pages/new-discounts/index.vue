@@ -41,8 +41,8 @@ const bannerImg =
     "link": "/dims-soft-lens"
   },
   {
-    "pc": "https://content.cmervision.com/static/upload/other/20251205/1764924416271276.webp",
-    "mobile": "https://content.cmervision.com/static/upload/other/20251205/1764924428106606.webp",
+    "pc": "https://content.cmervision.com//static/upload/other/20260108/1767858429160094.webp",
+    "mobile": "https://content.cmervision.com//static/upload/other/20260108/1767858443974996.webp",
     "newBanner": true,
     "link": "/myopia-control-lenses/zeiss-myovision-pro"
   },
