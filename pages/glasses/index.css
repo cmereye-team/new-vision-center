@@ -560,16 +560,17 @@ transition: all 0.3s ease;
   }
   .product-spec__myswiper {
     height: 100%;
-    
+    width: 100%;
   }
 
   .product-spec__slider {
     height: 99px;
-    width: 99px;
+   
+    
   }
   .product-spec__slider-item {
     height: 99px;
-    width: 99px;
+    /* width: 99px; */
     display: flex;
     flex-direction: column;
     justify-content: center;

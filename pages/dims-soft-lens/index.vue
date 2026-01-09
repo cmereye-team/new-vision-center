@@ -35,9 +35,9 @@ const bannerImg = [
   //         newBanner: true,
   // },
    {
-    pc: "https://content.cmervision.com/static/upload/other/20251205/1764923981642320.webp",
+    pc: "https://content.cmervision.com//static/upload/other/20260109/1767953603173310.webp",
     mobile:
-      "https://content.cmervision.com/static/upload/other/20251205/1764923990848335.webp",
+      "https://content.cmervision.com//static/upload/other/20260109/1767953526650199.webp",
           newBanner: true,
   },
   {

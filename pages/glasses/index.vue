@@ -902,9 +902,13 @@ const mapSwiperAsync = async () => {
                 </a>
               </div>
             </div>
-
+   <!-- <img srcset="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp 640w,
+          https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp"
+            sizes="(max-width: 992px) 100vw,1216px" alt="" class="banner__main-img"> -->
+      
             <img
               class="banner__main-img"
+           
               :src="
                 width > 768
                   ? 'https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp'
