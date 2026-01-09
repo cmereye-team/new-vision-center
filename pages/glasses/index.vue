@@ -238,8 +238,8 @@ const productSpec = reactive([
       {
         id: 1,
         active: 1,
-        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper1.png",
-        title: "5543＿PU15",
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-FN1346_col0201.png",
+        title: "FN1346_col0201",
         mainImg: {
           pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
           mobile:
@@ -249,8 +249,8 @@ const productSpec = reactive([
       {
         id: 2,
         active: 0,
-        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper2.png",
-        title: "9760_U9",
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-FN1346_col0803.png",
+        title: "FN1346_col0803",
         mainImg: {
           pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
           mobile:
@@ -260,8 +260,85 @@ const productSpec = reactive([
       {
         id: 3,
         active: 0,
-        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper3.png",
-        title: "9768_U15",
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-FN1346_col2882.png",
+        title: "FN1346_col2882",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 4,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-FN1346_col6481.png",
+        title: "FN1346_col6481",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 5,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-M-01_W.9001.png",
+        title: "M-01 W.9001",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 6,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-M-01_W.9001-2.png",
+        title: "M-01 W.9001",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 7,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-S02TH_col12.png",
+        title: "S02TH_col12",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 8,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-S02TH_col1001.png",
+        title: "S02TH_col1001",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 9,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-S02TH_col7002.png",
+        title: "S02TH_col7002",
+        mainImg: {
+          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
+          mobile:
+            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
+        },
+      },
+       {
+        id: 10,
+        active: 0,
+        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-S02TH_col8003.png",
+        title: "S02TH_col8003",
         mainImg: {
           pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
           mobile:
@@ -271,39 +348,7 @@ const productSpec = reactive([
 
 
       // 複製
-          {
-        id: 1,
-        active: 1,
-        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper1.png",
-        title: "5543＿PU15",
-        mainImg: {
-          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
-          mobile:
-            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
-        },
-      },
-      {
-        id: 2,
-        active: 0,
-        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper2.png",
-        title: "9760_U9",
-        mainImg: {
-          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
-          mobile:
-            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
-        },
-      },
-      {
-        id: 3,
-        active: 0,
-        img: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-swiper3.png",
-        title: "9768_U15",
-        mainImg: {
-          pc: "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-pc.webp",
-          mobile:
-            "https://statichk.cmermedical.com/cmermedical/image/20251225/section2-m.webp?v2",
-        },
-      },
+  
 
       //    {
       //     id: 4,
