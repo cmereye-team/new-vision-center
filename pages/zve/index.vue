@@ -350,6 +350,7 @@ const close = () => {
 
 <template>
   <div class="zve-information">
+    
     <ContainBannerV2  :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>

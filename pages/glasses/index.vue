@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+
 import { ref, onMounted, onUnmounted } from "vue";
 import getWindowSize from "@/utils/width";
 import { Swiper, SwiperSlide } from "swiper/vue";
@@ -13,6 +14,7 @@ import { Grid, Autoplay, Pagination, Navigation } from "swiper/modules";
 const width = ref(1920);
 const resizeTimeout = ref(null);
 const modules = [Autoplay, Pagination, Navigation];
+const isPc = ref(true);
 
 const handleResize = () => {
   clearTimeout(resizeTimeout); // 清除上一个定时器
@@ -75,6 +77,9 @@ useHead(() => ({
     },
   ],
 }));
+
+
+const isMobile = useMediaQuery('(max-width: 992px)')
 
 const productSpec = reactive([
   {
@@ -642,6 +647,14 @@ const productSpec = reactive([
 ]);
 
 onMounted(() => {
+
+  let { widthState, width } = getWindowSize();
+  window.addEventListener("resize", () => {
+    let { widthState, width } = getWindowSize();
+    isPc.value = widthState;
+  });
+  isPc.value = widthState;
+
   handleResize();
 
   window.addEventListener("resize", handleResize);
@@ -802,8 +815,11 @@ const mapSwiperAsync = async () => {
 
 <template>
   <div class="container">
+                
+
     <!-- start banner -->
     <section class="banner">
+      
       <div class="banner__wrapper">
         <div class="banner__content">
           <div class="banner__main">
@@ -902,21 +918,34 @@ const mapSwiperAsync = async () => {
                 </a>
               </div>
             </div>
-   <!-- <img srcset="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp 640w,
-          https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp"
-            sizes="(max-width: 992px) 100vw,1216px" alt="" class="banner__main-img"> -->
+            
+<img
+  src="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp"
+  srcset="
+    https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp 640w,
+    https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp
+  "
+  sizes="(max-width: 992px) 100vw, 1216px"
+     class="banner__main-img"
+/>
+
+
       
-            <img
+            <!-- <img
               class="banner__main-img"
            
               :src="
-                width > 768
+                !isMobile
                   ? 'https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp'
                   : 'https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp'
               "
               alt="GLASSES"
               title="GLASSES"
-            />
+            /> -->
+
+            
+            
+         
           </div>
         </div>
       </div>
@@ -940,7 +969,7 @@ const mapSwiperAsync = async () => {
     <!-- end banner -->
 
     <!-- start product-spec -->
-    <div class="product-spec__container" style="z-index: 1">
+    <div class="product-spec__container" style="z-index: 1;">
       <section class="product-full-width-container" id="product-spec-0">
         <div class="product-spec" :style="{ zIndex: productSpec.length - 0 }">
           <div
