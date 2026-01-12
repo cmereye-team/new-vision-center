@@ -918,16 +918,20 @@ const mapSwiperAsync = async () => {
                 </a>
               </div>
             </div>
-            
-<img
-  src="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp"
-  srcset="
-    https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp 640w,
-    https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp
-  "
-  sizes="(max-width: 992px) 100vw, 1216px"
-     class="banner__main-img"
-/>
+<picture>
+  <source
+    media="(max-width: 768px)"
+    srcset="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-m.webp"
+    
+  />
+  <img
+    src="https://statichk.cmermedical.com/cmermedical/image/20251225/banner-pc2.webp"
+    class="banner__main-img"
+    alt=""
+  />
+</picture>
+
+
 
 
       
