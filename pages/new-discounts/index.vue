@@ -35,8 +35,14 @@ const bannerImg =
   //  },
 
     {
-    "pc": "https://content.cmervision.com//static/upload/other/20260109/1767953603173310.webp",
-    "mobile": "https://content.cmervision.com//static/upload/other/20260109/1767953526650199.webp",
+    "pc": "https://content.cmervision.com//static/upload/other/20260113/1768283094237395.webp",
+    "mobile": "https://content.cmervision.com//static/upload/other/20260113/1768283133922698.webp",
+    "newBanner": true,
+    "link": "/dims-soft-lens"
+  },
+     {
+    "pc": "https://content.cmervision.com//static/upload/other/20260113/1768283288426406.webp",
+    "mobile": "https://content.cmervision.com//static/upload/other/20260113/1768283297742226.webp",
     "newBanner": true,
     "link": "/dims-soft-lens"
   },
