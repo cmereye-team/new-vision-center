@@ -19,8 +19,8 @@ useHead(() => ({
 const bannerImg = {
   // pc: "https://static.cmereye.com/imgs/2024/11/229a3265342682c3.png",
   // mobile: "https://static.cmereye.com/imgs/2024/11/028b59dee8dda26b.png",
-  pc: "https://statichk.cmermedical.com/vision/imgs/2cd0bd963081.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/34f84dbd81b4.png",
+  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/08.webp",
+  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/09.webp",
 };
 </script>
 

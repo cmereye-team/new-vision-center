@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/51ac711323203828.jpg",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/c6912ec8adf66150.jpg",
+  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/11.webp",
+  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/12.webp",
 };
 
 const btnElement = ref({
@@ -480,7 +480,7 @@ const btnElement = ref({
   }
   .child-myopia-bg-blue {
     border-radius: 15px;
-    background: url(https://statichk.cmermedical.com/vision/imgs/34ec197ccf849c41.jpg)
+    background: url(https://statichk.cmermedical.com/cmermedical/image/20260122/14.webp)
       no-repeat;
     min-height: 370px;
     box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);
@@ -719,7 +719,7 @@ const btnElement = ref({
   }
   .child-myopia-bg-blue {
     border-radius: 15px;
-    background: url(https://statichk.cmermedical.com/vision/imgs/70834b759522def8.jpg)
+    background: url(https://statichk.cmermedical.com/cmermedical/image/20260122/15.webp)
       no-repeat;
     height: 81.5vw;
     box-shadow: 0px 3px 7.5px 0px rgba(0, 0, 0, 0.25);

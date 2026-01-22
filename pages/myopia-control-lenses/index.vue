@@ -27,8 +27,8 @@ onMounted(() => {
 });
 const bannerImg = 
   {
-    pc: "https://static.cmereye.com/imgs/2024/11/0fd7856ae65aea25.png",
-    mobile: "https://static.cmereye.com/imgs/2024/11/7e2d6e9bac45673f.png",
+    pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/16.webp",
+    mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/17.webp",
     newBanner: true,
   }
   // {
@@ -1293,7 +1293,7 @@ const btnElement = ref({
 
     &>div:nth-child(2) {
       margin-top: 35px;
-      background: url(https://statichk.cmermedical.com/vision/imgs/05fdefbeb8645e5a.png) no-repeat;
+      background: url(https://statichk.cmermedical.com/cmermedical/image/20260122/18.webp) no-repeat;
       height: 370px;
       background-size: 100% 100%;
       box-sizing: border-box;
@@ -1928,7 +1928,7 @@ const btnElement = ref({
     }
 
     &>div:nth-child(2) {
-      background: url("https://statichk.cmermedical.com/vision/imgs/86a1e2bdc860ef04.png") no-repeat;
+      background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/19.webp") no-repeat;
       background-size: 100% 100%;
       box-sizing: border-box;
       width: 87.17vw;

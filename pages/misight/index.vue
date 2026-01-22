@@ -202,7 +202,7 @@ const miSightQuestionList = [
             </div>
             <div>
               <img
-                src="https://statichk.cmermedical.com/vision/imgs/ce335dd66ca17bca.png"
+                src="https://statichk.cmermedical.com/cmermedical/image/20260122/10.webp"
                 alt=""
               />
             </div>

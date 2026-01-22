@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/552de6e71f12.png?v=1.0",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/7a349d3975c9.png?v=1.0",
+  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/24.webp",
+  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/25.webp",
   newBanner: false,
 };
 import { useTransition } from "@vueuse/core";
@@ -116,7 +116,7 @@ const btnElement = ref({
               <img src="https://statichk.cmermedical.com/vision/imgs/10d061571299c72c.png" alt="6嵗學童" />
             </div>
             <div>
-              <p>6嵗學童</p>
+              <p>6歲學童</p>
               <p>
                 <span>近視人數達</span><span><el-statistic :value="maxSixNum" decimal-separator="." :precision="1" />%</span>
               </p>
@@ -124,10 +124,10 @@ const btnElement = ref({
           </div>
           <div>
             <div>
-              <img src="https://statichk.cmermedical.com/vision/imgs/20e76f6d46b2fea3.png" alt="12嵗學童" />
+              <img src="https://statichk.cmermedical.com/cmermedical/image/20260122/26.webp" alt="12嵗學童" />
             </div>
             <div>
-              <p>12嵗學童</p>
+              <p>12歲學童</p>
               <p>
                 <span>近視人數達</span><span><el-statistic :value="maxTwelveNum" decimal-separator="."
                     :precision="1" />%</span>
@@ -3228,8 +3228,8 @@ const btnElement = ref({
     background: #f5fafd;
 
     &>div {
-      background: url("https://statichk.cmermedical.com/vision/imgs/3d9c3d95acadcbfe.png") no-repeat;
-      background-size: 100% 100%;
+      background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/33.webp") no-repeat;
+      background-size: contain;
       position: relative;
       z-index: 2;
       max-width: 1450px;
@@ -3246,7 +3246,7 @@ const btnElement = ref({
 
   .myopia-control-content {
     max-width: 960px;
-    background: url("https://statichk.cmermedical.com/vision/imgs/b02bf96a87535a5f.png") no-repeat;
+    background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/29.webp") no-repeat;
     background-size: 100% 100%;
     border-radius: 15px;
     box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.25);
@@ -3601,7 +3601,7 @@ const btnElement = ref({
     }
 
     &>div:nth-child(4) {
-      background: url("https://statichk.cmermedical.com/vision/imgs/c3d376b4a3d688a8.png") no-repeat;
+      background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/27.webp") no-repeat;
       background-size: 100% 100%;
       min-height: 388px;
       padding: 80px 32px 30px 27px;
@@ -4305,8 +4305,8 @@ const btnElement = ref({
 
   .myopia-control-fake::after {
     content: "";
-    background: url("https://statichk.cmermedical.com/vision/imgs/a002f70b809b91f9.png") no-repeat;
-    // background-size: 100% 100%;
+    background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/32.webp") no-repeat;
+    background-size: 100% 100%;
     width: 100vw;
     height: 335px;
     display: flex;
@@ -4319,7 +4319,7 @@ const btnElement = ref({
     margin: 0 auto;
     margin-top: 12px;
     padding: 0 5px 0 25px;
-    background: url("https://statichk.cmermedical.com/vision/imgs/910dccd801d9c5cf.png") no-repeat;
+    background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/30.webp") no-repeat;
     background-position: center;
     max-width: 87.17vw;
     min-height: 87.17vw;
@@ -5127,7 +5127,7 @@ const btnElement = ref({
     }
 
     &>div:nth-child(4) {
-      background: url("https://statichk.cmermedical.com/vision/imgs/80d1137e477d7ca9.jpg") no-repeat;
+      background: url("https://statichk.cmermedical.com/cmermedical/image/20260122/28.webp") no-repeat;
       background-size: 100% 100%;
       box-sizing: border-box;
       margin: 45px auto;
