@@ -13,7 +13,7 @@ const services = {
       price: "350",
     },
     {
-      img: "https://statichk.cmermedical.com/vision/imgs/4fb495e912701d2c.png",
+      img: "https://statichk.cmermedical.com/cmermedical/image/20260122/34.webp",
       title: ["角膜矯形鏡", "合適性檢查套餐"],
       link: "/orthokeratology",
       text: ["低至"],
