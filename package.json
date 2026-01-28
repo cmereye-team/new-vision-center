@@ -13,6 +13,7 @@
     "@element-plus/icons-vue": "^2.3.1",
     "@nuxtjs/google-fonts": "^3.2.0",
     "dayjs": "^1.11.18",
+    "lazyframe": "^2.2.7",
     "nuxt": "^3.11.1",
     "swiper": "^11.1.0",
     "unhead": "1.11.20",

@@ -1,0 +1,512 @@
+/* 手機小螢幕 */
+@media screen and (max-width: 668px) {
+    .upcar-campaign {
+        margin-top: 4rem;
+    }
+}
+
+/* 手機大螢幕到平板 (669px - 768px) */
+@media screen and (min-width: 669px) and (max-width: 768px) {
+    .upcar-campaign {
+        margin-top: 7rem;
+    }
+}
+
+/* 一般桌面 (769px - 1559px) */
+@media screen and (min-width: 769px) {
+    .upcar-campaign {
+        margin-top: 5rem;
+    }
+}
+
+/* 大螢幕桌面 (1560px 以上) */
+@media screen and (min-width: 1560px) {
+    .upcar-campaign {
+        margin-top: 130px;
+    }
+}
+
+
+/* 強制將未加載前的背景改為灰色或白色 */
+.lazyframe {
+    background-color: #f3f4f6 !important;
+    /* Tailwind gray-100 */
+    background-position: center;
+    background-size: cover;
+}
+
+/* 針對內部的播放按鈕進行顏色修改，避免預設紅 */
+:deep(.lazyframe__button) {
+    background-color: rgba(30, 64, 175, 0.8) !important;
+    /* 改為藍色 */
+    color: white !important;
+}
+
+@media screen and (max-width: 768px) {
+    .upcar {
+        background-image: url(https://statichk.cmermedical.com/cmermedical/image/20260128/section-2-mobile.webp);
+        background-size: 100% 100%;
+        aspect-ratio: 390 / 359;
+        padding: 42px 30px;
+        box-sizing: border-box;
+    }
+
+    .upcar__nav {
+        display: none;
+    }
+
+    .upcar__logo {
+
+        height: 52px;
+        width: 52px;
+    }
+
+    .upcar__title {
+        margin-top: 18px;
+        color: #152B61;
+        font-family: "Noto Sans";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .upcar__desc {
+        margin-top: 18px;
+        color: #343434;
+        font-family: "Noto Sans";
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 23.987px;
+        /* 199.892% */
+        letter-spacing: 2.4px;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .upcar {
+        background-image: url(https://statichk.cmermedical.com/cmermedical/image/20260128/section-2-pc.webp);
+        background-size: 100% 100%;
+        aspect-ratio: 1921 / 792;
+        padding: 52px 0;
+    }
+
+    .upcar__container {
+        margin: 0px clamp(160px, 12.833vw, 400px);
+        /* margin: 0 auto; */
+
+    }
+
+    .upcar__nav {
+        display: flex;
+        gap: 2rem;
+        align-items: center;
+    }
+
+    .upcar__nav> :nth-child(1) {
+        color: #AAA;
+
+        /* Content-PC */
+        font-family: "Noto Sans HK";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 32px */
+        letter-spacing: 2px;
+    }
+
+    .upcar__nav> :nth-child(3) {
+        color: #AAA;
+
+        /* Content-PC */
+        font-family: "Noto Sans HK";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 32px */
+        letter-spacing: 2px;
+    }
+
+    .upcar__nav> :nth-child(5) {
+        color: var(--Brand-Color, #00A6CE);
+
+        /* Content-PC */
+        font-family: "Noto Sans HK";
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        /* 32px */
+        letter-spacing: 2px;
+    }
+
+    .upcar__logo {
+        margin-top: 96px;
+        width: 129px;
+        height: 129px;
+    }
+
+    .upcar__title {
+        margin-top: 26px;
+        color: #152B61;
+        font-family: "Noto Sans";
+        font-size: 45px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+    }
+
+    .upcar__desc {
+        margin-top: 70px;
+        color: #343434;
+        font-family: "Noto Sans";
+        font-size: 30px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 60px;
+        /* 200% */
+        letter-spacing: 6px;
+        max-width: 59%;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+.zeiss{
+    margin: 56px 0 100px 0;
+}
+.zeiss__container{
+    margin: 0px clamp(160px, 12.833vw, 400px);
+}
+
+.zeiss-experience__svg{
+     width:870px; 
+     height:978px;
+}
+.zeiss-experience__svgmb{
+    display: none;
+}
+
+
+
+.zeiss__desc{
+    color: #6D6D6D;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 60px; /* 200% */
+letter-spacing: 6px;
+}
+
+.zeiss__btn {
+    
+    color: #FFF;
+font-family: "Noto Sans";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 1;
+letter-spacing: 6px;
+display: flex;
+align-items: center;
+gap: 35px;
+
+margin: 42px  auto 0 auto;
+    border-radius: 60px;
+border: 3px solid #FFF;
+background: #2449A4;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    max-width: fit-content;
+    padding: 22px 29px 22px 70px;
+}
+
+
+    /* --- Block: zeiss-experience (主容器) --- */
+        .zeiss-experience {
+            position: relative;
+            width: 100%;
+            max-width: 978px;
+            height: 978px;
+            aspect-ratio: 1 / 1; /* 確保容器為正方形以支撐圓環高度 */
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 47px;
+            margin-bottom: 28px;
+        }
+
+        /* --- Elements: 裝飾圓環 --- */
+        .zeiss-experience__orbit {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .zeiss-experience__orbit--outer {
+            inset: 0;
+            border: 1px solid #dbeafe;
+            /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(240,247,255,0.5) 100%); */
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+        }
+        .zeiss-experience__orbit--inner {
+            inset: 40px;
+            border: 1px solid #eff6ff;
+            /* 背景漸變 */
+  background: linear-gradient(0deg, #E8EEFF -14%, #FFFFFF 122.65%);
+  
+  /* 邊框 (對應 stroke) */
+  border: 1.515px solid #FFFFFF;
+  
+  /* 陰影 (對應 drop-shadow) */
+  filter: drop-shadow(0px 2.273px 4.546px rgba(88, 77, 153, 0.30));
+        }
+
+        /* --- Elements: 中心標題 --- */
+        .zeiss-experience__center {
+            text-align: center;
+            z-index: 10;
+        }
+        .zeiss-experience__title {
+           color: #2449A4;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 41.676px;
+font-style: normal;
+font-weight: 400;
+line-height: 56.83px; /* 136.364% */
+letter-spacing: 8.335px;
+        }
+        .zeiss-experience__title--bold {
+            font-weight: 600;
+        }
+
+        /* --- Block: step-item (步驟元件) --- */
+        .step-item {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .step-item__icon {  margin-bottom: 5px; color: #60a5fa; font-size: 30px; display: flex; justify-content: center; align-items: center; }
+        .step-item__number { color: #6D6D6D;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 45.464px;
+font-style: normal;
+font-weight: 400;
+line-height: 45.464px; /* 100% */ display: flex; align-items: center; gap: 4px; }
+        .step-item__label { color: #6D6D6D;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 22.732px;
+font-style: normal;
+font-weight: 400;
+line-height: 45.464px; /* 200% */
+letter-spacing: 4.546px; white-space: nowrap; margin-top: 2px; }
+        .step-item__arrow {  }
+
+        /* ico */
+
+        /* --- Modifier: 定位 (對應圖片 8 個方位) --- */
+        .step-item--pos-1 { top: 6%; left: 50%; transform: translateX(-50%); }
+        .step-item--pos-2 { top: 22%; right: 14%; align-items: flex-end; }
+        .step-item--pos-3 { top: 46%; right: 6%; flex-direction: row;}
+        .step-item--pos-4 { bottom: 26%; right: 12%; flex-direction: row;}
+        .step-item--pos-5 { bottom: 6%; left: 50%; transform: translateX(-50%); }
+        .step-item--pos-6 { bottom: 26%; left: 15%; flex-direction: row-reverse;}
+        .step-item--pos-7 { top: 46%; left: 6%; flex-direction: row-reverse;}
+        .step-item--pos-8 { top: 22%; left: 16%;  flex-direction: row-reverse;}
+
+        /* --- Modifier: 特殊狀態 (步驟 02 的詳情框) --- */
+        .step-item--active .step-item__tooltip {
+            display: block;
+        }
+        .step-item__tooltip {
+            display: none;
+            margin-top: 8px;
+            padding: 12px;
+            text-align: end;
+      
+            border-radius: 2px;
+            font-size: 11px;
+            color: #1d4ed8;
+            line-height: 1.8;
+     
+            z-index: 20;
+        }
+}
+
+
+@media screen and (max-width: 768px) {
+.zeiss{
+    margin: 25px 0 100px 0;
+    overflow: hidden;
+}
+.zeiss__container{
+    margin: 0px 20px 90px 20px;
+}
+.zeiss-experience__svg{
+    display: none;
+}
+.zeiss-experience__svgmb{
+     width:390px; 
+     height:520px;
+}
+
+.zeiss__desc{
+color: #6D6D6D;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 30px; /* 214.286% */
+letter-spacing: 2.8px;
+}
+
+.zeiss__btn {
+    
+    color: #FFF;
+font-family: "Noto Sans";
+font-size: 30px;
+font-style: normal;
+font-weight: 400;
+line-height: 1;
+letter-spacing: 6px;
+display: flex;
+align-items: center;
+gap: 35px;
+
+margin: 42px  auto 0 auto;
+    border-radius: 60px;
+border: 3px solid #FFF;
+background: #2449A4;
+box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25), 0 4px 4px 0 rgba(0, 0, 0, 0.25) inset;
+    max-width: fit-content;
+    padding: 22px 29px 22px 70px;
+}
+
+
+    /* --- Block: zeiss-experience (主容器) --- */
+        .zeiss-experience {
+            position: relative;
+           
+              width:520px; 
+ 
+            aspect-ratio: 1 / 1; /* 確保容器為正方形以支撐圓環高度 */
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 47px;
+            margin-bottom: 28px;
+        }
+
+        /* --- Elements: 裝飾圓環 --- */
+        .zeiss-experience__orbit {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+        }
+        .zeiss-experience__orbit--outer {
+            inset: 0;
+            border: 1px solid #dbeafe;
+            /* background: radial-gradient(circle, rgba(255,255,255,1) 0%, rgba(240,247,255,0.5) 100%); */
+            box-shadow: inset 0 0 20px rgba(0,0,0,0.02);
+        }
+        .zeiss-experience__orbit--inner {
+            inset: 40px;
+            border: 1px solid #eff6ff;
+            /* 背景漸變 */
+  background: linear-gradient(0deg, #E8EEFF -14%, #FFFFFF 122.65%);
+  
+  /* 邊框 (對應 stroke) */
+  border: 1.515px solid #FFFFFF;
+  
+  /* 陰影 (對應 drop-shadow) */
+  filter: drop-shadow(0px 2.273px 4.546px rgba(88, 77, 153, 0.30));
+        }
+
+        /* --- Elements: 中心標題 --- */
+        .zeiss-experience__center {
+            text-align: center;
+            z-index: 10;
+        }
+        .zeiss-experience__title {
+          color: #2449A4;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: 22px; /* 122.222% */
+letter-spacing: 3.6px;
+        }
+        .zeiss-experience__title--bold {
+            font-weight: 600;
+        }
+
+        /* --- Block: step-item (步驟元件) --- */
+        .step-item {
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .step-item__icon {  display: none; }
+        .step-item__number { color: #6D6D6D;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 24.079px;
+font-style: normal;
+font-weight: 400;
+line-height: 24.157px; /* 100.323% */ display: flex; align-items: center; gap: 4px; }
+        .step-item__label { color: #6D6D6D;
+text-align: center;
+font-family: "Noto Sans";
+font-size: 14px;
+font-style: normal;
+font-weight: 400;
+line-height: 18px; /* 128.571% */
+letter-spacing: 2.8px; margin-top: 2px; }
+        .step-item__arrow {  }
+
+        /* ico */
+
+        /* --- Modifier: 定位 (對應圖片 8 個方位) --- */
+        .step-item--pos-1 { top: 6%; left: 50%; transform: translateX(-50%); }
+        .step-item--pos-2 { top: 22%; right: 14%; align-items: flex-end; }
+        .step-item--pos-3 { top: 46%; right: 6%; flex-direction: row;}
+        .step-item--pos-4 { bottom: 26%; right: 12%; flex-direction: row;}
+        .step-item--pos-5 { bottom: 6%; left: 50%; transform: translateX(-50%); }
+        .step-item--pos-6 { bottom: 26%; left: 15%; flex-direction: row-reverse;}
+        .step-item--pos-7 { top: 46%; left: 6%; flex-direction: row-reverse;}
+        .step-item--pos-8 { top: 22%; left: 16%;  flex-direction: row-reverse;}
+
+        /* --- Modifier: 特殊狀態 (步驟 02 的詳情框) --- */
+        .step-item--active .step-item__tooltip {
+            display: block;
+        }
+        .step-item__tooltip {
+            display: none;
+            margin-top: 8px;
+            padding: 12px;
+            text-align: end;
+      
+            border-radius: 2px;
+            font-size: 11px;
+            color: #1d4ed8;
+            line-height: 1.8;
+     
+            z-index: 20;
+        }
+}
