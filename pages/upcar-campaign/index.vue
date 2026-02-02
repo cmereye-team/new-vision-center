@@ -30,7 +30,7 @@ const onSwiper = (swiper) => {
 };
 
 useHead(() => ({
-    title: "TrunkShow｜希瑪視光中心",
+    title: "UpCar｜希瑪視光中心",
     meta: [
         {
             hid: "description",
@@ -248,13 +248,13 @@ onMounted(() => {
                     </div>
 
 
-                    <div class="zeiss__btn">
+                    <a href="https://www.cmervision.com/zve" target="_blank" class="zeiss__btn">
                         <span>了解更多</span><svg xmlns="http://www.w3.org/2000/svg" class="zeiss__btn-icon"
                             viewBox="0 0 18 31" fill="none">
                             <path d="M2.12109 2.125L15.1211 15.125L2.12109 28.125" stroke="white" stroke-width="3"
                                 stroke-linecap="square" />
                         </svg>
-                    </div>
+                    </a>
 
 
                 </div>
@@ -395,13 +395,13 @@ onMounted(() => {
 
         </div>
 
-        <div class="experience__btn">
+        <a href="https://bit.ly/4qkVawR" target="_blank" class="experience__btn">
             <span>立即預約驗配</span>
             <svg viewBox="0 0 18 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.12109 2.125L15.1211 15.125L2.12109 28.125" stroke="white" stroke-width="3"
                     stroke-linecap="square" />
             </svg>
-        </div>
+        </a>
 
 
 
