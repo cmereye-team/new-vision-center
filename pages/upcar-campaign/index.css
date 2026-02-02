@@ -49,10 +49,26 @@
 @media screen and (max-width: 768px) {
     .upcar {
         background-image: url(https://statichk.cmermedical.com/cmermedical/image/20260128/section-2-mobile.webp);
-        background-size: 100% 100%;
-        aspect-ratio: 390 / 359;
+        background-size: cover;
+        /* aspect-ratio: 390 / 359; */
         padding: 42px 30px;
         box-sizing: border-box;
+         position: relative;
+         background-position: right;        
+    }
+
+    .upcar__main-img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+    }
+
+    .upcar__container {
+        /* position: absolute; */
+        /* top: 42px;
+         */
+         /* top: 30px;
+        left: 30px; */
     }
 
     .upcar__nav {
@@ -85,21 +101,42 @@
         line-height: 23.987px;
         /* 199.892% */
         letter-spacing: 2.4px;
+        max-width: 63%;
     }
 }
 
 @media screen and (min-width: 768px) {
     .upcar {
         background-image: url(https://statichk.cmermedical.com/cmermedical/image/20260128/section-2-pc.webp);
-        background-size: 100% 100%;
-        aspect-ratio: 1921 / 792;
-        padding: 52px 0;
+        background-size: cover;
+        /* aspect-ratio: 1921 / 792; */
+         /* background-position: right; */
+        position: relative;
+                padding-bottom: 90px;
+    }
+    .upcar__main-img {
+        width: 100%;
+        height: 100%;
+        /* object-fit: cover; */
+
     }
 
     .upcar__container {
-        margin: 0px clamp(160px, 12.833vw, 400px);
-        /* margin: 0 auto; */
+        padding-top: 52px;
+                margin: 0px 20px;
+        /* position: absolute;
+        top: 52px; */
+                
+        /* left: 50%; */
+       
+      
+        /* transform: translate(-50%, 0px); */
 
+    }
+    .upcar__content{
+max-width: 1341px;
+  width: 100%;
+   margin: 0 auto;
     }
 
     .upcar__nav {
@@ -173,18 +210,48 @@
         line-height: 60px;
         /* 200% */
         letter-spacing: 6px;
-        max-width: 59%;
+        max-width: 800px;
     }
 }
-
+ @keyframes grow-back {
+          0% {
+        /* 起始：设为负值，线条会从路径的另一头“推”进来 */
+        stroke-dashoffset: -2120; 
+    }
+    100% {
+        /* 结束：回到你想要显示的位置 */
+        stroke-dashoffset: 0; 
+    }
+        } 
 
 @media screen and (min-width: 768px) {
+    
     .zeiss {
         margin: 56px 0 100px 0;
+        /* animation: rotate-clockwise 40s linear infinite; */
+        
     }
 
     .zeiss__container {
-        margin: 0px clamp(160px, 12.833vw, 400px);
+        margin: 0px 20px;
+    }
+
+    .zeiss-experience__svg2{
+         /* width: 100%;
+        height: 100%; */
+        position: absolute; top: 0;left: 0px;
+         /* 1. 确保旋转基点在中心 */
+            transform-origin: center;
+            /* 2. 旋转 180 度，开口就会换到右边，实线主体就到了左边 */
+            /* 你可以微调这个角度（如 160deg 或 200deg）直到位置完美 */
+            /* transform: rotate(180deg);  */
+            display: block;
+         /* 这条路径实测总长约为 2120 左右 */
+            stroke-dasharray: 2120; 
+            
+            /* 2. 应用动画 */
+            /* alternate 让它长到一半自动缩回 */
+            animation: grow-back 2s ease-in-out infinite alternate;
     }
 
     .zeiss-experience__svg {
@@ -192,11 +259,20 @@
         height: 978px; */
         width: 100%;
         height: 100%;
-        position: absolute; top: 0;right: -55px;
+        position: absolute; top: 0;right: -108px;
+         
+
+        
+         
     }
 
     .zeiss-experience__svgmb {
         display: none;
+    }
+
+     .zeiss-experience__svgmb2 {
+       display: none;
+
     }
 
 
@@ -211,6 +287,8 @@
         line-height: 60px;
         /* 200% */
         letter-spacing: 6px;
+        max-width: 1345px;
+        margin: 0 auto;
     }
 
     .zeiss__btn {
@@ -226,22 +304,59 @@
         align-items: center;
         gap: 35px;
 
-        margin: 42px auto 0 auto;
+        /* margin: 42px auto 0 auto; */
         
-        border: 3px solid #FFF;
+        /* border: 3px solid #FFF;
         background: #2449A4;
-        /* 形状与背景 */
-
        border-radius: 60px;
-        /* 胶囊圆角 */
         border: 4px solid white;
-        /* 内部白边 */
         outline: 3px solid #2449A4;
-        /* 外部蓝边线 */
           box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         max-width: fit-content;
-        padding: 22px 29px 22px 70px;
+        padding: 22px 29px 22px 70px; */
+
+    background: #2449a4;
+    border-radius: 60px;
+    box-shadow: 0 4px 4px #00000040;
+    box-sizing: border-box;
+    display: flex;
+    height: -moz-max-content;
+    height: max-content;
+    margin: 60px auto 0 auto;
+    padding: 5px;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+     border: 3px solid #2449A4;
          
+         
+    }
+    .zeiss__btn p {
+     align-items: center;
+    background: #2449a4;
+    border-radius: 60px;
+    /* box-shadow: 0 4px 4px #00000040, inset 0 4px 4px #00000040; */
+    box-sizing: border-box;
+    display: flex;
+    gap: 0 10px;
+      padding: 22px 29px 22px 70px;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    z-index: 10;
+    }
+    .zeiss__btn::after{
+ animation: borderAnimation 2s linear infinite;
+ background: #fff;
+    border-radius: 60px;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: translate(0);
+    width: 100%;
+    z-index: 4;
     }
 
     .zeiss__btn-icon {
@@ -449,9 +564,22 @@
     .zeiss__container {
         margin: 0px 20px 0px 20px;
     }
+    .zeiss-experience__svg2{
+        display: none;
+    }
 
     .zeiss-experience__svg {
         display: none;
+    }
+
+    .zeiss-experience__svgmb2 {
+       position: absolute;
+       left: 0;
+       top: 0;
+       width: 390px;
+       aspect-ratio: 1 / 1;
+  
+
     }
 
     .zeiss-experience__svgmb {
@@ -492,6 +620,7 @@
 
         max-width: fit-content;
         padding: 13px 17px;
+        
     }
 
     .zeiss__btn-icon {
@@ -698,7 +827,7 @@
 @media screen and (min-width: 768px) {
     .section-title {
         text-align: center;
-        margin-bottom: 48px;
+        
     }
 
     .section-title__text {
@@ -735,8 +864,8 @@
        Lens Slider
     ====================== */
     .lens-slider {
-        margin: 40px 0 80px 0;
-        padding: 70px clamp(160px, 12.833vw, 400px);
+        margin: 64px 0 47px 0;
+        padding: 0px 20px 0  20px;
     }
 
     .lens-slider__container {
@@ -744,6 +873,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        max-width: 1341px;
+        margin: 0 auto;
     }
 
     .lens-slider__nav {
@@ -766,7 +897,7 @@
 
     .product-spec__myswiper {
         width: 100%;
-        max-width: 1200px;
+        /* max-width: 1200px; */
         margin: 0 auto;
     }
 
@@ -818,7 +949,7 @@
 
         /* padding: 40px 32px; */
         text-align: center;
-        width: 617px;
+        width: 100%;
         padding-bottom: 34px;
     }
 
@@ -837,6 +968,7 @@
         transform: translateX(-50%);
         top: 35px;
         text-wrap: nowrap;
+        border-bottom: 4px solid #2449A4;
     }
 
     /* Lens Circle */
@@ -959,19 +1091,8 @@
         align-items: center;
         justify-content: center;
         gap: 20px;
-        padding: 22px 40px;
+ 
     
-        /* border: 3px solid #FFF; */
-        background: #2449A4;
-         /* 形状与背景 */
-
-       border-radius: 60px;
-        /* 胶囊圆角 */
-        border: 4px solid white;
-        /* 内部白边 */
-        outline: 3px solid #2449A4;
-        /* 外部蓝边线 */
-          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
         cursor: pointer;
         width: fit-content;
         color: #FFF;
@@ -983,6 +1104,49 @@
         letter-spacing: 6px;
         margin: 80px auto 0 auto;
 
+        padding: 5px;
+         background: #2449a4;
+    border-radius: 60px;
+    box-shadow: 0 4px 4px #00000040;
+    box-sizing: border-box;
+    display: flex;
+    height: -moz-max-content;
+    height: max-content;
+
+
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+     border: 3px solid #2449A4;
+
+    }
+
+     .experience__btn p {
+     align-items: center;
+    background: #2449a4;
+    border-radius: 60px;
+    /* box-shadow: 0 4px 4px #00000040, inset 0 4px 4px #00000040; */
+    box-sizing: border-box;
+    display: flex;
+    gap: 0 10px;
+      padding: 22px 29px 22px 22px;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    z-index: 10;
+    }
+    .experience__btn::after{
+ animation: borderAnimation 2s linear infinite;
+ background: #fff;
+    border-radius: 60px;
+    content: "";
+    display: block;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    transform: translate(0);
+    width: 100%;
+    z-index: 4;
     }
 
     .experience__btn svg {
@@ -994,7 +1158,72 @@
 
 }
 
+@keyframes borderAnimation {
+  0% {
+    width: 0%;
+    height: 0%;
+    /* // left: 0;
+    // right: auto; */
+    right: 0;
+    left: auto;
+  }
 
+  10% {
+    width: 0%;
+    height: 100%;
+    /* // left: 0;
+    // right: auto; */
+    right: 0;
+    left: auto;
+    opacity: 0;
+  }
+
+  21% {
+    opacity: 1;
+  }
+
+  40% {
+    width: 100%;
+    height: 100%;
+    /* // left: 0;
+    // right: auto; */
+    right: 0;
+    left: auto;
+    opacity: 1;
+  }
+
+  45% {
+    width: 100%;
+    /* // left: 0;
+    // right: auto; */
+    right: 0;
+    left: auto;
+  }
+
+  55% {
+    width: 100%;
+    /* // left: auto;
+    // right: 0; */
+    left: 0;
+    right: auto;
+  }
+
+  70% {
+    width: 0%;
+    /* // left: auto;
+    // right: 0; */
+    left: 0;
+    right: auto;
+  }
+
+  100% {
+    width: 0%;
+    /* // left: auto;
+    // right: 0; */
+    left: 0;
+    right: auto;
+  }
+}
 @media screen and (max-width: 900px) {
     .section-title {
         text-align: center;
@@ -1032,8 +1261,8 @@
        Lens Slider
     ====================== */
     .lens-slider {
-        margin: 25px 0 80px 0;
-        padding: 0px 56px;
+        margin: 25px 0 40px 0;
+        padding: 0px 40px;
 
     }
 
@@ -1048,8 +1277,8 @@
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 41px;
-        height: 41px;
+        width: 30px;
+        height: 30px;
 
         display: flex !important;
         align-items: center;
@@ -1065,11 +1294,11 @@
     .lens-slider__nav:hover {}
 
     .lens-slider__nav--prev {
-        left: -50px;
+        left: -35px;
     }
 
     .lens-slider__nav--next {
-        right: -50px;
+        right: -35px;
     }
 
     .product-spec__myswiper {
@@ -1123,13 +1352,13 @@
         border: 1px solid #B5CCFF;
         padding: 0px 0px 15px 0px;
         text-align: center;
-        max-width: 390px;
+        /* max-width: 390px; */
     }
 
     .lens-card__title {
         color: #2449A4;
         font-family: "Noto Sans";
-        font-size: 17.268px;
+        font-size: 18px;
         font-style: normal;
         font-weight: 700;
         line-height: 24.943px;
@@ -1141,6 +1370,7 @@
         left: 50%;
         transform: translateX(-50%);
         text-wrap: nowrap;
+        border-bottom: 2px solid #2449A4;
     }
 
     /* Lens Circle */
@@ -1155,13 +1385,15 @@
         color: #2449A4;
         text-align: center;
         font-family: "Noto Sans CJK TC";
-        font-size: 13px;
+        font-size: 17px;
         font-style: normal;
         font-weight: 700;
         line-height: 20.216px;
         /* 155.51% */
         /* 173.077% */
         margin-bottom: 20px;
+        padding-left: 5px;
+        padding-right: 5px;
 
     }
 
@@ -1178,7 +1410,7 @@
     .lens-card__item {
         color: #6D6D6D;
         font-family: "Noto Sans";
-        font-size: 12px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 400;
         line-height: 26.955px;
@@ -1326,7 +1558,7 @@
     }
 
     .promo-section__location {
-        display: inline;
+        display: inline-flex;
     }
 
     .promo-section__info {
@@ -1351,6 +1583,7 @@
         line-height: 65.721px;
         letter-spacing: 6.572px;
         display: inline;
+        text-wrap: nowrap;
     }
 
     /* 列表樣式 */
@@ -1548,6 +1781,8 @@
         margin-top: 51px;
         margin-bottom: 10px;
         box-sizing: border-box;
+        margin-left: 0;
+        margin-right: 0;
     }
 
     .address__wrapper {
@@ -1687,9 +1922,11 @@
 
     .address__wrapper {
         margin: 0 auto;
-        max-width: 1240px;
+        max-width: 13410px;
         display: flex;
         justify-content: center;
+        padding: 0 20px;
+        width: 100%;
     }
 
     .address__item {

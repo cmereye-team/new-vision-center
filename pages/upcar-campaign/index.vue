@@ -72,9 +72,24 @@ onMounted(() => {
 
         <!-- 文字 -->
         <section>
+          
             <div class="upcar">
+                <!-- <picture>
+  <source
+    media="(max-width: 768px)"
+    srcset="https://statichk.cmermedical.com/cmermedical/image/20260202/section2-mobile-bg.webp"
+    
+  />
+  <img
+    src="https://statichk.cmermedical.com/cmermedical/image/20260128/section-2-pc.webp"
+    class="upcar__main-img"
+    alt=""
+  />
+</picture> -->
+                
                 <div class="upcar__container">
-                    <div class="upcar__nav">
+                   <div class="upcar__content">
+                     <div class="upcar__nav">
                         <span>主頁</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="21" height="2" viewBox="0 0 21 2" fill="none">
                             <path d="M0 0.75H21" stroke="#AAAAAA" stroke-width="1.5" />
@@ -95,6 +110,7 @@ onMounted(() => {
                         作為駕駛者，長期受到夜間視力模糊、眩光困擾？ 原來問題不只在度數，每雙眼睛如指紋般獨一無二，角膜與瞳孔細微結構的差異，會產生所謂
                         「高階像差」，令傳統鏡片難以完美對應。
                     </p>
+                   </div>
                 </div>
             </div>
         </section>
@@ -116,8 +132,19 @@ onMounted(() => {
                             <div class="zeiss-experience__orbit zeiss-experience__orbit--outer"></div>
                             <div class="zeiss-experience__orbit zeiss-experience__orbit--inner"></div>
 
+
+                            <svg width="492" height="869" viewBox="0 0 492 869" class="zeiss-experience__svg2" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M490.482 1.14278C347.847 0.573884 206.365 62.3196 109.692 181.701C-59.6384 390.807 -27.3255 697.726 181.853 867.116" stroke="url(#paint0_linear_7282_661)" stroke-width="2.27322" stroke-miterlimit="10" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="paint0_linear_7282_661" x1="-20.5724" y1="729.882" x2="551.374" y2="23.587" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B5CCFF"/>
+      <stop offset="1" stop-color="#2972F0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
                             <svg xmlns="http://www.w3.org/2000/svg" class="zeiss-experience__svg"
-                                style="" viewBox="0 0 870 978" fill="none">
+                                style="" viewBox="0 0 978 978" fill="none">
                                 <path
                                     d="M1.13672 793.821C90.4575 905.027 227.481 976.122 381.096 976.122C650.164 976.122 868.35 757.859 868.35 488.696C868.35 219.534 650.164 1.13281 381.096 1.13281"
                                     stroke="url(#paint0_linear_7140_3340)" stroke-width="2.27322" stroke-miterlimit="10"
@@ -145,6 +172,16 @@ onMounted(() => {
                                     </linearGradient>
                                 </defs>
                             </svg>
+
+                       <!-- <svg class="zeiss-experience__svgmb2" viewBox="0 0 266 422" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M56.4708 421.626C25.9636 382.952 7.0705 336.406 1.99143 287.41C-3.08764 238.414 5.8563 188.983 27.7818 144.873C49.7074 100.763 83.7123 63.7891 125.837 38.2563C167.962 12.7235 216.473 -0.317467 265.722 0.651931" stroke="url(#paint0_linear_7316_1115)" stroke-width="1.21"/>
+  <defs>
+    <linearGradient id="paint0_linear_7316_1115" x1="272.063" y1="211.084" x2="-5.77729" y2="211.084" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B5CCFF"/>
+      <stop offset="1" stop-color="#2972F0"/>
+    </linearGradient>
+  </defs>
+</svg> -->
 
                             <div class="zeiss-experience__center">
                                 <span class="zeiss-experience__title">
@@ -176,7 +213,7 @@ onMounted(() => {
                                 <div class="step-item__tooltip">
                                     • 分析眼睛的高階像差、日間和夜間的視覺表現<br>
                                     • 採用前導波技術全面分析<br>
-                                    • 使用 VISUCORE 500 儀器
+                                    • 使用ZEISS i.Profiler plus 儀器
                                 </div>
                             </div>
 
@@ -249,11 +286,13 @@ onMounted(() => {
 
 
                     <a href="https://www.cmervision.com/zve" target="_blank" class="zeiss__btn">
-                        <span>了解更多</span><svg xmlns="http://www.w3.org/2000/svg" class="zeiss__btn-icon"
+                      <p>
+                          <span>了解更多</span><svg xmlns="http://www.w3.org/2000/svg" class="zeiss__btn-icon"
                             viewBox="0 0 18 31" fill="none">
                             <path d="M2.12109 2.125L15.1211 15.125L2.12109 28.125" stroke="white" stroke-width="3"
                                 stroke-linecap="square" />
                         </svg>
+                      </p>
                     </a>
 
 
@@ -396,11 +435,13 @@ onMounted(() => {
         </div>
 
         <a href="https://bit.ly/4qkVawR" target="_blank" class="experience__btn">
-            <span>立即預約驗配</span>
+           <p>
+             <span>立即預約驗配</span>
             <svg viewBox="0 0 18 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M2.12109 2.125L15.1211 15.125L2.12109 28.125" stroke="white" stroke-width="3"
                     stroke-linecap="square" />
             </svg>
+           </p>
         </a>
 
 
