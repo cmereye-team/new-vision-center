@@ -188,8 +188,11 @@
     }
 
     .zeiss-experience__svg {
-        width: 870px;
-        height: 978px;
+        /* width: 870px;
+        height: 978px; */
+        width: 100%;
+        height: 100%;
+        position: absolute; top: 0;right: -55px;
     }
 
     .zeiss-experience__svgmb {
@@ -252,7 +255,7 @@
         position: relative;
         width: 100%;
         max-width: 978px;
-        height: 978px;
+        /* height: 978px; */
         aspect-ratio: 1 / 1;
         /* 確保容器為正方形以支撐圓環高度 */
         margin: 0 auto;
@@ -1543,13 +1546,13 @@
     /* 地址區塊 */
     .address {
         margin-top: 51px;
-
+        margin-bottom: 10px;
         box-sizing: border-box;
     }
 
     .address__wrapper {
-        margin-left: 40px;
-        margin-right: 40px;
+        margin-left: 20px;
+        margin-right: 20px;
     }
 
     .address__item {}

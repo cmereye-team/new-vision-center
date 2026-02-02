@@ -117,7 +117,7 @@ onMounted(() => {
                             <div class="zeiss-experience__orbit zeiss-experience__orbit--inner"></div>
 
                             <svg xmlns="http://www.w3.org/2000/svg" class="zeiss-experience__svg"
-                                style="position: absolute; top: 0;right: 0;" viewBox="0 0 870 978" fill="none">
+                                style="" viewBox="0 0 870 978" fill="none">
                                 <path
                                     d="M1.13672 793.821C90.4575 905.027 227.481 976.122 381.096 976.122C650.164 976.122 868.35 757.859 868.35 488.696C868.35 219.534 650.164 1.13281 381.096 1.13281"
                                     stroke="url(#paint0_linear_7140_3340)" stroke-width="2.27322" stroke-miterlimit="10"
@@ -547,7 +547,7 @@ onMounted(() => {
 
     <!-- end address -->
 
-    
+
     </div>
 </template>
 
