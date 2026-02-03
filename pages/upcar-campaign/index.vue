@@ -607,7 +607,11 @@ onMounted(() => {
     </div>
 </template>
 
-
+<style>
+   .form-public {
+        margin-bottom: 0 !important;
+    }
+</style>
 <style lang="scss" scoped>
 @import "./index.css";
 </style>
