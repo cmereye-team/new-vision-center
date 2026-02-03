@@ -1804,11 +1804,14 @@ max-width: 1341px;
 
     /* 地址區塊 */
     .address {
-        margin-top: 51px;
+        /* margin-top: 51px; */
         margin-bottom: 0px;
         box-sizing: border-box;
         margin-left: 0;
         margin-right: 0;
+    }
+    .address > div{
+        margin-top: 25px !important;
     }
 
     .address__wrapper {

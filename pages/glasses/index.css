@@ -1704,14 +1704,15 @@ transition: all 0.3s ease;
   }
   /* 地址區塊 */
   .address {
-    margin-top: 51px;
-
+    margin-top: 25px;
+    margin-bottom: 0px;
+  margin-left: 40px;
+    margin-right: 40px;
     box-sizing: border-box;
   }
 
   .address__wrapper {
-    margin-left: 20px;
-    margin-right: 20px;
+  
   }
 
   .address__item {

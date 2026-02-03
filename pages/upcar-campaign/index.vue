@@ -135,7 +135,7 @@ onMounted(() => {
                             <div class="zeiss-experience__orbit zeiss-experience__orbit--inner"></div>
 
 
-                            <svg width="492" height="869" viewBox="0 0 492 869" class="zeiss-experience__svg2"
+                            <svg  viewBox="0 0 978 978" class="zeiss-experience__svg2"
                                 fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M490.482 1.14278C347.847 0.573884 206.365 62.3196 109.692 181.701C-59.6384 390.807 -27.3255 697.726 181.853 867.116"
