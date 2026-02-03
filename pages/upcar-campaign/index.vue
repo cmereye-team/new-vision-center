@@ -173,11 +173,22 @@ onMounted(() => {
                                 </defs>
                             </svg>
 
-                       <!-- <svg class="zeiss-experience__svgmb2" viewBox="0 0 266 422" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M56.4708 421.626C25.9636 382.952 7.0705 336.406 1.99143 287.41C-3.08764 238.414 5.8563 188.983 27.7818 144.873C49.7074 100.763 83.7123 63.7891 125.837 38.2563C167.962 12.7235 216.473 -0.317467 265.722 0.651931" stroke="url(#paint0_linear_7316_1115)" stroke-width="1.21"/>
+
+                       <svg class="zeiss-experience__svgmb2" viewBox="0 0 390 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M59.8605 424.516C22.8463 379.707 0.603982 322.238 0.603988 259.594C0.604 116.577 116.535 0.605426 259.502 0.605438" stroke="url(#paint0_linear_7324_642)" stroke-width="1.20785" stroke-miterlimit="10" stroke-linecap="round"/>
   <defs>
-    <linearGradient id="paint0_linear_7316_1115" x1="272.063" y1="211.084" x2="-5.77729" y2="211.084" gradientUnits="userSpaceOnUse">
+    <linearGradient id="paint0_linear_7324_642" x1="-10.4159" y1="259.668" x2="472.483" y2="259.668" gradientUnits="userSpaceOnUse">
       <stop stop-color="#B5CCFF"/>
+      <stop offset="1" stop-color="#2972F0"/>
+    </linearGradient>
+  </defs>
+</svg>
+
+                     <!-- <svg class="zeiss-experience__svgmb2" viewBox="0 0 390 520" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M54.5234 419.057C25.2299 380.976 7.06104 335.522 2.0332 287.741C-2.99464 239.96 5.31517 191.72 26.0404 148.375C46.7656 105.031 79.0957 68.2761 119.443 42.1909C159.789 16.1057 206.575 1.71001 254.607 0.601562" stroke="url(#paint0_linear_7320_1122)" stroke-width="1.21" stroke-linecap="round"/>
+  <defs>
+    <linearGradient id="paint0_linear_7320_1122" x1="127.606" y1="0.601562" x2="127.606" y2="419.057" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9FA8DA"/>
       <stop offset="1" stop-color="#2972F0"/>
     </linearGradient>
   </defs>

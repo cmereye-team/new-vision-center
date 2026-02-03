@@ -224,6 +224,16 @@ max-width: 1341px;
     }
         } 
 
+
+         @keyframes grow-back2 {
+  0% {
+    stroke-dashoffset: 2120;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
 @media screen and (min-width: 768px) {
     
     .zeiss {
@@ -573,12 +583,18 @@ max-width: 1341px;
     }
 
     .zeiss-experience__svgmb2 {
-       position: absolute;
-       left: 0;
-       top: 0;
-       width: 390px;
-       aspect-ratio: 1 / 1;
-  
+      position: absolute;
+        left: -48px;
+        top: 0;
+        width: 100%;
+        height: 100%;
+   /* 这条路径实测总长约为 2120 左右 */
+            stroke-dasharray: 2150; 
+            
+            /* 2. 应用动画 */
+            /* alternate 让它长到一半自动缩回 */
+            animation: grow-back2 2s ease-in-out infinite alternate;
+          
 
     }
 
