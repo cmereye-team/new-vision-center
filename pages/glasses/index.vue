@@ -1932,9 +1932,18 @@ html, body {
 }
 
 
+
+    .form-public {
+        margin-bottom: 0 !important;
+    }
+
+
 </style>
 
 <style lang="scss" scoped>
 @import url("https://fonts.googleapis.com/css2?family=Abel&family=Josefin+Slab:ital,wght@0,100..700;1,100..700&family=Noto+Sans+HK:wght@100..900&family=Playfair+Display+SC:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap");
 @import "./index.css";
+
+
+
 </style>

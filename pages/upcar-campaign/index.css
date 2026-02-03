@@ -1,8 +1,12 @@
+
+
 /* 手機小螢幕 */
 @media screen and (max-width: 668px) {
     .upcar-campaign {
         margin-top: 4rem;
-        overflow: hidden;
+        width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
     }
 }
 
@@ -10,7 +14,9 @@
 @media screen and (min-width: 669px) and (max-width: 768px) {
     .upcar-campaign {
         margin-top: 7rem;
-        overflow: hidden;
+         width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
     }
 }
 
@@ -18,7 +24,9 @@
 @media screen and (min-width: 769px) {
     .upcar-campaign {
         margin-top: 5rem;
-        overflow: hidden;
+       width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
     }
 }
 
@@ -26,7 +34,9 @@
 @media screen and (min-width: 1560px) {
     .upcar-campaign {
         margin-top: 130px;
-        overflow: hidden;
+         width: 100%;
+    overflow-x: hidden;
+    box-sizing: border-box;
     }
 }
 
@@ -269,7 +279,7 @@ max-width: 1341px;
         height: 978px; */
         width: 100%;
         height: 100%;
-        position: absolute; top: 0;right: -108px;
+        position: absolute; top: 0;right: -11%;
          
 
         
@@ -1795,7 +1805,7 @@ max-width: 1341px;
     /* 地址區塊 */
     .address {
         margin-top: 51px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         box-sizing: border-box;
         margin-left: 0;
         margin-right: 0;
@@ -1808,11 +1818,19 @@ max-width: 1341px;
 
     .address__item {}
 
-    .address__item-img {}
+    .address__item-img {
+        min-height: 250px;
+        
+    }
 
     .address__item-img iframe {
         width: 100%;
-        aspect-ratio: 10 / 9;
+         width: 100%;
+    max-width: 100%;
+    height: 250px;
+    border: 0;
+    display: block;
+        /* aspect-ratio: 10 / 9; */
     }
 
     /* 地址資訊 */
@@ -1834,7 +1852,7 @@ max-width: 1341px;
         line-height: normal;
         letter-spacing: 3.2px;
         position: relative;
-        margin-bottom: 15px;
+        margin-bottom: 5px;
     }
 
     .address__info-item-title::before {
@@ -1877,8 +1895,6 @@ max-width: 1341px;
 
     .address__info-item--show {}
 
-    /* 聯絡資訊 */
-    .address__phone {}
 
     .address__whatsapp {}
 
@@ -1898,7 +1914,7 @@ max-width: 1341px;
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
-        line-height: 45px;
+        line-height: normal;
         /* 150% */
         text-transform: uppercase;
     }
@@ -1924,6 +1940,7 @@ max-width: 1341px;
         width: min-content;
         text-wrap: nowrap;
         gap: 15px;
+        margin-top: 10px;
     }
 }
 
@@ -1932,7 +1949,7 @@ max-width: 1341px;
     /* 地址區塊 */
     .address {
         margin-top: 83px;
-        margin-bottom: 30px;
+        margin-bottom: 60px;
         box-sizing: border-box;
     }
 
@@ -1955,6 +1972,7 @@ max-width: 1341px;
 
     .address__item-img iframe {
         width: 100%;
+        height: 100%;
         aspect-ratio: 10 / 9;
     }
 
@@ -1965,7 +1983,9 @@ max-width: 1341px;
         gap: 40px;
     }
 
-    .address__info-item {}
+    .address__info-item {
+        position: relative;
+    }
 
     .address__info-item-title {
         color: #2449a4;
@@ -2041,14 +2061,15 @@ max-width: 1341px;
         font-size: 19.6px;
         font-style: normal;
         font-weight: 400;
-        line-height: normal;
+        line-height: 1;
         text-transform: uppercase;
-        padding: 20px 45px 25px 19px;
+        padding: 25px 45px 25px 19px;
         display: flex;
         align-items: center;
         text-decoration: none;
-        position: relative;
-        top: -40px;
+        position: absolute;
+        top: 15px;
+        right: 0;
         gap: 15px;
     }
 
