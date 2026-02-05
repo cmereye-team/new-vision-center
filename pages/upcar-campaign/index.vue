@@ -503,7 +503,7 @@ onMounted(() => {
                                                 <rect width="36.1467" height="36.1467" fill="white" />
                                             </clipPath>
                                         </defs>
-                                    </svg></span> <span class="promo-section__benefit-text1" >尊享 75 折優惠  <span class="promo-section__benefit-text2">*蔡司Myocare镜片不适用此优惠</span></span>
+                                    </svg></span> <span class="promo-section__benefit-text1" >尊享 75 折優惠  <span class="promo-section__benefit-text2">*蔡司Myocare鏡片不適用此優惠</span></span>
                             </li>
                             <li class="promo-section__benefit-item">
                                 <span class="promo-section__icon"><svg class="promo-section__svg" viewBox="0 0 37 37"
