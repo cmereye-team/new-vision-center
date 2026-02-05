@@ -1655,6 +1655,18 @@ max-width: 1341px;
         box-shadow: none;
     }
 
+    .promo-section__benefit-text1 {
+       display: flex;
+       flex-direction: row;
+      
+    }
+
+    .promo-section__benefit-text2 {
+        font-size: 15px;
+        color: #6D6D6D;
+         transform: translateY(5px);
+    }
+
 
 
 }
@@ -1762,6 +1774,7 @@ max-width: 1341px;
         letter-spacing: 3px;
         display: flex;
         align-items: start;
+        margin-bottom: 10px;
     }
 
     .promo-section__icon {
@@ -1789,6 +1802,19 @@ max-width: 1341px;
         /* 確保沒有圓角與陰影 */
         border-radius: 0;
         box-shadow: none;
+    }
+
+    .promo-section__benefit-text1 {
+       display: flex;
+       flex-direction: column;
+      
+    }
+
+    .promo-section__benefit-text2 {
+        font-size: 14px;
+        color: #6D6D6D;
+        line-height: normal;
+        
     }
 
 

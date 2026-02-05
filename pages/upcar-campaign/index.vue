@@ -481,7 +481,7 @@ onMounted(() => {
                     <div class="promo-section__info">
 
 
-                        <p class="promo-section__date">即日起至 2026 年 5 月 31 日，</p>
+                        <p class="promo-section__date">即日起至 2026 年 3 月 31 日，</p>
                         <p class="promo-section__location">於 <span class="promo-section__brand--highlight">希瑪視光 ZEISS
                                 Vision Expert</span>
                         </p>
@@ -503,7 +503,7 @@ onMounted(() => {
                                                 <rect width="36.1467" height="36.1467" fill="white" />
                                             </clipPath>
                                         </defs>
-                                    </svg></span> 尊享 75 折優惠
+                                    </svg></span> <span class="promo-section__benefit-text1" >尊享 75 折優惠  <span class="promo-section__benefit-text2">*蔡司Myocare镜片不适用此优惠</span></span>
                             </li>
                             <li class="promo-section__benefit-item">
                                 <span class="promo-section__icon"><svg class="promo-section__svg" viewBox="0 0 37 37"
