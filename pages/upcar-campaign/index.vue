@@ -65,8 +65,8 @@ onMounted(() => {
     <div class="upcar-campaign">
         <!-- 輪播 -->
         <section class="mx-auto">
-            <div class="lazyframe" data-vendor="youtube" data-src="https://youtu.be/kPM1KMcAwss?si=aszvq2zGLaZVnoEo"
-                data-thumbnail="https://img.youtube.com/vi/kPM1KMcAwss/maxresdefault.jpg"></div>
+            <div class="lazyframe" data-vendor="youtube" data-src="https://youtu.be/uMPerJfT-dY?si=bG_KhygwOrZxndVf"
+                data-thumbnail="https://img.youtube.com/vi/uMPerJfT-dY/maxresdefault.jpg"></div>
         </section>
 
 
