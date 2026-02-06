@@ -36,13 +36,13 @@ useHead(() => ({
             hid: "description",
             name: "description",
             content:
-                "希瑪眼科視光中心是您的全方位視光服務中心，我們的註冊視光師提供專業的驗眼服務，並提供各種眼鏡選擇，包括hoya漸進鏡片、全視線鏡片、老花鏡等。我們的眼鏡價錢公道，並經常有配眼鏡優惠活動。我們還提供老花隱形眼鏡和兒童近視控制鏡片等產品。無論您是需要驗眼服務，還是尋找高品質的眼鏡，希瑪視光中心都能滿足您的需求。立即聯絡我們了解更多信息。",
+                "作為德國蔡司官方認證的「ZEISS Vision Expert」，希瑪視光中心配備了符合國際水平的視光檢查儀器，加上嚴格培訓的視光師團隊，為客人提供一站式可靠及個人化的眼睛檢查服務及改善視力方案。",
         },
         {
-            hid: "Keywords",
-            name: "Keywords",
+            hid: "keywords",
+            name: "keywords",
             content:
-                "眼鏡優惠 配眼鏡優惠 hoya漸進鏡片價錢 漸進鏡片價錢 全視線鏡片價錢 全視線漸進鏡價錢 hoya鏡片價錢 zeiss鏡片價錢 漸進眼鏡價錢 眼鏡價錢 配眼鏡價錢 老花隱形眼鏡價錢 漸進老花眼鏡價錢 hoya兒童近視控制鏡片價錢 OK鏡 ok鏡價錢 老花鏡 老花眼鏡 老花隱形眼鏡 兒童近視控制鏡片價格 近視控制鏡片 驗眼費用 驗眼價錢 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
+                "駕輛 駕輛 Upcar Upcar Upcarhkg Zeiss Vision Expert Zeiss鏡片 Zeiss鏡片價錢 Zeiss眼鏡 蔡司鏡片 蔡司眼鏡 蔡司鏡片價錢 蔡司鏡片種類 蔡司DriveSafe 蔡司DriveSafe鏡片 蔡司DriveSafe鏡片價格 蔡司SmartLife 蔡司SmartLife價錢 蔡司SmartLife鏡片 蔡司SmartLife鏡片價錢 Zeiss DriveSafe Zeiss DriveSafe Lenses Zeiss DriveSafe 價錢 Zeiss SmartLife Zeiss SmartLife Lenses Zeiss SmartLife 價錢 Zeiss hk Zeiss hk price list Zeiss lens hk Zeiss 鏡片 hk Zeiss smartlife hk 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心 CMER VISION",
         },
     ],
 }));
