@@ -105,6 +105,12 @@ const bannerImg =
     "mobile": "https://content.cmervision.com/static/upload/other/20251208/1765178594744250.webp",
     "newBanner": true,
     "link": "/misight"
+  },
+   {
+    "pc": "https://content.cmervision.com/static/upload/other/20260209/1770605353419562.webp",
+    "mobile": "https://content.cmervision.com/static/upload/other/20260209/1770605367316929.webp",
+    "newBanner": true,
+    "link": "/misight"
   }
    
   ]

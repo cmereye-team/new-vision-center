@@ -53,9 +53,21 @@ const menuList = ref([
   },
   {
     id: "9",
-    title: "ZEISS Vision Expert",
+    title: "ZEISS VISION EXPERT",
     child: "svg",
-    path: "/zve",
+    path: "/",
+     childrenList: [
+      {
+        id: "1",
+        title: "ZEISS VISION EXPERT",
+        path: "/zve",
+      },
+       {
+        id: "2",
+        title: "駕輛 Upcar",
+        path: "/upcar-campaign",
+      },
+    ]
   },
   {
     id: "2",
@@ -152,11 +164,7 @@ const menuList = ref([
         title: "硬性隱形眼鏡",
         path: "/comprehensive/contact-lens-fitting/rgp",
       },
-       {
-        id: "5",
-        title: "駕輛 UpCar",
-        path: "/upcar-campaign",
-      },
+      
     ],
   },
   {
@@ -321,11 +329,12 @@ const hiddenBox = ref(false);
         class="fa-path"
         :class="[
           `fa-${index + 1}`,
-          item.childrenList && item.childrenList.length > 0
+          item?.childrenList && item.childrenList.length > 0
             ? 'isChildNode'
             : 'noNodeChild',
         ]"
       >
+     
         <nuxt-link
           :to="
             item.path == '/' ? (headLink(index, item), undefined) : item.path
@@ -824,8 +833,8 @@ const hiddenBox = ref(false);
     color: #00a6ce !important;
   }
   .menu {
-    .fa-2,
-    .fa-3 {
+    .fa-2
+     {
       cursor: pointer;
       & > a::after {
         content: none;
@@ -1417,8 +1426,7 @@ const hiddenBox = ref(false);
     }
   }
   .menu {
-    .fa-2,
-    .fa-3 {
+    .fa-2{
       cursor: pointer;
       & > a::after {
         content: none;

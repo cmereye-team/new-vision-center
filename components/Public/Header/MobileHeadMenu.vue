@@ -38,9 +38,21 @@ const menuList = ref([
   },
   {
     id: "9",
-    title: "ZEISS Vision Expert  ",
+    title: "ZEISS Vision Expert",
     child: "svg",
-    path: "/zve",
+    path: "/",
+      childrenList: [
+      {
+        id: "1",
+        title: "ZEISS VISION EXPERT",
+        path: "/zve",
+      },
+       {
+        id: "2",
+        title: "駕輛 Upcar",
+        path: "/upcar-campaign",
+      },
+    ]
   },
   {
     id: "2",
@@ -137,11 +149,7 @@ const menuList = ref([
         title: "硬性隱形眼鏡",
         path: "/comprehensive/contact-lens-fitting/rgp",
       },
-      {
-        id: "5",
-        title: "駕輛 UpCar",
-        path: "/upcar-campaign",
-      },
+     
     ],
   },
   {
@@ -517,8 +525,7 @@ const goToChildPath = (item: any, i: any) => {
       }
     }
 
-    & > div:nth-child(2),
-    & > div:nth-child(3) {
+    & > div:nth-child(2){
       .a-link::after {
         content: none;
       }
