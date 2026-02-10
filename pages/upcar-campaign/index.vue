@@ -125,7 +125,7 @@ onMounted(() => {
                 <div class="zeiss__container">
                     <div class="zeiss__desc">
                          希瑪視光攜手 ZEISS Vision Expert，引入革命性蔡司 i.Technology 技術，配備高精度測量設備ZEISS i.Profiler
-                        Plus，捕捉眼睛微細凹凸面，全面分析您的「光學指紋」，精確計算鏡片最佳曲率與度數分佈，精度高達 1/100 度，有效減少高階像差。 蔡司i.Technology
+                        Plus，捕捉眼睛微細凹凸面，全面分析您的「光學指紋」，精確計算鏡片最佳曲率與度數分佈，鏡片打磨精細至1度，有效減少高階像差。 蔡司i.Technology
                         技術能夠顯著提升視覺清晰度、對比度與立體感，特別適合夜間駕駛者或對視覺質量要求極高的專業人士。
                     </div>
 
