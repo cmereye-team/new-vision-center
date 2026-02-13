@@ -5,7 +5,8 @@ useHead(() => ({
 const bannerImg = {
   // pc: "https://static.cmereye.com/imgs/2024/11/f86a7c9ec8117038.png",
   // mobile: "https://static.cmereye.com/imgs/2024/11/83107af506188726.png",
-  pc: "https://statichk.cmermedical.com/vision/imgs/50e6fa59e567.png",
+  // pc: "https://statichk.cmermedical.com/vision/imgs/50e6fa59e567.png",
+  pc:"https://statichk.cmermedical.com/cmermedical/image/20260213/img1.webp",
   mobile: "https://statichk.cmermedical.com/vision/imgs/934a2d26d597.png",
 };
 </script>
@@ -37,7 +38,7 @@ const bannerImg = {
         <div>
           <div>
             <div>
-              <img src="https://statichk.cmermedical.com/vision/imgs/34e54f5bb4cd.png" alt="糖尿眼" />
+              <img src="https://statichk.cmermedical.com/cmermedical/image/20260213/img2.webp" alt="糖尿眼" />
             </div>
             <div>
               <span>糖尿眼</span>
@@ -180,7 +181,7 @@ const bannerImg = {
         <div>
           <span>1</span>
           <div>
-            <img src="https://statichk.cmermedical.com/vision/imgs/5e4c95e59df4.png" alt="" />
+            <img src="https://statichk.cmermedical.com/cmermedical/image/20260213/img3.webp" alt="" />
           </div>
           <div>
             <span>使用全自動眼底相機</span>
@@ -190,7 +191,7 @@ const bannerImg = {
         <div>
           <span>2</span>
           <div>
-            <img src="https://statichk.cmermedical.com/vision/imgs/dacaac1d5557.png" alt="" />
+            <img src="https://statichk.cmermedical.com/cmermedical/image/20260213/img4.webp" alt="" />
           </div>
           <div>
             <span>由人工智能系統</span>
@@ -200,7 +201,7 @@ const bannerImg = {
         <div>
           <span>3</span>
           <div>
-            <img src="https://statichk.cmermedical.com/vision/imgs/cfabe0b85df2.png" alt="" />
+            <img src="https://statichk.cmermedical.com/cmermedical/image/20260213/img5.webp" alt="" />
           </div>
           <div>
             <span>掃描QR碼，</span>
@@ -245,6 +246,10 @@ const bannerImg = {
 
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
+     :deep(.banner-template > div:nth-child(1) img){
+    object-fit: contain;
+  background: linear-gradient(to right bottom, #B5EDFC 0%, #C8F0FA 25%, #D9F1F8 50%, #E5F4F9 75%, #E0F5FC 85%, #F0F8FB 100%);
+  }
   .explain {
     margin-top: 85px;
     color: #60605f;
