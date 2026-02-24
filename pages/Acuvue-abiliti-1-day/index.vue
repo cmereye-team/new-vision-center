@@ -295,6 +295,22 @@ const handleIntersection = (entries: any, observer: any) => {
             ></iframe>
           </div>
         </div>
+
+
+   <div class="iframe-List-item">
+          <div class="iframe-container">
+            <iframe
+              src="https://www.youtube.com/embed/59_3pOIE2yA?si=3FgtykKcRIxzrMpD"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
+          <p></p>
+        </div>
+
       </div>
     </div>
   </section>
@@ -861,7 +877,17 @@ const handleIntersection = (entries: any, observer: any) => {
           margin-left: -4.792vw; /* -92px ÷ 1920 × 100 */
 
           p {
-            text-align: right;
+            // text-align: right;
+            margin-left: 8.292vw;
+          }
+        }
+
+         & > .iframe-List-item:nth-child(3) {
+          margin-left: -4.792vw; /* -92px ÷ 1920 × 100 */
+
+          p {
+            // text-align: right;
+            // margin-left: 4.6vw;
           }
         }
       }
@@ -1783,6 +1809,17 @@ const handleIntersection = (entries: any, observer: any) => {
             top: auto;
             bottom: -1.026vw; /* -4px ÷ 390 × 100 */
             transform: translateY(100%);
+          }
+        }
+         & > .iframe-List-item:nth-child(3) {
+          margin-left: auto;
+          margin-bottom: 5.128vw; /* 20px ÷ 390 × 100 */
+          &::before {
+            transform: translateX(-90%);
+          }
+          p {
+            left: 11.282vw; /* 44px ÷ 390 × 100 */
+            top: -1.026vw; /* -4px ÷ 390 × 100 */
           }
         }
       }
