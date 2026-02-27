@@ -34,42 +34,42 @@ const bannerImg =
   //   link:'',
   //  },
 
-    {
-    "pc": "https://content.cmervision.com//static/upload/other/20260113/1768283094237395.webp",
-    "mobile": "https://content.cmervision.com//static/upload/other/20260113/1768283133922698.webp",
-    "newBanner": true,
-    "link": "/dims-soft-lens"
-  },
-     {
-    "pc": "https://content.cmervision.com//static/upload/other/20260113/1768283288426406.webp",
-    "mobile": "https://content.cmervision.com//static/upload/other/20260113/1768283297742226.webp",
-    "newBanner": true,
-    "link": "/dims-soft-lens"
-  },
-  {
-    "pc": "https://content.cmervision.com//static/upload/other/20260108/1767858429160094.webp",
-    "mobile": "https://content.cmervision.com//static/upload/other/20260108/1767858443974996.webp",
-    "newBanner": true,
-    "link": "/myopia-control-lenses/zeiss-myovision-pro"
-  },
-  {
-    "pc": "https://content.cmervision.com/static/upload/other/20250818/1755487598516086.avif",
-    "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755486901936980.avif",
-    "newBanner": true,
-    "link": "/dims-soft-lens"
-  },
+  //   {
+  //   "pc": "https://content.cmervision.com//static/upload/other/20260113/1768283094237395.webp",
+  //   "mobile": "https://content.cmervision.com//static/upload/other/20260113/1768283133922698.webp",
+  //   "newBanner": true,
+  //   "link": "/dims-soft-lens"
+  // },
+  //    {
+  //   "pc": "https://content.cmervision.com//static/upload/other/20260113/1768283288426406.webp",
+  //   "mobile": "https://content.cmervision.com//static/upload/other/20260113/1768283297742226.webp",
+  //   "newBanner": true,
+  //   "link": "/dims-soft-lens"
+  // },
+  // {
+  //   "pc": "https://content.cmervision.com//static/upload/other/20260108/1767858429160094.webp",
+  //   "mobile": "https://content.cmervision.com//static/upload/other/20260108/1767858443974996.webp",
+  //   "newBanner": true,
+  //   "link": "/myopia-control-lenses/zeiss-myovision-pro"
+  // },
+  // {
+  //   "pc": "https://content.cmervision.com/static/upload/other/20250818/1755487598516086.avif",
+  //   "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755486901936980.avif",
+  //   "newBanner": true,
+  //   "link": "/dims-soft-lens"
+  // },
   {
     "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488417408460.avif",
     "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755488577240915.avif",
     "newBanner": true,
     "link": "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult"
   },
-  {
-    "pc": "https://content.cmervision.com/static/upload/other/20251117/1763340561538770.webp",
-    "mobile": "https://content.cmervision.com/static/upload/other/20251117/1763340575281198.webp",
-    "newBanner": true,
-    "link": ""
-  },
+  // {
+  //   "pc": "https://content.cmervision.com/static/upload/other/20251117/1763340561538770.webp",
+  //   "mobile": "https://content.cmervision.com/static/upload/other/20251117/1763340575281198.webp",
+  //   "newBanner": true,
+  //   "link": ""
+  // },
   {
     "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488719670535.avif",
     "mobile": "https://content.cmervision.com/static/upload/image/20250224/1740390699424002.jpg",
@@ -100,12 +100,12 @@ const bannerImg =
     "newBanner": true,
     "link": "/dims-soft-lens"
   },
-  {
-    "pc": "https://content.cmervision.com/static/upload/other/20251208/1765178588349370.webp",
-    "mobile": "https://content.cmervision.com/static/upload/other/20251208/1765178594744250.webp",
-    "newBanner": true,
-    "link": "/misight"
-  },
+  // {
+  //   "pc": "https://content.cmervision.com/static/upload/other/20251208/1765178588349370.webp",
+  //   "mobile": "https://content.cmervision.com/static/upload/other/20251208/1765178594744250.webp",
+  //   "newBanner": true,
+  //   "link": "/misight"
+  // },
   //  {
   //   "pc": "https://content.cmervision.com/static/upload/other/20260209/1770605353419562.webp",
   //   "mobile": "https://content.cmervision.com/static/upload/other/20260209/1770605367316929.webp",
