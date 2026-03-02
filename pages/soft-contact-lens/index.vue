@@ -19,7 +19,7 @@ useHead(() => ({
 const bannerImg = {
   // pc: "https://static.cmereye.com/imgs/2024/11/6e3bfe429734a26d.png",
   // mobile: "https://static.cmereye.com/imgs/2024/11/db3138211f42c02b.png",
-  pc: "https://statichk.cmermedical.com/vision/imgs/757a459491bf.png",
+  pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/757a459491bf.webp",
   mobile: "https://statichk.cmermedical.com/vision/imgs/08940425b63f.png",
 };
 import getWindowSize from "@/utils/width";

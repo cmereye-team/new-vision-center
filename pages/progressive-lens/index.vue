@@ -23,7 +23,7 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/2025030309383301.webp",
+  pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/2025030309383301.webp",
   mobile: "https://statichk.cmermedical.com/vision/imgs/2025030309383302.webp",
 };
 const isType = ref(0);

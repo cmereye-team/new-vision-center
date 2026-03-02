@@ -53,9 +53,9 @@ const bannerImg = [
   //         newBanner: true,
   // },
   {
-    pc: "https://content.cmervision.com//static/upload/image/20250120/1737338994793606.png",
+    pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/1737338994793606.webp",
     mobile:
-      "https://content.cmervision.com//static/upload/image/20250120/1737338997670285.png",
+      "https:///statichk.cmermedical.com/cmermedical/image/20260302/1737338997670285.webp",
      newBanner: true,
  },
 ];
