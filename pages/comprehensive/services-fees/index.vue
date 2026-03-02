@@ -17,7 +17,7 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/278854ec5e50055f.png",
+  pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/278854ec5e50055f.webp",
   mobile: "https://statichk.cmermedical.com/vision/imgs/55554fa02587d8de.png",
 };
 </script>

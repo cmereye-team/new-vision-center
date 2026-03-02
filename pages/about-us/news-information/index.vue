@@ -17,8 +17,8 @@ useHead(() => ({
   ],
 }));
 const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/2025021714503601.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/2025021714510801.png",
+  pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/2025021714503601.webp",
+  mobile: "https:///statichk.cmermedical.com/cmermedical/image/20260302/2025021714510801.webp",
 };
 import { onMounted, onUnmounted } from "vue";
 import { useRouter } from "nuxt/app";
