@@ -62,7 +62,7 @@ const bannerImg =
     "pc": "https://content.cmervision.com/static/upload/other/20260318/1773824852843203.webp",
     "mobile": "https://content.cmervision.com/static/upload/other/20260318/1773824857397482.webp",
     "newBanner": true,
-    "link": "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult"
+    "link": ""
   },
   {
     "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488417408460.avif",
