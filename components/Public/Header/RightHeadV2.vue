@@ -55,19 +55,19 @@ const menuList = ref([
     id: "9",
     title: "ZEISS VISION EXPERT",
     child: "svg",
-    path: "/",
-     childrenList: [
-      {
-        id: "1",
-        title: "ZEISS VISION EXPERT",
-        path: "/zve",
-      },
-       {
-        id: "2",
-        title: "駕輛 Upcar",
-        path: "/upcar-campaign",
-      },
-    ]
+    path: "/zve",
+    //  childrenList: [
+      // {
+      //   id: "1",
+      //   title: "ZEISS VISION EXPERT",
+      //   path: "/zve",
+      // },
+      //  {
+      //   id: "2",
+      //   title: "駕輛 Upcar",
+      //   path: "/upcar-campaign",
+      // },
+    // ]
   },
   {
     id: "2",
@@ -1432,6 +1432,12 @@ const hiddenBox = ref(false);
         content: none;
       }
     }
+    .fa-3{
+      cursor: pointer;
+      & > a::after {
+        content: none;
+      }
+    }
     // & > div:last-child:hover {
     // .sub-menu {
     // display: none;
@@ -1537,6 +1543,7 @@ const hiddenBox = ref(false);
     & > div:nth-child(2) {
       display: none;
     }
+    
   }
   .search {
     max-width: 9.895vw;

@@ -349,6 +349,7 @@ const dingTalk = async (formEl: any) => {
     display: grid;
     grid-template-columns: auto auto auto;
     align-items: end;
+    justify-content: space-between;
   }
   :deep(.el-form-item) {
     margin-bottom: 12px;
@@ -407,6 +408,7 @@ const dingTalk = async (formEl: any) => {
       font-weight: 500;
       line-height: 45px;
       padding-left: 27px;
+    
     }
     & > div:nth-child(2) {
       padding: 18px 13px;
@@ -417,6 +419,7 @@ const dingTalk = async (formEl: any) => {
       & > div:nth-child(1) {
         width: 266.25px;
         min-width: 266.25px;
+          display: none;
         & > img {
           width: 100%;
         }
@@ -426,6 +429,8 @@ const dingTalk = async (formEl: any) => {
         flex-direction: column;
         justify-content: space-between;
         font-family: "Noto Sans HK";
+        max-width: 638px;
+        margin: 0 auto;
         & > div:nth-child(1) {
           color: var(--Sales, #db4444);
           font-family: "Noto Sans HK";
@@ -444,7 +449,7 @@ const dingTalk = async (formEl: any) => {
           font-family: "Noto Sans HK";
         }
         & > div:nth-child(2) {
-          padding-right: 80px;
+          // padding-right: 80px;
         }
       }
     }
@@ -491,13 +496,17 @@ const dingTalk = async (formEl: any) => {
       padding: 17px 4vw 30px 4vw;
       box-sizing: border-box;
       & > div:nth-child(1) {
+       
         & > img {
+          
+display: none;
           width: 100%;
         }
         margin-bottom: 13px;
       }
       & > div:nth-child(2) {
         & > div:nth-child(1) {
+          
           color: var(--Sales, #db4444);
           font-family: "Noto Sans HK";
           font-size: 16px;
