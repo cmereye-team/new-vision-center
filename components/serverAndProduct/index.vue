@@ -141,15 +141,15 @@ const props = defineProps({
     padding: 0 90px;
   }
   .product-list-box:nth-last-child(2)::after {
-    content: "";
-    position: absolute;
-    background: url(https://statichk.cmermedical.com/hkcmereye/LAL/iconNew.svg)
-      no-repeat;
-    width: 50px;
-    height: 20px;
-    right: -15%;
-    top: 10%;
-    background-size: cover;
+    // content: "";
+    // position: absolute;
+    // background: url(https://statichk.cmermedical.com/hkcmereye/LAL/iconNew.svg)
+    //   no-repeat;
+    // width: 50px;
+    // height: 20px;
+    // right: -15%;
+    // top: 10%;
+    // background-size: cover;
   }
   .product-list-box {
     cursor: pointer;
