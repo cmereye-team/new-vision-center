@@ -1,75 +1,17 @@
-# Nuxt 3 Minimal Starter
+# 视光中心
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more. 
+Nuxt3框架，Node 20，包管理器 NPM ，本地端口3015。
 
-## Setup
+- [线上地址](https://www.cmervision.com/)
+- [手动发版测试站](https://test-cmervision.cmer.eu.org/)
 
-Make sure to install the dependencies:
+## 文档链接
 
-```bash
-# npm
-npm install
+- [Nuxt3](https://nuxt.com/docs/3.x/getting-started/introduction)
 
-# pnpm
-pnpm install
+## 常用命令
 
-# yarn
-yarn install
-
-# bun
-bun install
-```
-
-## Development Server
-
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
+```sh
 npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+npm run generate
 ```
-
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.

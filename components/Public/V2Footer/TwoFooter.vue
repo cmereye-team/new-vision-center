@@ -298,10 +298,18 @@ const showThreeLevel = () => {
       <nuxt-link to="/">版權所有</nuxt-link>|
       <nuxt-link to="/">私隱政策</nuxt-link>
     </div>
+    <div class="email"><a href="mailto:info@cmervision.com">info@cmervision.com</a></div>
   </div>
 </template>
 
 <style lang="scss" scoped>
+.email {
+  text-align: center;
+  font-size: 12px;
+  a {
+    color: #666;
+  }
+}
 @media screen and (min-width: 768px) {
   a {
     text-decoration: none;

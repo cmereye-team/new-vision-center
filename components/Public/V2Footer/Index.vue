@@ -164,7 +164,7 @@ const toForm = () => {
   footer {
     width: 100vw;
     box-sizing: border-box;
-    padding: 30px 20px 90px 20px;
+    padding: 30px 20px 100px 20px;
     background: rgba(0, 166, 206, 0.1);
   }
 }
