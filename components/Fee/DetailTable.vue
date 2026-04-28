@@ -3,7 +3,7 @@ const props = defineProps({
   tableData: { type: Array, required: true },
   remark: { type: String, required: true },
   headerTitle: { type: String, required: true },
-  declare: { type: String, required: true },
+  // declare: { type: String, required: true },
 });
 </script>
 
@@ -83,7 +83,9 @@ const props = defineProps({
       </div>
     </div>
     <div class="detail-declare">
-      <span>{{ declare }}</span>
+      <!-- <span>{{ declare }}</span> -->
+      <p>如需詳盡紙本報告另收$100</p>
+      <p>本中心價目清晰，絕無其他額外收費</p>
     </div>
   </div>
 </template>

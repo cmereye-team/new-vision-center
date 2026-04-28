@@ -84,7 +84,7 @@ const glaucomaList = ref([
   [["視力及屈光度數檢查", " (近視/遠視/散光/老花)"], "child"], // Row 7
   ["青光眼篩查(眼壓)", "child"], // Row 2
   ["眼球結構斷層掃描OCT", "child"], // Row 3
-  ["視野檢查 (+500)", "child"], // Fee row
+  ["視野檢查 (+$500)", "child"], // Fee row
   ["收費/HKD", " $1000"],
 ]);
 const headerTitle = ref("綜合眼睛檢查");
@@ -169,7 +169,6 @@ onMounted(() => {
           :tableData="synthesisTableData"
           :headerTitle="headerTitle"
           :remark="remark"
-          :declare="declare"
           key="synthesis"
         />
       </div>
