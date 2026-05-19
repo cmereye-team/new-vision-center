@@ -66,7 +66,7 @@ const bannerImg =
   },*/
   {
     "pc": "https://content.cmervision.com/static/upload/image/20260519/1779183539911060.jpg",
-    "mobile": "https://content.cmervision.com/static/upload/image/20260519/1779183539911060.jpg",
+    "mobile": "https://content.cmervision.com//static/upload/other/20260519/1779179490950606.avif",
     "newBanner": true,
     "link": ""
   },
