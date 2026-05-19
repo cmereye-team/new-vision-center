@@ -65,6 +65,12 @@ const bannerImg =
     "link": ""
   },*/
   {
+    "pc": "https://content.cmervision.com/static/upload/image/20260519/1779183539911060.jpg",
+    "mobile": "https://content.cmervision.com/static/upload/image/20260519/1779183539911060.jpg",
+    "newBanner": true,
+    "link": ""
+  },
+  {
     "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488417408460.avif",
     "mobile": "https://content.cmervision.com/static/upload/other/20250818/1755488577240915.avif",
     "newBanner": true,
