@@ -20,8 +20,8 @@ useHead(() => ({
 interface discountBannerImg {
   id: number;
   gid: number;
-  pic: string;
-  mobilepic: string;
+  pc: string;
+  mobile: string;
   link: string;
   title: string;
   subtitle: string;
@@ -54,8 +54,6 @@ const getData = async () => {
 onMounted(() => {
   getData();
 });
-
-console.log(discountBannerImg);
 
 const bannerImg = 
   [
