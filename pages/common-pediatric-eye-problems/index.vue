@@ -1233,7 +1233,7 @@ onMounted(() => {
         color: var(--White, #fff);
         text-align: center;
         font-family: "Noto Sans HK";
-        font-size: 13.5px;
+        font-size: 16px;
         font-style: normal;
         font-weight: 500;
         line-height: 18.75px; /* 138.889% */

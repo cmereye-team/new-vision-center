@@ -582,7 +582,7 @@ const showAgeStage = (type: any) => {
         & > div:nth-child(3) {
           color: var(--Grey, #4d4d4d);
           font-family: "Noto Sans HK";
-          font-size: 13.5px;
+          font-size: 16px;
           font-style: normal;
           font-weight: 500;
           line-height: 18.75px; /* 138.889% */
@@ -1409,7 +1409,7 @@ const showAgeStage = (type: any) => {
           color: var(--Grey, #4d4d4d);
           text-align: justify;
           font-family: "Noto Sans HK";
-          font-size: 13.5px;
+          font-size: 16px;
           font-style: normal;
           font-weight: 500;
           line-height: 18.75px; /* 138.889% */
