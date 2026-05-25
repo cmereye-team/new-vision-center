@@ -17,6 +17,44 @@ useHead(() => ({
   ],
 }));
 
+interface discountBannerImg {
+  id: number;
+  gid: number;
+  pc: string;
+  mobile: string;
+  link: string;
+  title: string;
+  subtitle: string;
+}
+const discountBannerImg = ref<discountBannerImg[]>([]);
+// 获取数据
+const getData = async () => {
+  try {
+    const res = await fetch("https://content.cmervision.com/api.php/cms/slide/gid/2/num/30");
+    const data = await res.json();
+    if (data.code === 1) {
+      // data.data.sort((a: any, b: any) => a.id - b.id);
+      discountBannerImg.value = data.data.map((item: any) => {
+        return {
+          id: item.id,
+		  gid: item.gid,
+          pc: `https://content.cmervision.com${item.pic}`,
+          mobile: `https://content.cmervision.com${item.mobilepic}`,
+          link: `https://www.cmervision.com${item.link}`,
+          title: item.title,
+          subtitle: item.subtitle,
+        };
+      });
+    }
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+onMounted(() => {
+  getData();
+});
+
 const bannerImg = 
   [
   // {
@@ -63,6 +101,12 @@ const bannerImg =
     "mobile": "https://content.cmervision.com/static/upload/other/20260318/1773824857397482.webp",
     "newBanner": true,
     "link": ""
+  },
+  {
+    "pc": "https://content.cmervision.com/static/upload/image/20260519/1779183539911060.jpg",
+    "mobile": "https://content.cmervision.com//static/upload/other/20260519/1779179490950606.avif",
+    "newBanner": true,
+    "link": "/zve"
   },
   {
     "pc": "https://content.cmervision.com/static/upload/other/20250818/1755488417408460.avif",
@@ -117,10 +161,8 @@ const bannerImg =
   //   "mobile": "https://content.cmervision.com/static/upload/other/20260209/1770605367316929.webp",
   //   "newBanner": true,
   //   "link": "/misight"
-  // }
-   
-  ]
- 
+  // },
+
   //  {
   //   pc: "https://content.cmervision.com//static/upload/other/20250729/1753775892505247.avif",
   //   mobile:
@@ -144,13 +186,13 @@ const bannerImg =
   //   mobile: "https://statichk.cmermedical.com/vision/imgs/a946bc28a9b89d42.png",
   //   newBanner: true,
   // },
-// ];
+];
 </script>
 
 <template>
   <div class="video-information">
      <!-- <PublicContainBanner  :banner="bannerImg" /> -->
-    <PageSwiperBannerV2 :banner="bannerImg" class="banner" />
+    <PageSwiperBannerV2 :banner="discountBannerImg" class="banner" />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts />
