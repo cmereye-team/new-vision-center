@@ -321,5 +321,9 @@ const props = defineProps({
       padding-left: 10.1025vw;
     }
   }
+  :deep(.el-collapse-item__title span) {
+    padding-left: 24px;
+    display: inline-block;
+  }
 }
 </style>
