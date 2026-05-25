@@ -44,7 +44,7 @@ const bannerImg = [
   //   pc: "https://content.cmervision.com//static/upload/other/20260113/1768283288426406.webp",
   //   mobile: "https://content.cmervision.com//static/upload/other/20260113/1768283297742226.webp",
   //   newBanner: true,
-   
+
   // },
   // {
   //   pc: "https://content.cmervision.com//static/upload/other/20250808/1754622962158449.webp",
@@ -52,12 +52,18 @@ const bannerImg = [
   //     "https://content.cmervision.com//static/upload/other/20250808/1754624918417613.avif",
   //         newBanner: true,
   // },
+  //   {
+  //     pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/1737338994793606.webp",
+  //     mobile:
+  //       "https:///statichk.cmermedical.com/cmermedical/image/20260302/1737338997670285.webp",
+  //      newBanner: true,
+  //  },
   {
-    pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/1737338994793606.webp",
+    pc: "https:///statichk.cmermedical.com/cmermedical/image/20260525/1779672303.webp",
     mobile:
-      "https:///statichk.cmermedical.com/cmermedical/image/20260302/1737338997670285.webp",
-     newBanner: true,
- },
+      "https:///statichk.cmermedical.com/cmermedical/image/20260525/1779672288.webp",
+    newBanner: true,
+  },
 ];
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
@@ -2235,7 +2241,8 @@ const btnElement = ref({
     justify-content: center;
   }
   .myopia-collapse {
-    margin: 30px 25px 40px;
+    padding: 30px 25px 40px;
+    overflow: hidden;
     :deep(.el-collapse-item__header) {
       padding: 1.28vw 6.41vw 1.28vw 12.38vw;
       & > span {
@@ -3085,6 +3092,16 @@ const btnElement = ref({
   100% {
     transform: translateY(18px);
     opacity: 0.4;
+  }
+}
+@media screen and (min-width: 1621px) {
+  :deep(.banner-swiper img) {
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

@@ -676,8 +676,16 @@ const btnElement = ref({
   }
 }
 @media screen and (max-width: 767px) {
+  :deep( .el-collapse-item__header) {
+    width: 100%;
+  }
+  :deep(.el-collapse-item__title span) {
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+  }
   :deep(.question) {
-    padding: 0 5.897vw 0 5.64vw;
+    // padding: 0 5.897vw 0 5.64vw;
     margin-top: 8.2vw;
     & > div {
       & > div:nth-child(2) {

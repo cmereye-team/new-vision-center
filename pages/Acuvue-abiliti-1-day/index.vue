@@ -2154,11 +2154,13 @@ const handleIntersection = (entries: any, observer: any) => {
     margin-left: auto;
     margin-right: auto;
     :deep(.el-collapse-item__header) {
+      width: 100%;
       &::before {
         left: 2.564vw; /* 10px ÷ 390 × 100 */
       }
       span {
         width: 80%;
+        display: block;
         margin: 0 auto;
       }
     }

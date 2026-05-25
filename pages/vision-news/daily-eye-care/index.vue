@@ -1020,7 +1020,9 @@ const clickQuestion = (id: number) => {
           gap: 15px 0;
           padding: 23px 27px;
           & > div:nth-child(1) {
-            width: 284px;
+            width: 100%;
+            object-fit: cover;
+            // width: 284px;
             height: 248px;
             border-radius: 9.323px;
             margin: 0 auto;
