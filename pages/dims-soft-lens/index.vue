@@ -2241,7 +2241,8 @@ const btnElement = ref({
     justify-content: center;
   }
   .myopia-collapse {
-    margin: 30px 25px 40px;
+    padding: 30px 25px 40px;
+    overflow: hidden;
     :deep(.el-collapse-item__header) {
       padding: 1.28vw 6.41vw 1.28vw 12.38vw;
       & > span {

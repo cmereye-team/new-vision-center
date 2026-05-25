@@ -224,6 +224,7 @@ const props = defineProps({
     border-radius: 20px;
     background: var(--Skin, #eafbff);
     margin: 4px 0;
+    width: 85%;
     padding: 9px 3.07vw;
     color: var(--Grey-Deep, #4d4d4d);
     text-align: center;
@@ -264,7 +265,7 @@ const props = defineProps({
       height: 26px;
       transition: all 0.3s;
       position: absolute;
-      right: 5px;
+      right: 8px;
       & > svg {
         display: none;
       }
@@ -303,7 +304,7 @@ const props = defineProps({
   }
   :deep(.el-collapse-item__content) {
     padding-top: 17px;
-    padding-left: 28px;
+    // padding-left: 28px;
     padding-right: 0;
     & > div {
       display: flex;
