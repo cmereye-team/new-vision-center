@@ -104,8 +104,9 @@ const props = defineProps({
     position: relative;
     & > span {
       position: relative;
-      left: 50%;
-      transform: translateX(-50%);
+      padding-left: 40px;
+      // left: 50%;
+      // transform: translateX(-50%);
     }
 
     & > i {
