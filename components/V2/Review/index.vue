@@ -203,7 +203,7 @@ const openVideo = (link: string) => {
       </section>
       <section class="section1" v-else>
         <div class="witnessSwiper">
-          <a v-for="(item, index) in witness.section1" :key="index" class="witnessSwiper-slide">
+          <div v-for="(item, index) in witness.section1" :key="index" class="witnessSwiper-slide">
             <a @click.stop="openVideo(item.link)" class="content" :class="{ hot: item.isHot }">
               <div class="image">
                 <img :src="item.img" :alt="item.name" />
@@ -221,7 +221,7 @@ const openVideo = (link: string) => {
                 <img src="https://statichk.cmermedical.com/vision/imgs/2025021110392801.svg" alt="" />
               </div>
             </a>
-          </a>
+          </div>
         </div>
       </section>
     </div>
