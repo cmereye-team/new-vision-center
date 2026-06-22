@@ -497,7 +497,7 @@ const disabledDate = (time: Date) => {
             <el-option label="旺角" value="Mong Kok" />
             <el-option label="西環" value="Sai Wan" />
             <el-option label="北角" value="North Point" />
-            <el-option label="將軍澳中心" value="將軍澳中心" />
+            <!-- <el-option label="將軍澳中心" value="將軍澳中心" /> -->
             <el-option label="將軍澳寶琳" value="將軍澳寶琳" />
             <el-option label="鑽石山" value="鑽石山" />
             <el-option label="銅鑼灣" value="銅鑼灣" />

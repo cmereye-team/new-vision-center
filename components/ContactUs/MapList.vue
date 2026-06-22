@@ -153,18 +153,18 @@ const newTerritoriesList = ref([
     call: "+852 3892 5089 ",
   },
 
-  {
-    id: 3,
-    img: "https://statichk.cmermedical.com/vision/imgs/c631f8678184f3da.png",
-    region: "將軍澳",
-    name: "希瑪醫療旗下視光師驗眼中心",
-    googleMap: "",
-    whatsApps:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    address: ["將軍澳新都城中心一期", "地下G67號舖"],
-    businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
-    call: "+852 3892 5089 ",
-  },
+  // {
+  //   id: 3,
+  //   img: "https://statichk.cmermedical.com/vision/imgs/c631f8678184f3da.png",
+  //   region: "將軍澳",
+  //   name: "希瑪醫療旗下視光師驗眼中心",
+  //   googleMap: "",
+  //   whatsApps:
+  //     "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
+  //   address: ["將軍澳新都城中心一期", "地下G67號舖"],
+  //   businessHours: ["11:00 – 20:00", "(公眾假期照常營業)"],
+  //   call: "+852 3892 5089 ",
+  // },
   {
     id: 2,
     img: "https://statichk.cmermedical.com/vision/imgs/873265f7b34ec11f.png",
