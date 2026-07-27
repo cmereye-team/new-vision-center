@@ -58,6 +58,11 @@ const changeActiveKind = (index: number) => {
 // });
 const bannerImg = [
   {
+    pc: "https://content.cmervision.com/static/upload/other/20260724/1784853945543908.webp",
+    mobile: "https://content.cmervision.com/static/upload/other/20260723/1784797857690280.webp",
+    newBanner: true,
+  },
+  {
     pc: "https://statichk.cmermedical.com/vision/imgs/2025022417592801.webp",
     mobile: "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
     newBanner: true,

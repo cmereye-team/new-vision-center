@@ -27,6 +27,11 @@ onMounted(() => {
 });
 const bannerImg = [
   {
+    pc: "https://content.cmervision.com//static/upload/other/20260724/1784887463172977.webp",
+    mobile: "https://content.cmervision.com/static/upload/other/20260724/1784887466156932.webp",
+    newBanner: true,
+  },
+  {
     pc: "https://statichk.cmermedical.com/vision/banner/banner-hoya-pc-v1.webp",
     mobile: "https://statichk.cmermedical.com/vision/banner/banner-hoya-mb-v1.webp",
     newBanner: true,
