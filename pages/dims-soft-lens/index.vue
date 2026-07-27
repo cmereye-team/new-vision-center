@@ -110,19 +110,19 @@ const btnElement = ref({
           </template>
         </PublicMyopiaForm>
       </div>
-      <div class="hoya-intro">
+      <div class="hoya-intro mx-auto mt-8 md:mt-15">
         <PublicPageTitle title="新一代兒童近視控制鏡片，控制近視更有效！" color="#FF9701" />
-        <div class="hoya-table">
+        <div class="hoya-table text-text-desc text-sm md:text-xl text-center mt-7 md:mt-18">
           <table>
             <thead>
               <tr>
                 <th></th>
-                <th>
+                <th class="bg-[#ffead9] text-[#FD8433]">
                   HOYA MiYOSMART iQ
                   <br />
                   新一代兒童近視控制鏡片
                 </th>
-                <th>
+                <th class="bg-[#d1f0f3] text-primary">
                   HOYA MiYOSMART
                   <br />
                   兒童近視控制鏡片
@@ -131,8 +131,8 @@ const btnElement = ref({
             </thead>
             <tbody>
               <tr>
-                <td>核心技術</td>
-                <td>
+                <td class="bg-[#419acc] text-white border-b border-white">核心技術</td>
+                <td class="bg-[#ffead9]">
                   最新研發升級技術
                   <br />
                   D.I.M.S. Technology -
@@ -141,7 +141,7 @@ const btnElement = ref({
                   <br class="block md:hidden" />
                   (TED)
                 </td>
-                <td>
+                <td class="bg-[#d1f0f3]">
                   D.I.M.S.
                   <br />
                   （Defocus Incorporated
@@ -150,40 +150,40 @@ const btnElement = ref({
                 </td>
               </tr>
               <tr>
-                <td>技術特點</td>
-                <td>
+                <td class="bg-[#78b7db] text-white border-b border-white">技術特點</td>
+                <td class="bg-[#f9f3eb]">
                   <ol>
                     <li class="list-none">
-                      <strong class="block">升級1 - Activated 激活</strong>
-                      縮小中心光學區，以加大治療視區，精準激活對近視離焦最為敏感的關鍵區域
+                      <strong class="block text-[#FD8433]">升級1 - Activated 激活</strong>
+                      縮小中心光學區，以加大治療視<br class="hidden md:block"/>區，精準激活對近視離焦最為敏<br class="hidden md:block"/>感的關鍵區域
                     </li>
                     <li class="list-none">
-                      <strong class="block">升級2 - Powerful 增強</strong>
-                      更強的離焦度數，產生更強的近視離焦訊號
+                      <strong class="block text-[#FD8433]">升級2 - Powerful 增強</strong>
+                      更強的離焦度數，產生更強的近<br class="hidden md:block"/>視離焦訊號
                     </li>
                     <li class="list-none">
-                      <strong class="block">升級3 - Extended 拓展</strong>
-                      延伸周邊治療視區，確保近視離焦訊號廣泛覆蓋周邊視野範圍
+                      <strong class="block text-[#FD8433]">升級3 - Extended 拓展</strong>
+                      延伸周邊治療視區，確保近視離<br class="hidden md:block"/>焦訊號廣泛覆蓋周邊視野範圍
                     </li>
                   </ol>
                 </td>
-                <td>
+                <td class="bg-[#f1fafd]">
                   <ul>
                     <li>多區正向光學離焦</li>
-                    <li>聚焦周邊影像至視網膜前方，減慢眼球軸增長</li>
+                    <li>聚焦周邊影像至視網膜<br class="hidden md:block"/>前方，減慢眼球軸增長</li>
                   </ul>
                 </td>
               </tr>
               <tr>
-                <td>臨床成效</td>
-                <td>
+                <td class="bg-[#419acc] text-white">臨床成效</td>
+                <td class="bg-[#ffead9] text-[#FD8433]">
                   <div class="flex">
                     <!-- prettier-ignore -->
                     <svg xmlns="http://www.w3.org/2000/svg" width="27" height="62" viewBox="0 0 27 62" fill="none"><g clip-path="url(#a)"><path d="M26.588 17.49 15.448 1.036a2.35 2.35 0 0 0-3.897 0L.412 17.49c-1.064 1.572.056 3.7 1.949 3.7H7.2l5.426 40.047c.163 1.028 1.594 1.003 1.747 0L19.8 21.189h4.84c1.893 0 3.013-2.127 1.949-3.7" fill="#fd8433"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h27v62H0z"/></clipPath></defs></svg>
                     <span>近視控制成效是MiYOSMART的兩倍</span>
                   </div>
                 </td>
-                <td>
+                <td class="bg-[#d1f0f3]">
                   <ul>
                     <li>✓ 近視加深速度減慢60%</li>
                     <li>✓ 減慢眼球軸增長平均達60%</li>
@@ -493,7 +493,30 @@ const btnElement = ref({
 $max-w: 960px;
 .hoya-intro {
   max-width: $max-w;
-  margin: 0 auto;
+  .hoya-table {
+    tr th,tr:not(:last-child) td {
+      &:nth-child(2) {
+        border-bottom: 1px solid #FD8433;
+      }
+      &:nth-child(3) {
+        border-bottom: 1px solid #21AACA;
+      }
+    }
+    tr td:first-child {
+      width: 72px;
+    }
+    tr td:not(:first-child) {
+      width: 158px;
+    }
+    @media screen and (min-width:768px) {
+      tr td:first-child {
+        width: 224px;
+      }
+      tr td:not(:first-child) {
+        width: 440px;
+      }
+    }
+  }
 }
 @media screen and (min-width: 768px) {
   .myopia-control-hoya {

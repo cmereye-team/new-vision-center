@@ -31,27 +31,31 @@ const btnElement = ref({
   // isExternalLink 外链 true
   link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
 });
-const isKindCare = ref(false);
-const isKindVision = ref(false);
-const isKindKids = ref(false);
-const handKind = (index: number) => {
-  if (index === 0) {
-    isKindCare.value = true;
-    isKindVision.value = false;
-    isKindKids.value = false;
-  } else if (index === 1) {
-    isKindCare.value = false;
-    isKindVision.value = true;
-    isKindKids.value = false;
-  } else {
-    isKindCare.value = false;
-    isKindVision.value = false;
-    isKindKids.value = true;
-  }
+const activeKind = ref(0);
+const changeActiveKind = (index: number) => {
+  activeKind.value = index;
 };
-onMounted(() => {
-  handKind(0);
-});
+// const isKindCare = ref(false);
+// const isKindVision = ref(false);
+// const isKindKids = ref(false);
+// const handKind = (index: number) => {
+//   if (index === 0) {
+//     isKindCare.value = true;
+//     isKindVision.value = false;
+//     isKindKids.value = false;
+//   } else if (index === 1) {
+//     isKindCare.value = false;
+//     isKindVision.value = true;
+//     isKindKids.value = false;
+//   } else {
+//     isKindCare.value = false;
+//     isKindVision.value = false;
+//     isKindKids.value = true;
+//   }
+// };
+// onMounted(() => {
+//   handKind(0);
+// });
 const bannerImg = [
   {
     pc: "https://statichk.cmermedical.com/vision/imgs/2025022417592801.webp",
@@ -141,28 +145,116 @@ onMounted(() => {
       <div class="myopia-form-kind">
         <PublicPageTitle :title="'ZEISS兒童近視控制鏡片種類'" />
         <div>
-          <div>
-            <div @click="handKind(0)" :class="[isKindCare ? 'kind-active' : 'kind-item']">
+          <div class="flex gap-4 overflow-x-auto md:overflow-visible">
+            <div @click="changeActiveKind(0)" :class="[activeKind === 0 ? 'kind-active' : 'kind-item']">
+              <div class="relative myoactive-img">
+                <img src="https://statichk.cmermedical.com/vision/kid/zeiss/MyoActive.webp" alt="MyoActive鏡片" />
+              </div>
+              <div :class="[activeKind === 0 ? 'kind-btn-active' : 'kind-btn-item']">
+                MyoActive
+                <br class="block md:hidden" />
+                鏡片
+              </div>
+            </div>
+            <div @click="changeActiveKind(1)" :class="[activeKind === 1 ? 'kind-active' : 'kind-item']">
               <div>
                 <img src="https://statichk.cmermedical.com/vision/imgs/293e63cc80e333c7.png" alt="MyoCare鏡片" />
               </div>
-              <div :class="[isKindCare ? 'kind-btn-active' : 'kind-btn-item']">MyoCare鏡片</div>
+              <div :class="[activeKind === 1 ? 'kind-btn-active' : 'kind-btn-item']">
+                MyoCare
+                <br class="block md:hidden" />
+                鏡片
+              </div>
             </div>
-            <div @click="handKind(1)" :class="[isKindVision ? 'kind-active' : 'kind-item']">
+            <div @click="changeActiveKind(2)" :class="[activeKind === 2 ? 'kind-active' : 'kind-item']">
               <div>
                 <img src="https://statichk.cmermedical.com/vision/imgs/92ca57e15e76e126.png" alt="MyoVision Pro鏡片" />
               </div>
-              <div :class="[isKindVision ? 'kind-btn-active' : 'kind-btn-item']">MyoVision Pro鏡片</div>
+              <div :class="[activeKind === 2 ? 'kind-btn-active' : 'kind-btn-item']">
+                MyoVision
+                <br class="block md:hidden" />
+                Pro鏡片
+              </div>
             </div>
-            <div @click="handKind(2)" :class="[isKindKids ? 'kind-active' : 'kind-item']">
+            <div @click="changeActiveKind(3)" :class="[activeKind === 3 ? 'kind-active' : 'kind-item']">
               <div>
                 <img src="https://statichk.cmermedical.com/vision/imgs/0757ddde6b5bd37c.png" alt="MyoKids鏡片" />
               </div>
-              <div :class="[isKindKids ? 'kind-btn-active' : 'kind-btn-item']">MyoKids鏡片</div>
+              <div :class="[activeKind === 3 ? 'kind-btn-active' : 'kind-btn-item']">
+                MyoKids
+                <br class="block md:hidden" />
+                鏡片
+              </div>
             </div>
           </div>
           <div>
-            <div class="btn-care" :class="[isKindCare ? 'kind-container-active' : 'kind-container-item']">
+            <div
+              class="btn-active px-5 md:px-8"
+              :class="[activeKind === 0 ? 'kind-container-active' : 'kind-container-item']"
+            >
+              <div>
+                <div>
+                  <div class="text-xl md:text-3xl text-primary-deep font-bold tracking-wider mb-2 md:md-3">
+                    MyoActive鏡片
+                  </div>
+                  <div class="text-base md:text-xl font-medium text-text-grey !leading-[2]">
+                    ZEISS MyoActive 兒童近視控制鏡片採用了蔡司突破性的 M.O.V.E.
+                    微光學動態結構技術，有效控制兒童近視發展。
+                  </div>
+                </div>
+                <div>
+                  <img
+                    src="https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-myoactive-bg-v1.webp"
+                    alt="MyoCare鏡片"
+                    class="w-full md:w-[384px]"
+                  />
+                </div>
+              </div>
+              <div class="space-y-4 md:space-y-7 tracking-wider">
+                <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 md:grid-rows-[auto_1fr]">
+                  <div class="col-start-1 row-start-1 md:row-span-2 shrink-0">
+                    <img
+                      src="https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-myoactive-01-v1.webp"
+                      alt="M.O.V.E 微光學動態結構"
+                      class="size-11 md:size-19 object-contain"
+                    />
+                  </div>
+                  <p class="col-start-2 row-start-1 text-primary text-xl leading-[1.5] font-bold self-center">
+                    M.O.V.E 微光學動態結構
+                  </p>
+                  <div
+                    class="col-span-2 md:col-span-1 md:col-start-2 md:row-start-2 text-sm md:text-base font-medium leading-[1.5] text-text-desc"
+                  >
+                    <p>
+                      採用 ZEISS Micro Optical Variable Elements
+                      技術，微結構隨機旋轉排列且連續起伏。隨著視線移動，持續提供豐富多變的離焦信號，激活視網膜，擺脫傳統單一離焦限制，讓近視控制成效更持久。
+                    </p>
+                  </div>
+                </div>
+                <div class="grid grid-cols-[auto_1fr] gap-x-4 gap-y-2 md:grid-rows-[auto_1fr]">
+                  <div class="col-start-1 row-start-1 md:row-span-2 shrink-0">
+                    <img
+                      src="https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-myoactive-02-v1.webp"
+                      alt="臨床研究支持"
+                      class="size-11 md:size-19 object-contain"
+                    />
+                  </div>
+                  <p class="col-start-2 row-start-1 text-primary text-xl leading-[1.5] font-bold self-center">
+                    臨床研究支持
+                  </p>
+                  <div
+                    class="col-span-2 md:col-span-1 md:col-start-2 md:row-start-2 text-sm md:text-base font-medium leading-[1.5] text-text-desc"
+                  >
+                    <p>最近12個月臨床研究顯示：</p>
+                    <ul>
+                      <li>✔️約 30% 配戴者出現近視及眼軸雙回退</li>
+                      <li>✔️眼軸增長比正視眼更為緩慢</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="btn-care" :class="[activeKind === 1 ? 'kind-container-active' : 'kind-container-item']">
               <div>
                 <div>
                   <div>MyoCare鏡片</div>
@@ -207,7 +299,7 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-            <div class="btn-vision" :class="[isKindVision ? 'kind-container-active' : 'kind-container-item']">
+            <div class="btn-vision" :class="[activeKind === 2 ? 'kind-container-active' : 'kind-container-item']">
               <div>
                 <div>MyoVision Pro鏡片</div>
                 <div>ZEISS MyoVision Pro兒童近視控制鏡片採用了周邊視力離焦控制技術，減緩近視加深。</div>
@@ -236,7 +328,7 @@ onMounted(() => {
                 </div>
               </div>
             </div>
-            <div class="btn-kids" :class="[isKindKids ? 'kind-container-active' : 'kind-container-item']">
+            <div class="btn-kids" :class="[activeKind === 3 ? 'kind-container-active' : 'kind-container-item']">
               <div>
                 <div>
                   <div>MyoKids鏡片</div>
@@ -327,7 +419,6 @@ onMounted(() => {
               有高效的藍光過濾能力，選擇性過濾穿過鏡片的紫藍光，減少電子螢幕對眼睛的負面影響。
             </div>
           </div>
-
           <div class="card">
             <!-- prettier-ignore -->
             <svg xmlns="http://www.w3.org/2000/svg" width="125" height="76" viewBox="0 0 125 76" fill="none"><g clip-path="url(#prefix__clip0_2534_52822)"><path d="M113.795 6.71586C95.4816 1.62947 76.0104 0 58.4638 0C39.9628 0 23.601 1.81608 13.0287 3.35679C9.25047 3.90526 5.97902 5.81009 3.67325 8.49552C1.3652 11.1787 0 14.6606 0 18.3793C0 19.0324 0.0433758 19.6924 0.127845 20.3569C2.63451 39.5805 6.76435 53.167 9.46963 60.5701C11.1887 65.2742 15.1245 68.7994 19.9597 70.0647C36.89 74.5025 52.1195 76 64.9564 76C82.9574 76 96.2601 73.0551 103.018 71.1389C106.739 70.0829 109.923 67.6547 111.91 64.3366C115.994 57.5024 118.866 49.9354 120.907 42.7371C122.945 35.5387 124.153 28.7045 124.87 23.3405C124.959 22.6691 125.002 22.0023 125.002 21.3401C125.002 14.581 120.459 8.56835 113.798 6.71586H113.795ZM120.484 22.7602C119.79 27.9672 118.617 34.6057 116.651 41.54C114.688 48.4743 111.93 55.7 108.111 62.0813C106.707 64.4299 104.449 66.1527 101.808 66.9014C95.3743 68.7266 82.4734 71.5941 64.9564 71.5941C52.4619 71.5941 37.6205 70.1376 21.0829 65.8022C17.6266 64.8964 14.8368 62.3862 13.6223 59.0613C11.0175 51.9312 6.97209 38.6611 4.51109 19.788C4.44945 19.3146 4.41977 18.8435 4.41977 18.3793C4.41977 15.7439 5.38773 13.277 7.03145 11.363C8.67745 9.45135 10.9764 8.11091 13.668 7.7172C24.085 6.19925 40.2505 4.40821 58.4638 4.40821C75.7342 4.40821 94.8424 6.02174 112.606 10.9625C117.359 12.2824 120.58 16.5723 120.578 21.3424C120.578 21.8112 120.546 22.2845 120.484 22.7624V22.7602Z" fill="#00a6ce"/><path d="M86.1395 22.8198L79.4824 26.65C78.4254 27.2576 78.0625 28.6049 78.6743 29.6609C79.2838 30.7146 80.6353 31.0764 81.6946 30.4665L88.3517 26.6363C89.4087 26.0287 89.7716 24.6792 89.1598 23.6255C88.5503 22.5718 87.1988 22.2099 86.1395 22.8198Z" fill="#59ba68"/><path d="M43.3075 47.4702L36.6504 51.3004C35.5934 51.908 35.2304 53.2553 35.8423 54.3112C36.4518 55.3649 37.8033 55.7268 38.8626 55.1169L45.5196 51.2867C46.5766 50.6791 46.9396 49.3318 46.3278 48.2759C45.7182 47.2222 44.3645 46.8603 43.3075 47.4702Z" fill="#59ba68"/><path d="M62.5009 57.5879C61.2795 57.5879 60.291 58.5733 60.291 59.7909V67.4512C60.291 68.6687 61.2795 69.6541 62.5009 69.6541C63.7223 69.6541 64.7108 68.6687 64.7108 67.4512V59.7909C64.7108 58.5733 63.7223 57.5879 62.5009 57.5879Z" fill="#59ba68"/><path d="M62.5009 20.3494C63.7223 20.3494 64.7108 19.364 64.7108 18.1465V10.4862C64.7108 9.26862 63.7223 8.2832 62.5009 8.2832C61.2795 8.2832 60.291 9.26862 60.291 10.4862V18.1465C60.291 19.364 61.2795 20.3494 62.5009 20.3494Z" fill="#59ba68"/><path d="M88.3484 51.3013L81.6936 47.4712C80.6366 46.8635 79.2851 47.2231 78.6733 48.2768C78.0637 49.3305 78.4244 50.6778 79.4814 51.2877L86.1362 55.1178C87.1932 55.7255 88.5447 55.3659 89.1565 54.3122C89.7661 53.2585 89.4054 51.9112 88.3484 51.3013Z" fill="#59ba68"/><path d="M36.6494 26.6353L43.3042 30.4655C44.3612 31.0731 45.7127 30.7135 46.3245 29.6598C46.934 28.6062 46.5733 27.2589 45.5163 26.649L38.8616 22.8188C37.8046 22.2112 36.4531 22.5708 35.8412 23.6245C35.2317 24.6781 35.5924 26.0254 36.6494 26.6353Z" fill="#59ba68"/><path d="M73.8579 27.6455C70.9585 24.7507 66.9291 22.9551 62.5002 22.9551C58.0714 22.9551 54.042 24.7507 51.1426 27.6455C48.2387 30.5357 46.4375 34.5525 46.4375 38.9675C46.4375 43.3826 48.2387 47.3993 51.1426 50.2896C54.042 53.1844 58.0714 54.98 62.5002 54.98C66.9291 54.98 70.9585 53.1844 73.8579 50.2896C76.7618 47.3993 78.563 43.3826 78.563 38.9675C78.563 34.5525 76.7618 30.5357 73.8579 27.6455ZM62.5847 50.5695C62.5573 50.5695 62.5299 50.5741 62.5025 50.5741C59.2813 50.5741 56.3843 49.2791 54.2703 47.174C52.1608 45.0667 50.8618 42.1787 50.8595 38.9675C50.8595 35.7564 52.1585 32.8684 54.2703 30.761C56.3843 28.6582 59.2813 27.3633 62.5025 27.361C62.5299 27.361 62.5573 27.3656 62.5847 27.3656V50.5672V50.5695Z" fill="#59ba68"/></g><defs><clipPath id="prefix__clip0_2534_52822"><path fill="#fff" d="M0 0H125V76H0z"/></clipPath></defs></svg>
@@ -349,7 +440,7 @@ onMounted(() => {
 
       <div class="myopia-crowd">
         <div>合適對象</div>
-        <div>
+        <div class="grid grid-cols-3">
           <div>
             <div>
               <img src="https://statichk.cmermedical.com/vision/imgs/dab0df8b59d28a82.png" alt="不超過600度" />
@@ -506,7 +597,7 @@ onMounted(() => {
       </div>
       <div class="myopia-promise">
         <PublicPageTitle :title="'希瑪視光3大保證'" />
-        <div>
+        <div class="grid grid-cols-3 gap-3">
           <div>
             <div>
               <!-- prettier-ignore -->
@@ -569,17 +660,56 @@ onMounted(() => {
 </template>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 768px) {
-  .myopia-control-zeiss {
-    :deep(.banner-template) {
-      // height: 400px !important;
-      & > div {
-        img {
-          // display: flex !important;
-        }
-      }
+%kind-type {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  width: 100%;
+  @media screen and (max-width: 767px) {
+    margin: 0 auto;
+    padding-top: 44px;
+    padding-bottom: 8px;
+    max-width: 340px;
+  }
+  @media screen and (min-width: 768px) {
+    padding: 68px 32px 32px 40px;
+  }
+}
+.myoactive-img {
+  &::before {
+    content: "";
+    width: 32px;
+    height: 32px;
+    background-image: url("https://statichk.cmermedical.com/vision/kid/zeiss/icon-new.webp");
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: absolute;
+    top: -12px;
+    right: -8px;
+    z-index: 1;
+    @media screen and (min-width: 768px) {
+      width: 80px;
+      height: 80px;
+      top: -28px;
+      right: -16px;
     }
   }
+}
+.myopia-form-kind {
+  .btn-active,
+  .btn-care,
+  .btn-kids,
+  .btn-vision {
+    @extend %kind-type;
+  }
+  .btn-active {
+    background-image: url("https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-lens-bg-01-mb-v1.webp");
+    @media screen and (min-width: 768px) {
+      background-image: url("https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-lens-bg-01-pc-v1.webp");
+    }
+  }
+}
+
+@media screen and (min-width: 768px) {
   .zeiss-container {
     margin-bottom: 65px;
   }
@@ -862,8 +992,8 @@ onMounted(() => {
     }
     & > div:nth-child(2) {
       margin-top: 35px;
-      display: grid;
-      grid-template-columns: auto auto auto;
+      // display: grid;
+      // grid-template-columns: auto auto auto;
       grid-gap: 12px 20px;
       & > div {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05);
@@ -1099,14 +1229,8 @@ onMounted(() => {
   }
 
   .btn-care {
-    background: url("https://statichk.cmermedical.com/vision/imgs/523275638821fa23.png") no-repeat;
-    background-size: 100% 100%;
+    background-image: url("https://statichk.cmermedical.com/vision/imgs/523275638821fa23.png");
     height: 522px;
-    width: 100%;
-    padding-top: calc(30px + 37px);
-    padding-left: 32px;
-    padding-right: 30px;
-    padding-bottom: 40px;
     & > div:nth-child(1) {
       display: flex;
       gap: 0 10px;
@@ -1186,14 +1310,8 @@ onMounted(() => {
     }
   }
   .btn-vision {
-    background: url("https://statichk.cmermedical.com/vision/imgs/6edaf38a082c2a25.png") no-repeat;
-    background-size: 100% 100%;
+    background: url("https://statichk.cmermedical.com/vision/imgs/6edaf38a082c2a25.png");
     height: 755px;
-    width: 100%;
-    padding-top: calc(30px + 37px);
-    padding-bottom: 35px;
-    padding-right: 18px;
-    padding-left: 40px;
     & > div:nth-child(1) {
       display: flex;
       align-items: center;
@@ -1259,14 +1377,8 @@ onMounted(() => {
     }
   }
   .btn-kids {
-    background: url("https://statichk.cmermedical.com/vision/imgs/523275638821fa23.png") no-repeat;
-    background-size: 100% 100%;
+    background: url("https://statichk.cmermedical.com/vision/imgs/523275638821fa23.png");
     height: 522px;
-    width: 100%;
-    padding-top: calc(30px + 37px);
-    padding-left: 32px;
-    padding-right: 30px;
-    padding-bottom: 40px;
     & > div:nth-child(1) {
       display: flex;
       justify-content: space-between;
@@ -1659,7 +1771,7 @@ onMounted(() => {
       display: flex;
       flex-direction: column-reverse;
       & > div:nth-child(2) {
-        width: 285px;
+        width: 100%;
         margin: 0 auto 20px;
         & > img {
           width: 100%;
@@ -1785,21 +1897,24 @@ onMounted(() => {
   .myopia-promise {
     margin-top: 30px;
     margin-bottom: 55px;
-    padding: 0 25px;
+    padding: 0 12px;
     & > div:nth-child(2) {
       margin-top: 30px;
-      display: flex;
-      gap: 0 12px;
+      // display: flex;
+      // gap: 0 12px;
       & > div {
         & > div:nth-child(1) {
           border-radius: 5.284px;
           background: var(--Skin, #eafbff);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-          width: 105.426px;
-          height: 100.141px;
+          // width: 105.426px;
+          // height: 100.141px;
           display: flex;
           justify-content: center;
           align-items: center;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
         }
         & > div:nth-child(2) {
           & > div:nth-child(1) {
@@ -1863,8 +1978,11 @@ onMounted(() => {
       margin-top: 25px;
       & > div {
         & > div:nth-child(1) {
-          width: 159px;
-          height: 159px;
+          // width: 159px;
+          // height: 159px;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
           border-radius: 5px;
           background: #e4faff;
           box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
@@ -1897,8 +2015,8 @@ onMounted(() => {
       line-height: normal;
     }
     & > div:nth-child(2) {
-      display: grid;
-      grid-template-columns: auto auto auto;
+      // display: grid;
+      // grid-template-columns: auto auto auto;
       gap: 15px 12px;
       margin-top: 17px;
       & > div {
@@ -1906,8 +2024,11 @@ onMounted(() => {
         flex-direction: column;
         align-items: center;
         & > div:nth-child(1) {
-          width: 105px;
-          height: 105px;
+          width: 100%;
+          height: auto;
+          aspect-ratio: 1/1;
+          // width: 105px;
+          // height: 105px;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -1981,7 +2102,8 @@ onMounted(() => {
     box-sizing: border-box;
     background: url("https://statichk.cmermedical.com/vision/imgs/1098483523cbe84c.jpg") no-repeat;
     background-size: 100% 100%;
-    width: 340px;
+    // width: 340px;
+    width: 100%;
     height: 320px;
     margin: 40px auto;
     display: flex;
@@ -2047,13 +2169,14 @@ onMounted(() => {
   .myopia-form-kind {
     padding: 0 24px;
     & > div:nth-child(2) {
-      margin-top: 20px;
-      margin-bottom: 18px;
-      & > div:nth-child(1) {
-        display: flex;
-        gap: 0 15px;
-        justify-content: center;
-      }
+      // margin-top: 20px;
+      padding-bottom: 20px;
+      margin-bottom: 20px;
+      // & > div:nth-child(1) {
+      //   display: flex;
+      //   gap: 0 15px;
+      //   justify-content: center;
+      // }
     }
     & > div:nth-child(3) {
       display: flex;
@@ -2167,13 +2290,7 @@ onMounted(() => {
   }
 
   .btn-care {
-    background: url("https://statichk.cmermedical.com/vision/imgs/d8fbc8b63ad7ee46.png") no-repeat;
-    background-size: 100% 100%;
-    height: 714px;
-    max-width: 340px;
-    margin: 0 auto;
-    width: 100%;
-    padding-top: 43px;
+    background-image: url("https://statichk.cmermedical.com/vision/imgs/d8fbc8b63ad7ee46.png");
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
@@ -2262,11 +2379,8 @@ onMounted(() => {
     }
   }
   .btn-vision {
-    background: url("https://statichk.cmermedical.com/vision/imgs/0200365be6cf2d1f.png") no-repeat;
-    background-size: 100% 100%;
+    background-image: url("https://statichk.cmermedical.com/vision/imgs/0200365be6cf2d1f.png");
     height: 980px;
-    max-width: 340px;
-    margin: 0 auto;
     padding: 43px 25px 0 20px;
     & > div:nth-child(1) {
       display: flex;
@@ -2335,13 +2449,8 @@ onMounted(() => {
     }
   }
   .btn-kids {
-    background: url("https://statichk.cmermedical.com/vision/imgs/d8fbc8b63ad7ee46.png") no-repeat;
-    background-size: 100% 100%;
+    background-image: url("https://statichk.cmermedical.com/vision/imgs/d8fbc8b63ad7ee46.png");
     height: 640px;
-    max-width: 340px;
-    margin: 0 auto;
-    width: 100%;
-    padding-top: 43px;
     & > div:nth-child(1) {
       & > div:nth-child(1) {
         & > div:nth-child(1) {
@@ -2433,6 +2542,7 @@ onMounted(() => {
     }
   }
   .kind-active {
+    padding-top: 20px;
     & > div:nth-child(1) {
       position: relative;
       width: 103.087px;
@@ -2463,6 +2573,7 @@ onMounted(() => {
     }
   }
   .kind-item {
+    padding-top: 20px;
     & > div:nth-child(1) {
       position: relative;
       margin-bottom: 5px;
@@ -2692,6 +2803,19 @@ onMounted(() => {
         top: 50%;
         transform: translate(-50%, -50%);
       }
+    }
+  }
+}
+@media screen and (max-width: 359px) {
+  .myopia-crowd > div:nth-child(2) {
+    grid-template-columns: auto auto;
+  }
+  .myopia-promise > div:nth-child(2) {
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 12px;
+    div > div:nth-child(2) > div:nth-child(2) {
+      font-size: 12px;
     }
   }
 }

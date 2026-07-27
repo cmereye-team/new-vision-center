@@ -1,7 +1,7 @@
 /*
  * @Author: 谭洁莹
  * @Date: 2026-07-24 15:05:12
- * @LastEditTime: 2026-07-24 15:05:34
+ * @LastEditTime: 2026-07-24 17:04:34
  * @FilePath: /tailwind.config.ts
  * @Description: tailwind配置文件
  */
@@ -12,12 +12,17 @@ export default {
         xs: "360px",
       },
       colors: {
-        // 主题深蓝色
         primary: {
           DEFAULT: "#00a6ce",
+          deep: "#3E5270",
+          light: "#EAFBFF",
         },
         kid: {
           orange: "#FF9701",
+        },
+        text: {
+          grey: "#4D4D4D",
+          desc: "#60605F",
         },
       },
       // fontFamily: {
@@ -30,6 +35,7 @@ export default {
         16: "4rem", //64px
         17: "4.25rem", //68px
         18: "4.5rem", //72px
+        19: "4.75rem", //76px
         23: "5.75rem", //92px
         25: "6.25rem", //100px
         28: "7rem", //112px
