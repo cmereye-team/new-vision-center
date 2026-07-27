@@ -1,6 +1,6 @@
 <!--
  * @Date: 2025-10-11 14:01:45
- * @LastEditTime: 2026-07-24 15:07:56
+ * @LastEditTime: 2026-07-27 14:31:53
  * @FilePath: /components/Public/PageTitle/Index.vue
  * @Description: 通用标题
 -->
@@ -18,14 +18,18 @@ const props = defineProps({
     type: String,
     default: "#00a6ce",
   },
+  align: {
+    type: String,
+    default: "justify",
+  },
 });
 </script>
 
 <template>
-  <div v-if="isTestPage" class="title" :style="{ '--theme-color': color }">
+  <div v-if="isTestPage" class="title" :style="{ '--text-align': align, '--theme-color': color }">
     <span>{{ title }}</span>
   </div>
-  <div v-else class="title" :style="{ '--theme-color': color }">
+  <div v-else class="title" :style="{ '--text-align': align, '--theme-color': color }">
     <span v-html="title"></span>
   </div>
 </template>
@@ -40,6 +44,7 @@ const props = defineProps({
   margin: 0 auto;
   width: fit-content;
   position: relative;
+  text-align: var(--text-align);
 
   &::after {
     content: "";
@@ -67,7 +72,6 @@ const props = defineProps({
 }
 @media screen and (max-width: 767px) {
   .title {
-    text-align: justify;
     font-size: 6.154vw;
     line-height: 40.107px;
     letter-spacing: 1.2px;

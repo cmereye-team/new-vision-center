@@ -110,29 +110,57 @@ const btnElement = ref({
           </template>
         </PublicMyopiaForm>
       </div>
-      <div class="hoya-intro mx-auto mt-8 md:mt-15">
-        <PublicPageTitle title="新一代兒童近視控制鏡片，控制近視更有效！" color="#FF9701" />
-        <div class="hoya-table text-text-desc text-sm md:text-xl text-center mt-7 md:mt-18">
-          <table>
-            <thead>
+      <div class="hoya-intro mx-auto mt-8 md:mt-15 mb-7 md:mb-13">
+        <PublicPageTitle
+          title="新一代兒童近視控制鏡片<span class='hidden md:inline'>，</span><br class='block md:hidden'/>控制近視更有效！"
+          color="#FF9701"
+          align="center"
+        />
+        <div
+          class="hoya-table text-text-desc text-sm md:text-xl text-center mt-7 md:mt-10 overflow-x-auto pt-9 md:pt-8"
+        >
+          <table class="min-w-[448px]">
+            <thead class="whitespace-nowrap">
               <tr>
                 <th></th>
-                <th class="bg-[#ffead9] text-[#FD8433]">
-                  HOYA MiYOSMART iQ
-                  <br />
-                  新一代兒童近視控制鏡片
+                <th class="bg-[#ffead9] text-[#FD8433] rounded-t-xl md:rounded-t-3xl hoya-table-new">
+                  <div class="relative flex items-center gap-3 px-2 md:px-11 py-3">
+                    <p>
+                      HOYA MiYOSMART iQ
+                      <br />
+                      新一代兒童近視控制鏡片
+                    </p>
+                    <img
+                      src="https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-lens-01-v1.webp"
+                      alt=""
+                      class="size-12 md:size-18 absolute md:relative -top-9 left-1/2 -translate-x-1/2 md:top-0 md:left-0 md:translate-x-0"
+                    />
+                  </div>
                 </th>
-                <th class="bg-[#d1f0f3] text-primary">
-                  HOYA MiYOSMART
-                  <br />
-                  兒童近視控制鏡片
+                <th class="bg-[#d1f0f3] text-primary rounded-t-xl md:rounded-t-3xl">
+                  <div class="relative flex items-center gap-3 px-2 md:px-11 py-3">
+                    <p>
+                      HOYA MiYOSMART
+                      <br />
+                      兒童近視控制鏡片
+                    </p>
+                    <img
+                      src="https://statichk.cmermedical.com/vision/kid/zeiss/zeiss-lens-02-v1.webp"
+                      alt=""
+                      class="size-12 md:size-18 absolute md:relative -top-9 left-1/2 -translate-x-1/2 md:top-0 md:left-0 md:translate-x-0"
+                    />
+                  </div>
                 </th>
               </tr>
             </thead>
-            <tbody>
+            <tbody class="text-text-desc">
               <tr>
-                <td class="bg-[#419acc] text-white border-b border-white">核心技術</td>
-                <td class="bg-[#ffead9]">
+                <td
+                  class="bg-[#419acc] text-white font-extrabold border-b border-white relative before:absolute before:h-[120%] before:w-full before:bg-[#419acc] before:z-[-1] before:-top-[20%] before:left-0 before:rounded-t-xl md:before:rounded-t-3xl"
+                >
+                  核心技術
+                </td>
+                <td class="bg-[#ffead9] py-2 md:pt-7 md:pb-5">
                   最新研發升級技術
                   <br />
                   D.I.M.S. Technology -
@@ -150,45 +178,69 @@ const btnElement = ref({
                 </td>
               </tr>
               <tr>
-                <td class="bg-[#78b7db] text-white border-b border-white">技術特點</td>
+                <td class="bg-[#78b7db] text-white font-extrabold border-b border-white">技術特點</td>
                 <td class="bg-[#f9f3eb]">
-                  <ol>
+                  <ol class="text-left flex flex-col items-center gap-3 md:gap-5 py-3 md:py-5 px-2">
                     <li class="list-none">
-                      <strong class="block text-[#FD8433]">升級1 - Activated 激活</strong>
-                      縮小中心光學區，以加大治療視<br class="hidden md:block"/>區，精準激活對近視離焦最為敏<br class="hidden md:block"/>感的關鍵區域
+                      <strong class="block text-[#FD8433] font-extrabold">升級1 - Activated 激活</strong>
+                      縮小中心光學區，以加大治療視
+                      <br class="hidden md:block" />
+                      區，精準激活對近視離焦最為敏
+                      <br class="hidden md:block" />
+                      感的關鍵區域
                     </li>
                     <li class="list-none">
-                      <strong class="block text-[#FD8433]">升級2 - Powerful 增強</strong>
-                      更強的離焦度數，產生更強的近<br class="hidden md:block"/>視離焦訊號
+                      <strong class="block text-[#FD8433] font-extrabold">升級2 - Powerful 增強</strong>
+                      更強的離焦度數，產生更強的近
+                      <br class="hidden md:block" />
+                      視離焦訊號
                     </li>
                     <li class="list-none">
-                      <strong class="block text-[#FD8433]">升級3 - Extended 拓展</strong>
-                      延伸周邊治療視區，確保近視離<br class="hidden md:block"/>焦訊號廣泛覆蓋周邊視野範圍
+                      <strong class="block text-[#FD8433] font-extrabold">升級3 - Extended 拓展</strong>
+                      延伸周邊治療視區，確保近視離
+                      <br class="hidden md:block" />
+                      焦訊號廣泛覆蓋周邊視野範圍
                     </li>
                   </ol>
                 </td>
                 <td class="bg-[#f1fafd]">
-                  <ul>
-                    <li>多區正向光學離焦</li>
-                    <li>聚焦周邊影像至視網膜<br class="hidden md:block"/>前方，減慢眼球軸增長</li>
-                  </ul>
+                  <div class="flex justify-center items-center">
+                    <ul class="list-disc list-inside text-left grid grid-cols-1 px-2">
+                      <li>多區正向光學離焦</li>
+                      <li>
+                        聚焦周邊影像至視網膜
+                        <br class="hidden md:block" />
+                        前方，減慢眼球軸增長
+                      </li>
+                    </ul>
+                  </div>
                 </td>
               </tr>
               <tr>
-                <td class="bg-[#419acc] text-white">臨床成效</td>
-                <td class="bg-[#ffead9] text-[#FD8433]">
-                  <div class="flex">
-                    <!-- prettier-ignore -->
-                    <svg xmlns="http://www.w3.org/2000/svg" width="27" height="62" viewBox="0 0 27 62" fill="none"><g clip-path="url(#a)"><path d="M26.588 17.49 15.448 1.036a2.35 2.35 0 0 0-3.897 0L.412 17.49c-1.064 1.572.056 3.7 1.949 3.7H7.2l5.426 40.047c.163 1.028 1.594 1.003 1.747 0L19.8 21.189h4.84c1.893 0 3.013-2.127 1.949-3.7" fill="#fd8433"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h27v62H0z"/></clipPath></defs></svg>
-                    <span>近視控制成效是MiYOSMART的兩倍</span>
+                <td class="bg-[#419acc] text-white font-extrabold rounded-b-xl md:rounded-b-3xl">臨床成效</td>
+                <td class="bg-[#ffead9] text-[#FD8433] rounded-b-xl md:rounded-b-3xl">
+                  <div class="flex justify-center items-center font-extrabold">
+                    <div class="flex gap-2 md:gap-4">
+                      <!-- prettier-ignore -->
+                      <svg xmlns="http://www.w3.org/2000/svg" width="27" height="62" viewBox="0 0 27 62" fill="none"><g clip-path="url(#a)"><path d="M26.588 17.49 15.448 1.036a2.35 2.35 0 0 0-3.897 0L.412 17.49c-1.064 1.572.056 3.7 1.949 3.7H7.2l5.426 40.047c.163 1.028 1.594 1.003 1.747 0L19.8 21.189h4.84c1.893 0 3.013-2.127 1.949-3.7" fill="#fd8433"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h27v62H0z"/></clipPath></defs></svg>
+                      <span>
+                        近視控制成效是
+                        <br />
+                        MiYOSMART
+                        <br class="block md:hidden" />
+                        的兩倍
+                      </span>
+                    </div>
                   </div>
                 </td>
-                <td class="bg-[#d1f0f3]">
-                  <ul>
-                    <li>✓ 近視加深速度減慢60%</li>
-                    <li>✓ 減慢眼球軸增長平均達60%</li>
-                    <li>✓ 當中21.5%兒童近視沒有加深</li>
-                  </ul>
+                <td class="bg-[#d1f0f3] rounded-b-xl md:rounded-b-3xl">
+                  <div class="flex justify-center items-center">
+                    <ul class="grid grid-cols-1 text-left pt-2 pb-8 px-2 md:pt-5 md:pb-10">
+                      <li>✓ 近視加深速度減慢60%</li>
+                      <li>✓ 減慢眼球軸增長平均達60%</li>
+                      <li>✓ 當中21.5%兒童近視沒有加深</li>
+                    </ul>
+                  </div>
                 </td>
               </tr>
             </tbody>
@@ -196,8 +248,9 @@ const btnElement = ref({
         </div>
       </div>
       <div class="myopia-control-hoya-target">
-        <div>合適對象</div>
-        <div>
+        <!-- <div>合適對象</div> -->
+        <PublicPageTitle title="合適對象" class="myopia-control-title" />
+        <div class="mt-5 md:mt-16">
           <div>
             <div>
               <!-- prettier-ignore -->
@@ -494,12 +547,13 @@ $max-w: 960px;
 .hoya-intro {
   max-width: $max-w;
   .hoya-table {
-    tr th,tr:not(:last-child) td {
+    tr th,
+    tr:not(:last-child) td {
       &:nth-child(2) {
-        border-bottom: 1px solid #FD8433;
+        border-bottom: 1px solid #fd8433;
       }
       &:nth-child(3) {
-        border-bottom: 1px solid #21AACA;
+        border-bottom: 1px solid #21aaca;
       }
     }
     tr td:first-child {
@@ -508,17 +562,39 @@ $max-w: 960px;
     tr td:not(:first-child) {
       width: 158px;
     }
-    @media screen and (min-width:768px) {
+    .hoya-table-new {
+      position: relative;
+      &::before {
+        content: "";
+        width: 28px;
+        height: 28px;
+        position: absolute;
+        top: -16px;
+        right: 0;
+        background-image: url("https://statichk.cmermedical.com/vision/kid/zeiss/icon-new.webp");
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+    }
+    @media screen and (min-width: 768px) {
       tr td:first-child {
         width: 224px;
       }
       tr td:not(:first-child) {
         width: 440px;
       }
+      .hoya-table-new::before {
+        width: 60px;
+        height: 60px;
+        top: -32px;
+      }
     }
   }
 }
 @media screen and (min-width: 768px) {
+  :deep(.myopia-control-title) {
+    padding-bottom: 20px;
+  }
   .myopia-control-hoya {
     margin-bottom: 65px;
   }
