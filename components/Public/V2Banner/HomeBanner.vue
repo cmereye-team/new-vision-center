@@ -1,49 +1,26 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/pagination";
+// import "swiper/css";
+// import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const modules = [Autoplay, Pagination];
-
-interface banner {
-  id: number;
-  img: string;
-  img_mobile: string;
-  link: string;
-}
-const bannerImg = ref([] as banner[]);
-import getWindowSize from "@/utils/width";
-const isPc = ref(true);
-// 获取轮播图
+import type { ApiResponse, SlideItem } from "@/types/api";
+const bannerImg = ref([] as SlideItem[]);
 const getImgSwiper = async () => {
-  const res = await fetch(
-    "https://content.cmervision.com/api.php/cms/slide/gid/1/num/30"
-  );
-  const data = await res.json();
-  if (data.code === 1) {
-    data.data.forEach((item: any) => {
-      bannerImg.value.push({
-        id: item.id,
-        img: `https://content.cmervision.com/${item.pic}`,
-        img_mobile: `https://content.cmervision.com/${item.mobilepic}`,
-        link: item.link,
-      });
+  try {
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 1 },
     });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map(item => ({ ...item }));
+    }
+    console.log(`index-banner length=${bannerImg.value.length},list=`,bannerImg.value,',res=',res)
+  } catch (error) {
+    console.error("获取轮播图失败:", error);
   }
 };
 
-const winWSize = ref(0);
 onMounted(() => {
-  let { widthState, width } = getWindowSize();
-  window.addEventListener("resize", () => {
-    let { widthState, width } = getWindowSize();
-    winWSize.value = width;
-    isPc.value = widthState;
-  });
-
-  winWSize.value = width;
-  isPc.value = widthState;
-
   getImgSwiper();
 });
 const swiperBox = (swiper: any) => {
@@ -55,7 +32,6 @@ let deBoxSwiperRef = {
   slidePrev: () => {},
   slideNext: () => {},
 };
-
 const handleshowdeBox = (_idx: any) => {
   deBoxSwiperRef.slideTo(_idx);
 };
@@ -63,7 +39,7 @@ const handleshowdeBox = (_idx: any) => {
 
 <template>
   <div class="home_banner">
-    <div class="banner_size" v-if="winWSize > 768">
+    <div class="banner_size">
       <swiper
         :slidesPerView="'auto'"
         :spaceBetween="30"
@@ -77,37 +53,20 @@ const handleshowdeBox = (_idx: any) => {
           clickable: true,
         }"
         :navigation="true"
-       :modules="[Autoplay, Pagination, Navigation]"
+        :modules="[Autoplay, Pagination, Navigation]"
         @swiper="swiperBox"
       >
-       <!--  -->
         <swiper-slide v-for="banner in bannerImg" :key="banner.id">
           <nuxt-link :to="banner.link">
-            <img :src="banner.img" />
+            <picture>
+              <source media="(min-width: 768px)" :srcset="banner.pic" />
+              <img :src="banner.pic_mobile" :title="banner.subtitle" :alt="banner.title" />
+            </picture>
           </nuxt-link>
         </swiper-slide>
       </swiper>
     </div>
-    <div class="btn_banner" v-if="winWSize > 768">
-      <!-- <div
-        class="btn_banner_item"
-        v-for="(item, index) in bannerImg"
-        :key="item.id"
-        :class="index == deBoxSwiperRef.activeIndex ? 'active' : ''"
-        @click="handleshowdeBox(index)"
-      >
-        <span></span>
-      </div> -->
-    </div>
-    <div class="banner_size" v-if="winWSize <= 768">
-      <swiper :pagination="true" :modules="[Autoplay, Pagination]">
-        <swiper-slide v-for="banner in bannerImg" :key="banner.id">
-          <nuxt-link :to="banner.link">
-            <img :src="banner.img_mobile" />
-          </nuxt-link>
-        </swiper-slide>
-      </swiper>
-    </div>
+    <div class="btn_banner hidden md:block"></div>
   </div>
 </template>
 
@@ -297,7 +256,7 @@ const handleshowdeBox = (_idx: any) => {
       margin: 130px auto 0;
       object-fit: cover;
       object-position: center;
-      .swiper-slide{
+      .swiper-slide {
         width: 60vw;
       }
 
