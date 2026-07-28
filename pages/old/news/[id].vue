@@ -22,8 +22,8 @@ useHead(() => ({
       },
     },
     {
-      hid: "Keywords",
-      name: "Keywords",
+      hid: "keywords",
+      name: "keywords",
       content: () => {
         let _keywords =
           "最新資訊 兒童近視 近視控制 小朋友近視 兒童近視控制 護眼 護眼食物 護眼睛 護眼方法 控制近視鏡片 控制近視眼藥水 近視 atropine眼藥水 矯視隱形眼鏡 ok鏡 近視成因 眼睛健康 眼睛保健 新聞資訊 預防近視 註冊視光師 視光師 視光師驗眼 眼科驗眼中心 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心";
