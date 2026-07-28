@@ -1,28 +1,18 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
-
-import { resolve, dirname } from 'node:path'
-import { fileURLToPath } from 'url'
-import VueI18nVitePlugin from '@intlify/unplugin-vue-i18n/vite'
+/*
+ * @Author: 谭洁莹
+ * @Date: 2025-10-11 14:01:45
+ * @LastEditTime: 2026-07-28 10:33:27
+ * @FilePath: /nuxt.config.ts
+ * @Description: 
+ */
+// https://nuxt.com/docs/api/configuration/nuxt-confi
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  ssr: false,
+  ssr: true,
 
   devServer: {
     port: 3015,
-  },
-  build: {
-    transpile: ['vue-i18n']
-  },
-
-  vite: {
-    plugins: [
-      VueI18nVitePlugin({
-        include: [
-          resolve(dirname(fileURLToPath(import.meta.url)), './locales/*.json')
-        ]
-      })
-    ]
   },
   // routeRules: {
     
@@ -65,13 +55,9 @@ export default defineNuxtConfig({
         enableRouterSync: true,
         devtools: true,
       },
-      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'https://hk.cmervision.com/',
+      siteUrl: 'https://www.cmervision.com/',
     }
   },
-  i18n: {
-    vuei18n: './plugins/i18n.ts'
-  },
-
   head: {
     meta: [
       {
@@ -79,15 +65,6 @@ export default defineNuxtConfig({
         content: 'width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no',
       },
     ],
-  },
-
-  intlify: {
-    localeDir: 'locales',
-    vueI18n: {
-      locale: 'hk',
-      fallbackLocale: 'zh-hk',
-      availableLocales: ['hk', 'cn', 'en'],
-    },
   },
   nitro: {
     prerender: {
