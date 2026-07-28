@@ -9,8 +9,8 @@ useHead(() => ({
         "HOYA MiYOSMART兒童近視控制鏡片（DIMS鏡片）是一項非入侵式的近視控制方案，由香港理工大學與HOYA合作研發的鏡片。這款鏡片安全可靠、易於使用，可有效減緩近視加深速度，同時提供清晰穩定的視力。臨床證實，使用HOYA MiYOSMART兒童近視控制鏡片能平均減緩近視加深速度達60%，其中21.5%的孩子使用後完全沒有進一步加深近視。我們提供HOYA MiYOSMART兒童近視控制鏡片連鏡架套餐，立即聯絡我們預約配鏡。",
     },
     {
-      hid: "Keywords",
-      name: "Keywords",
+      hid: "keywords",
+      name: "keywords",
       content:
         "DIMS dims眼鏡 DIMS鏡片 DIMS鏡片價格 hoya MiyoSmart hoya MiyoSmart價錢 hoya兒童近視控制鏡片評價 hoya近視控制鏡片 hoya控制近視鏡片價錢 hoya鏡片 hoya兒童近視控制鏡片 MiyoSmart MiyoSmart鏡片 MiyoSmart 近視控制鏡片 兒童近視 控制近視鏡片 hoya miyosmart 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
     },
@@ -24,19 +24,22 @@ onMounted(() => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
+  getImgSwiper()
 });
-const bannerImg = [
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20260724/1784887463172977.webp",
-    mobile: "https://content.cmervision.com/static/upload/other/20260724/1784887466156932.webp",
-    newBanner: true,
-  },
-  {
-    pc: "https://statichk.cmermedical.com/vision/banner/banner-hoya-pc-v1.webp",
-    mobile: "https://statichk.cmermedical.com/vision/banner/banner-hoya-mb-v1.webp",
-    newBanner: true,
-  },
-];
+import type { ApiResponse, SlideItem } from "@/types/api";
+const bannerImg = ref([] as SlideItem[]);
+const getImgSwiper = async () => {
+  try {
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 3 },
+    });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map((item) => ({ ...item }));
+    }
+  } catch (error) {
+    console.error("获取轮播图失败:", error);
+  }
+};
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
   brand: "hoya",
@@ -88,7 +91,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <PublicV2BannerPageBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="isPc ? 'HOYA MiYOSMART兒童近視控制眼鏡' : 'HOYA 兒童近視控制眼鏡'"
@@ -1918,16 +1921,6 @@ $max-w: 960px;
   100% {
     transform: translateY(18px);
     opacity: 0.4;
-  }
-}
-@media screen and (min-width: 1621px) {
-  :deep(.banner-swiper img) {
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
   }
 }
 </style>

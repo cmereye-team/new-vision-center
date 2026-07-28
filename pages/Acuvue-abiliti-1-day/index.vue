@@ -9,8 +9,8 @@ useHead({
         "ACUVUE® Abiliti™ 1 Day兒童近視控制隱形眼鏡，專為兒童設計，有效減緩近視加深及眼軸增長，貼合日常生活，立即查詢日拋式兒童近視控制隱形眼鏡價錢。",
     },
     {
-      hid: "Keywords",
-      name: "Keywords",
+      hid: "keywords",
+      name: "keywords",
       content:
         "註冊視光師 視光師 視光師驗眼中心 Cmer Vision 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心 兒童近視 學童近視 兒童近視管理 近視管理 近視控制 近視防控 視力健康 眼睛健康 隱形眼鏡 隱形眼鏡價錢 隱形眼鏡價格 隱形眼鏡日拋 隱形眼鏡日拋價錢 隱形眼鏡日拋價格 日拋隱形眼鏡 日拋隱形眼鏡價錢 日拋隱形眼鏡價格 日拋式隱形眼鏡 日拋式隱形眼鏡價錢 日拋式隱形眼鏡價格 兒童近視控制隱形眼鏡 兒童近視控制日拋 控制近視隱形眼鏡 兒童隱形眼鏡價格 兒童近視控制日拋價格 兒童隱形眼鏡 近視隱形眼鏡 近視隱形眼鏡價錢 控制近視日拋 控制近視日拋價格 Abiliti 價錢 Abiliti 1 Day Abiliti 1 Day價錢 ACUVUE Abiliti ACUVUE Abiliti價錢 ACUVUE Abiliti 1 Day ACUVUE Abiliti 1 Day價錢",
     },

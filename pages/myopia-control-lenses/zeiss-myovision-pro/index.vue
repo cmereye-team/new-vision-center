@@ -9,8 +9,8 @@ useHead(() => ({
         "ZEISS兒童近視控制鏡片是德國光學鏡片品牌，專為控制兒童近視而設計。這款鏡片結合了周邊視力離焦控制技術，能夠有效減慢眼球增長，有助控制兒童近視加深，同時確保配戴者的視野清晰，適合6至12歲兒童配戴。我們提供多款蔡司鏡片連鏡架套餐可選擇，包括MyoCare鏡片、MyoVision Pro鏡片及MyoKids鏡片等，註冊視光師會分析小朋友的眼睛狀況並建議合適他的鏡片，立即預約驗配ZEISS鏡片。",
     },
     {
-      hid: "Keywords",
-      name: "Keywords",
+      hid: "keywords",
+      name: "keywords",
       content:
         "兒童近視控制眼鏡 兒童控制鏡片 近視控制鏡片價錢 兒童近視控制鏡片價格 兒童近視控制鏡片多焦點鏡片 myovision pro 成長樂 ZEISS MyoVision Pro ZEISS MyoKids 兒童近視 myocare 近視控制 兒童近視控制鏡片價錢 兒童控制鏡片價格 兒童控制近視鏡片 控制近視鏡片價錢 兒童近視眼鏡 註冊視光師 視光師 視光師驗眼中心 希瑪視光 視光中心 希瑪視光中心 希瑪眼科視光中心",
     },
@@ -35,40 +35,20 @@ const activeKind = ref(0);
 const changeActiveKind = (index: number) => {
   activeKind.value = index;
 };
-// const isKindCare = ref(false);
-// const isKindVision = ref(false);
-// const isKindKids = ref(false);
-// const handKind = (index: number) => {
-//   if (index === 0) {
-//     isKindCare.value = true;
-//     isKindVision.value = false;
-//     isKindKids.value = false;
-//   } else if (index === 1) {
-//     isKindCare.value = false;
-//     isKindVision.value = true;
-//     isKindKids.value = false;
-//   } else {
-//     isKindCare.value = false;
-//     isKindVision.value = false;
-//     isKindKids.value = true;
-//   }
-// };
-// onMounted(() => {
-//   handKind(0);
-// });
-const bannerImg = [
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20260724/1784853945543908.webp",
-    mobile: "https://content.cmervision.com/static/upload/other/20260723/1784797857690280.webp",
-    newBanner: true,
-  },
-  {
-    pc: "https://statichk.cmermedical.com/vision/imgs/2025022417592801.webp",
-    mobile: "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
-    newBanner: true,
-  },
-];
-
+import type { ApiResponse, SlideItem } from "@/types/api";
+const bannerImg = ref([] as SlideItem[]);
+const getImgSwiper = async () => {
+  try {
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 2 },
+    });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map((item) => ({ ...item }));
+    }
+  } catch (error) {
+    console.error("获取轮播图失败:", error);
+  }
+};
 const miSightQuestionList = [
   {
     q: "兒童近視需要配鏡嗎 ?",
@@ -109,12 +89,14 @@ onMounted(() => {
     isPc.value = widthState;
   });
   isPc.value = widthState;
+  getImgSwiper();
 });
 </script>
 
 <template>
   <div class="myopia-control-zeiss">
-    <PageSwiperBannerV2 :banner="bannerImg" class="banner" />
+    <!-- <PageSwiperBannerV2 :banner="bannerImg" class="banner" /> -->
+    <PublicV2BannerPageBanner :banner="bannerImg" class="banner" />
     <PublicNavbar :isInsidePage="true" :insidePageTitle="'ZEISS兒童近視控制鏡片'" :name="'兒童視力服務'" />
     <div class="zeiss-container">
       <div class="myopia-control-head">
@@ -1758,6 +1740,9 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 767px) {
+  :deep(.nav-bar) {
+    padding-left: 0;
+  }
   .zeiss-container {
     margin-top: 34px;
   }
