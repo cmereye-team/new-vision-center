@@ -24,19 +24,22 @@ onMounted(() => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
+  getImgSwiper()
 });
-const bannerImg = [
-  {
-    pc: "https://content.cmervision.com//static/upload/other/20260724/1784887463172977.webp",
-    mobile: "https://content.cmervision.com/static/upload/other/20260724/1784887466156932.webp",
-    newBanner: true,
-  },
-  {
-    pc: "https://statichk.cmermedical.com/vision/banner/banner-hoya-pc-v1.webp",
-    mobile: "https://statichk.cmermedical.com/vision/banner/banner-hoya-mb-v1.webp",
-    newBanner: true,
-  },
-];
+import type { ApiResponse, SlideItem } from "@/types/api";
+const bannerImg = ref([] as SlideItem[]);
+const getImgSwiper = async () => {
+  try {
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 3 },
+    });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map((item) => ({ ...item }));
+    }
+  } catch (error) {
+    console.error("获取轮播图失败:", error);
+  }
+};
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
   brand: "hoya",
@@ -88,7 +91,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <PageSwiperBanner :banner="bannerImg" class="banner" />
+    <PublicV2BannerPageBanner :banner="bannerImg" class="banner" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="isPc ? 'HOYA MiYOSMART兒童近視控制眼鏡' : 'HOYA 兒童近視控制眼鏡'"
@@ -1918,16 +1921,6 @@ $max-w: 960px;
   100% {
     transform: translateY(18px);
     opacity: 0.4;
-  }
-}
-@media screen and (min-width: 1621px) {
-  :deep(.banner-swiper img) {
-    width: 100%;
-    height: 500px;
-    object-fit: contain;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
   }
 }
 </style>

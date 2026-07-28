@@ -12,9 +12,9 @@ const getImgSwiper = async () => {
       params: { gid: 1 },
     });
     if (Array.isArray(res.data)) {
-      bannerImg.value = res.data.map(item => ({ ...item }));
+      bannerImg.value = res.data.map((item) => ({ ...item }));
     }
-    console.log(`index-banner length=${bannerImg.value.length},list=`,bannerImg.value,',res=',res)
+    // console.log(`index-banner length=${bannerImg.value.length},list=`,bannerImg.value,',res=',res)
   } catch (error) {
     console.error("获取轮播图失败:", error);
   }
@@ -48,6 +48,7 @@ const handleshowdeBox = (_idx: any) => {
         :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
+          pauseOnMouseEnter: true,
         }"
         :pagination="{
           clickable: true,

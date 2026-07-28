@@ -10,9 +10,12 @@
 export default defineNuxtConfig({
   devtools: { enabled: true },
   ssr: true,
-
   devServer: {
     port: 3015,
+  },
+  sourcemap:{
+    server: false, // 禁用服务端 sourcemap 显著降低构建内存占用
+    client: false  // 禁用客户端 sourcemap
   },
   // routeRules: {
     

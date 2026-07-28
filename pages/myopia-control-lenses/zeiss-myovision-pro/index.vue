@@ -35,40 +35,20 @@ const activeKind = ref(0);
 const changeActiveKind = (index: number) => {
   activeKind.value = index;
 };
-// const isKindCare = ref(false);
-// const isKindVision = ref(false);
-// const isKindKids = ref(false);
-// const handKind = (index: number) => {
-//   if (index === 0) {
-//     isKindCare.value = true;
-//     isKindVision.value = false;
-//     isKindKids.value = false;
-//   } else if (index === 1) {
-//     isKindCare.value = false;
-//     isKindVision.value = true;
-//     isKindKids.value = false;
-//   } else {
-//     isKindCare.value = false;
-//     isKindVision.value = false;
-//     isKindKids.value = true;
-//   }
-// };
-// onMounted(() => {
-//   handKind(0);
-// });
-const bannerImg = [
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20260724/1784853945543908.webp",
-    mobile: "https://content.cmervision.com/static/upload/other/20260723/1784797857690280.webp",
-    newBanner: true,
-  },
-  {
-    pc: "https://statichk.cmermedical.com/vision/imgs/2025022417592801.webp",
-    mobile: "https://statichk.cmermedical.com/vision/imgs/2025022417592802.webp",
-    newBanner: true,
-  },
-];
-
+import type { ApiResponse, SlideItem } from "@/types/api";
+const bannerImg = ref([] as SlideItem[]);
+const getImgSwiper = async () => {
+  try {
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 2 },
+    });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map((item) => ({ ...item }));
+    }
+  } catch (error) {
+    console.error("获取轮播图失败:", error);
+  }
+};
 const miSightQuestionList = [
   {
     q: "兒童近視需要配鏡嗎 ?",
@@ -109,12 +89,14 @@ onMounted(() => {
     isPc.value = widthState;
   });
   isPc.value = widthState;
+  getImgSwiper();
 });
 </script>
 
 <template>
   <div class="myopia-control-zeiss">
-    <PageSwiperBannerV2 :banner="bannerImg" class="banner" />
+    <!-- <PageSwiperBannerV2 :banner="bannerImg" class="banner" /> -->
+    <PublicV2BannerPageBanner :banner="bannerImg" class="banner" />
     <PublicNavbar :isInsidePage="true" :insidePageTitle="'ZEISS兒童近視控制鏡片'" :name="'兒童視力服務'" />
     <div class="zeiss-container">
       <div class="myopia-control-head">
@@ -1758,6 +1740,9 @@ onMounted(() => {
   }
 }
 @media screen and (max-width: 767px) {
+  :deep(.nav-bar) {
+    padding-left: 0;
+  }
   .zeiss-container {
     margin-top: 34px;
   }
