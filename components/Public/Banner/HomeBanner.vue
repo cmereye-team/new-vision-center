@@ -1,7 +1,5 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 const modules = [Autoplay, Pagination];
 
@@ -16,19 +14,10 @@ import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 // 获取轮播图
 const getImgSwiper = async () => {
-  const res = await fetch(
-    "https://content.cmervision.com/api.php/cms/slide/gid/1"
-  );
+  const res = await fetch("https://content.cmervision.com/api.php/cms/slide/gid/1");
   const data = await res.json();
-  if (data.code === 1) {
-    data.data.forEach((item: any) => {
-      bannerImg.value.push({
-        id: item.id,
-        img: `https://content.cmervision.com/${item.pic}`,
-        img_mobile: `https://content.cmervision.com/${item.mobilepic}`,
-        link: item.link,
-      });
-    });
+  if (Array.isArray(data)) {
+    bannerImg.value = data.map((item) => ({ ...item }));
   }
 };
 
@@ -65,7 +54,7 @@ const handleshowdeBox = (_idx: any) => {
   <div class="home_banner">
     <div class="banner_size" v-if="winWSize > 768">
       <swiper
-      :slidesPerView="3"
+        :slidesPerView="3"
         :spaceBetween="30"
         :centeredSlides="true"
         :autoplay="{
@@ -98,7 +87,7 @@ const handleshowdeBox = (_idx: any) => {
       </div> -->
     </div>
     <div class="banner_size" v-if="winWSize <= 768">
-      <swiper :pagination="true" :modules="[Autoplay, Pagination]" >
+      <swiper :pagination="true" :modules="[Autoplay, Pagination]">
         <swiper-slide v-for="banner in bannerImg" :key="banner.id">
           <nuxt-link :to="banner.link">
             <img :src="banner.img_mobile" />
