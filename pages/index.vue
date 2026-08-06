@@ -1,15 +1,14 @@
 <script lang="ts" setup>
+import type { ApiResponse, Article } from "@/types/api";
 useHead({
   title: "香港希瑪視光中心｜眼睛檢查｜驗眼中心",
   meta: [
     {
-      hid: "description",
       name: "description",
       content:
         "希瑪眼科視光中心（CMER VISION）是希瑪眼科醫療集團旗下的視光中心。我們的註冊視光師團隊致力為所有年齡層提供優質的眼睛護理及專業視光服務，包括全面眼睛檢查、視光檢查、角膜矯形術（OK鏡）、兒童近視控制鏡片、近視控制隱形眼鏡，以及各種眼鏡驗配服務等。希瑪視光擁有符合國際水平的視光檢查儀器，並得到蔡司官方認證為ZVE視光專家，提供我的蔡司視覺體驗，為客人提供一站式可靠及個人化的眼睛檢查服務及改善視力方案。",
     },
     {
-      hid: "keywords",
       name: "keywords",
       content:
         "希瑪視光 希瑪眼科視光中心 cmer vision 視光中心 視光師 眼睛檢查 視光檢查 蔡司ZVE視光專家 蔡司視覺體驗註冊視光師 視光師驗眼 視光師驗眼中心 全面眼睛檢查 全面眼科視光檢查 希瑪眼科視光中心旺角 希瑪眼科視光中心中環 旺角視力中心 兒童視光中心 眼科驗眼中心 驗眼 驗眼中心 兒童驗眼 驗眼度數 隱形眼鏡驗眼 檢查眼睛 全面眼睛檢查費用 驗眼費用 綜合眼科視光檢查 眼睛檢查 視野檢查 近視控制 兒童近視控制 ok鏡 控制近視鏡片 ",
@@ -24,148 +23,8 @@ useHead({
     },
   ],
 });
-import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/scss";
-import "swiper/scss/pagination";
-import "swiper/scss/navigation";
-import "swiper/css/grid";
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
-
-import {
-  Autoplay,
-  Pagination,
-  Navigation,
-  Scrollbar,
-  Grid,
-} from "swiper/modules";
-const modules = [Autoplay, Pagination, Navigation, Scrollbar];
-const modules2 = [Grid, Pagination];
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/13d1975ec227a911.webp",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/7723d746a83f1695.webp",
-};
-const services = {
-  title: "專業視光服務",
-  btns: [
-    {
-      name: "成人檢查",
-      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
-      color: "#00A6CE",
-    },
-    {
-      name: "兒童檢查",
-      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
-      color: "#95DF82",
-    },
-  ],
-  lists: [
-    {
-      img: "https://statichk.cmermedical.com/vision/imgs/1294e900e7debac6.png",
-      title: ["近視控制", "檢查方案"],
-      link: "/myopia-control",
-      text: ["低至"],
-      context: [],
-      price: "350",
-    },
-    {
-      img: "https://statichk.cmermedical.com/vision/imgs/4fb495e912701d2c.png",
-      title: ["角膜矯形鏡", "合適性檢查套餐"],
-      link: "/orthokeratology",
-      text: ["低至"],
-      context: [],
-      price: "1,000",
-    },
-    {
-      img: "https://statichk.cmermedical.com/vision/imgs/2fce54bd583f773d.png",
-      title: ["專業驗配近視", "控制眼鏡"],
-      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-child",
-      text: [],
-      context: ["買鏡片", "送鏡架"],
-      price: "",
-    },
-    {
-      img: "https://statichk.cmermedical.com/vision/imgs/c0e70a7699fdb561.png",
-      title: ["眼睛檢查套餐"],
-      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
-      text: ["低至"],
-      context: [],
-      price: "350",
-    },
-    {
-      img: "https://statichk.cmermedical.com/vision/imgs/9ffb4105482ebeb2.png",
-      title: ["青光眼檢查", "套餐"],
-      link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
-      text: ["低至"],
-      context: [],
-      price: "1,000",
-    },
-    {
-      img: "https://statichk.cmermedical.com/vision/imgs/345093cb5a583346.png",
-      title: ["隱形眼鏡", "驗配套餐"],
-      link: "/soft-contact-lens",
-      text: ["低至"],
-      context: [],
-      price: "350",
-    },
-  ],
-};
-const newDiscounts = {
-  title: ["最新", "優惠"],
-  lists: [
-    {
-      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-      price: "4,560",
-      routerLink: "/new-discounts",
-    },
-    {
-      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-      price: "4,560",
-      routerLink: "/new-discounts",
-    },
-    {
-      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-      price: "4,560",
-      routerLink: "/new-discounts",
-    },
-    {
-      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-      price: "4,560",
-      routerLink: "/new-discounts",
-    },
-    {
-      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-      price: "4,560",
-      routerLink: "/new-discounts",
-    },
-    {
-      name: "驗配Rodenstock漸進鏡即免費升級變色鏡片",
-      img: "https://statichk.cmermedical.com/vision/imgs/2a5b0c7c66fbe4db.png",
-      link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-      price: "4,560",
-      routerLink: "/new-discounts",
-    },
-  ],
-};
-let swiperRef = {
-  slideToLoop: (a: any) => {},
-  slidePrev: () => {},
-  slideNext: () => {},
-};
-const setSwiper = (swiper: any) => {
-  swiperRef = swiper;
-};
-
 const getLocale = () => {
   // 获取 localStorage 中的 participationVideo 项
   const storedItem = window.localStorage.getItem("participationVideo");
@@ -179,19 +38,14 @@ const getLocale = () => {
       console.error("Error parsing JSON from localStorage", error);
     }
   }
-
   // 如果解析成功，将其赋值给 witness.value.section1
   if (list) {
     witness.value.section1 = list;
   } else {
     // 如果解析失败或者没有存储项，初始化 localStorage
-    window.localStorage.setItem(
-      "participationVideo",
-      JSON.stringify(witness.value.section1)
-    );
+    window.localStorage.setItem("participationVideo", JSON.stringify(witness.value.section1));
   }
 };
-const isWitness = ref(false);
 const witness = ref({
   section1: [
     {
@@ -259,64 +113,18 @@ const witness = ref({
     },
   ],
 });
-const showIndex = ref(-1);
-
-function onMouseOver(index: number) {
-  showIndex.value = index;
-}
-
-function onMouseOut(index: number) {
-  if (showIndex.value === index) {
-    showIndex.value = -1;
-  }
-}
-const handleIcon = (str: any, idx: any) => {
-  witness.value.section1.forEach((item: any, index: any) => {
-    if (idx == index) {
-      item[str] = !item[str];
-    }
-  });
-  window.localStorage.setItem(
-    "participationVideo",
-    JSON.stringify(witness.value.section1)
-  );
-};
-
-const openVideo = (link: string) => {
-  window.open(link, "_blank");
-};
-
-interface discounts {
-  id: number;
-  img: string;
-  title: string;
-  tag: string;
-  link: string;
-  price: string;
-  routerLink: string;
-}
-const discounts = ref<discounts[]>([]);
-// 获取数据
-const getData = async () => {
+const discounts = ref<Article[]>([]);
+const getDiscounts = async () => {
   try {
-    const res = await fetch("https://content.cmervision.com/api.php/list/15");
-    const data = await res.json();
-    if (data.code === 1) {
-      // data.data.sort((a: any, b: any) => a.id - b.id);
-      discounts.value = data.data.map((item: any) => {
-        return {
-          id: item.id,
-          img: `https://content.cmervision.com/${item.ico}`,
-          title: item.title,
-          tag: item.tags,
-          price: item.ext_price,
-          routerLink: "/new-discounts",
-          link: "https://api.whatsapp.com/send?phone=85269180511&text=你好, 我想查詢最新優惠詳情",
-        };
-      });
+    const res = await $api<ApiResponse<Article[]>>("/api/v1/contents", {
+      params: { scode: 1, content: "full" },
+    });
+    if (Array.isArray(res.data)) {
+      discounts.value = res.data.map((item) => ({ ...item }));
+      console.log(`最新优惠length=${discounts.value.length},list=`,discounts.value)
     }
   } catch (error) {
-    console.log(error);
+    console.error("獲取最新優惠失敗:", error);
   }
 };
 
@@ -328,40 +136,19 @@ onMounted(() => {
   });
   isPc.value = widthState;
   getLocale();
-  getData();
-  // 获取 class section2
-  // const section3 = document.querySelector(".section3");
-  // const script = document.createElement("script");
-  // script.src =
-  //   "https://cdn.trustindex.io/loader.js?bafd719348f250549f76a58071f";
-  // script.type = "text/javascript";
-  // script.async = true;
-  // script.defer = true;
-
-  // script.onload = () => {
-  //   console.log("Script loaded");
-  // };
-  // if (section3) {
-  //   section3.appendChild(script);
-  // }
+  getDiscounts();
 });
-
-const router = useRouter();
-const goTo = (link: string) => {
-  router.push(link);
-};
 </script>
 
 <template>
   <div class="miyosmart">
     <PublicV2BannerHomeBanner ref="homeBanner" key="home_banner" />
     <V2Home />
-    <V2NewDiscounts />
+    <V2NewDiscounts :list="discounts" />
     <V2Review />
     <PublicFormV2Index />
   </div>
 </template>
-
 
 <style lang="scss" scoped>
 .miyosmart {
@@ -630,6 +417,7 @@ const goTo = (link: string) => {
           letter-spacing: 0.675px;
           margin-top: 25px;
           display: -webkit-box;
+          line-clamp: 2;
           -webkit-line-clamp: 2;
           -webkit-box-orient: vertical;
           overflow: hidden;
@@ -826,6 +614,7 @@ const goTo = (link: string) => {
                 line-height: 18.75px; /* 138.889% */
                 letter-spacing: 0.675px;
                 display: -webkit-box;
+                line-clamp: 3;
                 -webkit-line-clamp: 3;
                 -webkit-box-orient: vertical;
                 overflow: hidden;
@@ -854,18 +643,10 @@ const goTo = (link: string) => {
               width: 36px;
               height: 36px;
               border-radius: 50%;
-              background: url(https://statichk.cmermedical.com/vision/imgs/42273ef87c224cab.png)
-                no-repeat;
+              background: url(https://statichk.cmermedical.com/vision/imgs/42273ef87c224cab.png) no-repeat;
               background-size: 100% 100%;
               animation: breathe2 2s ease-in-out infinite;
             }
-          }
-          &:hover {
-            // .image{
-            //     img{
-            //         transform: scale(1.1);
-            //     }
-            // }
           }
         }
       }
@@ -1284,6 +1065,7 @@ const goTo = (link: string) => {
             font-weight: 500;
             line-height: 3.075vw; /* 100.069% */
             letter-spacing: 0.7px;
+            line-clamp: 2;
             -webkit-line-clamp: 2;
             margin-top: 1.28vw;
             min-height: 7.05128vw;
@@ -1352,8 +1134,7 @@ const goTo = (link: string) => {
             transform: translate(-50%, -50%);
             width: 16.15vw;
             height: 10.25vw;
-            background: url(https://statichk.cmermedical.com/vision/imgs/2fe41fe5fcf9b000.png)
-              no-repeat;
+            background: url(https://statichk.cmermedical.com/vision/imgs/2fe41fe5fcf9b000.png) no-repeat;
             background-size: 100% 100%;
             animation: breathe 2s ease-in-out infinite;
           }
@@ -1482,7 +1263,9 @@ const goTo = (link: string) => {
 .element {
   opacity: 1;
   visibility: visible;
-  transition: opacity 3s, visibility 3s;
+  transition:
+    opacity 3s,
+    visibility 3s;
 }
 .element:hover {
   opacity: 1;
