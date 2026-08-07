@@ -1,8 +1,11 @@
+<!--
+ * @Date: 2025-10-11 14:01:45
+ * @LastEditTime: 2026-08-06 17:27:44
+ * @FilePath: /components/CenterProfile/HomePageSwiper.vue
+ * @Description: 已弃用，当前使用v2
+-->
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-import "swiper/css";
-import "swiper/css/grid";
-import "swiper/css/pagination";
 import { Grid, Autoplay, Pagination } from "swiper/modules";
 const modules = [Grid, Autoplay, Pagination];
 

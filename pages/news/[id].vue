@@ -1,5 +1,4 @@
 <script lang="ts" setup>
-// import { renderingDome } from '../../assets/js/commonFun.js'
 // const { t } = useLang()
 const route = useRoute();
 const _id = route.params.id as string;
