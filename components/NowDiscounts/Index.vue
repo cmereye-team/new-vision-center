@@ -1,16 +1,14 @@
 <script lang="ts" setup>
 // Import Swiper Vue.js components
 import { Swiper, SwiperSlide } from "swiper/vue";
-
-// Import Swiper styles
-import "swiper/scss";
-
-import "swiper/scss/pagination";
-import "swiper/scss/navigation";
 import { Grid, Autoplay, Pagination, Navigation } from "swiper/modules";
 const modules = [Autoplay, Pagination, Navigation];
 
 const modules2 = [Grid, Autoplay, Pagination];
+import type { Article } from "@/types/api";
+const props = defineProps<{
+  list: Article[];
+}>();
 const loading = ref(true)
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
@@ -30,85 +28,6 @@ const handlesSliNext = () => {
 const handlesSliPrev = () => {
   deBoxSwiperRef.slidePrev();
 };
-
-const discountsList = ref([
-  {
-    id: 1,
-    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
-    title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
-    price: "4,560",
-    reason: "節日限定",
-    content:
-      "B.I.G Vision™打破了舊有鏡片製作思維的基礎，成為第一個根據完整人體眼球的生物模型製造的高精密多焦點鏡片",
-    btn1: "立即查詢",
-    btn2: "了解產品",
-    btn1Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
-  },
-  {
-    id: 2,
-    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
-    title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
-    price: "4,560",
-    reason: "節日限定",
-    content:
-      "B.I.G Vision™打破了舊有鏡片製作思維的基礎，成為第一個根據完整人體眼球的生物模型製造的高精密多焦點鏡片",
-    btn1: "立即查詢",
-    btn2: "了解產品",
-    btn1Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
-  },
-  {
-    id: 3,
-    img: "https://statichk.cmermedical.com/vision/imgs/b98c74ee6903eb45.jpg",
-    title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
-    price: "4,560",
-    reason: "節日限定",
-    content:
-      "B.I.G Vision™打破了舊有鏡片製作思維的基礎，成為第一個根據完整人體眼球的生物模型製造的高精密多焦點鏡片",
-    btn1: "立即查詢",
-    btn2: "了解產品",
-    btn1Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
-  },
-  {
-    id: 4,
-    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
-    title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
-    price: "4,560",
-    reason: "節日限定",
-    content:
-      "B.I.G Vision™打破了舊有鏡片製作思維的基礎，成為第一個根據完整人體眼球的生物模型製造的高精密多焦點鏡片",
-    btn1: "立即查詢",
-    btn2: "了解產品",
-    btn1Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
-  },
-  {
-    id: 5,
-    img: "https://statichk.cmermedical.com/vision/imgs/f69569e081a8a949.png",
-    title: ["驗配Rodenstock漸進鏡即", "免費升級變色鏡片"],
-    price: "4,560",
-    reason: "節日限定",
-    content:
-      "B.I.G Vision™打破了舊有鏡片製作思維的基礎，成為第一個根據完整人體眼球的生物模型製造的高精密多焦點鏡片",
-    btn1: "立即查詢",
-    btn2: "了解產品",
-    btn1Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
-    btn2Link:
-      "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情",
-  },
-]);
-
 interface TabsList {
   id: number;
   img: string;
@@ -126,39 +45,10 @@ interface TabsList {
 const link = ref(
   "https://api.whatsapp.com/send?phone=85269180511&text=你好,我想查詢最新優惠詳情"
 );
-const discounts = ref<TabsList[]>([]);
-const getDiscounts = async () => {
-  try {
-    const res = await fetch("https://content.cmervision.com/api.php/list/15");
-    const data = await res.json();
-    if (data.code === 1) {
-      // console.log(data.data, "data");
-      // data.data.sort((a: any, b: any) => a.id - b.id);
-      discounts.value = data.data.map((item: any) => {
-        return {
-          id: item.id,
-          img: `https://content.cmervision.com/${item.ico}`,
-          title: item.title,
-          price: item.ext_price,
-          reason: item.sub_title,
-          content: item.content,
-          btn1: "立即查詢",
-          btn2: "了解產品",
-          btn1Link: link.value,
-          btn2Link: link.value,
-          sub_title: item.ext_detail_title,
-          discounts_text: item.ext_detail_discounts,
-        };
-      });
-      loading.value = false
-    } else {
-      console.log("error");
-    }
-  } catch (error) {
-    console.log(error);
-  }
-};
-
+const button = ref({
+  big: '了解產品',
+  small: '立即查詢'
+})
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
 const winWSize = ref(0);
@@ -172,8 +62,6 @@ onMounted(() => {
 
   winWSize.value = width;
   isPc.value = widthState;
-
-  getDiscounts();
   window.addEventListener("scroll", getScrollY);
 });
 const maxNum = ref(1500);
@@ -212,7 +100,7 @@ const getScrollY = () => {
 <template>
   <div class="now-discounts">
     <div class="discounts-title">最新優惠</div>
-    <div class="discounts-box"  v-loading="loading">
+    <div class="discounts-box">
       <swiper
         :modules="modules"
         :autoplay="{
@@ -224,41 +112,27 @@ const getScrollY = () => {
         @swiper="swiperBox"
       >
         <swiper-slide
-          v-for="item in discounts"
+          v-for="item in list"
           :key="item.id"
           class="discounts-slide"
         >
           <div class="img-slide">
-            <img :src="item.img" :alt="item.content" />
+            <img :src="item.ico" :alt="item.content" />
           </div>
           <div class="slide-content">
             <div class="slide-title">
               <span>{{ item.title }}</span>
             </div>
             <div>
-              <span>{{ item.reason }} </span><span>{{ item.price }}</span>
+              <span>{{ item.ext_lititile }}</span>
             </div>
             <div class="content" v-html="item.content"></div>
             <div>
-              <a :href="item.btn1Link" target="_blank"></a>
-              <a :href="item.btn2Link" target="_blank" class="WhatsApp_btn"
-                ><svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="28"
-                  height="27"
-                  viewBox="0 0 28 27"
-                  fill="none"
-                >
-                  <path
-                    d="M19.5107 15.8177C19.2233 15.67 17.7915 14.9687 17.5252 14.8737C17.2589 14.7735 17.0638 14.7261 16.8713 15.0214C16.6762 15.3141 16.1225 15.9653 15.9485 16.1631C15.7797 16.3582 15.6083 16.3819 15.3209 16.2369C13.6123 15.3826 12.4917 14.7129 11.3658 12.7802C11.0679 12.266 11.6638 12.3029 12.2201 11.1929C12.3151 10.9978 12.2676 10.8316 12.1938 10.684C12.1199 10.5363 11.5399 9.10723 11.2973 8.52451C11.0626 7.95762 10.82 8.03672 10.6434 8.02617C10.4746 8.01562 10.2822 8.01562 10.087 8.01562C9.89192 8.01562 9.57815 8.08945 9.31184 8.37686C9.04553 8.66953 8.29407 9.37354 8.29407 10.8026C8.29407 12.2317 9.33557 13.616 9.47795 13.8111C9.62561 14.0063 11.5267 16.9383 14.4455 18.2013C16.2912 18.9976 17.0137 19.0661 17.9365 18.929C18.4982 18.8446 19.6557 18.2276 19.8956 17.5447C20.1356 16.8645 20.1356 16.2817 20.0644 16.1605C19.9932 16.0313 19.7981 15.9574 19.5107 15.8177Z"
-                    fill="white"
-                  />
-                  <path
-                    d="M25.0922 8.92266C24.4963 7.50674 23.642 6.23584 22.5531 5.14424C21.4641 4.05527 20.1932 3.19834 18.7746 2.60508C17.3244 1.996 15.7846 1.6875 14.1973 1.6875H14.1446C12.5467 1.69541 10.999 2.01182 9.54348 2.63408C8.13811 3.23525 6.87776 4.08955 5.79934 5.17852C4.72093 6.26748 3.87454 7.53311 3.28919 8.94375C2.68274 10.4045 2.37688 11.9575 2.38479 13.5554C2.3927 15.3853 2.8304 17.202 3.65042 18.8262V22.834C3.65042 23.5037 4.19358 24.0469 4.86331 24.0469H8.87376C10.498 24.8669 12.3147 25.3046 14.1446 25.3125H14.1999C15.7793 25.3125 17.3113 25.0066 18.7535 24.4081C20.1642 23.8201 21.4324 22.9764 22.5188 21.8979C23.6077 20.8195 24.4647 19.5592 25.0632 18.1538C25.6855 16.6983 26.0019 15.1506 26.0098 13.5527C26.0177 11.947 25.7066 10.3887 25.0922 8.92266ZM21.1081 20.4715C19.2598 22.3014 16.8076 23.3086 14.1973 23.3086H14.1525C12.5625 23.3007 10.9831 22.9052 9.58831 22.1616L9.36682 22.043H5.65432V18.3305L5.53567 18.109C4.79212 16.7142 4.39661 15.1348 4.3887 13.5448C4.37815 10.916 5.38274 8.44805 7.22581 6.58916C9.06624 4.73027 11.5263 3.70195 14.1551 3.69141H14.1999C15.5183 3.69141 16.7971 3.94717 18.0021 4.45342C19.1781 4.94648 20.2327 5.65576 21.1398 6.56279C22.0442 7.46719 22.7561 8.52451 23.2491 9.70049C23.7607 10.9187 24.0164 12.2106 24.0112 13.5448C23.9953 16.171 22.9644 18.6311 21.1081 20.4715Z"
-                    fill="white"
-                  /></svg
-                >{{ item.btn2 }}</a
-              >
+              <a :href="link" target="_blank"></a>
+              <a :href="link" target="_blank" class="WhatsApp_btn">
+                <!-- prettier-ignore -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="28" height="27" viewBox="0 0 28 27" fill="none"><path d="M19.51 15.818c-.287-.148-1.719-.85-1.985-.944-.266-.1-.461-.148-.654.147-.195.293-.748.944-.922 1.142-.17.195-.34.219-.628.074-1.709-.854-2.83-1.524-3.955-3.457-.298-.514.298-.477.854-1.587.095-.195.048-.361-.026-.509s-.654-1.577-.897-2.16c-.234-.566-.477-.487-.654-.498-.168-.01-.36-.01-.556-.01-.195 0-.509.073-.775.36-.266.294-1.018.998-1.018 2.427s1.042 2.813 1.184 3.008c.148.195 2.049 3.127 4.967 4.39 1.846.797 2.569.865 3.491.728.562-.084 1.72-.701 1.96-1.384.24-.68.24-1.263.168-1.385-.07-.129-.266-.203-.553-.342" fill="#fff"/><path d="M25.092 8.923a11.82 11.82 0 0 0-6.317-6.318 11.8 11.8 0 0 0-4.578-.917h-.052a11.8 11.8 0 0 0-8.346 3.49 11.7 11.7 0 0 0-2.51 3.766 11.8 11.8 0 0 0-.904 4.611 11.85 11.85 0 0 0 1.265 5.271v4.008c0 .67.544 1.213 1.213 1.213h4.01a11.85 11.85 0 0 0 5.272 1.265h.055c1.58 0 3.111-.305 4.554-.904a11.7 11.7 0 0 0 3.765-2.51 11.78 11.78 0 0 0 3.491-8.345 11.8 11.8 0 0 0-.918-4.63M21.108 20.47a9.76 9.76 0 0 1-6.91 2.838h-.046a9.84 9.84 0 0 1-4.564-1.147l-.221-.119H5.654V18.33l-.118-.222a9.84 9.84 0 0 1-1.147-4.564 9.75 9.75 0 0 1 2.837-6.956 9.74 9.74 0 0 1 6.93-2.898h.044c1.318 0 2.597.256 3.802.762a9.8 9.8 0 0 1 3.138 2.11 9.77 9.77 0 0 1 2.871 6.982 9.77 9.77 0 0 1-2.903 6.926" fill="#fff"/></svg>
+                {{ button.big }}</a>
             </div>
           </div>
         </swiper-slide>
@@ -279,13 +153,13 @@ const getScrollY = () => {
           :loop="true"
         >
           <swiper-slide
-            v-for="(item, index) in discounts"
+            v-for="(item, index) in list"
             :key="item.id"
             class="swiper-btn-item"
             :id="item.id"
             @click="handleshowdeBox(index)"
           >
-            <div><img :src="item.img" :alt="item.content" /></div>
+            <div><img :src="item.ico" :alt="item.content" /></div>
             <div>
               <span v-for="(title, index) in item.title" :key="index">
                 {{ title }}
@@ -293,15 +167,14 @@ const getScrollY = () => {
             </div>
             <div class="price-btn">
               <div>
-                <!-- <span class="price-text">節日限定 $</span> -->
-                <span>{{ item.price }}</span>
+                <span>{{ item.ext_lititile }}</span>
               </div>
               <div>
                 <a
                   class="pagination_btn_item WhatsApp_btn"
                   target="_blank"
-                  :href="item.btn2Link"
-                  >{{ item.btn1 }}</a
+                  :href="link"
+                  >{{ button.small }}</a
                 >
               </div>
             </div>
@@ -324,27 +197,26 @@ const getScrollY = () => {
         >
           <swiper-slide
             class="swiper-btn-item"
-            v-for="(item, index) in discounts"
+            v-for="(item, index) in list"
             @click="handleshowdeBox(index)"
             :key="item.id"
           >
             <div class="discounts_content">
-              <img :src="item.img" :alt="item.content" />
+              <img :src="item.ico" :alt="item.content" />
             </div>
             <div>
               <span>{{ item.title }}</span>
             </div>
             <div class="price-btn">
               <div>
-                <span class="price-text">{{ item.price }}</span>
-                <!-- <span>{{ item.price }}</span> -->
+                <span class="price-text">{{ item.ext_lititile }}</span>
               </div>
               <div>
                 <a
                   class="pagination_btn_item WhatsApp_btn"
                   target="_blank"
-                  :href="item.btn1Link"
-                  >{{ item.btn1 }}</a
+                  :href="link"
+                  >{{ button.small }}</a
                 >
               </div>
             </div>
@@ -392,7 +264,7 @@ const getScrollY = () => {
       font-style: normal;
       font-weight: 700;
       line-height: 37.5px;
-      & > span:nth-child(2) {
+      & > span {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
         font-size: 24px;
@@ -701,7 +573,7 @@ const getScrollY = () => {
       font-style: normal;
       font-weight: 700;
       line-height: 140%; /* 277.778% */
-      & > span:nth-child(2) {
+      & > span {
         color: var(--Brand-Color, #00a6ce);
         font-family: "Noto Sans HK";
         font-size: 4.64vw;

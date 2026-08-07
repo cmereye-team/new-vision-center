@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import type { ApiResponse, Article } from "@/types/api";
+import type { ApiResponse, Article,SlideItem } from "@/types/api";
 useHead({
   title: "香港希瑪視光中心｜眼睛檢查｜驗眼中心",
   meta: [
@@ -121,13 +121,25 @@ const getDiscounts = async () => {
     });
     if (Array.isArray(res.data)) {
       discounts.value = res.data.map((item) => ({ ...item }));
-      console.log(`最新优惠length=${discounts.value.length},list=`,discounts.value)
+      // console.log(`最新优惠length=${discounts.value.length},list=`,discounts.value)
     }
   } catch (error) {
     console.error("獲取最新優惠失敗:", error);
   }
 };
-
+const bannerImg = ref([] as SlideItem[]);
+const getImgSwiper = async () => {
+  try {
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 1 },
+    });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map((item) => ({ ...item }));
+    }
+  } catch (error) {
+    console.error("获取轮播图失败:", error);
+  }
+};
 onMounted(() => {
   let { widthState, width } = getWindowSize();
   window.addEventListener("resize", () => {
@@ -137,12 +149,13 @@ onMounted(() => {
   isPc.value = widthState;
   getLocale();
   getDiscounts();
+  getImgSwiper()
 });
 </script>
 
 <template>
   <div class="miyosmart">
-    <PublicV2BannerHomeBanner ref="homeBanner" key="home_banner" />
+    <PublicV2BannerHomeBanner :list="bannerImg" ref="homeBanner" key="home_banner" />
     <V2Home />
     <V2NewDiscounts :list="discounts" />
     <V2Review />

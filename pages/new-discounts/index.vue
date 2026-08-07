@@ -16,104 +16,45 @@ useHead(() => ({
     },
   ],
 }));
-
-interface discountBannerImg {
-  id: number;
-  gid: number;
-  pc: string;
-  mobile: string;
-  link: string;
-  title: string;
-  subtitle: string;
-}
-const discountBannerImg = ref<discountBannerImg[]>([]);
-// 获取数据
-const getData = async () => {
+import type { ApiResponse, Article,SlideItem } from "@/types/api";
+const bannerImg = ref([] as SlideItem[]);
+const getImgSwiper = async () => {
   try {
-    const res = await fetch("https://content.cmervision.com/api.php/cms/slide/gid/2/num/30");
-    const data = await res.json();
-    if (data.code === 1) {
-      // data.data.sort((a: any, b: any) => a.id - b.id);
-      discountBannerImg.value = data.data.map((item: any) => {
-        return {
-          id: item.id,
-          gid: item.gid,
-          pc: `https://content.cmervision.com${item.pic}`,
-          mobile: `https://content.cmervision.com${item.mobilepic}`,
-          link: `https://www.cmervision.com${item.link}`,
-          title: item.title,
-          subtitle: item.subtitle,
-        };
-      });
+    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+      params: { gid: 4 },
+    });
+    if (Array.isArray(res.data)) {
+      bannerImg.value = res.data.map((item) => ({ ...item }));
     }
   } catch (error) {
-    console.log(error);
+    console.error("获取轮播图失败:", error);
   }
 };
-
+const discounts = ref<Article[]>([]);
+const getDiscounts = async () => {
+  try {
+    const res = await $api<ApiResponse<Article[]>>("/api/v1/contents", {
+      params: { scode: 1, content: "full" },
+    });
+    if (Array.isArray(res.data)) {
+      discounts.value = res.data.map((item) => ({ ...item }));
+    }
+  } catch (error) {
+    console.error("獲取最新優惠失敗:", error);
+  }
+};
 onMounted(() => {
-  getData();
+  getImgSwiper()
+  getDiscounts()
 });
-
-const bannerImg = [
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20260318/1773824852843203.webp",
-    mobile: "https://content.cmervision.com/static/upload/other/20260318/1773824857397482.webp",
-    newBanner: true,
-    link: "",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/image/20260519/1779183539911060.jpg",
-    mobile: "https://content.cmervision.com//static/upload/other/20260519/1779179490950606.avif",
-    newBanner: true,
-    link: "/zve",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20250818/1755488417408460.avif",
-    mobile: "https://content.cmervision.com/static/upload/other/20250818/1755488577240915.avif",
-    newBanner: true,
-    link: "/comprehensive/comprehensive-eye-examination/comprehensive-eye-examination-for-adult",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20250818/1755488719670535.avif",
-    mobile: "https://content.cmervision.com/static/upload/image/20250224/1740390699424002.jpg",
-    newBanner: true,
-    link: "/myopia-control-lenses/zeiss-myovision-pro",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20251112/1762908812202082.webp",
-    mobile: "https://content.cmervision.com/static/upload/image/20241017/1729136367696551.png",
-    newBanner: true,
-    link: "/zve",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20250228/1740704852410771.webp",
-    mobile: "https://content.cmervision.com/static/upload/other/20250228/1740704885916525.webp",
-    newBanner: true,
-    link: "/progressive-lens",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20251112/1762908852166069.webp",
-    mobile: "https://content.cmervision.com/static/upload/image/20250213/1739435389470148.png",
-    newBanner: true,
-    link: "/zve",
-  },
-  {
-    pc: "https://content.cmervision.com/static/upload/other/20250818/1755485902155245.avif",
-    mobile: "https://content.cmervision.com/static/upload/other/20250818/1755486748874678.avif",
-    newBanner: true,
-    link: "/dims-soft-lens",
-  },
-];
 </script>
 
 <template>
   <div class="video-information">
-    <!-- <PublicContainBanner  :banner="bannerImg" /> -->
-    <PageSwiperBannerV2 :banner="discountBannerImg" class="banner" />
+    <PublicV2BannerHomeBanner :list="bannerImg" class="banner" />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新優惠'" />
     <div class="video-information-box">
-      <NowDiscounts />
+      <NowDiscounts :list="discounts" />
     </div>
     <PublicForm />
   </div>

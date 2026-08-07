@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
+import "swiper/css/grid";
 import { Grid, Autoplay, Pagination } from "swiper/modules";
 const modules = [Grid, Autoplay, Pagination];
 import type { Article } from "@/types/api";
@@ -128,6 +129,7 @@ const props = defineProps<{
       font-weight: 400;
       line-height: normal;
       letter-spacing: 0.6px;
+      line-clamp: 2;
       -webkit-line-clamp: 2;
       margin-top: 1.28vw;
       min-height: 7.05128vw;

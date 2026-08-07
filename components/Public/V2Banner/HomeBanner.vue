@@ -1,28 +1,10 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
-// import "swiper/css";
-// import "swiper/css/pagination";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-const modules = [Autoplay, Pagination];
-import type { ApiResponse, SlideItem } from "@/types/api";
-const bannerImg = ref([] as SlideItem[]);
-const getImgSwiper = async () => {
-  try {
-    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
-      params: { gid: 1 },
-    });
-    if (Array.isArray(res.data)) {
-      bannerImg.value = res.data.map((item) => ({ ...item }));
-    }
-    // console.log(`index-banner length=${bannerImg.value.length},list=`,bannerImg.value,',res=',res)
-  } catch (error) {
-    console.error("获取轮播图失败:", error);
-  }
-};
-
-onMounted(() => {
-  getImgSwiper();
-});
+import type { SlideItem } from "@/types/api";
+const props = defineProps<{
+  list: SlideItem[];
+}>();
 const swiperBox = (swiper: any) => {
   deBoxSwiperRef = swiper;
 };
@@ -57,7 +39,7 @@ const handleshowdeBox = (_idx: any) => {
         :modules="[Autoplay, Pagination, Navigation]"
         @swiper="swiperBox"
       >
-        <swiper-slide v-for="banner in bannerImg" :key="banner.id">
+        <swiper-slide v-for="banner in list" :key="banner.id">
           <nuxt-link :to="banner.link">
             <picture>
               <source media="(min-width: 768px)" :srcset="banner.pic" />
