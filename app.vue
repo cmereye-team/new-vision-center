@@ -43,7 +43,7 @@ watch(route, (newRoute, oldRoute) => {
     <PublicHeader v-if="widthNum > 768" key="pc" />
     <PublicHeaderMobileHead v-if="widthNum < 767" key="mobile" />
     <NuxtPage />
-    <div v-if="!isPc" class="fixed-menu">
+    <div class="fixed-menu md:hidden">
       <PublicFooterFixedFooter />
     </div>
     <div class="form-public">

@@ -78,8 +78,6 @@
 </template>
 
 <style lang="scss" scoped>
-@media screen and (min-width: 768px) {
-}
 @media screen and (max-width: 767px) {
   .fixed-footer {
     padding: 2.564vw 5.128vw;

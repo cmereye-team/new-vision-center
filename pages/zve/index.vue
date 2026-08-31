@@ -23,12 +23,7 @@ import { Swiper, SwiperSlide } from "swiper/vue";
 import "swiper/css";
 import "swiper/scss/navigation";
 import "swiper/css/effect-coverflow";
-import {
-  Pagination,
-  Navigation,
-  EffectCoverflow,
-  Autoplay,
-} from "swiper/modules";
+import { Pagination, Navigation, EffectCoverflow, Autoplay } from "swiper/modules";
 const modules = [Pagination, Navigation, EffectCoverflow, Autoplay];
 
 const swiperBox = (swiper: any) => {
@@ -54,23 +49,22 @@ const isRotated = ref(false);
 const touchStartX = ref(0);
 const touchEndX = ref(0);
 
-// function handleTouchStart(event: any) {
-//   // touchStartX.value = event.touches[0].clientX;
-// }
+const lensSwiperRef = ref(null);
+const swiperNext = () => {
+  if (lensSwiperRef.value) {
+    lensSwiperRef.value.slideNext();
+  }
+};
 
-// function handleTouchEnd(event: any) {
-// console.log(event)
-//   // touchEndX.value = event.changedTouches[0].clientX;
-//   // const deltaX = touchEndX.value - touchStartX.value;
+const swiperPrev = () => {
+  if (lensSwiperRef.value) {
+    lensSwiperRef.value.slidePrev();
+  }
+};
 
-//   // if (Math.abs(deltaX) > 50) {
-//   //   console.log("1");
-//   //   isRotated.value = true;
-//   // } else {
-//   //   isRotated.value = false;
-//   //   console.log("2");
-//   // }
-// }
+const onSwiper = (swiper) => {
+  lensSwiperRef.value = swiper;
+};
 
 const discountsList = ref([
   {
@@ -350,16 +344,15 @@ const close = () => {
 
 <template>
   <div class="zve-information">
-    
-    <ContainBannerV2  :banner="bannerImg">
+    <ContainBannerV2 :banner="bannerImg">
       <!-- 插槽 -->
       <template #title>
         <div class="zveTitle">
           <h2>ZEISS VISION EXPERT</h2>
-          <span
-            >作為「ZEISS VISION
-            EXPERT」認證的視光中心，希瑪視光為您提供卓越的視覺解決方案和個人化的眼鏡配鏡服務。我們的專業視光團隊將為您帶來一絲不苟的驗眼流程。</span
-          >
+          <span>
+            作為「ZEISS VISION
+            EXPERT」認證的視光中心，希瑪視光為您提供卓越的視覺解決方案和個人化的眼鏡配鏡服務。我們的專業視光團隊將為您帶來一絲不苟的驗眼流程。
+          </span>
         </div>
       </template>
     </ContainBannerV2>
@@ -371,15 +364,16 @@ const close = () => {
     <div class="contain">
       <div class="containLine">
         <div class="linear">
-          <div class="fontTitle" style="letter-spacing: 0px">
-            ZEISS VISION EXPERT認證
-          </div>
+          <div class="fontTitle" style="letter-spacing: 0px">ZEISS VISION EXPERT認證</div>
         </div>
         <div class="fontText">
-          希瑪視光擁有蔡司全套先進眼科設備和個人化<br
-            class="pcShow"
-          />的驗配流程，均得到德國蔡司官方認證。<br />我們提供精確量度眼睛度數、極致全面的視覺<br />分析,
-          以及獨一無二的解決方案。
+          希瑪視光擁有蔡司全套先進眼科設備和個人化
+          <br class="pcShow" />
+          的驗配流程，均得到德國蔡司官方認證。
+          <br />
+          我們提供精確量度眼睛度數、極致全面的視覺
+          <br />
+          分析, 以及獨一無二的解決方案。
         </div>
         <div class="fontFooter"></div>
       </div>
@@ -393,10 +387,7 @@ const close = () => {
         <div class="selling-point-title">服務特色</div>
         <div class="selling-point-item">
           <div>
-            <img
-              src="https://statichk.cmermedical.com/vision/imgs/2025012115091401.png"
-              alt="ZEISS Vision Expert"
-            />
+            <img src="https://statichk.cmermedical.com/vision/imgs/2025012115091401.png" alt="ZEISS Vision Expert" />
           </div>
           <div class="item-content">
             <div>客製化個人鏡片</div>
@@ -414,18 +405,12 @@ const close = () => {
             </div>
           </div>
           <div>
-            <img
-              src="https://statichk.cmermedical.com/vision/imgs/2025012115091402.png"
-              alt="ZEISS Vision Expert"
-            />
+            <img src="https://statichk.cmermedical.com/vision/imgs/2025012115091402.png" alt="ZEISS Vision Expert" />
           </div>
         </div>
         <div class="selling-point-item">
           <div>
-            <img
-              src="https://statichk.cmermedical.com/vision/imgs/2025012115091403.png"
-              alt="ZEISS Vision Expert"
-            />
+            <img src="https://statichk.cmermedical.com/vision/imgs/2025012115091403.png" alt="ZEISS Vision Expert" />
           </div>
           <div class="item-content">
             <div>精準的鏡框中心定位</div>
@@ -440,23 +425,13 @@ const close = () => {
         <div class="wrapper_feature">
           <div class="feature-item">
             <div class="feature-item-img">
-              <img
-                :src="listDiscounts[indexNum].img"
-                :alt="listDiscounts[indexNum].title"
-              />
+              <img :src="listDiscounts[indexNum].img" :alt="listDiscounts[indexNum].title" />
             </div>
             <div class="feature-item-declare">
               <div class="feature-item-left-top">
-                <img
-                  class="feature-img"
-                  :src="listDiscounts[indexNum].svg"
-                  :alt="listDiscounts[indexNum].title"
-                />
+                <img class="feature-img" :src="listDiscounts[indexNum].svg" :alt="listDiscounts[indexNum].title" />
                 <p class="feature-title">
                   {{ listDiscounts[indexNum].title }}
-                  <br v-if="listDiscounts[indexNum].br" />{{
-                    listDiscounts[indexNum].br ? listDiscounts[indexNum].br : ""
-                  }}
                 </p>
               </div>
               <div class="feature-item-content">
@@ -467,55 +442,31 @@ const close = () => {
         </div>
         <div class="swiper-button-container">
           <div @click="dialogTop" class="dialog-beacon dialog-left">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="16"
-              viewBox="0 0 25 16"
-              fill="none"
-            >
-              <path
-                d="M23.6833 13.9587L12.7246 3L1.81371 13.9109"
-                stroke="#2449A4"
-                stroke-width="3.60417"
-              ></path>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16" fill="none">
+              <path d="M23.6833 13.9587L12.7246 3L1.81371 13.9109" stroke="#2449A4" stroke-width="3.60417"></path>
             </svg>
           </div>
           <div @click="dialogBottom" class="dialog-beacon dialog-right">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="25"
-              height="16"
-              viewBox="0 0 25 16"
-              fill="none"
-            >
-              <path
-                d="M1.81378 2.13067L12.7725 13.0894L23.6834 2.17846"
-                stroke="#2449A4"
-                stroke-width="3.60417"
-              ></path>
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="16" viewBox="0 0 25 16" fill="none">
+              <path d="M1.81378 2.13067L12.7725 13.0894L23.6834 2.17846" stroke="#2449A4" stroke-width="3.60417"></path>
             </svg>
           </div>
           <div class="beacon-list">
-            <p
-              @click="openDialog(0)"
-              :class="indexNum == 0 ? 'beacon-list-active' : ''"
-            >
-              精密測量<br />眼睛數據
+            <p @click="openDialog(0)" :class="indexNum == 0 ? 'beacon-list-active' : ''">
+              精密測量
+              <br />
+              眼睛數據
             </p>
-            <p
-              @click="openDialog(1)"
-              :class="indexNum == 1 ? 'beacon-list-active' : ''"
-            >
-              精確的鏡片<br />
-              鏡框-臉型<br />
+            <p @click="openDialog(1)" :class="indexNum == 1 ? 'beacon-list-active' : ''">
+              精確的鏡片
+              <br />
+              鏡框-臉型
+              <br />
               中心定位
             </p>
-            <p
-              @click="openDialog(2)"
-              :class="indexNum == 2 ? 'beacon-list-active' : ''"
-            >
-              客製化<br />
+            <p @click="openDialog(2)" :class="indexNum == 2 ? 'beacon-list-active' : ''">
+              客製化
+              <br />
               個人鏡片
             </p>
           </div>
@@ -560,20 +511,15 @@ const close = () => {
               <div>藝人兼主持</div>
               <div>Edmond Hui</div>
               <div>
-                作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到
-                ZEISS VISION EXPERT
-                中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司
-                3D 中心定位儀 VISUFIT 1000
+                作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到 ZEISS VISION
+                EXPERT 中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司 3D
+                中心定位儀 VISUFIT 1000
                 技術，為我度身定做了一副滿意的眼鏡。這副眼鏡不但戴得舒適，而且能時尚出鏡。更棒的是，鏡片的防藍光功能非常適合我平時看手機和用電腦的需求。如果都也想擁有一副實用與顏值兼具的眼鏡，歡迎來到
-                ZEISS VISION EXPERT
-                檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
+                ZEISS VISION EXPERT 檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
               </div>
               <div>
                 <div>
-                  <img
-                    src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
-                    alt=""
-                  />
+                  <img src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png" alt="" />
                 </div>
                 <div>視界的全新體驗</div>
               </div>
@@ -582,10 +528,12 @@ const close = () => {
           <div @click="close()" class="open-docx docx-two open-four">
             <div>
               <div>靚靚媽咪</div>
-              <div>雪雪<span>孫慧雪</span></div>
               <div>
-                最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到
-                ZEISS VISION EXPERT
+                雪雪
+                <span>孫慧雪</span>
+              </div>
+              <div>
+                最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到 ZEISS VISION EXPERT
                 檢查眼睛。在視光師的建議下，我們給小兒子配上了近視控制眼鏡，幫助他預防近視加深。我也選擇了漸進鏡，滿足日常的視覺需求。他們使用了先進的
                 VISUFIT 1000
                 技術，為我們量身定做最合適的眼鏡，確保配戴舒適並改善視力。如果您的孩子也因為使用電子產品而出現視力問題，建議帶他們來CMER
@@ -593,10 +541,7 @@ const close = () => {
               </div>
               <div>
                 <div>
-                  <img
-                    src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
-                    alt=""
-                  />
+                  <img src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png" alt="" />
                 </div>
                 <div>視界的全新體驗</div>
               </div>
@@ -605,20 +550,20 @@ const close = () => {
           <div @click="close()" class="open-docx docx-two open-five">
             <div>
               <div>港姐兼女神</div>
-              <div>Eunice So<span>蘇可欣</span></div>
               <div>
-                因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS
-                Vision Expert 中心，透過蔡司 3D 中心定位儀 VISUFIT 1000
+                Eunice So
+                <span>蘇可欣</span>
+              </div>
+              <div>
+                因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS Vision Expert 中心，透過蔡司 3D 中心定位儀
+                VISUFIT 1000
                 技術，為我量身定做了一副舒適的眼鏡。戴上新眼鏡後，我驚喜地發現視力改善讓我的生活更加精彩！不僅減輕了夜晚駕駛時的壓力，還讓我在日常生活中享受到更清晰的視野。如果你也面臨視力挑戰，別再等了！來
                 ZEISS Vision Expert 中心進行一次 My Vision Experience by ZEISS
                 的驗眼流程，讓他們幫助你找到最適合的解決方案，重新擁抱清晰的世界！
               </div>
               <div>
                 <div>
-                  <img
-                    src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
-                    alt=""
-                  />
+                  <img src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png" alt="" />
                 </div>
                 <div>視界的全新體驗</div>
               </div>
@@ -626,7 +571,6 @@ const close = () => {
           </div>
         </div>
       </div>
-      <!-- <div class="bg-mask-layer"></div> -->
     </div>
     <div class="vision-experience-content" v-else>
       <div class="vision-experience-bg"></div>
@@ -637,22 +581,20 @@ const close = () => {
         <div class="fourBox">
           <div>
             <div>藝人兼主持</div>
-            <div>Edmond Hui<span>許文軒</span></div>
             <div>
-              作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到
-              ZEISS VISION EXPERT
-              中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司
-              3D 中心定位儀 VISUFIT 1000
+              Edmond Hui
+              <span>許文軒</span>
+            </div>
+            <div>
+              作為藝人兼主持，我每天拍攝工作需要長時間戴隱形眼鏡，擔心對眼睛健康有影響。所以決定來到 ZEISS VISION EXPERT
+              中心，希望找到一副既能滿足視覺需求又能搭配多種工作造型的眼鏡。在視光師仔細驗眼後，他們利用蔡司 3D
+              中心定位儀 VISUFIT 1000
               技術，為我度身定做了一副滿意的眼鏡。這副眼鏡不但戴得舒適，而且能時尚出鏡。更棒的是，鏡片的防藍光功能非常適合我平時看手機和用電腦的需求。如果都也想擁有一副實用與顏值兼具的眼鏡，歡迎來到
-              ZEISS VISION EXPERT
-              檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
+              ZEISS VISION EXPERT 檢查眼睛及驗配鏡片，讓他們幫助你找到心儀眼鏡，享受舒適視覺體驗！
             </div>
             <div>
               <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
-                  alt=""
-                />
+                <img src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png" alt="" />
               </div>
               <div>視界的全新體驗</div>
             </div>
@@ -662,10 +604,12 @@ const close = () => {
         <div class="fiveBox">
           <div>
             <div>靚靚媽咪</div>
-            <div>雪雪<span>孫慧雪</span></div>
             <div>
-              最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到
-              ZEISS VISION EXPERT
+              雪雪
+              <span>孫慧雪</span>
+            </div>
+            <div>
+              最近，我發現小兒子因為學習時經常使用電腦，出現了輕微的近視和散光。我帶他來到 ZEISS VISION EXPERT
               檢查眼睛。在視光師的建議下，我們給小兒子配上了近視控制眼鏡，幫助他預防近視加深。我也選擇了漸進鏡，滿足日常的視覺需求。他們使用了先進的
               VISUFIT 1000
               技術，為我們量身定做最合適的眼鏡，確保配戴舒適並改善視力。如果您的孩子也因為使用電子產品而出現視力問題，建議帶他們來CMER
@@ -673,10 +617,7 @@ const close = () => {
             </div>
             <div>
               <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
-                  alt=""
-                />
+                <img src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png" alt="" />
               </div>
               <div>視界的全新體驗</div>
             </div>
@@ -686,20 +627,20 @@ const close = () => {
         <div class="sixBox">
           <div>
             <div>港姐兼女神</div>
-            <div>Eunice So<span>蘇可欣</span></div>
             <div>
-              因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS
-              Vision Expert 中心，透過蔡司 3D 中心定位儀 VISUFIT 1000
+              Eunice So
+              <span>蘇可欣</span>
+            </div>
+            <div>
+              因為長時間使用電子產品，我出現了散光問題。最近，我來到 ZEISS Vision Expert 中心，透過蔡司 3D 中心定位儀
+              VISUFIT 1000
               技術，為我量身定做了一副舒適的眼鏡。戴上新眼鏡後，我驚喜地發現視力改善讓我的生活更加精彩！不僅減輕了夜晚駕駛時的壓力，還讓我在日常生活中享受到更清晰的視野。如果你也面臨視力挑戰，別再等了！來
               ZEISS Vision Expert 中心進行一次 My Vision Experience by ZEISS
               的驗眼流程，讓他們幫助你找到最適合的解決方案，重新擁抱清晰的世界！
             </div>
             <div>
               <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png"
-                  alt=""
-                />
+                <img src="https://statichk.cmermedical.com/vision/imgs/2025022511205504.png" alt="" />
               </div>
               <div>視界的全新體驗</div>
             </div>
@@ -713,25 +654,32 @@ const close = () => {
   <div class="pj_wrapper">
     <div class="linear circle_title" style="height: auto">
       <div class="fontTitle">
-        <span style="letter-spacing: 5px"> 個人化的專業配鏡流程 </span>
+        <span style="letter-spacing: 5px">個人化的專業配鏡流程</span>
         <small style="display: block">My Vision Experience by ZEISS</small>
       </div>
     </div>
     <div class="in-plant-child-text">
-      有別於一般眼鏡店, 我們的驗眼流程包括<strong style="color: #2449a4"
-        >8個步驟</strong
-      >全方位測量你的眼睛，帶給你專屬的視覺體驗。
+      有別於一般眼鏡店, 我們的驗眼流程包括
+      <strong style="color: #2449a4">8個步驟</strong>
+      全方位測量你的眼睛，帶給你專屬的視覺體驗。
     </div>
     <div class="circle-bg-border">
       <div class="circle">
-        <div class="center-text">你的蔡司<br />視覺體驗</div>
+        <div class="center-text">
+          你的蔡司
+          <br />
+          視覺體驗
+        </div>
         <div class="step step-one">
           <img
             class="pcShow"
             src="https://statichk.cmermedical.com/vision/imgs/1f7082c52e49d500.png"
             alt="視覺需求分析"
           />
-          <h3><span>01</span><span>視覺需求分析</span></h3>
+          <h3>
+            <span>01</span>
+            <span>視覺需求分析</span>
+          </h3>
         </div>
         <div class="step step-two">
           <img
@@ -740,43 +688,43 @@ const close = () => {
             alt="光學指紋測量及視覺表現分析"
           />
           <h3>
-            <span>02</span><span>光學指紋<br class="mbShow" />測量</span>
+            <span>02</span>
+            <span>
+              光學指紋
+              <br class="mbShow" />
+              測量
+            </span>
           </h3>
           <div class="btn" @click="changeBtn(1)">
             <img
               src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
               alt="按钮"
               :style="{
-                transform:
-                  indexBollean == true ? 'rotate(0deg)' : 'rotate(-90deg)',
+                transform: indexBollean == true ? 'rotate(0deg)' : 'rotate(-90deg)',
               }"
             />
           </div>
           <p :style="{ opacity: indexBollean == true ? '1' : '0' }">
-            分析眼睛的高階像差、日間和<br class="mbShow" />夜間的視覺表現
+            分析眼睛的高階像差、日間和
+            <br class="mbShow" />
+            夜間的視覺表現
           </p>
-          <p :style="{ opacity: indexBollean == true ? '1' : '0' }">
-            採用前導波技術全面分析
-          </p>
-          <p :style="{ opacity: indexBollean == true ? '1' : '0' }">
-            使用VISUCORE 500儀器
-          </p>
+          <p :style="{ opacity: indexBollean == true ? '1' : '0' }">採用前導波技術全面分析</p>
+          <p :style="{ opacity: indexBollean == true ? '1' : '0' }">使用VISUCORE 500儀器</p>
         </div>
         <div class="step step-three">
-          <img
-            class="pcShow"
-            src="https://statichk.cmermedical.com/vision/imgs/3356b98dc5f9bbc9.png"
-            alt="鏡框選擇"
-          />
-          <h3><span>03</span><span>視覺表現分析</span></h3>
+          <img class="pcShow" src="https://statichk.cmermedical.com/vision/imgs/3356b98dc5f9bbc9.png" alt="鏡框選擇" />
+          <h3>
+            <span>03</span>
+            <span>視覺表現分析</span>
+          </h3>
         </div>
         <div class="step step-three-two">
-          <img
-            class="pcShow"
-            src="https://statichk.cmermedical.com/vision/imgs/3356b98dc5f9bbc9.png"
-            alt="鏡框選擇"
-          />
-          <h3><span>04</span><span>鏡框選擇</span></h3>
+          <img class="pcShow" src="https://statichk.cmermedical.com/vision/imgs/3356b98dc5f9bbc9.png" alt="鏡框選擇" />
+          <h3>
+            <span>04</span>
+            <span>鏡框選擇</span>
+          </h3>
         </div>
         <div class="step step-four">
           <img
@@ -784,39 +732,35 @@ const close = () => {
             src="https://statichk.cmermedical.com/vision/imgs/5543b949c6357f3b.png"
             alt="鏡框中心定位"
           />
-          <h3><span>05</span><span>鏡框中心定位</span></h3>
+          <h3>
+            <span>05</span>
+            <span>鏡框中心定位</span>
+          </h3>
           <div class="btn-four-two" @click="changeBtn(2)">
             <img
               src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
               alt="按钮"
               :style="{
-                transform:
-                  indexTwoBollean == true ? 'rotate(0deg)' : 'rotate(-90deg)',
+                transform: indexTwoBollean == true ? 'rotate(0deg)' : 'rotate(-90deg)',
               }"
             />
           </div>
-          <p :style="{ opacity: indexTwoBollean == true ? '1' : '0' }">
-            精準定位鏡框中心
-          </p>
-          <p :style="{ opacity: indexTwoBollean == true ? '1' : '0' }">
-            使用VISUFIT 100儀器 快速偵測
-          </p>
+          <p :style="{ opacity: indexTwoBollean == true ? '1' : '0' }">精準定位鏡框中心</p>
+          <p :style="{ opacity: indexTwoBollean == true ? '1' : '0' }">使用VISUFIT 100儀器 快速偵測</p>
         </div>
         <div class="step step-five">
-          <img
-            class="pcShow"
-            src="https://statichk.cmermedical.com/vision/imgs/2d665e15c13a5de0.png"
-            alt="專屬鏡片"
-          />
-          <h3><span>06</span><span>專屬鏡片</span></h3>
+          <img class="pcShow" src="https://statichk.cmermedical.com/vision/imgs/2d665e15c13a5de0.png" alt="專屬鏡片" />
+          <h3>
+            <span>06</span>
+            <span>專屬鏡片</span>
+          </h3>
         </div>
         <div class="step step-six">
-          <img
-            class="pcShow"
-            src="https://statichk.cmermedical.com/vision/imgs/89ac432219c4fabf.png"
-            alt="領取眼鏡"
-          />
-          <h3><span>07</span><span>領取眼鏡</span></h3>
+          <img class="pcShow" src="https://statichk.cmermedical.com/vision/imgs/89ac432219c4fabf.png" alt="領取眼鏡" />
+          <h3>
+            <span>07</span>
+            <span>領取眼鏡</span>
+          </h3>
         </div>
         <div class="step step-seven">
           <img
@@ -825,15 +769,17 @@ const close = () => {
             alt="服務和跟進"
           />
           <h3>
-            <span>08</span><span>服務和<br class="mbShow" />跟進</span>
+            <span>08</span>
+            <span>
+              服務和
+              <br class="mbShow" />
+              跟進
+            </span>
           </h3>
         </div>
       </div>
 
-      <div
-        class="circleTwo"
-        v-if="indexBollean == true || indexTwoBollean == true"
-      >
+      <div class="circleTwo" v-if="indexBollean == true || indexTwoBollean == true">
         <div>
           <img
             :src="
@@ -845,9 +791,7 @@ const close = () => {
           />
           <h3>{{ indexBollean == true ? "02" : "05" }}</h3>
           <div class="circleTwo-title">
-            <span
-              >{{ indexBollean == true ? "光學指紋測量" : "鏡框中心定位" }}
-            </span>
+            <span>{{ indexBollean == true ? "光學指紋測量" : "鏡框中心定位" }}</span>
             <img
               @click="closeBtn"
               :src="
@@ -859,40 +803,28 @@ const close = () => {
             />
           </div>
           <p class="content">
-            {{
-              indexBollean == true
-                ? "分析眼睛的高階像差、日間和夜間的視覺表現"
-                : "精準定位鏡框中心"
-            }}
+            {{ indexBollean == true ? "分析眼睛的高階像差、日間和夜間的視覺表現" : "精準定位鏡框中心" }}
           </p>
           <p class="content">
-            {{
-              indexBollean == true
-                ? "採用前導波技術全面分析"
-                : "使用VISUFIT 100儀器快速偵測"
-            }}
+            {{ indexBollean == true ? "採用前導波技術全面分析" : "使用VISUFIT 100儀器快速偵測" }}
           </p>
-          <p
-            class="content"
-            :style="{ display: indexTwoBollean == true ? 'none' : 'block' }"
-          >
+          <p class="content" :style="{ display: indexTwoBollean == true ? 'none' : 'block' }">
             {{ indexBollean == true ? "使用VISUFIT 100儀器快速偵測" : "" }}
           </p>
         </div>
       </div>
       <div class="btn-child mb-show">
-        <img
-          src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png"
-          alt="一站式精準驗光流程"
-        />
+        <img src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png" alt="一站式精準驗光流程" />
         <h3>
-          <span>02</span><span>一站式精準<br />驗光流程</span>
+          <span>02</span>
+          <span>
+            一站式精準
+            <br />
+            驗光流程
+          </span>
         </h3>
         <div class="btn-two mb-show">
-          <img
-            src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
-            alt="按钮"
-          />
+          <img src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png" alt="按钮" />
         </div>
         <div class="child-span">
           <span>・分析眼睛的高階像差，日間和夜間的視覺表現</span>
@@ -900,18 +832,17 @@ const close = () => {
         </div>
       </div>
       <div class="btn-child-two mb-show">
-        <img
-          src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png"
-          alt="光學指紋測量及視覺表現分析"
-        />
+        <img src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png" alt="光學指紋測量及視覺表現分析" />
         <h3>
-          <span>04</span><span>瞳孔與鏡片中心<br />完美匹配</span>
+          <span>04</span>
+          <span>
+            瞳孔與鏡片中心
+            <br />
+            完美匹配
+          </span>
         </h3>
         <div class="btn-child-four-two mb-show">
-          <img
-            src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png"
-            alt="按钮"
-          />
+          <img src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png" alt="按钮" />
         </div>
         <div class="child-span">
           <span>・精準定位鏡框中心</span>
@@ -923,248 +854,215 @@ const close = () => {
       class="whatapps-btn-series adult_service_btn"
       href="https://api.whatsapp.com/send?phone=85269180511&amp;text=(ZVE)%E7%AB%8B%E5%8D%B3%E6%9F%A5%E8%A9%A2/%E9%A0%90%E7%B4%84%E8%94%A1%E5%8F%B8%E8%A6%96%E8%A6%BA%E9%AB%94%E9%A9%97"
       target="_blank"
-      ><p class="whatapps-btn-series-p">
+    >
+      <p class="whatapps-btn-series-p">
         <span>立即體驗流程</span>
-        <span
-          ><svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="27"
-            height="40"
-            viewBox="0 0 27 40"
-            fill="none"
-          >
-            <g filter="url(#filter0_d_1849_654)">
-              <path
-                d="M7 3L20 16L7 29"
-                stroke="white"
-                stroke-width="3"
-                stroke-linecap="square"
-              ></path>
-            </g>
-            <defs>
-              <filter
-                id="filter0_d_1849_654"
-                x="0.878906"
-                y="0.878662"
-                width="25.2422"
-                height="38.2427"
-                filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB"
-              >
-                <feFlood
-                  flood-opacity="0"
-                  result="BackgroundImageFix"
-                ></feFlood>
-                <feColorMatrix
-                  in="SourceAlpha"
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                  result="hardAlpha"
-                ></feColorMatrix>
-                <feOffset dy="4"></feOffset>
-                <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                <feComposite in2="hardAlpha" operator="out"></feComposite>
-                <feColorMatrix
-                  type="matrix"
-                  values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                ></feColorMatrix>
-                <feBlend
-                  mode="normal"
-                  in2="BackgroundImageFix"
-                  result="effect1_dropShadow_1849_654"
-                ></feBlend>
-                <feBlend
-                  mode="normal"
-                  in="SourceGraphic"
-                  in2="effect1_dropShadow_1849_654"
-                  result="shape"
-                ></feBlend>
-              </filter>
-            </defs></svg
-        ></span>
+        <span>
+          <!-- prettier-ignore -->
+          <svg xmlns="http://www.w3.org/2000/svg" width="27" height="40" viewBox="0 0 27 40" fill="none"><g filter="url(#try-right)"><path d="m7 3 13 13L7 29" stroke="#fff" stroke-width="3" stroke-linecap="square"/></g><defs><filter id="try-right" x=".879" y=".879" width="25.242" height="38.243" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/><feOffset dy="4"/><feGaussianBlur stdDeviation="2"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_1849_654"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_1849_654" result="shape"/></filter></defs></svg>
+        </span>
       </p>
     </a>
   </div>
-
-  <!-- i2配镜 -->
-  <div class="i2_wrapper">
-    <div class="individuation">
-      <div style="flex: 5.2"></div>
-      <div style="flex: 4.8">
-        <div>
-          <div class="brand">蔡司</div>
-          <div class="individuation-title">i2個人化鏡片系列</div>
-        </div>
-        <div class="individuation-items">
-          <div class="item-span"><span></span><span>i2單光鏡片</span></div>
-          <div class="item-span">
-            <span></span><span>DriveSafe i2 單光鏡片</span>
-          </div>
-          <div class="item-span"><span></span><span>i2漸進鏡片</span></div>
-          <div class="item-span">
-            <span></span><span>DriveSafe i2 漸進鏡片</span>
-          </div>
-          <div class="item-span"><span></span><span>Digital i2鏡片</span></div>
-          <div class="item-span"><span></span><span>Office i2 鏡片</span></div>
-        </div>
-        <a
-          class="whatapps-btn-series-two adult_service_btn"
-          href="https://api.whatsapp.com/send?phone=85269180511&amp;text=(ZVE)%E7%AB%8B%E5%8D%B3%E6%9F%A5%E8%A9%A2/%E9%A0%90%E7%B4%84%E9%A9%97%E9%85%8D%E8%94%A1%E5%8F%B8%E9%8F%A1%E7%89%87"
-          target="_blank"
-          ><p class="whatapps-btn-series-two-p">
-            <span>想了解更多蔡司鏡片系列?</span>
-            <span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="40"
-                viewBox="0 0 27 40"
-                fill="none"
-              >
-                <g filter="url(#filter0_d_1849_654)">
-                  <path
-                    d="M7 3L20 16L7 29"
-                    stroke="white"
-                    stroke-width="3"
-                    stroke-linecap="square"
-                  ></path>
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_d_1849_654"
-                    x="0.878906"
-                    y="0.878662"
-                    width="25.2422"
-                    height="38.2427"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    ></feColorMatrix>
-                    <feOffset dy="4"></feOffset>
-                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                    <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                    ></feColorMatrix>
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_1849_654"
-                    ></feBlend>
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_1849_654"
-                      result="shape"
-                    ></feBlend>
-                  </filter>
-                </defs></svg
-            ></span>
-          </p>
-        </a>
-      </div>
+  <section class="upcar mb-10 md:mb-12 xl:mb-25">
+    <div class="upcar-head">
+      <!-- prettier-ignore -->
+      <svg class="size-[52px] md:size-[88px] xl:size-[128px] mb-4" xmlns="http://www.w3.org/2000/svg" width="129" height="129" viewBox="0 0 129 129" fill="none"><g clip-path="url(#a)"><path d="M128.265 0H0v129l.915-.367c20.05-9.05 41.473-13.623 63.63-13.623s43.487 4.57 63.356 13.623l.915.367L129 0h-.732" fill="#2449a4"/><path d="M15.932 39.222c-6.133 0-6.59 6.035-6.59 6.035H6.594v-8.96h22.338s0 6.948-6.59 14.354c0 0-6.134 7.316-6.408 10.514h3.661c5.218 0 5.676-6.034 5.676-6.034h2.93v8.96h-22.8s-.64-6.858 7.05-15.085c0 0 5.033-5.394 6.132-9.69l-2.655-.09m56.763 24.768v-2.926h-.731c-1.1 0-2.289-1.004-2.289-2.195v-17.37c0-1.187 1.1-2.195 2.289-2.195h.641v-2.925H57.859v2.925h.642c1.373 0 2.288 1.004 2.288 2.195v17.37c0 1.188-.915 2.195-2.288 2.195h-.642v2.925zm-17.756.098v-8.96h-2.93s-.641 6.034-5.95 6.034h-2.929V51.66h1.1c1.098 0 2.287 1.004 2.287 2.285v1.098h2.93v-9.69h-2.93v1.097c0 1.28-1.099 2.285-2.288 2.285h-1.099v-9.507h2.93c5.218 0 5.95 6.034 5.95 6.034h2.929v-9.05h-23.53v2.925h.64c1.1 0 2.015 1.005 2.015 2.195v17.37c0 1.188-.915 2.195-2.014 2.195h-.642v2.926l23.53.273m33.234-24.874c6.133 0 6.59 6.035 6.59 6.035h2.746v-8.96H76.265s-3.387 4.39 5.492 14.354c0 0 6.133 7.316 6.407 10.514h-3.661c-5.218 0-5.676-6.034-5.676-6.034h-2.93v8.96H97.32s3.845-4.206-5.675-15.085c0 0-5.218-5.21-6.133-9.69l2.656-.09m25.082-.004c5.949 0 6.407 6.035 6.407 6.035h2.929v-8.96h-21.422s-3.388 4.39 5.492 14.354c0 0 6.133 7.316 6.407 10.514h-3.662c-5.034 0-5.675-6.034-5.675-6.034h-2.93v8.96h21.423s3.845-4.206-5.676-15.085c0 0-5.034-5.21-5.949-9.69l2.656-.09" fill="#fff"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h129v129H0z"/></clipPath></defs></svg>
+      <h2
+        class="upcar-title text-[#152B61] md:text-2xl xl:text-5xl leading-[2] xl:leading-normal font-bold mb-4 md:mb-10 xl:mb-18"
+      >
+        駕輛 UpCar x
+        <br />
+        希瑪視光 ZEISS Vision Expert
+      </h2>
+      <p class="text-[#343434] text-xs text-lg xl:text-3xl !leading-[2] tracking-[0.2em]">
+        作為駕駛者，長期受到夜間視力模糊、眩光困擾？
+        <br class="hidden md:block" />
+        原來問題不只在度數，每雙眼睛如指紋般獨一無
+        <br class="hidden md:block" />
+        二，角膜與瞳孔細微結構的差異，會產生所謂
+        <br class="hidden md:block" />
+        「高階像差」，令傳統鏡片難以完美對應。
+      </p>
     </div>
-  </div>
-
-  <!-- 视觉资料 -->
-  <div class="wpb_raw_code wpb_content_element wpb_raw_html">
-    <div class="sjb_wrapper" :class="titleShow ? 'fadeInUp' : 'fadeInUpShow'">
-      <div ref="observerTarget" class="in-plant">
-        <div class="in-plant-title">
-          <span>我的視覺資料</span>
-        </div>
-        <div class="in-plant-child-text">
-          初步了解自己的個人視覺習慣，<br />找出適合你的個人化鏡片
-        </div>
-        <a
-          class="whatapps-btn-series adult_service_btn"
-          target="_blank"
-          href="https://myvisionprofile.zeiss.com/?locale=zh_hk#intro"
-          ><p class="whatapps-btn-series-p">
-            <span>進入測試</span>
-            <span
-              ><svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="27"
-                height="40"
-                viewBox="0 0 27 40"
-                fill="none"
-              >
-                <g filter="url(#filter0_d_1849_654)">
-                  <path
-                    d="M7 3L20 16L7 29"
-                    stroke="white"
-                    stroke-width="3"
-                    stroke-linecap="square"
-                  ></path>
-                </g>
-                <defs>
-                  <filter
-                    id="filter0_d_1849_654"
-                    x="0.878906"
-                    y="0.878662"
-                    width="25.2422"
-                    height="38.2427"
-                    filterUnits="userSpaceOnUse"
-                    color-interpolation-filters="sRGB"
-                  >
-                    <feFlood
-                      flood-opacity="0"
-                      result="BackgroundImageFix"
-                    ></feFlood>
-                    <feColorMatrix
-                      in="SourceAlpha"
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"
-                      result="hardAlpha"
-                    ></feColorMatrix>
-                    <feOffset dy="4"></feOffset>
-                    <feGaussianBlur stdDeviation="2"></feGaussianBlur>
-                    <feComposite in2="hardAlpha" operator="out"></feComposite>
-                    <feColorMatrix
-                      type="matrix"
-                      values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"
-                    ></feColorMatrix>
-                    <feBlend
-                      mode="normal"
-                      in2="BackgroundImageFix"
-                      result="effect1_dropShadow_1849_654"
-                    ></feBlend>
-                    <feBlend
-                      mode="normal"
-                      in="SourceGraphic"
-                      in2="effect1_dropShadow_1849_654"
-                      result="shape"
-                    ></feBlend>
-                  </filter>
-                </defs></svg
-            ></span>
-          </p>
-        </a>
-        <a
-          class="in-plant-child-img show-before-on-hover"
-          target="_blank"
-          href="https://myvisionprofile.zeiss.com/?locale=zh_hk#intro"
-        >
-          <img
-            src="https://statichk.cmermedical.com/vision/imgs/52e8a906f96b5fe7.gif"
-            alt="ZEISS Vision Expert"
-          />
-        </a>
+    <div class="upcar-main px-3 xl:px-0">
+      <div
+        class="text-[#6D6D6D] text-center text-sm md:text-lg xl:text-3xl !leading-[2] tracking-[0.2em] space-y-2 mb-3 md:mb-5 xl:mb-8"
+      >
+        <p>
+          希瑪視光中心攜手蔡司，引入革命性 i.Technology 技術，配備高精度測量設備ZEISS i.Profiler
+          Plus，捕捉眼睛微細凹凸面，全面分析您的「光學指紋」，精確計算鏡片最佳曲率與度數分佈，鏡片打磨精細至1度，有效減少高階像差。蔡司i.Technology
+          技術能夠顯著提升視覺清晰度、對比度與立體感，特別適合夜間駕駛者或對視覺質量要求極高的專業人士。
+        </p>
+        <p>
+          同時，透過 VISUFIT 1000
+          中心定位技術，精準測量眼睛與鏡框的所有角度，確保鏡片與面型完美契合，提升配戴舒適度，打造真正專屬的視覺升級方案！
+        </p>
       </div>
+      <PublicVideoYoutubePlayer id="uMPerJfT-dY" />
     </div>
-  </div>
+  </section>
+  <section class="lens mb-12 md:mb-20">
+    <div class="section-title mb-5 md:mb-[56px]">
+      <h2 class="section-title__text">蔡司訂製鏡片系列</h2>
+    </div>
+    <div class="lens-main">
+      <button class="lens-nav lens-prev" @click="swiperPrev">
+        <!-- prettier-ignore -->
+        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m10.567 1.5-8 5.634L9.861 12.5" stroke="#2449a4" stroke-width="3" stroke-linecap="round"/></svg>
+      </button>
+      <swiper
+        :modules="[Autoplay, Pagination]"
+        :breakpoints="{
+          0: {
+            slidesPerView: 1,
+            spaceBetween: 37,
+          },
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 37,
+          },
+          900: {
+            slidesPerView: 2,
+            spaceBetween: 37,
+          },
+          1024: {
+            slidesPerView: 2,
+            spaceBetween: 37,
+          },
+          1280: {
+            slidesPerView: 2,
+            spaceBetween: 37,
+          },
+        }"
+        :slides-per-view="2"
+        :space-between="37"
+        :pagination="{
+          clickable: true,
+          type: 'bullets',
+        }"
+        :loop="true"
+        :autoplay="{
+          delay: 2500,
+          disableOnInteraction: false,
+        }"
+        class="w-full mx-auto max-w-7xl"
+        @swiper="onSwiper"
+      >
+        <swiper-slide class="lens-slide">
+          <!-- DriveSafe -->
+          <div class="lens-card">
+            <h3 class="lens-card__title">蔡司 DriveSafe 鏡片</h3>
+            <img
+              src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/card1-2.webp"
+              class="w-full"
+            />
+            <p class="lens-card__desc">
+              為駕駛者度身設計，全天候提供穩定視覺，
+              <br />
+              夜間更安全！
+            </p>
 
+            <ul class="lens-card__list">
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                減少夜間眩光干擾
+              </li>
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                合全天候配戴
+              </li>
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                遠近視覺輕鬆轉換
+              </li>
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                減輕長途駕駛疲勞
+              </li>
+            </ul>
+          </div>
+        </swiper-slide>
+        <swiper-slide class="lens-slide">
+          <!-- SmartLife -->
+          <div class="lens-card">
+            <h3 class="lens-card__title">蔡司 SmartLife 鏡片</h3>
+            <img
+              src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/card2-7.webp"
+              class="w-full"
+            />
+            <p class="lens-card__desc">
+              為數碼生活度身設計，全天候視野流暢，
+              <br />
+              遠近視覺一樣清楚！
+            </p>
+
+            <ul class="lens-card__list">
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                減輕數碼視覺壓力
+              </li>
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                適合全天候配戴
+              </li>
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                遠中近視覺自然轉換
+              </li>
+              <li class="lens-card__item">
+                <img
+                  src="https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/start.png"
+                  class="lens-card__icon"
+                  alt=""
+                />
+                減輕長時間用眼疲勞
+              </li>
+            </ul>
+          </div>
+        </swiper-slide>
+      </swiper>
+      <button class="lens-nav lens-next" @click="swiperNext">
+        <!-- prettier-ignore -->
+        <svg width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m1.5 1.5 8 5.634L2.206 12.5" stroke="#2449a4" stroke-width="3" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+    <a href="https://bit.ly/4qkVawR" rel="noopener noreferrer" target="_blank" class="experience__btn">
+      <p>
+        <span>立即預約驗配</span>
+        <!-- prettier-ignore -->
+        <svg viewBox="0 0 18 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="m2.121 2.125 13 13-13 13" stroke="#fff" stroke-width="3" stroke-linecap="square"/></svg>
+      </p>
+    </a>
+  </section>
   <!-- Swiper -->
   <main class="wpbSwpier">
     <div class="mySwpier">
@@ -1193,18 +1091,9 @@ const close = () => {
       >
         <!-- @touch-start="handleTouchStart" -->
         <!-- @touch-end="handleTouchEnd" -->
-        <swiper-slide
-          class="swiperIndex"
-          v-for="item in discountsList"
-          :key="item.id"
-        >
+        <swiper-slide class="swiperIndex" v-for="item in discountsList" :key="item.id">
           <div class="img-swiper">
-            <img
-              :class="{ rotated: isRotated }"
-              class="draggable-image"
-              :src="item.img"
-              :alt="item.content"
-            />
+            <img :class="{ rotated: isRotated }" class="draggable-image" :src="item.img" :alt="item.content" />
           </div>
         </swiper-slide>
       </swiper>
@@ -1221,11 +1110,8 @@ const close = () => {
       <div class="wpb_raw_code wpb_content_element wpb_raw_html">
         <div class="wpb_wrapper">
           <div class="address">
-            <a
-              class="address-img"
-              target="_blank"
-              href="https://maps.app.goo.gl/UzkcpBnECESrQ9iX9"
-              ><img
+            <a class="address-img" target="_blank" href="https://maps.app.goo.gl/UzkcpBnECESrQ9iX9">
+              <img
                 src="https://statichk.cmermedical.com/vision/imgs/1dd53262ddce08de.png"
                 alt="蔡司ZVE視光專家 中環畢打街1-3號中建大廈1515室"
               />
@@ -1242,11 +1128,13 @@ const close = () => {
                 <div class="address-title">營業時間</div>
                 <div class="address-items">
                   <div class="address-text">
-                    <span>星期一至五：</span> <span>09:30–13:30</span>
+                    <span>星期一至五：</span>
+                    <span>09:30–13:30</span>
                     <span>14:30–18:00</span>
                   </div>
                   <div class="address-text">
-                    <span>星期六：</span> <span>09:30-13:00</span>
+                    <span>星期六：</span>
+                    <span>09:30-13:00</span>
                     <span>(星期日及公眾假期休息)</span>
                   </div>
                 </div>
@@ -1260,20 +1148,11 @@ const close = () => {
                     target="_blank"
                     href="https://api.whatsapp.com/send?phone=85269180511&amp;text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2"
                   >
-                    <img
-                      src="https://static.cmereye.com/static/ckj/imgs/svg/whatsApp.svg"
-                      alt="ZEISS Vision Expert"
-                    />
+                    <img src="https://static.cmereye.com/static/ckj/imgs/svg/whatsApp.svg" alt="ZEISS Vision Expert" />
                     <div class="button_a_whatsapp button_dione">
                       <span>Whatsapp查詢</span>
                       <span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="9"
-                          height="18"
-                          viewBox="0 0 9 18"
-                          fill="none"
-                        >
+                        <svg xmlns="http://www.w3.org/2000/svg" width="9" height="18" viewBox="0 0 9 18" fill="none">
                           <g clip-path="url(#clip0_1849_879)">
                             <path d="M0 18L9 8.99307L0 0" fill="#F9FBFC"></path>
                           </g>
@@ -1304,30 +1183,385 @@ const close = () => {
   transform: rotateY(45deg);
 }
 .zve-information {
-  cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012116391701.png"),
-    auto;
+  cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012116391701.png"), auto;
+}
+.section-title {
+  text-align: center;
+  background: linear-gradient(90deg, #fff 0.5%, #d0ddff 51%, #fff 100%);
+  padding: 10px 30px;
+  width: fit-content;
+  margin: 40px auto 0 auto;
+  .section-title__text {
+    color: #152b61;
+    text-align: center;
+    font-family: "Noto Sans";
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 3.6px;
+  }
+}
+.upcar {
+  .upcar-head {
+    padding: 44px 30% 32px 24px;
+    margin-bottom: 24px;
+    background: url("https://statichk.cmermedical.com/cmermedical/image/20260128/section-2-pc.webp") no-repeat center /
+      cover;
+  }
+}
+.lens {
+  .lens-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 20px 0 40px 0;
+    padding: 0px 40px;
+    :deep(.swiper-pagination) {
+      position: relative !important;
+      top: auto !important;
+      bottom: auto !important;
+      left: auto !important;
+      right: auto !important;
+      width: 100% !important;
+      margin-top: 30px !important;
+      display: flex !important;
+      justify-content: center !important;
+      align-items: center !important;
+      gap: 15px !important;
+    }
+    :deep(.swiper-pagination-bullet) {
+      width: 103px !important;
+      height: 5px !important;
+      background: #c0c0c0 !important;
+      opacity: 1 !important;
+      border-radius: 0 !important;
+      margin: 0 !important;
+      transition: all 0.3s ease !important;
+    }
+    :deep(.swiper-pagination-bullet-active) {
+      background: #2449a4 !important;
+      width: 103px !important;
+      height: 5px !important;
+      border-radius: 0 !important;
+    }
+  }
+  .lens-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+    border-radius: 41px;
+    background: #f1f1f1;
+  }
+  .lens-prev {
+    left: 4px;
+  }
+
+  .lens-next {
+    right: 4px;
+  }
+  .lens-card {
+    background: #ffffff;
+    border: 1px solid #b5ccff;
+    text-align: center;
+    width: 100%;
+    padding-bottom: 34px;
+    .lens-card__title {
+      color: #2449a4;
+      font-family: "Noto Sans";
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24.943px;
+      letter-spacing: 0.691px;
+      margin-bottom: 28px;
+      position: absolute;
+      top: 16px;
+      left: 50%;
+      transform: translateX(-50%);
+      text-wrap: nowrap;
+      border-bottom: 2px solid #2449a4;
+    }
+    .lens-card__desc {
+      color: #2449a4;
+      text-align: center;
+      font-family: "Noto Sans CJK TC";
+      font-size: 17px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 20.216px;
+      margin-bottom: 20px;
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+    .lens-card__list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      position: relative;
+      width: fit-content;
+      margin: 0 auto;
+    }
+
+    .lens-card__item {
+      color: #6d6d6d;
+      font-family: "Noto Sans";
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 2.24;
+      letter-spacing: 2.4px;
+      text-align: start;
+      display: flex;
+      align-items: center;
+    }
+
+    .lens-card__icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 13px;
+    }
+  }
+}
+.experience__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 13px 15px;
+  background: #2449a4;
+  cursor: pointer;
+  width: fit-content;
+  color: #fff;
+  font-family: "Noto Sans";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: 2.8px;
+  margin: 20px auto 0 auto;
+  p {
+    display: flex;
+    gap: 0 10px;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    z-index: 10;
+  }
+  svg {
+    width: 9px;
+    height: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
+  .section-title {
+    text-align: center;
+    .section-title__text {
+      background: linear-gradient(90deg, #fff 0.5%, #d0ddff 51%, #fff 100%);
+      color: #152b61;
+      text-align: center;
+      font-family: "Noto Sans";
+      font-size: 45px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+      padding: 25px clamp(52px, 8.33vw, 160px);
+      width: fit-content;
+      margin: 0 auto;
+    }
+  }
+  .upcar {
+    .upcar-head {
+      padding: clamp(120px, 9.375vw, 200px) 0 92px max((100vw - 1320px) / 2, 32px);
+      margin-bottom: 56px;
+    }
+    .upcar-main {
+      max-width: 1320px;
+      margin: 0 auto;
+    }
+  }
+  .lens {
+    .lens-main {
+      margin-top: 56px;
+      :deep(.swiper-pagination) {
+        position: relative !important;
+        top: auto !important;
+        bottom: auto !important;
+        left: auto !important;
+        right: auto !important;
+        width: 100% !important;
+        margin-top: 30px !important;
+        display: none !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 15px !important;
+      }
+      :deep(.swiper-pagination-bullet) {
+        width: 103px !important;
+        height: 5px !important;
+        background: #c0c0c0 !important;
+        opacity: 1 !important;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        transition: all 0.3s ease !important;
+        display: none !important;
+      }
+      :deep(.swiper-pagination-bullet-active) {
+        background: #2449a4 !important;
+        width: 103px !important;
+        height: 5px !important;
+        border-radius: 0 !important;
+        display: none !important;
+      }
+    }
+    .lens-card {
+      .lens-card__title {
+        color: #2449a4;
+        font-family: "Noto Sans";
+        font-size: 38.438px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.44;
+        letter-spacing: 1.538px;
+        margin-bottom: 28px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 35px;
+        text-wrap: nowrap;
+        border-bottom: 4px solid #2449a4;
+      }
+      .lens-card__desc {
+        color: #2449a4;
+        text-align: center;
+        font-family: "Noto Sans CJK TC";
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 1.73;
+        margin-bottom: 20px;
+        background-image: url(https://statichk.cmermedical.com/cmermedical/image/20260128/section3-icon/bine.png);
+        background-size: 100% 1px;
+        background-repeat: no-repeat;
+        background-position: bottom;
+        width: fit-content;
+        margin-left: auto;
+        margin-right: auto;
+        padding-bottom: 30px;
+      }
+      .lens-card__list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        position: relative;
+        width: fit-content;
+        margin: 0 auto;
+      }
+
+      .lens-card__item {
+        color: #6d6d6d;
+        font-family: "Noto Sans";
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 2.3;
+        letter-spacing: 5.2px;
+        text-align: start;
+        display: flex;
+        align-items: center;
+      }
+
+      .lens-card__icon {
+        width: 33px;
+        height: 33px;
+        margin-right: 29px;
+      }
+    }
+    .lens-nav {
+      display: none;
+    }
+  }
+
+  .experience__btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    cursor: pointer;
+    width: fit-content;
+    color: #fff;
+    font-family: "Noto Sans";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 6px;
+    margin: 80px auto 0 auto;
+    padding: 5px;
+    background: #2449a4;
+    border-radius: 60px;
+    box-shadow: 0 4px 4px #00000040;
+    box-sizing: border-box;
+    display: flex;
+    height: -moz-max-content;
+    height: max-content;
+    position: relative;
+    width: -moz-fit-content;
+    width: fit-content;
+    border: 3px solid #2449a4;
+    &::after {
+      animation: borderAnimation 2s linear infinite;
+      background: #fff;
+      border-radius: 60px;
+      content: "";
+      display: block;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      transform: translate(0);
+      width: 100%;
+      z-index: 4;
+    }
+    p {
+      background: #2449a4;
+      border-radius: 60px;
+      padding: 22px 29px 22px 22px;
+    }
+    svg {
+      width: 18px;
+      height: 31px;
+    }
+  }
+
   .vision-experience {
     position: relative;
     background: transparent !important;
     width: 100%;
     height: auto;
-    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012116391701.png"),
-      auto;
+    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012116391701.png"), auto;
     transition: all 0.3s;
   }
   .vision-experience-bg {
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025022810423301.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022810423301.png") no-repeat;
     background-size: contain;
     position: relative;
     width: 93.833vw;
     height: 41.28125vw;
     box-sizing: border-box;
-    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117133718.png"),
-      auto;
+    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117133718.png"), auto;
     top: -2.375vw;
   }
   .bg-mask-layer {
@@ -1336,8 +1570,7 @@ const close = () => {
     left: 0;
     width: 98.333vw;
     height: 43.28125vw;
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025012115464301.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025012115464301.png") no-repeat;
     background-size: cover;
     z-index: 10;
     pointer-events: none;
@@ -1370,8 +1603,7 @@ const close = () => {
           margin: 0 !important;
           width: 16.2vw;
           background: transparent !important;
-          cursor: url("https://statichk.cmermedical.com/vision/imgs/2025022811335001.png"),
-            auto;
+          cursor: url("https://statichk.cmermedical.com/vision/imgs/2025022811335001.png"), auto;
           transition: all 0.3s;
         }
       }
@@ -1385,20 +1617,17 @@ const close = () => {
         transform: skewX(0deg);
       }
       .open-three {
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205502.png")
-          no-repeat;
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205502.png") no-repeat;
         z-index: 110;
         background-size: contain;
       }
       .open-four {
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205501.png")
-          no-repeat;
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205501.png") no-repeat;
         z-index: 100;
         background-size: contain;
       }
       .open-five {
-        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png")
-          no-repeat;
+        background: url("https://statichk.cmermedical.com/vision/imgs/2025022511205503.png") no-repeat;
         z-index: 90;
         background-size: contain;
       }
@@ -1480,8 +1709,7 @@ const close = () => {
         left: 0;
         width: 94.633vw;
         height: 39.08125vw;
-        cursor: url(https://statichk.cmermedical.com/vision/imgs/2025022811132201.png),
-          auto;
+        cursor: url(https://statichk.cmermedical.com/vision/imgs/2025022811132201.png), auto;
         transition: all 0.3s ease-in-out;
         display: flex !important;
         flex-direction: column;
@@ -1490,8 +1718,7 @@ const close = () => {
     }
   }
   .vision-experience-title {
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025022813333701.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022813333701.png") no-repeat;
     background-size: cover;
     position: absolute;
     width: 49.69vw;
@@ -1601,8 +1828,7 @@ const close = () => {
     height: 100%;
   }
   .vision-experience-img-list-item-active {
-    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117380151.png"),
-      auto;
+    cursor: url("https://statichk.cmermedical.com/vision/imgs/2025012117380151.png"), auto;
     transition: all 0.3s;
   }
 
@@ -1693,8 +1919,7 @@ const close = () => {
       display: block;
       position: absolute;
       left: -10px;
-      background: url("https://statichk.cmermedical.com/vision/imgs/3b468aa44a7ef584.png")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/3b468aa44a7ef584.png") no-repeat;
       // background-position: right;
       width: 20px;
       height: 40px;
@@ -1703,8 +1928,7 @@ const close = () => {
       display: inline-block;
       position: absolute;
       right: -10px;
-      background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png") no-repeat;
       // background-position: right;
       width: 23px;
       height: 40px;
@@ -1718,8 +1942,7 @@ const close = () => {
     }
   }
   :deep(.swiper-button-next::after) {
-    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png") no-repeat;
     background-size: 100% 100%;
     color: transparent;
   }
@@ -1732,8 +1955,7 @@ const close = () => {
     cursor: pointer;
   }
   :deep(.swiper-button-prev::after) {
-    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png") no-repeat;
     background-size: 100% 100%;
     color: transparent;
   }
@@ -1869,14 +2091,11 @@ const close = () => {
 
   //顶部banner标题
 
-  
-   
   .zveTitle {
     position: relative;
     top: 0%;
     left: 0%;
     h2 {
-     
       color: #fff;
       font-family: "Noto Sans";
       font-size: calc(1.5rem + 1vw);
@@ -1887,7 +2106,7 @@ const close = () => {
     }
     span {
       margin-top: 20px;
-     
+
       display: block;
       width: clamp(36.75rem, 4vw, 36rem);
       flex-shrink: 0;
@@ -1929,8 +2148,7 @@ const close = () => {
     margin-bottom: 12.8vw;
     position: relative;
     .vision-experience-bg {
-      background: url("https://statichk.cmermedical.com/vision/imgs/2025022514101801.png")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/2025022514101801.png") no-repeat;
       background-size: cover;
       width: 100%;
       height: 184.1025vw;
@@ -1963,22 +2181,19 @@ const close = () => {
     }
   }
   .fourBox {
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002601.png")
-      no-repeat !important;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002601.png") no-repeat !important;
     background-size: cover !important;
     width: 100vw !important;
     height: 185.846vw !important;
   }
   .fiveBox {
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002602.png")
-      no-repeat !important;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002602.png") no-repeat !important;
     background-size: cover !important;
     width: 100vw !important;
     height: 185.846vw !important;
   }
   .sixBox {
-    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002603.png")
-      no-repeat !important;
+    background: url("https://statichk.cmermedical.com/vision/imgs/2025022514002603.png") no-repeat !important;
     background-size: cover !important;
     width: 100vw !important;
     height: 185.846vw !important;
@@ -2147,8 +2362,7 @@ const close = () => {
       display: block;
       position: absolute;
       left: 30px;
-      background: url("https://statichk.cmermedical.com/vision/imgs/3b468aa44a7ef584.png")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/3b468aa44a7ef584.png") no-repeat;
       // background-position: right;
       background-size: cover;
       width: 10px;
@@ -2158,8 +2372,7 @@ const close = () => {
       display: inline-block;
       position: absolute;
       right: 30px;
-      background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/6cddc1709f50bfe5.png") no-repeat;
       // background-position: right;
       background-size: cover;
       width: 10px;
@@ -2174,8 +2387,7 @@ const close = () => {
     }
   }
   :deep(.swiper-button-next::after) {
-    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/6ed7199aaddff6df.png") no-repeat;
     background-size: 100% 100%;
     color: transparent;
   }
@@ -2186,8 +2398,7 @@ const close = () => {
     left: 0px;
   }
   :deep(.swiper-button-prev::after) {
-    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/f68bf90ff2bad2de.png") no-repeat;
     background-size: 100% 100%;
     color: transparent;
   }
@@ -2320,8 +2531,6 @@ const close = () => {
     font-weight: 700;
     line-height: normal;
   }
-  .zve-information {
-  }
   // 顶部banner文字
   .zveTitle {
     position: absolute;
@@ -2413,10 +2622,6 @@ const close = () => {
   }
 }
 
-// i2个人
-a:hover::before {
-}
-
 .section_wrapper {
   max-width: 100vw !important;
   padding-left: 10px !important;
@@ -2431,8 +2636,7 @@ a:hover::before {
 .whatapps-btn-individuation::before {
   content: "";
   display: inline-block;
-  background: url("https://statichk.cmermedical.com/vision/imgs/5fc7910640dbfa83.png")
-    no-repeat;
+  background: url("https://statichk.cmermedical.com/vision/imgs/5fc7910640dbfa83.png") no-repeat;
   background-size: 100% 100%;
   padding-top: 20px;
   position: absolute;
@@ -2475,7 +2679,8 @@ a:hover::before {
     linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%)
   ); */
   background: #2449a4;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   width: fit-content;
   /* margin: 0 auto; */
@@ -2509,8 +2714,7 @@ a:hover::before {
 
 .individuation {
   width: 100vw;
-  background: url(https://statichk.cmermedical.com/vision/imgs/2025012115172001.png)
-    no-repeat;
+  background: url(https://statichk.cmermedical.com/vision/imgs/2025012115172001.png) no-repeat;
   background-size: 100% 100%;
   box-sizing: border-box;
   display: flex;
@@ -2583,8 +2787,7 @@ a:hover::before {
 @media screen and (max-width: 768px) {
   .individuation {
     width: 100%;
-    background: url(https://statichk.cmermedical.com/vision/imgs/2025012115160101.png)
-      no-repeat;
+    background: url(https://statichk.cmermedical.com/vision/imgs/2025012115160101.png) no-repeat;
     background-position: center;
     padding: 0 40px 25px;
     background-size: cover;
@@ -2675,8 +2878,7 @@ a:hover::before {
   }
 
   .whatapps-btn-individuation::before {
-    background: url("https://statichk.cmermedical.com/vision/imgs/3f96636326c3a265.png")
-      no-repeat;
+    background: url("https://statichk.cmermedical.com/vision/imgs/3f96636326c3a265.png") no-repeat;
     display: inline-block;
     width: 280px;
     background-size: 100% 100%;
@@ -2821,7 +3023,8 @@ p {
     linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%)
   ); */
   background: #2449a4;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   width: fit-content;
   display: flex;
@@ -2866,10 +3069,7 @@ p {
     top: 3px;
   }
 
-  .whatapps-btn-series-two
-    > .whatapps-btn-series-two-p
-    > span:nth-child(2)
-    > svg {
+  .whatapps-btn-series-two > .whatapps-btn-series-two-p > span:nth-child(2) > svg {
     width: 10px;
     height: 15px;
   }
@@ -3003,7 +3203,6 @@ p {
   }
 }
 </style>
-
 
 <style>
 body {
@@ -3431,7 +3630,8 @@ a {
   font-weight: 400;
 }
 .address-whatsapp:hover {
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
 }
 
@@ -3612,12 +3812,7 @@ a {
 /* 轮播图 */
 </style>
 
-
-
-  
-
-
-   <style>
+<style>
 /* 个人化配镜流程 */
 
 .pj_wrapper {
@@ -3955,8 +4150,7 @@ a {
   content: "";
   position: absolute;
   display: inline-block;
-  background: url("https://statichk.cmermedical.com/vision/imgs/7d0a3a2a34b2007e.png")
-    no-repeat;
+  background: url("https://statichk.cmermedical.com/vision/imgs/7d0a3a2a34b2007e.png") no-repeat;
   width: 360px;
   background-size: 100%;
   min-height: 120px;
@@ -3995,11 +4189,9 @@ a {
   top: -10px;
   border-radius: 60px;
   border: 3px solid #fff;
-  background: var(
-    --Style,
-    linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%)
-  );
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+  background: var(--Style, linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%));
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   width: fit-content;
   margin: 0 auto;
@@ -4082,11 +4274,7 @@ a {
     z-index: 6;
     width: 133vw;
     height: 133vw;
-    background: linear-gradient(
-      0deg,
-      rgba(232, 238, 255, 0.9) -14%,
-      rgba(255, 255, 255, 0.6) 122.65%
-    );
+    background: linear-gradient(0deg, rgba(232, 238, 255, 0.9) -14%, rgba(255, 255, 255, 0.6) 122.65%);
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -4451,10 +4639,7 @@ a {
   height: 120%;
   transform: translate(2.5%, -8%);
   border-radius: 60px;
-  background: var(
-    --Style,
-    linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%)
-  );
+  background: var(--Style, linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%));
   top: 0;
   left: auto;
   right: 0;
@@ -4545,11 +4730,9 @@ a {
   padding: 15px 20px 13px;
   position: relative;
   z-index: 10;
-  background: var(
-    --Style,
-    linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%)
-  );
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25),
+  background: var(--Style, linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%));
+  box-shadow:
+    0px 4px 4px 0px rgba(0, 0, 0, 0.25),
     0px 4px 4px 0px rgba(0, 0, 0, 0.25) inset;
   width: fit-content;
   display: flex;
@@ -4565,10 +4748,7 @@ a {
   position: relative;
   width: fit-content;
   height: max-content;
-  background: var(
-    --Style,
-    linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%)
-  );
+  background: var(--Style, linear-gradient(90deg, #29abe2 0%, #06b5ff 3%, #19db84 100%));
   padding: 5px 5px;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
