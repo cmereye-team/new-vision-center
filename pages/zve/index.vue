@@ -366,14 +366,10 @@ const close = () => {
         <div class="linear">
           <div class="fontTitle" style="letter-spacing: 0px">ZEISS VISION EXPERT認證</div>
         </div>
+        <!-- prettier-ignore -->
         <div class="fontText">
-          希瑪視光擁有蔡司全套先進眼科設備和個人化
-          <br class="pcShow" />
-          的驗配流程，均得到德國蔡司官方認證。
-          <br />
-          我們提供精確量度眼睛度數、極致全面的視覺
-          <br />
-          分析, 以及獨一無二的解決方案。
+          <p>希瑪視光擁有蔡司全套先進眼科設備和個人化<br class="hidden md:block" />的驗配流程，均得到德國蔡司官方認證。</p>
+          <p>我們提供精確量度眼睛度數、極致全面的視覺<br class="hidden md:block" />分析, 以及獨一無二的解決方案。</p>
         </div>
         <div class="fontFooter"></div>
       </div>
@@ -689,10 +685,9 @@ const close = () => {
           />
           <h3>
             <span>02</span>
-            <span>
-              光學指紋
-              <br class="mbShow" />
-              測量
+            <span class="flex flex-col md:flex-row">
+              <div>光學指紋</div>
+              <div>測量</div>
             </span>
           </h3>
           <div class="btn" @click="changeBtn(1)">
@@ -706,14 +701,18 @@ const close = () => {
           </div>
           <p :style="{ opacity: indexBollean == true ? '1' : '0' }">
             分析眼睛的高階像差、日間和
-            <br class="mbShow" />
+            <br class="block md:hidden" />
             夜間的視覺表現
           </p>
           <p :style="{ opacity: indexBollean == true ? '1' : '0' }">採用前導波技術全面分析</p>
           <p :style="{ opacity: indexBollean == true ? '1' : '0' }">使用VISUCORE 500儀器</p>
         </div>
         <div class="step step-three">
-          <img class="pcShow" src="https://statichk.cmermedical.com/vision/imgs/3356b98dc5f9bbc9.png" alt="鏡框選擇" />
+          <img
+            class="pcShow"
+            src="https://statichk.cmermedical.com/vision/icon/zve-step-03-v1.svg"
+            alt="視覺表現分析"
+          />
           <h3>
             <span>03</span>
             <span>視覺表現分析</span>
@@ -770,16 +769,15 @@ const close = () => {
           />
           <h3>
             <span>08</span>
-            <span>
-              服務和
-              <br class="mbShow" />
-              跟進
+            <span class="flex flex-col md:flex-row">
+              <div>服務和</div>
+              <div>跟進</div>
             </span>
           </h3>
         </div>
       </div>
 
-      <div class="circleTwo" v-if="indexBollean == true || indexTwoBollean == true">
+      <div class="circleTwo md:hidden" v-if="indexBollean == true || indexTwoBollean == true">
         <div>
           <img
             :src="
@@ -794,10 +792,7 @@ const close = () => {
             <span>{{ indexBollean == true ? "光學指紋測量" : "鏡框中心定位" }}</span>
             <img
               @click="closeBtn"
-              :src="
-                indexBollean == true
-                  ? 'https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png'
-                  : 'https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png'
+              src="https://statichk.cmermedical.com/vision/icon/zve-step-icon-close.svg
               "
               alt="按钮"
             />
@@ -811,42 +806,6 @@ const close = () => {
           <p class="content" :style="{ display: indexTwoBollean == true ? 'none' : 'block' }">
             {{ indexBollean == true ? "使用VISUFIT 100儀器快速偵測" : "" }}
           </p>
-        </div>
-      </div>
-      <div class="btn-child mb-show">
-        <img src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png" alt="一站式精準驗光流程" />
-        <h3>
-          <span>02</span>
-          <span>
-            一站式精準
-            <br />
-            驗光流程
-          </span>
-        </h3>
-        <div class="btn-two mb-show">
-          <img src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png" alt="按钮" />
-        </div>
-        <div class="child-span">
-          <span>・分析眼睛的高階像差，日間和夜間的視覺表現</span>
-          <span>・採用前導波技術全面分析</span>
-        </div>
-      </div>
-      <div class="btn-child-two mb-show">
-        <img src="https://statichk.cmermedical.com/vision/imgs/4d325fb0af213050.png" alt="光學指紋測量及視覺表現分析" />
-        <h3>
-          <span>04</span>
-          <span>
-            瞳孔與鏡片中心
-            <br />
-            完美匹配
-          </span>
-        </h3>
-        <div class="btn-child-four-two mb-show">
-          <img src="https://statichk.cmermedical.com/vision/imgs/3e6e24f3edea4675.png" alt="按钮" />
-        </div>
-        <div class="child-span">
-          <span>・精準定位鏡框中心</span>
-          <span>・使用VISUFIT 100儀器快速偵測</span>
         </div>
       </div>
     </div>
@@ -876,13 +835,15 @@ const close = () => {
         希瑪視光 ZEISS Vision Expert
       </h2>
       <p class="text-[#343434] text-xs text-lg xl:text-3xl !leading-[2] tracking-[0.2em]">
-        作為駕駛者，長期受到夜間視力模糊、眩光困擾？
+        作為駕駛者，是否經常受到夜間視力模糊或眩光困擾？
         <br class="hidden md:block" />
-        原來問題不只在度數，每雙眼睛如指紋般獨一無
+        問題未必只在於度數。每個人的角膜形態、瞳孔大小
         <br class="hidden md:block" />
-        二，角膜與瞳孔細微結構的差異，會產生所謂
+        及眼內光學結構都不盡相同，這些細微差異可能形成
         <br class="hidden md:block" />
-        「高階像差」，令傳統鏡片難以完美對應。
+        「高階像差」，影響夜間視覺質素，而一般鏡片未必
+        <br class="hidden md:block" />
+        能作出針對性矯正。
       </p>
     </div>
     <div class="upcar-main px-3 xl:px-0">
@@ -958,11 +919,12 @@ const close = () => {
               class="w-full"
             />
             <p class="lens-card__desc">
-              為駕駛者度身設計，全天候提供穩定視覺，
+              為駕駛者度身設計，
+              <br class="block md:hidden" />
+              全天候提供穩定視覺，
               <br />
               夜間更安全！
             </p>
-
             <ul class="lens-card__list">
               <li class="lens-card__item">
                 <img
@@ -978,7 +940,7 @@ const close = () => {
                   class="lens-card__icon"
                   alt=""
                 />
-                合全天候配戴
+                適合全天候配戴
               </li>
               <li class="lens-card__item">
                 <img
@@ -1008,11 +970,12 @@ const close = () => {
               class="w-full"
             />
             <p class="lens-card__desc">
-              為數碼生活度身設計，全天候視野流暢，
+              為數碼生活度身設計，
+              <br class="block md:hidden" />
+              全天候視野流暢，
               <br />
               遠近視覺一樣清楚！
             </p>
-
             <ul class="lens-card__list">
               <li class="lens-card__item">
                 <img
@@ -1365,7 +1328,6 @@ const close = () => {
     height: 15px;
   }
 }
-
 @media screen and (min-width: 768px) {
   .section-title {
     text-align: center;
@@ -2416,7 +2378,7 @@ const close = () => {
 
   // 认证
   .contain {
-    padding: 2.5rem;
+    padding: 40px;
   }
 
   .fontFooter {
@@ -2491,7 +2453,7 @@ const close = () => {
     color: #6d6d6d;
     text-align: center;
     font-family: "Noto Sans";
-    font-size: 3.86vw;
+    font-size: 3.8vw;
     font-style: normal;
     font-weight: 400;
     line-height: 7.65vw;
@@ -2784,7 +2746,7 @@ const close = () => {
   font-weight: 400;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .individuation {
     width: 100%;
     background: url(https://statichk.cmermedical.com/vision/imgs/2025012115160101.png) no-repeat;
@@ -3053,7 +3015,7 @@ p {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .whatapps-btn-series-two > .whatapps-btn-series-two-p > span:nth-child(1) {
     color: #fff;
     font-family: "Noto Sans";
@@ -3160,7 +3122,7 @@ p {
   justify-content: center;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .in-plant {
     margin: 50px auto 25px;
     box-sizing: border-box;
@@ -3304,7 +3266,7 @@ body {
   letter-spacing: 4.4px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .selling-point-title {
     color: #6d6d6d;
     text-align: center;
@@ -3639,7 +3601,7 @@ a {
   margin-top: 20px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .pcShow {
     display: none;
   }
@@ -3800,7 +3762,7 @@ a {
   margin-top: 2px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .button_container {
     display: flex;
     position: relative;
@@ -4033,16 +3995,14 @@ a {
 .step-two {
   top: 18%;
   left: 78%;
-}
-
-.step-two > h3 > span:nth-child(1) {
-  position: relative;
-  top: -20px;
-  left: -30px;
-}
-
-.step-two > img {
-  transform: translate(-160%, 110%);
+  > h3 > span:nth-child(1) {
+    position: relative;
+    top: -20px;
+    left: -30px;
+  }
+  > img {
+    transform: translate(-200%, 90%);
+  }
 }
 
 .step-three {
@@ -4051,7 +4011,8 @@ a {
 }
 
 .step-three > img {
-  transform: translate(-190%, 100%);
+  width: 72px;
+  transform: translate(-280%, 100%);
 }
 
 .step-three-two {
@@ -4101,16 +4062,6 @@ a {
 
 .step-seven > img {
   transform: translate(70%, 100%);
-}
-
-@media screen and (min-width: 768px) {
-  .circleTwo {
-    display: none;
-  }
-
-  .mb-show {
-    display: none;
-  }
 }
 
 .btn-four-two {
@@ -4222,7 +4173,7 @@ a {
   top: 4px;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .pj_wrapper {
     margin: 3.75rem auto;
     overflow: hidden;
@@ -4258,14 +4209,6 @@ a {
     transform: rotate(0deg);
     animation: rotate 3s infinite ease-in-out;
   }
-  .circle {
-    padding: 0;
-    max-width: 100%;
-    width: 133vw;
-    margin: 0 auto 0 2.56vw;
-    border: 24px solid #fff;
-    height: 133vw;
-  }
 
   .circleTwo {
     position: absolute;
@@ -4274,7 +4217,8 @@ a {
     z-index: 6;
     width: 133vw;
     height: 133vw;
-    background: linear-gradient(0deg, rgba(232, 238, 255, 0.9) -14%, rgba(255, 255, 255, 0.6) 122.65%);
+    background: linear-gradient(0deg, rgba(232, 238, 255, 1) -14%, rgba(255, 255, 255, 0.8) 122.65%);
+    /* background: #fff; */
     border-radius: 50%;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -4317,8 +4261,8 @@ a {
   }
   .circleTwo-title img {
     position: absolute;
-    top: 0;
-    left: 90px;
+    top: -4px;
+    left: 120px;
   }
 
   .circleTwo .content {
@@ -4529,14 +4473,9 @@ a {
     height: 24.003px;
   }
 
-  .mb-show {
-    display: block;
-    position: absolute;
-  }
-
   .btn {
-    top: -22px;
-    right: -22px;
+    top: -20px;
+    right: -16px;
     filter: drop-shadow(0px 0px 10px rgba(0, 0, 0, 0.2));
   }
 
@@ -4757,7 +4696,7 @@ a {
   margin: 0 auto;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
   .whatapps-btn-series > .whatapps-btn-series-p > span:nth-child(1) {
     color: #fff;
     font-family: "Noto Sans";
@@ -4777,10 +4716,41 @@ a {
     width: 10px;
     height: 15px;
   }
-}
-@media screen and (max-width: 768px) {
+  .circle {
+    width: 132vw;
+    border: 24px solid #fff;
+    height: 132vw;
+    margin: 0 auto 0 2.56vw;
+  }
   .circle_title .fontTitle small {
     font-size: 14px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1279px) {
+  .circle {
+    padding: 0;
+    width: 110vw;
+    height: 110vw;
+    margin: 0 auto 0 -7vw;
+    border: 24px solid #fff;
+  }
+  .center-text {
+    font-size: 40px;
+  }
+  .step h3 span {
+    &:nth-child(1) {
+      font-size: 24px;
+    }
+    &:nth-child(2) {
+      font-size: 16px;
+    }
+  }
+  .step-three > img {
+    transform: translate(-150%, 100%);
+  }
+  .step-two > img {
+    transform: translate(-150%, 90%);
   }
 }
 </style>
