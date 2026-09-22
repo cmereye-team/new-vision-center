@@ -55,7 +55,7 @@ onMounted(() => {
         @swiper="swiperBox"
       >
         <swiper-slide v-for="item in props.list" :key="item.id">
-          <a :href="item.videoLink" target="_blank">
+          <a :href="item.videoLink" :title="item.title" target="_blank">
             <img :src="item.img" :alt="item.type" />
           </a>
         </swiper-slide>

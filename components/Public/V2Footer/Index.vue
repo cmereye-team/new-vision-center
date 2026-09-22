@@ -71,7 +71,7 @@ const toForm = () => {
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   footer {
-    padding: 70px clamp(160px, 12.833vw, 400px);
+    padding: 70px clamp(120px, 12.833vw, 400px);
     background: rgba(0, 166, 206, 0.1);
     border-radius: 50px 50px 0 0;
   }

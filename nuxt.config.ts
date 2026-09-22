@@ -45,7 +45,14 @@ export default defineNuxtConfig({
     outputDir: 'assets/fonts'
   },
 
-  modules: ['@element-plus/nuxt', '@nuxtjs/i18n', '@vueuse/nuxt', '@zadigetvoltaire/nuxt-gtm', '@nuxtjs/tailwindcss'],
+  modules: [
+   '@element-plus/nuxt',
+   '@nuxtjs/i18n',
+   '@vueuse/nuxt',
+   '@zadigetvoltaire/nuxt-gtm',
+   '@nuxtjs/tailwindcss',
+   '@nuxt/scripts'
+  ],
   runtimeConfig: {
     public: {
       gtm: {
