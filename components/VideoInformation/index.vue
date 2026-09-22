@@ -161,7 +161,14 @@ const ListVideoOne = ref([
     isShow: false,
     videoList: [
       {
-        id: 7,
+        id: 2,
+        type: "orthokeratology",
+        text: ["【高離焦近視控制隱形眼鏡真實用家分享】控制近視，拍戲", "零束縛，盡情發揮表演潛力！"],
+        img: "https://statichk.cmermedical.com/vision/video/59_3pOIE2yA.webp",
+        videoLink: "https://www.youtube.com/watch?v=59_3pOIE2yA",
+      },
+      {
+        id: 1,
         type: "orthokeratology",
         text: ["【近視控制隱形眼鏡真實用家分享】挑戰無限！", "解鎖活力新生活✨"],
         img: "https://statichk.cmermedical.com/vision/imgs/maxresdefault.jpg",
@@ -336,37 +343,22 @@ const reelsListOk = ref([
     type: "orthokeratology",
     img: "https://statichk.cmermedical.com/vision/imgs/5689564fc9af685c.webp",
     videoLink: "https://youtube.com/shorts/4BAhundkZcc",
+    title: "Wesley和Logan兩兄弟嚟咗希瑪視光做眼睛檢查🤩"
   },
   {
     id: 12,
     type: "orthokeratology",
     img: "https://statichk.cmermedical.com/vision/imgs/8b2de9f896497bc7.webp",
     videoLink: "https://youtube.com/shorts/RPo2rPy4WcM",
+    title: "Sean分享拍年少日記嘅難忘經歷 拍戲演得咁好全靠佢❣️"
   },
   {
     id: 13,
     type: "orthokeratology",
     img: "https://statichk.cmermedical.com/vision/imgs/84edcfbd2756c1fc.webp",
     videoLink: "https://youtube.com/shorts/GDvubivXmeU",
+    title: "【希瑪視光】OrthoK✖️BMX"
   },
-  // {
-  //   id: 14,
-  //   type: "orthokeratology",
-  //   img: "https://statichk.cmermedical.com/vision/imgs/d7c0a8492c94f78f.png",
-  //   videoLink: "",
-  // },
-  // {
-  //   id: 15,
-  //   type: "orthokeratology",
-  //   img: "https://statichk.cmermedical.com/vision/imgs/d7c0a8492c94f78f.png",
-  //   videoLink: "",
-  // },
-  // {
-  //   id: 16,
-  //   type: "orthokeratology",
-  //   img: "https://statichk.cmermedical.com/vision/imgs/d7c0a8492c94f78f.png",
-  //   videoLink: "",
-  // },
 ]);
 
 const reelsListShare = ref([
