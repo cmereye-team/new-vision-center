@@ -860,7 +860,7 @@ const close = () => {
           中心定位技術，精準測量眼睛與鏡框的所有角度，確保鏡片與面型完美契合，提升配戴舒適度，打造真正專屬的視覺升級方案！
         </p>
       </div>
-      <PublicVideoYoutubePlayer id="uMPerJfT-dY" />
+      <PublicVideoYoutubePlayer id="lMCGXpppVEk" />
     </div>
   </section>
   <section class="lens mb-12 md:mb-20">
