@@ -149,13 +149,13 @@ onMounted(() => {
   isPc.value = widthState;
   getLocale();
   getDiscounts();
-  getImgSwiper()
+  // getImgSwiper()
 });
 </script>
 
 <template>
   <div class="miyosmart">
-    <PublicV2BannerHomeBanner :list="bannerImg" ref="homeBanner" key="home_banner" />
+    <BannerMain isExpandable />
     <V2Home />
     <V2NewDiscounts :list="discounts" />
     <V2Review />
