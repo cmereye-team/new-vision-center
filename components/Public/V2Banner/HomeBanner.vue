@@ -1,32 +1,44 @@
 <script lang="ts" setup>
 import { Swiper, SwiperSlide } from "swiper/vue";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import type { Swiper as SwiperInstance } from "swiper";
 import type { SlideItem } from "@/types/api";
-const props = defineProps<{
+
+// 引入必要样式（如果项目已全局引入可省略）
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+
+defineProps<{
   list: SlideItem[];
 }>();
-const swiperBox = (swiper: any) => {
-  deBoxSwiperRef = swiper;
+
+const swiperRef = ref<SwiperInstance | null>(null);
+
+const onSwiper = (swiper: SwiperInstance) => {
+  swiperRef.value = swiper;
 };
-let deBoxSwiperRef = {
-  slideTo: (a: any) => {},
-  slideToLoop: (a: any) => {},
-  slidePrev: () => {},
-  slideNext: () => {},
+
+/** 外部可调用：跳转到指定 slide */
+const slideTo = (index: number) => {
+  swiperRef.value?.slideToLoop(index);
 };
-const handleshowdeBox = (_idx: any) => {
-  deBoxSwiperRef.slideTo(_idx);
-};
+
+defineExpose({
+  slideTo,
+});
 </script>
 
 <template>
-  <div class="home_banner">
-    <div class="banner_size">
-      <swiper
-        :slidesPerView="'auto'"
-        :spaceBetween="30"
+  <div class="home-banner relative w-full">
+    <!-- 轮播主体 -->
+    <div class="banner-size relative mx-auto w-full overflow-hidden">
+      <Swiper
+        :modules="[Autoplay, Pagination, Navigation]"
+        :slides-per-view="'auto'"
+        :space-between="30"
         :loop="true"
-        :centeredSlides="true"
+        :centered-slides="true"
         :autoplay="{
           delay: 2500,
           disableOnInteraction: false,
@@ -34,426 +46,87 @@ const handleshowdeBox = (_idx: any) => {
         }"
         :pagination="{
           clickable: true,
+          el: '.banner-pagination',
         }"
-        :navigation="true"
-        :modules="[Autoplay, Pagination, Navigation]"
-        @swiper="swiperBox"
+        :navigation="{
+          nextEl: '.banner-next',
+          prevEl: '.banner-prev',
+        }"
+        class="h-full w-full"
+        @swiper="onSwiper"
       >
-        <swiper-slide v-for="banner in list" :key="banner.id">
-          <nuxt-link :to="banner.link">
+        <SwiperSlide v-for="banner in list" :key="banner.id" class="!w-[85%] md:!w-[70%] lg:!w-[60%]">
+          <NuxtLink :to="banner.link" class="group block h-full w-full overflow-hidden rounded-lg">
             <picture>
               <source media="(min-width: 768px)" :srcset="banner.pic" />
-              <img :src="banner.pic_mobile" :title="banner.subtitle" :alt="banner.title" />
+              <img
+                :src="banner.pic_mobile"
+                :alt="banner.title || banner.subtitle"
+                :title="banner.subtitle"
+                class="h-full w-full object-contain transition-transform duration-500 group-hover:scale-[1.02]"
+                loading="lazy"
+                decoding="async"
+              />
             </picture>
-          </nuxt-link>
-        </swiper-slide>
-      </swiper>
+          </NuxtLink>
+        </SwiperSlide>
+      </Swiper>
     </div>
-    <div class="btn_banner hidden md:block"></div>
+
+    <!-- 自定义分页器（桌面可见） -->
+    <div class="banner-pagination absolute bottom-4 left-1/2 z-50 hidden -translate-x-1/2 gap-3 md:flex" />
+
+    <!-- 可选：左右箭头（默认隐藏，需要时取消注释并调整样式） -->
+    <!--
+    <button class="banner-prev absolute left-4 top-1/2 z-40 -translate-y-1/2 ...">
+      ←
+    </button>
+    <button class="banner-next absolute right-4 top-1/2 z-40 -translate-y-1/2 ...">
+      →
+    </button>
+    -->
   </div>
 </template>
 
 <style lang="scss" scoped>
+.home-banner {
+  /* 移动端顶部间距 */
+  @media (max-width: 767px) {
+    margin-top: 65px;
+  }
+}
+
+.banner-size {
+  /* 中等屏幕 */
+  @media (min-width: 768px) and (max-width: 1620px) {
+    max-height: 800px;
+    margin-top: 7.083vw;
+  }
+
+  /* 大屏 */
+  @media (min-width: 1621px) {
+    max-height: 800px;
+    margin-top: 130px;
+    width: 100vw;
+  }
+}
+
+/* Swiper 深度覆盖 */
+:deep(.swiper-pagination-bullet) {
+  width: 16px;
+  height: 16px;
+  background: #f5f5f5a4;
+  opacity: 1;
+  transition: background 0.25s ease;
+
+  &.swiper-pagination-bullet-active {
+    background: #59ba68;
+  }
+}
+
+/* 隐藏默认导航箭头（如果使用自定义 pagination） */
 :deep(.swiper-button-prev),
 :deep(.swiper-button-next) {
   display: none;
-}
-@media screen and (min-width: 768px) and (max-width: 1620px) {
-  .home_banner {
-    position: relative;
-    .banner_size {
-      // max-width: 1735px;
-      max-height: 800px;
-      width: 100%;
-      height: 100%;
-      margin: 7.083vw auto 0;
-      a {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        // height: 723px;
-        object-fit: cover;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: contain;
-        }
-      }
-    }
-    .btn_banner {
-      position: absolute;
-      bottom: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 50;
-    }
-    & > div:nth-child(3) {
-      position: fixed;
-      top: 7vw;
-      right: 0;
-      z-index: 99;
-      .banner-template-btn {
-        position: absolute;
-        top: 0;
-        display: flex;
-        z-index: 9;
-
-        & > a {
-          display: flex;
-          align-items: center;
-          margin-right: 10px;
-          text-decoration: none;
-          & > div:nth-child(1) {
-            display: flex;
-            align-items: center;
-            margin-right: 5px;
-          }
-          & > div:nth-child(2) {
-            color: #fff;
-            text-align: center;
-            font-family: "Noto Sans HK";
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            width: max-content;
-          }
-        }
-        // & > a:hover {
-        //   box-shadow: 0 0 7.5px #00000040;
-        //   transform: scale(1.1);
-        //   transition: all 0.3s ease-in-out;
-        // }
-        & > a {
-          overflow: hidden;
-          box-shadow: 0 0 0 0 transparent;
-          -webkit-transition: all 0.2s ease-in;
-          -moz-transition: all 0.2s ease-in;
-          transition: all 0.2s ease-in;
-        }
-        & > a:hover {
-          background: #59ba68;
-          // box-shadow: 0 0 30px 5px #59ba68;
-          -webkit-transition: all 0.2s ease-out;
-          -moz-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out;
-        }
-        & > a:hover::before {
-          -webkit-animation: sh02 0.5s 0s linear;
-          -moz-animation: sh02 0.5s 0s linear;
-          animation: sh02 0.5s 0s linear;
-        }
-        & > a::before {
-          content: "";
-          display: block;
-          width: 0px;
-          height: 86%;
-          position: absolute;
-          top: 7%;
-          left: 0%;
-          opacity: 0;
-          background: #fff;
-          box-shadow: 0 0 50px 30px #fff;
-          -webkit-transform: skewX(-20deg);
-          -moz-transform: skewX(-20deg);
-          -ms-transform: skewX(-20deg);
-          -o-transform: skewX(-20deg);
-          transform: skewX(-20deg);
-        }
-        & > a:nth-child(1) {
-          padding: 13px 11px 13px 16px;
-          border-radius: 0px 0px 10px 10px;
-          background: var(--Basic-2, #59ba68);
-        }
-        & > a:nth-child(2) {
-          padding: 15px 13px 15px 19px;
-          border-radius: 0px 0px 10px 10px;
-          background: #00a6ce;
-        }
-        & > a:nth-child(2):hover {
-          background: #00a6ce;
-          // box-shadow: 0 0 30px 5px #00a6ce;
-          -webkit-transition: all 0.2s ease-out;
-          -moz-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out;
-        }
-      }
-    }
-  }
-  .banner-template-btn {
-    position: absolute;
-    top: 5px;
-    right: 50px;
-    display: flex;
-    z-index: 9;
-
-    & > a {
-      display: flex;
-      align-items: center;
-      margin-right: 10px;
-      text-decoration: none;
-      & > div:nth-child(1) {
-        display: flex;
-        align-items: center;
-        margin-right: 5px;
-      }
-      & > div:nth-child(2) {
-        color: #fff;
-        text-align: center;
-        font-family: "Noto Sans HK";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-    }
-    & > a:hover {
-      box-shadow: 0 0 7.5px #00000040;
-      transform: scale(1.1);
-      transition: all 0.3s ease-in-out;
-    }
-    & > a:hover::before {
-      -webkit-animation: sh02 0.5s 0s linear;
-      -moz-animation: sh02 0.5s 0s linear;
-      animation: sh02 0.5s 0s linear;
-    }
-    & > a:nth-child(1) {
-      padding: 13px 11px 13px 16px;
-      border-radius: 0px 0px 10px 10px;
-      background: var(--Basic-2, #59ba68);
-    }
-    & > a:nth-child(2) {
-      padding: 15px 13px 15px 19px;
-      border-radius: 0px 0px 10px 10px;
-      background: #00a6ce;
-    }
-  }
-}
-@media screen and (min-width: 1621px) {
-  .home_banner {
-    position: relative;
-    .banner_size {
-      // max-width: 1735px;
-      max-height: 800px;
-      width: 100vw;
-      margin: 130px auto 0;
-      object-fit: cover;
-      object-position: center;
-      .swiper-slide {
-        width: 60vw;
-      }
-
-      a {
-        width: 100%;
-        // height: 723px;
-        object-fit: cover;
-        display: flex;
-        justify-content: center;
-        img {
-          height: 100%;
-          width: 100%;
-          object-fit: contain;
-        }
-      }
-    }
-    .btn_banner {
-      position: absolute;
-      bottom: 20px;
-      left: 50%;
-      transform: translateX(-50%);
-      z-index: 50;
-      display: flex;
-      gap: 20px;
-      .btn_banner_item {
-        span {
-          width: 16px;
-          height: 16px;
-          border-radius: 50%;
-          display: inline-block;
-          background: #f5f5f5a4;
-          cursor: pointer;
-        }
-      }
-    }
-    & > div:nth-child(3) {
-      position: fixed;
-      top: 130px;
-      right: 0;
-      z-index: 99;
-      .banner-template-btn {
-        position: absolute;
-        top: 0;
-        display: flex;
-        z-index: 9;
-
-        & > a {
-          display: flex;
-          align-items: center;
-          margin-right: 10px;
-          text-decoration: none;
-          & > div:nth-child(1) {
-            display: flex;
-            align-items: center;
-            margin-right: 5px;
-          }
-          & > div:nth-child(2) {
-            color: #fff;
-            text-align: center;
-            font-family: "Noto Sans HK";
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: normal;
-            width: max-content;
-          }
-        }
-        // & > a:hover {
-        //   box-shadow: 0 0 7.5px #00000040;
-        //   transform: scale(1.1);
-        //   transition: all 0.3s ease-in-out;
-        // }
-        & > a {
-          overflow: hidden;
-          box-shadow: 0 0 0 0 transparent;
-          -webkit-transition: all 0.2s ease-in;
-          -moz-transition: all 0.2s ease-in;
-          transition: all 0.2s ease-in;
-        }
-        & > a:hover {
-          background: #59ba68;
-          // box-shadow: 0 0 30px 5px #59ba68;
-          -webkit-transition: all 0.2s ease-out;
-          -moz-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out;
-        }
-        & > a:hover::before {
-          -webkit-animation: sh02 0.5s 0s linear;
-          -moz-animation: sh02 0.5s 0s linear;
-          animation: sh02 0.5s 0s linear;
-        }
-        & > a::before {
-          content: "";
-          display: block;
-          width: 0px;
-          height: 86%;
-          position: absolute;
-          top: 7%;
-          left: 0%;
-          opacity: 0;
-          background: #fff;
-          box-shadow: 0 0 50px 30px #fff;
-          -webkit-transform: skewX(-20deg);
-          -moz-transform: skewX(-20deg);
-          -ms-transform: skewX(-20deg);
-          -o-transform: skewX(-20deg);
-          transform: skewX(-20deg);
-        }
-        & > a:nth-child(1) {
-          padding: 13px 11px 13px 16px;
-          border-radius: 0px 0px 10px 10px;
-          background: var(--Basic-2, #59ba68);
-        }
-        & > a:nth-child(2) {
-          padding: 15px 13px 15px 19px;
-          border-radius: 0px 0px 10px 10px;
-          background: #00a6ce;
-        }
-        & > a:nth-child(2):hover {
-          background: #00a6ce;
-          // box-shadow: 0 0 30px 5px #00a6ce;
-          -webkit-transition: all 0.2s ease-out;
-          -moz-transition: all 0.2s ease-out;
-          transition: all 0.2s ease-out;
-        }
-      }
-    }
-  }
-  .banner-template-btn {
-    position: absolute;
-    top: 5px;
-    right: 50px;
-    display: flex;
-    z-index: 9;
-
-    & > a {
-      display: flex;
-      align-items: center;
-      margin-right: 10px;
-      text-decoration: none;
-      & > div:nth-child(1) {
-        display: flex;
-        align-items: center;
-        margin-right: 5px;
-      }
-      & > div:nth-child(2) {
-        color: #fff;
-        text-align: center;
-        font-family: "Noto Sans HK";
-        font-size: 12px;
-        font-style: normal;
-        font-weight: 700;
-        line-height: normal;
-      }
-    }
-    & > a:hover {
-      box-shadow: 0 0 7.5px #00000040;
-      transform: scale(1.1);
-      transition: all 0.3s ease-in-out;
-    }
-    & > a:hover::before {
-      -webkit-animation: sh02 0.5s 0s linear;
-      -moz-animation: sh02 0.5s 0s linear;
-      animation: sh02 0.5s 0s linear;
-    }
-    & > a:nth-child(1) {
-      padding: 13px 11px 13px 16px;
-      border-radius: 0px 0px 10px 10px;
-      background: var(--Basic-2, #59ba68);
-    }
-    & > a:nth-child(2) {
-      padding: 15px 13px 15px 19px;
-      border-radius: 0px 0px 10px 10px;
-      background: #00a6ce;
-    }
-  }
-}
-@media screen and (max-width: 767px) {
-  .home_banner {
-    margin-top: 65px;
-    & > div:nth-child(1) {
-      max-width: 100%;
-      width: 100vw;
-      a {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-        object-fit: cover;
-        img {
-          width: 100%;
-          height: 100%;
-          object-fit: contain;
-        }
-      }
-    }
-  }
-  .banner-template-btn {
-    display: none;
-  }
-}
-
-@keyframes sh02 {
-  from {
-    opacity: 0;
-    left: 0%;
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-    left: 100%;
-  }
 }
 </style>

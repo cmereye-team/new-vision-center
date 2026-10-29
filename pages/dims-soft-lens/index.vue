@@ -24,22 +24,22 @@ onMounted(() => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
-  getImgSwiper()
+  // getImgSwiper()
 });
-import type { ApiResponse, SlideItem } from "@/types/api";
-const bannerImg = ref([] as SlideItem[]);
-const getImgSwiper = async () => {
-  try {
-    const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
-      params: { gid: 3 },
-    });
-    if (Array.isArray(res.data)) {
-      bannerImg.value = res.data.map((item) => ({ ...item }));
-    }
-  } catch (error) {
-    console.error("获取轮播图失败:", error);
-  }
-};
+// import type { ApiResponse, SlideItem } from "@/types/api";
+// const bannerImg = ref([] as SlideItem[]);
+// const getImgSwiper = async () => {
+//   try {
+//     const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
+//       params: { gid: 3 },
+//     });
+//     if (Array.isArray(res.data)) {
+//       bannerImg.value = res.data.map((item) => ({ ...item }));
+//     }
+//   } catch (error) {
+//     console.error("获取轮播图失败:", error);
+//   }
+// };
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
   brand: "hoya",
@@ -82,7 +82,7 @@ const miSightQuestionList = [
 const btnElement = ref({
   cls: "",
   title: "哪一款鏡片最適合你的小朋友?",
-  svgIcon: `<svg data-v-f39dd64a="" xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path data-v-f39dd64a="" d="M8.69818 13.784L7.12698 14.7845M8.14371 10.663L6.32422 10.269M9.97263 8.05797L8.9707 6.50049M13.1167 7.49603L13.5193 5.68729M15.7324 9.30498L17.3036 8.30452M30.125 15.875C30.125 23.9522 23.5772 30.5 15.5 30.5C7.42284 30.5 0.875 23.9522 0.875 15.875C0.875 7.79784 7.42284 1.25 15.5 1.25C23.5772 1.25 30.125 7.79784 30.125 15.875ZM24.4299 15.3654L12.4305 10.5875C12.1657 10.4047 11.809 10.631 11.8644 10.9475L11.1063 23.8327C11.1509 24.0883 11.486 24.1592 11.6337 23.9447L14.7104 19.2976C14.8738 19.06 15.2279 19.0645 15.3835 19.3064L19.4847 25.6941C19.6665 25.9773 20.0456 26.0598 20.3313 25.8782L22.4179 24.5522C22.7036 24.3706 22.7879 23.9938 22.606 23.7106L18.5053 17.3228C18.3498 17.0809 18.4948 16.7591 18.7804 16.7114L24.3115 15.8881C24.5695 15.8453 24.6443 15.5132 24.4299 15.3654Z" stroke="#DB4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path></svg>`,
+  svgIcon: `<svg xmlns="http://www.w3.org/2000/svg" width="31" height="32" viewBox="0 0 31 32" fill="none"><path d="m8.698 13.784-1.571 1m1.017-4.121-1.82-.394m3.649-2.211L8.97 6.5m4.146.996.402-1.809m2.213 3.618 1.572-1m12.821 7.57c0 8.077-6.548 14.625-14.625 14.625S.875 23.952.875 15.875 7.423 1.25 15.5 1.25s14.625 6.548 14.625 14.625m-5.695-.51-12-4.777a.364.364 0 0 0-.566.36l-.758 12.885c.045.255.38.326.528.112l3.076-4.647a.405.405 0 0 1 .673.008l4.102 6.388c.181.283.56.366.846.184l2.087-1.326a.61.61 0 0 0 .188-.841l-4.1-6.388a.4.4 0 0 1 .274-.612l5.531-.823a.289.289 0 0 0 .119-.523" stroke="#db4444" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
   isExternalLink: true,
   // isExternalLink 外链 true
   link: "https://api.whatsapp.com/send?phone=85269180511&text=%E4%BD%A0%E5%A5%BD,%E6%88%91%E6%83%B3%E6%9F%A5%E8%A9%A2",
@@ -91,7 +91,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <PublicV2BannerPageBanner :banner="bannerImg" class="banner" />
+    <BannerMain />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="isPc ? 'HOYA MiYOSMART兒童近視控制眼鏡' : 'HOYA 兒童近視控制眼鏡'"

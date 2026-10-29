@@ -51,7 +51,8 @@ onMounted(() => {
 
 <template>
   <div class="video-information">
-    <PublicV2BannerHomeBanner :list="bannerImg" class="banner" />
+    <!-- <PublicV2BannerHomeBanner :list="bannerImg" class="banner" /> -->
+    <BannerMain isExpandable />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'最新優惠'" />
     <div class="video-information-box">
       <NowDiscounts :list="discounts" />
