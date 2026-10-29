@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "兒童眼睛檢查｜兒童視力服務｜希瑪視光中心",
   meta: [
@@ -16,22 +17,17 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  // pc: "https://static.cmereye.com/imgs/2024/11/229a3265342682c3.png",
-  // mobile: "https://static.cmereye.com/imgs/2024/11/028b59dee8dda26b.png",
-  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/08.webp",
-  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/09.webp",
+const bannerImg:SlideItem = {
+  pic: "https://statichk.cmermedical.com/cmermedical/image/20260122/08.webp",
+  pic_mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/09.webp",
+  title: '兒童視力服務-兒童眼睛檢查',
+  subtitle: '兒童眼睛檢查'
 };
 </script>
 
 <template>
   <div class="video-information">
-    <PublicContainBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title"></div>
-      </template>
-    </PublicContainBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"

@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "HOYA MiYOSMART兒童近視控制眼鏡｜兒童視力服務｜希瑪視光中心",
   meta: [
@@ -18,28 +19,18 @@ useHead(() => ({
 }));
 import getWindowSize from "@/utils/width";
 const isPc = ref(false);
-
 onMounted(() => {
   window.addEventListener("resize", () => {
     let { widthState, width } = getWindowSize();
     isPc.value = widthState;
   });
-  // getImgSwiper()
 });
-// import type { ApiResponse, SlideItem } from "@/types/api";
-// const bannerImg = ref([] as SlideItem[]);
-// const getImgSwiper = async () => {
-//   try {
-//     const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
-//       params: { gid: 3 },
-//     });
-//     if (Array.isArray(res.data)) {
-//       bannerImg.value = res.data.map((item) => ({ ...item }));
-//     }
-//   } catch (error) {
-//     console.error("获取轮播图失败:", error);
-//   }
-// };
+const bannerImg:SlideItem = {
+  pic: "https://statichk.cmermedical.com/vision/banner/banner-hoya-pc-v1.webp",
+  pic_mobile: "https://statichk.cmermedical.com/vision/banner/banner-hoya-mb-v1.webp",
+  title: '兒童視力服務-近視控制隱形眼鏡',
+  subtitle: '近視控制隱形眼鏡'
+};
 const detail = {
   title: "立即體驗HOYA MiYOSMART 兒童近視控制眼鏡",
   brand: "hoya",
@@ -91,7 +82,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <BannerMain />
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="isPc ? 'HOYA MiYOSMART兒童近視控制眼鏡' : 'HOYA 兒童近視控制眼鏡'"

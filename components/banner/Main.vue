@@ -15,7 +15,7 @@ const props = defineProps<{
   isExpandable?: boolean; //展开式轮播图：首页、尊享优惠
 }>();
 const isSwiper = ref(false);
-const bannerPic = ref<SlideItem | null>(null);
+const bannerPic = ref<SlideItem | null>(props.data || null);
 const getBanner = async () => {
   try {
     const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
@@ -27,7 +27,7 @@ const getBanner = async () => {
         bannerPic.value = res.data[0];
         break;
       case 0:
-        if (props.data) bannerPic.value = props.data;
+        // if (props.data) bannerPic.value = props.data;
         break;
       default:
         if (Array.isArray(res.data)) bannerImg.value = res.data.map((item) => ({ ...item }));

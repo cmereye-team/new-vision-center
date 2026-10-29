@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "近視控制眼鏡｜兒童視力服務｜希瑪視光中心",
   meta: [
@@ -25,19 +26,13 @@ onMounted(() => {
     isPc.value = widthState;
   });
 });
-const bannerImg = 
+const bannerImg:SlideItem = 
   {
-    pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/16.webp",
-    mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/17.webp",
-    newBanner: true,
+    pic: "https://statichk.cmermedical.com/cmermedical/image/20260122/16.webp",
+    pic_mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/17.webp",
+    title: '兒童近視控制眼鏡',
+    subtitle: '兒童近視控制眼鏡',
   }
-  // {
-  //   pc: "https://content.cmervision.com//static/upload/other/20250626/1750918460911067.webp",
-  //   mobile:
-  //     "https://content.cmervision.com//static/upload/other/20250626/1750918480205284.webp",
-  //   newBanner: true,
-  // },
-// ];
 const btnElement = ref({
   cls: "",
   title: "哪一款鏡片最適合你的小朋友?",
@@ -50,13 +45,7 @@ const btnElement = ref({
 
 <template>
   <div class="myopia-control-glasses">
-    <!-- 插槽 -->
-    <!-- <PublicBanner :banner="bannerImg">
-      <template #title>
-        <div class="profile-title"></div>
-      </template>
-</PublicBanner> -->
-    <PublicContainBanner :banner="bannerImg" class="banner" />
+    <BannerMain :data="bannerImg" />
     <PublicNavbar :name="'兒童視力服務'" :isInsidePage="true" :insidePageTitle="'近視控制眼鏡'" />
     <div class="myopia-box">
       <div class="myopia-container-head">

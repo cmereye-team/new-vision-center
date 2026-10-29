@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead({
   title: "希瑪視光 | 蔡司近視防控中心 - 兒童近視控制與管理",
   meta: [
@@ -123,11 +124,11 @@ const discountsList = ref([
   },
 ]);
 
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/banner-pc.avif",
-  mobile:
-    "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/banner-mb.avif",
-  newBanner: true,
+const bannerImg:SlideItem = {
+  pic: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/banner-pc.avif",
+  pic_mobile: "https://statichk.cmermedical.com/vision/imgs/zeissMyopia/banner-mb.avif",
+  title: '兒童視力服務-蔡司近視防控中心',
+  subtitle: '蔡司近視防控中心'
 };
 
 import getWindowSize from "@/utils/width";
@@ -226,7 +227,7 @@ const handleIntersection = (entries: any, observer: any) => {
 
 <template>
   <div class="zve-information">
-    <PublicContainBanner :banner="bannerImg"> </PublicContainBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :isInsidePage="true"
       :insidePageTitle="'蔡司近視防控中心'"

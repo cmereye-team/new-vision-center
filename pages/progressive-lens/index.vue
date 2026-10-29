@@ -26,8 +26,8 @@ useHead(() => ({
 const bannerImg:SlideItem = {
   pic: "https:///statichk.cmermedical.com/cmermedical/image/20260302/2025030309383301.webp",
   pic_mobile: "https://statichk.cmermedical.com/vision/imgs/2025030309383302.webp",
-  title: '',
-  subtitle: '',
+  title: '老花漸進鏡片',
+  subtitle: '老花漸進鏡片',
 };
 const isType = ref(0);
 const checkType = (type: number) => {
@@ -369,12 +369,6 @@ const keyTitle = (i: number) => {
 <template>
   <div class="video-information">
     <BannerMain :data="bannerImg" />
-    <!-- <PublicContainBanner :banner="bannerImg"> -->
-      <!-- 插槽 -->
-      <!-- <template #title>
-        <div class="profile-title"><span>老花漸進鏡片</span></div>
-      </template>
-    </PublicContainBanner> -->
     <PublicNavbar
       :name="'成人視力服務'"
       :isInsidePage="true"

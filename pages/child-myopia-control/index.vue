@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "近視控制隱形眼鏡｜兒童視力服務｜希瑪視光中心",
   meta: [
@@ -16,9 +17,11 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/11.webp",
-  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/12.webp",
+const bannerImg:SlideItem = {
+  pic: "https://statichk.cmermedical.com/cmermedical/image/20260122/11.webp",
+  pic_mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/12.webp",
+  title: '兒童視力服務-近視控制隱形眼鏡',
+  subtitle: '近視控制隱形眼鏡'
 };
 
 const btnElement = ref({
@@ -33,7 +36,7 @@ const btnElement = ref({
 
 <template>
   <div class="video-information">
-    <PublicContainBanner :banner="bannerImg"> </PublicContainBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :name="'兒童視力服務'"
       :isInsidePage="true"
