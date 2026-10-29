@@ -1,7 +1,7 @@
 <!--
  * @Author: 谭洁莹
  * @Date: 2026-10-29 15:22:04
- * @LastEditTime: 2026-10-29 15:22:08
+ * @LastEditTime: 2026-10-29 16:49:02
  * @FilePath: /components/banner/PageBanner.vue
  * @Description: 普通页面Banner
 -->
@@ -19,7 +19,7 @@ const props = defineProps<{
     :loop="true"
     :autoplay="{ delay: 3000, disableOnInteraction: false, pauseOnMouseEnter: true }"
     :pagination="{ clickable: true }"
-    class="banner-swiper max-w-[1320px] mx-auto md:mt-[7.083vw] min-[1621px]:mt-[132px]"
+    class="banner-swiper"
   >
     <swiper-slide v-for="(item, index) in data" :key="index">
       <nuxt-link :to="item?.link || '#'">

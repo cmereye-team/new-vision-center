@@ -1,7 +1,7 @@
 /*
  * @Author: 谭洁莹
  * @Date: 2026-07-28 13:48:25
- * @LastEditTime: 2026-08-06 16:18:42
+ * @LastEditTime: 2026-10-29 16:05:29
  * @FilePath: /types/api.ts
  * @Description: 
  */
@@ -13,10 +13,10 @@ export interface ApiResponse<T> {
   msg?: string
 }
 export interface SlideItem {
-  id: number;
+  id?: number;
   pic: string;
   pic_mobile: string;
-  link: string;
+  link?: string;
   title: string;
   subtitle?: string;
 }

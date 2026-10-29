@@ -1,7 +1,7 @@
 <!--
  * @Author: 谭洁莹
  * @Date: 2026-10-29 14:34:28
- * @LastEditTime: 2026-10-29 16:03:01
+ * @LastEditTime: 2026-10-29 16:48:53
  * @FilePath: /components/banner/Main.vue
  * @Description: 轮播图分流
 -->
@@ -21,7 +21,7 @@ const getBanner = async () => {
     const res = await $api<ApiResponse<SlideItem[]>>("/api/v1/slides", {
       params: { pathname: route.path },
     });
-    console.log(`正在获取轮播图,path=${route.path},res=`, res);
+    // console.log(`正在获取轮播图,path=${route.path},res=`, res);
     switch (res.data.length) {
       case 1:
         bannerPic.value = res.data[0];
@@ -69,22 +69,44 @@ onMounted(() => {
 });
 </script>
 <template>
-  <div>
+  <div class="banner">
     <template v-if="isSwiper">
       <BannerHomeBanner v-if="isExpandable" :data="bannerImg" ref="homeBanner" key="home_banner" />
-      <BannerPageBanner v-else :data="bannerImg" ref="pageBanner" key="page_banner" />
+      <BannerPageBanner v-else :data="bannerImg" ref="pageBanner" key="page_banner" class="banner-pic" />
     </template>
     <template v-else-if="bannerPic">
-      <div class="banner-item">
-        <component
-          :is="getLinkComponent(bannerPic.link)"
-          v-bind="getLinkAttrs(bannerPic.link)"
-          class="banner-link-wrapper"
-        >
-          <img :src="bannerPic.pic" :alt="bannerPic.title" :title="bannerPic.subtitle" />
-        </component>
-      </div>
+      <component
+        :is="getLinkComponent(bannerPic.link)"
+        v-bind="getLinkAttrs(bannerPic.link)"
+        class="banner-pic"
+      >
+        <picture>
+          <source media="(min-width: 768px)" :srcset="bannerPic.pic" />
+          <img :src="bannerPic.pic_mobile" :alt="bannerPic.title" :title="bannerPic.subtitle" />
+        </picture>
+      </component>
     </template>
   </div>
 </template>
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.banner {
+  .banner-pic {
+    max-width: 1320px;
+    margin: 64px auto 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .banner {
+    .banner-pic {
+      margin-top: 7.083vw;
+    }
+  }
+}
+@media screen and (min-width: 1621px) {
+  .banner {
+    .banner-pic {
+      margin-top: 132px;
+    }
+  }
+}
+</style>
