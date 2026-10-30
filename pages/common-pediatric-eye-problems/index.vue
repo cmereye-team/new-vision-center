@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import banner from "./components/banner.vue";
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "兒童常見眼睛問題｜常見眼睛問題｜希瑪視光中心",
   meta: [
@@ -18,9 +18,11 @@ useHead(() => ({
   ],
 }));
 
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/04.webp",
-  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/05.webp",
+const bannerImg: SlideItem = {
+  pic: "https://statichk.cmermedical.com/cmermedical/image/20260122/04.webp",
+  pic_mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/05.webp",
+  title: "兒童常見眼睛問題-希瑪視光中心",
+  subtitle: "兒童常見眼睛問題",
 };
 const numberContent = ref(0);
 const checkClassify = (idx: any) => {
@@ -41,7 +43,7 @@ onMounted(() => {
 
 <template>
   <div class="video-information">
-    <banner :banner="bannerImg" />
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :name="'常見眼睛問題'"
       :isInsidePage="true"

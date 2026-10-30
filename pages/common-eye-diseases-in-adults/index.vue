@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "成人常見眼睛問題｜常見眼睛問題｜希瑪視光中心",
   meta: [
@@ -16,9 +17,11 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/683dce2cd87bd6bf.webp",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/c88934386018c7c0.png",
+const bannerImg: SlideItem = {
+  pic: "https:///statichk.cmermedical.com/cmermedical/image/20260302/683dce2cd87bd6bf.webp",
+  pic_mobile: "https://statichk.cmermedical.com/vision/imgs/c88934386018c7c0.png",
+  title: "成人常見眼睛問題-希瑪視光中心",
+  subtitle: "成人常見眼睛問題",
 };
 let imgLeft = ref("50%");
 const yuanspan = ref(null);
@@ -85,7 +88,7 @@ const judgeTwo = (num: string) => {
 
 <template>
   <div class="video-information">
-    <PublicContainBanner :banner="bannerImg" />
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :name="'常見眼睛問題'"
       :isInsidePage="true"

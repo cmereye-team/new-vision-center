@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "長者醫療券計劃｜專業服務｜希瑪視光中心",
   meta: [
@@ -15,22 +16,17 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/cmermedical/image/20260303/26cc20faacd95e95.webp",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/37b55212c8d95e85.png",
-  alt:''
+const bannerImg: SlideItem = {
+  pic: "https://statichk.cmermedical.com/cmermedical/image/20260303/26cc20faacd95e95.webp",
+  pic_mobile: "https://statichk.cmermedical.com/vision/imgs/37b55212c8d95e85.png",
+  title: "長者醫療券計劃-希瑪視光中心",
+  subtitle: "長者醫療券計劃",
 };
 </script>
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="medical-voucher-title">
-        </div>
-      </template>
-    </PublicBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar :link="'/about-us/news-information'" :name="'長者醫療券計劃'" />
     <MedicalVoucher />
     <PublicForm />

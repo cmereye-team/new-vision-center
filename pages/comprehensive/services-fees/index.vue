@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "收費詳情｜專業服務｜希瑪視光中心",
   meta: [
@@ -16,22 +17,19 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https:///statichk.cmermedical.com/cmermedical/image/20260302/278854ec5e50055f.webp",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/55554fa02587d8de.png",
+const bannerImg: SlideItem = {
+  pic: "https:///statichk.cmermedical.com/cmermedical/image/20260302/278854ec5e50055f.webp",
+  pic_mobile: "https://statichk.cmermedical.com/vision/imgs/55554fa02587d8de.png",
+  title: "收費詳情-希瑪視光中心",
+  subtitle: "收費詳情",
+  pageTitle: "收費詳情",
+  titleClass: "text-white",
 };
 </script>
 
 <template>
   <div class="fee">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="fee-title">
-          <span>收費詳情</span>
-        </div>
-      </template>
-    </PublicBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar :link="'/comprehensive/services-fees'" :name="'收費詳情'" />
     <div class="fee-box">
       <Fee />

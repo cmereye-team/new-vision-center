@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "影片資訊｜希瑪視光中心",
   meta: [
@@ -16,22 +17,19 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/735b78a3199c7307.png",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/3deb4ec1da398c47.png",
+const bannerImg: SlideItem = {
+  pic: "https://statichk.cmermedical.com/vision/imgs/735b78a3199c7307.png",
+  pic_mobile: "https://statichk.cmermedical.com/vision/imgs/3deb4ec1da398c47.png",
+  title: "影片資訊-希瑪視光中心",
+  subtitle: "影片資訊",
+  pageTitle: "影片資訊",
+  titleClass: "text-primary",
 };
 </script>
 
 <template>
   <div class="video-information">
-    <PublicBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title">
-          <span>影片資訊</span>
-        </div>
-      </template>
-    </PublicBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar :link="'/about-us/cmer-vision'" :name="'影片資訊'" />
     <div class="video-information-box">
       <VideoInformation />

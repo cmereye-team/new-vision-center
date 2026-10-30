@@ -17,33 +17,24 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg:SlideItem = {
+const bannerImg: SlideItem = {
   pic: "https://statichk.cmermedical.com/cmermedical/image/20260122/08.webp",
   pic_mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/09.webp",
-  title: '兒童視力服務-兒童眼睛檢查',
-  subtitle: '兒童眼睛檢查'
+  title: "兒童視力服務-兒童眼睛檢查",
+  subtitle: "兒童眼睛檢查",
 };
 </script>
-
 <template>
   <div class="video-information">
     <BannerMain :data="bannerImg" />
-    <PublicNavbar
-      :name="'兒童視力服務'"
-      :isInsidePage="true"
-      :insidePageTitle="'兒童眼睛檢查'"
-    />
+    <PublicNavbar :name="'兒童視力服務'" :isInsidePage="true" :insidePageTitle="'兒童眼睛檢查'" />
     <div class="child-box">
       <div class="stage">
         <PublicPageTitle :title="'把握關鍵期，保護好視力'" />
         <div>
-          <span
-            >在嬰兒視覺發展的關鍵期，許多孩子有注意力不集中、感覺統合的障礙、</span
-          >
+          <span>在嬰兒視覺發展的關鍵期，許多孩子有注意力不集中、感覺統合的障礙、</span>
           <span>學習力低落等問題，往往源自於視覺的異常。</span>
-          <span
-            >我們可針對不同發展階段的寶寶，提供視力發展的重點和促進方法。</span
-          >
+          <span>我們可針對不同發展階段的寶寶，提供視力發展的重點和促進方法。</span>
         </div>
         <div class="stage-table">
           <div>
@@ -55,10 +46,7 @@ const bannerImg:SlideItem = {
             <div>
               <div>0-2歲</div>
               <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/a5f55db499f2502f.png"
-                  alt="0-2歲"
-                />
+                <img src="https://statichk.cmermedical.com/vision/imgs/a5f55db499f2502f.png" alt="0-2歲" />
               </div>
             </div>
             <div>
@@ -66,20 +54,14 @@ const bannerImg:SlideItem = {
             </div>
             <div>
               <span>• 基礎眼睛檢查</span>
-              <span
-                >•
-                確認嬰兒會否患上先天性眼疾，如白內障、青光眼等，及早治療</span
-              >
+              <span>• 確認嬰兒會否患上先天性眼疾，如白內障、青光眼等，及早治療</span>
             </div>
           </div>
           <div>
             <div>
               <div>3-4歲</div>
               <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/83d5f1f247f468c3.png"
-                  alt="3-4歲"
-                />
+                <img src="https://statichk.cmermedical.com/vision/imgs/83d5f1f247f468c3.png" alt="3-4歲" />
               </div>
             </div>
             <div>
@@ -95,10 +77,7 @@ const bannerImg:SlideItem = {
             <div>
               <div>&#60;12歲</div>
               <div>
-                <img
-                  src="https://statichk.cmermedical.com/vision/imgs/154ef9b7e3f09b6f.png"
-                  alt="<12歲"
-                />
+                <img src="https://statichk.cmermedical.com/vision/imgs/154ef9b7e3f09b6f.png" alt="<12歲" />
               </div>
             </div>
             <div>
@@ -106,26 +85,20 @@ const bannerImg:SlideItem = {
               <span>• 可能出現屈光不正問題</span>
             </div>
             <div>
-              <span
-                >• 每半年安排<i style="color: #db4444; font-style: normal"
-                  >最少一次</i
-                >視光檢查</span
-              >
+              <span>
+                • 每半年安排
+                <i style="color: #db4444; font-style: normal">最少一次</i>
+                視光檢查
+              </span>
               <span>• 可選擇近視控制方案，防止近視加深</span>
             </div>
           </div>
         </div>
         <PublicPageTitle :title="'兒童應多久檢查一次眼睛？'" />
         <div>
-          <span
-            >建議兒童四歲時進行首次眼睛檢查，因為他們能理解並配合視力測試。家長應向</span
-          >
-          <span
-            >兒童介紹檢查過程，讓他們感到有趣且無需擔心。每年至少檢查一次眼睛，尤其</span
-          >
-          <span
-            >是入學後，因長時間近距離閱讀可能導致近視加劇。定期檢查有助於監測視力發</span
-          >
+          <span>建議兒童四歲時進行首次眼睛檢查，因為他們能理解並配合視力測試。家長應向</span>
+          <span>兒童介紹檢查過程，讓他們感到有趣且無需擔心。每年至少檢查一次眼睛，尤其</span>
+          <span>是入學後，因長時間近距離閱讀可能導致近視加劇。定期檢查有助於監測視力發</span>
           <span>展，及早發現問題，提供適當矯正方案。</span>
         </div>
       </div>
@@ -149,7 +122,9 @@ const bannerImg:SlideItem = {
           </div>
         </div>
         <div class="relatives_tips">
-          *參加者需預約同一時間及地點進行驗眼服務，詳情請向我們的<span>客戶服務專員</span>查詢
+          *參加者需預約同一時間及地點進行驗眼服務，詳情請向我們的
+          <span>客戶服務專員</span>
+          查詢
         </div>
       </div>
       <div class="misight-serve-content">
@@ -157,13 +132,7 @@ const bannerImg:SlideItem = {
         <div>
           <div>
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="64"
-                height="64"
-                viewBox="0 0 64 64"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
                 <g clip-path="url(#clip0_1125_24852)">
                   <path
                     d="M50.9999 63.749H12.7497C9.24348 63.749 6.375 60.8805 6.375 57.3733V43.029C6.375 39.5228 9.24348 36.6543 12.7497 36.6543H50.9999C54.5061 36.6543 57.3746 39.5228 57.3746 43.029V57.3733C57.3746 60.8795 54.5061 63.749 50.9999 63.749ZM12.7497 39.8431C10.9966 39.8431 9.56188 41.2768 9.56188 43.03V57.3743C9.56188 59.1274 10.9966 60.5621 12.7497 60.5621H50.9999C52.753 60.5621 54.1877 59.1274 54.1877 57.3743V43.03C54.1877 41.2768 52.753 39.8431 50.9999 39.8431H12.7497Z"
@@ -215,13 +184,7 @@ const bannerImg:SlideItem = {
           </div>
           <div>
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="77"
-                height="55"
-                viewBox="0 0 77 55"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="77" height="55" viewBox="0 0 77 55" fill="none">
                 <g clip-path="url(#clip0_1125_24653)">
                   <path
                     d="M62.4168 17.6528H58.8662C58.2024 17.6528 57.6621 17.1125 57.6621 16.4486V12.1416C57.6621 11.4778 58.2024 10.9375 58.8662 10.9375H62.4168C63.0806 10.9375 63.6209 11.4778 63.6209 12.1416V16.4486C63.6209 17.1125 63.0806 17.6528 62.4168 17.6528ZM60.0703 15.2445H61.2127V13.3457H60.0703V15.2445Z"
@@ -290,12 +253,7 @@ const bannerImg:SlideItem = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1125_24653">
-                    <rect
-                      width="76.5"
-                      height="53.7993"
-                      fill="white"
-                      transform="translate(0.25 0.75)"
-                    />
+                    <rect width="76.5" height="53.7993" fill="white" transform="translate(0.25 0.75)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -307,13 +265,7 @@ const bannerImg:SlideItem = {
           </div>
           <div>
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="69"
-                height="61"
-                viewBox="0 0 69 61"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="69" height="61" viewBox="0 0 69 61" fill="none">
                 <g clip-path="url(#clip0_1125_24624)">
                   <path
                     d="M66.7236 22.4299H2.27637C2.45352 21.9093 2.64838 21.3887 2.86096 20.877H66.1302C66.3427 21.3887 66.5376 21.9093 66.7148 22.4299H66.7236Z"
@@ -335,14 +287,8 @@ const bannerImg:SlideItem = {
                     d="M34.5 60.75C15.4741 60.75 0 47.2941 0 30.75C0 14.2059 15.4741 0.75 34.5 0.75C53.5259 0.75 69 14.2059 69 30.75C69 47.2941 53.5259 60.75 34.5 60.75ZM34.5 2.50588C16.4484 2.50588 1.76264 15.1765 1.76264 30.75C1.76264 46.3235 16.4484 58.9941 34.5 58.9941C52.5516 58.9941 67.2374 46.3235 67.2374 30.75C67.2374 15.1765 52.5516 2.50588 34.5 2.50588Z"
                     fill="#3993D3"
                   />
-                  <path
-                    d="M34.6067 28.7559H34.3145V40.3941H34.6067V28.7559Z"
-                    fill="#3993D3"
-                  />
-                  <path
-                    d="M32.9941 38.7344L34.4645 41.2667L35.9348 38.7344H32.9941Z"
-                    fill="#3993D3"
-                  />
+                  <path d="M34.6067 28.7559H34.3145V40.3941H34.6067V28.7559Z" fill="#3993D3" />
+                  <path d="M32.9941 38.7344L34.4645 41.2667L35.9348 38.7344H32.9941Z" fill="#3993D3" />
                   <path
                     d="M8.25574 26.2949C8.25574 26.5243 8.17603 26.639 8.01659 26.639C7.91916 26.639 7.8483 26.6037 7.81287 26.5243C7.7863 26.4802 7.77744 26.4096 7.77744 26.3126V24.7861C7.48514 25.0155 7.29028 25.1214 7.19284 25.1214C7.1397 25.1214 7.09541 25.1037 7.05998 25.0685C7.02455 25.0332 7.00684 24.989 7.00684 24.9273C7.00684 24.8567 7.0777 24.7861 7.21056 24.7155C7.494 24.5743 7.69772 24.4155 7.82173 24.2302C7.87487 24.1508 7.9103 24.1067 7.92802 24.089C7.95459 24.0626 7.99888 24.0449 8.05202 24.0449C8.18488 24.0449 8.25574 24.1508 8.25574 24.3537V26.2861V26.2949Z"
                     fill="black"
@@ -394,12 +340,7 @@ const bannerImg:SlideItem = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1125_24624">
-                    <rect
-                      width="69"
-                      height="60"
-                      fill="white"
-                      transform="translate(0 0.75)"
-                    />
+                    <rect width="69" height="60" fill="white" transform="translate(0 0.75)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -411,13 +352,7 @@ const bannerImg:SlideItem = {
           </div>
           <div>
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="60"
-                height="61"
-                viewBox="0 0 60 61"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="60" height="61" viewBox="0 0 60 61" fill="none">
                 <g clip-path="url(#clip0_1125_24670)">
                   <path
                     opacity="0.3"
@@ -1138,12 +1073,7 @@ const bannerImg:SlideItem = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1125_24670">
-                    <rect
-                      width="59.07"
-                      height="60.6975"
-                      fill="white"
-                      transform="translate(0.75)"
-                    />
+                    <rect width="59.07" height="60.6975" fill="white" transform="translate(0.75)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -1155,13 +1085,7 @@ const bannerImg:SlideItem = {
           </div>
           <div>
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="57"
-                height="57"
-                viewBox="0 0 57 57"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="57" height="57" viewBox="0 0 57 57" fill="none">
                 <g clip-path="url(#clip0_1125_24820)">
                   <path
                     d="M31.5276 46.4542L8.5498 41.1351V17.1777L31.5276 22.4968V46.4542Z"
@@ -1243,12 +1167,7 @@ const bannerImg:SlideItem = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1125_24820">
-                    <rect
-                      width="56.25"
-                      height="56.25"
-                      fill="white"
-                      transform="translate(0.25 0.25)"
-                    />
+                    <rect width="56.25" height="56.25" fill="white" transform="translate(0.25 0.25)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -1260,13 +1179,7 @@ const bannerImg:SlideItem = {
           </div>
           <div>
             <div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="78"
-                height="49"
-                viewBox="0 0 78 49"
-                fill="none"
-              >
+              <svg xmlns="http://www.w3.org/2000/svg" width="78" height="49" viewBox="0 0 78 49" fill="none">
                 <g clip-path="url(#clip0_1125_24832)">
                   <path
                     d="M50.9262 36.231C57.2606 29.8934 57.2606 19.6183 50.9262 13.2808C44.5917 6.94325 34.3216 6.94325 27.9871 13.2808C21.6527 19.6183 21.6527 29.8934 27.9871 36.231C34.3216 42.5685 44.5917 42.5685 50.9262 36.231Z"
@@ -1352,12 +1265,7 @@ const bannerImg:SlideItem = {
                 </g>
                 <defs>
                   <clipPath id="clip0_1125_24832">
-                    <rect
-                      width="78"
-                      height="48"
-                      fill="white"
-                      transform="translate(0 0.75)"
-                    />
+                    <rect width="78" height="48" fill="white" transform="translate(0 0.75)" />
                   </clipPath>
                 </defs>
               </svg>
@@ -1369,9 +1277,7 @@ const bannerImg:SlideItem = {
           </div>
         </div>
         <div>
-          <p>
-            *視光師會根據以上各項評估的結果，為應診者進行詳細分析，並提供相應的護理建議、控制方案
-          </p>
+          <p>*視光師會根據以上各項評估的結果，為應診者進行詳細分析，並提供相應的護理建議、控制方案</p>
           <p>或內部轉介至眼科專科醫生。</p>
         </div>
       </div>
@@ -1391,16 +1297,13 @@ const bannerImg:SlideItem = {
         </div>
         <div>
           <span>*及早發現及早治療，阻止情況惡化。</span>
-          <span
-            >如有需要，我們可為患病兒童內部轉介至眼科醫生，作進一步診斷和治療。</span
-          >
+          <span>如有需要，我們可為患病兒童內部轉介至眼科醫生，作進一步診斷和治療。</span>
         </div>
       </div>
     </div>
     <PublicForm />
   </div>
 </template>
-
 <style lang="scss" scoped>
 @media screen and (min-width: 768px) {
   .child-box {
@@ -1411,8 +1314,7 @@ const bannerImg:SlideItem = {
     margin: 50px auto 36px;
     & > div:nth-child(1) {
       margin-bottom: 26px;
-      background: url("https://statichk.cmermedical.com/vision/imgs/1f47e2a6d2857dbe.jpg")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/1f47e2a6d2857dbe.jpg") no-repeat;
       background-size: 100% 100%;
       height: 370px;
       display: flex;
@@ -1452,8 +1354,7 @@ const bannerImg:SlideItem = {
           }
           & > span::before {
             content: "";
-            background: url("https://statichk.cmermedical.com/vision/imgs/13a691bf05bc9975.png")
-              no-repeat;
+            background: url("https://statichk.cmermedical.com/vision/imgs/13a691bf05bc9975.png") no-repeat;
             background-size: 100% 100%;
             width: 24px;
             height: 18px;
@@ -1568,7 +1469,6 @@ const bannerImg:SlideItem = {
     margin: 0 auto;
     margin-top: 45px;
     max-width: 702px;
-
     .relatives_tips {
       margin: 30px 0;
       color: var(--Brand-Color, #00a6ce);
@@ -1596,8 +1496,7 @@ const bannerImg:SlideItem = {
       text-align: center;
     }
     & > div:nth-child(2) {
-      background: url(https://statichk.cmermedical.com/vision/imgs/e8689b8a03e0c2cf.png)
-        no-repeat;
+      background: url(https://statichk.cmermedical.com/vision/imgs/e8689b8a03e0c2cf.png) no-repeat;
       background-size: 100% 100%;
       height: 395px;
       display: flex;
@@ -1778,15 +1677,12 @@ const bannerImg:SlideItem = {
         border-bottom: 2.25px solid #fff;
       }
     }
-
     & > div:nth-child(2) {
       background: #00a6ce;
     }
-
     & > div:nth-child(3) {
       background: #63aa6d;
     }
-
     & > div:nth-child(4) {
       background: #6c2a7e;
     }
@@ -1814,8 +1710,7 @@ const bannerImg:SlideItem = {
     margin: 10.256vw auto 11.538vw;
     & > div:nth-child(1) {
       margin-bottom: 5.128vw;
-      background: url("https://statichk.cmermedical.com/vision/imgs/d53175598041a278.jpg")
-        no-repeat;
+      background: url("https://statichk.cmermedical.com/vision/imgs/d53175598041a278.jpg") no-repeat;
       background-size: 100% 100%;
       height: 82.05vw;
       display: flex;
@@ -1853,8 +1748,7 @@ const bannerImg:SlideItem = {
           }
           & > span::before {
             content: "";
-            background: url("https://statichk.cmermedical.com/vision/imgs/13a691bf05bc9975.png")
-              no-repeat;
+            background: url("https://statichk.cmermedical.com/vision/imgs/13a691bf05bc9975.png") no-repeat;
             background-size: 100% 100%;
             width: 12px;
             height: 8px;
@@ -1882,7 +1776,6 @@ const bannerImg:SlideItem = {
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 35px;
-
     .relatives_tips {
       margin: 15px 0;
       color: var(--Brand-Color, #00a6ce);
@@ -1912,8 +1805,7 @@ const bannerImg:SlideItem = {
       margin-bottom: 3.07vw;
     }
     & > div:nth-child(2) {
-      background: url(https://statichk.cmermedical.com/vision/imgs/976f70028a7b5e8a.png)
-        no-repeat;
+      background: url(https://statichk.cmermedical.com/vision/imgs/976f70028a7b5e8a.png) no-repeat;
       background-size: 100% 100%;
       height: 87.179vw;
       display: flex;
@@ -1930,7 +1822,6 @@ const bannerImg:SlideItem = {
       }
       & > div:nth-child(2) {
         flex: 5.6;
-
         & > div:nth-child(1) {
           display: flex;
           flex-direction: column;
@@ -2022,7 +1913,6 @@ const bannerImg:SlideItem = {
           display: flex;
           justify-content: center;
           align-items: center;
-
           & > img {
             width: 100%;
             background: #fff;
@@ -2105,15 +1995,12 @@ const bannerImg:SlideItem = {
         text-indent: 0;
       }
     }
-
     & > div:nth-child(2) {
       background: #00a6ce;
     }
-
     & > div:nth-child(3) {
       background: #63aa6d;
     }
-
     & > div:nth-child(4) {
       background: #6c2a7e;
     }
