@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "服務內容｜專業服務｜希瑪視光中心",
   meta: [
@@ -16,9 +17,11 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/cmermedical/image/20260122/06.webp",
-  mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/07.webp",
+const bannerImg: SlideItem = {
+  pic: "https://statichk.cmermedical.com/cmermedical/image/20260122/06.webp",
+  pic_mobile: "https://statichk.cmermedical.com/cmermedical/image/20260122/07.webp",
+  title: "服務內容-希瑪視光中心",
+  subtitle: "服務內容",
 };
 
 import getWindowSize from "@/utils/width";
@@ -312,7 +315,7 @@ const listDataDetail = [
 
 <template>
   <div class="video-information">
-    <PublicContainBanner :banner="bannerImg" />
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :name="'專業服務'"
       :isInsidePage="true"

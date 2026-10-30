@@ -1,4 +1,5 @@
 <script lang="ts" setup>
+import type { SlideItem } from "@/types/api";
 useHead(() => ({
   title: "成人眼睛檢查｜成人視力服務｜希瑪視光中心",
   meta: [
@@ -16,9 +17,11 @@ useHead(() => ({
     },
   ],
 }));
-const bannerImg = {
-  pc: "https://statichk.cmermedical.com/vision/imgs/c6d4a13a7193.avif",
-  mobile: "https://statichk.cmermedical.com/vision/imgs/2025030610193301.png",
+const bannerImg: SlideItem = {
+  pic: "https://statichk.cmermedical.com/vision/imgs/c6d4a13a7193.avif",
+  pic_mobile: "https://statichk.cmermedical.com/vision/imgs/2025030610193301.png",
+  title: "成人視力服務-成人綜合眼睛檢查",
+  subtitle: "成人綜合眼睛檢查",
 };
 import getWindowSize from "@/utils/width";
 const isPc = ref(true);
@@ -43,12 +46,7 @@ const showAgeStage = (type: any) => {
 
 <template>
   <div class="video-information">
-    <PublicContainBanner :banner="bannerImg">
-      <!-- 插槽 -->
-      <template #title>
-        <div class="profile-title"></div>
-      </template>
-    </PublicContainBanner>
+    <BannerMain :data="bannerImg" />
     <PublicNavbar
       :name="'成人視力服務'"
       :isInsidePage="true"

@@ -19,6 +19,8 @@ export interface SlideItem {
   link?: string;
   title: string;
   subtitle?: string;
+  pageTitle?: string;
+  titleClass?: string;
 }
 export interface Article {
   id: number;

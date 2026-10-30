@@ -1,7 +1,7 @@
 <!--
  * @Author: 谭洁莹
  * @Date: 2026-10-29 14:34:28
- * @LastEditTime: 2026-10-29 16:48:53
+ * @LastEditTime: 2026-10-30 09:51:43
  * @FilePath: /components/banner/Main.vue
  * @Description: 轮播图分流
 -->
@@ -75,15 +75,12 @@ onMounted(() => {
       <BannerPageBanner v-else :data="bannerImg" ref="pageBanner" key="page_banner" class="banner-pic" />
     </template>
     <template v-else-if="bannerPic">
-      <component
-        :is="getLinkComponent(bannerPic.link)"
-        v-bind="getLinkAttrs(bannerPic.link)"
-        class="banner-pic"
-      >
+      <component :is="getLinkComponent(bannerPic.link)" v-bind="getLinkAttrs(bannerPic.link)" class="banner-pic">
         <picture>
           <source media="(min-width: 768px)" :srcset="bannerPic.pic" />
           <img :src="bannerPic.pic_mobile" :alt="bannerPic.title" :title="bannerPic.subtitle" />
         </picture>
+        <span v-if="bannerPic.pageTitle" class="banner-title" :class="bannerPic.titleClass">{{ bannerPic.pageTitle }}</span>
       </component>
     </template>
   </div>
@@ -93,12 +90,27 @@ onMounted(() => {
   .banner-pic {
     max-width: 1320px;
     margin: 64px auto 0;
+    position: relative;
+  }
+  .banner-title {
+    // color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    position: absolute;
+    bottom: 20%;
+    right: 10%;
+    letter-spacing: 0.2em;
   }
 }
 @media screen and (min-width: 768px) {
   .banner {
     .banner-pic {
       margin-top: 7.083vw;
+    }
+    .banner-title {
+      font-size: 60px;
+      bottom: 50%;
+      transform: translateY(50%);
     }
   }
 }
