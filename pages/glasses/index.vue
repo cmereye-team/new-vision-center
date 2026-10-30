@@ -814,7 +814,7 @@ const mapSwiperAsync = async () => {
 </script>
 
 <template>
-  <div class="container">
+  <div class="">
                 
 
     <!-- start banner -->
